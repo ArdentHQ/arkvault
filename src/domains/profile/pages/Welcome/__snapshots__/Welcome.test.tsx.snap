@@ -557,7 +557,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -682,7 +682,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -1387,7 +1387,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -1482,7 +1482,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -1607,7 +1607,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -2312,7 +2312,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -2407,7 +2407,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -2532,7 +2532,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -3237,7 +3237,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -3332,7 +3332,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -3457,7 +3457,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -4162,7 +4162,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -4257,7 +4257,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -4382,7 +4382,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -5087,7 +5087,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -5182,7 +5182,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -5307,7 +5307,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -6012,7 +6012,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -6137,7 +6137,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -6842,7 +6842,7 @@ exports[`Welcome > should render with profiles 1`] = `
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2280%22%20cy%3D%2230%22%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%220%22%20cy%3D%2260%22%20fill%3D%22rgb(255%2C%20152%2C%200)%22%2F%3E%3Ccircle%20r%3D%2240%22%20cx%3D%2250%22%20cy%3D%2250%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -6937,7 +6937,7 @@ exports[`Welcome > should render with profiles 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2255%22%20cx%3D%2220%22%20cy%3D%2260%22%20fill%3D%22rgb(233%2C%2030%2C%2099)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2250%22%20cy%3D%2270%22%20fill%3D%22rgb(255%2C%20193%2C%207)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2230%22%20fill%3D%22rgb(63%2C%2081%2C%20181)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -7062,7 +7062,7 @@ exports[`Welcome > should render with profiles 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22picasso%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cstyle%3E.picasso%20circle%7Bmix-blend-mode%3Asoft-light%3B%7D%3C%2Fstyle%3E%3Crect%20fill%3D%22rgb(76%2C%20175%2C%2080)%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3Ccircle%20r%3D%2235%22%20cx%3D%2240%22%20cy%3D%2260%22%20fill%3D%22rgb(0%2C%20150%2C%20136)%22%2F%3E%3Ccircle%20r%3D%2260%22%20cx%3D%2290%22%20cy%3D%2240%22%20fill%3D%22rgb(139%2C%20195%2C%2074)%22%2F%3E%3Ccircle%20r%3D%2245%22%20cx%3D%2230%22%20cy%3D%2270%22%20fill%3D%22rgb(3%2C%20169%2C%20244)%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
