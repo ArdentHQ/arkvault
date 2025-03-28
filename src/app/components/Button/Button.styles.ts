@@ -71,7 +71,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 					hover:bg-theme-primary-reverse-700 hover:text-white
 					focus:ring-theme-primary-reverse-300
 				`,
-		secondary: () => `dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+		secondary: () => `dark:bg-theme-dark-800 dark:text-theme-dark-50
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-800 hover:text-white
 					dark:hover:bg-theme-primary-500
