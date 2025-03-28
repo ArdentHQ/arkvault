@@ -84,6 +84,7 @@ export const AddressRow = ({
 
 				{usesDeleteMode && deleteContent && (
 					<Icon
+						data-testid="icon-MarkedTrash"
 						name="MarkedTrash"
 						dimensions={[16, 16]}
 						className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
