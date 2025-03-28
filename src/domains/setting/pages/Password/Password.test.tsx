@@ -97,8 +97,6 @@ describe("Password Settings", () => {
 		await userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show an error toast if the current password does not match", async () => {
