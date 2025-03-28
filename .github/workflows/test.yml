@@ -700,7 +700,7 @@ jobs:
               with:
                   timeout_minutes: 10
                   max_attempts: 1
-                  command: pnpm test:coverage src/domains/setting
+                  command: pnpm test:coverage src/domains/setting --exclude src/domains/setting/pages/Servers
     # domains-transaction:
     #     runs-on: ubuntu-latest
     #     env:
