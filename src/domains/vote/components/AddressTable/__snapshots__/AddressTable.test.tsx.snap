@@ -225,14 +225,14 @@ exports[`AddressTable > should render 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        ARK Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
                       class="ring-focus relative focus:outline-none"
@@ -287,7 +287,7 @@ exports[`AddressTable > should render 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  5.27653252 ARK
                 </span>
               </div>
             </td>
@@ -303,13 +303,18 @@ exports[`AddressTable > should render 1`] = `
                     class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                     rel="noopener noreferrer"
                   >
                     <span
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
-                      arkx
+                      <span
+                        class="no-ligatures"
+                        data-testid="TruncateMiddle"
+                      >
+                        0x1Bf…353e2
+                      </span>
                     </span>
                     <div
                       class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
@@ -612,14 +617,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        ARK Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
                       class="ring-focus relative focus:outline-none"
@@ -674,7 +679,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  5.27653252 ARK
                 </span>
               </div>
             </td>
@@ -690,13 +695,18 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                     rel="noopener noreferrer"
                   >
                     <span
                       class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
-                      arkx
+                      <span
+                        class="no-ligatures"
+                        data-testid="TruncateMiddle"
+                      >
+                        0x1Bf…353e2
+                      </span>
                     </span>
                     <div
                       class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
@@ -1232,14 +1242,14 @@ exports[`AddressTable > should render with voting delegates and handle exception
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        ARK Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
                       class="ring-focus relative focus:outline-none"
@@ -1294,7 +1304,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  5.27653252 ARK
                 </span>
               </div>
             </td>
