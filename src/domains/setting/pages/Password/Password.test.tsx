@@ -8,7 +8,7 @@ import { Route } from "react-router-dom";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import PasswordSettings from "@/domains/setting/pages/Password";
-import { env, getDefaultProfileId, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 const translations = buildTranslations();
 const history = createHashHistory();
 

@@ -15,7 +15,6 @@ import {
 	act,
 	env,
 	fireEvent,
-	getDefaultProfileId,
 	getMainsailProfileId,
 	render,
 	screen,
