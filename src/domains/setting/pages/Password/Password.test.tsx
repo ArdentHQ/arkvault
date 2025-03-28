@@ -55,7 +55,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should set a password", async () => {
-		const { container, asFragment } = render(
+		const { container } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
