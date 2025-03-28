@@ -320,7 +320,6 @@ export const GeneralSettings: React.FC = () => {
 
 							<SelectProfileImage
 								value={avatar}
-								name={formattedName}
 								onSelect={(value) => {
 									if (!value) {
 										setValue("avatar", Helpers.Avatar.make(formattedName), {
