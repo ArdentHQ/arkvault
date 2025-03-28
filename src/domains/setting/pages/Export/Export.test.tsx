@@ -8,14 +8,14 @@ import * as browserAccess from "browser-fs-access";
 import { renderHook } from "@testing-library/react";
 import { useTranslation, Trans } from "react-i18next";
 import ExportSettings from "@/domains/setting/pages/Export";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 
 describe("Export Settings", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
