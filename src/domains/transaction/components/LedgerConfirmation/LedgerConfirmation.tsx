@@ -11,8 +11,6 @@ interface LedgerConfirmationProperties {
 
 export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: LedgerConfirmationProperties) => {
 	const { t } = useTranslation();
-	console.log("LedgerConfirmation")
-
 
 	return (
 		<>
