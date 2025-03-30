@@ -24,8 +24,6 @@ const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileC
 		.signatory()
 		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
 
-	console.log({ input, signature })
-
 	// Prevents "The device is already open" exception when running the signing function
 	//await wallet.ledger().disconnect();
 
@@ -50,8 +48,6 @@ export const useTransactionBuilder = () => {
 
 		const service = wallet.transaction();
 
-		console.log({ input })
-
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);
 		let data = {
@@ -60,20 +56,15 @@ export const useTransactionBuilder = () => {
 			gasPrice: 10,
 		};
 
-		console.log({ data })
-
 		if (wallet.isMultiSignature()) {
 			data = await prepareMultiSignature(data, wallet);
 		}
 
 		if (wallet.isLedger()) {
 			data = await withAbortPromise(options?.abortSignal, abortConnectionRetry)(prepareLedger(data, wallet));
-			console.log("1", { data })
 		}
 
-
 		const uuid = await signFunction(data);
-		console.log({ uuid })
 
 		return {
 			transaction: wallet.transaction().transaction(uuid),
