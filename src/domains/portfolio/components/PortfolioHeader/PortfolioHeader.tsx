@@ -307,6 +307,11 @@ export const PortfolioHeader = ({
 									<Button
 										data-testid="WalletHeader__send-button"
 										className="my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+										disabled={
+											wallet.balance() === 0 ||
+											!wallet.hasBeenFullyRestored() ||
+											!wallet.hasSyncedWithNetwork()
+										}
 										variant="primary"
 										onClick={handleSend}
 									>
