@@ -159,7 +159,6 @@ export const SendTransfer = () => {
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
 			} catch (error) {
-				console.log(error)
 				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
@@ -183,14 +182,13 @@ export const SendTransfer = () => {
 		const { network, senderAddress } = getValues();
 		assertNetwork(network);
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
-		console.log({ senderWallet })
 
 		const nextStep = activeTab + 1;
 
-		//if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
-		//	await handleSubmit(() => submit(true))();
-		//	return;
-		//}
+		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
+			await handleSubmit(() => submit(true))();
+			return;
+		}
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
 			if (!isLedgerTransportSupported()) {
@@ -209,18 +207,17 @@ export const SendTransfer = () => {
 		(activeTab === SendTransferStep.AuthenticationStep && wallet?.isLedger());
 
 	const isNextDisabled = useMemo<boolean>(() => {
-		return false
-		//const network = getValues("network");
-		//
-		//if (activeTab === SendTransferStep.NetworkStep && typeof network?.isLive === "function") {
-		//	return false;
-		//}
-		//
-		//if (!isDirty) {
-		//	return true;
-		//}
-		//
-		//return !isValid;
+		const network = getValues("network");
+
+		if (activeTab === SendTransferStep.NetworkStep && typeof network?.isLive === "function") {
+			return false;
+		}
+
+		if (!isDirty) {
+			return true;
+		}
+
+		return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
 	const currentFormData: TransferFormData = {
