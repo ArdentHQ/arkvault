@@ -5,7 +5,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { MdAndAbove } from "@/app/components/Breakpoint";
-import { Header } from "@/app/components/Header";
+import { Header, PageHeader } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useActiveProfile } from "@/app/hooks";
 import { toasts } from "@/app/services";
@@ -19,6 +19,7 @@ import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { assertExchangeTransaction } from "@/domains/exchange/utils";
 import { assertString } from "@/utils/assertions";
 import { delay } from "@/utils/delay";
+import { ThemeIcon } from "@/app/components/Icon";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",
@@ -147,14 +148,11 @@ export const Exchange = () => {
 	return (
 		<>
 			<Page pageTitle={t("EXCHANGE.PAGE_EXCHANGES.TITLE")} isBackDisabled={true} data-testid="Exchange">
-				<MdAndAbove>
-					<Section>
-						<Header
-							title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}
-							subtitle={t("EXCHANGE.PAGE_EXCHANGES.SUBTITLE")}
-						/>
-					</Section>
-				</MdAndAbove>
+				<PageHeader
+					title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}
+					subtitle={t("EXCHANGE.PAGE_EXCHANGES.SUBTITLE")}
+					titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ExchangesLight" darkIcon="ExchangesDark" />}
+				/>
 
 				<ExchangeNavigationBar
 					currentView={currentView}
