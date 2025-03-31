@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Alert } from "@/app/components/Alert";
 import { Page, Section } from "@/app/components/Layout";
@@ -23,7 +23,6 @@ import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateW
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 
 export const Votes: FC = () => {
-	const history = useHistory();
 	const { t } = useTranslation();
 
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);

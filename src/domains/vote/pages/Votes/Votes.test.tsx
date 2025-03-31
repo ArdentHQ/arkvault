@@ -182,7 +182,7 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to create page", async () => {
+	it("should open the create wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 
@@ -190,11 +190,12 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Create/ }));
 
-		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/create`);
+		expect(screen.getByTestId("CreateAddressSidePanel")).toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to import wallet page", async () => {
+	it("should open the import wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 
@@ -202,7 +203,7 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Import/ }));
 
-		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/import`);
+		expect(screen.getByTestId("ImportAddressSidePanel")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
