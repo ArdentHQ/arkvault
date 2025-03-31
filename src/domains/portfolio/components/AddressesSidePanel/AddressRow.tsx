@@ -96,7 +96,7 @@ export const AddressRow = ({
 						name="single"
 						data-testid="AddressRow--radio"
 						color="info"
-						className="m-0.5"
+						className="m-0.5 h-5 w-5"
 						checked={isSelected}
 						onChange={() => toggleAddress(wallet.address())}
 					/>
