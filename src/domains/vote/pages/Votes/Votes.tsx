@@ -19,10 +19,15 @@ import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { AddressTable } from "@/domains/vote/components/AddressTable";
+import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
+import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 
 export const Votes: FC = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
+
+	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
+	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
@@ -135,8 +140,8 @@ export const Votes: FC = () => {
 			{!hasWallets && (
 				<Section>
 					<VotesEmpty
-						onCreateWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/create`)}
-						onImportWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/import`)}
+						onCreateWallet={() => setShowCreateAddressPanel(true)}
+						onImportWallet={() => setShowImportAddressPanel(true)}
 					/>
 				</Section>
 			)}
@@ -195,6 +200,9 @@ export const Votes: FC = () => {
 					}
 				/>
 			)}
+
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 		</Page>
 	);
 };
