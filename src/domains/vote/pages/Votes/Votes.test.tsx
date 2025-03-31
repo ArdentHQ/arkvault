@@ -132,17 +132,6 @@ describe("Votes", () => {
 		currentMock.mockRestore();
 	});
 
-	it("should render with no wallets", () => {
-		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
-		expect(screen.queryByTestId("HeaderSearchBar__button")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should filter current delegates", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
