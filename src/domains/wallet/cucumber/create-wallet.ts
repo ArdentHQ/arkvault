@@ -97,7 +97,7 @@ const walletPageStep = {
 		await t.expect(Selector("h1").withExactText(translations.COMMON.COMPLETED).exists).ok();
 
 		// Save and finish
-		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+		await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 		await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 	},
 };
