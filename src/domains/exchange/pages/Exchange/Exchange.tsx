@@ -154,13 +154,8 @@ export const Exchange = () => {
 					titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ExchangesLight" darkIcon="ExchangesDark" />}
 				/>
 
-				<ExchangeNavigationBar
-					currentView={currentView}
-					exchangeTransactionsCount={activeProfile.exchangeTransactions().count()}
-					onChange={handleViewChange}
-				/>
-
 				<Section className="pt-2" innerClassName="px-6 lg:px-10">
+					<ExchangeNavigationBar currentView={currentView} onChange={handleViewChange} />
 					{renderContent()}
 				</Section>
 			</Page>
