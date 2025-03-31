@@ -383,19 +383,19 @@ export const AddressesSidePanel = ({
 
 					{isDeleteMode && (
 						<div className="flex items-center space-x-2 px-2 leading-[18px] sm:leading-5">
-							<Icon
-								name="Back"
-								dimensions={[16, 16]}
-								className="text-theme-primary-600 dark:text-theme-primary-400"
-							/>
 							<Button
 								data-testid="BackManage"
 								size="icon"
-								variant="transparent"
+								variant="primary-transparent"
 								onClick={resetDeleteState}
-								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5"
+								className="p-2 py-[3px] text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5"
 							>
-								{t("COMMON.BACK")}
+								<Icon
+									name="Back"
+									dimensions={[16, 16]}
+									className="text-theme-primary-600 dark:text-theme-primary-400"
+								/>
+								<span>{t("COMMON.BACK")}</span>
 							</Button>
 						</div>
 					)}
