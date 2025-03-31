@@ -4,8 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
-import { MdAndAbove } from "@/app/components/Breakpoint";
-import { Header, PageHeader } from "@/app/components/Header";
+import { PageHeader } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useActiveProfile } from "@/app/hooks";
 import { toasts } from "@/app/services";
@@ -156,6 +155,7 @@ export const Exchange = () => {
 
 				<Section className="pt-2" innerClassName="px-6 lg:px-10">
 					<ExchangeNavigationBar currentView={currentView} onChange={handleViewChange} />
+
 					{renderContent()}
 				</Section>
 			</Page>
