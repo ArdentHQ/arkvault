@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import { isLessThan, upperFirst } from "@ardenthq/sdk-helpers";
+import { upperFirst } from "@ardenthq/sdk-helpers";
 import { Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 
 import { useLedgerContext } from "@/app/contexts";
@@ -16,9 +16,8 @@ const prepareMultiSignature = async (
 	signatory: await wallet.signatory().multiSignature(wallet.multiSignature().all() as Services.MultiSignatureAsset),
 });
 
-
 const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileContracts.IReadWriteWallet) => {
-	await accessLedgerApp({ coin: wallet.coin() })
+	await accessLedgerApp({ coin: wallet.coin() });
 
 	const signature = await wallet
 		.signatory()
@@ -51,7 +50,7 @@ export const useTransactionBuilder = () => {
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);
 
-		let data = input
+		let data = input;
 
 		if (wallet.isMultiSignature()) {
 			data = await prepareMultiSignature(data, wallet);
