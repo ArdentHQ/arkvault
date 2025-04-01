@@ -714,7 +714,7 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 pt-2"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
           class="mx-auto lg:container md:px-10 px-6 lg:px-10"
@@ -1486,7 +1486,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 pt-2"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
           class="mx-auto lg:container md:px-10 px-6 lg:px-10"
