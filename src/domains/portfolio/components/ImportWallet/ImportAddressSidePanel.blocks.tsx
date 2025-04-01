@@ -75,7 +75,7 @@ export const ImportActionToolbar = ({
 
 				{showPortfoliobutton && (
 					<Button disabled={isSubmitDisabled} data-testid="ImportWallet__finish-button" onClick={onSubmit}>
-						{t("COMMON.GO_TO_PORTFOLIO")}
+						{t("COMMON.CLOSE")}
 					</Button>
 				)}
 			</div>
@@ -108,7 +108,10 @@ export const StepHeader = ({
 				subtitle={importOption?.description ?? ""}
 				titleIcon={
 					importOption?.icon ? (
-						<div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div>
+						<div className="hidden text-theme-primary-600 dark:text-theme-navy-500 md:block">
+							{" "}
+							{importOption.icon}{" "}
+						</div>
 					) : undefined
 				}
 				className="mt-px"
@@ -123,6 +126,7 @@ export const StepHeader = ({
 					<ThemeIcon
 						lightIcon="WalletEncryptionLight"
 						darkIcon="WalletEncryptionDark"
+						className="hidden md:block"
 						dimensions={[24, 24]}
 					/>
 				}
@@ -135,7 +139,7 @@ export const StepHeader = ({
 				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
 				titleIcon={
 					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
 						dimensions={[24, 24]}
 						name="Completed"
 						data-testid="icon-Completed"
@@ -166,7 +170,10 @@ export const LedgerStepHeader = ({
 				subtitle={importOption?.description ?? ""}
 				titleIcon={
 					importOption?.icon ? (
-						<div className="text-theme-primary-600 dark:text-theme-navy-500"> {importOption.icon} </div>
+						<div className="hidden text-theme-primary-600 dark:text-theme-navy-500 md:block">
+							{" "}
+							{importOption.icon}{" "}
+						</div>
 					) : undefined
 				}
 				className="mt-px"
@@ -176,7 +183,9 @@ export const LedgerStepHeader = ({
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
-				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
+				titleIcon={
+					<Icon name="NoteCheck" dimensions={[22, 22]} className="hidden text-theme-primary-600 md:block" />
+				}
 			/>
 		),
 		[LedgerTabStep.LedgerImportStep]: (
@@ -186,7 +195,7 @@ export const LedgerStepHeader = ({
 				titleIcon={
 					<Icon
 						name="DoubleCheckedCircle"
-						className="text-theme-success-100 dark:text-theme-success-900"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
 						dimensions={[22, 22]}
 					/>
 				}

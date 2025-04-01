@@ -116,7 +116,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                           >
                             <button
-                              class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                              class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
@@ -792,7 +792,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                               class="mt-2"
                             >
                               <div
-                                class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+                                class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
                                 data-testid="TableWrapper"
                               >
                                 <div
@@ -1177,7 +1177,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                   class="mt-8 flex justify-end space-x-3"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -1303,7 +1303,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Connect your Ledger Nano X and confirm input.
@@ -1484,7 +1484,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                   class="mt-8 flex justify-end space-x-3"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                     data-testid="Paginator__back"
                     type="button"
                   >
@@ -1643,7 +1643,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                         class="mt-2"
                       >
                         <div
-                          class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+                          class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
                           data-testid="TableWrapper"
                         >
                           <div
@@ -2142,7 +2142,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                         class="mt-2"
                       >
                         <div
-                          class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+                          class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
                           data-testid="TableWrapper"
                         >
                           <div

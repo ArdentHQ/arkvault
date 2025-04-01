@@ -162,11 +162,28 @@ describe("AddressRow", () => {
 				usesDeleteMode={true}
 				toggleAddress={vi.fn()}
 				isSelected={false}
+				isSingleView={false}
 				deleteContent={<div>Delete content</div>}
 			/>,
 		);
 
 		expect(screen.getByText("Delete content")).toBeInTheDocument();
 		expect(screen.getByTestId("icon-MarkedTrash")).toBeInTheDocument();
+	});
+
+	it("should render radio button when in single view", () => {
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesDeleteMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={true}
+				isSingleView={true}
+			/>,
+		);
+
+		expect(screen.getByTestId("AddressRow--radio")).toBeInTheDocument();
 	});
 });

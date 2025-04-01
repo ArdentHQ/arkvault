@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Toggle } from "@/app/components/Toggle";
+import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx";
 
 export const ConfirmPassphraseStep = () => {
 	const { getValues, setValue, watch, clearErrors, register } = useFormContext();
@@ -13,6 +13,9 @@ export const ConfirmPassphraseStep = () => {
 	const mnemonic = watch("mnemonic");
 
 	const { t } = useTranslation();
+
+	const useEncryption = watch("useEncryption");
+	const acceptResponsibility = watch("acceptResponsibility");
 
 	const handleComplete = (isComplete: boolean) => {
 		setMnemonicValidated(isComplete);
@@ -33,6 +36,10 @@ export const ConfirmPassphraseStep = () => {
 
 	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue("useEncryption", event.target.checked);
+	};
+
+	const handleToggleResponsibility = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setValue("acceptResponsibility", event.target.checked);
 	};
 
 	return (
@@ -58,27 +65,12 @@ export const ConfirmPassphraseStep = () => {
 				</div>
 			</div>
 
-			<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
-				<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
-					<span className="font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-dark-50 sm:leading-5">
-						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.TITLE")}
-					</span>
-
-					<span data-testid="CreateWallet__encryption">
-						<Toggle
-							data-testid="CreateWallet__encryption-toggle"
-							defaultChecked={getValues("useEncryption")}
-							onChange={handleToggleEncryption}
-						/>
-					</span>
-				</div>
-
-				<div className="rounded-b-lg bg-theme-secondary-100 px-4 pb-4 pt-3 dark:bg-theme-dark-950 sm:px-6">
-					<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
-						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.ENCRYPTION.DESCRIPTION")}
-					</span>
-				</div>
-			</div>
+			<WalletEncryptionBanner
+				toggleChecked={useEncryption}
+				toggleOnChange={handleToggleEncryption}
+				checkboxChecked={acceptResponsibility}
+				checkboxOnChange={handleToggleResponsibility}
+			/>
 		</section>
 	);
 };

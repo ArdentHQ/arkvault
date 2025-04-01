@@ -1,10 +1,12 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render } from "@/utils/testing-library";
 import { expect } from "vitest";
 import { AddressesSidePanel } from "./AddressesSidePanel";
 import userEvent from "@testing-library/user-event";
-import { waitFor } from "@testing-library/react";
+import { waitFor, screen } from "@testing-library/react";
+
+const getSearchInput = () => screen.getByTestId("AddressesPanel--SearchInput");
 
 describe("AddressesSidePanel", () => {
 	let profile: Contracts.IProfile;
@@ -58,27 +60,6 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
 		expect(onClose).toHaveBeenCalledWith([wallets.first().address()]);
-	});
-
-	it("should deselect an address when AddressRow is clicked", async () => {
-		const onClose = vi.fn();
-
-		render(
-			<AddressesSidePanel
-				profile={profile}
-				wallets={wallets.values()}
-				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
-				open={true}
-				onClose={onClose}
-				onOpenChange={vi.fn()}
-				onDelete={vi.fn()}
-			/>,
-		);
-
-		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
-		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
-
-		expect(onClose).toHaveBeenCalledWith([wallets.last().address()]);
 	});
 
 	it("should select all displayed addresses when `select all` clicked", async () => {
@@ -215,7 +196,7 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), wallets.first().address());
+		await userEvent.type(getSearchInput(), wallets.first().address());
 
 		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
 	});
@@ -233,9 +214,15 @@ describe("AddressesSidePanel", () => {
 			/>,
 		);
 
-		await userEvent.type(screen.getByTestId("AddressesPanel--SearchInput"), "WALLET 2");
+		await userEvent.type(getSearchInput(), "Mainsail Wallet 1");
 
-		expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		await waitFor(() => {
+			expect(getSearchInput()).toHaveValue("Mainsail Wallet 1");
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("AddressRow").length).toBe(1);
+		});
 	});
 
 	it("should show a hint for `manage` button", async () => {
@@ -305,5 +292,73 @@ describe("AddressesSidePanel", () => {
 
 		setItemSpy.mockRestore();
 		getItemSpy.mockRestore();
+	});
+
+	it("should deselect an address when AddressRow is clicked", async () => {
+		const onClose = vi.fn();
+
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={wallets.values()}
+				defaultSelectedAddresses={[wallets.first().address(), wallets.last().address()]}
+				open={true}
+				onClose={onClose}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
+		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
+
+		expect(onClose).toHaveBeenCalledWith([wallets.last().address()]);
+	});
+
+	it("should toggle between single and multiple view", async () => {
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={wallets.values()}
+				defaultSelectedAddresses={[]}
+				open={true}
+				onClose={vi.fn()}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByTestId("tabs__tab-button-single")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("tabs__tab-button-single"));
+
+		expect(screen.getByTestId("tabs__tab-button-multiple")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("tabs__tab-button-multiple"));
+	});
+
+	it("should select only one address when in single view", async () => {
+		const onClose = vi.fn();
+		render(
+			<AddressesSidePanel
+				profile={profile}
+				wallets={[profile.wallets().first(), profile.wallets().last()]}
+				defaultSelectedAddresses={[profile.wallets().first().address(), profile.wallets().last().address()]}
+				defaultSelectedWallet={profile.wallets().first()}
+				open={true}
+				onClose={onClose}
+				onOpenChange={vi.fn()}
+				onDelete={vi.fn()}
+			/>,
+		);
+
+		const singleTabButton = screen.getByTestId("tabs__tab-button-single");
+		await userEvent.click(singleTabButton);
+
+		const addressRows = screen.getAllByTestId("AddressRow");
+		await userEvent.click(addressRows[0]);
+
+		const closeButton = screen.getByTestId(sidePanelCloseButton);
+		await userEvent.click(closeButton);
+
+		expect(onClose).toHaveBeenCalledWith([profile.wallets().first().address()]);
 	});
 });

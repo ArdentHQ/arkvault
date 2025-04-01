@@ -50,7 +50,7 @@ export const TransactionExportModal = ({ wallets, isOpen, onClose }: Transaction
 				onClose();
 			}}
 		>
-			<Form context={form} onSubmit={handleSubmit} className="mt-8">
+			<Form context={form} onSubmit={handleSubmit} className="mt-4">
 				<Tabs activeId={status}>
 					<TabPanel tabId={ExportProgressStatus.Idle}>
 						<TransactionExportForm profile={profile} wallets={wallets} onCancel={onClose} />

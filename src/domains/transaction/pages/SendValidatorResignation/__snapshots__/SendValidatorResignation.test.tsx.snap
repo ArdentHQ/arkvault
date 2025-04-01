@@ -471,13 +471,13 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -516,6 +516,16 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -525,32 +535,22 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -577,7 +577,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -696,7 +696,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Review the transaction details below.
@@ -732,7 +732,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
                             >
                               From
                             </div>
@@ -823,7 +823,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -848,7 +848,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -1172,7 +1172,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -1798,13 +1798,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -1843,6 +1843,16 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -1852,32 +1862,22 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -1904,7 +1904,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -2024,7 +2024,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             This transaction type permanently retires a Validator address.
@@ -2203,7 +2203,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -2228,7 +2228,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -2249,7 +2249,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -2875,13 +2875,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -2920,6 +2920,16 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -2929,32 +2939,22 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -2981,7 +2981,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -3100,7 +3100,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Review the transaction details below.
@@ -3136,7 +3136,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                           >
                             <div
-                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[178px]"
                             >
                               From
                             </div>
@@ -3227,7 +3227,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Category
                               </div>
@@ -3252,7 +3252,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                               class="flex w-full items-center justify-between gap-4 sm:justify-start"
                             >
                               <div
-                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                                class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-[162px]"
                               >
                                 Validator Public Key
                               </div>
@@ -3326,7 +3326,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="false"
                               aria-label="0.00075"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3368,7 +3368,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="true"
                               aria-label="0.0007600051875"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3410,7 +3410,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                             <button
                               aria-checked="false"
                               aria-label="0.0009"
-                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-primary-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                              class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3460,7 +3460,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -4086,13 +4086,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -4131,6 +4131,16 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -4140,32 +4150,22 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -4192,7 +4192,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -4327,7 +4327,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                             </h1>
                           </div>
                           <div
-                            class="flex items-center leading-5 text-theme-secondary-text"
+                            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -4417,7 +4417,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -5070,13 +5070,13 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -5115,6 +5115,16 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -5124,32 +5134,22 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -5176,7 +5176,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
             <div>
@@ -5366,7 +5366,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                         class="relative"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -5413,7 +5413,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="ErrorStep__close-button"
                       type="button"
                     >

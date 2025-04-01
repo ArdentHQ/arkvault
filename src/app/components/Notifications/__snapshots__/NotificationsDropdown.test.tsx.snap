@@ -144,7 +144,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                     >
                       <button
-                        class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                        class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -186,7 +186,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         </span>
                       </button>
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
+                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                         data-testid="explorer-link"
                         type="button"
                       >
@@ -852,7 +852,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <p
-                                class="font-semibold"
+                                class="text-sm font-semibold sm:text-base"
                               >
                                 Success
                               </p>
@@ -861,7 +861,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-5 text-theme-success-200 dark:text-theme-secondary-800"
                             />
                             <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-success-600 sm:text-base"
                             >
                               <span>
                                 1 Confirmations

@@ -11,12 +11,14 @@ export const DropdownItem = ({
 	<li
 		{...props}
 		className={twMerge(
-			"mx-1 my-1 flex items-center space-x-2 whitespace-nowrap px-5 py-4 text-left text-base font-semibold transition-colors-shadow duration-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400",
+			"flex items-center whitespace-nowrap text-left text-base font-semibold transition-colors-shadow duration-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400",
 			cn({
-				"border-l-4": variant !== "navbar",
-				"border-theme-primary-600 bg-theme-primary-50 text-theme-primary-600 dark:bg-black": isActive,
-				"cursor-pointer border-transparent text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 hover:dark:bg-theme-secondary-900":
+				"bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50":
+					isActive,
+				"cursor-pointer text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 hover:dark:bg-theme-secondary-900":
 					!isActive,
+				"mx-1 my-1 space-x-2 rounded px-5 py-4": variant !== "options",
+				"my-0.5 justify-between rounded-lg px-5 py-[14px]": variant === "options",
 				"rounded-lg": !isActive && variant !== "navbar",
 				"sm:rounded-lg": !isActive && variant === "navbar",
 			}),

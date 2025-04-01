@@ -5,9 +5,7 @@ import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Numeral } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
-
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { Icon } from "@/app/components/Icon";
@@ -16,24 +14,23 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Spinner } from "@/app/components/Spinner";
 import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
-import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { Toggle } from "@/app/components/Toggle";
 import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-server-status";
 import { useEnvironmentContext } from "@/app/contexts";
-import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
-import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
+import { TruncatedWithTooltip } from "@/app/components/TruncatedWithTooltip";
 
 interface PeerRowProperties {
 	name: string;
 	address: string;
 	checked: boolean;
 	height: number | undefined;
-	network: Networks.Network;
 	serverStatus?: boolean;
 	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
 	onSelectOption: ({ value }: DropdownOption) => void;
+	dropdownOptions: DropdownOption[];
 }
 
 const PeerRow = ({
@@ -41,19 +38,13 @@ const PeerRow = ({
 	address,
 	checked,
 	height,
-	network,
 	serverStatus,
 	serverType,
 	onToggle,
 	onSelectOption,
+	dropdownOptions,
 }: PeerRowProperties) => {
 	const { t } = useTranslation();
-
-	const dropdownOptions: DropdownOption[] = [
-		{ icon: "Pencil", iconPosition: "start", label: t("COMMON.EDIT"), value: "edit" },
-		{ icon: "Trash", iconPosition: "start", label: t("COMMON.DELETE"), value: "delete" },
-		{ icon: "ArrowRotateLeft", iconPosition: "start", label: t("COMMON.REFRESH"), value: "refresh" },
-	];
 
 	const formattedHeight = useMemo(() => Numeral.make("en").format(height || 0), [height]);
 
@@ -69,64 +60,40 @@ const PeerRow = ({
 
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
-			<TableCell variant="start" innerClassName={cn("py-3 border-2 border-r-0 border-transparent", rowColor)}>
-				<div className="flex h-11 w-full items-center space-x-3">
-					<div
-						className={cn(
-							"relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800",
-							{
-								"bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent": network.isLive(),
-								"bg-theme-secondary-100 text-theme-secondary-700 dark:bg-transparent": network.isTest(),
-							},
-						)}
-					>
-						<NetworkIcon network={network} showTooltip={false} isCompact />
+			<TableCell variant="start" innerClassName={rowColor}>
+				<div className="relative flex w-full flex-col md-lg:h-5 md-lg:overflow-hidden">
+					<div className="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full">
+						<TruncatedWithTooltip
+							className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50"
+							text={name}
+						/>
 
-						{network.isTest() && (
-							<Tooltip content={t("COMMON.TEST_NETWORK")}>
-								<span
-									className={cn(
-										"absolute bottom-0 right-0 -mb-2 -mr-2 flex h-6 w-6 items-center justify-center rounded-full",
-										{
-											"bg-theme-background": !checked,
-											"bg-theme-primary-50 dark:bg-theme-background": checked,
-										},
-									)}
-								>
-									<Icon className="text-theme-secondary-500" name="Code" size="md" />
-								</span>
-							</Tooltip>
-						)}
-					</div>
-
-					<div className="flex flex-col overflow-auto">
-						<div
-							className={cn("cursor-pointer truncate font-semibold transition-colors duration-100", {
-								"text-theme-primary-600": checked,
-								"text-theme-secondary-900 dark:text-theme-secondary-200": !checked,
-							})}
-						>
-							<TruncateEnd text={name} maxChars={20} />
-						</div>
-						<div className="truncate text-sm font-semibold text-theme-secondary-500">{address}</div>
+						<TruncatedWithTooltip
+							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden"
+							text={address}
+						/>
 					</div>
 				</div>
 			</TableCell>
 
-			<TableCell
-				className="hidden md:table-cell"
-				innerClassName={cn("py-3 justify-center border-t-2 border-b-2 border-transparent", rowColor)}
-			>
-				<div className="flex h-11 items-center">
+			<TableCell className="hidden md-lg:table-cell" innerClassName={rowColor}>
+				<TruncatedWithTooltip
+					text={address}
+					className="cursor-pointer text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-72 lg:max-w-44 xl:max-w-72"
+				/>
+			</TableCell>
+
+			<TableCell innerClassName={rowColor}>
+				<div className="flex h-11 items-center text-theme-secondary-900 dark:text-theme-dark-50">
 					{height === undefined ? (
 						<span className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</span>
 					) : (
-						<span>{formattedHeight}</span>
+						<span className="text-sm font-semibold">{formattedHeight}</span>
 					)}
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName={cn("py-3 justify-center border-t-2 border-b-2 border-transparent", rowColor)}>
+			<TableCell innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
 					<Tooltip content={serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}>
 						<div className="flex cursor-pointer justify-center">
@@ -140,13 +107,13 @@ const PeerRow = ({
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName={cn("py-3 justify-center border-t-2 border-b-2 border-transparent", rowColor)}>
+			<TableCell innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
 					<CustomPeerStatusIcon status={serverStatus} />
 				</div>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName={cn("py-3 border-2 border-l-0 border-transparent", rowColor)}>
+			<TableCell variant="end" innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
 					<div className="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 						<Toggle
@@ -162,9 +129,9 @@ const PeerRow = ({
 							<Button
 								variant="transparent"
 								size="icon"
-								className="text-theme-primary-300 hover:text-theme-primary-600"
+								className="text-theme-secondary-700 dark:text-theme-dark-200"
 							>
-								<Icon name="EllipsisVertical" size="md" />
+								<Icon name="EllipsisVerticalFilled" size="md" />
 							</Button>
 						}
 						onSelect={onSelectOption}
@@ -175,16 +142,6 @@ const PeerRow = ({
 		</TableRow>
 	);
 };
-
-const CustomPeersPeerMobileRow: React.VFC<{
-	label: string;
-	children: React.ReactNode;
-}> = ({ label, children }) => (
-	<div className="flex items-start space-x-3 border-t border-dashed border-theme-secondary-300 py-4 dark:border-theme-secondary-800">
-		<div className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">{label}</div>
-		<div className="flex flex-1 justify-end text-theme-secondary-700 dark:text-theme-secondary-500">{children}</div>
-	</div>
-);
 
 const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 	const { t } = useTranslation();
@@ -220,23 +177,29 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 };
 
 const CustomPeersPeer: React.VFC<{
+	index: number;
 	profile: Contracts.IProfile;
 	normalizedNetwork: NormalizedNetwork;
 	onDelete: (network: NormalizedNetwork) => void;
 	onUpdate: (network: NormalizedNetwork) => void;
 	onToggle: (isEnabled: boolean) => void;
 	// TODO: break it down into smaller components.
-	// eslint-disable-next-line sonarjs/cognitive-complexity
-}> = ({ normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
+}> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
-	const { name, network, serverType, address, height, enabled } = normalizedNetwork;
+	const { name, serverType, address, height, enabled } = normalizedNetwork;
+
+	const { t } = useTranslation();
 
 	const { serverStatus, syncStatus } = useServerStatus({
 		network: normalizedNetwork,
 		profile,
 	});
 
-	const { t } = useTranslation();
+	const dropdownOptions: DropdownOption[] = [
+		{ icon: "Pencil", iconPosition: "start", label: t("COMMON.EDIT"), value: "edit" },
+		{ icon: "Trash", iconPosition: "start", label: t("COMMON.DELETE"), value: "delete" },
+		{ icon: "ArrowRotateLeft", iconPosition: "start", label: t("COMMON.REFRESH"), value: "refresh" },
+	];
 
 	useEffect(() => {
 		const interval = setInterval(() => syncStatus(), 60 * 1000 * 5);
@@ -261,145 +224,141 @@ const CustomPeersPeer: React.VFC<{
 		}
 	};
 
-	const { isXs } = useBreakpoint();
+	const { isXs, isSm } = useBreakpoint();
 
 	const { isExpanded, handleHeaderClick } = useAccordion(`${profile.id()}_custom_peers`);
 
-	if (isXs) {
+	if (isSm || isXs) {
 		return (
-			<div className="-mx-8">
-				<AccordionWrapper
-					data-testid={
-						enabled ? "CustomPeers-network-item--mobile--checked" : "CustomPeers-network-item--mobile"
-					}
-					isCollapsed={!isExpanded}
-				>
-					<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
-						<div
-							className={cn("flex w-0 flex-grow items-center space-x-3", {
-								"text-theme-primary-600": network.isLive(),
-								"text-theme-secondary-700": !network.isLive(),
-							})}
-						>
-							<div className="flex shrink-0 items-center">
-								<NetworkIcon network={network} showTooltip={false} isCompact />
-							</div>
+			<tr
+				data-testid={enabled ? "CustomPeers-network-item--mobile--checked" : "CustomPeers-network-item--mobile"}
+			>
+				<td className={cn({ "pt-3": index !== 0 })}>
+					<MobileTableElement
+						title={name}
+						onHeaderClick={handleHeaderClick}
+						titleExtra={
+							<div className="flex items-center gap-1">
+								<div
+									className={cn("items-center gap-1", {
+										flex: !isExpanded,
+										"hidden sm:flex": isExpanded,
+									})}
+								>
+									<CustomPeerStatusIcon status={serverStatus} />
 
-							<div
-								className={cn("truncate font-semibold", {
-									"text-theme-primary-600": enabled,
-									"text-theme-secondary-900 dark:text-theme-secondary-200": !enabled,
-								})}
-							>
-								{name}
-							</div>
+									<Divider type="vertical" />
+								</div>
 
-							{network.isTest() && (
-								<Tooltip content={t("COMMON.TEST_NETWORK")}>
-									<span>
-										<Icon
-											className="text-theme-secondary-500 dark:text-theme-secondary-700"
-											name="Code"
-											size="md"
-										/>
-									</span>
-								</Tooltip>
-							)}
-						</div>
+								<Toggle
+									data-testid="CustomPeers-toggle"
+									defaultChecked={enabled}
+									onClick={(event: React.MouseEvent | React.KeyboardEvent) => event.stopPropagation()}
+									onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+										onToggle(event.target.checked)
+									}
+								/>
 
-						<div className="ml-5 flex items-center space-x-3">
-							<CustomPeerStatusIcon status={serverStatus} />
+								<Divider type="vertical" />
 
-							<Divider type="vertical" />
+								<div className="hidden h-4 sm:block">
+									<Dropdown
+										data-testid="CustomPeers--dropdown"
+										toggleContent={
+											<Button
+												variant="transparent"
+												size="icon"
+												className="-m-3 text-theme-secondary-700 dark:text-theme-dark-200"
+											>
+												<Icon name="EllipsisVerticalFilled" size="md" />
+											</Button>
+										}
+										onSelect={handleSelectOption}
+										options={dropdownOptions}
+									/>
+								</div>
 
-							<Toggle
-								data-testid="CustomPeers-toggle"
-								defaultChecked={enabled}
-								onClick={(event: React.MouseEvent | React.KeyboardEvent) => event.stopPropagation()}
-								onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-									onToggle(event.target.checked)
-								}
-							/>
-
-							<Divider type="vertical" />
-						</div>
-					</AccordionHeader>
-
-					{isExpanded && (
-						<AccordionContent data-testid="CustomPeers-network-item--mobile--expanded">
-							<div className="flex flex-col">
-								<CustomPeersPeerMobileRow label={t("COMMON.NETWORK")}>
-									<div className="break-all text-right">{networkDisplayName(network)}</div>
-								</CustomPeersPeerMobileRow>
-
-								<CustomPeersPeerMobileRow label={t("COMMON.TYPE")}>
-									<div className="flex items-center space-x-3">
-										<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
-										<Icon
-											className="text-theme-secondary-700"
-											size="lg"
-											name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
-										/>
-									</div>
-								</CustomPeersPeerMobileRow>
-
-								<CustomPeersPeerMobileRow label={t("COMMON.ADDRESS")}>
-									<div className="break-all text-right">{address}</div>
-								</CustomPeersPeerMobileRow>
-
-								<CustomPeersPeerMobileRow label={t("COMMON.STATUS")}>
-									<div className="flex w-0 flex-1 items-center justify-end space-x-3 overflow-hidden">
-										{serverStatus === true && (
-											<span className="truncate">
-												{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
-											</span>
+								<div className="sm:hidden">
+									<Icon
+										name="ChevronDownSmall"
+										className={cn(
+											"text-theme-secondary-700 transition-transform dark:text-theme-dark-200",
+											{ "rotate-180": isExpanded },
 										)}
-
-										{serverStatus === false && (
-											<span className="truncate">
-												{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
-											</span>
-										)}
-
-										<CustomPeerStatusIcon status={serverStatus} />
-									</div>
-								</CustomPeersPeerMobileRow>
-
-								<div className="mt-3 flex space-x-3">
-									<Button
-										data-testid="CustomPeers-network-item--mobile--delete"
-										variant="danger"
-										onClick={(event) => {
-											handleSelectOption({ value: "delete" });
-											handleHeaderClick(event);
-										}}
-									>
-										<Icon name="Trash" />
-									</Button>
-
-									<Button
-										data-testid="CustomPeers-network-item--mobile--refresh"
-										variant="secondary"
-										onClick={() => handleSelectOption({ value: "refresh" })}
-									>
-										<Icon name="ArrowRotateLeft" />
-									</Button>
-
-									<Button
-										data-testid="CustomPeers-network-item--mobile--edit"
-										className="w-full"
-										variant="secondary"
-										onClick={() => handleSelectOption({ value: "edit" })}
-									>
-										<Icon name="Pencil" />
-										<span>{t("COMMON.EDIT")}</span>
-									</Button>
+										size="sm"
+									/>
 								</div>
 							</div>
-						</AccordionContent>
-					)}
-				</AccordionWrapper>
-			</div>
+						}
+						bodyClassName={cn("overflow-auto sm:grid-cols-3", { "hidden sm:grid": !isExpanded })}
+					>
+						<MobileTableElementRow
+							title={t("COMMON.IP_ADDRESS")}
+							className="overflow-auto"
+							bodyClassName="overflow-auto"
+						>
+							<TruncatedWithTooltip
+								text={address}
+								className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+							/>
+						</MobileTableElementRow>
+
+						<MobileTableElementRow title={t("COMMON.HEIGHT")}>
+							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								{height}
+							</span>
+						</MobileTableElementRow>
+
+						<MobileTableElementRow title={t("COMMON.TYPE")}>
+							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								<Icon
+									className="text-theme-secondary-700"
+									size="lg"
+									name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
+								/>
+								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
+							</div>
+						</MobileTableElementRow>
+
+						<MobileTableElementRow title={t("COMMON.STATUS")} className="sm:hidden">
+							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								<CustomPeerStatusIcon status={serverStatus} />
+								<div>
+									{serverStatus === true && (
+										<span className="truncate">
+											{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
+										</span>
+									)}
+
+									{serverStatus === false && (
+										<span className="truncate">
+											{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
+										</span>
+									)}
+								</div>
+							</div>
+						</MobileTableElementRow>
+
+						<div className="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden">
+							<Button variant="secondary" size="sm" onClick={() => handleSelectOption({ value: "edit" })}>
+								<Icon name="Pencil" />
+							</Button>
+
+							<Button
+								variant="secondary"
+								size="sm"
+								onClick={() => handleSelectOption({ value: "refresh" })}
+							>
+								<Icon name="ArrowRotateLeft" />
+							</Button>
+
+							<Button variant="danger" size="sm" onClick={() => handleSelectOption({ value: "delete" })}>
+								<Icon name="Trash" />
+							</Button>
+						</div>
+					</MobileTableElement>
+				</td>
+			</tr>
 		);
 	}
 
@@ -407,14 +366,49 @@ const CustomPeersPeer: React.VFC<{
 		<PeerRow
 			name={name}
 			address={address}
-			network={network}
 			checked={enabled}
 			height={height}
 			serverStatus={serverStatus}
 			serverType={serverType}
 			onToggle={onToggle}
 			onSelectOption={handleSelectOption}
+			dropdownOptions={dropdownOptions}
 		/>
+	);
+};
+
+const CustomPeersTableFooter = ({
+	totalColumns,
+	addNewServerHandler,
+	isEmpty,
+}: {
+	totalColumns: number;
+	isEmpty: boolean;
+	addNewServerHandler: () => void;
+}) => {
+	const { t } = useTranslation();
+
+	return (
+		<tr data-testid="EmptyResults">
+			<td colSpan={totalColumns}>
+				{isEmpty && (
+					<div className="py-3 text-center text-theme-secondary-700 dark:text-theme-dark-200">
+						{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}
+					</div>
+				)}
+				<div className="hidden border-t border-theme-secondary-300 px-6 pb-2 pt-3 dark:border-theme-dark-700 md:block">
+					<Button
+						data-testid="CustomPeers--addnew"
+						onClick={addNewServerHandler}
+						variant="secondary"
+						className="w-full space-x-2"
+					>
+						<Icon name="Plus" />
+						<span>{t("COMMON.ADD_NEW")}</span>
+					</Button>
+				</div>
+			</td>
+		</tr>
 	);
 };
 
@@ -428,28 +422,35 @@ const CustomPeers: React.VFC<{
 }> = ({ addNewServerHandler, networks, onDelete, onUpdate, profile, onToggle }) => {
 	const { t } = useTranslation();
 
-	const { isXs } = useBreakpoint();
+	const { isXs, isSm } = useBreakpoint();
 
 	const columns: Column[] = [
 		{
 			Header: t("COMMON.NETWORK"),
 			disableSortBy: true,
-			headerClassName: "no-border",
+			headerClassName: "no-border w-1/3",
+		},
+		{
+			Header: t("COMMON.IP_ADDRESS"),
+			disableSortBy: true,
+			headerClassName: "hidden md-lg:table-cell no-border",
 		},
 		{
 			Header: t("COMMON.HEIGHT"),
 			disableSortBy: true,
-			headerClassName: "hidden md:table-cell",
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
 			Header: t("COMMON.TYPE"),
 			disableSortBy: true,
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
 			Header: t("COMMON.STATUS"),
 			disableSortBy: true,
+			headerClassName: "no-border",
 			minimumWidth: true,
 		},
 		{
@@ -461,40 +462,36 @@ const CustomPeers: React.VFC<{
 		},
 	];
 
-	const renderPeers = () => {
-		if (networks.length === 0) {
-			return <EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>;
-		}
-
-		return (
-			<Table columns={columns} data={networks} rowsPerPage={networks.length} hideHeader={isXs}>
-				{(network: NormalizedNetwork) => (
-					<CustomPeersPeer
-						profile={profile}
-						key={network.name}
-						onDelete={onDelete}
-						onUpdate={onUpdate}
-						onToggle={(isEnabled) => onToggle(isEnabled, network)}
-						normalizedNetwork={network}
-					/>
-				)}
-			</Table>
-		);
-	};
-
 	return (
-		<div data-testid="CustomPeers--list" className={networks.length === 0 ? "mt-3" : "mt-1 sm:mt-3"}>
-			{renderPeers()}
-
-			<Button
-				data-testid="CustomPeers--addnew"
-				onClick={addNewServerHandler}
-				variant="secondary"
-				className="mt-6 w-full space-x-2 sm:mt-3"
-			>
-				<Icon name="Plus" />
-				<span>{t("COMMON.ADD_NEW")}</span>
-			</Button>
+		<div data-testid="CustomPeers--list">
+			<TableWrapper noBorder className="-mb-2 md:-mb-0">
+				<Table
+					columns={columns}
+					data={networks}
+					hideHeader={isXs || isSm}
+					rowsPerPage={networks.length}
+					className="with-x-padding"
+					footer={
+						<CustomPeersTableFooter
+							isEmpty={networks.length === 0}
+							totalColumns={columns.length}
+							addNewServerHandler={addNewServerHandler}
+						/>
+					}
+				>
+					{(network: NormalizedNetwork, index: number) => (
+						<CustomPeersPeer
+							index={index}
+							profile={profile}
+							key={network.name}
+							onDelete={onDelete}
+							onUpdate={onUpdate}
+							onToggle={(isEnabled) => onToggle(isEnabled, network)}
+							normalizedNetwork={network}
+						/>
+					)}
+				</Table>
+			</TableWrapper>
 		</div>
 	);
 };

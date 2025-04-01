@@ -43,7 +43,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
                   class="ring-focus relative focus:outline-none"
@@ -123,7 +123,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 <div
                   class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
                 >
-                   ARK Wallet 1 
+                   Mainsail Wallet 1 
                 </div>
                 <div
                   class="flex h-5 items-center sm:hidden"
@@ -224,7 +224,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
                   class="ring-focus relative focus:outline-none"
@@ -304,7 +304,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 <div
                   class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
                 >
-                   ARK Wallet 1 
+                   Mainsail Wallet 1 
                 </div>
                 <div
                   class="flex h-5 items-center sm:hidden"

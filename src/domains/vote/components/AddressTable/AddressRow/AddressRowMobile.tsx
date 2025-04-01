@@ -36,7 +36,9 @@ export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobileProperties) => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
+	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration().getProfileConfiguration(
+		activeProfile.id(),
+	);
 
 	const { getWalletAlias } = useWalletAlias();
 

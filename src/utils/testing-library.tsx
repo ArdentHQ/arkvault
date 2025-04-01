@@ -17,6 +17,7 @@ import { LayoutBreakpoint } from "@/types";
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -29,6 +30,7 @@ export {
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
@@ -204,8 +206,12 @@ export const MNEMONICS = [
 ];
 
 export const MAINSAIL_MNEMONICS = [
+	// 0x659A76be283644AEc2003aa8ba26485047fd1BFB
 	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
+	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
+	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
 ];
 
 export const breakpoints: {
@@ -263,12 +269,17 @@ const publicNetworksStub: any = {
 	},
 	mainsail: {
 		mainnet: {
-			...DefaultManifest,
+			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
 				ticker: "ARK",
 			},
 			id: "mainsail.mainnet",
+			meta: {
+				...MainsailDefaultManifest.meta,
+				nethash: "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+				version: 30,
+			},
 			name: "Mainnet",
 			type: "live",
 		},
@@ -295,15 +306,15 @@ const testNetworksStub: any = {
 	},
 	mainsail: {
 		devnet: {
-			...DefaultManifest,
+			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
 				ticker: "DARK",
 			},
 			id: "mainsail.devnet",
 			meta: {
-				...DefaultManifest.meta,
-				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				...MainsailDefaultManifest.meta,
+				nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 				version: 30,
 			},
 			name: "Devnet",
@@ -388,7 +399,7 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 // This is probably caused by how jsdom initialization runs with vitest as it's not an issue with jsdom in jest.
 export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet) => {
 	try {
-		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
+		const signatory = await wallet.signatory().mnemonic(getDefaultMainsailWalletMnemonic());
 		await wallet.message().sign({ message: "message", signatory });
 	} catch {
 		//
@@ -432,6 +443,48 @@ export const createTransactionMock = (
 		sender: () => transactionFixture.data.sender,
 		timestamp: () => DateTime.make(),
 		total: () => +transactionFixture.data.amount / 1e8 + +transactionFixture.data.fee / 1e8,
+		type: () => "transfer",
+		usesMultiSignature: () => false,
+		wallet: () => wallet,
+		...overrides,
+	} as any);
+
+/* istanbul ignore next -- @preserve */
+export const createMainsailTransactionMock = (
+	wallet: Contracts.IReadWriteWallet,
+	overrides: Partial<DTO.ExtendedSignedTransactionData> = {},
+) =>
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		amount: () => +mainsailTransactionFixture.data.amount / 1e18,
+		blockId: () => "1",
+		confirmations: () => BigNumber.make(154_178),
+		convertedAmount: () => BigNumber.make(10),
+		data: () => ({ data: () => mainsailTransactionFixture.data.data }),
+		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
+		explorerLinkForBlock: () =>
+			`https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
+		fee: () => +mainsailTransactionFixture.data.fee / 1e18,
+		id: () => mainsailTransactionFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => true,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
+		isMultiSignatureRegistration: () => false,
+		isSuccess: () => true,
+		isTransfer: () => true,
+		isUnvote: () => false,
+		isUsernameRegistration: () => false,
+		isUsernameResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
+		nonce: () => BigNumber.make(1),
+		recipient: () => mainsailTransactionFixture.data.recipient,
+		sender: () => mainsailTransactionFixture.data.senderAddress,
+		timestamp: () => DateTime.make(),
 		type: () => "transfer",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,

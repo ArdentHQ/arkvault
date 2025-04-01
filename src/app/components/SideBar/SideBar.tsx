@@ -2,9 +2,9 @@ import React, { useMemo } from "react";
 import { SideBarItem } from "./SideBarItem";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
+import classNames from "classnames";
 
 export interface Item {
-	icon?: string;
 	itemKey: string;
 	label: string;
 	route: string;
@@ -19,18 +19,8 @@ interface Properties {
 export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, items }: Properties) => {
 	const options = useMemo<DropdownOption[]>(
 		() =>
-			items.map(({ label, itemKey, icon }) => ({
+			items.map(({ label, itemKey }) => ({
 				active: itemKey === activeItem,
-				icon: icon,
-				iconClassName: (option: DropdownOption) => {
-					if (option.active) {
-						return "mr-3 text-theme-primary-600";
-					}
-
-					return "mr-3 text-theme-primary-300 group-hover:text-theme-primary-600 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200";
-				},
-				iconPosition: "start",
-				iconSize: "lg",
 				label: label,
 				value: itemKey,
 			})),
@@ -44,29 +34,32 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 
 	return (
 		<>
-			<div className="relative -mx-4 lg:hidden">
+			<div className="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden">
 				<Dropdown
 					placement="bottom-start"
-					wrapperClass="sm:w-full"
+					wrapperClass="sm:w-full px-6 sm:px-6 md:px-10 -mt-2"
 					options={options}
 					onSelect={({ value }) => handleActiveItem(String(value))}
 					toggleContent={(isOpen) => (
-						<div className="mx-4 flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6">
-							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
+						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300">
+							<span className="flex-1 font-semibold leading-tight">{selectedLabel}</span>
 
-							<span className="font-semibold leading-tight">{selectedLabel}</span>
+							<Icon
+								name="ChevronDownSmall"
+								className={classNames("transition-transform", { "rotate-180": isOpen })}
+								size="sm"
+							/>
 						</div>
 					)}
 				/>
 			</div>
 
-			<div className="hidden h-full w-[210px] lg:block">
-				<ul>
-					{items.map(({ label, route, itemKey, icon }, index) => (
+			<div className="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block">
+				<ul className="space-y-1">
+					{items.map(({ label, route, itemKey }, index) => (
 						<SideBarItem
 							label={label}
 							route={route}
-							icon={icon}
 							itemKey={itemKey}
 							key={index}
 							handleActiveItem={handleActiveItem}

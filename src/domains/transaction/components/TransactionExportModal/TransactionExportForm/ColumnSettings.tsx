@@ -41,7 +41,6 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					data-testid="TransactionExportForm__toggle-include-date"
 				/>
 			),
-			wrapperClass: "py-4",
 		},
 		{
 			label: t("TRANSACTION.EXPORT.FORM.SENDER_RECIPIENT"),
@@ -57,7 +56,6 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					data-testid="TransactionExportForm__toggle-include-sender-recipient"
 				/>
 			),
-			wrapperClass: "py-4",
 		},
 		{
 			label: t("TRANSACTION.EXPORT.FORM.CRYPTO_AMOUNT"),
@@ -73,7 +71,6 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					data-testid="TransactionExportForm__toggle-include-crypto-amount"
 				/>
 			),
-			wrapperClass: showFiatColumn ? "py-4" : "pt-4",
 		},
 	];
 
@@ -92,7 +89,6 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					data-testid="TransactionExportForm__toggle-include-fiat-amount"
 				/>
 			),
-			wrapperClass: "pt-4",
 		});
 	}
 

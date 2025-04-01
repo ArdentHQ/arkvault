@@ -3,15 +3,15 @@
 exports[`Avatar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -22,15 +22,15 @@ exports[`Avatar > should render 1`] = `
 exports[`Avatar > should render with custom shadow color 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-0 ring-theme-black shrink-0"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-0 ring-theme-black shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -41,15 +41,15 @@ exports[`Avatar > should render with custom shadow color 1`] = `
 exports[`Avatar > should render with highlight 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -60,15 +60,15 @@ exports[`Avatar > should render with highlight 1`] = `
 exports[`Avatar > should render with highlight and custom shadow color 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-0 ring-theme-black shrink-0"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-0 ring-theme-black shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -79,15 +79,15 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
 exports[`Avatar > should render with size 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -98,15 +98,15 @@ exports[`Avatar > should render with size 1`] = `
 exports[`Avatar > should render with size 2`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -117,15 +117,15 @@ exports[`Avatar > should render with size 2`] = `
 exports[`Avatar > should render with size 3`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -136,15 +136,15 @@ exports[`Avatar > should render with size 3`] = `
 exports[`Avatar > should render with size 4`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -155,15 +155,15 @@ exports[`Avatar > should render with size 4`] = `
 exports[`Avatar > should render with size 5`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-16 w-16 text-xl ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-16 w-16 text-xl ring-0 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>
@@ -174,15 +174,15 @@ exports[`Avatar > should render with size 5`] = `
 exports[`Avatar > should render without shadow 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="abc"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
         title="abc"
       />
     </div>

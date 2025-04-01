@@ -215,7 +215,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -226,7 +226,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -237,7 +237,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -248,7 +248,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -341,13 +341,6 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
                       </div>
                     </div>
                   </button>
@@ -602,13 +595,13 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -647,6 +640,16 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -656,37 +659,27 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -708,7 +701,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="SignMessage"
           >
             <div>
@@ -822,7 +815,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                               </h1>
                             </div>
                             <div
-                              class="flex items-center leading-5 text-theme-secondary-text"
+                              class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                               data-testid="header__subtitle"
                             >
                               Provide a message below and sign with your mnemonic passphrase.
@@ -853,21 +846,10 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-sm sm:text-base"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                testwallet2
-                              </span>
-                            </span>
-                            <span
                               class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
                             </span>
                           </div>
                         </span>
@@ -884,7 +866,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                               name="signatory-address"
                               readonly=""
                               type="text"
-                              value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                             />
                           </div>
                           <div
@@ -1069,7 +1051,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="SignMessage__back-button"
                   type="button"
                 >
@@ -1316,7 +1298,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
                   Portfolio
@@ -1327,7 +1309,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
                   Exchange
@@ -1338,7 +1320,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
                   Contacts
@@ -1349,7 +1331,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
               >
                 <a
                   class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                  href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                  href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
                   Votes
@@ -1442,13 +1424,6 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                             </g>
                           </svg>
                         </div>
-                      </div>
-                      <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-                        />
                       </div>
                     </div>
                   </button>
@@ -1703,13 +1678,13 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
               class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex items-center gap-5"
             >
               <div
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -1748,6 +1723,16 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         </svg>
                       </div>
                     </div>
+                    <div
+                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -1757,37 +1742,27 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="Amount"
-                    >
-                      0 BTC
-                    </span>
-                  </div>
-                  <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
-                          JO
+                          FO
                         </span>
                       </div>
                     </div>
@@ -1809,7 +1784,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-172"
+            class="space-y-5 mx-auto max-w-172"
             data-testid="SignMessage"
           >
             <div>
@@ -1923,7 +1898,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                               </h1>
                             </div>
                             <div
-                              class="flex items-center leading-5 text-theme-secondary-text"
+                              class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                               data-testid="header__subtitle"
                             >
                               Provide a message below and sign with your mnemonic passphrase.
@@ -1954,21 +1929,10 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="font-semibold text-base text-sm sm:text-base"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                testwallet2
-                              </span>
-                            </span>
-                            <span
                               class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                              0x659A76be283644AEc2003aa8ba26485047fd1BFB
                             </span>
                           </div>
                         </span>
@@ -1985,7 +1949,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                               name="signatory-address"
                               readonly=""
                               type="text"
-                              value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                             />
                           </div>
                           <div
@@ -2170,7 +2134,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="SignMessage__back-button"
                   type="button"
                 >

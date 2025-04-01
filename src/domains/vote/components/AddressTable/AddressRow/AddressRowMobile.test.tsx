@@ -32,9 +32,8 @@ const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
 
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
-
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(getDefaultProfileId(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return (

@@ -4,7 +4,7 @@ import React from "react";
 
 import { DeleteExchangeTransaction } from "./DeleteExchangeTransaction";
 import { translations } from "@/domains/exchange/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
@@ -13,7 +13,7 @@ const onDelete = vi.fn();
 
 describe("DeleteExchangeTransaction", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
 				address: "inputAddress",

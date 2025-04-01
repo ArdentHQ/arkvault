@@ -37,7 +37,7 @@ const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return children;
@@ -132,17 +132,6 @@ describe("Votes", () => {
 		currentMock.mockRestore();
 	});
 
-	it("should render with no wallets", () => {
-		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
-		expect(screen.queryByTestId("HeaderSearchBar__button")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should filter current delegates", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
@@ -182,7 +171,7 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to create page", async () => {
+	it("should open the create wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 
@@ -190,11 +179,12 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Create/ }));
 
-		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/create`);
+		expect(screen.getByTestId("CreateAddressSidePanel")).toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to import wallet page", async () => {
+	it("should open the import wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 
@@ -202,7 +192,7 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Import/ }));
 
-		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/import`);
+		expect(screen.getByTestId("ImportAddressSidePanel")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

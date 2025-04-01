@@ -4,13 +4,15 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SuccessStep } from "./SuccessStep";
-import { env, getDefaultProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("SignMessage success step", () => {
 	it.each(["xs", "lg"])("should render success step in %s", async (breakpoint) => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
@@ -22,7 +24,7 @@ describe("SignMessage success step", () => {
 			breakpoint,
 			{
 				history,
-				route: `/profiles/${getDefaultProfileId()}/wallets/${profile.wallets().first().id()}/sign-message`,
+				route: `/profiles/${getMainsailProfileId()}/wallets/${profile.wallets().first().id()}/sign-message`,
 			},
 		);
 

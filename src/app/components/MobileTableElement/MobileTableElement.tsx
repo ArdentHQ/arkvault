@@ -14,22 +14,25 @@ interface MobileTableElementProperties extends Omit<React.HTMLAttributes<HTMLDiv
 	titleExtra?: React.ReactNode;
 	variant?: MobileTableElementVariant;
 	bodyClassName?: string;
+	onHeaderClick?: (event: React.MouseEvent) => void;
 }
 
 interface MobileTableElementRowProperties extends React.HTMLAttributes<HTMLDivElement> {
 	title: string;
+	bodyClassName?: string;
 }
 
 export const MobileTableElementRow = ({
 	title,
 	children,
 	className,
+	bodyClassName,
 	...properties
 }: MobileTableElementRowProperties) => (
 	<div className={twMerge("grid grid-cols-1 gap-2", className)} {...properties}>
 		<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{title}</div>
 
-		<div>{children}</div>
+		<div className={bodyClassName}>{children}</div>
 	</div>
 );
 
@@ -40,6 +43,7 @@ export const MobileTableElement = ({
 	title,
 	titleExtra,
 	children,
+	onHeaderClick,
 	...properties
 }: MobileTableElementProperties) => (
 	<div
@@ -66,6 +70,7 @@ export const MobileTableElement = ({
 				"bg-theme-success-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.success,
 				"bg-theme-warning-100 dark:bg-theme-dark-950": variant === MobileTableElementVariant.warning,
 			})}
+			onClick={onHeaderClick}
 		>
 			<span className="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text">
 				{title}

@@ -9,6 +9,8 @@ import { OptionsValue } from "./use-import-options";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -29,6 +31,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	const { syncAll } = useWalletSync({ env, profile });
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
 	const { activeNetwork } = useActiveNetwork({ profile });
+	const { addressViewPreference } = useAddressesPanel({ profile });
 
 	const importWalletByType = async ({
 		network,
@@ -232,7 +235,11 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			const wallet = await importWallet({ encryptedWif, ledgerOptions, network, type, value });
 			wallets.push(wallet);
 
-			await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
+			if (addressViewPreference === AddressViewSelection.single) {
+				await setSelectedAddresses([wallet.address()], wallet.network());
+			} else {
+				await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
+			}
 		}
 
 		await persist();

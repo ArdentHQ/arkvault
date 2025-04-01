@@ -548,7 +548,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -557,7 +557,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -673,7 +673,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -682,7 +682,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -1378,7 +1378,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1387,7 +1387,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -1473,7 +1473,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1482,7 +1482,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -1598,7 +1598,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -1607,7 +1607,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -2303,7 +2303,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2312,7 +2312,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -2398,7 +2398,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2407,7 +2407,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -2523,7 +2523,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2532,7 +2532,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -3228,7 +3228,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -3237,7 +3237,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -3323,7 +3323,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -3332,7 +3332,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -3448,7 +3448,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -3457,7 +3457,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -4153,7 +4153,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4162,7 +4162,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -4248,7 +4248,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4257,7 +4257,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -4373,7 +4373,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4382,7 +4382,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -5078,7 +5078,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -5087,7 +5087,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -5173,7 +5173,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -5182,7 +5182,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -5298,7 +5298,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -5307,7 +5307,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -6003,7 +6003,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6012,7 +6012,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -6128,7 +6128,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6137,7 +6137,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span
@@ -6833,7 +6833,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6842,7 +6842,7 @@ exports[`Welcome > should render with profiles 1`] = `
                                   <img
                                     alt="John Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                                     title="John Doe"
                                   />
                                   <span
@@ -6928,7 +6928,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -6937,7 +6937,7 @@ exports[`Welcome > should render with profiles 1`] = `
                                   <img
                                     alt="Jane Doe"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
                                     title="Jane Doe"
                                   />
                                   <span
@@ -7053,7 +7053,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -7062,7 +7062,7 @@ exports[`Welcome > should render with profiles 1`] = `
                                   <img
                                     alt="Foo Bar"
                                     data-testid="ProfileAvatar__svg"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                                     title="Foo Bar"
                                   />
                                   <span

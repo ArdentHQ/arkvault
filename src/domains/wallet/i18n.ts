@@ -4,6 +4,10 @@ export const translations = {
 		MANAGE_HINT: "You can manage and remove your addresses here.",
 		SEARCH_BY: "Search by Name or Address",
 		TITLE: "Choose Address",
+		TOGGLE: {
+			MULTIPLE_VIEW: "Multiple View",
+			SINGLE_VIEW: "Single View",
+		},
 	},
 	CONNECT_LEDGER: {
 		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
@@ -136,10 +140,13 @@ export const translations = {
 
 		IMPORT_DETAIL_STEP: {
 			ENCRYPTION: {
+				CHECKBOX: "I understand and accept responsibility.",
 				DESCRIPTION:
-					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
+					"Set an encryption password to replace your mnemonic passphrase when signing transactions and messages.",
 				NOT_AVAILABLE: "Encryption not available for this import type",
 				TITLE: "Use Wallet Encryption",
+				WARNING:
+					"You must still securely store your mnemonic passphrase. Losing it will result in permanent loss of access to your funds!",
 			},
 			MNEMONIC_TIP: {
 				GUIDELINES_1: "Ensure all words are in lowercase.",
@@ -175,16 +182,16 @@ export const translations = {
 		},
 
 		METHOD_STEP: {
-			ADDRESS_DESCRIPTION: "Enter the public address to add it",
-			LEDGER_DESCRIPTION: "Import via your Ledger hardware wallet",
-			MNEMONIC_DESCRIPTION: "Import using 12 or 24 mnemonic passphrase",
+			ADDRESS_DESCRIPTION: "Import an address by entering your public address",
+			LEDGER_DESCRIPTION: "Import address(es) via your Ledger hardware wallet",
+			MNEMONIC_DESCRIPTION: "Import an address by entering your 12 or 24 mnemonic phrase",
 			MNEMONIC_TITLE: "Import Mnemonic",
-			PUBLIC_KEY_DESCRIPTION: "Enter the public key of the address to add it",
+			PUBLIC_KEY_DESCRIPTION: "Import an address by entering your public key",
 			PUBLIC_KEY_TITLE: "Import Public Key",
-			SECRET_DESCRIPTION: "Import using a custom password",
+			SECRET_DESCRIPTION: "Import an address by entering your custom password",
 			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",
-			TITLE: "Import Ledger",
+			TITLE: "Import",
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {

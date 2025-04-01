@@ -105,6 +105,8 @@ import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import VotesDark from "./votes-dark.svg?react";
 import VotesLight from "./votes-light.svg?react";
+import ExchangesDark from "./exchanges-dark.svg?react";
+import ExchangesLight from "./exchanges-light.svg?react";
 import ContactsDark from "./contacts-dark.svg?react";
 import ContactsLight from "./contacts-light.svg?react";
 import Completed from "./completed.svg?react";
@@ -119,6 +121,8 @@ import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
 import MarkedTrash from "./marked-trash.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
+import SettingsDark from "./settings-dark.svg?react";
+import SettingsLight from "./settings-light.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -167,6 +171,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Download,
 	EllipsisVertical,
 	EllipsisVerticalFilled,
+	ExchangesDark,
+	ExchangesLight,
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWweDark,
@@ -219,6 +225,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Server,
 	ServerMultisign,
 	ServerPeer,
+	SettingsDark,
+	SettingsLight,
 	ShieldCheckMark,
 	Sliders,
 	SlidersVertical,

@@ -62,12 +62,21 @@ export const ImportAddressesSidePanel = ({
 
 	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
-	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
+	const {
+		value,
+		importOption,
+		encryptionPassword,
+		confirmEncryptionPassword,
+		secondInput,
+		useEncryption,
+		acceptResponsibility,
+	} = watch();
 	const isLedgerImport = !!importOption && importOption.value === OptionsValue.LEDGER;
 
 	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
-		register("useEncryption");
+		register({ name: "useEncryption", type: "boolean", value: false });
+		register({ name: "acceptResponsibility", type: "boolean", value: false });
 	}, [register]);
 
 	useEffect(() => {
@@ -78,6 +87,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		setActiveTab(Step.MethodStep);
+		setImportedWallet(undefined);
 		form.reset();
 	}, [open]);
 
@@ -152,7 +162,7 @@ export const ImportAddressesSidePanel = ({
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		if (activeTab === Step.EncryptPasswordStep) {
+		if (activeTab === Step.EncryptPasswordStep && importedWallet) {
 			forgetImportedWallets(importedWallet);
 		}
 
@@ -208,6 +218,10 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const isNextDisabled = useMemo(() => {
+		if (activeTab === Step.ImportDetailStep && useEncryption) {
+			return !isValid || !acceptResponsibility;
+		}
+
 		if (activeTab < Step.EncryptPasswordStep) {
 			return isDirty ? !isValid || isImporting : true;
 		}
@@ -215,7 +229,17 @@ export const ImportAddressesSidePanel = ({
 		if (activeTab === Step.EncryptPasswordStep) {
 			return isEncrypting || !isValid || !encryptionPassword || !confirmEncryptionPassword;
 		}
-	}, [activeTab, confirmEncryptionPassword, encryptionPassword, isDirty, isEncrypting, isImporting, isValid]);
+	}, [
+		activeTab,
+		acceptResponsibility,
+		useEncryption,
+		confirmEncryptionPassword,
+		encryptionPassword,
+		isDirty,
+		isEncrypting,
+		isImporting,
+		isValid,
+	]);
 
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
@@ -287,10 +311,12 @@ export const ImportAddressesSidePanel = ({
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								<SuccessStep
-									importedWallet={importedWallet}
-									onClickEditAlias={() => setIsEditAliasModalOpen(true)}
-								/>
+								{importedWallet && (
+									<SuccessStep
+										importedWallet={importedWallet}
+										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+									/>
+								)}
 							</TabPanel>
 						</div>
 					</Tabs>

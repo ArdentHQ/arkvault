@@ -1,24 +1,24 @@
-import { upperFirst } from "@ardenthq/sdk-helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Page, Section } from "@/app/components/Layout";
 import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 
-import { MdAndAbove } from "@/app/components/Breakpoint";
-import { Header } from "@/app/components/Header";
-import { Page, Section } from "@/app/components/Layout";
-import { useActiveProfile } from "@/app/hooks";
-import { toasts } from "@/app/services";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DeleteExchangeTransaction } from "@/domains/exchange/components/DeleteExchangeTransaction";
 import { ExchangeGrid } from "@/domains/exchange/components/ExchangeGrid";
 import { ExchangeNavigationBar } from "@/domains/exchange/components/ExchangeNavigationBar";
 import { ExchangeTransactionsTable } from "@/domains/exchange/components/ExchangeTransactionsTable";
-import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { OrderStatusResponse } from "@/domains/exchange/exchange.contracts";
-import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
+import { PageHeader } from "@/app/components/Header";
+import { ThemeIcon } from "@/app/components/Icon";
 import { assertExchangeTransaction } from "@/domains/exchange/utils";
 import { assertString } from "@/utils/assertions";
 import { delay } from "@/utils/delay";
+import { toasts } from "@/app/services";
+import { upperFirst } from "@ardenthq/sdk-helpers";
+import { useActiveProfile } from "@/app/hooks";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { useHistory } from "react-router-dom";
+import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",
@@ -147,22 +147,15 @@ export const Exchange = () => {
 	return (
 		<>
 			<Page pageTitle={t("EXCHANGE.PAGE_EXCHANGES.TITLE")} isBackDisabled={true} data-testid="Exchange">
-				<MdAndAbove>
-					<Section>
-						<Header
-							title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}
-							subtitle={t("EXCHANGE.PAGE_EXCHANGES.SUBTITLE")}
-						/>
-					</Section>
-				</MdAndAbove>
-
-				<ExchangeNavigationBar
-					currentView={currentView}
-					exchangeTransactionsCount={activeProfile.exchangeTransactions().count()}
-					onChange={handleViewChange}
+				<PageHeader
+					title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}
+					subtitle={t("EXCHANGE.PAGE_EXCHANGES.SUBTITLE")}
+					titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="ExchangesLight" darkIcon="ExchangesDark" />}
 				/>
 
-				<Section className="pt-2" innerClassName="px-6 lg:px-10">
+				<Section className="pt-0" innerClassName="px-6 lg:px-10">
+					<ExchangeNavigationBar currentView={currentView} onChange={handleViewChange} />
+
 					{renderContent()}
 				</Section>
 			</Page>

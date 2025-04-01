@@ -2,31 +2,30 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
+import userEvent from "@testing-library/user-event";
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
+import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
 
@@ -34,30 +33,12 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-// @TODO: Enable & refactor tests once mainsail coin support will be completed.
-//		  See https://app.clickup.com/t/86dvbvrvf
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: devnetTransactionsFixture.data.slice(0, 2),
-				meta: devnetTransactionsFixture.meta,
-			}),
-			requestMock("https://ark-live.arkvault.io/api/transactions", {
-				data: [],
-				meta: mainnetTransactionsFixture.meta,
-			}),
-		);
-
 		profile = env.profiles().findById(fixtureProfileId);
-
-		const wallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-
-		profile.wallets().push(wallet);
 
 		await syncDelegates(profile);
 
@@ -90,7 +71,20 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it.skip("should render", async () => {
+	it("should render", async () => {
+		const wallet = profile.wallets().first();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address()],
+			selectedWallets: [wallet],
+			setSelectedAddresses: () => {},
+		});
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -103,16 +97,100 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
+			expect(screen.getByTestId("WalletVote__button")).toBeVisible();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
 
-		mockTransactionsAggregate.mockRestore();
+		usePortfolioMock.mockRestore();
+	});
+
+	it("should render with two wallets", async () => {
+		const wallet1 = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const wallet1SynchroniserMock = vi
+			.spyOn(wallet1.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+		const wallet2SynchroniserMock = vi
+			.spyOn(wallet2.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet1, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet1.address(), wallet2.address()],
+			selectedWallets: [wallet1, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+		});
+
+		usePortfolioMock.mockRestore();
+		wallet1SynchroniserMock.mockRestore();
+		wallet2SynchroniserMock.mockRestore();
+	});
+
+	it("should render with two wallets and handle exceptions", async () => {
+		const wallet1 = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const wallet1SynchroniserMock = vi
+			.spyOn(wallet1.synchroniser(), "votes")
+			.mockRejectedValue(new Error("Error syncing votes"));
+		const wallet2SynchroniserMock = vi
+			.spyOn(wallet2.synchroniser(), "votes")
+			.mockImplementation(() => Promise.resolve([]));
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet1, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet1.address(), wallet2.address()],
+			selectedWallets: [wallet1, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+		});
+
+		usePortfolioMock.mockRestore();
+		wallet1SynchroniserMock.mockRestore();
+		wallet2SynchroniserMock.mockRestore();
 	});
 
 	it.skip("should show introductory tutorial", async () => {
@@ -132,6 +210,90 @@ describe("Dashboard", () => {
 		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
 
 		mockHasCompletedTutorial.mockRestore();
-		mockTransactionsAggregate.mockRestore();
+	});
+
+	it("should navigate to wallet votes when more than one wallet is selected", async () => {
+		const wallet = profile.wallets().first();
+		const wallet2 = profile.wallets().last();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet, wallet2],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address(), wallet2.address()],
+			selectedWallets: [wallet, wallet2],
+			setSelectedAddresses: () => {},
+		});
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletMyVotes__button")).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId("WalletMyVotes__button"));
+
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith({ pathname: `/profiles/${profile.id()}/votes` });
+		});
+
+		usePortfolioMock.mockRestore();
+
+		historySpy.mockRestore();
+	});
+
+	it("should navigate to wallet votes when one wallet is selected", async () => {
+		const wallet = profile.wallets().first();
+
+		const usePortfolioMock = vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
+			allWallets: [wallet],
+			balance: {
+				total: () => BigNumber.make("25"),
+				totalConverted: () => BigNumber.make("45"),
+			},
+			selectedAddresses: [wallet.address()],
+			selectedWallets: [wallet],
+			setSelectedAddresses: () => {},
+		});
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletVote__button")).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId("WalletVote__button"));
+
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
+		});
+
+		usePortfolioMock.mockRestore();
+
+		historySpy.mockRestore();
 	});
 });

@@ -67,17 +67,22 @@ describe("useProfileSyncStatus", () => {
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		await renderAct(async () => {
-			configuration.setConfiguration({ profileIsSyncingWallets: true });
+			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
 		});
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true), { timeout: 5000 });
+		await waitFor(
+			() => expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
+			{ timeout: 5000 },
+		);
 
 		await renderAct(async () => {
-			configuration.setConfiguration({ profileIsSyncingWallets: false });
+			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: false });
 		});
 
 		expect(onProfileSyncStart).toHaveBeenCalledTimes(2);
 
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(false));
+		await waitFor(() =>
+			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(false),
+		);
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
@@ -129,10 +134,12 @@ describe("useProfileSyncStatus", () => {
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		await renderAct(async () => {
-			configuration.setConfiguration({ profileIsSyncingWallets: true });
+			configuration.setConfiguration(profile.id(), { profileIsSyncingWallets: true });
 		});
 
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true));
+		await waitFor(() =>
+			expect(configuration.getProfileConfiguration(profile.id()).profileIsSyncingWallets).toBe(true),
+		);
 
 		mockWalletSyncStatus.mockRestore();
 		profileSyncSpy.mockRestore();

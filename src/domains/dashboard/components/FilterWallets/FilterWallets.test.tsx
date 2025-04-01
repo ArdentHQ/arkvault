@@ -5,7 +5,7 @@ import React from "react";
 import { FilterWallets } from "./FilterWallets";
 import { FilterOption } from "@/app/components/FilterNetwork";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let networkOptions: FilterOption[];
@@ -15,9 +15,11 @@ const defaultConfiguration: DashboardConfiguration = {
 	walletsDisplayType: "all",
 };
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("FilterWallets", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		const networks: Record<string, FilterOption> = {};
 

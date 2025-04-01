@@ -1,10 +1,10 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
 import { useTranslation } from "react-i18next";
 
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { Icon } from "@/app/components/Icon";
 import { ViewingModeType } from "@/app/hooks";
+import cn from "classnames";
 
 interface ViewingModeItem {
 	icon: string;
@@ -12,14 +12,57 @@ interface ViewingModeItem {
 	value: string;
 }
 
-export const SettingsGroup = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
+export const SettingsGroup = ({
+	className,
+	title,
+	description,
+	children,
+	...properties
+}: React.HTMLAttributes<HTMLDivElement> & {
+	title?: string;
+	description?: string;
+}) => (
+	<div className={cn("relative flex flex-col", className)} {...properties}>
+		{title && <SettingsGroupHeader description={description}>{title}</SettingsGroupHeader>}
+
+		<div className="pb-6 pt-4 sm:px-6">{children}</div>
+	</div>
+);
+
+export const SettingsButtonGroup = ({
+	className,
+	children,
+	...properties
+}: React.HTMLAttributes<HTMLDivElement> & {
+	title?: string;
+}) => (
 	<div
-		{...props}
-		className={twMerge(
-			"relative -mx-8 mt-8 border-t border-theme-secondary-300 px-8 pt-6 dark:border-theme-secondary-800 sm:border-0 sm:pt-0",
-			props.className,
+		className={cn("border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6", className)}
+		{...properties}
+	>
+		<div className="sm:-mt-6">{children}</div>
+	</div>
+);
+
+const SettingsGroupHeader = ({
+	className,
+	children,
+	description,
+	...properties
+}: React.HTMLAttributes<HTMLHeadingElement> & {
+	description?: string;
+}) => (
+	<div
+		className={cn(
+			"-mx-3 block border-l-2 border-theme-primary-400 bg-theme-secondary-100 px-2.5 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:mx-0 sm:-mt-px sm:border-l-0 sm:border-t sm:border-theme-secondary-300 sm:px-6",
+			className,
 		)}
-	/>
+		{...properties}
+	>
+		<h2 className="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{children}</h2>
+
+		{description && <p className="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>}
+	</div>
 );
 
 export const ViewingMode = ({
@@ -53,6 +96,7 @@ export const ViewingMode = ({
 					setSelectedValue={() => onChange?.(value as ViewingModeType)}
 					value={value}
 					variant="modern"
+					className="h-11 rounded"
 				>
 					<div className="flex items-center px-2">
 						<Icon size="lg" name={icon} />

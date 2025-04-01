@@ -1,7 +1,7 @@
 import React from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
 
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
@@ -11,6 +11,16 @@ import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 let wallet: Contracts.IReadWriteWallet;
+
+const setSelectedAddressesMock = vi.fn();
+const selectedAddressesMock: string[] = [];
+
+vi.mock("@/domains/portfolio/hooks/use-portfolio", () => ({
+	usePortfolio: () => ({
+		selectedAddresses: selectedAddressesMock,
+		setSelectedAddresses: setSelectedAddressesMock,
+	}),
+}));
 
 describe("useWalletImport", () => {
 	const wrapper = ({ children }: any) => (
@@ -192,5 +202,49 @@ describe("useWalletImport", () => {
 		await expect(
 			current.importWallet({ encryptedWif: "", network, type: "unknown", value: "value" }),
 		).rejects.toThrow();
+	});
+
+	it("should set imported wallet as the only selected wallet when view preference is set to single", async () => {
+		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallets = await act(
+			async () =>
+				await walletImport.current.importWallets({
+					encryptedWif: "",
+					networks: [network],
+					type: OptionsValue.BIP39,
+					value: MNEMONICS[1],
+				}),
+		);
+
+		expect(wallets).toHaveLength(1);
+		const importedWallet = wallets[0];
+
+		expect(importedWallet).toBeInstanceOf(Wallet);
+		expect(importedWallet.address()).toBeDefined();
+
+		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()], importedWallet.network());
+	});
+
+	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
+		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallets = await act(
+			async () =>
+				await walletImport.current.importWallets({
+					encryptedWif: "",
+					networks: [network],
+					type: OptionsValue.BIP39,
+					value: MNEMONICS[2],
+				}),
+		);
+
+		expect(wallets).toHaveLength(1);
+		const importedWallet = wallets[0];
+
+		expect(importedWallet).toBeInstanceOf(Wallet);
+		expect(importedWallet.address()).toBeDefined();
+
+		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()], importedWallet.network());
 	});
 });

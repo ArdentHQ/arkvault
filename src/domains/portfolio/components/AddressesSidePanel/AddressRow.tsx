@@ -8,6 +8,7 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { MobileAddressRow } from "@/domains/portfolio/components/AddressesSidePanel/MobileAddressRow";
+import { RadioButton } from "@/app/components/RadioButton";
 
 export const AddressRow = ({
 	profile,
@@ -17,6 +18,7 @@ export const AddressRow = ({
 	usesDeleteMode,
 	onDelete,
 	isError = false,
+	isSingleView = false,
 	errorMessage,
 	deleteContent,
 }: {
@@ -28,6 +30,7 @@ export const AddressRow = ({
 	usesDeleteMode: boolean;
 	errorMessage?: string;
 	onDelete: (address: string) => void;
+	isSingleView?: boolean;
 	deleteContent?: React.ReactNode;
 }): JSX.Element => {
 	const { isXs } = useBreakpoint();
@@ -60,10 +63,9 @@ export const AddressRow = ({
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
 				"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
-				"border-theme-danger-400 hover:border-theme-navy-100 dark:border-theme-danger-400 hover:dark:border-theme-dark-700 hover:dark:bg-theme-dark-700":
-					isError,
+				"border-theme-danger-400 dark:border-theme-danger-400": isError,
 				"border-theme-primary-200 dark:border-theme-dark-700": !isError,
-				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected,
+				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected && !isError,
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
@@ -81,13 +83,25 @@ export const AddressRow = ({
 
 				{usesDeleteMode && deleteContent && (
 					<Icon
+						data-testid="icon-MarkedTrash"
 						name="MarkedTrash"
 						dimensions={[16, 16]}
 						className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
 					/>
 				)}
 
-				{!usesDeleteMode && (
+				{isSingleView && !usesDeleteMode && (
+					<RadioButton
+						name="single"
+						data-testid="AddressRow--radio"
+						color="info"
+						className="m-0.5 h-5 w-5"
+						checked={isSelected}
+						onChange={() => toggleAddress(wallet.address())}
+					/>
+				)}
+
+				{!usesDeleteMode && !isSingleView && (
 					<Checkbox
 						name="all"
 						data-testid="AddressRow--checkbox"
