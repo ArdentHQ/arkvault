@@ -2070,7 +2070,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -2896,7 +2896,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
