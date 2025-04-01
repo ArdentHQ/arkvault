@@ -3,7 +3,7 @@
 exports[`ExchangeGrid > should render 1`] = `
 <DocumentFragment>
   <div
-    class="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-3 md:gap-5 xl:grid-cols-4"
+    class="grid w-full gap-3 md:grid-cols-2"
     data-testid="ExchangeGrid"
   >
     <div

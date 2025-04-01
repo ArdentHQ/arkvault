@@ -319,7 +319,7 @@ export const CreateAddressesSidePanel = ({
 
 						{activeTab === Step.SuccessStep && (
 							<Button disabled={isSubmitting} type="submit" data-testid="CreateWallet__finish-button">
-								{t("COMMON.GO_TO_WALLET")}
+								{t("COMMON.CLOSE")}
 							</Button>
 						)}
 					</div>
