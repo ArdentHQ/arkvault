@@ -149,6 +149,12 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			onChangeAddress(address, false);
 		}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
 
+		useEffect(() => {
+			if (!selectedAddress) {
+				setSelectedAddressAlias(undefined);
+			}
+		}, [selectedAddress]);
+
 		const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
 
 		const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
