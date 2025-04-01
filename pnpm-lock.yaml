@@ -6,21 +6,12 @@ settings:
 
 importers:
 
-=======
-		"@ardenthq/sdk": "2.0.0-alpha.63",
-		"@ardenthq/sdk-ark": "2.0.0-alpha.63",
-		"@ardenthq/sdk-helpers": "2.0.0-alpha.63",
-		"@ardenthq/sdk-intl": "2.0.0-alpha.63",
-		"@ardenthq/sdk-mainsail": "2.0.0-alpha.63",
-		"@ardenthq/sdk-profiles": "2.0.0-alpha.63",
->>>>>>> feat/evm
   .:
     dependencies:
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
         version: 1.2.0
       '@ardenthq/sdk':
-<<<<<<< HEAD
         specifier: 2.0.0-alpha.65
         version: 2.0.0-alpha.65
       '@ardenthq/sdk-ark':
@@ -38,25 +29,6 @@ importers:
       '@ardenthq/sdk-profiles':
         specifier: 2.0.0-alpha.65
         version: 2.0.0-alpha.65
-=======
-        specifier: 2.0.0-alpha.63
-        version: 2.0.0-alpha.63
-      '@ardenthq/sdk-ark':
-        specifier: 2.0.0-alpha.63
-        version: 2.0.0-alpha.63
-      '@ardenthq/sdk-helpers':
-        specifier: 2.0.0-alpha.63
-        version: 2.0.0-alpha.63
-      '@ardenthq/sdk-intl':
-        specifier: 2.0.0-alpha.63
-        version: 2.0.0-alpha.63
-      '@ardenthq/sdk-mainsail':
-        specifier: 2.0.0-alpha.63
-        version: 2.0.0-alpha.63(encoding@0.1.13)(typescript@5.5.4)
-      '@ardenthq/sdk-profiles':
-        specifier: 2.0.0-alpha.63
-        version: 2.0.0-alpha.63
->>>>>>> feat/evm
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0(encoding@0.1.13)
@@ -452,7 +424,6 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-<<<<<<< HEAD
   '@ardenthq/sdk-ark@2.0.0-alpha.65':
     resolution: {integrity: sha512-Lwkmp2++ohb6KyfoymqRWIH+gzKiKhgD5Qd2IQhOMV+Z1RCL9TJR/efZJUej6hFMBzr62y9GPMcntFE827Ec6Q==}
     engines: {node: '>=16.0.0'}
@@ -483,38 +454,6 @@ packages:
 
   '@ardenthq/sdk@2.0.0-alpha.65':
     resolution: {integrity: sha512-qg/tfTfuTMKPLjzmunsIOGSILGM/Li/7jchycqvv9fcj2+hOI/Rj5hRublvszBwf49AQyzjgKjV0YYBXkSiUhw==}
-=======
-  '@ardenthq/sdk-ark@2.0.0-alpha.63':
-    resolution: {integrity: sha512-Gqo10G8bW3sW67o8LEum2k5S4VYvREuKt1XukPDcG9Sj7WS+Te/zfY72X3gQVyiAISEDOgJcJOLzmUHNX8s1gg==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.63':
-    resolution: {integrity: sha512-81CYAKOaZ4iuwamDjDMc/UZcnD3QIuXJqMqAhRNTOKo5ZwM3g1iK5jNLjpCFy9bBt2341zJWMvPM08jOm3BZCQ==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-helpers@2.0.0-alpha.63':
-    resolution: {integrity: sha512-Cd79dw1ZpvS8yIAwcMytY/XEJlz8WV7mWqS0BDE7oH9WkmZ2RkZGqONo+KuiHYY+IdGIu6S/ksZI53o0o37jZA==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-intl@2.0.0-alpha.63':
-    resolution: {integrity: sha512-4cukFM8hF0Jx5IrAG7l0ozMdci7yJp1Vji/HM1K9H3NtjJuik6VI369NdsklWYHvTP7Figez1AAytPZY2yPfog==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.63':
-    resolution: {integrity: sha512-7hk5vVOnqwgGwheGK0TLjRzazXLmGz1IBHdtOPbUKOLsiQ7Oo2HN4Yptc22q7ZapUAGh7gcBPvtadVOBjq2RvQ==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-markets@2.0.0-alpha.63':
-    resolution: {integrity: sha512-giPETSNGlsrQSeWdTxEhC09Y9DRa65PNf/+g4pS+FvJuo2te6w4JJyiHOk448py6OMvN+h2KjCtO/JWlM15w1g==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-profiles@2.0.0-alpha.63':
-    resolution: {integrity: sha512-s4YBHKP9X7RRqR6HKw3GZrpMfdahq1F0TkEwTfv2fpheIFK2jNDnKhxHwRcMc7NgBfcOaYrp2XDibA4Qjs+4qQ==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk@2.0.0-alpha.63':
-    resolution: {integrity: sha512-qi1V/GBLKI6bN/9j6ECi37jCNCwhYE8PXY6ebbTkn2C3POiLmpC6sH7/uz8oByFNKWBe5SUt0Xf3Xa9bTkmQGA==}
->>>>>>> feat/evm
     engines: {node: '>=16.0.0'}
 
   '@arkecosystem/ledger-transport@2.0.0':
@@ -8827,21 +8766,12 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-<<<<<<< HEAD
   '@ardenthq/sdk-ark@2.0.0-alpha.65':
     dependencies:
       '@ardenthq/sdk': 2.0.0-alpha.65
       '@ardenthq/sdk-cryptography': 2.0.0-alpha.65
       '@ardenthq/sdk-helpers': 2.0.0-alpha.65
       '@ardenthq/sdk-intl': 2.0.0-alpha.65
-=======
-  '@ardenthq/sdk-ark@2.0.0-alpha.63':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.63
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.63
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.63
-      '@ardenthq/sdk-intl': 2.0.0-alpha.63
->>>>>>> feat/evm
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
@@ -8855,11 +8785,7 @@ snapshots:
       lodash.set: 4.3.2
       node-dotify: 1.1.0
 
-<<<<<<< HEAD
   '@ardenthq/sdk-cryptography@2.0.0-alpha.65':
-=======
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.63':
->>>>>>> feat/evm
     dependencies:
       '@noble/hashes': 0.5.9
       '@noble/secp256k1': 1.7.1
@@ -8877,11 +8803,7 @@ snapshots:
       typeforce: 1.18.0
       uuid: 8.3.2
 
-<<<<<<< HEAD
   '@ardenthq/sdk-helpers@2.0.0-alpha.65':
-=======
-  '@ardenthq/sdk-helpers@2.0.0-alpha.63':
->>>>>>> feat/evm
     dependencies:
       '@hapi/bourne': 2.1.0
       bad-words: 3.0.4
@@ -8895,30 +8817,17 @@ snapshots:
       qrcode: 1.5.4
       query-string: 7.1.3
 
-<<<<<<< HEAD
   '@ardenthq/sdk-intl@2.0.0-alpha.65':
-=======
-  '@ardenthq/sdk-intl@2.0.0-alpha.63':
->>>>>>> feat/evm
     dependencies:
       dayjs: 1.11.13
       dinero.js: 1.9.1
 
-<<<<<<< HEAD
   '@ardenthq/sdk-mainsail@2.0.0-alpha.65(encoding@0.1.13)(typescript@5.5.4)':
     dependencies:
       '@ardenthq/sdk': 2.0.0-alpha.65
       '@ardenthq/sdk-cryptography': 2.0.0-alpha.65
       '@ardenthq/sdk-helpers': 2.0.0-alpha.65
       '@ardenthq/sdk-intl': 2.0.0-alpha.65
-=======
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.63(encoding@0.1.13)(typescript@5.5.4)':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.63
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.63
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.63
-      '@ardenthq/sdk-intl': 2.0.0-alpha.63
->>>>>>> feat/evm
       '@arkecosystem/ledger-transport': 2.0.0
       '@mainsail/container': 0.0.1-evm.14
       '@mainsail/contracts': 0.0.1-evm.14
@@ -8958,7 +8867,6 @@ snapshots:
       - utf-8-validate
       - zod
 
-<<<<<<< HEAD
   '@ardenthq/sdk-markets@2.0.0-alpha.65':
     dependencies:
       '@ardenthq/sdk': 2.0.0-alpha.65
@@ -8971,20 +8879,6 @@ snapshots:
       '@ardenthq/sdk-helpers': 2.0.0-alpha.65
       '@ardenthq/sdk-intl': 2.0.0-alpha.65
       '@ardenthq/sdk-markets': 2.0.0-alpha.65
-=======
-  '@ardenthq/sdk-markets@2.0.0-alpha.63':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.63
-      '@ardenthq/sdk-intl': 2.0.0-alpha.63
-
-  '@ardenthq/sdk-profiles@2.0.0-alpha.63':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.63
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.63
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.63
-      '@ardenthq/sdk-intl': 2.0.0-alpha.63
-      '@ardenthq/sdk-markets': 2.0.0-alpha.63
->>>>>>> feat/evm
       joi: 17.13.3
       localforage: 1.10.0
       node-cache: 5.1.2
@@ -8994,17 +8888,10 @@ snapshots:
       semver: 7.7.1
       type-fest: 2.19.0
 
-<<<<<<< HEAD
   '@ardenthq/sdk@2.0.0-alpha.65':
     dependencies:
       '@ardenthq/sdk-helpers': 2.0.0-alpha.65
       '@ardenthq/sdk-intl': 2.0.0-alpha.65
-=======
-  '@ardenthq/sdk@2.0.0-alpha.63':
-    dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.63
-      '@ardenthq/sdk-intl': 2.0.0-alpha.63
->>>>>>> feat/evm
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.1.0
