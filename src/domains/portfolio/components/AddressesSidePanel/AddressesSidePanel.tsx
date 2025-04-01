@@ -207,22 +207,24 @@ export const AddressesSidePanel = ({
 	}, [activeMode, singleSelectedAddress, multiSelectedAddresses]);
 
 	useEffect(() => {
-		const singleSelectedAddressIsInWallets = singleSelectedAddress.some((address) =>
-			wallets.some((w) => w.address() === address),
-		);
+		if (activeMode === AddressViewSelection.single) {
+			const singleSelectedAddressIsInWallets = singleSelectedAddress.some((address) =>
+				wallets.some((w) => w.address() === address),
+			);
 
-		if (!singleSelectedAddressIsInWallets) {
-			void setSingleSelectedAddress([wallets[0].address()]);
+			if (!singleSelectedAddressIsInWallets) {
+				setSelectedAddresses([wallets[0].address()]);
+			}
+		} else {
+			const selectedMultiAddressesInWallets = multiSelectedAddresses.filter((address) =>
+				wallets.some((w) => w.address() === address),
+			);
+
+			if (selectedMultiAddressesInWallets.length !== multiSelectedAddresses.length) {
+				setSelectedAddresses(selectedMultiAddressesInWallets);
+			}
 		}
-
-		const selectedMultiAddressesInWallets = multiSelectedAddresses.filter((address) =>
-			wallets.some((w) => w.address() === address),
-		);
-
-		if (selectedMultiAddressesInWallets.length !== multiSelectedAddresses.length) {
-			void setMultiSelectedAddresses(selectedMultiAddressesInWallets);
-		}
-	}, [wallets, singleSelectedAddress, multiSelectedAddresses]);
+	}, [wallets, multiSelectedAddresses, singleSelectedAddress, activeMode]);
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
