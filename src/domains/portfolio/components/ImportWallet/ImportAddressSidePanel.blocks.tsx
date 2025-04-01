@@ -75,7 +75,7 @@ export const ImportActionToolbar = ({
 
 				{showPortfoliobutton && (
 					<Button disabled={isSubmitDisabled} data-testid="ImportWallet__finish-button" onClick={onSubmit}>
-						{t("COMMON.GO_TO_PORTFOLIO")}
+						{t("COMMON.CLOSE")}
 					</Button>
 				)}
 			</div>
