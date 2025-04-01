@@ -214,7 +214,15 @@ export const AddressesSidePanel = ({
 		if (!singleSelectedAddressIsInWallets) {
 			void setSingleSelectedAddress([wallets[0].address()]);
 		}
-	}, [wallets, singleSelectedAddress]);
+
+		const selectedMultiAddressesInWallets = multiSelectedAddresses.filter((address) =>
+			wallets.some((w) => w.address() === address),
+		);
+
+		if (selectedMultiAddressesInWallets.length !== multiSelectedAddresses.length) {
+			void setMultiSelectedAddresses(selectedMultiAddressesInWallets);
+		}
+	}, [wallets, singleSelectedAddress, multiSelectedAddresses]);
 
 	useEffect(() => {
 		if (!open || manageHintHasShown) {
