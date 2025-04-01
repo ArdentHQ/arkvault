@@ -50,11 +50,8 @@ export const useTransactionBuilder = () => {
 
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);
-		let data = {
-			...input,
-			gasLimit: 21_000,
-			gasPrice: 10,
-		};
+
+		let data = input
 
 		if (wallet.isMultiSignature()) {
 			data = await prepareMultiSignature(data, wallet);
