@@ -12,7 +12,7 @@ jobs:
                 node-version: [20.12.2]
 
         concurrency:
-            group: ${{ github.head_ref }}-snapshots
+            group: ${{ github.workflow }}-${{ github.ref }}
             cancel-in-progress: true
 
         steps:
@@ -48,5 +48,5 @@ jobs:
 
             - uses: stefanzweifel/git-auto-commit-action@v4
               with:
-                commit_message: "chore: update snapshots"
-                branch: ${{ github.head_ref }}
+                  commit_message: "chore: update snapshots"
+                  branch: ${{ github.head_ref }}
