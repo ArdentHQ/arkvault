@@ -67,84 +67,48 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
@@ -315,84 +279,48 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
@@ -554,84 +482,48 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
@@ -793,158 +685,48 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded pr-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <div
-                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                  data-testid="AmountLabel__hint"
-                >
-                  <div
-                    class="dark:text-white"
-                  >
-                    <div
-                      style="height: 10px; width: 10px;"
-                    >
-                      <svg
-                        id="hint-small"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <circle
-                          cx="4.5"
-                          cy="1"
-                          fill="currentColor"
-                          r="1"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded pr-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <div
-                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                  data-testid="AmountLabel__hint"
-                >
-                  <div
-                    class="dark:text-white"
-                  >
-                    <div
-                      style="height: 10px; width: 10px;"
-                    >
-                      <svg
-                        id="hint-small"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                        <circle
-                          cx="4.5"
-                          cy="1"
-                          fill="currentColor"
-                          r="1"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
@@ -1107,84 +889,48 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
@@ -1351,84 +1097,48 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
@@ -1595,84 +1305,48 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+              1 BTC
+            </span>
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  - 1 BTC
-                </span>
-              </div>
-            </div>
+              1 BTC
+            </span>
           </div>
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
           >
-            <div
-              class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
-              data-testid="AmountLabel__wrapper"
+            <span
+              class="whitespace-nowrap text-sm"
+              data-testid="Amount"
             >
-              <div
-                class="flex h-full items-center space-x-1"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
-                >
-                  + 100 ARK
-                </span>
-              </div>
-            </div>
+              100 ARK
+            </span>
           </div>
         </td>
         <td>
