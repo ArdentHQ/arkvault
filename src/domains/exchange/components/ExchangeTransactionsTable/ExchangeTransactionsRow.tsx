@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 
-import { AmountLabel } from "@/app/components/Amount";
+import { Amount } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
@@ -28,29 +28,15 @@ interface ExchangeTransactionsRowStatusProperties {
 	status: Contracts.ExchangeTransactionStatus;
 }
 
-const ExchangeTransactionRowAmount = ({
-	type,
-	data,
-	isPending,
-}: {
-	type: string;
-	data: Contracts.ExchangeTransactionDetail;
-	isPending?: boolean;
-}) => {
-	const { t } = useTranslation();
-
-	return (
-		<>
-			<AmountLabel
-				hint={isPending ? t("EXCHANGE.EXPECTED_AMOUNT_HINT") : undefined}
-				value={data.amount}
-				ticker={data.ticker}
-				isNegative={type === "sent"}
-				isCompact={true}
-			/>
-		</>
-	);
-};
+const ExchangeTransactionRowAmount = ({ type, data }: { type: string; data: Contracts.ExchangeTransactionDetail }) => (
+	<Amount
+		showSign={false}
+		ticker={data.ticker}
+		value={data.amount}
+		isNegative={type === "sent"}
+		className="text-sm"
+	/>
+);
 
 const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusProperties> = ({
 	status,
@@ -171,32 +157,24 @@ export const ExchangeTransactionsRow = ({
 
 			<TableCell
 				className="lg:hidden"
-				innerClassName="items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
+				innerClassName="items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0 font-semibold"
 			>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
-				<ExchangeTransactionRowAmount
-					type="received"
-					data={exchangeTransaction.output()}
-					isPending={exchangeTransaction.isPending()}
-				/>
+				<ExchangeTransactionRowAmount type="received" data={exchangeTransaction.output()} />
 			</TableCell>
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+				innerClassName="gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
 			>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 			</TableCell>
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
+				innerClassName="gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
 			>
-				<ExchangeTransactionRowAmount
-					type="received"
-					data={exchangeTransaction.output()}
-					isPending={exchangeTransaction.isPending()}
-				/>
+				<ExchangeTransactionRowAmount type="received" data={exchangeTransaction.output()} />
 			</TableCell>
 
 			<TableCell innerClassName="justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11">

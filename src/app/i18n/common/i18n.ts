@@ -158,7 +158,6 @@ export const translations = {
 	GAS_PRICE_GWEI: "Gas Price (Gwei)",
 	GOT_IT: "Got It",
 	GO_TO_PORTFOLIO: "Go to Portfolio",
-	GO_TO_WALLET: "Go to Wallet",
 	HASH: "Hash",
 	HEIGHT: "Height",
 	HERE: "here",

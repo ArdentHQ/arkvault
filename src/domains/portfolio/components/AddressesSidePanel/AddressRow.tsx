@@ -63,10 +63,9 @@ export const AddressRow = ({
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
 				"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
-				"border-theme-danger-400 hover:border-theme-navy-100 dark:border-theme-danger-400 hover:dark:border-theme-dark-700 hover:dark:bg-theme-dark-700":
-					isError,
+				"border-theme-danger-400 dark:border-theme-danger-400": isError,
 				"border-theme-primary-200 dark:border-theme-dark-700": !isError,
-				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected,
+				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": !isSelected && !isError,
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
@@ -96,7 +95,7 @@ export const AddressRow = ({
 						name="single"
 						data-testid="AddressRow--radio"
 						color="info"
-						className="m-0.5"
+						className="m-0.5 h-5 w-5"
 						checked={isSelected}
 						onChange={() => toggleAddress(wallet.address())}
 					/>

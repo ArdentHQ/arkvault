@@ -105,6 +105,8 @@ import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import VotesDark from "./votes-dark.svg?react";
 import VotesLight from "./votes-light.svg?react";
+import ExchangesDark from "./exchanges-dark.svg?react";
+import ExchangesLight from "./exchanges-light.svg?react";
 import ContactsDark from "./contacts-dark.svg?react";
 import ContactsLight from "./contacts-light.svg?react";
 import Completed from "./completed.svg?react";
@@ -169,6 +171,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Download,
 	EllipsisVertical,
 	EllipsisVerticalFilled,
+	ExchangesDark,
+	ExchangesLight,
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWweDark,

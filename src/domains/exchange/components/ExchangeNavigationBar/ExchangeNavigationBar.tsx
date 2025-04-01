@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
+import { useBreakpoint } from "@/app/hooks";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",
@@ -9,32 +10,23 @@ enum ExchangeView {
 
 interface ExchangeNavigationBarProperties {
 	currentView: ExchangeView;
-	exchangeTransactionsCount: number;
 	onChange: (view: any) => void;
 }
 
-export const ExchangeNavigationBar = ({
-	currentView,
-	exchangeTransactionsCount,
-	onChange,
-}: ExchangeNavigationBarProperties) => {
+export const ExchangeNavigationBar = ({ currentView, onChange }: ExchangeNavigationBarProperties) => {
 	const { t } = useTranslation();
 
-	return (
-		<nav className="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4">
-			<div className="mx-auto flex items-center justify-between px-6 lg:container md:px-10">
-				<Tabs activeId={currentView} className="w-full" onChange={onChange}>
-					<TabList className="flex h-[3.25rem] w-full flex-row gap-6" noBackground>
-						<Tab tabId={ExchangeView.Exchanges} className="m-0 mr-6">
-							{t("EXCHANGE.NAVIGATION.EXCHANGES")}
-						</Tab>
+	const { isMdAndAbove } = useBreakpoint();
 
-						<Tab tabId={ExchangeView.Transactions} count={exchangeTransactionsCount} className="m-0">
-							{t("EXCHANGE.NAVIGATION.TRANSACTIONS")}
-						</Tab>
-					</TabList>
-				</Tabs>
-			</div>
-		</nav>
+	return (
+		<div className="-mx-6 -mt-2 mb-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:mx-0 md:mb-3 md:mt-0 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:md:bg-transparent">
+			<Tabs activeId={currentView} className="w-full" onChange={onChange}>
+				<TabList noBackground={!isMdAndAbove}>
+					<Tab tabId={ExchangeView.Exchanges}>{t("EXCHANGE.NAVIGATION.EXCHANGES")}</Tab>
+
+					<Tab tabId={ExchangeView.Transactions}>{t("EXCHANGE.NAVIGATION.TRANSACTIONS")}</Tab>
+				</TabList>
+			</Tabs>
+		</div>
 	);
 };
