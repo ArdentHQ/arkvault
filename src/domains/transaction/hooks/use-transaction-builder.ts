@@ -23,9 +23,6 @@ const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileC
 		.signatory()
 		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
 
-	// Prevents "The device is already open" exception when running the signing function
-	//await wallet.ledger().disconnect();
-
 	return {
 		...input,
 		signatory: signature,
