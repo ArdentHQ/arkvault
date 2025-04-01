@@ -207,6 +207,16 @@ export const AddressesSidePanel = ({
 	}, [activeMode, singleSelectedAddress, multiSelectedAddresses]);
 
 	useEffect(() => {
+		const singleSelectedAddressIsInWallets = singleSelectedAddress.some((address) =>
+			wallets.some((w) => w.address() === address),
+		);
+
+		if (!singleSelectedAddressIsInWallets) {
+			void setSingleSelectedAddress([wallets[0].address()]);
+		}
+	}, [wallets, singleSelectedAddress]);
+
+	useEffect(() => {
 		if (!open || manageHintHasShown) {
 			setShowManageHint(false);
 			return;
