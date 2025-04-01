@@ -1,26 +1,26 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Page, Section } from "@/app/components/Layout";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
-
-import { Alert } from "@/app/components/Alert";
-import { Page, Section } from "@/app/components/Layout";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
+
+import { AddressTable } from "@/domains/vote/components/AddressTable";
+import { Alert } from "@/app/components/Alert";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
+import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";
+import { assertWallet } from "@/utils/assertions";
+import { getErroredNetworks } from "@/utils/profile-utils";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useParams } from "react-router-dom";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
-import { assertWallet } from "@/utils/assertions";
-import { getErroredNetworks } from "@/utils/profile-utils";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
-import { AddressTable } from "@/domains/vote/components/AddressTable";
-import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
-import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 
 export const Votes: FC = () => {
 	const { t } = useTranslation();
@@ -137,7 +137,7 @@ export const Votes: FC = () => {
 			<VotesHeader isSelectDelegateStep={!!selectedAddress} />
 
 			{!hasWallets && (
-				<Section>
+				<Section className="pt-0">
 					<VotesEmpty
 						onCreateWallet={() => setShowCreateAddressPanel(true)}
 						onImportWallet={() => setShowImportAddressPanel(true)}
