@@ -6,7 +6,8 @@ import { ReceiveFunds } from "./ReceiveFunds";
 import { toasts } from "@/app/services";
 
 import {
-	env, getDefaultMainsailWalletId,
+	env,
+	getDefaultMainsailWalletId,
 	getMainsailProfileId,
 	render,
 	screen,

@@ -14,7 +14,8 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks, getMainsailProfileId,
+	mockProfileWithOnlyPublicNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";

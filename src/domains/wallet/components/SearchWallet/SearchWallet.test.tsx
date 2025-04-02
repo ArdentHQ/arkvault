@@ -16,7 +16,8 @@ import {
 	waitFor,
 	within,
 	renderResponsiveWithRoute,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
