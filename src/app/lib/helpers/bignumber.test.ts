@@ -212,7 +212,7 @@ describe("BigNumber", () => {
 		expect(BigNumber.make("00010.00010").toFixed(0)).toBe("10");
 		expect(BigNumber.make("00010.00010").toFixed(4)).toBe("10.0001");
 
-		expect(BigNumber.make(123.456).toFixed(0)).toBe("123.456");
+		expect(BigNumber.make(123.456).toFixed(undefined)).toBe("123.456");
 		expect(BigNumber.make(123.456).toFixed(0)).toBe("123");
 		expect(BigNumber.make(123.456).toFixed(5)).toBe("123.45600");
 		expect(BigNumber.make(123.456).toFixed(2)).toBe("123.45");
