@@ -1,11 +1,3 @@
-import { matchPath, useHistory, useLocation } from "react-router-dom";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Services } from "@ardenthq/sdk";
-import { isEqual } from "@ardenthq/sdk-helpers";
-import { usePrevious } from "./use-previous";
-import { useSynchronizer } from "./use-synchronizer";
-import { useTheme } from "./use-theme";
 import { enabledNetworksCount, profileAllEnabledNetworks } from "@/utils/network-utils";
 import {
 	getErroredNetworks,
@@ -14,12 +6,21 @@ import {
 	getProfileStoredPassword,
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
+import { matchPath, useHistory, useLocation } from "react-router-dom";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
+import { Services } from "@ardenthq/sdk";
 import { delay } from "@/utils/delay";
-import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
-import { useZendesk } from "@/app/contexts/Zendesk";
 import { getActiveNetwork } from "./use-active-network";
+import { isEqual } from "@/app/lib/helpers";
+import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
+import { usePrevious } from "./use-previous";
+import { useSynchronizer } from "./use-synchronizer";
+import { useTheme } from "./use-theme";
+import { useZendesk } from "@/app/contexts/Zendesk";
 
 enum Intervals {
 	VeryShort = 15_000,

@@ -1,33 +1,33 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-
-import { SendTransfer } from "./SendTransfer";
 import * as useFeesHook from "@/app/hooks/use-fees";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+
 import {
+	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncFees,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
-	act,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+import { requestMock, server } from "@/tests/mocks/server";
 
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { DateTime } from "@ardenthq/sdk-intl";
+import React from "react";
+import { Route } from "react-router-dom";
+import { SendTransfer } from "./SendTransfer";
+import { createHashHistory } from "history";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import userEvent from "@testing-library/user-event";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({

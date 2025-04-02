@@ -1,10 +1,10 @@
-import { isNil } from "@ardenthq/sdk-helpers";
-import { Contracts, DTO, Helpers } from "@ardenthq/sdk-profiles";
-import React from "react";
-import { useTranslation } from "react-i18next";
-
 import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Contracts, DTO, Helpers } from "@ardenthq/sdk-profiles";
+
+import React from "react";
 import { Tooltip } from "@/app/components/Tooltip";
+import { isNil } from "@/app/lib/helpers";
+import { useTranslation } from "react-i18next";
 
 interface ExchangeTooltipProperties {
 	value: number;

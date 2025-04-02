@@ -403,7 +403,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                 <span
                   class="text-theme-text"
                 >
-                  ARK
+                  Mainsail
                 </span>
               </span>
             </div>
@@ -1222,7 +1222,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                 <span
                   class="text-theme-secondary-400 dark:text-theme-secondary-700"
                 >
-                  ARK
+                  Mainsail
                 </span>
               </span>
             </div>

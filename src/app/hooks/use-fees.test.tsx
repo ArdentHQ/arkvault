@@ -1,13 +1,13 @@
-import { ARK } from "@ardenthq/sdk-ark";
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { renderHook } from "@testing-library/react";
-import React from "react";
-
-import { useFees } from "./use-fees";
-import { EnvironmentProvider } from "@/app/contexts";
-import { httpClient } from "@/app/services";
-import { StubStorage } from "@/tests/mocks";
 import { env, getDefaultProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
+
+import { ARK } from "@ardenthq/sdk-ark";
+import { BigNumber } from "@/app/lib/helpers";
+import { EnvironmentProvider } from "@/app/contexts";
+import React from "react";
+import { StubStorage } from "@/tests/mocks";
+import { httpClient } from "@/app/services";
+import { renderHook } from "@testing-library/react";
+import { useFees } from "./use-fees";
 
 const ARKDevnet = "ark.devnet";
 

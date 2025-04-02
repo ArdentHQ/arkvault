@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DelegateRowMobile > should render the selected vote 1`] = `
+exports[`ValidatorRowMobile > should render the selected vote 1`] = `
 <DocumentFragment>
   <table>
     <tbody>

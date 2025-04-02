@@ -1,7 +1,7 @@
-import { Services } from "@ardenthq/sdk";
-import { upperFirst } from "@ardenthq/sdk-helpers";
-import { Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 
+import { Services } from "@ardenthq/sdk";
+import { upperFirst } from "@/app/lib/helpers";
 import { useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
 import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";

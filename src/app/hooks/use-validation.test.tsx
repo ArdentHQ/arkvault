@@ -1,10 +1,9 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { renderHook } from "@testing-library/react";
-import React from "react";
-
-import { useValidation } from "./use-validation";
+import { BigNumber } from "@/app/lib/helpers";
 import { EnvironmentProvider } from "@/app/contexts";
+import React from "react";
 import { env } from "@/utils/testing-library";
+import { renderHook } from "@testing-library/react";
+import { useValidation } from "./use-validation";
 
 const mockNetwork = {
 	coin: vi.fn,

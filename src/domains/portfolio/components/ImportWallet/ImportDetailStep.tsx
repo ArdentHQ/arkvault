@@ -1,16 +1,16 @@
 import { Coins, Networks } from "@ardenthq/sdk";
-import { truncate } from "@ardenthq/sdk-helpers";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
+import { Input, InputAddress, InputPassword } from "@/app/components/Input";
+import React, { useEffect, useState } from "react";
+
+import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
-import React, { useEffect, useState } from "react";
+import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx/WalletEncryptionBanner";
+import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { FormField, FormLabel } from "@/app/components/Form";
-import { Input, InputAddress, InputPassword } from "@/app/components/Input";
-import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
-import { Alert } from "@/app/components/Alert";
-import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx/WalletEncryptionBanner";
 
 const validateAddress = async ({
 	findAddress,

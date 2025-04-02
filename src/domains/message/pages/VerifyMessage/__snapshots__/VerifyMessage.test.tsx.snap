@@ -704,7 +704,9 @@ exports[`VerifyMessage > should render (lg) 1`] = `
             class="space-y-5 mx-auto max-w-172"
             data-testid="VerifyMessage"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >
@@ -1691,7 +1693,9 @@ exports[`VerifyMessage > should render (xs) 1`] = `
             class="space-y-5 mx-auto max-w-172"
             data-testid="VerifyMessage"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >

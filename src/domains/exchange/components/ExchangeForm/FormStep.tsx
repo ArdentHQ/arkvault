@@ -1,21 +1,21 @@
-import cn from "classnames";
-import { Networks } from "@ardenthq/sdk";
-import { startCase } from "@ardenthq/sdk-helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
-import { useFormContext } from "react-hook-form";
-import { Trans, useTranslation } from "react-i18next";
-
 import { CurrencyIcon, FormDivider } from "./FormStep.blocks";
-import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCurrency, InputDefault } from "@/app/components/Input";
 import { OptionProperties, Select } from "@/app/components/SelectDropdown";
-import { Spinner } from "@/app/components/Spinner";
-import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import { assertExchangeService, isUnavailablePairError } from "@/domains/exchange/utils";
+
+import { Alert } from "@/app/components/Alert";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
+import { Spinner } from "@/app/components/Spinner";
+import cn from "classnames";
+import { startCase } from "@/app/lib/helpers";
 import { useBreakpoint } from "@/app/hooks";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { useFormContext } from "react-hook-form";
 
 interface FormStepProperties {
 	profile: Contracts.IProfile;

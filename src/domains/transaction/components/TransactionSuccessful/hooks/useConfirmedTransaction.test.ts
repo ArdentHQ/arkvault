@@ -1,8 +1,9 @@
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { renderHook, waitFor } from "@testing-library/react";
+
+import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useConfirmedTransaction } from "./useConfirmedTransaction";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { BigNumber } from "@ardenthq/sdk-helpers";
 
 describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;
