@@ -1,44 +1,44 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { DateTime } from "@ardenthq/sdk-intl";
+import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
-
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
-import { SendTransfer } from "./SendTransfer";
-import { NetworkStep } from "./NetworkStep";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { minVersionList, StepsProvider } from "@/app/contexts";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
-
 import {
+	MNEMONICS,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
+	mockNanoXTransport,
+	mockProfileWithOnlyPublicNetworks,
+	mockProfileWithPublicAndTestNetworks,
 	queryElementForSvg,
-	MNEMONICS,
 	render,
 	renderWithForm,
 	screen,
 	syncFees,
 	waitFor,
 	within,
-	mockNanoXTransport,
-	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import React, { useEffect } from "react";
+import { StepsProvider, minVersionList } from "@/app/contexts";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { FormStep } from "./FormStep";
+import { NetworkStep } from "./NetworkStep";
+import { ReviewStep } from "./ReviewStep";
+import { Route } from "react-router-dom";
+import { SendTransfer } from "./SendTransfer";
+import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { createHashHistory } from "history";
+import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import { renderHook } from "@testing-library/react";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import userEvent from "@testing-library/user-event";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();

@@ -1,4 +1,4 @@
-import { shuffle, uniq } from "@ardenthq/sdk-helpers";
+import { shuffle, uniq } from "@/app/lib/helpers";
 
 interface Properties {
 	options: string[];

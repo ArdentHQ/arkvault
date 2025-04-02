@@ -1,25 +1,25 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
-import { Dashboard } from "./Dashboard";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as profileTranslations } from "@/domains/profile/i18n";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 
 import {
 	env,
+	getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
-	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Dashboard } from "./Dashboard";
+import React from "react";
+import { Route } from "react-router-dom";
+import { createHashHistory } from "history";
+import { translations as profileTranslations } from "@/domains/profile/i18n";
+import userEvent from "@testing-library/user-event";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;

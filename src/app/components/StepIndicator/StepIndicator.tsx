@@ -1,7 +1,8 @@
-import { last } from "@ardenthq/sdk-helpers";
 import React, { useMemo } from "react";
-import { twMerge } from "tailwind-merge";
+
 import cn from "classnames";
+import { last } from "@/app/lib/helpers";
+import { twMerge } from "tailwind-merge";
 
 interface StepIndicatorProperties {
 	activeIndex?: number;

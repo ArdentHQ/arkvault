@@ -1,13 +1,14 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import React, { useEffect, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.contracts";
+import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.blocks";
+import React, { useEffect, useRef, useState } from "react";
+
+import { BigNumber } from "@/app/lib/helpers";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { clickOutsideHandler } from "@/app/hooks";
-import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.blocks";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 export const PaginationSearchForm = ({
 	onClose,

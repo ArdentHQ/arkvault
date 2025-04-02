@@ -438,7 +438,9 @@ exports[`ExchangeForm > should render exchange form 1`] = `
     class="space-y-5"
     data-testid="ExchangeForm"
   >
-    <div>
+    <div
+      class=""
+    >
       <div
         class="flex flex-col"
       >
@@ -1037,7 +1039,9 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
     class="space-y-5"
     data-testid="ExchangeForm"
   >
-    <div>
+    <div
+      class=""
+    >
       <div
         class="flex flex-col"
       >
@@ -1672,7 +1676,9 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
     class="space-y-5"
     data-testid="ExchangeForm"
   >
-    <div>
+    <div
+      class=""
+    >
       <div
         class="flex flex-col"
       >

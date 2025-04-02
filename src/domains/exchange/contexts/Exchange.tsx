@@ -1,9 +1,9 @@
-import { camelCase } from "@ardenthq/sdk-helpers";
+import { ExchangeService, exchangeHost } from "@/domains/exchange/services/exchange.service";
 import React, { useCallback, useMemo, useState } from "react";
 
-import { httpClient } from "@/app/services";
 import { Exchange } from "@/domains/exchange/exchange.contracts";
-import { exchangeHost, ExchangeService } from "@/domains/exchange/services/exchange.service";
+import { camelCase } from "@/app/lib/helpers";
+import { httpClient } from "@/app/services";
 
 interface Properties {
 	children: React.ReactNode;

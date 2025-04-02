@@ -1,12 +1,11 @@
-import React from "react";
-import { constantCase } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useTranslation } from "react-i18next";
-
 import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
+import React from "react";
 import { Size } from "@/types";
 import { Skeleton } from "@/app/components/Skeleton";
+import { Tooltip } from "@/app/components/Tooltip";
+import { constantCase } from "@/app/lib/helpers";
+import { useTranslation } from "react-i18next";
 
 interface WalletIconsProperties {
 	exclude?: string[];

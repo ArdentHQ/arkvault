@@ -1,33 +1,34 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
 
-import { SendVote } from "./SendVote";
-import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as validatorData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { FormProvider, useForm } from "react-hook-form";
 import {
 	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
+import React from "react";
+import { Route } from "react-router-dom";
+import { SendVote } from "./SendVote";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
+import { appendParameters } from "@/domains/vote/utils/url-parameters";
+import { renderHook } from "@testing-library/react";
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import userEvent from "@testing-library/user-event";
+import { data as validatorData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();
 
