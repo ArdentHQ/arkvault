@@ -4,11 +4,7 @@ import React from "react";
 
 import { useVoteFilters } from "./use-vote-filters";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import {
-	env,
-	getMainsailProfileId,
-	mockProfileWithPublicAndTestNetworks,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
