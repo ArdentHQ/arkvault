@@ -5,7 +5,8 @@ import React from "react";
 
 import { ReceiveFundsForm } from "./ReceiveFundsForm";
 import {
-	env, getDefaultMainsailWalletId,
+	env,
+	getDefaultMainsailWalletId,
 	getMainsailProfileId,
 	renderWithForm,
 	screen,
