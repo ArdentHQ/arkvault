@@ -4,10 +4,16 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
-import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import {
+	env,
+	getMainsailProfileId,
+	render,
+	renderResponsiveWithRoute,
+	screen,
+} from "@/utils/testing-library";
 import { Route } from "react-router-dom";
 
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 
 describe("WalletsControls", () => {
@@ -26,7 +32,7 @@ describe("WalletsControls", () => {
 	};
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
