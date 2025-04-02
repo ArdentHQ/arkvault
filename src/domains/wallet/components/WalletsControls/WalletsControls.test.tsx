@@ -4,13 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	renderResponsiveWithRoute,
-	screen,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 import { Route } from "react-router-dom";
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
