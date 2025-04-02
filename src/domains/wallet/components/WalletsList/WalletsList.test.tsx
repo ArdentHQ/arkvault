@@ -10,7 +10,7 @@ import { WalletsList } from "./WalletsList";
 import * as envHooks from "@/app/hooks/env";
 import {
 	env,
-	getDefaultProfileId, getMainsailProfileId,
+	getMainsailProfileId,
 	render,
 	renderResponsive,
 	screen,
