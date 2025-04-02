@@ -8,7 +8,6 @@ import { Votes } from "./Votes";
 import { useProfileStatusWatcher } from "@/app/hooks";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
@@ -16,9 +15,11 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
+import { expect } from "vitest";
 
 const history = createHashHistory();
 
@@ -31,7 +32,7 @@ let resetProfileNetworksMock: () => void;
 const routePath = "/profiles/:profileId/votes";
 
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
-const walletID = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
+const walletID = "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28";
 
 const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
@@ -60,16 +61,19 @@ const firstVoteButtonID = "DelegateRow__toggle-0";
 
 const searchInputID = "SearchableTableWrapper__search-input";
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().findById(walletID);
 		blankWallet = profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
+				coin: "Mainsail",
 				mnemonic: blankWalletPassphrase,
-				network: "ark.devnet",
+				network: "mainsail.devnet",
 			}),
 		);
 
@@ -82,7 +86,7 @@ describe("Votes", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
 		server.use(
 			requestMock(
@@ -138,7 +142,7 @@ describe("Votes", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 					explorerLink: "",
 					governanceIdentifier: "address",
 					isDelegate: true,
@@ -307,7 +311,7 @@ describe("Votes", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 					explorerLink: "",
 					governanceIdentifier: "address",
 					isDelegate: true,
@@ -453,7 +457,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.type(searchInput, "0xcd15953");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -470,7 +474,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "ARK Wallet 1");
+		await userEvent.type(searchInput, "Mainsail Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -481,7 +485,7 @@ describe("Votes", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 					explorerLink: "",
 					governanceIdentifier: "address",
 					isDelegate: true,
@@ -508,7 +512,7 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(53));
 
 		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
@@ -516,7 +520,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "DBk4cPYpqp7EBc");
+		await userEvent.type(searchInput, "0x1Bf9cf8a006");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -527,7 +531,7 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(53));
 
 		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
@@ -535,7 +539,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "itsanametoo");
+		await userEvent.type(searchInput, "vault_test_address");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});

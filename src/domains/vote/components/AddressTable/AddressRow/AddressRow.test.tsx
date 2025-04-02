@@ -7,10 +7,8 @@ import { createHashHistory } from "history";
 
 import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
-import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -54,24 +52,26 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 		}),
 	}));
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("AddressRow", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		profile = env.profiles().findById(getMainsailProfileId());
+		wallet = profile.wallets().findById("ee02b13f-8dbf-4191-a9dc-08d2ab72ec28");
 		wallet.data().set(Contracts.WalletFlag.Starred, true);
 		wallet.data().set(Contracts.WalletData.DerivationPath, "0");
 
 		blankWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic: blankWalletPassphrase,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(blankWallet);
 
 		unvotedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(unvotedWallet);
@@ -79,9 +79,9 @@ describe("AddressRow", () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[1],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[1],
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(wallet2);
 
@@ -93,30 +93,10 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().coin();
 	});
 
-	beforeEach(() => {
-		server.use(
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
-			requestMock(
-				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
-				{
-					error: "Not Found",
-					message: "Wallet not found",
-					statusCode: 404,
-				},
-				{ status: 404 },
-			),
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${wallet2.address()}`, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			}),
-		);
-	});
-
-	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
+	it("should render", async () => {
 		const { asFragment, container } = render(
 			<AddressWrapper>
-				<AddressRow index={0} maxVotes={1} wallet={wallet} isCompact={isCompact} />
+				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
 			{
 				route: `/profiles/${profile.id()}/votes`,
@@ -130,37 +110,34 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each([true, false])(
-		"should render with isCompact = %s when the maximum votes is greater than 1",
-		(isCompact: boolean) => {
-			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+	it("should render when the maximum votes is greater than 1", () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
-			const { asFragment, container } = render(
-				<Route path="/profiles/:profileId/votes">
-					<table>
-						<tbody>
-							<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
-						</tbody>
-					</table>
-				</Route>,
-				{
-					route: `/profiles/${profile.id()}/votes`,
-				},
-			);
+		const { asFragment, container } = render(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={10} wallet={wallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
 
-			expect(container).toBeInTheDocument();
-			expect(asFragment()).toMatchSnapshot();
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
 
-			votesMock.mockRestore();
-		},
-	);
+		votesMock.mockRestore();
+	});
 
-	it.each([true, false])("should render with isCompact = %s when the wallet has many votes", (isCompact: boolean) => {
+	it("should render when the wallet has many votes", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 
 		const { asFragment, container } = render(
 			<AddressWrapper>
-				<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
+				<AddressRow index={0} maxVotes={10} wallet={wallet} />
 			</AddressWrapper>,
 			{
 				route: `/profiles/${profile.id()}/votes`,
@@ -173,26 +150,23 @@ describe("AddressRow", () => {
 		votesMock.mockRestore();
 	});
 
-	it.each([true, false])(
-		"should render with isCompact = %s when the wallet has exactly 4 votes",
-		(isCompact: boolean) => {
-			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+	it("should render when the wallet has exactly 4 votes", () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
-			const { asFragment, container } = render(
-				<AddressWrapper>
-					<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
-				</AddressWrapper>,
-				{
-					route: `/profiles/${profile.id()}/votes`,
-				},
-			);
+		const { asFragment, container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={10} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
 
-			expect(container).toBeInTheDocument();
-			expect(asFragment()).toMatchSnapshot();
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
 
-			votesMock.mockRestore();
-		},
-	);
+		votesMock.mockRestore();
+	});
 
 	it("should render for a multisignature wallet", async () => {
 		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
