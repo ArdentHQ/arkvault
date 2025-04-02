@@ -8,14 +8,7 @@ import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import {
-	env,
-	render,
-	screen,
-	waitFor,
-	fireEvent,
-	getMainsailProfileId,
-} from "@/utils/testing-library";
+import { env, render, screen, waitFor, fireEvent, getMainsailProfileId } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
