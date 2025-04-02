@@ -181,7 +181,6 @@ export default [
 			"sonarjs/no-duplicate-string": ["error", { threshold: 5 }],
 			"sonarjs/no-identical-expressions": "error",
 			"sonarjs/no-identical-functions": "error",
-			"sonarjs/no-one-iteration-loop": "off",
 			"sonarjs/no-redundant-jump": "error",
 			"sonarjs/no-small-switch": "error",
 			"sonarjs/no-use-of-empty-return-value": "error",
