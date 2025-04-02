@@ -5,7 +5,7 @@ import { act, renderHook } from "@testing-library/react";
 
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
-import { env, MAINSAIL_MNEMONICS, } from "@/utils/testing-library";
+import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 
 let profile: Contracts.IProfile;

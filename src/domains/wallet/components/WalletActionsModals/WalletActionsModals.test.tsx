@@ -35,11 +35,7 @@ describe("WalletActionsModals", () => {
 	it("should render `receive-funds` modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletActionsModals
-					wallets={[wallet]}
-					activeModal={"receive-funds"}
-					setActiveModal={setActiveModal}
-				/>
+				<WalletActionsModals wallets={[wallet]} activeModal={"receive-funds"} setActiveModal={setActiveModal} />
 			</Route>,
 			{
 				history,
@@ -55,11 +51,7 @@ describe("WalletActionsModals", () => {
 	it("should render `wallet-name` modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletActionsModals
-					wallets={[wallet]}
-					activeModal={"wallet-name"}
-					setActiveModal={setActiveModal}
-				/>
+				<WalletActionsModals wallets={[wallet]} activeModal={"wallet-name"} setActiveModal={setActiveModal} />
 			</Route>,
 			{
 				history,
@@ -75,11 +67,7 @@ describe("WalletActionsModals", () => {
 	it("should render `delete-wallet` modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletActionsModals
-					wallets={[wallet]}
-					activeModal={"delete-wallet"}
-					setActiveModal={setActiveModal}
-				/>
+				<WalletActionsModals wallets={[wallet]} activeModal={"delete-wallet"} setActiveModal={setActiveModal} />
 			</Route>,
 			{
 				history,
