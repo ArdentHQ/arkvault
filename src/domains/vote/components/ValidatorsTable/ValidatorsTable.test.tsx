@@ -7,7 +7,7 @@ import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
@@ -20,11 +20,13 @@ const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0
 const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
 const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ValidatorsTable", () => {
 	beforeAll(() => {
 		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 
 		delegates = [0, 1, 2].map(
@@ -627,7 +629,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	it("should navigate to the next and previous pages according", async () => {
-		const delegatesList = Array.from({ length: 52 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+		const delegatesList = Array.from({ length: 55 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
 			<ValidatorsTable
@@ -642,11 +644,11 @@ describe("ValidatorsTable", () => {
 
 		expect(firstValidatorVoteButton()).toBeInTheDocument();
 
-		expect(screen.queryByTestId("DelegateRow__toggle-51")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("DelegateRow__toggle-54")).not.toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("Pagination__next"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-51")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateRow__toggle-54")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("Pagination__previous"));
 

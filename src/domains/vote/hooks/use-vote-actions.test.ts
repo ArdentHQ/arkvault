@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 import { useVoteActions } from "./use-vote-actions";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 vi.mock("react-router-dom", async () => ({
 	...(await vi.importActual("react-router-dom")),
@@ -14,7 +14,7 @@ let profile: Contracts.IProfile;
 
 describe("useVoteActions", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
