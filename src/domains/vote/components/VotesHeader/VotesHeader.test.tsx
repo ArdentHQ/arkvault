@@ -3,13 +3,15 @@ import React from "react";
 
 import { VotesHeader } from "./VotesHeader";
 import { translations } from "@/domains/vote/i18n";
-import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, renderResponsive, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("VotesHeader", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it.each(["xs", "md"])("should render responsive (%s)", async (breakpoint) => {

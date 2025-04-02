@@ -2,7 +2,9 @@
 
 exports[`Tabs > should react to use effect call 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div
       class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950"
     >
@@ -44,7 +46,9 @@ exports[`Tabs > should react to use effect call 1`] = `
 
 exports[`Tabs > should render 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div
       class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950"
     >
@@ -97,7 +101,9 @@ exports[`Tabs > should render 1`] = `
 
 exports[`Tabs > should render wit counts 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div
       class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-transparent"
     >
@@ -168,7 +174,9 @@ exports[`Tabs > should render wit counts 1`] = `
 
 exports[`Tabs > should render with scroll 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div
       class="relative z-0"
       data-testid="TabScroll"
@@ -231,7 +239,9 @@ exports[`Tabs > should render with scroll 1`] = `
 
 exports[`Tabs > should render with scroll in dark mode 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div
       class="relative z-0"
       data-testid="TabScroll"
@@ -294,7 +304,9 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
 
 exports[`Tabs > should render without background 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div
       class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-transparent"
     >

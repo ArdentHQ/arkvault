@@ -2,7 +2,7 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { ValidatorRowMobile } from "./ValidatorRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 
@@ -11,9 +11,11 @@ let validator: Contracts.IReadOnlyWallet;
 
 const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 
-describe("DelegateRowMobile", () => {
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
+describe("ValidatorRowMobile", () => {
 	beforeAll(() => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 		validator = new ReadOnlyWallet({
 			address: data[0].address,

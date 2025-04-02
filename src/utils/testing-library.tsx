@@ -1,27 +1,32 @@
+import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
+import { HashHistory, To, createHashHistory } from "history";
+import { RenderResult, render } from "@testing-library/react";
+
 /* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { render, RenderResult } from "@testing-library/react";
-import { createHashHistory, HashHistory, To } from "history";
-import React from "react";
-import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
-import { I18nextProvider } from "react-i18next";
-import { Router } from "react-router-dom";
-import { Context as ResponsiveContext } from "react-responsive";
-import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
-import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
-import { i18n } from "@/app/i18n";
-import { httpClient } from "@/app/services";
-import { LayoutBreakpoint } from "@/types";
-import fixtureData from "@/tests/fixtures/env/storage.json";
-import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
-import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
-import { StubStorage } from "@/tests/mocks";
-import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
+import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import { I18nextProvider } from "react-i18next";
+import { LayoutBreakpoint } from "@/types";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
+import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
+import React from "react";
+import { Context as ResponsiveContext } from "react-responsive";
+import { Router } from "react-router-dom";
+import { StubStorage } from "@/tests/mocks";
+import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
+import fixtureData from "@/tests/fixtures/env/storage.json";
+import { httpClient } from "@/app/services";
+import { i18n } from "@/app/i18n";
+import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
+import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
+
 export {
 	mockNanoSTransport,
 	mockLedgerTransportError,
@@ -29,9 +34,6 @@ export {
 	mockConnectedTransport,
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
 	const { profile, profileIsSyncing } = useProfileSynchronizer(options);
@@ -364,7 +366,7 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 	};
 };
 
-export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile) => {
+export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
 	const networks = {
 		ark: {
 			...publicNetworksStub["ark"],
@@ -379,6 +381,11 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 			...customNetworksStub["random"],
 		},
 	};
+
+	if (onlyMainsail) {
+		delete networks["ark"];
+		delete networks["random"];
+	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
 	const allByCoinMock = vi

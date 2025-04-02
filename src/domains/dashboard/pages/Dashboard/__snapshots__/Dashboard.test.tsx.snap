@@ -1024,7 +1024,7 @@ exports[`Dashboard > should render 1`] = `
                           class="whitespace-nowrap dark:text-theme-dark-50"
                           data-testid="Amount"
                         >
-                          5.27653252 ARK
+                          95.27653252 ARK
                         </span>
                         <div
                           class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"

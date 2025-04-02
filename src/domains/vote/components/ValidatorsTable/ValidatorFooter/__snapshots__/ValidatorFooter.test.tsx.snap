@@ -43,14 +43,14 @@ exports[`ValidatorFooter > should render 1`] = `
                         class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
-                        ARK Wallet 1
+                        Mainsail Wallet …
                       </span>
                     </span>
                     <span
                       class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                   </div>
                 </div>

@@ -207,6 +207,26 @@ export const AddressesSidePanel = ({
 	}, [activeMode, singleSelectedAddress, multiSelectedAddresses]);
 
 	useEffect(() => {
+		if (activeMode === AddressViewSelection.single) {
+			const singleSelectedAddressIsInWallets = singleSelectedAddress.some((address) =>
+				wallets.some((w) => w.address() === address),
+			);
+
+			if (!singleSelectedAddressIsInWallets) {
+				setSelectedAddresses([wallets[0].address()]);
+			}
+		} else {
+			const selectedMultiAddressesInWallets = multiSelectedAddresses.filter((address) =>
+				wallets.some((w) => w.address() === address),
+			);
+
+			if (selectedMultiAddressesInWallets.length !== multiSelectedAddresses.length) {
+				setSelectedAddresses(selectedMultiAddressesInWallets);
+			}
+		}
+	}, [wallets, multiSelectedAddresses, singleSelectedAddress, activeMode]);
+
+	useEffect(() => {
 		if (!open || manageHintHasShown) {
 			setShowManageHint(false);
 			return;
@@ -274,10 +294,11 @@ export const AddressesSidePanel = ({
 				className={cn("mb-3", { hidden: wallets.length === 1 })}
 				activeId={activeMode}
 				onChange={activeModeChangeHandler}
+				disabled={isDeleteMode}
 			>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
-						<Tab tabId={option.value} key={option.value} className="">
+						<Tab tabId={option.value} key={option.value}>
 							<span>{option.label}</span>
 						</Tab>
 					))}

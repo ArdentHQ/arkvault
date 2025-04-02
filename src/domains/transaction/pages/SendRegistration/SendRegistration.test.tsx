@@ -1,32 +1,32 @@
-import { Observer } from "@ledgerhq/hw-transport";
-import { Signatories } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-
-import { SendRegistration } from "./SendRegistration";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import {
+	MAINSAIL_MNEMONICS,
 	act,
 	env,
+	getDefaultMainsailWalletMnemonic,
+	getMainsailProfileId,
+	mockNanoXTransport,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	mockNanoXTransport,
-	getMainsailProfileId,
-	getDefaultMainsailWalletMnemonic,
-	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import { Observer } from "@ledgerhq/hw-transport";
+import React from "react";
+import { Route } from "react-router-dom";
+import { SendRegistration } from "./SendRegistration";
+import { Signatories } from "@ardenthq/sdk";
+import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
+import { createHashHistory } from "history";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import userEvent from "@testing-library/user-event";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

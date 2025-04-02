@@ -1,11 +1,12 @@
-import { uniqBy, omitBy } from "@ardenthq/sdk-helpers";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
-import { Contracts } from "@ardenthq/sdk";
+import { omitBy, uniqBy } from "@/app/lib/helpers";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
+
+import { Contracts } from "@ardenthq/sdk";
+import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
-import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 
 export const useLedgerScanner = (coin: string, network: string) => {
 	const { setBusy, setIdle } = useLedgerContext();

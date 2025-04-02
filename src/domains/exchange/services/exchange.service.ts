@@ -1,7 +1,3 @@
-import { upperFirst } from "@ardenthq/sdk-helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-
-import { HttpClient } from "@/app/services/HttpClient";
 import {
 	CurrencyData,
 	EstimateResponse,
@@ -9,6 +5,10 @@ import {
 	OrderResponse,
 	OrderStatusResponse,
 } from "@/domains/exchange/exchange.contracts";
+
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { HttpClient } from "@/app/services/HttpClient";
+import { upperFirst } from "@/app/lib/helpers";
 
 // export const exchangeHost = "http://exchange-server.test/api";
 export const exchangeHost = "https://exchanges.arkvault.io/api";

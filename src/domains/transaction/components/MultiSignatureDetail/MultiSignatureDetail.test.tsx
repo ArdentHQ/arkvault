@@ -1,25 +1,25 @@
-import { Signatories } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
-
-import { MultiSignatureDetail } from "./MultiSignatureDetail";
-import { minVersionList, useLedgerContext } from "@/app/contexts";
-import { translations } from "@/domains/transaction/i18n";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockNanoSTransport,
+	mockNanoXTransport,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
-	mockNanoSTransport,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { minVersionList, useLedgerContext } from "@/app/contexts";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { MultiSignatureDetail } from "./MultiSignatureDetail";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import { Route } from "react-router-dom";
+import { Signatories } from "@ardenthq/sdk";
+import { translations } from "@/domains/transaction/i18n";
+import userEvent from "@testing-library/user-event";
 
 const passphrase = getDefaultWalletMnemonic();
 

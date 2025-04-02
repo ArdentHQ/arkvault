@@ -1,9 +1,9 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
-
-import { truncate } from "@ardenthq/sdk-helpers";
-import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getMainsailProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+
+import { renderHook } from "@testing-library/react";
+import { truncate } from "@/app/lib/helpers";
+import { useSearchParametersValidation } from "./use-search-parameters-validation";
 
 let profile: Contracts.IProfile;
 
