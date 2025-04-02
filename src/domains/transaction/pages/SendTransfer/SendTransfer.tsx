@@ -391,12 +391,6 @@ export const SendTransfer = () => {
 				<Form className="mx-auto max-w-172" context={form}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
 
-					<QRModal
-						isOpen={showQRModal}
-						onCancel={() => setShowQRModal(false)}
-						onRead={(text: string) => handleQRCodeRead(text)}
-					/>
-
 					<TransferOverwriteModal
 						isOpen={showOverwriteModal}
 						onCancel={() => setShowOverwriteModal(false)}
@@ -430,6 +424,12 @@ export const SendTransfer = () => {
 						}}
 					/>
 				</Form>
+
+				<QRModal
+					isOpen={showQRModal}
+					onCancel={() => setShowQRModal(false)}
+					onRead={(text: string) => handleQRCodeRead(text)}
+				/>
 			</Section>
 		</Page>
 	);
