@@ -7,16 +7,17 @@ import { FormProvider, useForm } from "react-hook-form";
 import { NetworkStep } from "./NetworkStep";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	mockProfileWithOnlyPublicNetworks,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("SelectNetworkStep", () => {
 	beforeEach(() => {

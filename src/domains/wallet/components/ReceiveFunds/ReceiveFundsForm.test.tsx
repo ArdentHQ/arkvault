@@ -4,14 +4,22 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { ReceiveFundsForm } from "./ReceiveFundsForm";
-import { env, getDefaultProfileId, getDefaultWalletId, renderWithForm, screen, waitFor } from "@/utils/testing-library";
+import {
+	env, getDefaultMainsailWalletId,
+	getMainsailProfileId,
+	renderWithForm,
+	screen,
+	waitFor,
+} from "@/utils/testing-library";
 
 let network: Networks.Network;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ReceiveFundsForm", () => {
 	beforeEach(() => {
-		const profile = env.profiles().findById(getDefaultProfileId());
-		const wallet = profile.wallets().findById(getDefaultWalletId());
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 		network = wallet.network();
 	});
 

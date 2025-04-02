@@ -5,15 +5,23 @@ import React from "react";
 import { ReceiveFunds } from "./ReceiveFunds";
 import { toasts } from "@/app/services";
 
-import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
+import {
+	env, getDefaultMainsailWalletId,
+	getMainsailProfileId,
+	render,
+	screen,
+	waitFor,
+} from "@/utils/testing-library";
 
 let network: Networks.Network;
 const downloadQrButton = "ReceiveFunds__download-qr";
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ReceiveFunds", () => {
 	beforeEach(() => {
-		const profile = env.profiles().findById(getDefaultProfileId());
-		const wallet = profile.wallets().findById(getDefaultWalletId());
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 		network = wallet.network();
 	});
 

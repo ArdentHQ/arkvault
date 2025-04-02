@@ -11,21 +11,22 @@ import { translations } from "@/domains/wallet/i18n";
 import {
 	act,
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	waitFor,
 	within,
 	renderResponsiveWithRoute,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 let wallets: Contracts.IReadWriteWallet[];
 let profile: Contracts.IProfile;
 
 const walletAlias = "Sample Wallet";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe.each([true, false])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
 	beforeAll(() => {
@@ -34,7 +35,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallets = profile.wallets().values();
 		wallets[0].settings().set(Contracts.WalletSetting.Alias, walletAlias);
@@ -290,7 +291,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					onSelectWallet={onSelectWallet}
-					selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+					selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				/>
 			</Route>,
 			{
@@ -301,20 +302,20 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 
 		await waitFor(() => {
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
 				1,
 				expect.objectContaining({
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 					name: wallets[0].alias(),
 					network: expect.any(Networks.Network),
 				}),
 			);
 		});
 
-		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
 
 		await waitFor(() => {
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
@@ -343,7 +344,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					onSelectWallet={onSelectWallet}
-					selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+					selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				/>
 			</Route>,
 			"md",
@@ -361,7 +362,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
 				1,
 				expect.objectContaining({
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 					name: wallets[0].alias(),
 					network: expect.any(Networks.Network),
 				}),
@@ -397,7 +398,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					onSelectWallet={onSelectWallet}
-					selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+					selectedAddress="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 				/>
 			</Route>,
 			"xs",
@@ -480,7 +481,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.type(searchInput, "0xcd15953dD076e56");
 
 		act(() => {
 			vi.advanceTimersByTime(100);
