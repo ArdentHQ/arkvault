@@ -1,13 +1,13 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { isUndefined } from "./is-undefined";
 
-describe("isUndefined", async ({ assert, it, nock, loader }) => {
+describe("isUndefined", () => {
 	it("should pass", () => {
-		assert.true(isUndefined(undefined));
+		expect(isUndefined(undefined)).toBe(true);
 	});
 
 	it("should fail", () => {
-		assert.false(isUndefined("undefined"));
+		expect(isUndefined("undefined")).toBe(false);
 	});
 });
