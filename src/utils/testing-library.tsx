@@ -381,8 +381,8 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 
 	if (onlyMainsail) {
-		delete networks['ark'];
-		delete networks['random'];
+		delete networks["ark"];
+		delete networks["random"];
 	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
