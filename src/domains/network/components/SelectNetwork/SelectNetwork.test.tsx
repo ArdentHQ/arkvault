@@ -4,10 +4,9 @@ import React from "react";
 import { SelectNetwork } from "./SelectNetwork";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
@@ -15,7 +14,7 @@ let profile: Contracts.IProfile;
 describe("SelectNetwork", () => {
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
