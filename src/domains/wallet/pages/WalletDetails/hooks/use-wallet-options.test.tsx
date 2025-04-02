@@ -6,7 +6,6 @@ import { renderHook } from "@testing-library/react";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 
-
 process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("Wallet Options Hook", () => {
@@ -28,9 +27,9 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: 'Resign Validator', value: 'delegate-resignation' },
-				{ label: 'Username', value: 'username-registration' },
-				{ label: 'Resign Username', value: 'username-resignation' }
+				{ label: "Resign Validator", value: "delegate-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
 			],
 			title: "Register",
 		});
@@ -46,10 +45,10 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: 'Resign Validator', value: 'delegate-resignation' },
-				{ label: 'Username', value: 'username-registration' },
-				{ label: 'Resign Username', value: 'username-resignation' },
-				{ label: 'Multisignature', value: 'multi-signature' }
+				{ label: "Resign Validator", value: "delegate-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
+				{ label: "Multisignature", value: "multi-signature" },
 			],
 			title: "Register",
 		});
@@ -67,9 +66,9 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: 'Resign Validator', value: 'delegate-resignation' },
-				{ label: 'Username', value: 'username-registration' },
-				{ label: 'Resign Username', value: 'username-resignation' }
+				{ label: "Resign Validator", value: "delegate-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
 			],
 			title: "Register",
 		});
@@ -99,9 +98,9 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: 'Resign Validator', value: 'delegate-resignation' },
-				{ label: 'Username', value: 'username-registration' },
-				{ label: 'Resign Username', value: 'username-resignation' }
+				{ label: "Resign Validator", value: "delegate-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
 			],
 			title: "Register",
 		});
@@ -118,9 +117,9 @@ describe("Wallet Options Hook", () => {
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [
-				{ label: 'Resign Validator', value: 'delegate-resignation' },
-				{ label: 'Username', value: 'username-registration' },
-				{ label: 'Resign Username', value: 'username-resignation' }
+				{ label: "Resign Validator", value: "delegate-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
 			],
 			title: "Register",
 		});

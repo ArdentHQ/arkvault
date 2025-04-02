@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { getDefaultAlias } from "./get-default-alias";
-import { env, MAINSAIL_MNEMONICS, } from "@/utils/testing-library";
+import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 describe("getDefaultAlias", () => {
 	let profile: Contracts.IProfile;

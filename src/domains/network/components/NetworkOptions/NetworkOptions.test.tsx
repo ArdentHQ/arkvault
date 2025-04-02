@@ -3,13 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { NetworkOption, NetworkOptions } from "./NetworkOptions";
-import {
-	env,
-	getMainsailProfileId,
-	MAINSAIL_MNEMONICS,
-	render,
-	screen,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen } from "@/utils/testing-library";
 
 let network: Networks.Network;
 let customNetwork: Networks.Network;

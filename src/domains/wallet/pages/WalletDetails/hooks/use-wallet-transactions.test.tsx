@@ -4,14 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	screen,
-	triggerMessageSignOnce,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import { requestMock, server } from "@/tests/mocks/server";
