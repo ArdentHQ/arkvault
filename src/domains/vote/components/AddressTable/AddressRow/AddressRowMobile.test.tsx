@@ -11,14 +11,7 @@ import {
 	AddressRowMobileDelegateName,
 } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import {
-	env,
-	getMainsailProfileId,
-	MAINSAIL_MNEMONICS,
-	render,
-	screen,
-	syncDelegates,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { createHashHistory } from "history";
 import { within } from "@testing-library/react";
