@@ -3,7 +3,7 @@ import { indexOf } from "./index-of.js";
 export const uniq = <T>(iterable: T[]): T[] => {
 	const result: T[] = [];
 
-	for (const value: T of iterable) {
+	for (const value of iterable) {
 		if (indexOf(result, value) > -1) {
 			continue;
 		}

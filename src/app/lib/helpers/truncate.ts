@@ -16,7 +16,7 @@ export const truncate = (
 	},
 ): string => {
 	// TODO: check why there is a need for options.length < 0
-	if (options.length === 0 || options.length < 0) {
+	if (options.length === undefined || options.length === 0 || options.length < 0) {
 		options.length = 30;
 	}
 
