@@ -10,7 +10,6 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	waitFor,

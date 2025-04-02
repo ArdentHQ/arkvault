@@ -19268,7 +19268,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  9,995.27653252 ARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -26523,7 +26523,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  9,995.27653252 ARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -30816,7 +30816,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  9,995.27653252 ARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -35592,7 +35592,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  9,995.27653252 ARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -39074,7 +39074,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  9,995.27653252 ARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
