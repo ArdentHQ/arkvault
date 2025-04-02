@@ -7,7 +7,7 @@ import { buildTranslations } from "@/app/i18n/helpers";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { translations as voteTranslations } from "@/domains/vote/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -16,9 +16,11 @@ const translations = buildTranslations();
 
 const continueButton = () => screen.getByTestId("DelegateTable__continue-button");
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("ValidatorFooter", () => {
 	beforeAll(() => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 
 		validator = new ReadOnlyWallet({
@@ -98,7 +100,7 @@ describe("ValidatorFooter", () => {
 			),
 		).toBeInTheDocument();
 
-		expect(screen.getByText(`16.87544901 ${wallet.network().ticker()}`)).toBeInTheDocument();
+		expect(screen.getByText(`2.63826626 ${wallet.network().ticker()}`)).toBeInTheDocument();
 
 		votesAmountMinimumMock.mockRestore();
 	});
