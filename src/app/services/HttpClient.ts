@@ -1,7 +1,9 @@
+import { wal } from "./../../domains/wallet/data";
 import { Http } from "@ardenthq/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./Cache";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 
 type Primitive = null | undefined | string | number | boolean | symbol | bigint;
 
@@ -33,11 +35,11 @@ export class HttpClient extends Http.AbstractRequest {
 			ttl?: number;
 		},
 	): Promise<Http.HttpResponse> {
+		const cacheKey = this.buildCacheKey(method, url, data);
+
 		if (data?.query && Object.keys(data.query).length > 0) {
 			url = `${url}?${new URLSearchParams(data.query as any)}`;
 		}
-
-		const cacheKey: string = hash(`${method}.${url}.${JSON.stringify(data)}`).toString();
 
 		return this.cache.remember(
 			cacheKey,
@@ -77,6 +79,24 @@ export class HttpClient extends Http.AbstractRequest {
 			},
 			options?.ttl,
 		);
+	}
+
+	private buildCacheKey(method: string, url: string, data?: any) {
+		// Remove undefined attributes so the cache key is the same for the same request
+		const normalizedData = data
+			? Object.fromEntries(Object.entries(data).filter(([, value]) => value !== undefined))
+			: {};
+
+		return hash(`${method.toLowerCase()}.${url}.${JSON.stringify(normalizedData)}`).toString();
+	}
+
+	public forgetWalletCache(environment: Environment, wallet: Contracts.IReadWriteWallet) {
+		const selectHost = environment.hostSelector(wallet.profile());
+		const { host } = selectHost(wallet.coin().config(), "full");
+
+		const cacheKey = this.buildCacheKey("get", `${host}/wallets/${wallet.address()}`, {});
+
+		this.cache.forget(cacheKey);
 	}
 
 	public clearCache() {
