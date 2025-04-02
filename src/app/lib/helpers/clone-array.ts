@@ -5,5 +5,6 @@ export const cloneArray = <T>(input: T[]): T[] => {
 		sliced[index] = element;
 	}
 
+	// @ts-expect-error unknown[] not assignable to T[]
 	return sliced;
 };
