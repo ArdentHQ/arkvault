@@ -365,10 +365,14 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 };
 
 export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
-	let networks = {
+	const networks = {
 		ark: {
 			...publicNetworksStub["ark"],
 			...testNetworksStub["ark"],
+		},
+		mainsail: {
+			...publicNetworksStub["mainsail"],
+			...testNetworksStub["mainsail"],
 		},
 		random: {
 			...customNetworksStub["random-enabled"],
@@ -377,12 +381,8 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 
 	if (onlyMainsail) {
-		networks = {
-			mainsail: {
-				...publicNetworksStub["mainsail"],
-				...testNetworksStub["mainsail"],
-			},
-		}
+		delete networks['ark'];
+		delete networks['random'];
 	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);

@@ -8,8 +8,7 @@ import {
 	render,
 	screen,
 	env,
-	getDefaultProfileId,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -20,19 +19,19 @@ let nethash: string;
 let resetProfileNetworksMock: () => void;
 
 const delegateAddresses = [
-	"D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
-	"D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
-	"DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES",
-	"D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-	"DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8",
+	"0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
+	"0x3F8eCbF08078F22038235F9834540A960E99085b",
+	"0x137c59f371a7049159ef19a72f908773Ade219b1",
 ];
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("useWalletFromQueryParameters hook", () => {
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		nethash = profile.wallets().first().network().meta().nethash;
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 	});
 
 	afterAll(() => {
