@@ -224,5 +224,10 @@
 				"react-zendesk"
 			]
 		}
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"bcrypto"
+		]
 	}
 }
