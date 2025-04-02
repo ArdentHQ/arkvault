@@ -1,9 +1,9 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { uniq } from "@ardenthq/sdk-helpers";
-import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { UUID } from "@/app/lib";
+import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { uniq } from "@/app/lib/helpers";
 
 export interface NodeConfigurationResponse {
 	constants?: {

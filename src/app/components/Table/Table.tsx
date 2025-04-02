@@ -1,10 +1,10 @@
-import { chunk } from "@ardenthq/sdk-helpers";
-import cn from "classnames";
-import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";
+import React, { useMemo } from "react";
 
-import { TableProperties } from "./Table.contracts";
 import { Icon } from "@/app/components/Icon";
+import { TableProperties } from "./Table.contracts";
+import { chunk } from "@/app/lib/helpers";
+import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
 const TableWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (

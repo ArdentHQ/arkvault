@@ -1,38 +1,39 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import { Signatories } from "@ardenthq/sdk";
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
 
-import { SendVote } from "./SendVote";
-import { toasts } from "@/app/services";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import {
 	act,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
+	mockNanoXTransport,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	mockProfileWithPublicAndTestNetworks,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
+import React from "react";
+import { Route } from "react-router-dom";
+import { SendVote } from "./SendVote";
+import { Signatories } from "@ardenthq/sdk";
+import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
+import { appendParameters } from "@/domains/vote/utils/url-parameters";
+import { createHashHistory } from "history";
+import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { toasts } from "@/app/services";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import userEvent from "@testing-library/user-event";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();
 

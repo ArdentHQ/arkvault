@@ -14,7 +14,7 @@ import { assertExchangeTransaction } from "@/domains/exchange/utils";
 import { assertString } from "@/utils/assertions";
 import { delay } from "@/utils/delay";
 import { toasts } from "@/app/services";
-import { upperFirst } from "@ardenthq/sdk-helpers";
+import { upperFirst } from "@/app/lib/helpers";
 import { useActiveProfile } from "@/app/hooks";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useHistory } from "react-router-dom";

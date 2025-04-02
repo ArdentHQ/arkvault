@@ -1,25 +1,25 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
-
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
-import { AddRecipientWrapper } from "./AddRecipient.styles";
-import { AddRecipientItem } from "./AddRecipientItem";
-import { Amount } from "@/app/components/Amount";
-import { Button } from "@/app/components/Button";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
+import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import React, { VFC, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { WalletAliasResult, useValidation } from "@/app/hooks";
+
+import { AddRecipientItem } from "./AddRecipientItem";
+import { AddRecipientWrapper } from "./AddRecipient.styles";
+import { Amount } from "@/app/components/Amount";
+import { BigNumber } from "@/app/lib/helpers";
+import { Button } from "@/app/components/Button";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { Icon } from "@/app/components/Icon";
 import { InputCurrency } from "@/app/components/Input";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { Switch } from "@/app/components/Switch";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useValidation, WalletAliasResult } from "@/app/hooks";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
-import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
