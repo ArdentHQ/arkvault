@@ -4,7 +4,11 @@ import React from "react";
 
 import { useVoteFilters } from "./use-vote-filters";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import {
+	env,
+	getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+} from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -14,13 +18,13 @@ const wrapper = ({ children }: any) => (
 	</EnvironmentProvider>
 );
 
-const ARK_MAINNET_NETWORK_ID = "ark.mainnet";
-const ARK_DEVNET_NETWORK_ID = "ark.devnet";
+const MAINSAIL_MAINNET_NETWORK_ID = "mainsail.mainnet";
+const MAINSAIL_DEVNET_NETWORK_ID = "mainsail.devnet";
 
 describe("Use Vote Filters", () => {
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
@@ -30,63 +34,63 @@ describe("Use Vote Filters", () => {
 	});
 
 	it("should include only wallets from the active network", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
-		const { wallet: arkMainWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_MAINNET_NETWORK_ID,
+		const { wallet: mainsailMainWallet } = await profile.walletFactory().generate({
+			coin: "Mainsail",
+			network: MAINSAIL_MAINNET_NETWORK_ID,
 		});
-		profile.wallets().push(arkMainWallet);
+		profile.wallets().push(mainsailMainWallet);
 
-		const { wallet: arkDevWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_DEVNET_NETWORK_ID,
+		const { wallet: mainsailDevWallet } = await profile.walletFactory().generate({
+			coin: "Mainsail",
+			network: MAINSAIL_DEVNET_NETWORK_ID,
 		});
-		profile.wallets().push(arkDevWallet);
+		profile.wallets().push(mainsailDevWallet);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: ARK_MAINNET_NETWORK_ID,
+			activeNetworkId: MAINSAIL_MAINNET_NETWORK_ID,
 		});
 
 		const { result } = renderHook(
-			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: arkMainWallet }),
+			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: mainsailMainWallet }),
 			{ wrapper },
 		);
 
 		expect(result.current.filteredWallets).toHaveLength(1);
-		expect(result.current.filteredWallets[0].network().id()).toBe(ARK_MAINNET_NETWORK_ID);
+		expect(result.current.filteredWallets[0].network().id()).toBe(MAINSAIL_MAINNET_NETWORK_ID);
 
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: ARK_DEVNET_NETWORK_ID,
+			activeNetworkId: MAINSAIL_DEVNET_NETWORK_ID,
 		});
 
 		const { result: updatedResult } = renderHook(
-			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: arkMainWallet }),
+			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: mainsailMainWallet }),
 			{ wrapper },
 		);
 
 		expect(updatedResult.current.filteredWallets).toHaveLength(1);
-		expect(updatedResult.current.filteredWallets[0].network().id()).toBe(ARK_DEVNET_NETWORK_ID);
+		expect(updatedResult.current.filteredWallets[0].network().id()).toBe(MAINSAIL_DEVNET_NETWORK_ID);
 
 		resetProfileNetworksMock();
 	});
 
 	it("should filter wallets based on search query", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
 		const { wallet: wallet1 } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_MAINNET_NETWORK_ID,
+			coin: "Mainsail",
+			network: MAINSAIL_MAINNET_NETWORK_ID,
 		});
 		wallet1.mutator().alias("Wallet 1");
 		profile.wallets().push(wallet1);
 
 		const { wallet: wallet2 } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_MAINNET_NETWORK_ID,
+			coin: "Mainsail",
+			network: MAINSAIL_MAINNET_NETWORK_ID,
 		});
 		wallet2.mutator().alias("Wallet 2");
 		profile.wallets().push(wallet2);
@@ -94,7 +98,7 @@ describe("Use Vote Filters", () => {
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: ARK_MAINNET_NETWORK_ID,
+			activeNetworkId: MAINSAIL_MAINNET_NETWORK_ID,
 		});
 
 		const { result } = renderHook(
@@ -114,12 +118,12 @@ describe("Use Vote Filters", () => {
 	});
 
 	it("should set hasEmptyResults and hasWallets correctly", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
 			...config,
-			activeNetworkId: ARK_MAINNET_NETWORK_ID,
+			activeNetworkId: MAINSAIL_MAINNET_NETWORK_ID,
 		});
 
 		const { result, rerender } = renderHook(
@@ -131,8 +135,8 @@ describe("Use Vote Filters", () => {
 		expect(result.current.hasEmptyResults).toBe(true);
 
 		const { wallet: wallet1 } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: ARK_MAINNET_NETWORK_ID,
+			coin: "Mainsail",
+			network: MAINSAIL_MAINNET_NETWORK_ID,
 		});
 		profile.wallets().push(wallet1);
 		rerender();

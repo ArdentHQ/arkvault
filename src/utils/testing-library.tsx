@@ -364,21 +364,26 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 	};
 };
 
-export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile) => {
-	const networks = {
+export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
+	let networks = {
 		ark: {
 			...publicNetworksStub["ark"],
 			...testNetworksStub["ark"],
-		},
-		mainsail: {
-			...publicNetworksStub["mainsail"],
-			...testNetworksStub["mainsail"],
 		},
 		random: {
 			...customNetworksStub["random-enabled"],
 			...customNetworksStub["random"],
 		},
 	};
+
+	if (onlyMainsail) {
+		networks = {
+			mainsail: {
+				...publicNetworksStub["mainsail"],
+				...testNetworksStub["mainsail"],
+			},
+		}
+	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
 	const allByCoinMock = vi
