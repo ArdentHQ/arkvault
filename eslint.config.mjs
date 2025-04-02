@@ -1,23 +1,24 @@
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
-import typescript from "@typescript-eslint/eslint-plugin";
+
+import { FlatCompat } from "@eslint/eslintrc";
+import aliasImport from "eslint-plugin-import-alias";
+import { fileURLToPath } from "node:url";
+import globals from "globals";
+import js from "@eslint/js";
+import path from "node:path";
 import prettier from "eslint-plugin-prettier";
 import promise from "eslint-plugin-promise";
-import reactHooks from "eslint-plugin-react-hooks";
 import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 import sonarjs from "eslint-plugin-sonarjs";
+import sortImportsEs6Autofix from "eslint-plugin-sort-imports-es6-autofix";
 import sortKeysFix from "eslint-plugin-sort-keys-fix";
 import testcafe from "eslint-plugin-testcafe";
 import testingLibrary from "eslint-plugin-testing-library";
+import typescript from "@typescript-eslint/eslint-plugin";
 import unicorn from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
-import aliasImport from "eslint-plugin-import-alias";
-import sortImportsEs6Autofix from "eslint-plugin-sort-imports-es6-autofix";
-import globals from "globals";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -177,9 +178,10 @@ export default [
 			"sonarjs/cognitive-complexity": "error",
 			"sonarjs/no-all-duplicated-branches": "error",
 			"sonarjs/no-collapsible-if": "error",
-			"sonarjs/no-duplicate-string": ["error", { "threshold": 5 }],
+			"sonarjs/no-duplicate-string": ["error", { threshold: 5 }],
 			"sonarjs/no-identical-expressions": "error",
 			"sonarjs/no-identical-functions": "error",
+			"sonarjs/no-one-iteration-loop": "off",
 			"sonarjs/no-redundant-jump": "error",
 			"sonarjs/no-small-switch": "error",
 			"sonarjs/no-use-of-empty-return-value": "error",

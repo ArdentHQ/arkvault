@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { describe, expect, it } from "vitest";
 
 import { QRCode } from "./qrcode";
@@ -19,7 +21,7 @@ describe("QRCode", () => {
 	});
 
 	it("should turn the QR Code into a data URL (with options)", async () => {
-		const actual = await QRCode.fromString("https://google.com").toDataURL({ width: 250, margin: 0 });
+		const actual = await QRCode.fromString("https://google.com").toDataURL({ margin: 0, width: 250 });
 
 		expect(actual).toMatch(/^data:image\/png;base64,/);
 	});

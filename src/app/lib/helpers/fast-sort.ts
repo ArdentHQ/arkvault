@@ -34,7 +34,9 @@ type IAnySortBy<T = any> = ISortBy<T> | ISortBy<T>[] | ISortByObjectSorter<T> | 
 const castComparer = (comparer: IComparer) => (a, b, order: IOrder) => comparer(a, b, order) * order;
 
 const throwInvalidConfigErrorIfTrue = function (condition: boolean, context: string) {
-	if (condition) throw Error(`Invalid sort config: ${context}`);
+	if (condition) {
+		throw new Error(`Invalid sort config: ${context}`);
+	}
 };
 
 const unpackObjectSorter = function (sortByObj: ISortByObjectSorter<any>) {
@@ -48,7 +50,7 @@ const unpackObjectSorter = function (sortByObj: ISortByObjectSorter<any>) {
 
 	const comparer = sortByObj.comparer && castComparer(sortByObj.comparer);
 
-	return { order, sortBy, comparer };
+	return { comparer, order, sortBy };
 };
 
 // >>> SORTERS <<<
@@ -63,15 +65,15 @@ const multiPropertySorterProvider = function (defaultComparer: IComparer) {
 		a,
 		b,
 	): number {
-		let valA;
-		let valB;
+		let valueA;
+		let valueB;
 
 		if (typeof sortBy === "string") {
-			valA = a[sortBy];
-			valB = b[sortBy];
+			valueA = a[sortBy];
+			valueB = b[sortBy];
 		} else if (typeof sortBy === "function") {
-			valA = sortBy(a);
-			valB = sortBy(b);
+			valueA = sortBy(a);
+			valueB = sortBy(b);
 		} else {
 			const objectSorterConfig = unpackObjectSorter(sortBy as ISortByObjectSorter<any>);
 			return multiPropertySorter(
@@ -85,9 +87,9 @@ const multiPropertySorterProvider = function (defaultComparer: IComparer) {
 			);
 		}
 
-		const equality = comparer(valA, valB, order);
+		const equality = comparer(valueA, valueB, order);
 
-		if ((equality === 0 || (valA == null && valB == null)) && sortByArr.length > depth) {
+		if ((equality === 0 || (valueA == null && valueB == null)) && sortByArr.length > depth) {
 			return multiPropertySorter(sortByArr[depth], sortByArr, depth + 1, order, comparer, a, b);
 		}
 
@@ -185,27 +187,35 @@ export function createNewSortInstance(opts: ISortInstanceOptions): <T>(_ctx: T[]
 	const comparer = castComparer(opts.comparer!);
 
 	return function <T>(_ctx: T[]): IFastSort<T> {
-		const ctx = Array.isArray(_ctx) && !opts.inPlaceSorting ? _ctx.slice() : _ctx;
+		const ctx = Array.isArray(_ctx) && !opts.inPlaceSorting ? [..._ctx] : _ctx;
 
 		return {
 			asc(sortBy?: ISortBy<T> | ISortBy<T>[]): T[] {
 				return sortArray(1, ctx, sortBy!, comparer);
 			},
-			desc(sortBy?: ISortBy<T> | ISortBy<T>[]): T[] {
-				return sortArray(-1, ctx, sortBy!, comparer);
-			},
 			by(sortBy: ISortByObjectSorter<T> | ISortByObjectSorter<T>[]): T[] {
 				return sortArray(1, ctx, sortBy, comparer);
+			},
+			desc(sortBy?: ISortBy<T> | ISortBy<T>[]): T[] {
+				return sortArray(-1, ctx, sortBy!, comparer);
 			},
 		};
 	};
 }
 
 const defaultComparer = (a, b, order): number => {
-	if (a == null) return order;
-	if (b == null) return -order;
-	if (a < b) return -1;
-	if (a === b) return 0;
+	if (a == null) {
+		return order;
+	}
+	if (b == null) {
+		return -order;
+	}
+	if (a < b) {
+		return -1;
+	}
+	if (a === b) {
+		return 0;
+	}
 
 	return 1;
 };

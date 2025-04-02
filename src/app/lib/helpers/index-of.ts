@@ -1,24 +1,24 @@
 export const indexOf = <T>(iterable: T[], value, fromIndex?: number): number => {
 	const length: number = iterable.length;
 
-	let i = 0;
+	let index = 0;
 
 	if (fromIndex) {
-		i = fromIndex;
+		index = fromIndex;
 
-		if (i < 0) {
-			i += length;
+		if (index < 0) {
+			index += length;
 
 			/* istanbul ignore else */
-			if (i < 0) {
-				i = 0;
+			if (index < 0) {
+				index = 0;
 			}
 		}
 	}
 
-	for (; i < length; i++) {
-		if (iterable[i] === value) {
-			return i;
+	for (; index < length; index++) {
+		if (iterable[index] === value) {
+			return index;
 		}
 	}
 

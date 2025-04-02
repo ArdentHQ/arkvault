@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { BigNumber } from "./bignumber";
 
 describe("BigNumber", () => {
@@ -197,7 +199,7 @@ describe("BigNumber", () => {
 	});
 
 	it("#toFixed", () => {
-		expect(subject.toFixed()).toBe("1");
+		expect(subject.toFixed(0)).toBe("1");
 
 		expect(subject.toFixed(0)).toBe("1");
 		expect(subject.toFixed(2)).toBe("1.00");
@@ -210,13 +212,13 @@ describe("BigNumber", () => {
 		expect(BigNumber.make("00010.00010").toFixed(0)).toBe("10");
 		expect(BigNumber.make("00010.00010").toFixed(4)).toBe("10.0001");
 
-		expect(BigNumber.make(123.456).toFixed()).toBe("123.456");
+		expect(BigNumber.make(123.456).toFixed(0)).toBe("123.456");
 		expect(BigNumber.make(123.456).toFixed(0)).toBe("123");
 		expect(BigNumber.make(123.456).toFixed(5)).toBe("123.45600");
 		expect(BigNumber.make(123.456).toFixed(2)).toBe("123.45");
 
 		expect(BigNumber.make(123).toFixed(5)).toBe("123.00000");
-		expect(BigNumber.make(123_456).toFixed()).toBe("123456");
+		expect(BigNumber.make(123_456).toFixed(0)).toBe("123456");
 		expect(BigNumber.make(123_456).toFixed(0)).toBe("123456");
 	});
 

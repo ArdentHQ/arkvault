@@ -5,8 +5,8 @@ export const filterObject = <T extends object>(iterable: T, iteratee: FunctionRe
 	const length: number = keys.length;
 	const result = {};
 
-	for (let i = 0; i < length; i++) {
-		const key = keys[i];
+	for (let index = 0; index < length; index++) {
+		const key = keys[index];
 
 		if (iteratee(iterable[key], key, iterable)) {
 			result[key] = iterable[key];

@@ -1,3 +1,6 @@
+/* eslint-disable unicorn/no-object-as-default-parameter */
+/* eslint-disable sonarjs/no-collection-size-mischeck */
+
 import { isLessThanOrEqual } from "./is-less-than-or-equal.js";
 
 export const truncate = (
@@ -12,7 +15,8 @@ export const truncate = (
 		omissionPosition: "right",
 	},
 ): string => {
-	if (!options.length || options.length < 0) {
+	// TODO: check why there is a need for options.length < 0
+	if (options.length === 0 || options.length < 0) {
 		options.length = 30;
 	}
 
@@ -31,7 +35,7 @@ export const truncate = (
 	}
 
 	if (options.omissionPosition === "right") {
-		return value.substring(0, options.length - options.omission.length) + options.omission;
+		return value.slice(0, Math.max(0, options.length - options.omission.length)) + options.omission;
 	}
 
 	if (options.omissionPosition === "middle") {
@@ -43,5 +47,5 @@ export const truncate = (
 		)}`;
 	}
 
-	return options.omission + value.substring(value.length - options.length + options.omission.length);
+	return options.omission + value.slice(Math.max(0, value.length - options.length + options.omission.length));
 };

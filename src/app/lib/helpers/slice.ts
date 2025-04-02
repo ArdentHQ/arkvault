@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-new-array */
 // Taken from https://raw.githubusercontent.com/lodash/lodash/4.17.15-post/lodash.js
 
 /* istanbul ignore next */
@@ -18,7 +19,7 @@ export const slice = <T>(array: T[], start: number, end: number): T[] => {
 	length = start > end ? 0 : (end - start) >>> 0;
 	start >>>= 0;
 
-	const result: T[] = Array(length);
+	const result: T[] = new Array(length);
 
 	while (++index < length) {
 		result[index] = array[index + start];

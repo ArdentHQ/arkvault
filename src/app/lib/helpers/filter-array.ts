@@ -3,9 +3,9 @@ import { FunctionReturning } from "./types.js";
 export const filterArray = <T>(iterable: T[], iteratee: FunctionReturning): T[] => {
 	const result: T[] = [];
 
-	for (let i = 0; i < iterable.length; i++) {
-		if (iteratee(iterable[i], i, iterable)) {
-			result.push(iterable[i]);
+	for (let index = 0; index < iterable.length; index++) {
+		if (iteratee(iterable[index], index, iterable)) {
+			result.push(iterable[index]);
 		}
 	}
 

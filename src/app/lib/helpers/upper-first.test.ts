@@ -4,14 +4,14 @@ import { upperFirst } from "./upper-first";
 
 describe("upperFirst", () => {
 	const dummies = {
-		fred: "Fred",
 		FRED: "FRED",
+		fred: "Fred",
 		"test space": "Test space",
 	};
 
 	it("should capitalize the given input", () => {
-		Object.keys(dummies).forEach((key) => {
+		for (const key of Object.keys(dummies)) {
 			expect(upperFirst(key)).toBe(dummies[key]);
-		});
+		}
 	});
 });

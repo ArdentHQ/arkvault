@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/require-await */
+
 import BaseCode, { QRCodeToDataURLOptions } from "qrcode";
 
 type StringType = "utf8" | "svg" | "terminal" | undefined;

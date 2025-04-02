@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/no-array-reduce */
+
 import Big, { BigSource } from "big.js";
 
 export type NumberLike = string | number | bigint | Big | BigNumber;
