@@ -382,7 +382,7 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 				...publicNetworksStub["mainsail"],
 				...testNetworksStub["mainsail"],
 			},
-		}
+		};
 	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
