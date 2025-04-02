@@ -1,3 +1,4 @@
+/* eslint-disable @sonarjs/no-duplicate-string */
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
