@@ -3,20 +3,23 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { SelectAddress } from "./SelectAddress";
-import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallets: Contracts.IReadWriteWallet[];
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("SelectAddress", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 
 		await wallet.synchroniser().identity();
@@ -50,6 +53,8 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render with wallet name by default", () => {
+		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("test");
+
 		render(
 			<SelectAddress
 				wallets={wallets}
@@ -59,6 +64,8 @@ describe("SelectAddress", () => {
 		);
 
 		expect(screen.getByTestId("Address__alias")).toBeInTheDocument();
+
+		displayNameSpy.mockRestore();
 	});
 
 	it("should render without wallet name", () => {

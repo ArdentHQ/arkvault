@@ -8,10 +8,8 @@ describe("routing", () => {
 			expect.objectContaining({ path: ProfilePaths.GeneralSettings }),
 			expect.objectContaining({ path: ProfilePaths.PasswordSettings }),
 			expect.objectContaining({ path: ProfilePaths.ExportSettings }),
-			expect.objectContaining({ path: ProfilePaths.AppearanceSettings }),
 			expect.objectContaining({ path: ProfilePaths.Settings }),
 			expect.objectContaining({ path: ProfilePaths.ServerManagmentSettings }),
-			expect.objectContaining({ path: ProfilePaths.NetworkManagmentSettings }),
 		]);
 	});
 

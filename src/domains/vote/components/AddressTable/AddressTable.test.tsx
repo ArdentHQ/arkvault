@@ -10,7 +10,8 @@ import {
 	syncDelegates,
 	waitFor,
 	renderResponsiveWithRoute,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 

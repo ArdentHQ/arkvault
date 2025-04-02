@@ -2,7 +2,7 @@
 
 /* eslint-disable testing-library/no-unnecessary-act */
 
-import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -53,7 +53,7 @@ const renderComponent = async () => {
 
 describe("CreateProfile", () => {
 	beforeAll(() => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({ coins: { Mainsail }, httpClient, storage: new StubStorage() });
 	});
 
 	it("should render", async () => {

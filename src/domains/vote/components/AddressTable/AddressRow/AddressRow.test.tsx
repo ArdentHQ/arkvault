@@ -7,13 +7,7 @@ import { createHashHistory } from "history";
 
 import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import {
-	env,
-	getMainsailProfileId, MAINSAIL_MNEMONICS,
-	render,
-	screen,
-	syncDelegates,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
@@ -116,29 +110,27 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it(
-		"should render when the maximum votes is greater than 1", () => {
-			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+	it("should render when the maximum votes is greater than 1", () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
-			const { asFragment, container } = render(
-				<Route path="/profiles/:profileId/votes">
-					<table>
-						<tbody>
-							<AddressRow index={0} maxVotes={10} wallet={wallet} />
-						</tbody>
-					</table>
-				</Route>,
-				{
-					route: `/profiles/${profile.id()}/votes`,
-				},
-			);
+		const { asFragment, container } = render(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={10} wallet={wallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
 
-			expect(container).toBeInTheDocument();
-			expect(asFragment()).toMatchSnapshot();
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
 
-			votesMock.mockRestore();
-		},
-	);
+		votesMock.mockRestore();
+	});
 
 	it("should render when the wallet has many votes", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
@@ -158,26 +150,23 @@ describe("AddressRow", () => {
 		votesMock.mockRestore();
 	});
 
-	it(
-		"should render when the wallet has exactly 4 votes",
-		() => {
-			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+	it("should render when the wallet has exactly 4 votes", () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
-			const { asFragment, container } = render(
-				<AddressWrapper>
-					<AddressRow index={0} maxVotes={10} wallet={wallet} />
-				</AddressWrapper>,
-				{
-					route: `/profiles/${profile.id()}/votes`,
-				},
-			);
+		const { asFragment, container } = render(
+			<AddressWrapper>
+				<AddressRow index={0} maxVotes={10} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
 
-			expect(container).toBeInTheDocument();
-			expect(asFragment()).toMatchSnapshot();
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
 
-			votesMock.mockRestore();
-		},
-	);
+		votesMock.mockRestore();
+	});
 
 	it("should render for a multisignature wallet", async () => {
 		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
