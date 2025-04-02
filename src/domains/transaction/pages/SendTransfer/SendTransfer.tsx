@@ -37,7 +37,7 @@ import {
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-
+import { httpClient } from "@/app/services";
 const MAX_TABS = 5;
 
 export const SendTransfer = () => {
@@ -299,6 +299,12 @@ export const SendTransfer = () => {
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
+	const backHandler = () => {
+		httpClient.forgetWalletCache(env, wallet!);
+
+		setActiveTab(SendTransferStep.FormStep);
+	};
+
 	const renderTabs = () => (
 		<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 			<TabPanel tabId={SendTransferStep.NetworkStep}>
@@ -358,9 +364,7 @@ export const SendTransfer = () => {
 						history.push(`/profiles/${activeProfile.id()}/dashboard`);
 					}}
 					isBackDisabled={isSubmitting}
-					onBack={() => {
-						setActiveTab(SendTransferStep.FormStep);
-					}}
+					onBack={backHandler}
 					errorMessage={errorMessage}
 				/>
 			</TabPanel>
