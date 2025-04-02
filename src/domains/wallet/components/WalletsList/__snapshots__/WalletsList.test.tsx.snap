@@ -304,7 +304,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
             role="rowgroup"
           >
             <tr
-              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td
@@ -368,7 +368,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 2
+                          Mainsail Wallet …
                         </span>
                       </span>
                     </div>
@@ -395,14 +395,14 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 2
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                        0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                       </span>
                       <button
                         class="ring-focus relative focus:outline-none"
@@ -456,16 +456,6 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                   >
                     <div
                       class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                      data-testid="WalletIcon__SecondSignature"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                       data-testid="WalletIcon__TestNetwork"
                     >
                       <div>
@@ -501,10 +491,17 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
                 >
                   <span
-                    class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
-                    data-testid="Amount"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    57.68 DARK
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 100px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -528,8 +525,9 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 >
                   <div>
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                       data-testid="WalletListItem__send-button"
+                      disabled=""
                       type="button"
                     >
                       <div
@@ -667,7 +665,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                     </div>
@@ -694,14 +692,14 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                       <button
                         class="ring-focus relative focus:outline-none"
@@ -793,7 +791,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                     class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
                     data-testid="Amount"
                   >
-                    33.75089801 DARK
+                    95.27653252 ARK
                   </span>
                 </div>
               </td>
@@ -1408,7 +1406,7 @@ exports[`WalletsList > should render 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                     </div>
@@ -1435,14 +1433,14 @@ exports[`WalletsList > should render 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                       <button
                         class="ring-focus relative focus:outline-none"
@@ -1534,7 +1532,7 @@ exports[`WalletsList > should render 1`] = `
                     class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
                     data-testid="Amount"
                   >
-                    33.75089801 DARK
+                    95.27653252 ARK
                   </span>
                 </div>
               </td>
@@ -1633,7 +1631,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td
@@ -1697,7 +1695,7 @@ exports[`WalletsList > should render 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 2
+                          Mainsail Wallet …
                         </span>
                       </span>
                     </div>
@@ -1724,14 +1722,14 @@ exports[`WalletsList > should render 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 2
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                        0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                       </span>
                       <button
                         class="ring-focus relative focus:outline-none"
@@ -1785,16 +1783,6 @@ exports[`WalletsList > should render 1`] = `
                   >
                     <div
                       class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                      data-testid="WalletIcon__SecondSignature"
-                    >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                       data-testid="WalletIcon__TestNetwork"
                     >
                       <div>
@@ -1830,10 +1818,17 @@ exports[`WalletsList > should render 1`] = `
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold justify-end"
                 >
                   <span
-                    class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
-                    data-testid="Amount"
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                   >
-                    57.68 DARK
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 100px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -1857,8 +1852,9 @@ exports[`WalletsList > should render 1`] = `
                 >
                   <div>
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                       data-testid="WalletListItem__send-button"
+                      disabled=""
                       type="button"
                     >
                       <div
@@ -3133,14 +3129,14 @@ exports[`WalletsList > should render responsive 1`] = `
                     class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
-                    ARK Wallet 1
+                    Mainsail Wallet …
                   </span>
                 </span>
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
                   class="ring-focus relative focus:outline-none"
@@ -3260,7 +3256,7 @@ exports[`WalletsList > should render responsive 1`] = `
                 class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                 data-testid="Amount"
               >
-                33.75089801 DARK
+                95.27653252 ARK
               </span>
               <span
                 class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -3307,7 +3303,7 @@ exports[`WalletsList > should render responsive 1`] = `
         <div
           class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
           data-testid="WalletListItemMobile"
-          tabindex="0"
+          tabindex="-1"
         >
           <div
             class="flex items-center space-x-4 p-2 pl-4"
@@ -3326,14 +3322,14 @@ exports[`WalletsList > should render responsive 1`] = `
                     class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
-                    ARK Wallet 2
+                    Mainsail Wallet …
                   </span>
                 </span>
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                 </span>
                 <button
                   class="ring-focus relative focus:outline-none"
@@ -3382,16 +3378,6 @@ exports[`WalletsList > should render responsive 1`] = `
               <div
                 class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
               >
-                <div
-                  class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="WalletIcon__SecondSignature"
-                >
-                  <div>
-                    <div
-                      style="height: 16px; width: 16px;"
-                    />
-                  </div>
-                </div>
                 <div
                   class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="WalletIcon__TestNetwork"
@@ -3460,10 +3446,17 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
             >
               <span
-                class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
-                data-testid="Amount"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
-                57.68 DARK
+                <span
+                  class="react-loading-skeleton"
+                  style="width: 100px; height: 16px;"
+                >
+                  ‌
+                </span>
+                <br />
               </span>
               <span
                 class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -3475,8 +3468,9 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex"
             >
               <button
-                class="bg-theme-primary-600 text-white flex flex-grow items-center justify-center px-3 py-3 font-semibold"
+                class="cursor-not-allowed bg-theme-primary-500 text-theme-primary-400 flex flex-grow items-center justify-center px-3 py-3 font-semibold"
                 data-testid="WalletListItemMobile--button"
+                disabled=""
                 type="button"
               >
                 <div>

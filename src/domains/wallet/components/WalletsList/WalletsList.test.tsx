@@ -10,7 +10,7 @@ import { WalletsList } from "./WalletsList";
 import * as envHooks from "@/app/hooks/env";
 import {
 	env,
-	getDefaultProfileId,
+	getDefaultProfileId, getMainsailProfileId,
 	render,
 	renderResponsive,
 	screen,
@@ -19,7 +19,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import { waitFor } from "@testing-library/react";
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 
 const starredButton = () => within(screen.getByTestId("table__th--0")).getByRole("button");
@@ -28,13 +28,16 @@ const otherButton = () => screen.getByTestId("table__th--1");
 
 const svgStarFilledIcon = "svg#star-filled";
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("WalletsList", () => {
 	let profile: Contracts.IProfile;
 	let wallets: Contracts.IReadWriteWallet[];
 	let network: Networks.Network;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallets = profile.wallets().valuesWithCoin();
 
@@ -95,23 +98,23 @@ describe("WalletsList", () => {
 		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 
 		// Check initial wallet order
-		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
-		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
+		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].address());
+		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].address());
 
 		await userEvent.click(starredButton());
 
 		// Add more debug after clicking
 		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 
-		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].displayName());
-		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].displayName());
+		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].address());
+		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].address());
 
 		await userEvent.click(starredButton());
 
 		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 
-		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
-		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
+		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].address());
+		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].address());
 
 		expect(asFragment()).toMatchSnapshot();
 
