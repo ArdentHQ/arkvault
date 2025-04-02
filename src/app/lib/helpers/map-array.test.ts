@@ -1,12 +1,9 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { mapArray } from "./map-array";
 
-describe("mapArray", async ({ assert, it, nock, loader }) => {
+describe("mapArray", () => {
 	it("should work like lodash", () => {
-		assert.equal(
-			mapArray([4, 8], (n) => n * n),
-			[16, 64],
-		);
+		expect(mapArray([4, 8], (n) => n * n)).toEqual([16, 64]);
 	});
 });

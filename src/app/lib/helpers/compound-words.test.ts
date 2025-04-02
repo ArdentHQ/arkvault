@@ -1,15 +1,12 @@
-import { describe } from "@ardenthq/sdk-test";
-
 import { compoundWords } from "./compound-words";
 
-describe("compoundWords", async ({ assert, it, nock, loader }) => {
+describe("compoundWords", () => {
 	it("should return undefined if the given string is empty", () => {
-		assert.undefined(compoundWords("", (word) => word));
+		expect(compoundWords("", (word) => word)).toBeUndefined();
 	});
 
 	it("should return a list of words", () => {
-		assert.is(
-			compoundWords("fred, barney, & pebbles", (result, word) => `${result} ${word}`.trim()),
+		expect(compoundWords("fred, barney, & pebbles", (result, word) => `${result} ${word}`.trim())).toBe(
 			"fred barney pebbles",
 		);
 	});

@@ -1,13 +1,13 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { isString } from "./is-string";
 
-describe("isString", async ({ assert, it, nock, loader }) => {
+describe("isString", () => {
 	it("should pass", () => {
-		assert.true(isString("string"));
+		expect(isString("string")).toBe(true);
 	});
 
 	it("should fail", () => {
-		assert.false(isString(1));
+		expect(isString(1)).toBe(false);
 	});
 });

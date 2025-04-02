@@ -1,9 +1,9 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { sample } from "./sample";
 
-describe("sample", async ({ assert, it, nock, loader }) => {
+describe("sample", () => {
 	it("should return a random item", () => {
-		assert.number(sample([1, 2, 3, 4, 5]));
+		expect(typeof sample([1, 2, 3, 4, 5])).toBe("number");
 	});
 });

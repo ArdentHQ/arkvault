@@ -1,17 +1,17 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { kebabCase } from "./kebab-case";
 
-describe("kebabCase", async ({ assert, it, nock, loader }) => {
+describe("kebabCase", () => {
 	it("should turn any string into kebab case", () => {
-		assert.is(kebabCase("string"), "string");
-		assert.is(kebabCase("camelCase"), "camel-case");
-		assert.is(kebabCase("param-case"), "param-case");
-		assert.is(kebabCase("PascalCase"), "pascal-case");
-		assert.is(kebabCase("UPPER_CASE"), "upper-case");
-		assert.is(kebabCase("snake_case"), "snake-case");
-		assert.is(kebabCase("sentence case"), "sentence-case");
-		assert.is(kebabCase("Title Case"), "title-case");
-		assert.is(kebabCase("dot.case"), "dot-case");
+		expect(kebabCase("string")).toBe("string");
+		expect(kebabCase("camelCase")).toBe("camel-case");
+		expect(kebabCase("param-case")).toBe("param-case");
+		expect(kebabCase("PascalCase")).toBe("pascal-case");
+		expect(kebabCase("UPPER_CASE")).toBe("upper-case");
+		expect(kebabCase("snake_case")).toBe("snake-case");
+		expect(kebabCase("sentence case")).toBe("sentence-case");
+		expect(kebabCase("Title Case")).toBe("title-case");
+		expect(kebabCase("dot.case")).toBe("dot-case");
 	});
 });

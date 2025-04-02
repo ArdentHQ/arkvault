@@ -1,13 +1,13 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { isArray } from "./is-array";
 
-describe("isArray", async ({ assert, it, nock, loader }) => {
+describe("isArray", () => {
 	it("should pass", () => {
-		assert.true(isArray([1]));
+		expect(isArray([1])).toBe(true);
 	});
 
 	it("should fail", () => {
-		assert.false(isArray(1));
+		expect(isArray(1)).toBe(false);
 	});
 });

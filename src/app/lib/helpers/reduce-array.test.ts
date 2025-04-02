@@ -1,12 +1,9 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { reduceArray } from "./reduce-array";
 
-describe("reduceArray", async ({ assert, it, nock, loader }) => {
+describe("reduceArray", () => {
 	it("should work with a function", () => {
-		assert.is(
-			reduceArray([1, 2], (sum, n) => sum + n, 0),
-			3,
-		);
+		expect(reduceArray([1, 2], (sum, n) => sum + n, 0)).toBe(3);
 	});
 });

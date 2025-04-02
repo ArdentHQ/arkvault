@@ -1,50 +1,45 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { truncate } from "./truncate";
 
-describe("truncate", async ({ assert, it, nock, loader }) => {
+describe("truncate", () => {
 	it("should truncate strings if they are above the specified length", () => {
-		assert.is(truncate("Hello World"), "Hello World");
+		expect(truncate("Hello World")).toBe("Hello World");
 
-		assert.is(
+		expect(
 			truncate("Hello World", {
 				length: 5,
 			}),
-			"He...",
-		);
+		).toBe("He...");
 
-		assert.is(
+		expect(
 			truncate("Hello World", {
 				length: 8,
 				omission: " [...]",
 			}),
-			"He [...]",
-		);
+		).toBe("He [...]");
 
-		assert.is(
+		expect(
 			truncate("#".repeat(10), {
 				length: 5,
 				omissionPosition: "left",
 			}),
-			`...${"#".repeat(2)}`,
-		);
+		).toBe(`...${"#".repeat(2)}`);
 
-		assert.is(
+		expect(
 			truncate("#".repeat(10), {
 				length: 5,
 				omissionPosition: "right",
 			}),
-			`${"#".repeat(2)}...`,
-		);
+		).toBe(`${"#".repeat(2)}...`);
 
-		assert.is(
+		expect(
 			truncate("#".repeat(15), {
 				length: 5,
 				omissionPosition: "middle",
 			}),
-			`${"#".repeat(1)}...${"#".repeat(1)}`,
-		);
+		).toBe(`${"#".repeat(1)}...${"#".repeat(1)}`);
 
-		assert.is(truncate("#".repeat(30), {}), `${"#".repeat(27)}...`);
+		expect(truncate("#".repeat(30), {})).toBe(`${"#".repeat(27)}...`);
 	});
 });

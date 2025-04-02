@@ -1,38 +1,36 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { QRCode } from "./qrcode";
 
-describe("QRCode", async ({ assert, each, it, nock, loader }) => {
+describe("QRCode", () => {
 	it("should create an instance from a string", () => {
-		assert.instance(QRCode.fromString("https://google.com"), QRCode);
+		expect(QRCode.fromString("https://google.com")).toBeInstanceOf(QRCode);
 	});
 
 	it("should create an instance from an object", () => {
-		assert.instance(QRCode.fromObject({ url: "https://google.com" }), QRCode);
+		expect(QRCode.fromObject({ url: "https://google.com" })).toBeInstanceOf(QRCode);
 	});
 
 	it("should turn the QR Code into a data URL", async () => {
 		const actual = await QRCode.fromString("https://google.com").toDataURL();
 
-		assert.startsWith(actual, "data:image/png;base64,");
-		assert.snapshot("qr-code-data-url", await QRCode.fromString("https://google.com").toDataURL());
+		expect(actual).toMatch(/^data:image\/png;base64,/);
+		expect(actual).toMatchSnapshot("qr-code-data-url");
 	});
 
 	it("should turn the QR Code into a data URL (with options)", async () => {
 		const actual = await QRCode.fromString("https://google.com").toDataURL({ width: 250, margin: 0 });
 
-		assert.startsWith(actual, "data:image/png;base64,");
+		expect(actual).toMatch(/^data:image\/png;base64,/);
 	});
 
 	it("should turn into a utf-8 string if no argument is given", async () => {
-		assert.snapshot("qr-code-utf8", await QRCode.fromString("https://google.com").toString());
+		const result = await QRCode.fromString("https://google.com").toString();
+		expect(result).toMatchSnapshot("qr-code-utf8");
 	});
 
-	each(
-		"should turn into a %s string",
-		async ({ dataset }) => {
-			assert.snapshot(`qr-code-${dataset}`, await QRCode.fromString("https://google.com").toString(dataset));
-		},
-		["utf8", "svg", "terminal"],
-	);
+	it.each(["utf8", "svg", "terminal"])("should turn into a %s string", async (dataset) => {
+		const result = await QRCode.fromString("https://google.com").toString(dataset);
+		expect(result).toMatchSnapshot(`qr-code-${dataset}`);
+	});
 });

@@ -1,17 +1,15 @@
-import { describe } from "@ardenthq/sdk-test";
-
 import { camelCase } from "./camel-case";
 
-describe("camelCase", async ({ assert, it, nock, loader }) => {
+describe("camelCase", () => {
 	it("should turn any string into camel case", () => {
-		assert.is(camelCase("string"), "string");
-		assert.is(camelCase("camelCase"), "camelCase");
-		assert.is(camelCase("param-case"), "paramCase");
-		assert.is(camelCase("PascalCase"), "pascalCase");
-		assert.is(camelCase("UPPER_CASE"), "upperCase");
-		assert.is(camelCase("snake_case"), "snakeCase");
-		assert.is(camelCase("sentence case"), "sentenceCase");
-		assert.is(camelCase("Title Case"), "titleCase");
-		assert.is(camelCase("dot.case"), "dotCase");
+		expect(camelCase("string")).toBe("string");
+		expect(camelCase("camelCase")).toBe("camelCase");
+		expect(camelCase("param-case")).toBe("paramCase");
+		expect(camelCase("PascalCase")).toBe("pascalCase");
+		expect(camelCase("UPPER_CASE")).toBe("upperCase");
+		expect(camelCase("snake_case")).toBe("snakeCase");
+		expect(camelCase("sentence case")).toBe("sentenceCase");
+		expect(camelCase("Title Case")).toBe("titleCase");
+		expect(camelCase("dot.case")).toBe("dotCase");
 	});
 });

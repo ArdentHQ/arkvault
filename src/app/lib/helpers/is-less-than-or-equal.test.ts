@@ -1,14 +1,14 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { isLessThanOrEqual } from "./is-less-than-or-equal";
 
-describe("isLessThanOrEqual", async ({ assert, it, nock, loader }) => {
+describe("isLessThanOrEqual", () => {
 	it("should pass", () => {
-		assert.true(isLessThanOrEqual(1, 2));
-		assert.true(isLessThanOrEqual(1, 1));
+		expect(isLessThanOrEqual(1, 2)).toBe(true);
+		expect(isLessThanOrEqual(1, 1)).toBe(true);
 	});
 
 	it("should fail", () => {
-		assert.false(isLessThanOrEqual(10, 5));
+		expect(isLessThanOrEqual(10, 5)).toBe(false);
 	});
 });

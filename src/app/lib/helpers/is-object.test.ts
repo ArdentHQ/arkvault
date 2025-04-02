@@ -1,13 +1,13 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { isObject } from "./is-object";
 
-describe("isObject", async ({ assert, it, nock, loader }) => {
+describe("isObject", () => {
 	it("should pass", () => {
-		assert.true(isObject({ key: "value" }));
+		expect(isObject({ key: "value" })).toBe(true);
 	});
 
 	it("should fail", () => {
-		assert.false(isObject(1));
+		expect(isObject(1)).toBe(false);
 	});
 });

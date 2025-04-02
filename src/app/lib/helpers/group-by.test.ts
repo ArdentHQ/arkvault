@@ -1,10 +1,10 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { groupBy } from "./group-by";
 
-describe("groupBy", async ({ assert, it, nock, loader }) => {
+describe("groupBy", () => {
 	it("should work with a function", () => {
-		assert.equal(
+		expect(
 			groupBy(
 				[
 					{ first: "John", last: "Doe" },
@@ -13,17 +13,19 @@ describe("groupBy", async ({ assert, it, nock, loader }) => {
 				],
 				(o) => o.last,
 			),
-			{
-				Doe: [
-					{ first: "John", last: "Doe" },
-					{ first: "Jane", last: "Doe" },
-				],
-				Dorian: [{ first: "John", last: "Dorian" }],
-			},
-		);
+		).toEqual({
+			Doe: [
+				{ first: "John", last: "Doe" },
+				{ first: "Jane", last: "Doe" },
+			],
+			Dorian: [{ first: "John", last: "Dorian" }],
+		});
 	});
 
-	it("should with a native function", () => {
-		assert.equal(groupBy([6.1, 4.2, 6.3], Math.floor), { 4: [4.2], 6: [6.1, 6.3] });
+	it("should work with a native function", () => {
+		expect(groupBy([6.1, 4.2, 6.3], Math.floor)).toEqual({
+			4: [4.2],
+			6: [6.1, 6.3],
+		});
 	});
 });

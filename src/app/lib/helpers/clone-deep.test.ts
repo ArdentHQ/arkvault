@@ -1,12 +1,10 @@
-import { describe } from "@ardenthq/sdk-test";
-
 import { cloneDeep } from "./clone-deep";
 
-describe("cloneDeep", async ({ assert, it, nock, loader }) => {
+describe("cloneDeep", () => {
 	it("should work with objects", () => {
 		const object = { a: 1 };
 
-		assert.equal(cloneDeep(object), object);
+		expect(cloneDeep(object)).toEqual(object);
 	});
 
 	it("should work with class instances", () => {
@@ -22,14 +20,14 @@ describe("cloneDeep", async ({ assert, it, nock, loader }) => {
 
 		const original = new Wallet("address");
 
-		assert.equal(original, original);
-		assert.true(original.isDelegate());
-		assert.is(original.address, "address");
+		expect(original).toEqual(original);
+		expect(original.isDelegate()).toBe(true);
+		expect(original.address).toBe("address");
 
 		const clone = cloneDeep(original);
 
-		assert.equal(clone, original);
-		assert.true(clone.isDelegate());
-		assert.is(clone.address, "address");
+		expect(clone).toEqual(original);
+		expect(clone.isDelegate()).toBe(true);
+		expect(clone.address).toBe("address");
 	});
 });

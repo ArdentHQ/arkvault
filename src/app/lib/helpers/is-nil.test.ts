@@ -1,15 +1,15 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { isNil } from "./is-nil";
 
-describe("isNil", async ({ assert, it, nock, loader }) => {
+describe("isNil", () => {
 	it("should pass", () => {
-		assert.true(isNil(undefined));
-		assert.true(isNil(null));
+		expect(isNil(undefined)).toBe(true);
+		expect(isNil(null)).toBe(true);
 	});
 
 	it("should fail", () => {
-		assert.false(isNil("undefined"));
-		assert.false(isNil("null"));
+		expect(isNil("undefined")).toBe(false);
+		expect(isNil("null")).toBe(false);
 	});
 });

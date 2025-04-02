@@ -1,9 +1,9 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { words } from "./words";
 
-describe("words", async ({ assert, it, nock, loader }) => {
+describe("words", () => {
 	it("should work with words", () => {
-		assert.equal(words("fred, barney, & pebbles"), ["fred", "barney", "pebbles"]);
+		expect(words("fred, barney, & pebbles")).toEqual(["fred", "barney", "pebbles"]);
 	});
 });

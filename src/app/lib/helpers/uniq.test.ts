@@ -1,9 +1,9 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, expect, it } from "vitest";
 
 import { uniq } from "./uniq";
 
-describe("uniq", async ({ assert, it, nock, loader }) => {
+describe("uniq", () => {
 	it("should remove duplicate items", () => {
-		assert.equal(uniq([2, 1, 2]), [2, 1]);
+		expect(uniq([2, 1, 2])).toEqual([2, 1]);
 	});
 });
