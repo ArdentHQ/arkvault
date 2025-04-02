@@ -8,10 +8,16 @@ import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallet
 import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, syncDelegates, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	syncDelegates,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
+} from "@/utils/testing-library";
 
-const mainNetwork = "ark.mainnet";
-const testNetwork = "ark.devnet";
+const mainNetwork = "mainsail.mainnet";
+const testNetwork = "mainsail.devnet";
 
 describe("useDisplayWallets", () => {
 	let mainnetWallet: Contracts.IReadWriteWallet;
@@ -28,13 +34,13 @@ describe("useDisplayWallets", () => {
 
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 
 		mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
+			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+			coin: "Mainsail",
 			network: mainNetwork,
 		});
 
@@ -50,7 +56,7 @@ describe("useDisplayWallets", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 	});
 
 	afterEach(() => {
