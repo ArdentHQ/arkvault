@@ -56,7 +56,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 				});
 
 				// @ts-ignore
-				const ledgerWallets = await instance.ledger().scan({ onProgress, pageSize: 15, startPath });
+				const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
 
 				const legacyWallets = isLoadingMore
 					? {}
