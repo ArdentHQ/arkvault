@@ -814,7 +814,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mb-1 pb-0"
+        class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -2215,7 +2215,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         </div>
       </section>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mb-1 pb-0"
+        class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -3553,7 +3553,7 @@ exports[`Contacts > should render with contacts 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mb-1 pb-0"
+        class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -5054,7 +5054,7 @@ exports[`Contacts > should render without contacts 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mb-1 pb-0"
+        class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"

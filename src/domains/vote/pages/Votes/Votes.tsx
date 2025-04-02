@@ -1,28 +1,32 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Page, Section } from "@/app/components/Layout";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useHistory, useParams } from "react-router-dom";
-
-import { Alert } from "@/app/components/Alert";
-import { Page, Section } from "@/app/components/Layout";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
+
+import { AddressTable } from "@/domains/vote/components/AddressTable";
+import { Alert } from "@/app/components/Alert";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
+import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
 import { VotesHeader } from "@/domains/vote/components/VotesHeader";
+import { assertWallet } from "@/utils/assertions";
+import { getErroredNetworks } from "@/utils/profile-utils";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useParams } from "react-router-dom";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
-import { assertWallet } from "@/utils/assertions";
-import { getErroredNetworks } from "@/utils/profile-utils";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
-import { AddressTable } from "@/domains/vote/components/AddressTable";
 
 export const Votes: FC = () => {
-	const history = useHistory();
 	const { t } = useTranslation();
+
+	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
+	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
@@ -101,6 +105,17 @@ export const Votes: FC = () => {
 	}, [votes, setVoteFilter]);
 
 	useEffect(() => {
+		const syncVotes = async () => {
+			if (selectedWallet) {
+				await env.delegates().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
+				await selectedWallet.synchroniser().votes();
+			}
+		};
+
+		void syncVotes();
+	}, [selectedWallet, env, activeProfile]);
+
+	useEffect(() => {
 		const { hasErroredNetworks } = getErroredNetworks(activeProfile);
 		if (!hasErroredNetworks) {
 			return;
@@ -133,10 +148,10 @@ export const Votes: FC = () => {
 			<VotesHeader isSelectDelegateStep={!!selectedAddress} />
 
 			{!hasWallets && (
-				<Section>
+				<Section className="pt-0">
 					<VotesEmpty
-						onCreateWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/create`)}
-						onImportWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/import`)}
+						onCreateWallet={() => setShowCreateAddressPanel(true)}
+						onImportWallet={() => setShowImportAddressPanel(true)}
 					/>
 				</Section>
 			)}
@@ -195,6 +210,9 @@ export const Votes: FC = () => {
 					}
 				/>
 			)}
+
+			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 		</Page>
 	);
 };

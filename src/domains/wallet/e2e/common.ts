@@ -28,7 +28,7 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, alias);
 
 	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
-	await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+	await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };
@@ -59,7 +59,7 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, alias);
 
 	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
-	await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+	await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };

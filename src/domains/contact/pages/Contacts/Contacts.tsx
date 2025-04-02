@@ -202,7 +202,7 @@ export const Contacts: FC = () => {
 			<Page pageTitle={t("CONTACTS.CONTACTS_PAGE.TITLE")}>
 				<ContactsHeader />
 
-				<Section className="-mb-1 pb-0">
+				<Section className="py-0">
 					<div className="flex items-center rounded border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden">
 						<Button
 							className="h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"

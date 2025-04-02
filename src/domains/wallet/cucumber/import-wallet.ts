@@ -60,7 +60,7 @@ cucumber("@importWallet-mnemonic", {
 	"When she enters a valid mnemonic to import": enterMnemonic,
 	"And completes the import wallet steps for mnemonic": completeImportWallet,
 	"Then the wallet is imported to her profile": async (t: TestController) => {
-		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+		await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 	},
 });
 
@@ -73,7 +73,7 @@ cucumber("@importWallet-mnemonic-withEncryption", {
 	...encryptionPasswordsStep,
 	"And completes the import wallet steps for mnemonic": completeImportWallet,
 	"Then the wallet is imported to her profile": async (t: TestController) => {
-		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+		await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 	},
 });
 
@@ -102,7 +102,7 @@ cucumber(
 		...encryptionPasswordsStep,
 		"And completes the import wallet steps for secret": completeImportWallet,
 		"Then the wallet is imported to her profile": async (t: TestController) => {
-			await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+			await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 		},
 	},
 	[
@@ -129,7 +129,7 @@ cucumber("@importWallet-address", {
 	},
 	"And completes the import wallet steps for address": completeImportWallet,
 	"Then the wallet is imported to her profile": async (t: TestController) => {
-		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+		await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 	},
 });
 
@@ -180,7 +180,7 @@ cucumber("@importWallet-duplicateAddress", {
 
 		await completeImportWallet(t);
 
-		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
+		await t.click(Selector("button").withExactText(translations.COMMON.CLOSE));
 	},
 	"When she attempts to import the same wallet again": async (t: TestController) => {
 		await t.click(Selector("a").withExactText("Portfolio"));

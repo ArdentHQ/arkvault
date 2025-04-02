@@ -619,77 +619,144 @@ exports[`Exchange > should render empty 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  data-testid="icon-ExchangesLight"
                 >
-                  Exchange
-                </h1>
-              </div>
-              <div
-                class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
-                data-testid="header__subtitle"
-              >
-                Choose one of the exchange providers below to swap directly from within the wallet.
+                  <div
+                    style="height: 55px; width: 54px;"
+                  >
+                    <svg
+                      fill="none"
+                      height="51"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 54 51"
+                      width="54"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29.2931 44.1134C30.874 44.5273 32.2733 44.4921 33.4555 44.0716L28.1053 46.9905C26.7477 47.8096 25.0138 48.0209 22.9789 47.4882C21.9952 47.2306 20.9963 46.8137 20.0003 46.2597C18.0183 45.1571 16.0479 43.5118 14.2325 41.5C12.883 40.0044 11.6192 38.3063 10.5 36.4782L16.5 32.5803C17.5461 34.3557 18.7301 36.018 20.0003 37.5032C21.7188 39.5125 23.5948 41.1978 25.5 42.401C26.7641 43.1994 28.0409 43.7856 29.2931 44.1134Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M15.6336 10.4163L15.5983 10.4355C13.2894 11.7059 12.0085 14.6684 12.1003 18.6997L5.78455 22C5.70245 17.5949 7.26764 14.479 10.026 13.4737L15.5983 10.4355C15.61 10.4291 15.6218 10.4227 15.6336 10.4163Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M6.55483 27.2986L12.869 23.9238C12.7002 23.2664 12.5599 22.6246 12.4473 22L6.11968 25.2997C6.23449 25.9479 6.3792 26.6148 6.55483 27.2986Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M29.2931 44.1134C30.874 44.5273 32.2733 44.4921 33.4555 44.0716L28.1053 46.9905C26.7477 47.8096 25.0138 48.0209 22.9789 47.4882C21.9952 47.2306 20.9963 46.8137 20.0003 46.2597C18.0183 45.1571 16.0479 43.5118 14.2325 41.5C12.883 40.0044 11.6192 38.3063 10.5 36.4782L16.5 32.5803C17.5461 34.3557 18.7301 36.018 20.0003 37.5032C21.7188 39.5125 23.5948 41.1978 25.5 42.401C26.7641 43.1994 28.0409 43.7856 29.2931 44.1134Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M15.6336 10.4163L15.5983 10.4355C13.2894 11.7059 12.0085 14.6684 12.1003 18.6997L5.78455 22C5.70245 17.5949 7.26764 14.479 10.026 13.4737L15.5983 10.4355C15.61 10.4291 15.6218 10.4227 15.6336 10.4163Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M6.55483 27.2986L12.869 23.9238C12.7002 23.2664 12.5599 22.6246 12.4473 22L6.11968 25.2997C6.23449 25.9479 6.3792 26.6148 6.55483 27.2986Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M29.2931 44.1134C30.874 44.5273 32.2733 44.4921 33.4555 44.0716L28.1053 46.9905C26.7477 47.8096 25.0138 48.0209 22.9789 47.4882C21.9952 47.2306 20.9963 46.8137 20.0003 46.2597C18.0183 45.1571 16.0479 43.5118 14.2325 41.5C12.883 40.0044 11.6192 38.3063 10.5 36.4782L16.5 32.5803C17.5461 34.3557 18.7301 36.018 20.0003 37.5032C21.7188 39.5125 23.5948 41.1978 25.5 42.401C26.7641 43.1994 28.0409 43.7856 29.2931 44.1134Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M15.6336 10.4163L15.5983 10.4355C13.2894 11.7059 12.0085 14.6684 12.1003 18.6997L5.78455 22C5.70245 17.5949 7.26764 14.479 10.026 13.4737L15.5983 10.4355C15.61 10.4291 15.6218 10.4227 15.6336 10.4163Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M6.55483 27.2986L12.869 23.9238C12.7002 23.2664 12.5599 22.6246 12.4473 22L6.11968 25.2997C6.23449 25.9479 6.3792 26.6148 6.55483 27.2986Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M33.4563 44.0692C32.2741 44.4896 30.8748 44.5249 29.2939 44.111C22.6394 42.3688 15.2863 33.3298 12.8698 23.9214C11.1533 17.2385 12.3895 12.1671 15.6344 10.4139M33.4563 44.0692L28.1061 46.988C26.7485 47.8072 25.0146 48.0185 22.9797 47.4857C21.996 47.2282 20.9971 46.8112 20.0011 46.2572C14.2592 43.0632 8.61494 35.3139 6.55562 27.2962C4.71966 20.1481 6.26169 14.8435 10.0268 13.4713L15.6344 10.4139M33.4563 44.0692C36.2454 43.0773 37.8268 39.9413 37.7369 35.4999M15.6344 10.4139C16.7129 9.83112 18.0134 9.61499 19.5011 9.82812"
+                        stroke="#235B95"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M25.1219 16.9861C24.7116 15.3929 24.4671 13.89 24.3757 12.5M24.6306 30.4642C22.4043 27.2121 20.6146 23.4478 19.6299 19.6237C17.8532 12.7244 19.1834 7.51927 22.6104 5.83338L28.0387 3.22768C29.363 2.55412 31.0063 2.41252 32.9089 2.91065C39.6668 4.67997 47.1374 13.8502 49.5949 23.3932C52.0523 32.9363 48.5661 39.2381 41.8079 37.4687C38.1052 36.4993 34.1887 33.3083 31 29.0517C29.9165 27.6053 28.9171 26.036 28.0387 24.3889C27.3678 23.1312 26.7676 21.8281 26.2543 20.5M24.831 7.48011C24.6479 8.10333 24.4315 9.5 24.4315 9.5"
+                        stroke="#8AC0F7"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M26.548 27.2108L25.3294 31.7588L20.7814 30.5402"
+                        stroke="#8AC0F7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-2"
+                >
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    Exchange
+                  </h1>
+                   
+                  <div
+                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    data-testid="header__subtitle"
+                  >
+                    Choose one of the exchange providers below to swap directly from within the wallet.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <nav
-        class="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4"
-      >
-        <div
-          class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
-        >
-          <div
-            class="w-full"
-          >
-            <div
-              class="tab-list items-center rounded-xl p-1 bg-transparent flex h-[3.25rem] w-full flex-row gap-6"
-            >
-              <button
-                aria-selected="true"
-                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0 mr-6"
-                data-ring-focus-margin="-mx-3"
-                data-testid="tabs__tab-button-EXCHANGES"
-                role="tab"
-                tabindex="0"
-                type="button"
-              >
-                <span>
-                  Exchanges
-                </span>
-              </button>
-              <button
-                aria-selected="false"
-                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0"
-                data-ring-focus-margin="-mx-3"
-                data-testid="tabs__tab-button-TRANSACTIONS"
-                role="tab"
-                tabindex="-1"
-                type="button"
-              >
-                <span>
-                  Transactions
-                </span>
-                <span
-                  class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
-                  data-testid="tabs__tab-button-TRANSACTIONS-count"
-                >
-                  0
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 pt-2"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
           class="mx-auto lg:container md:px-10 px-6 lg:px-10"
         >
+          <div
+            class="-mx-6 -mt-2 mb-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:mx-0 md:mb-3 md:mt-0 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:md:bg-transparent"
+          >
+            <div
+              class="w-full"
+            >
+              <div
+                class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950"
+              >
+                <button
+                  aria-selected="true"
+                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  data-ring-focus-margin="-mx-3"
+                  data-testid="tabs__tab-button-EXCHANGES"
+                  role="tab"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span>
+                    Exchanges
+                  </span>
+                </button>
+                <button
+                  aria-selected="false"
+                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  data-ring-focus-margin="-mx-3"
+                  data-testid="tabs__tab-button-TRANSACTIONS"
+                  role="tab"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span>
+                    Transactions
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
             data-testid="ExchangeGrid__empty-message"
@@ -1324,79 +1391,146 @@ exports[`Exchange > should render with exchanges 1`] = `
               <div
                 class="flex items-center gap-3"
               >
-                <h1
-                  class="mb-0 text-2xl leading-[29px]"
-                  data-testid="header__title"
+                <div
+                  data-testid="icon-ExchangesLight"
                 >
-                  Exchange
-                </h1>
-              </div>
-              <div
-                class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
-                data-testid="header__subtitle"
-              >
-                Choose one of the exchange providers below to swap directly from within the wallet.
+                  <div
+                    style="height: 55px; width: 54px;"
+                  >
+                    <svg
+                      fill="none"
+                      height="51"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 54 51"
+                      width="54"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29.2931 44.1134C30.874 44.5273 32.2733 44.4921 33.4555 44.0716L28.1053 46.9905C26.7477 47.8096 25.0138 48.0209 22.9789 47.4882C21.9952 47.2306 20.9963 46.8137 20.0003 46.2597C18.0183 45.1571 16.0479 43.5118 14.2325 41.5C12.883 40.0044 11.6192 38.3063 10.5 36.4782L16.5 32.5803C17.5461 34.3557 18.7301 36.018 20.0003 37.5032C21.7188 39.5125 23.5948 41.1978 25.5 42.401C26.7641 43.1994 28.0409 43.7856 29.2931 44.1134Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M15.6336 10.4163L15.5983 10.4355C13.2894 11.7059 12.0085 14.6684 12.1003 18.6997L5.78455 22C5.70245 17.5949 7.26764 14.479 10.026 13.4737L15.5983 10.4355C15.61 10.4291 15.6218 10.4227 15.6336 10.4163Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M6.55483 27.2986L12.869 23.9238C12.7002 23.2664 12.5599 22.6246 12.4473 22L6.11968 25.2997C6.23449 25.9479 6.3792 26.6148 6.55483 27.2986Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M29.2931 44.1134C30.874 44.5273 32.2733 44.4921 33.4555 44.0716L28.1053 46.9905C26.7477 47.8096 25.0138 48.0209 22.9789 47.4882C21.9952 47.2306 20.9963 46.8137 20.0003 46.2597C18.0183 45.1571 16.0479 43.5118 14.2325 41.5C12.883 40.0044 11.6192 38.3063 10.5 36.4782L16.5 32.5803C17.5461 34.3557 18.7301 36.018 20.0003 37.5032C21.7188 39.5125 23.5948 41.1978 25.5 42.401C26.7641 43.1994 28.0409 43.7856 29.2931 44.1134Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M15.6336 10.4163L15.5983 10.4355C13.2894 11.7059 12.0085 14.6684 12.1003 18.6997L5.78455 22C5.70245 17.5949 7.26764 14.479 10.026 13.4737L15.5983 10.4355C15.61 10.4291 15.6218 10.4227 15.6336 10.4163Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M6.55483 27.2986L12.869 23.9238C12.7002 23.2664 12.5599 22.6246 12.4473 22L6.11968 25.2997C6.23449 25.9479 6.3792 26.6148 6.55483 27.2986Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M29.2931 44.1134C30.874 44.5273 32.2733 44.4921 33.4555 44.0716L28.1053 46.9905C26.7477 47.8096 25.0138 48.0209 22.9789 47.4882C21.9952 47.2306 20.9963 46.8137 20.0003 46.2597C18.0183 45.1571 16.0479 43.5118 14.2325 41.5C12.883 40.0044 11.6192 38.3063 10.5 36.4782L16.5 32.5803C17.5461 34.3557 18.7301 36.018 20.0003 37.5032C21.7188 39.5125 23.5948 41.1978 25.5 42.401C26.7641 43.1994 28.0409 43.7856 29.2931 44.1134Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M15.6336 10.4163L15.5983 10.4355C13.2894 11.7059 12.0085 14.6684 12.1003 18.6997L5.78455 22C5.70245 17.5949 7.26764 14.479 10.026 13.4737L15.5983 10.4355C15.61 10.4291 15.6218 10.4227 15.6336 10.4163Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M6.55483 27.2986L12.869 23.9238C12.7002 23.2664 12.5599 22.6246 12.4473 22L6.11968 25.2997C6.23449 25.9479 6.3792 26.6148 6.55483 27.2986Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M33.4563 44.0692C32.2741 44.4896 30.8748 44.5249 29.2939 44.111C22.6394 42.3688 15.2863 33.3298 12.8698 23.9214C11.1533 17.2385 12.3895 12.1671 15.6344 10.4139M33.4563 44.0692L28.1061 46.988C26.7485 47.8072 25.0146 48.0185 22.9797 47.4857C21.996 47.2282 20.9971 46.8112 20.0011 46.2572C14.2592 43.0632 8.61494 35.3139 6.55562 27.2962C4.71966 20.1481 6.26169 14.8435 10.0268 13.4713L15.6344 10.4139M33.4563 44.0692C36.2454 43.0773 37.8268 39.9413 37.7369 35.4999M15.6344 10.4139C16.7129 9.83112 18.0134 9.61499 19.5011 9.82812"
+                        stroke="#235B95"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M25.1219 16.9861C24.7116 15.3929 24.4671 13.89 24.3757 12.5M24.6306 30.4642C22.4043 27.2121 20.6146 23.4478 19.6299 19.6237C17.8532 12.7244 19.1834 7.51927 22.6104 5.83338L28.0387 3.22768C29.363 2.55412 31.0063 2.41252 32.9089 2.91065C39.6668 4.67997 47.1374 13.8502 49.5949 23.3932C52.0523 32.9363 48.5661 39.2381 41.8079 37.4687C38.1052 36.4993 34.1887 33.3083 31 29.0517C29.9165 27.6053 28.9171 26.036 28.0387 24.3889C27.3678 23.1312 26.7676 21.8281 26.2543 20.5M24.831 7.48011C24.6479 8.10333 24.4315 9.5 24.4315 9.5"
+                        stroke="#8AC0F7"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M26.548 27.2108L25.3294 31.7588L20.7814 30.5402"
+                        stroke="#8AC0F7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-2"
+                >
+                  <h1
+                    class="mb-0 text-2xl leading-[29px]"
+                    data-testid="header__title"
+                  >
+                    Exchange
+                  </h1>
+                   
+                  <div
+                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    data-testid="header__subtitle"
+                  >
+                    Choose one of the exchange providers below to swap directly from within the wallet.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <nav
-        class="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4"
-      >
-        <div
-          class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
-        >
-          <div
-            class="w-full"
-          >
-            <div
-              class="tab-list items-center rounded-xl p-1 bg-transparent flex h-[3.25rem] w-full flex-row gap-6"
-            >
-              <button
-                aria-selected="true"
-                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0 mr-6"
-                data-ring-focus-margin="-mx-3"
-                data-testid="tabs__tab-button-EXCHANGES"
-                role="tab"
-                tabindex="0"
-                type="button"
-              >
-                <span>
-                  Exchanges
-                </span>
-              </button>
-              <button
-                aria-selected="false"
-                class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg m-0"
-                data-ring-focus-margin="-mx-3"
-                data-testid="tabs__tab-button-TRANSACTIONS"
-                role="tab"
-                tabindex="-1"
-                type="button"
-              >
-                <span>
-                  Transactions
-                </span>
-                <span
-                  class="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
-                  data-testid="tabs__tab-button-TRANSACTIONS-count"
-                >
-                  0
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 pt-2"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
           class="mx-auto lg:container md:px-10 px-6 lg:px-10"
         >
           <div
-            class="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-3 md:gap-5 xl:grid-cols-4"
+            class="-mx-6 -mt-2 mb-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:mx-0 md:mb-3 md:mt-0 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:md:bg-transparent"
+          >
+            <div
+              class="w-full"
+            >
+              <div
+                class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950"
+              >
+                <button
+                  aria-selected="true"
+                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  data-ring-focus-margin="-mx-3"
+                  data-testid="tabs__tab-button-EXCHANGES"
+                  role="tab"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span>
+                    Exchanges
+                  </span>
+                </button>
+                <button
+                  aria-selected="false"
+                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  data-ring-focus-margin="-mx-3"
+                  data-testid="tabs__tab-button-TRANSACTIONS"
+                  role="tab"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span>
+                    Transactions
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid w-full gap-3 md:grid-cols-2"
             data-testid="ExchangeGrid"
           >
             <div

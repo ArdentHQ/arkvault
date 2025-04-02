@@ -1,5 +1,7 @@
 import { AddressViewSelection, AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
 import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { Tab, TabList, Tabs } from "@/app/components/Tabs";
+import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { Button } from "@/app/components/Button";
@@ -9,12 +11,10 @@ import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSi
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { t } from "i18next";
-import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useLocalStorage } from "usehooks-ts";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
@@ -383,19 +383,15 @@ export const AddressesSidePanel = ({
 
 					{isDeleteMode && (
 						<div className="flex items-center space-x-2 px-2 leading-[18px] sm:leading-5">
-							<Icon
-								name="Back"
-								dimensions={[16, 16]}
-								className="text-theme-primary-600 dark:text-theme-primary-400"
-							/>
 							<Button
 								data-testid="BackManage"
 								size="icon"
-								variant="transparent"
+								variant="primary-transparent"
 								onClick={resetDeleteState}
-								className="p-0 text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5"
+								className="p-2 py-[3px] text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5"
 							>
-								{t("COMMON.BACK")}
+								<Icon name="Back" dimensions={[16, 16]} />
+								<span>{t("COMMON.BACK")}</span>
 							</Button>
 						</div>
 					)}
