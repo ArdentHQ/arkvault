@@ -8,7 +8,8 @@ import {
 	render,
 	screen,
 	env,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
