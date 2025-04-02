@@ -1,13 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("isFullySynced", () => {
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeEach(() => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = profile.wallets().first();
 	});

@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { getDefaultAlias } from "./get-default-alias";
-import { env, MNEMONICS } from "@/utils/testing-library";
+import { env, MAINSAIL_MNEMONICS, } from "@/utils/testing-library";
 
 describe("getDefaultAlias", () => {
 	let profile: Contracts.IProfile;
@@ -18,9 +18,9 @@ describe("getDefaultAlias", () => {
 
 	it("should return a default alias when wallet already exists", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -34,9 +34,9 @@ describe("getDefaultAlias", () => {
 
 	it("should not return alias that already exist", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -52,9 +52,9 @@ describe("getDefaultAlias", () => {
 
 	it("should increase the alias number regardless of the network", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -66,9 +66,9 @@ describe("getDefaultAlias", () => {
 		expect(result).toBe("Address #1");
 
 		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.mainnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.mainnet",
 		});
 
 		profile.wallets().push(wallet2);
