@@ -5,26 +5,23 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
 import * as envHooks from "@/app/hooks/env";
-import { env, getDefaultProfileId, render, syncDelegates } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getMainsailProfileId, render, syncDelegates } from "@/utils/testing-library";
 
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("WalletActionsModals", () => {
 	let profile: Contracts.IProfile;
-	let mainnetWallet: Contracts.IReadWriteWallet;
+	let wallet: Contracts.IReadWriteWallet;
 	const setActiveModal = vi.fn();
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
-		mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-
-		profile.wallets().push(mainnetWallet);
+		wallet = profile.wallets().first();
 
 		await syncDelegates(profile);
 
@@ -39,7 +36,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallets={[mainnetWallet]}
+					wallets={[wallet]}
 					activeModal={"receive-funds"}
 					setActiveModal={setActiveModal}
 				/>
@@ -59,7 +56,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallets={[mainnetWallet]}
+					wallets={[wallet]}
 					activeModal={"wallet-name"}
 					setActiveModal={setActiveModal}
 				/>
@@ -79,7 +76,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallets={[mainnetWallet]}
+					wallets={[wallet]}
 					activeModal={"delete-wallet"}
 					setActiveModal={setActiveModal}
 				/>
@@ -99,7 +96,7 @@ describe("WalletActionsModals", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletActionsModals
-					wallets={[mainnetWallet]}
+					wallets={[wallet]}
 					activeModal={"transaction-history"}
 					setActiveModal={setActiveModal}
 				/>
