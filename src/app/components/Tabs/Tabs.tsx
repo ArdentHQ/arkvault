@@ -13,7 +13,7 @@ interface TabsProperties {
 }
 
 export function Tabs({ children, activeId, className, onChange, id, disabled }: TabsProperties) {
-	const context = useTab({ initialId: activeId, disabled });
+	const context = useTab({ disabled, initialId: activeId });
 	const { currentId, setCurrentId } = context;
 
 	React.useEffect(() => {
@@ -28,9 +28,12 @@ export function Tabs({ children, activeId, className, onChange, id, disabled }: 
 
 	return (
 		<TabContext.Provider value={context}>
-			<div id={id} className={cn(className, {
-				"cursor-not-allowed pointer-events-none": disabled
-			})}>
+			<div
+				id={id}
+				className={cn(className, {
+					"pointer-events-none cursor-not-allowed": disabled,
+				})}
+			>
 				{children}
 			</div>
 		</TabContext.Provider>
