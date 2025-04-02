@@ -12,7 +12,14 @@ import {
 } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
+import {
+	env,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
+	render,
+	screen,
+	syncDelegates,
+} from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
 import { createHashHistory } from "history";
@@ -33,7 +40,7 @@ const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 	useEffect(() => {
-		setConfiguration(getDefaultProfileId(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(getMainsailProfileId(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return (
@@ -59,33 +66,35 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 		}),
 	}));
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("AddressRowMobile", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		profile = env.profiles().findById(getMainsailProfileId());
+		wallet = profile.wallets().findById("ee02b13f-8dbf-4191-a9dc-08d2ab72ec28");
 		wallet.data().set(Contracts.WalletFlag.Starred, true);
 		wallet.data().set(Contracts.WalletData.DerivationPath, "0");
 
 		blankWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic: blankWalletPassphrase,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(blankWallet);
 
 		unvotedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(unvotedWallet);
 
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[1],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[1],
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(wallet2);
 
