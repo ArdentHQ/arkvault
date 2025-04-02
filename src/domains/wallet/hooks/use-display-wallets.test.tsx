@@ -10,7 +10,6 @@ import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
-	getDefaultProfileId,
 	syncDelegates,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
