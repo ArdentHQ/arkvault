@@ -1,10 +1,6 @@
-import { sortByDesc } from "@ardenthq/sdk-helpers";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import React from "react";
-
-import { TransactionTable } from "./TransactionTable";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import {
 	env,
 	getDefaultProfileId,
@@ -15,7 +11,11 @@ import {
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
+import React from "react";
+import { TransactionTable } from "./TransactionTable";
+import { sortByDesc } from "@/app/lib/helpers";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json";
+import userEvent from "@testing-library/user-event";
 
 describe("TransactionTable", () => {
 	let profile: Contracts.IProfile;

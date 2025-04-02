@@ -1,4 +1,4 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";

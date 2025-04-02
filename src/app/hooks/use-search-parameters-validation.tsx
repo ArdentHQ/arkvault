@@ -1,13 +1,14 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import React from "react";
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Trans, useTranslation } from "react-i18next";
-import { generatePath } from "react-router-dom";
-import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
+
 import { ProfilePaths } from "@/router/paths";
+import React from "react";
+import { generatePath } from "react-router-dom";
+import { truncate } from "@/app/lib/helpers";
 
 interface RequiredParameters {
 	network?: string;

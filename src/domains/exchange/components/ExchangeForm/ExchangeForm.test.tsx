@@ -1,19 +1,10 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchangeTransfer";
+import * as useQueryParameters from "@/app/hooks/use-query-parameters";
+
+import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { FormProvider, useForm } from "react-hook-form";
 import { HashHistory, createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { Route } from "react-router-dom";
-
-import { expect, vi } from "vitest";
-import { cloneDeep } from "@ardenthq/sdk-helpers";
-import { FormProvider, useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
-import { ConfirmationStep } from "./ConfirmationStep";
-import { ExchangeForm } from "./ExchangeForm";
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
-import { StatusStep } from "./StatusStep";
 import {
 	env,
 	getMainsailProfileId,
@@ -24,14 +15,23 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { expect, vi } from "vitest";
 import { httpClient, toasts } from "@/app/services";
 import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
-import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
+import { ConfirmationStep } from "./ConfirmationStep";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { ExchangeForm } from "./ExchangeForm";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { Route } from "react-router-dom";
+import { StatusStep } from "./StatusStep";
+import { cloneDeep } from "@/app/lib/helpers";
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
-import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchangeTransfer";
+import { renderHook } from "@testing-library/react";
+import { useTranslation } from "react-i18next";
+import userEvent from "@testing-library/user-event";
 
 let profile: Contracts.IProfile;
 

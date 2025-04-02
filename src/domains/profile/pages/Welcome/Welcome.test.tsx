@@ -1,30 +1,31 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-import { truncate } from "@ardenthq/sdk-helpers";
-import { renderHook } from "@testing-library/react";
-import { afterAll, vi } from "vitest";
-import { Welcome } from "./Welcome";
-import { ProfilePaths } from "@/router/paths";
-import { EnvironmentProvider } from "@/app/contexts";
-import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { httpClient, toasts } from "@/app/services";
-import { translations as profileTranslations } from "@/domains/profile/i18n";
-import { StubStorage } from "@/tests/mocks";
 import {
+	act,
 	env,
 	getDefaultPassword,
+	getMainsailProfileId,
 	getPasswordProtectedProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
-	act,
-	getMainsailProfileId,
 } from "@/utils/testing-library";
+import { afterAll, vi } from "vitest";
+import { httpClient, toasts } from "@/app/services";
+
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { EnvironmentProvider } from "@/app/contexts";
+import { ProfilePaths } from "@/router/paths";
+import React from "react";
+import { Route } from "react-router-dom";
+import { StubStorage } from "@/tests/mocks";
+import { Welcome } from "./Welcome";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { createHashHistory } from "history";
+import { translations as profileTranslations } from "@/domains/profile/i18n";
+import { renderHook } from "@testing-library/react";
+import { truncate } from "@/app/lib/helpers";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
+import userEvent from "@testing-library/user-event";
 
 const fixtureProfileId = getMainsailProfileId();
 const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052";

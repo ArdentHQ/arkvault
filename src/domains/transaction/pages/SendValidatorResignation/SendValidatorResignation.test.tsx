@@ -1,28 +1,28 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-
-import { SendValidatorResignation } from "./SendValidatorResignation";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import {
+	MAINSAIL_MNEMONICS,
+	act,
 	env,
+	getMainsailProfileId,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
 	within,
-	act,
-	getMainsailProfileId,
-	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
+import React from "react";
+import { Route } from "react-router-dom";
+import { SendValidatorResignation } from "./SendValidatorResignation";
+import { createHashHistory } from "history";
 import { expect } from "vitest";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import userEvent from "@testing-library/user-event";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
