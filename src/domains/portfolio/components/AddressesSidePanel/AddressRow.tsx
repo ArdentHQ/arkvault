@@ -65,7 +65,7 @@ export const AddressRow = ({
 				"bg-theme-secondary-200 dark:bg-theme-dark-950": isSelected && !usesDeleteMode,
 				"border-theme-danger-400 dark:border-theme-danger-400": isError,
 				"border-theme-primary-200 dark:border-theme-dark-700": !isError,
-				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": (!isSelected && !isError) || usesDeleteMode,
+				"hover:bg-theme-navy-100 hover:dark:bg-theme-dark-700": (!isSelected && !isError) || (usesDeleteMode && !deleteContent),
 			})}
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
