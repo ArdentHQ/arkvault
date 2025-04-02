@@ -9,14 +9,15 @@ interface TabsProperties {
 	activeId?: TabId;
 	className?: string;
 	onChange?: (id: TabId) => void;
+	disabled?: boolean;
 }
 
-export function Tabs({ children, activeId, className, onChange, id }: TabsProperties) {
-	const context = useTab({ initialId: activeId });
+export function Tabs({ children, activeId, className, onChange, id, disabled }: TabsProperties) {
+	const context = useTab({ disabled, initialId: activeId });
 	const { currentId, setCurrentId } = context;
 
 	React.useEffect(() => {
-		if (currentId) {
+		if (currentId && !disabled) {
 			onChange?.(currentId);
 		}
 	}, [currentId]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -27,7 +28,12 @@ export function Tabs({ children, activeId, className, onChange, id }: TabsProper
 
 	return (
 		<TabContext.Provider value={context}>
-			<div id={id} className={className}>
+			<div
+				id={id}
+				className={cn(className, {
+					"pointer-events-none cursor-not-allowed": disabled,
+				})}
+			>
 				{children}
 			</div>
 		</TabContext.Provider>
@@ -119,6 +125,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 				}
 			}}
 			onClick={() => context?.setCurrentId(properties.tabId)}
+			disabled={context?.disabled}
 		>
 			<span>{properties.children}</span>
 

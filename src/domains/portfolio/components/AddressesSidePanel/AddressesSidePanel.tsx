@@ -274,10 +274,11 @@ export const AddressesSidePanel = ({
 				className={cn("mb-3", { hidden: wallets.length === 1 })}
 				activeId={activeMode}
 				onChange={activeModeChangeHandler}
+				disabled={isDeleteMode}
 			>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
-						<Tab tabId={option.value} key={option.value} className="">
+						<Tab tabId={option.value} key={option.value}>
 							<span>{option.label}</span>
 						</Tab>
 					))}

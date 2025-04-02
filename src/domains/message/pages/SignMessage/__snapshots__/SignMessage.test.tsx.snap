@@ -704,7 +704,9 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
             class="space-y-5 mx-auto max-w-172"
             data-testid="SignMessage"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >
@@ -1787,7 +1789,9 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
             class="space-y-5 mx-auto max-w-172"
             data-testid="SignMessage"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >

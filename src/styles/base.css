@@ -234,12 +234,13 @@ main {
 	@apply cursor-default;
 }
 
+
 .tab-list > .tab-button[aria-selected="true"] {
-	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50;
+	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 disabled:dark:text-theme-secondary-700;
 }
 
 .tab-list > .tab-button[aria-selected="false"] {
-	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50;
+	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 disabled:dark:text-theme-secondary-700;
 }
 
 .add-recipient-wrapper .select-buttons div:first-of-type button {
