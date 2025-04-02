@@ -424,7 +424,7 @@ export const SendTransfer = () => {
 						}}
 					/>
 				</Form>
-				
+
 				<QRModal
 					isOpen={showQRModal}
 					onCancel={() => setShowQRModal(false)}
