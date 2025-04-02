@@ -5673,6 +5673,218 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         </div>
                       </td>
                     </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -5722,14 +5934,14 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -11530,6 +11742,218 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                         </div>
                       </td>
                     </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -11579,14 +12003,14 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -18511,6 +18935,260 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </td>
                     </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-68"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton align-middle"
+                              style="width: 220px; height: 34px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-68"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton align-middle"
+                              style="width: 220px; height: 34px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -18560,14 +19238,14 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -18590,7 +19268,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -25512,6 +26190,260 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                         </div>
                       </td>
                     </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-68"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton align-middle"
+                              style="width: 220px; height: 34px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
+                      data-testid="ValidatorRowSkeleton"
+                    >
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 h-12 space-x-3"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden sm:table-cell"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 22px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-68"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton align-middle"
+                              style="width: 220px; height: 34px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="w-40"
+                      >
+                        <div
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                        >
+                          <span
+                            aria-busy="true"
+                            aria-live="polite"
+                            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton"
+                              style="width: 80px; height: 20px;"
+                            >
+                              ‌
+                            </span>
+                            <br />
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -25561,14 +26493,14 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -25591,7 +26523,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -26398,14 +27330,14 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -27214,14 +28146,14 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -28030,14 +28962,14 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -28846,14 +29778,14 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -29439,7 +30371,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -29607,7 +30539,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -29775,7 +30707,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -29854,14 +30786,14 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -29884,7 +30816,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -30691,14 +31623,14 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -31512,14 +32444,14 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -32328,14 +33260,14 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -32803,14 +33735,14 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -33623,14 +34555,14 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -34215,7 +35147,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               <span
                                 class="text-theme-text"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -34383,7 +35315,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -34551,7 +35483,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -34630,14 +35562,14 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -34660,7 +35592,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -35467,14 +36399,14 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -36289,14 +37221,14 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -37105,14 +38037,14 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -37697,7 +38629,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               <span
                                 class="text-theme-text"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -37865,7 +38797,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -38033,7 +38965,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               <span
                                 class="text-theme-secondary-400 dark:text-theme-secondary-700"
                               >
-                                ARK
+                                Mainsail
                               </span>
                             </span>
                           </div>
@@ -38112,14 +39044,14 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -38142,7 +39074,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33.75089801 DARK
+                  95.27653252 ARK
                 </span>
               </div>
             </div>
@@ -38949,14 +39881,14 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -39765,14 +40697,14 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>
@@ -40582,14 +41514,14 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </span>
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                       </span>
                     </div>
                   </div>

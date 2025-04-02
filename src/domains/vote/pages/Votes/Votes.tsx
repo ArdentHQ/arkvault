@@ -105,6 +105,17 @@ export const Votes: FC = () => {
 	}, [votes, setVoteFilter]);
 
 	useEffect(() => {
+		const syncVotes = async () => {
+			if (selectedWallet) {
+				await env.delegates().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
+				await selectedWallet.synchroniser().votes();
+			}
+		};
+
+		void syncVotes();
+	}, [selectedWallet, env, activeProfile]);
+
+	useEffect(() => {
 		const { hasErroredNetworks } = getErroredNetworks(activeProfile);
 		if (!hasErroredNetworks) {
 			return;
