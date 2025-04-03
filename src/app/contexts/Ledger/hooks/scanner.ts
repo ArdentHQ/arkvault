@@ -34,7 +34,6 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
-		console.log("scan");
 		setIdle();
 		dispatch({ type: "waiting" });
 
