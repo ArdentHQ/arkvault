@@ -1,4 +1,3 @@
-import { wal } from "./../../domains/wallet/data";
 import { Http } from "@ardenthq/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
