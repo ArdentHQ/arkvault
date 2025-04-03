@@ -3,12 +3,18 @@ import React from "react";
 
 import { Route } from "react-router-dom";
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
-import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import {
+	env,
+	getMainsailProfileId,
+	render,
+	renderResponsiveWithRoute,
+	screen,
+} from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("UserMenu", () => {
 	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should render with svg image", () => {
