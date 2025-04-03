@@ -9,7 +9,7 @@ import {
 	RecipientItemMobileProperties,
 	ReceiverItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
-import { useBreakpoint, } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 
