@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, } from "@/utils/testing-library";
+import { env, getDefaultMainsailWalletId, getMainsailProfileId, render } from "@/utils/testing-library";
 import {
 	Balance,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
@@ -14,8 +14,10 @@ vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", ()
 	}),
 }));
 
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("WalletListItem.blocks", () => {
 	let profile: Contracts.IProfile;
@@ -26,9 +28,9 @@ describe("WalletListItem.blocks", () => {
 	});
 
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
