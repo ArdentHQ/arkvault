@@ -32,6 +32,8 @@ export const ListenLedger = ({
 			"Failed to execute 'requestDevice' on 'HID'",
 			// User clicked cancel or permission dialog was closed.
 			"Access denied to use Ledger device",
+
+			"Cannot read properties of null",
 		];
 
 		if (
