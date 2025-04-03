@@ -250,7 +250,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
               class="no-ligatures min-w-0 overflow-hidden text-sm dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
             </span>
           </div>
         </div>
@@ -1003,7 +1003,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
               class="no-ligatures min-w-0 overflow-hidden text-sm dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
             </span>
           </div>
         </div>
@@ -1157,7 +1157,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
               class="no-ligatures min-w-0 overflow-hidden text-sm dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
             </span>
           </div>
         </div>
@@ -1173,7 +1173,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         <p
           class="mb-2 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 md:mb-0 md:text-base md:leading-5"
         >
-          #52
+          #54
         </p>
         <p
           class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:hidden"
@@ -1224,7 +1224,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
               class="no-ligatures min-w-0 overflow-hidden text-sm dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
               data-testid="Address__address"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
             </span>
           </div>
         </div>

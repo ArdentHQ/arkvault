@@ -2,18 +2,20 @@ import React from "react";
 
 import { DeleteWallet } from "./DeleteWallet";
 import { translations } from "@/domains/wallet/i18n";
-import { render, screen, getDefaultProfileId, env } from "@/utils/testing-library";
+import { render, screen, env, getMainsailProfileId } from "@/utils/testing-library";
 
 const onDelete = vi.fn();
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("DeleteWallet", () => {
 	it("should render a modal", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			coin: "Mainsail",
+			network: "mainsail.mainnet",
 		});
 
 		const { asFragment } = render(<DeleteWallet isOpen={true} onDelete={onDelete} wallet={wallet} />);

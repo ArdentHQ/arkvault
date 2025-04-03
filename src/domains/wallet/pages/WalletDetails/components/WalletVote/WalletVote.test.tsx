@@ -5,7 +5,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { WalletVote } from "./WalletVote";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultMainsailWalletId,
+	getMainsailProfileId,
+	render,
+	screen,
+	waitFor,
+} from "@/utils/testing-library";
 import { DelegateName, DelegateStatus } from "./WalletVote.blocks";
 import { renderResponsive } from "@/utils/testing-library";
 
@@ -22,10 +29,12 @@ let defaultDelegate: {
 
 let votes: Contracts.VoteRegistryItem[];
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("WalletVote", () => {
 	beforeEach(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		profile = env.profiles().findById(getMainsailProfileId());
+		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 
 		defaultDelegate = {
 			address: wallet.address(),
@@ -268,7 +277,7 @@ describe("WalletVote", () => {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultDelegate,
-					rank: 52,
+					rank: 54,
 				}),
 			};
 

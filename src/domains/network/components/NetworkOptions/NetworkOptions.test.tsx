@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { NetworkOption, NetworkOptions } from "./NetworkOptions";
-import { env, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen } from "@/utils/testing-library";
 
 let network: Networks.Network;
 let customNetwork: Networks.Network;
@@ -13,14 +13,14 @@ const ariaLabelAttribute = "aria-label";
 
 describe("NetworkOption", () => {
 	beforeAll(async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 
 		const wallet1 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.mainnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.mainnet",
 		});
 
 		network = wallet1.network();
@@ -38,7 +38,7 @@ describe("NetworkOption", () => {
 	it("should render network", () => {
 		render(<NetworkOption network={network} />, {});
 
-		expect(screen.getByTestId("NetworkOption-ARK-ark.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -60,7 +60,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onSelect={onSelect} />, {});
 
-		expect(screen.getByTestId("NetworkOption-ARK-ark.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -76,7 +76,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onSelect={onSelect} disabled />, {});
 
-		expect(screen.getByTestId("NetworkOption-ARK-ark.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -92,7 +92,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onDeselect={onDeselect} isSelected />, {});
 
-		expect(screen.getByTestId("NetworkOption-ARK-ark.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -106,7 +106,7 @@ describe("NetworkOption", () => {
 	it("should not render different class for testnet network", () => {
 		const { asFragment } = render(<NetworkOption network={networkTestnet} />, {});
 
-		expect(screen.getByTestId("NetworkOption-ARK-ark.devnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			networkTestnet.displayName(),
 		);

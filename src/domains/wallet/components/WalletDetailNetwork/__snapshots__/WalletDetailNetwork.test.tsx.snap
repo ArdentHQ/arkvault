@@ -20,7 +20,7 @@ exports[`WalletDetailNetwork > should render 1`] = `
         <div
           class="hidden items-center font-semibold sm:flex"
         >
-          ARK Devnet
+          Mainsail Devnet
         </div>
       </div>
       <div
@@ -32,16 +32,16 @@ exports[`WalletDetailNetwork > should render 1`] = `
           <div
             class="w-full truncate"
           >
-            ARK Devnet
+            Mainsail Devnet
           </div>
         </div>
         <div
           class="hidden sm:block"
         >
           <div
-            aria-label="ARK Devnet"
+            aria-label="Mainsail Devnet"
             class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100"
-            data-testid="NetworkIcon-ARK-ark.devnet"
+            data-testid="NetworkIcon-Mainsail-mainsail.devnet"
           >
             <div
               data-testid="NetworkIcon__icon"
@@ -71,9 +71,9 @@ exports[`WalletDetailNetwork > should render 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            aria-label="ARK Devnet"
+            aria-label="Mainsail Devnet"
             class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-            data-testid="NetworkIcon-ARK-ark.devnet"
+            data-testid="NetworkIcon-Mainsail-mainsail.devnet"
           >
             <div
               data-testid="NetworkIcon__icon"
