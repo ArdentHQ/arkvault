@@ -53,7 +53,7 @@ export const LedgerConnectionStep = ({
 	const activeProfile = useActiveProfile();
 
 	const { register, setValue, unregister } = useFormContext();
-	const { connect, abortConnectionRetry, error, isConnected, isAwaitingConnection } = useLedgerContext();
+	const { connect, abortConnectionRetry, error, isConnected } = useLedgerContext();
 	useEffect(() => {
 		register("connected", { required: true });
 
