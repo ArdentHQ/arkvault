@@ -5,11 +5,11 @@ import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 
 import { Page } from "./Page";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { useNavigationContext } from "@/app/contexts";
 let profile: Contracts.IProfile;
 
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 
 const TestComponent = ({
@@ -42,7 +42,7 @@ const TestComponent = ({
 
 describe("Page", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		history.push(dashboardURL);
 	});
 
