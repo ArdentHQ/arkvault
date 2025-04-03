@@ -4,7 +4,7 @@ import React from "react";
 
 import { useWalletConfig } from "./use-wallet-config";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, waitFor, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import { env, waitFor, mockProfileWithPublicAndTestNetworks, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -15,13 +15,18 @@ const wrapper = ({ children }) => (
 	</EnvironmentProvider>
 );
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("useWalletConfig", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
+
+		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, undefined);
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 	});
 
 	afterEach(() => {
@@ -35,7 +40,7 @@ describe("useWalletConfig", () => {
 		const { result } = renderHook(
 			() =>
 				useWalletConfig({
-					defaults: { selectedNetworkIds: ["ark.devnet"], walletsDisplayType: "ledger" },
+					defaults: { selectedNetworkIds: ["mainsail.devnet"], walletsDisplayType: "ledger" },
 					profile,
 				}),
 			{
@@ -91,11 +96,11 @@ describe("useWalletConfig", () => {
 		);
 
 		act(() => {
-			result.current.setValue("selectedNetworkIds", ["ark.devnet"]);
+			result.current.setValue("selectedNetworkIds", ["mainsail.devnet"]);
 		});
 
 		await waitFor(() => {
-			expect(result.current.selectedNetworkIds).toStrictEqual(["ark.devnet"]);
+			expect(result.current.selectedNetworkIds).toStrictEqual(["mainsail.devnet"]);
 		});
 	});
 });
