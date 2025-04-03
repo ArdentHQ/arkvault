@@ -76,7 +76,7 @@ export const LedgerTabs = ({
 				);
 			}
 		},
-		[activeProfile, activeNetwork, selectedAddresses],
+		[activeProfile, activeNetwork, selectedAddresses, listenDevice],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);

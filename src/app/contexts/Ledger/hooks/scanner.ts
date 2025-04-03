@@ -9,7 +9,7 @@ import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
 export const useLedgerScanner = (coin: string, network: string) => {
-	const { setBusy, setIdle, resetConnectionState } = useLedgerContext();
+	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
 
 	const [state, dispatch] = useReducer(scannerReducer, {
 		selected: [],
@@ -111,8 +111,10 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		}
 	};
 
-	const abortScanner = useCallback(() => {
-		resetConnectionState();
+	const abortScanner = useCallback(async () => {
+		await disconnect();
+		await resetConnectionState();
+
 		abortRetryReference.current = true;
 		setIdle();
 	}, [setIdle]);
