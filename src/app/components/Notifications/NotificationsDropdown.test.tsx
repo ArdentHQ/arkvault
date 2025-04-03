@@ -5,12 +5,12 @@ import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
 import { NotificationsDropdown } from "./NotificationsDropdown";
-import { env, getDefaultProfileId, renderResponsive, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, renderResponsive, render, screen, waitFor } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
+import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -30,17 +30,17 @@ vi.mock("react-visibility-sensor", () => ({
 
 describe("Notifications", () => {
 	beforeEach(async () => {
-		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+		const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 		history.push(dashboardURL);
 
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: NotificationTransactionsFixtures.data,
 				meta: TransactionsFixture.meta,
 			}),
 		);
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -75,7 +75,7 @@ describe("Notifications", () => {
 			</Route>,
 			{
 				history,
-				route: `/profiles/${getDefaultProfileId()}/dashboard`,
+				route: `/profiles/${getMainsailProfileId()}/dashboard`,
 			},
 		);
 
