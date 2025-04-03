@@ -109,6 +109,10 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
 
 			const abortSignal = abortReference.current.signal;
+
+			// Ensures the cache is flushed so it always fetches the latest wallet nonce
+			httpClient.forgetWalletCache(env, wallet);
+
 			const { uuid, transaction } = await transactionBuilder.build(
 				getTransferType({ recipients }),
 				transactionInput,
@@ -117,9 +121,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 					abortSignal,
 				},
 			);
-
-			// Ensures the cache is flushed so it always fetches the latest wallet nonce
-			httpClient.forgetWalletCache(env, wallet);
 
 			const response = await wallet.transaction().broadcast(uuid);
 
