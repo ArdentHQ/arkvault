@@ -313,9 +313,9 @@ const testNetworksStub: any = {
 			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
-				"decimals": 18,
-				"symbol": "TѦ",
-				"ticker": "ARK"
+				decimals: 18,
+				symbol: "TѦ",
+				ticker: "ARK",
 			},
 			id: "mainsail.devnet",
 			meta: {
