@@ -4,14 +4,7 @@ import React from "react";
 
 import { useLedgerScanner } from "./scanner";
 import { useLedgerContext } from "@/app/contexts/Ledger";
-import {
-	env,
-	render,
-	screen,
-	waitFor,
-	mockNanoXTransport,
-	getMainsailProfileId,
-} from "@/utils/testing-library";
+import { env, render, screen, waitFor, mockNanoXTransport, getMainsailProfileId } from "@/utils/testing-library";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 const walletsList = (wallets, isSelected) => (
