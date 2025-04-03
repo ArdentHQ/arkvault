@@ -1,33 +1,17 @@
 import cn from "classnames";
-import React, { useCallback } from "react";
+import React, from "react";
 import { useTranslation } from "react-i18next";
-import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Button } from "@/app/components/Button";
-import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell } from "@/app/components/Table";
-import { Tooltip } from "@/app/components/Tooltip";
-import { WalletIcons, WalletIconsSkeleton } from "@/app/components/WalletIcons";
 import {
 	BalanceProperties,
-	ButtonsCellProperties,
-	CurrencyProperties,
-	WalletCellProperties,
-	StarredProperties,
-	InfoProperties,
 	RecipientItemMobileProperties,
 	ReceiverItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
-import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
-import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { useBreakpoint, } from "@/app/hooks";
 import { Skeleton } from "@/app/components/Skeleton";
-import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
-import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
-
-const excludedIcons = ["isStarred"];
 
 export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLargeScreen = true, className }) => {
 	const renderAmount = () => {
