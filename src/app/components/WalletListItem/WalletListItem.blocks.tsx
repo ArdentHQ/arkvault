@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
