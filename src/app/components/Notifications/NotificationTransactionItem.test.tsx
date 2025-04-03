@@ -43,7 +43,10 @@ describe("Notifications", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 		await profile.notifications().transactions().sync();
-		notificationTransaction = profile.notifications().transactions().transaction("4dc401ca6683b7c2bc380165204e3a291c66b0648dbc43a04e76b6d130e5cb5f");
+		notificationTransaction = profile
+			.notifications()
+			.transactions()
+			.transaction("4dc401ca6683b7c2bc380165204e3a291c66b0648dbc43a04e76b6d130e5cb5f");
 	});
 
 	it("should render notification item", async () => {
