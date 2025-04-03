@@ -15,7 +15,8 @@ import {
 	screen,
 	waitFor,
 	mockNanoXTransport,
-	mockLedgerTransportError, getMainsailProfileId,
+	mockLedgerTransportError,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const LedgerWaitingDevice = "Waiting Device";
