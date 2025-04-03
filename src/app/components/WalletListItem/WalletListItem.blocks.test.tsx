@@ -2,10 +2,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, } from "@/utils/testing-library";
-import {
-	Balance,
-} from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { Balance } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", () => ({
 	useWalletTransactions: () => ({
