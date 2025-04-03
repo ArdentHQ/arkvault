@@ -8,7 +8,6 @@ import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/test
 import { server, requestMock } from "@/tests/mocks/server";
 
 import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
-import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 
