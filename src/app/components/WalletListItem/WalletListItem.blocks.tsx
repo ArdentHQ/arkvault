@@ -312,8 +312,8 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 							<button
 								data-testid="WalletListItemMobile--button"
 								className={cn({
-									"bg-theme-primary-600 text-white": !isButtonDisabled,
 									"bg-theme-primary-500 text-theme-primary-400 cursor-not-allowed": isButtonDisabled,
+									"bg-theme-primary-600 text-white": !isButtonDisabled,
 									"flex grow items-center justify-center px-3 py-3 font-semibold": true,
 								})}
 								type="button"
@@ -367,8 +367,8 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 			</div>
 			<div
 				className={cn("flex w-11 items-center justify-center", {
-					"bg-theme-primary-600 dark:bg-theme-primary-600 rounded-r-lg": selected,
 					"bg-theme-primary-100 dark:bg-theme-background rounded-r-xl": !selected,
+					"bg-theme-primary-600 dark:bg-theme-primary-600 rounded-r-lg": selected,
 				})}
 			>
 				<div>
