@@ -1,3 +1,5 @@
+@config "../../tailwind.config.ts";
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -25,7 +27,7 @@
 }
 
 .widget-dark form,
-.widget-dark [data-embed="ticketSubmissionForm"] > div {
+.widget-dark [data-embed="ticketSubmissionForm"]>div {
 	@apply bg-theme-secondary-900;
 }
 
