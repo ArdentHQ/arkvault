@@ -57,7 +57,7 @@ const AlertBody = ({ variant, ...props }: AlertProperties) => (
 	<div
 		{...props}
 		className={twMerge(
-			"w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800",
+			"dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words",
 			cn({
 				"bg-theme-danger-50": variant === "danger",
 				"bg-theme-hint-50": variant === "hint",

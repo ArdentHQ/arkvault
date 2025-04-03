@@ -54,7 +54,7 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 						<div className="flex items-center">
 							<ValidatorStatus isActive={isActive} className="mr-3 sm:hidden" />
 
-							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden" />
+							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden" />
 
 							{renderButton()}
 						</div>

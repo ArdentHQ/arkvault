@@ -34,7 +34,7 @@ const TransactionFee: React.FC<TransactionFeeProperties> = ({
 			<Amount ticker={currency} value={value} />
 
 			{!!exchangeCurrency && !!convertedValue && (
-				<Amount ticker={exchangeCurrency} value={convertedValue} className="ml-2 text-theme-secondary-400" />
+				<Amount ticker={exchangeCurrency} value={convertedValue} className="text-theme-secondary-400 ml-2" />
 			)}
 		</TransactionDetail>
 	);

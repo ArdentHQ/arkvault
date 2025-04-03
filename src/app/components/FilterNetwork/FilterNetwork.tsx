@@ -49,14 +49,14 @@ export const FilterNetwork = ({
 
 	return (
 		<div className={className} data-testid="FilterNetwork">
-			{title && <div className="mb-3 text-sm font-semibold text-theme-secondary-700">{title}</div>}
+			{title && <div className="text-theme-secondary-700 mb-3 text-sm font-semibold">{title}</div>}
 
 			<ToggleAllOption isSelected={showAll} isHidden={hideViewAll} onClick={handleToggleAll} />
 
 			<NetworkOptions networks={networkList} onClick={handleClick} />
 
 			{showAll && networkList.length > 1 && (
-				<label className="mt-4 inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
+				<label className="text-theme-secondary-text mt-4 inline-flex cursor-pointer items-center space-x-3">
 					<Checkbox
 						data-testid="FilterNetwork__select-all-checkbox"
 						checked={networkList.every((option) => option.isSelected)}

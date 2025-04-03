@@ -30,16 +30,16 @@ export const WalletEncryptionBanner = ({
 		>
 			<div className="flex flex-row justify-between px-6 py-4">
 				<div className="flex max-w-96 flex-col gap-1">
-					<span className="text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50">
+					<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-5 font-semibold">
 						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.TITLE")}
 					</span>
-					<p className="text-sm leading-[21px] text-theme-secondary-700 dark:text-theme-dark-200">
+					<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[21px]">
 						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.DESCRIPTION")}
 					</p>
 				</div>
 
 				<Tooltip
-					className="-ml-3 mb-1"
+					className="mb-1 -ml-3"
 					content={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.NOT_AVAILABLE")}
 					disabled={importOption && !importOption?.canBeEncrypted}
 				>
@@ -56,19 +56,19 @@ export const WalletEncryptionBanner = ({
 
 			<div
 				className={cn(
-					"bg-theme-warning-50 transition-[max-height,opacity] duration-300 dark:bg-theme-dark-950",
+					"bg-theme-warning-50 dark:bg-theme-dark-950 transition-[max-height,opacity] duration-300",
 					{
 						"max-h-0 opacity-0": !toggleChecked,
 						"max-h-[300px] opacity-100": toggleChecked,
 					},
 				)}
 			>
-				<div className="flex flex-col gap-3 px-6 pb-5 pt-3">
-					<p className="text-sm font-normal leading-[21px] text-theme-secondary-900 dark:text-theme-dark-50">
+				<div className="flex flex-col gap-3 px-6 pt-3 pb-5">
+					<p className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm leading-[21px] font-normal">
 						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.WARNING")}
 					</p>
 
-					<hr className="border border-dashed border-theme-warning-300 dark:border-theme-dark-700" />
+					<hr className="border-theme-warning-300 dark:border-theme-dark-700 border border-dashed" />
 
 					<label className="inline-flex cursor-pointer items-center space-x-3">
 						<Checkbox
@@ -77,7 +77,7 @@ export const WalletEncryptionBanner = ({
 							onChange={checkboxOnChange}
 							color="warning"
 						/>
-						<span className="text-sm font-normal leading-[21px] text-theme-secondary-900 dark:text-theme-dark-50">
+						<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm leading-[21px] font-normal">
 							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.CHECKBOX")}
 						</span>
 					</label>

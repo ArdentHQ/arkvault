@@ -25,13 +25,13 @@ const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => vo
 				<button
 					type="button"
 					data-testid="WalletIcon__Starred__header"
-					className="flex shrink-0 cursor-pointer items-center justify-center rounded ring-theme-primary-400 ring-offset-theme-background focus:outline-hidden focus:ring-2 focus:ring-offset-8"
+					className="ring-theme-primary-400 ring-offset-theme-background flex shrink-0 cursor-pointer items-center justify-center rounded focus:ring-2 focus:ring-offset-8 focus:outline-hidden"
 					onClick={onClick}
 				>
 					<Icon
 						className={cn("transition-all duration-300 ease-in-out", {
 							"fill-theme-warning-400 stroke-theme-warning-400 text-theme-warning-400": active,
-							"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200": !active,
+							"stroke-theme-warning-400 hover:fill-theme-warning-200 fill-transparent": !active,
 						})}
 						name={"StarFilled"}
 						dimensions={[18, 18]}
@@ -183,7 +183,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								currentPage={currentPage}
 								initialState={initialState}
 								className={cn("with-x-padding", {
-									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] dark:after:bg-theme-secondary-800":
+									"after:bg-theme-primary-100 dark:after:bg-theme-secondary-800 after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:content-['']":
 										wallets.length <= initialPerPage,
 								})}
 							>
@@ -201,8 +201,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4">
-							<div className="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full flex-col gap-4 pt-4 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4">
+							<div className="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center justify-center gap-2 text-sm leading-5 font-semibold sm:justify-start">
 								<span>{t("COMMON.SHOW")}</span>
 								<Select
 									options={[10, 25, 50, 100].map((v) => ({

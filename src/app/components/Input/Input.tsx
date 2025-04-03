@@ -53,7 +53,7 @@ export const InputWrapperStyled = ({
 	<div
 		{...props}
 		className={twMerge(
-			"flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200",
+			"text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200",
 			cn({
 				border: !noBorder,
 				"border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500": invalid && !disabled,
@@ -86,7 +86,7 @@ const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.Compon
 			ref={ref}
 			autoComplete={autocomplete}
 			className={twMerge(
-				"bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-0! focus:ring-transparent! [&.shadow-none]:shadow-none",
+				"bg-transparent! p-0! focus:shadow-none focus:ring-0! focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
 				props.className,
 			)}
 		/>
@@ -167,7 +167,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						<InputStyled
 							data-testid="Input"
 							className={cn(
-								"no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!",
+								"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!",
 								innerClassName,
 								{
 									"text-theme-secondary-text": disabled,
@@ -196,9 +196,9 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						<div
 							data-testid="Input__addon-end"
 							className={cn(
-								"flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800",
+								"divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x",
 								{
-									"absolute bottom-full right-0 mb-2": isTextArea,
+									"absolute right-0 bottom-full mb-2": isTextArea,
 									"text-theme-danger-500": isInvalidValue,
 									"text-theme-primary-300 dark:text-theme-secondary-600": !isInvalidValue,
 								},
@@ -222,7 +222,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 									data-testid="Input__valid"
 									name="CircleCheckMark"
 									size="lg"
-									className="pointer-events-none text-theme-primary-600 focus:outline-hidden"
+									className="text-theme-primary-600 pointer-events-none focus:outline-hidden"
 								/>
 							)}
 

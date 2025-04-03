@@ -257,7 +257,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 				<div
 					data-testid="ValidatorStatus__active"
 					className={twMerge(
-						"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
+						"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 						className,
 					)}
 				>
@@ -272,7 +272,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 			<div
 				data-testid="ValidatorStatus__standby"
 				className={twMerge(
-					"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
+					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 					className,
 				)}
 			>
@@ -319,7 +319,7 @@ export const ValidatorRow = ({
 	return (
 		<TableRow
 			key={validator.address()}
-			className="relative last:border-b-4! last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
+			className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
 		>
 			<TableCell
 				variant="start"
@@ -366,7 +366,7 @@ export const ValidatorRow = ({
 					to={validator.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 w-24 md:w-auto"
 				>
 					<span>{t("COMMON.VIEW")}</span>
 				</Link>

@@ -19,7 +19,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 	<div
 		data-testid="ProfileRow"
 		className={cn(
-			"flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800",
+			"border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear",
 			className,
 		)}
 	>
@@ -42,7 +42,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 					<Icon
 						data-testid="Icon__Lock"
 						name="Lock"
-						className="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+						className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
 						size="lg"
 					/>
 				)}
@@ -56,12 +56,12 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 				onSelect={onSelect}
 				toggleContent={
 					<div
-						className="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+						className="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
 						tabIndex={1}
 					>
 						<Icon
 							name="EllipsisVerticalFilled"
-							className="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+							className="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
 							size="md"
 						/>
 					</div>
@@ -74,12 +74,12 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 export const ProfileRowSkeleton = () => (
 	<div
 		data-testid="ProfileRowSkeleton"
-		className="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800"
+		className="border-theme-secondary-200 dark:border-theme-secondary-800 flex items-center justify-between rounded-lg border p-1"
 	>
-		<div className="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800" />
+		<div className="bg-theme-secondary-100 dark:bg-theme-secondary-800 h-10 w-10" />
 		<Icon
 			name="EllipsisVerticalFilled"
-			className="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+			className="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 mr-1.5 pr-1.5 transition-colors duration-200"
 			size="md"
 		/>
 	</div>

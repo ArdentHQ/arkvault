@@ -97,13 +97,13 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 
 	const renderError = () => (
 		<>
-			<div className="absolute right-4 top-4 z-10 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400">
+			<div className="bg-theme-primary-100 hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 absolute top-4 right-4 z-10 rounded transition-all duration-100 ease-linear">
 				<Button variant="transparent" size="icon" onClick={() => setDropError(undefined)} className="h-8 w-8">
 					<Icon name="Cross" size="sm" />
 				</Button>
 			</div>
 
-			<p className="whitespace-pre-line text-center">{dropError}</p>
+			<p className="text-center whitespace-pre-line">{dropError}</p>
 		</>
 	);
 
@@ -118,7 +118,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 			)}
 
 			<div className="mt-4">
-				<span className="mr-px hidden text-lg font-semibold leading-[21px] sm:inline">
+				<span className="mr-px hidden text-lg leading-[21px] font-semibold sm:inline">
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.DRAG_AND_DROP")}{" "}
 				</span>
 				<button
@@ -126,14 +126,14 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 					onClick={handleOpenFile}
 					title={t("PROFILE.IMPORT.SELECT_FILE_STEP.UPLOAD_TITLE")}
 					data-testid="SelectFile__browse-files"
-					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-hidden"
+					className="link ring-focus relative cursor-pointer text-lg leading-[21px] font-semibold focus:outline-hidden"
 					data-ring-focus-margin="-m-1"
 				>
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.BROWSE_FILES")}
 				</button>
 			</div>
 
-			<div className="mt-2 text-sm font-semibold text-theme-secondary-500">
+			<div className="text-theme-secondary-500 mt-2 text-sm font-semibold">
 				{t("PROFILE.IMPORT.SELECT_FILE_STEP.SUPPORTED_FORMAT", { fileFormat })}
 			</div>
 		</>
@@ -142,7 +142,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 	return (
 		<div
 			data-testid="SelectFile"
-			className="relative mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 p-1.5 dark:border-theme-secondary-800"
+			className="border-theme-secondary-300 dark:border-theme-secondary-800 relative mt-4 h-52 rounded-xl border-2 border-dashed p-1.5"
 		>
 			<div
 				data-testid="SelectFile__drop-zone"

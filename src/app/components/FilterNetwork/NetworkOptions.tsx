@@ -9,10 +9,10 @@ export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) =>
 	const renderOption = () => {
 		if (isSelected) {
 			return (
-				<Circle size="lg" className="relative border-theme-primary-500">
+				<Circle size="lg" className="border-theme-primary-500 relative">
 					<NetworkIcon iconClassName="text-theme-primary-500" network={network} isCompact />
 					<Badge
-						className="border-transparent bg-theme-primary-500 text-theme-primary-100"
+						className="bg-theme-primary-500 text-theme-primary-100 border-transparent"
 						icon="CheckmarkSmall"
 					/>
 				</Circle>
@@ -20,7 +20,7 @@ export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) =>
 		}
 
 		return (
-			<Circle size="lg" className="relative border-theme-secondary-300 dark:border-theme-secondary-800">
+			<Circle size="lg" className="border-theme-secondary-300 dark:border-theme-secondary-800 relative">
 				<NetworkIcon iconClassName="text-theme-secondary-300" network={network} isCompact />
 				<Badge className="border-theme-secondary-300 dark:border-theme-secondary-800" />
 			</Circle>
@@ -29,7 +29,7 @@ export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) =>
 
 	return (
 		<li
-			className="inline-block cursor-pointer pb-4 pr-4"
+			className="inline-block cursor-pointer pr-4 pb-4"
 			data-testid={`NetworkOption__${network.id()}`}
 			onClick={onClick}
 		>

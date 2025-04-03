@@ -20,7 +20,7 @@ const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement
 	<button
 		{...props}
 		className={twMerge(
-			"mt-auto flex w-full items-center space-x-2 rounded border-2 border-theme-primary-100 px-5 py-3 text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-600 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white sm:w-auto sm:py-5",
+			"border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-600 focus:ring-theme-primary-400 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 mt-auto flex w-full items-center space-x-2 rounded border-2 px-5 py-3 transition-colors duration-300 focus:ring-2 focus:outline-hidden sm:w-auto sm:py-5 dark:hover:text-white",
 			props.className,
 		)}
 	/>
@@ -102,7 +102,7 @@ export const FormStep = ({
 								data-testid="QRCodeModalButton"
 							>
 								<Icon size="lg" name="QRCode" />
-								<span className="text-base font-semibold leading-5">
+								<span className="text-base leading-5 font-semibold">
 									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
 								</span>
 							</QRCodeButton>
@@ -117,12 +117,12 @@ export const FormStep = ({
 						<div className="mb-2 flex items-center justify-between">
 							<FormLabel
 								label={t("TRANSACTION.SENDER")}
-								className="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text hover:text-theme-primary-600!"
+								className="text-theme-secondary-text hover:text-theme-primary-600! mb-0 text-sm leading-[17px] font-semibold"
 							/>
 							<Button
 								type="button"
 								variant="transparent"
-								className="block p-0 text-sm text-theme-navy-600 sm:hidden"
+								className="text-theme-navy-600 block p-0 text-sm sm:hidden"
 								onClick={onScan}
 							>
 								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
