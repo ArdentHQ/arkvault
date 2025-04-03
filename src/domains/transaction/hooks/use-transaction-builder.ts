@@ -4,6 +4,7 @@ import { Services } from "@ardenthq/sdk";
 import { upperFirst } from "@/app/lib/helpers";
 import { useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
+import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 
 type SignFunction = (input: any) => Promise<string>;
 
@@ -16,11 +17,11 @@ const prepareMultiSignature = async (
 });
 
 const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileContracts.IReadWriteWallet) => {
+	await accessLedgerApp({ coin: wallet.coin() });
+
 	const signature = await wallet
 		.signatory()
 		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
-	// Prevents "The device is already open" exception when running the signing function
-	await wallet.ledger().disconnect();
 
 	return {
 		...input,
@@ -45,7 +46,8 @@ export const useTransactionBuilder = () => {
 
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);
-		let data = { ...input };
+
+		let data = input;
 
 		if (wallet.isMultiSignature()) {
 			data = await prepareMultiSignature(data, wallet);

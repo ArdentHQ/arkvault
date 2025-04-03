@@ -1,10 +1,13 @@
 import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
-import Eth from "@ledgerhq/hw-app-eth";
+import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
 
-export const setupEthTransportInstance = (transport: LedgerTransport) => new Eth(transport);
+export const setupEthTransportInstance = (transport: LedgerTransport) => ({
+	ledgerService,
+	transport: new Eth(transport),
+});
 
 export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	try {
