@@ -15,7 +15,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		selected: [],
 		wallets: [],
 	});
-	console.log({ state })
+	console.log({ state });
 
 	const [loadedWallets, setLoadedWallets] = useState<Contracts.WalletData[]>([]);
 
@@ -35,7 +35,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
-		console.log("scan")
+		console.log("scan");
 		setIdle();
 		dispatch({ type: "waiting" });
 
@@ -59,9 +59,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		// @ts-ignore
 		const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
 
-		const legacyWallets = isLoadingMore
-			? {}
-			: await instance.ledger().scan({ onProgress, useLegacy: true });
+		const legacyWallets = isLoadingMore ? {} : await instance.ledger().scan({ onProgress, useLegacy: true });
 
 		const allWallets = { ...legacyWallets, ...ledgerWallets };
 
@@ -96,17 +94,17 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		setIdle();
 		setIsScanning(false);
 		setIsScanningMore(false);
-	}
+	};
 
 	const scan = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
 		try {
-			await scanAddresses(profile, startPath)
+			await scanAddresses(profile, startPath);
 		} catch (error) {
-			console.log({ error })
+			console.log({ error });
 			if (error?.message?.includes?.("busy")) {
 				await new Promise((resolve) => setTimeout(resolve, 1000));
-				await scan(profile, startPath)
-				return
+				await scan(profile, startPath);
+				return;
 			}
 
 			dispatch({ error: error.message, type: "failed" });

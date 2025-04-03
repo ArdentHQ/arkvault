@@ -283,7 +283,7 @@ export const LedgerScanStep = ({
 	const { register, unregister, setValue } = useFormContext();
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
-	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets, disconnect } = ledgerScanner;
+	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
 
 	const lastPath = useMemo(() => {
 		const ledgerPaths = wallets.map(({ path }) => path);
@@ -319,7 +319,7 @@ export const LedgerScanStep = ({
 
 		return () => {
 			abortScanner();
-		}
+		};
 	}, [profile]);
 
 	useEffect(() => {
