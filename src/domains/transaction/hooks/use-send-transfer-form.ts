@@ -83,6 +83,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				privateKey,
 				secret,
 				secondSecret,
+				gasLimit,
+				gasPrice,
 			} = getValues();
 
 			const signatory = await wallet.signatoryFactory().make({

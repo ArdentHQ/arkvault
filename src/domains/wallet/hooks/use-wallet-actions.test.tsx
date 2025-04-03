@@ -3,11 +3,14 @@ import { renderHook } from "@testing-library/react";
 import { createHashHistory } from "history";
 import React from "react";
 import { Router } from "react-router-dom";
-import { env, getDefaultProfileId, act } from "@/utils/testing-library";
+import { env, act, getMainsailProfileId } from "@/utils/testing-library";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("useWalletActions", () => {
 	const history = createHashHistory();
@@ -24,7 +27,7 @@ describe("useWalletActions", () => {
 	);
 
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
 
 		vi.spyOn(useActiveProfileModule, "useActiveProfile").mockReturnValue(profile);

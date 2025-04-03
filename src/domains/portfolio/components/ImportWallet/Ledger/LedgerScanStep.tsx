@@ -285,13 +285,6 @@ export const LedgerScanStep = ({
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
 
-	// eslint-disable-next-line arrow-body-style
-	useEffect(() => {
-		return () => {
-			abortScanner();
-		};
-	}, [abortScanner]);
-
 	const lastPath = useMemo(() => {
 		const ledgerPaths = wallets.map(({ path }) => path);
 		const profileWalletsPaths = profile
@@ -323,6 +316,10 @@ export const LedgerScanStep = ({
 
 	useEffect(() => {
 		scan(profile, lastPath);
+
+		return () => {
+			abortScanner();
+		};
 	}, [profile]);
 
 	useEffect(() => {

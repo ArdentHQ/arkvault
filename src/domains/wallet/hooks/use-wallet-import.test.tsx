@@ -5,7 +5,7 @@ import { act, renderHook } from "@testing-library/react";
 
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
-import { env, MNEMONICS } from "@/utils/testing-library";
+import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
@@ -46,7 +46,7 @@ describe("useWalletImport", () => {
 			encryptedWif: "",
 			network,
 			type: OptionsValue.BIP39,
-			value: MNEMONICS[0],
+			value: MAINSAIL_MNEMONICS[0],
 		});
 
 		expect(wallet).toBeInstanceOf(Wallet);
@@ -213,7 +213,7 @@ describe("useWalletImport", () => {
 					encryptedWif: "",
 					networks: [network],
 					type: OptionsValue.BIP39,
-					value: MNEMONICS[1],
+					value: MAINSAIL_MNEMONICS[1],
 				}),
 		);
 
@@ -235,7 +235,7 @@ describe("useWalletImport", () => {
 					encryptedWif: "",
 					networks: [network],
 					type: OptionsValue.BIP39,
-					value: MNEMONICS[2],
+					value: MAINSAIL_MNEMONICS[2],
 				}),
 		);
 

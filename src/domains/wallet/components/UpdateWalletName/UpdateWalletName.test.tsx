@@ -5,15 +5,24 @@ import React from "react";
 import { UpdateWalletName } from "./UpdateWalletName";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/wallet/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultMainsailWalletId,
+	getMainsailProfileId,
+	render,
+	screen,
+	waitFor,
+} from "@/utils/testing-library";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("UpdateWalletName", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		profile = env.profiles().findById(getMainsailProfileId());
+		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
 	it("should render", () => {
@@ -64,7 +73,7 @@ describe("UpdateWalletName", () => {
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		const nameVariations = ["ARK Wallet 2", "ark wallet 2", " ARK Wallet 2", "ARK Wallet 2 "];
+		const nameVariations = ["Mainsail Wallet 2", "mainsail wallet 2", " Mainsail Wallet 2", "Mainsail Wallet 2 "];
 
 		for (const name of nameVariations) {
 			await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
