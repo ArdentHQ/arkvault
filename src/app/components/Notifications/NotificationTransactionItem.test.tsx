@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
 import { httpClient } from "@/app/services";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getMainsailProfileId, render, screen, waitFor, renderResponsive } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
