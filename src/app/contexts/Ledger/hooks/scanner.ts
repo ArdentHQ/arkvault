@@ -100,7 +100,6 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		try {
 			await scanAddresses(profile, startPath);
 		} catch (error) {
-			console.log({ error });
 			if (error?.message?.includes?.("busy")) {
 				await new Promise((resolve) => setTimeout(resolve, 1000));
 				await scan(profile, startPath);
