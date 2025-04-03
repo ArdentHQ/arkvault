@@ -9,7 +9,8 @@ import {
 	render,
 	env,
 	screen,
-	mockProfileWithPublicAndTestNetworks, getMainsailProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getMainsailProfileId();
