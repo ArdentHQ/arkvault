@@ -176,6 +176,9 @@ importers:
       react-zendesk:
         specifier: ^0.1.13
         version: 0.1.13
+      seedrandom:
+        specifier: ^3.0.5
+        version: 3.0.5
       semver:
         specifier: ^7.6.2
         version: 7.6.3
