@@ -3,13 +3,7 @@ import React from "react";
 
 import { Route } from "react-router-dom";
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	renderResponsiveWithRoute,
-	screen,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("UserMenu", () => {
