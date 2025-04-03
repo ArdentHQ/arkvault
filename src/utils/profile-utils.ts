@@ -65,7 +65,6 @@ export const getErroredNetworks = (profile: Contracts.IProfile) => {
 
 		erroredNetworks.push(name);
 	}
-	console.log(erroredNetworks);
 
 	return { erroredNetworks, hasErroredNetworks: erroredNetworks.length > 0 };
 };
