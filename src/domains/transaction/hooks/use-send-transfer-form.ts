@@ -117,6 +117,10 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 					abortSignal,
 				},
 			);
+
+			// Ensures the cache is flushed so it always fetches the latest wallet nonce
+			httpClient.forgetWalletCache(env, wallet);
+
 			const response = await wallet.transaction().broadcast(uuid);
 
 			handleBroadcastError(response);
@@ -124,10 +128,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			await wallet.transaction().sync();
 
 			await persist();
-
-			// Ensures the cache is flushed so it always fetches the latest wallet details
-			// like the noce
-			httpClient.forgetWalletCache(env, wallet);
 
 			return transaction;
 		},
