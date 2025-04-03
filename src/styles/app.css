@@ -1,24 +1,43 @@
+@import 'tailwindcss';
+
+@import './variables.css' layer(utilities);
+@import './nav-variables.css' layer(utilities);
+@import './headings.css' layer(utilities);
+@import './base.css' layer(utilities);
+@import './base.utilities.css';
+@import './datepicker.css' layer(utilities);
+@import './pwa.css' layer(utilities);
+@import './forms.css' layer(utilities);
+@import './fonts.css' layer(utilities);
+@import './scrollbars.css' layer(utilities);
+@import './skeletons.css' layer(utilities);
+@import './toasts.css' layer(utilities);
+@import './tooltips.css' layer(utilities);
+
+@import './coins.css' layer(utilities);
+@import './focus-visible.css' layer(utilities);
+@import './zendesk.css' layer(utilities);
+@import 'slick-carousel/slick/slick.css' layer(utilities);
+
 @config "../../tailwind.config.js";
 
 /** Tailwind **/
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
-@import "./variables.css";
-@import "./nav-variables.css";
-@import "./headings.css";
-@import "./base.css";
-@import "./datepicker.css";
-@import "./pwa.css";
-@import "./forms.css";
-@import "./fonts.css";
-@import "./scrollbars.css";
-@import "./skeletons.css";
-@import "./toasts.css";
-@import "./tooltips.css";
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-@import "./coins.css";
-@import "./focus-visible.css";
-@import "./zendesk.css";
-@import "slick-carousel/slick/slick.css";
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}

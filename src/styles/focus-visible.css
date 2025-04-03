@@ -10,10 +10,12 @@
 
 .ring-focus[data-ring-focus-margin="-m-1"]::after {
 	@apply -m-1;
- }
+}
+
 .ring-focus[data-ring-focus-margin="-mx-2"]::after {
 	@apply -mx-2;
 }
+
 .ring-focus[data-ring-focus-margin="-mx-3"]::after {
 	@apply -mx-3;
 }

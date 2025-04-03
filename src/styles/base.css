@@ -12,6 +12,7 @@ body {
 #root {
 	@apply flex flex-1 flex-col;
 }
+
 main {
 	@apply flex-1 bg-theme-background text-theme-text;
 }
@@ -25,20 +26,20 @@ main {
 }
 
 .important\:bottom-8 {
-	bottom: 2rem !important;
+	bottom: 2rem!important;
 }
 
 .important\:z-0 {
-	z-index: 0 !important;
+	z-index: 0!important;
 }
 
 .important\:block {
-	display: block !important;
+	display: block!important;
 }
 
 .important\:px-0 {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
+	padding-left: 0!important;
+	padding-right: 0!important;
 }
 
 .no-ligatures {
@@ -47,33 +48,23 @@ main {
 		"calt" off;
 }
 
-@layer utilities {
-	.overflow-overlay {
-		overflow: overlay;
-	}
-
-	.filter-grayscale {
-		filter: grayscale(1);
-	}
-}
-
-.welcome-slider-dots .slick-active > button {
+.welcome-slider-dots .slick-active>button {
 	@apply border-transparent bg-theme-navy-500 hover:bg-theme-navy-500;
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child) td:first-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child) td:first-child::after {
 	@apply absolute left-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child) td:last-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child) td:last-child::after {
 	@apply absolute right-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child):hover td:first-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child):hover td:first-child::after {
 	@apply absolute -bottom-[4px] left-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
-.with-x-padding > table > tbody > tr:not(:last-child):hover td:last-child::after {
+.with-x-padding>table>tbody>tr:not(:last-child):hover td:last-child::after {
 	@apply absolute -bottom-[4px] right-0 block h-[5px] w-6 bg-theme-background content-[''];
 }
 
@@ -88,7 +79,7 @@ main {
 }
 
 .custom-button-wrapper button {
-	@apply h-10 w-10 overflow-hidden rounded text-theme-secondary-700 dark:text-theme-secondary-600 sm:h-11 sm:w-11 [&:not(:disabled)]:hover:bg-theme-primary-100 [&:not(:disabled)]:hover:text-theme-primary-600 [&:not(:disabled)]:dark:hover:bg-theme-secondary-800 [&:not(:disabled)]:dark:hover:text-theme-secondary-100;
+	@apply h-10 w-10 overflow-hidden rounded text-theme-secondary-700 dark:text-theme-secondary-600 sm:h-11 sm:w-11 not-disabled:hover:bg-theme-primary-100 not-disabled:hover:text-theme-primary-600 dark:not-disabled:hover:bg-theme-secondary-800 dark:not-disabled:hover:text-theme-secondary-100;
 }
 
 .custom-button-nav-wrapper {
@@ -96,7 +87,7 @@ main {
 }
 
 .custom-button-nav-wrapper button {
-	@apply h-7 w-7 overflow-hidden rounded p-0 text-theme-secondary-700 dark:text-theme-dark-200 [&:not(:disabled)]:hover:bg-theme-primary-200 [&:not(:disabled)]:hover:text-theme-primary-700 [&:not(:disabled)]:dark:hover:bg-theme-dark-700 [&:not(:disabled)]:dark:hover:text-theme-dark-50;
+	@apply h-7 w-7 overflow-hidden rounded p-0 text-theme-secondary-700 dark:text-theme-dark-200 not-disabled:hover:bg-theme-primary-200 not-disabled:hover:text-theme-primary-700 dark:not-disabled:hover:bg-theme-dark-700 dark:not-disabled:hover:text-theme-dark-50;
 }
 
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
@@ -161,20 +152,20 @@ main {
 	@apply h-full w-full focus:ring-0;
 }
 
-.toggle-input:checked ~ .toggle-handle .handle-inner {
+.toggle-input:checked~.toggle-handle .handle-inner {
 	@apply translate-x-full bg-theme-primary-600;
 }
 
-.toggle-input:hover ~ .toggle-handle .handle-inner {
+.toggle-input:hover~.toggle-handle .handle-inner {
 	@apply shadow-outline;
 }
 
-.toggle-input:focus ~ .toggle-handle .handle-inner {
+.toggle-input:focus~.toggle-handle .handle-inner {
 	@apply shadow-outline;
 }
 
 .select-options-list {
-	@apply top-full max-h-64 space-y-1 overflow-y-auto rounded bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900;
+	@apply top-full max-h-64 space-y-1 overflow-y-auto rounded bg-white p-1 shadow-xl outline-hidden dark:bg-theme-dark-900;
 }
 
 .select-options-list .select-list-option-group:not(:last-child) {
@@ -190,8 +181,8 @@ main {
 	@apply select-none pb-1 text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-700;
 }
 
-.select-options-list .select-list-option-head + .select-list-option .select-list-option__label {
-	@apply border-t !border-transparent transition-colors duration-200;
+.select-options-list .select-list-option-head+.select-list-option .select-list-option__label {
+	@apply border-t border-transparent! transition-colors duration-200;
 }
 
 .select-options-list .select-list-option {
@@ -214,7 +205,7 @@ main {
 	@apply border-theme-secondary-100 dark:border-theme-secondary-900;
 }
 
-.select-options-list .select-list-option.is-highlighted + .select-list-option .select-list-option__label {
+.select-options-list .select-list-option.is-highlighted+.select-list-option .select-list-option__label {
 	@apply border-transparent;
 }
 
@@ -226,7 +217,7 @@ main {
 	@apply border-theme-primary-50 dark:border-black;
 }
 
-.select-options-list .select-list-option.is-selected + .select-list-option .select-list-option__label {
+.select-options-list .select-list-option.is-selected+.select-list-option .select-list-option__label {
 	@apply border-transparent;
 }
 
@@ -235,12 +226,12 @@ main {
 }
 
 
-.tab-list > .tab-button[aria-selected="true"] {
-	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 disabled:dark:text-theme-secondary-700;
+.tab-list>.tab-button[aria-selected="true"] {
+	@apply bg-white text-theme-secondary-900 dark:bg-theme-dark-800 dark:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700;
 }
 
-.tab-list > .tab-button[aria-selected="false"] {
-	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 disabled:dark:text-theme-secondary-700;
+.tab-list>.tab-button[aria-selected="false"] {
+	@apply text-theme-secondary-700 hover:bg-theme-secondary-300 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-900 dark:hover:text-theme-dark-50 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-700;
 }
 
 .add-recipient-wrapper .select-buttons div:first-of-type button {
@@ -268,7 +259,7 @@ main {
 }
 
 .search-input {
-	@apply w-full !appearance-none border-none !bg-transparent p-2 leading-[17px] !shadow-none dark:text-theme-secondary-200;
+	@apply w-full appearance-none! border-none bg-transparent! p-2 leading-[17px] shadow-none! dark:text-theme-secondary-200;
 }
 
 .search-input::-webkit-inner-spin-button,
@@ -277,7 +268,7 @@ main {
 }
 
 .pagination-search-toggle-button {
-	@apply relative flex w-full cursor-pointer flex-nowrap items-center justify-center p-1.5 px-4 text-theme-primary-600 focus:rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:sm:rounded hover:sm:bg-theme-primary-600 hover:sm:text-white;
+	@apply relative flex w-full cursor-pointer flex-nowrap items-center justify-center p-1.5 px-4 text-theme-primary-600 focus:rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-secondary-200 sm:hover:rounded sm:hover:bg-theme-primary-600 sm:hover:text-white;
 }
 
 .pagination-button {
@@ -293,7 +284,7 @@ main {
 }
 
 .pagination-button:focus {
-	@apply rounded outline-none ring-2 ring-theme-primary-400;
+	@apply rounded outline-hidden ring-2 ring-theme-primary-400;
 }
 
 .pagination-wrapper {
