@@ -9,12 +9,13 @@ import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
 export const useLedgerScanner = (coin: string, network: string) => {
-	const { setBusy, setIdle } = useLedgerContext();
+	const { setBusy, setIdle, resetConnectionState } = useLedgerContext();
 
 	const [state, dispatch] = useReducer(scannerReducer, {
 		selected: [],
 		wallets: [],
 	});
+	console.log({ state })
 
 	const [loadedWallets, setLoadedWallets] = useState<Contracts.WalletData[]>([]);
 
@@ -33,77 +34,87 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		setLoadedWallets(uniqBy([...loadedWallets, wallet], (wallet) => wallet.data.address));
 	};
 
-	const scan = useCallback(
-		async (profile: ProfilesContracts.IProfile, startPath?: string) => {
-			setIdle();
-			dispatch({ type: "waiting" });
+	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
+		console.log("scan")
+		setIdle();
+		dispatch({ type: "waiting" });
 
-			setIsScanning(true);
+		setIsScanning(true);
 
-			const isLoadingMore = wallets.length > 0;
-			if (isLoadingMore) {
-				setIsScanningMore(true);
-			}
+		const isLoadingMore = wallets.length > 0;
+		if (isLoadingMore) {
+			setIsScanningMore(true);
+		}
 
-			setBusy();
-			abortRetryReference.current = false;
+		setBusy();
+		abortRetryReference.current = false;
 
-			try {
-				const instance = profile.coins().set(coin, network);
-				await persistLedgerConnection({
-					coin: instance,
-					hasRequestedAbort: () => abortRetryReference.current,
-					options: { factor: 1, randomize: false, retries: 50 },
+		const instance = profile.coins().set(coin, network);
+		await persistLedgerConnection({
+			coin: instance,
+			hasRequestedAbort: () => abortRetryReference.current,
+			options: { factor: 1, randomize: false, retries: 50 },
+		});
+
+		// @ts-ignore
+		const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
+
+		const legacyWallets = isLoadingMore
+			? {}
+			: await instance.ledger().scan({ onProgress, useLegacy: true });
+
+		const allWallets = { ...legacyWallets, ...ledgerWallets };
+
+		let ledgerData: LedgerData[] = [];
+
+		for (const [path, data] of Object.entries(allWallets)) {
+			const address = data.address();
+
+			/* istanbul ignore next -- @preserve */
+			if (!profile.wallets().findByAddressWithNetwork(address, network)) {
+				ledgerData.push({
+					address,
+					balance: data.balance().available.toHuman(),
+					path,
 				});
+			}
+		}
 
-				// @ts-ignore
-				const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
+		if (isLoadingMore) {
+			ledgerData = omitBy(ledgerData, (wallet) => wallets.some((w) => w.address === wallet.address));
+		} else {
+			ledgerData = uniqBy([...wallets, ...ledgerData], (wallet) => wallet.address);
+		}
 
-				const legacyWallets = isLoadingMore
-					? {}
-					: await instance.ledger().scan({ onProgress, useLegacy: true });
+		/* istanbul ignore next -- @preserve */
+		if (abortRetryReference.current) {
+			return;
+		}
 
-				const allWallets = { ...legacyWallets, ...ledgerWallets };
+		dispatch({ payload: ledgerData, type: "success" });
 
-				let ledgerData: LedgerData[] = [];
+		setIdle();
+		setIsScanning(false);
+		setIsScanningMore(false);
+	}
 
-				for (const [path, data] of Object.entries(allWallets)) {
-					const address = data.address();
-
-					/* istanbul ignore next -- @preserve */
-					if (!profile.wallets().findByAddressWithNetwork(address, network)) {
-						ledgerData.push({
-							address,
-							balance: data.balance().available.toHuman(),
-							path,
-						});
-					}
-				}
-
-				if (isLoadingMore) {
-					ledgerData = omitBy(ledgerData, (wallet) => wallets.some((w) => w.address === wallet.address));
-				} else {
-					ledgerData = uniqBy([...wallets, ...ledgerData], (wallet) => wallet.address);
-				}
-
-				/* istanbul ignore next -- @preserve */
-				if (abortRetryReference.current) {
-					return;
-				}
-
-				dispatch({ payload: ledgerData, type: "success" });
-			} catch (error) {
-				dispatch({ error: error.message, type: "failed" });
+	const scan = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
+		try {
+			await scanAddresses(profile, startPath)
+		} catch (error) {
+			console.log({ error })
+			if (error?.message?.includes?.("busy")) {
+				await new Promise((resolve) => setTimeout(resolve, 1000));
+				await scan(profile, startPath)
+				return
 			}
 
-			setIdle();
-			setIsScanning(false);
-			setIsScanningMore(false);
-		},
-		[coin, network, setBusy, setIdle, state],
-	);
+			dispatch({ error: error.message, type: "failed" });
+		}
+	};
 
 	const abortScanner = useCallback(() => {
+		resetConnectionState();
 		abortRetryReference.current = true;
 		setIdle();
 	}, [setIdle]);
