@@ -15,7 +15,6 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		selected: [],
 		wallets: [],
 	});
-	console.log({ state });
 
 	const [loadedWallets, setLoadedWallets] = useState<Contracts.WalletData[]>([]);
 
