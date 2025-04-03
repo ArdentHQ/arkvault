@@ -25,7 +25,7 @@ const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => vo
 				<button
 					type="button"
 					data-testid="WalletIcon__Starred__header"
-					className="flex shrink-0 cursor-pointer items-center justify-center rounded ring-theme-primary-400 ring-offset-theme-background focus:outline-none focus:ring-2 focus:ring-offset-8"
+					className="flex shrink-0 cursor-pointer items-center justify-center rounded ring-theme-primary-400 ring-offset-theme-background focus:outline-hidden focus:ring-2 focus:ring-offset-8"
 					onClick={onClick}
 				>
 					<Icon
@@ -183,7 +183,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								currentPage={currentPage}
 								initialState={initialState}
 								className={cn("with-x-padding", {
-									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800":
+									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] dark:after:bg-theme-secondary-800":
 										wallets.length <= initialPerPage,
 								})}
 							>
@@ -214,7 +214,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 									readOnly={true}
 									defaultValue={perPage.toString()}
 									wrapperClassName="relative"
-									className="!h-8 !w-[78px] !px-3"
+									className="h-8! w-[78px]! px-3!"
 									onChange={(selected) => {
 										setCurrentPage(1);
 										setPerPage(Number(selected.value));

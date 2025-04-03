@@ -319,7 +319,7 @@ export const ValidatorRow = ({
 	return (
 		<TableRow
 			key={validator.address()}
-			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+			className="relative last:border-b-4! last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
 		>
 			<TableCell
 				variant="start"
@@ -358,7 +358,7 @@ export const ValidatorRow = ({
 			<TableCell
 				className="hidden sm:table-cell"
 				innerClassName={cn(
-					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0",
+					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!",
 					rowColor,
 				)}
 			>

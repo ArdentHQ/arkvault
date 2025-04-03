@@ -73,12 +73,12 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 			onClick={onClick}
 			{...properties}
 		>
-			<div className="flex flex-grow flex-row items-center">{children}</div>
+			<div className="flex grow flex-row items-center">{children}</div>
 
 			{!!onClick && (
 				<div
 					className={cn(
-						"ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700",
+						"ml-4 flex shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700",
 						{
 							"transition-all duration-100": !isExpanded,
 						},

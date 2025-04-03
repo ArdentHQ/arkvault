@@ -12,7 +12,7 @@ export const TransactionRowMobileSkeleton = ({ hideSender = false }: { hideSende
 	const currencyWidth = Math.floor(amountWidth * 0.75);
 
 	return (
-		<TableRow className="group !border-b-0">
+		<TableRow className="group border-b-0!">
 			<td data-testid="TransactionRow__skeleton">
 				<MobileCard className="mb-3">
 					<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">

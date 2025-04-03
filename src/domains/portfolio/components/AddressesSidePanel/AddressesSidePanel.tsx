@@ -332,7 +332,7 @@ export const AddressesSidePanel = ({
 							{
 								hidden: activeMode === AddressViewSelection.single,
 								"text-theme-secondary-500 dark:text-theme-dark-500": isSelectAllDisabled,
-								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 hover:dark:text-theme-primary-500":
+								"text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-dark-200 dark:hover:text-theme-primary-500":
 									!isSelectAllDisabled,
 							},
 						)}
@@ -391,7 +391,7 @@ export const AddressesSidePanel = ({
 								className={cn(
 									"p-2 py-[3px] text-sm leading-[18px] text-theme-primary-600 dark:text-theme-primary-400 sm:text-base sm:leading-5",
 									{
-										"ring ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
+										"ring-3 ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
 											showManageHint,
 									},
 								)}

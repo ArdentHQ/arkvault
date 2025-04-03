@@ -36,7 +36,7 @@ export const CollapseToggleButton = ({ isOpen, className, label, alternativeLabe
 		<button
 			data-testid="CollapseToggleButton"
 			type="button"
-			className={`flex items-center space-x-2 font-semibold focus:outline-none ${
+			className={`flex items-center space-x-2 font-semibold focus:outline-hidden ${
 				className || "rounded text-theme-secondary-500"
 			}`}
 			{...properties}

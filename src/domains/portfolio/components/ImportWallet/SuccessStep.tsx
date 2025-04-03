@@ -32,7 +32,7 @@ export const SuccessStep = ({
 						<Address
 							address={importedWallet.address()}
 							addressClass="leading-[17px] sm:leading-5"
-							wrapperClass="!w-max sm:!w-full"
+							wrapperClass="w-max! sm:w-full!"
 							showCopyButton
 						/>
 					</div>
@@ -53,7 +53,7 @@ export const SuccessStep = ({
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end pr-4 font-semibold leading-[17px] sm:justify-between sm:leading-5">
-							<div className="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none">
+							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none">
 								{" "}
 								{importedWallet.alias()}{" "}
 							</div>

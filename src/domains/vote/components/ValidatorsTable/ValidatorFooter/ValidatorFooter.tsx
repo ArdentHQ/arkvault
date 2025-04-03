@@ -105,10 +105,10 @@ export const ValidatorFooter = ({
 		>
 			<div className="mx-auto px-8 lg:container md:px-10">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
-					<div className="hidden flex-grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x md:flex">
-						<div className={cn("flex flex-grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
+					<div className="hidden grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x md:flex">
+						<div className={cn("flex grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
 							<div
-								className={cn("flex h-full flex-1 flex-grow flex-row items-center overflow-x-auto", {
+								className={cn("flex h-full flex-1 grow flex-row items-center overflow-x-auto", {
 									"w-36": requiresStakeAmount,
 								})}
 							>

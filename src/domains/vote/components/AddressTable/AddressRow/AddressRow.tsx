@@ -152,7 +152,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		return (
 			<Circle
 				size="lg"
-				className="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
+				className="relative h-8! w-8! border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
 			>
 				{rest}
 			</Circle>
@@ -202,7 +202,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		!isLedgerWalletCompatible(wallet);
 
 	return (
-		<TableRow className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
+		<TableRow className="relative last:border-b-4! last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800">
 			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="cursor-pointer group space-x-3">
 				<div className="w-40 flex-1">
 					<Address

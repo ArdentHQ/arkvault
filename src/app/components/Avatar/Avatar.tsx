@@ -39,7 +39,7 @@ const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrap
 export const Avatar = ({
 	address = "",
 	className,
-	innerClassName = "rounded",
+	innerClassName = "rounded-xs",
 	highlight,
 	noShadow,
 	shadowClassName,

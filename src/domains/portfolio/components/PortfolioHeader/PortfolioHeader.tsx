@@ -134,7 +134,7 @@ export const PortfolioHeader = ({
 					>
 						<div
 							className={cn("flex h-fit flex-row items-center gap-1", {
-								"rounded ring ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
+								"rounded ring-3 ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
 									showHint,
 							})}
 						>

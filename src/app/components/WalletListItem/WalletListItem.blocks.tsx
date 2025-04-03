@@ -101,7 +101,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 			<div className="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full">
 				<Address
 					address={wallet.address()}
-					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0"
+					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:ml-0!"
 					walletName={alias}
 					walletNameClass="lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
 					showCopyButton
@@ -279,7 +279,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
-				"w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400",
+				"w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background dark:focus:ring-theme-primary-400",
 				{
 					"dark:ring-2 dark:ring-theme-secondary-800": !selected,
 					"ring-2 ring-theme-primary-600": selected,
@@ -289,7 +289,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			onClick={onClick}
 		>
 			<div className="flex items-center space-x-4 p-2 pl-4">
-				<div className="flex min-w-0 flex-1 flex-shrink flex-col">{details}</div>
+				<div className="flex min-w-0 flex-1 shrink flex-col">{details}</div>
 
 				{extraDetails && <div className="flex items-center space-x-3 self-start">{extraDetails}</div>}
 			</div>
@@ -305,7 +305,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 					{onButtonClick !== undefined && (
 						<div
 							className={cn("flex", {
-								"flex-grow": balance === undefined,
+								"grow": balance === undefined,
 							})}
 							onClick={handleStopPropagation}
 						>
@@ -314,7 +314,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 								className={cn({
 									"bg-theme-primary-600 text-white": !isButtonDisabled,
 									"cursor-not-allowed bg-theme-primary-500 text-theme-primary-400": isButtonDisabled,
-									"flex flex-grow items-center justify-center px-3 py-3 font-semibold": true,
+									"flex grow items-center justify-center px-3 py-3 font-semibold": true,
 								})}
 								type="button"
 								disabled={isButtonDisabled}

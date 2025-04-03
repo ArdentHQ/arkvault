@@ -126,7 +126,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 					onClick={handleOpenFile}
 					title={t("PROFILE.IMPORT.SELECT_FILE_STEP.UPLOAD_TITLE")}
 					data-testid="SelectFile__browse-files"
-					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
+					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-hidden"
 					data-ring-focus-margin="-m-1"
 				>
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.BROWSE_FILES")}

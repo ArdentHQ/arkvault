@@ -158,7 +158,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 							<ExchangeTransactionsRowStatusIcon status={exchangeTransaction.status()} />
 							<Divider type="vertical" />
 							<TableRemoveButton
-								className="cursor-pointer !p-0"
+								className="cursor-pointer p-0!"
 								onClick={handleRemove}
 								data-testid="TableRow__mobile-remove-button"
 							/>

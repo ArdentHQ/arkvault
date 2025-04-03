@@ -79,7 +79,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 				data-testid="NavigationBarLogo--button"
 				type="button"
 				className={cn(
-					"my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500",
+					"my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500",
 					{
 						"h-11 w-11 rounded-xl": variant === "logo-only" && !isXs,
 						"h-6 w-6 rounded": variant === "default",
@@ -254,7 +254,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+							className="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
 						>
 							{menuItem.title}
 						</NavLink>
@@ -270,7 +270,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+							className="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>

@@ -39,7 +39,7 @@ const EditButton = ({ onClick }: { onClick: () => void }) => {
 		<Button
 			variant="transparent"
 			onClick={onClick}
-			className="!p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+			className="p-0! text-theme-primary-600 dark:text-theme-secondary-500"
 			data-testid="LedgerImportStep__edit-alias"
 		>
 			<Icon name="Pencil" />

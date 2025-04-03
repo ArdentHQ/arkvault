@@ -62,7 +62,7 @@ export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvali
 						data-testid="Range__thumb"
 						{...thumb}
 						className={twMerge(
-							"m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-none active:bg-theme-primary-600",
+							"m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-hidden active:bg-theme-primary-600",
 						)}
 						style={{ ...thumb.style, borderColor: color }}
 					/>

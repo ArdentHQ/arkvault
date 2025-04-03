@@ -120,7 +120,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				<button
 					data-testid="SelectAddress__wrapper"
 					className={cn(
-						"relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400",
+						"relative w-full rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400",
 						{ "cursor-default": disabled },
 					)}
 					type="button"

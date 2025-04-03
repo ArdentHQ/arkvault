@@ -86,7 +86,7 @@ const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.Compon
 			ref={ref}
 			autoComplete={autocomplete}
 			className={twMerge(
-				"!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none",
+				"bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-0! focus:ring-transparent! [&.shadow-none]:shadow-none",
 				props.className,
 			)}
 		/>
@@ -167,7 +167,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						<InputStyled
 							data-testid="Input"
 							className={cn(
-								"no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base",
+								"no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!",
 								innerClassName,
 								{
 									"text-theme-secondary-text": disabled,
@@ -222,7 +222,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 									data-testid="Input__valid"
 									name="CircleCheckMark"
 									size="lg"
-									className="pointer-events-none text-theme-primary-600 focus:outline-none"
+									className="pointer-events-none text-theme-primary-600 focus:outline-hidden"
 								/>
 							)}
 

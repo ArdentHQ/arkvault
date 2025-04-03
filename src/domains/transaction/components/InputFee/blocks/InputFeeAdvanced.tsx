@@ -77,7 +77,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					<FormLabel
 						id="fee"
 						label={t("COMMON.GAS_PRICE_GWEI")}
-						className="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+						className="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
 					/>
 
 					<InputCurrency
@@ -108,7 +108,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 				<FormField name="gasLimit">
 					<FormLabel
 						label={t("COMMON.GAS_LIMIT")}
-						className="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+						className="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
 					/>
 
 					<InputCurrency

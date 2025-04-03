@@ -55,7 +55,7 @@ export const DetailWrapper = ({
 				},
 			)}
 		>
-			<div className="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4">{children}</div>
+			<div className="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">{children}</div>
 
 			{footer && (
 				<div className="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800">
@@ -69,7 +69,7 @@ export const DetailWrapper = ({
 export const DetailTitle = ({ children, className }: { children: ReactNode; className?: string }): ReactNode => (
 	<div
 		className={twMerge(
-			"no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5",
+			"no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5",
 			className,
 		)}
 	>
@@ -88,8 +88,8 @@ export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNo
 );
 
 export const DetailDivider = (): ReactNode => (
-	<div className="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3">
-		<div className="h-full w-full [.condensed_&]:hidden">
+	<div className="hidden h-8 w-full items-center sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3">
+		<div className="h-full w-full in-[.condensed]:hidden">
 			<Divider dashed />
 		</div>
 	</div>

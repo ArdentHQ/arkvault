@@ -58,7 +58,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 						onClick={() => onFileFormatChange(".json")}
 						title={t("PROFILE.IMPORT.SELECT_FILE_STEP.CLICK_HERE")}
 						data-testid="SelectFileStep__change-file"
-						className="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+						className="link ring-focus relative cursor-pointer font-semibold focus:outline-hidden"
 						data-ring-focus-margin="-m-1"
 					>
 						{t("PROFILE.IMPORT.SELECT_FILE_STEP.CLICK_HERE")}
