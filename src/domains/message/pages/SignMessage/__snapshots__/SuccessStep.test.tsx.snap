@@ -42,7 +42,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -66,7 +66,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <div
@@ -76,7 +76,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <span>
                        
@@ -141,7 +141,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -244,7 +244,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -268,7 +268,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <div
@@ -278,7 +278,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <span>
                        
@@ -343,7 +343,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border mt-0 sm:mt-2"
+            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
           >
             <div
               class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"

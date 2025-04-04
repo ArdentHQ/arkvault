@@ -16,7 +16,7 @@ if (!sdkPath) {
 
 packageJson.dependencies["@ardenthq/sdk"] = join(sdkPath, "packages/sdk");
 packageJson.dependencies["@ardenthq/sdk-ark"] = join(sdkPath, "packages/ark");
-packageJson.dependencies["@ardenthq/sdk-helpers"] = join(sdkPath, "packages/helpers");
+packageJson.dependencies["@ardenthq/sdk-mainsail"] = join(sdkPath, "packages/mainsail");
 packageJson.dependencies["@ardenthq/sdk-intl"] = join(sdkPath, "packages/intl");
 packageJson.dependencies["@ardenthq/sdk-profiles"] = join(sdkPath, "packages/profiles");
 

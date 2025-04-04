@@ -8,6 +8,8 @@ import {
 	NotificationTransactionsProperties,
 	NotificationTransactionsSkeleton,
 } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
+import { useBreakpoint } from "@/app/hooks";
+import cn from "classnames";
 
 export const NotificationTransactionsTable = ({
 	profile,
@@ -17,6 +19,8 @@ export const NotificationTransactionsTable = ({
 	isLoading = true,
 	onVisibilityChange,
 }: NotificationTransactionsProperties) => {
+	const { isMdAndAbove } = useBreakpoint();
+
 	if (isLoading) {
 		return <NotificationTransactionsSkeleton />;
 	}
@@ -29,7 +33,12 @@ export const NotificationTransactionsTable = ({
 				delayedCall
 				containment={containmentRef?.current}
 			>
-				<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={transactions}>
+				<Table
+					hideHeader
+					columns={[{ Header: "-", className: "hidden" }]}
+					data={transactions}
+					className={cn({ "with-x-padding": isMdAndAbove })}
+				>
 					{(transaction: DTO.ExtendedConfirmedTransactionData) => (
 						<NotificationTransactionItem
 							transaction={transaction}

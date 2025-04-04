@@ -7,31 +7,84 @@ import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
-import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
-import { WalletIcons } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { twMerge } from "tailwind-merge";
 
 interface AddressRowProperties {
 	index: number;
 	maxVotes: number;
 	wallet: Contracts.IReadWriteWallet;
-	onSelect?: (walletAddress: string, walletNetwork: string) => void;
+	onSelect?: (walletAddress: string) => void;
 }
 
-const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
-	<Tooltip content={label}>
-		<span>
-			<Icon name={icon} className={color} size="lg" data-testid="StatusIcon__icon" />
-		</span>
-	</Tooltip>
-);
+export const WalletStatus = ({
+	wallet,
+	activeDelegates,
+	fallback = <></>,
+	className = "",
+	dataTestId = "AddressRow__wallet-status",
+}: {
+	wallet?: Contracts.IReadOnlyWallet;
+	activeDelegates: number;
+	fallback?: React.ReactNode;
+	className?: string;
+	dataTestId?: string;
+}) => {
+	const { t } = useTranslation();
+
+	if (!wallet) {
+		return fallback;
+	}
+
+	assertReadOnlyWallet(wallet);
+
+	if (wallet.isResignedDelegate()) {
+		return (
+			<div
+				data-testid={dataTestId}
+				className={twMerge(
+					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
+					className,
+				)}
+			>
+				{t("WALLETS.STATUS.RESIGNED")}
+			</div>
+		);
+	}
+
+	if (Number(wallet.rank()) > activeDelegates) {
+		return (
+			<div
+				data-testid={dataTestId}
+				className={twMerge(
+					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
+					className,
+				)}
+			>
+				{t("WALLETS.STATUS.STANDBY")}
+			</div>
+		);
+	}
+
+	return (
+		<div
+			data-testid={dataTestId}
+			className={twMerge(
+				"inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500",
+				className,
+			)}
+		>
+			{t("WALLETS.STATUS.ACTIVE")}
+		</div>
+	);
+};
 
 export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
 	if (!wallet) {
@@ -49,8 +102,10 @@ export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet })
 
 export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProperties) => {
 	const { t } = useTranslation();
-	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
 	const activeProfile = useActiveProfile();
+	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration().getProfileConfiguration(
+		activeProfile.id(),
+	);
 
 	const { getWalletAlias } = useWalletAlias();
 	const { alias } = useMemo(
@@ -118,30 +173,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
 	};
 
-	const renderDelegateStatus = (wallet: Contracts.IReadOnlyWallet | undefined, activeDelegates: number) => {
-		if (!wallet) {
-			return <></>;
-		}
-
-		assertReadOnlyWallet(wallet);
-
-		if (wallet.isResignedDelegate()) {
-			return <StatusIcon label={t("WALLETS.STATUS.RESIGNED")} icon="CircleCross" color="text-theme-danger-400" />;
-		}
-
-		if (Number(wallet.rank()) > activeDelegates) {
-			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
-		}
-
-		return (
-			<StatusIcon
-				label={t("WALLETS.STATUS.ACTIVE")}
-				icon="CircleCheckMark"
-				color="text-theme-navy-600 dark:text-theme-primary-600"
-			/>
-		);
-	};
-
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
 			return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
@@ -154,7 +185,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<Link
 					to={votes[0].wallet?.explorerLink() as string}
 					isExternal
-					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
 				>
 					{votes[0].wallet?.username() ?? (
 						<TruncateMiddle text={votes[0].wallet?.address() ?? ""} maxChars={14} />
@@ -203,7 +234,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					</TableCell>
 
 					<TableCell innerClassName="text-sm justify-center">
-						{renderDelegateStatus(votes[0]?.wallet, wallet.network().delegateCount())}
+						<WalletStatus wallet={votes[0]?.wallet} activeDelegates={wallet.network().delegateCount()} />
 					</TableCell>
 				</>
 			) : (
@@ -215,10 +246,6 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</TableCell>
 			)}
 
-			<TableCell className="hidden lg:table-cell" innerClassName="text-sm justify-center space-x-2">
-				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
-			</TableCell>
-
 			<TableCell variant="end" innerClassName="justify-end">
 				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 					<div>
@@ -227,7 +254,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							disabled={isButtonDisabled}
 							variant="transparent"
 							className="-mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
-							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
+							onClick={() => onSelect?.(wallet.address())}
 							data-testid={`AddressRow__select-${index}`}
 						>
 							{t("COMMON.VOTE")}

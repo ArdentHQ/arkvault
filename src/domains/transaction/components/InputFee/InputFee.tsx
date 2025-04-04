@@ -1,11 +1,3 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { formatUnits } from "@/app/lib/mainsail";
-import React, { memo } from "react";
-import { useTranslation } from "react-i18next";
-
-import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
-import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import {
 	DEFAULT_FEE_OPTION,
 	DEFAULT_VIEW_TYPE,
@@ -14,8 +6,16 @@ import {
 	InputFeeProperties,
 	InputFeeViewType,
 } from "./InputFee.contracts";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import React, { memo } from "react";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
+import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import { Switch } from "@/app/components/Switch";
+import { formatUnits } from "@/app/lib/mainsail";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { useTranslation } from "react-i18next";
 
 export const calculateGasFee = (gasPrice?: number, gasLimit?: number): number => {
 	if (!gasPrice || !gasLimit) {

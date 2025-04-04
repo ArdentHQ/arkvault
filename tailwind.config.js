@@ -213,6 +213,7 @@ module.exports = {
 				11: "2.75rem",
 				16: "3.5rem",
 				17.5: "4.375rem",
+				page: "calc(100vh - var(--nav-height))",
 			},
 			minWidth: {
 				"200px": "200px",
@@ -230,6 +231,7 @@ module.exports = {
 				72: "18rem",
 				88: "22rem",
 				128: "32rem",
+				172: "43rem",
 			},
 			maxHeight: {
 				"17e": "4.25em",
@@ -261,6 +263,7 @@ module.exports = {
 				128: "32rem",
 				144: "36rem",
 				125: "31.25rem",
+				172: "43rem",
 			},
 			padding: {
 				"1/2": "50%",

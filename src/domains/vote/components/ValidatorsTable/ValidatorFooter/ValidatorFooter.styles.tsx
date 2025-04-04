@@ -3,15 +3,18 @@ import { Circle } from "@/app/components/Circle";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 
-export const LabelWrapper = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-	<div {...props} className="text-xs leading-[17px] text-theme-secondary-700 sm:text-sm" />
+export const LabelWrapper = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+	<div
+		{...props}
+		className={twMerge("text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:text-base", className)}
+	/>
 );
 
 export const TextWrapper = ({ disabled, ...props }: React.HTMLAttributes<HTMLDivElement> & { disabled?: boolean }) => (
 	<div
 		{...props}
 		className={twMerge(
-			"leading-5",
+			"text-sm sm:text-base",
 			cn({
 				"text-theme-secondary-500 dark:text-theme-secondary-700": disabled,
 				"text-theme-text": !disabled,

@@ -5,7 +5,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { ValidatorRowSkeleton } from "./ValidatorRowSkeleton";
 import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { ValidatorVoteButton } from "./ValidatorVoteButton";
-import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
@@ -13,6 +12,7 @@ import cn from "classnames";
 import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.helpers";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
+import { twMerge } from "tailwind-merge";
 
 export interface ValidatorRowProperties {
 	index: number;
@@ -30,6 +30,15 @@ export interface ValidatorRowProperties {
 }
 
 type UseValidatorRowProperties = Omit<ValidatorRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
+
+export enum ValidatorStatusEnum {
+	Changed = "changed",
+	Voted = "voted",
+	Unvoted = "unvoted",
+	Selected = "selected",
+	Disabled = "disabled",
+	Active = "active",
+}
 
 export const useValidatorRow = ({
 	index,
@@ -81,24 +90,46 @@ export const useValidatorRow = ({
 		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
 	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, validator]);
 
-	const rowColor = useMemo(() => {
+	const status = useMemo<ValidatorStatusEnum>(() => {
 		if (isChanged) {
-			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600";
+			return ValidatorStatusEnum.Changed;
 		}
 
 		if (voted) {
-			return isSelectedUnvote
-				? "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
-				: "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600";
+			return isSelectedUnvote ? ValidatorStatusEnum.Unvoted : ValidatorStatusEnum.Voted;
 		}
 
 		if (isSelectedVote) {
+			return ValidatorStatusEnum.Selected;
+		}
+
+		if (isVoteDisabled && !isSelectedVote) {
+			return ValidatorStatusEnum.Disabled;
+		}
+
+		return ValidatorStatusEnum.Active;
+	}, [isChanged, voted, isSelectedVote, isSelectedUnvote, isVoteDisabled]);
+
+	const rowColor = useMemo(() => {
+		if (status === ValidatorStatusEnum.Changed) {
+			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600";
+		}
+
+		if (status === ValidatorStatusEnum.Selected) {
 			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600";
 		}
-	}, [isChanged, voted, isSelectedVote, isSelectedUnvote]);
+
+		if (status === ValidatorStatusEnum.Unvoted) {
+			return "bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400";
+		}
+
+		if (status === ValidatorStatusEnum.Voted) {
+			return "bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600";
+		}
+	}, [status]);
 
 	const renderButton = () => {
-		if (isChanged) {
+		if (status === ValidatorStatusEnum.Changed) {
 			return (
 				<ValidatorVoteButton
 					index={index}
@@ -117,34 +148,52 @@ export const useValidatorRow = ({
 			);
 		}
 
-		if (voted) {
-			if (isSelectedUnvote) {
-				return (
-					<ValidatorVoteButton
-						index={index}
-						variant="danger"
-						compactClassName={`
-							bg-theme-danger-100 sm:bg-transparent
-							dark:bg-theme-danger-400 dark:sm:bg-transparent
-							text-theme-danger-400 hover:text-theme-danger-500
-							dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500
+		if (status === ValidatorStatusEnum.Selected) {
+			return (
+				<ValidatorVoteButton
+					index={index}
+					variant="reverse"
+					compactClassName={`
+						bg-transparent
+						dark:bg-theme-success-600 dark:bg-transparent
+						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
+						dark:text-white dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700
 					`}
-						onClick={() => toggleUnvotesSelected?.(validator.address())}
-					>
-						{t("COMMON.UNSELECTED")}
-					</ValidatorVoteButton>
-				);
-			}
+					onClick={() => toggleVotesSelected?.(validator.address())}
+				>
+					{t("COMMON.SELECTED")}
+				</ValidatorVoteButton>
+			);
+		}
 
+		if (status === ValidatorStatusEnum.Unvoted) {
+			return (
+				<ValidatorVoteButton
+					index={index}
+					variant="danger"
+					compactClassName={`
+							bg-transparent
+							dark:bg-theme-danger-400 dark:bg-transparent
+							text-theme-danger-400 hover:text-theme-danger-500
+							dark:text-white dark:text-theme-danger-400 dark:hover:text-theme-danger-500
+					`}
+					onClick={() => toggleUnvotesSelected?.(validator.address())}
+				>
+					{t("COMMON.UNSELECTED")}
+				</ValidatorVoteButton>
+			);
+		}
+
+		if (status === ValidatorStatusEnum.Voted) {
 			return (
 				<ValidatorVoteButton
 					index={index}
 					variant="primary"
 					compactClassName={`
-						bg-theme-navy-200 sm:bg-transparent
-						dark:bg-theme-navy-800 dark:sm:bg-transparent
+						bg-transparent
+						dark:bg-theme-navy-800 dark:bg-transparent
 						text-theme-primary-600 hover:text-theme-primary-700
-						dark:text-white dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
+						dark:text-white dark:text-theme-primary-600 dark:hover:text-theme-primary-700
 					`}
 					onClick={() => toggleUnvotesSelected?.(validator.address())}
 				>
@@ -153,37 +202,19 @@ export const useValidatorRow = ({
 			);
 		}
 
-		if (isVoteDisabled && !isSelectedVote) {
+		if (status === ValidatorStatusEnum.Disabled) {
 			return (
 				<ValidatorVoteButton
 					index={index}
 					disabled
 					compactClassName={`
-						bg-theme-secondary-100 sm:bg-transparent
-						dark:bg-theme-secondary-800 dark:sm:bg-transparent
+						bg-transparent
+						dark:bg-theme-secondary-800 dark:bg-transparent
 						text-black
-						dark:text-theme-secondary-800 dark:sm:text-theme-black
+						dark:text-theme-secondary-800 dark:text-theme-black
 					`}
 				>
 					{t("COMMON.SELECT")}
-				</ValidatorVoteButton>
-			);
-		}
-
-		if (isSelectedVote) {
-			return (
-				<ValidatorVoteButton
-					index={index}
-					variant="reverse"
-					compactClassName={`
-						bg-theme-success-100 sm:bg-transparent
-						dark:bg-theme-success-600 dark:sm:bg-transparent
-						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
-						dark:text-white dark:sm:text-theme-primary-reverse-600 dark:sm:hover:text-theme-primary-reverse-700
-					`}
-					onClick={() => toggleVotesSelected?.(validator.address())}
-				>
-					{t("COMMON.SELECTED")}
 				</ValidatorVoteButton>
 			);
 		}
@@ -193,10 +224,10 @@ export const useValidatorRow = ({
 				index={index}
 				variant="secondary"
 				compactClassName={`
-					bg-theme-navy-100 sm:bg-transparent
-					dark:bg-theme-secondary-800 dark:sm:bg-transparent
+					bg-transparent
+					dark:bg-theme-secondary-800 dark:bg-transparent
 					text-theme-primary-600 hover:text-theme-primary-700
-					dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
+					dark:text-theme-secondary-200 dark:text-theme-primary-600 dark:hover:text-theme-primary-700
 				`}
 				onClick={() => toggleVotesSelected?.(validator.address())}
 			>
@@ -213,7 +244,42 @@ export const useValidatorRow = ({
 		renderButton,
 		requiresStakeAmount,
 		rowColor,
+		status,
 	};
+};
+
+export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; className?: string }) => {
+	const { t } = useTranslation();
+
+	if (isActive) {
+		return (
+			<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")}>
+				<div
+					data-testid="ValidatorStatus__active"
+					className={twMerge(
+						"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
+						className,
+					)}
+				>
+					{t("WALLETS.STATUS.ACTIVE")}
+				</div>
+			</Tooltip>
+		);
+	}
+
+	return (
+		<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION")}>
+			<div
+				data-testid="ValidatorStatus__standby"
+				className={twMerge(
+					"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
+					className,
+				)}
+			>
+				{t("WALLETS.STATUS.STANDBY")}
+			</div>
+		</Tooltip>
+	);
 };
 
 export const ValidatorRow = ({
@@ -286,19 +352,7 @@ export const ValidatorRow = ({
 					rowColor,
 				)}
 			>
-				{isActive ? (
-					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")}>
-						<div>
-							<Icon name="StatusOk" className="text-theme-navy-600" size="md" />
-						</div>
-					</Tooltip>
-				) : (
-					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION")}>
-						<div>
-							<Icon name="StatusStandby" className="text-theme-warning-500" size="md" />
-						</div>
-					</Tooltip>
-				)}
+				<ValidatorStatus isActive={isActive} />
 			</TableCell>
 
 			<TableCell

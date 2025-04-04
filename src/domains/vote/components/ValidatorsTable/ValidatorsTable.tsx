@@ -8,9 +8,10 @@ import { ValidatorsTableProperties, VoteValidatorProperties } from "./Validators
 import { validatorExistsInVotes, useValidatorsTableColumns } from "./ValidatorsTable.helpers";
 import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
-import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
 import { ValidatorRowMobile } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobile";
+import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
+import { VotesFilter } from "@/domains/vote/components/VotesFilter";
 
 export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	validators,
@@ -24,6 +25,12 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	onContinue,
 	subtitle,
 	searchQuery,
+	setSearchQuery,
+	selectedFilter,
+	setSelectedFilter,
+	totalCurrentVotes = 0,
+	selectedAddress,
+	...properties
 }) => {
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +38,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	const [selectedVotes, setSelectedVotes] = useState<VoteValidatorProperties[]>(voteValidators);
 	const [isVoteDisabled, setIsVoteDisabled] = useState(false);
 	const [availableBalance, setAvailableBalance] = useState(selectedWallet.balance());
-	const { isXs } = useBreakpoint();
+	const { isMdAndAbove } = useBreakpoint();
 
 	const columns = useValidatorsTableColumns({ isLoading, network: selectedWallet.network() });
 
@@ -189,7 +196,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				voted = votes.find(({ wallet }) => wallet?.address() === validator?.address?.());
 			}
 
-			const View = isXs ? ValidatorRowMobile : ValidatorRow;
+			const View = isMdAndAbove ? ValidatorRow : ValidatorRowMobile;
 
 			return (
 				<View
@@ -220,45 +227,82 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 			toggleUnvotesSelected,
 			toggleVotesSelected,
 			hasVotes,
-			isXs,
+			isMdAndAbove,
 		],
 	);
 
-	if (!isLoading && totalValidators === 0) {
+	const footer = useMemo(() => {
+		if (isLoading || totalValidators > 0) {
+			return null;
+		}
+
 		return (
-			<EmptyResults
-				className="mt-16"
-				title={t("COMMON.EMPTY_RESULTS.TITLE")}
-				subtitle={t("VOTE.VOTES_PAGE.NO_RESULTS")}
+			<tr
+				data-testid="EmptyResults"
+				className="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+			>
+				<td colSpan={columns.length} className="pb-4 pt-[11px]">
+					<div className="flex flex-col items-center justify-center">
+						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+							{t("COMMON.EMPTY_RESULTS.TITLE")}
+						</h3>
+						<p className="text-sm text-theme-secondary-700 dark:text-theme-secondary-600">
+							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+						</p>
+					</div>
+				</td>
+			</tr>
+		);
+	}, [t, isLoading, totalValidators]);
+
+	const extra = useMemo(() => {
+		if (selectedAddress == undefined) {
+			return <></>;
+		}
+
+		return (
+			<VotesFilter
+				totalCurrentVotes={totalCurrentVotes}
+				selectedOption={selectedFilter}
+				onChange={setSelectedFilter}
 			/>
 		);
-	}
+	}, [selectedAddress, selectedFilter, setSelectedFilter, totalCurrentVotes]);
 
 	return (
-		<div data-testid="ValidatorsTable">
+		<div data-testid="ValidatorsTable" className="pb-10 sm:pb-16 md:pb-24 lg:pb-24">
 			{!!subtitle && subtitle}
 
-			<Table
-				className="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
-				columns={columns}
-				data={tableData}
-				rowsPerPage={validatorsPerPage}
-				currentPage={currentPage}
-				hideHeader={isXs}
+			<SearchableTableWrapper
+				searchQuery={searchQuery}
+				setSearchQuery={setSearchQuery}
+				searchPlaceholder={t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER")}
+				extra={extra}
+				{...properties}
 			>
-				{renderTableRow}
-			</Table>
+				<Table
+					className="with-x-padding"
+					columns={columns}
+					data={tableData}
+					rowsPerPage={validatorsPerPage}
+					currentPage={currentPage}
+					hideHeader={!isMdAndAbove}
+					footer={footer}
+				>
+					{renderTableRow}
+				</Table>
+			</SearchableTableWrapper>
 
-			<div className="mt-8 flex w-full justify-center">
-				{hasMoreValidators && (
+			{hasMoreValidators && (
+				<div className="mt-8 flex w-full justify-center px-6 md:px-10">
 					<Pagination
 						totalCount={totalValidators}
 						itemsPerPage={validatorsPerPage}
 						currentPage={currentPage}
 						onSelectPage={handleSelectPage}
 					/>
-				)}
-			</div>
+				</div>
+			)}
 
 			<ValidatorFooter
 				selectedWallet={selectedWallet}

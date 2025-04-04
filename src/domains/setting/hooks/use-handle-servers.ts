@@ -22,7 +22,6 @@ const useHandleServers = ({
 	address: string;
 	network?: Networks.Network;
 	addressIsValid: boolean;
-	// eslint-disable-next-line sonarjs/cognitive-complexity
 }) => {
 	const [networkMismatch, setNetworkMismatch] = useState(false);
 	const [fetchingDetails, setFetchingDetails] = useState(false);

@@ -8,7 +8,6 @@ import { Votes } from "./Votes";
 import { useProfileStatusWatcher } from "@/app/hooks";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
@@ -16,9 +15,11 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
+import { expect } from "vitest";
 
 const history = createHashHistory();
 
@@ -31,13 +32,13 @@ let resetProfileNetworksMock: () => void;
 const routePath = "/profiles/:profileId/votes";
 
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
-const walletID = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
+const walletID = "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28";
 
 const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return children;
@@ -58,16 +59,21 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
+const searchInputID = "SearchableTableWrapper__search-input";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().findById(walletID);
 		blankWallet = profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
+				coin: "Mainsail",
 				mnemonic: blankWalletPassphrase,
-				network: "ark.devnet",
+				network: "mainsail.devnet",
 			}),
 		);
 
@@ -80,7 +86,7 @@ describe("Votes", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
 		server.use(
 			requestMock(
@@ -130,136 +136,13 @@ describe("Votes", () => {
 		currentMock.mockRestore();
 	});
 
-	it("should render with no wallets", () => {
-		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
-		expect(screen.queryByTestId("HeaderSearchBar__button")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should toggle network selection from network filters", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		const toggle = screen.getByTestId("NetworkOption__ark.devnet");
-
-		await waitFor(() => expect(toggle).toBeInTheDocument());
-		await userEvent.click(toggle);
-
-		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
-
-		await waitFor(() => expect(toggle).toBeInTheDocument());
-		await userEvent.click(toggle);
-
-		await expect(screen.findByTestId("AddressTable")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render network selection with sorted network filters", async () => {
-		const profile = await env.profiles().create("test");
-		await env.profiles().restore(profile);
-
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.devnet",
-		});
-		profile.wallets().push(arkWallet);
-		await env.wallets().syncByProfile(profile);
-
-		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
-
-		expect(screen.getAllByTestId("AddressTable")).toHaveLength(1);
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-
-		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getByTestId("NetworkOption__ark.devnet").querySelector("svg#ark")).toBeInTheDocument();
-
-		resetProfileNetworksMock();
-	});
-
-	it("should select starred option in the wallets display type", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
-		);
-
-		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
-		await userEvent.click(toggle);
-
-		await expect(screen.findByTestId("filter-wallets__wallets")).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("dropdown__option--1")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--1"));
-
-		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should select ledger option in the wallets display type", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment, container } = renderPage(route, routePath);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
-		);
-
-		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
-		await userEvent.click(toggle);
-
-		await expect(screen.findByTestId("filter-wallets__wallets")).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("dropdown__option--2")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--2"));
-
-		expect(screen.queryByTestId("AddressTable")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should filter current delegates", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 					explorerLink: "",
 					governanceIdentifier: "address",
 					isDelegate: true,
@@ -292,7 +175,7 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to create page", async () => {
+	it("should open the create wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 
@@ -300,11 +183,12 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Create/ }));
 
-		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/create`);
+		expect(screen.getByTestId("CreateAddressSidePanel")).toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to import wallet page", async () => {
+	it("should open the import wallet side panel", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 
@@ -312,7 +196,7 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Import/ }));
 
-		expect(history.location.pathname).toBe(`/profiles/${emptyProfile.id()}/wallets/import`);
+		expect(screen.getByTestId("ImportAddressSidePanel")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -339,7 +223,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -368,7 +252,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -427,7 +311,7 @@ describe("Votes", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 					explorerLink: "",
 					governanceIdentifier: "address",
 					isDelegate: true,
@@ -530,7 +414,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
@@ -567,15 +451,13 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.type(searchInput, "0xcd15953");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -586,43 +468,15 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "ARK Wallet 2");
+		await userEvent.type(searchInput, "Mainsail Wallet 1");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-	});
-
-	it("should reset wallet search", async () => {
-		const route = `/profiles/${profile.id()}/votes`;
-		renderPage(route, routePath);
-
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
-
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
-		await waitFor(() => expect(searchInput).toBeInTheDocument());
-
-		// Search by wallet alias
-		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "non existent wallet name");
-
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
-
-		// Reset search
-		await userEvent.click(screen.getByTestId("header-search-bar__reset"));
-
-		await waitFor(() => expect(searchInput).not.toHaveValue());
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
 	it("should show resigned validator notice", async () => {
@@ -631,7 +485,7 @@ describe("Votes", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 					explorerLink: "",
 					governanceIdentifier: "address",
 					isDelegate: true,
@@ -658,17 +512,15 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(53));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "DBk4cPYpqp7EBc");
+		await userEvent.type(searchInput, "0x1Bf9cf8a006");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -679,17 +531,15 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("ValidatorsTable")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(53));
 
-		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		await expect(screen.findByTestId(searchInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
-
-		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		const searchInput = within(screen.getByTestId(searchInputID)).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		await userEvent.clear(searchInput);
-		await userEvent.type(searchInput, "itsanametoo");
+		await userEvent.type(searchInput, "vault_test_address");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});

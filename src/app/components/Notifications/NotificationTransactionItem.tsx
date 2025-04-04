@@ -46,13 +46,12 @@ export const NotificationTransactionItem = ({
 	return (
 		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)} className="relative">
-				<TableCell variant="start" className="w-2/5" innerClassName="pl-8 static">
+				<TableCell variant="start" className="w-2/5" innerClassName="pl-6 static mx-0">
 					{isNotificationUnread(transaction) && (
-						<div className="absolute bottom-0 left-4 top-0 flex items-center">
+						<div className="absolute bottom-0 left-2 top-0 flex items-center">
 							<div className="h-2 w-2 rounded-full bg-theme-danger-400" />
 						</div>
 					)}
-					<div className="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900" />
 					<div className="w-20 flex-1">
 						<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 					</div>
@@ -62,7 +61,7 @@ export const NotificationTransactionItem = ({
 					{timestamp && <TimeAgo date={timestamp.toISOString()} />}
 				</TableCell>
 
-				<TableCell innerClassName="justify-end pr-8 static">
+				<TableCell innerClassName="justify-end pr-6 static">
 					<div className="h-5">
 						<AmountLabel
 							value={transaction.amount()}

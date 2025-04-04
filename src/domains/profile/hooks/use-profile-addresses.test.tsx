@@ -2,22 +2,24 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 
 import { useProfileAddresses } from "./use-profile-addresses";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("useProfileAddresses", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		profile
 			.contacts()
 			.last()
 			.setAddresses([
 				{
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					coin: "ARK",
-					network: "ark.devnet",
+					address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+					coin: "Mainsail",
+					network: "mainsail.devnet",
 				},
 			]);
 
@@ -28,8 +30,8 @@ describe("useProfileAddresses", () => {
 	it("should return all available addresses", () => {
 		const { result } = renderHook(() => useProfileAddresses({ profile }));
 
-		expect(result.current.allAddresses).toHaveLength(6);
-		expect(result.current.contactAddresses).toHaveLength(4);
+		expect(result.current.allAddresses).toHaveLength(3);
+		expect(result.current.contactAddresses).toHaveLength(1);
 		expect(result.current.profileAddresses).toHaveLength(2);
 	});
 
@@ -50,22 +52,22 @@ describe("useProfileAddresses", () => {
 	it("should return unique addresses", () => {
 		const { result, rerender } = renderHook(() => useProfileAddresses({ profile }));
 
-		expect(result.current.allAddresses).toHaveLength(6);
+		expect(result.current.allAddresses).toHaveLength(3);
 
-		expect(profile.contacts().values()).toHaveLength(2);
+		expect(profile.contacts().values()).toHaveLength(1);
 
 		profile.contacts().create("New name", [
 			{
-				address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-				coin: "ARK",
-				network: "ark.devnet",
+				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+				coin: "Mainsail",
+				network: "mainsail.devnet",
 			},
 		]);
 
-		expect(profile.contacts().values()).toHaveLength(3);
+		expect(profile.contacts().values()).toHaveLength(2);
 
 		rerender();
 
-		expect(result.current.allAddresses).toHaveLength(6);
+		expect(result.current.allAddresses).toHaveLength(4);
 	});
 });

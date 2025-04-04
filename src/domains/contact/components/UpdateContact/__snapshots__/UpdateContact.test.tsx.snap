@@ -70,7 +70,7 @@ exports[`UpdateContact > should render responsive 1`] = `
               class="mt-8"
             >
               <form
-                class="space-y-0"
+                class="space-y-5"
                 data-testid="contact-form"
               >
                 <fieldset
@@ -100,172 +100,34 @@ exports[`UpdateContact > should render responsive 1`] = `
                     </div>
                   </div>
                 </fieldset>
-                <div
-                  class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
+                <fieldset
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  data-testid="ContactForm__address"
                 >
-                  <fieldset
-                    class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                    data-testid="ContactForm__address"
+                  <label
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                    data-testid="FormLabel"
+                    for="address"
                   >
-                    <label
-                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                      data-testid="FormLabel"
-                      for="address"
-                    >
-                      Address
-                    </label>
-                    <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                    >
-                      <div
-                        class="relative flex h-full flex-1"
-                      >
-                        <input
-                          autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                          data-testid="contact-form__address-input"
-                          name="address"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </fieldset>
+                    Address
+                  </label>
                   <div
-                    class="mt-4"
-                  >
-                    <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full"
-                      data-testid="contact-form__add-address-btn"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Add Address
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="group"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      data-testid="contact-form__address-list"
+                      class="relative flex h-full flex-1"
                     >
-                      <div
-                        class="mt-2 flex items-center justify-between overflow-hidden rounded border border-theme-secondary-300 bg-white first:mt-0 last:pb-0 dark:border-theme-secondary-800 dark:bg-black sm:mt-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-t sm:border-dashed sm:bg-transparent sm:py-3 dark:sm:bg-transparent"
-                        data-testid="contact-form__address-list-item"
-                      >
-                        <div
-                          class="w-full min-w-0"
-                        >
-                          <div
-                            class="flex items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-                          >
-                            <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
-                              data-testid="contact-form__remove-address-btn-xs"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center space-x-2"
-                              >
-                                <div>
-                                  <div
-                                    style="height: 20px; width: 20px;"
-                                  >
-                                    <svg
-                                      id="trash"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      >
-                                        <path
-                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </button>
-                          </div>
-                          <div
-                            class="px-4 pb-4 pt-3 sm:p-0"
-                          >
-                            <div
-                              class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
-                            >
-                              Address
-                            </div>
-                            <span
-                              class="flex-1 truncate font-semibold"
-                            >
-                              <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-5 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                </span>
-                              </div>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 hidden items-center p-3.5 sm:flex"
-                          data-testid="contact-form__remove-address-btn"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
-                          >
-                            <div>
-                              <div
-                                style="height: 16px; width: 16px;"
-                              >
-                                <svg
-                                  id="trash"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  >
-                                    <path
-                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
+                      <input
+                        autocomplete="off"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                        data-testid="contact-form__address-input"
+                        name="address"
+                        type="text"
+                        value=""
+                      />
                     </div>
                   </div>
-                </div>
+                </fieldset>
                 <div
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-between"
                 >
@@ -273,7 +135,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                     class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -376,7 +238,7 @@ exports[`UpdateContact > should render responsive 2`] = `
               class="mt-8"
             >
               <form
-                class="space-y-0"
+                class="space-y-5"
                 data-testid="contact-form"
               >
                 <fieldset
@@ -406,172 +268,34 @@ exports[`UpdateContact > should render responsive 2`] = `
                     </div>
                   </div>
                 </fieldset>
-                <div
-                  class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
+                <fieldset
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  data-testid="ContactForm__address"
                 >
-                  <fieldset
-                    class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                    data-testid="ContactForm__address"
+                  <label
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                    data-testid="FormLabel"
+                    for="address"
                   >
-                    <label
-                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                      data-testid="FormLabel"
-                      for="address"
-                    >
-                      Address
-                    </label>
-                    <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                    >
-                      <div
-                        class="relative flex h-full flex-1"
-                      >
-                        <input
-                          autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                          data-testid="contact-form__address-input"
-                          name="address"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </fieldset>
+                    Address
+                  </label>
                   <div
-                    class="mt-4"
-                  >
-                    <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full"
-                      data-testid="contact-form__add-address-btn"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Add Address
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="group"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      data-testid="contact-form__address-list"
+                      class="relative flex h-full flex-1"
                     >
-                      <div
-                        class="mt-2 flex items-center justify-between overflow-hidden rounded border border-theme-secondary-300 bg-white first:mt-0 last:pb-0 dark:border-theme-secondary-800 dark:bg-black sm:mt-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-t sm:border-dashed sm:bg-transparent sm:py-3 dark:sm:bg-transparent"
-                        data-testid="contact-form__address-list-item"
-                      >
-                        <div
-                          class="w-full min-w-0"
-                        >
-                          <div
-                            class="flex items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-                          >
-                            <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
-                              data-testid="contact-form__remove-address-btn-xs"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center space-x-2"
-                              >
-                                <div>
-                                  <div
-                                    style="height: 20px; width: 20px;"
-                                  >
-                                    <svg
-                                      id="trash"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      >
-                                        <path
-                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </button>
-                          </div>
-                          <div
-                            class="px-4 pb-4 pt-3 sm:p-0"
-                          >
-                            <div
-                              class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
-                            >
-                              Address
-                            </div>
-                            <span
-                              class="flex-1 truncate font-semibold"
-                            >
-                              <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-5 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                </span>
-                              </div>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 hidden items-center p-3.5 sm:flex"
-                          data-testid="contact-form__remove-address-btn"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
-                          >
-                            <div>
-                              <div
-                                style="height: 16px; width: 16px;"
-                              >
-                                <svg
-                                  id="trash"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  >
-                                    <path
-                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
+                      <input
+                        autocomplete="off"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                        data-testid="contact-form__address-input"
+                        name="address"
+                        type="text"
+                        value=""
+                      />
                     </div>
                   </div>
-                </div>
+                </fieldset>
                 <div
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-between"
                 >
@@ -619,7 +343,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                     class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -727,7 +451,7 @@ exports[`UpdateContact > should render responsive 3`] = `
               class="mt-8"
             >
               <form
-                class="space-y-0"
+                class="space-y-5"
                 data-testid="contact-form"
               >
                 <fieldset
@@ -757,172 +481,34 @@ exports[`UpdateContact > should render responsive 3`] = `
                     </div>
                   </div>
                 </fieldset>
-                <div
-                  class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
+                <fieldset
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  data-testid="ContactForm__address"
                 >
-                  <fieldset
-                    class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
-                    data-testid="ContactForm__address"
+                  <label
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                    data-testid="FormLabel"
+                    for="address"
                   >
-                    <label
-                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
-                      data-testid="FormLabel"
-                      for="address"
-                    >
-                      Address
-                    </label>
-                    <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                    >
-                      <div
-                        class="relative flex h-full flex-1"
-                      >
-                        <input
-                          autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
-                          data-testid="contact-form__address-input"
-                          name="address"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </fieldset>
+                    Address
+                  </label>
                   <div
-                    class="mt-4"
-                  >
-                    <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full"
-                      data-testid="contact-form__add-address-btn"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Add Address
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    class="group"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      data-testid="contact-form__address-list"
+                      class="relative flex h-full flex-1"
                     >
-                      <div
-                        class="mt-2 flex items-center justify-between overflow-hidden rounded border border-theme-secondary-300 bg-white first:mt-0 last:pb-0 dark:border-theme-secondary-800 dark:bg-black sm:mt-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-t sm:border-dashed sm:bg-transparent sm:py-3 dark:sm:bg-transparent"
-                        data-testid="contact-form__address-list-item"
-                      >
-                        <div
-                          class="w-full min-w-0"
-                        >
-                          <div
-                            class="flex items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-                          >
-                            <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
-                              data-testid="contact-form__remove-address-btn-xs"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center space-x-2"
-                              >
-                                <div>
-                                  <div
-                                    style="height: 20px; width: 20px;"
-                                  >
-                                    <svg
-                                      id="trash"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      >
-                                        <path
-                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </button>
-                          </div>
-                          <div
-                            class="px-4 pb-4 pt-3 sm:p-0"
-                          >
-                            <div
-                              class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
-                            >
-                              Address
-                            </div>
-                            <span
-                              class="flex-1 truncate font-semibold"
-                            >
-                              <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                              >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-5 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                </span>
-                              </div>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 hidden items-center p-3.5 sm:flex"
-                          data-testid="contact-form__remove-address-btn"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
-                          >
-                            <div>
-                              <div
-                                style="height: 16px; width: 16px;"
-                              >
-                                <svg
-                                  id="trash"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  >
-                                    <path
-                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
+                      <input
+                        autocomplete="off"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                        data-testid="contact-form__address-input"
+                        name="address"
+                        type="text"
+                        value=""
+                      />
                     </div>
                   </div>
-                </div>
+                </fieldset>
                 <div
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-between"
                 >
@@ -970,7 +556,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                     class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >

@@ -11,94 +11,77 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -106,10 +89,10 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -122,7 +105,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -156,60 +139,25 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-danger-400"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-cross"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M7 13l6-6M13 13L7 7"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -232,94 +180,77 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -327,10 +258,10 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -343,7 +274,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -377,60 +308,25 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-danger-400"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-cross"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M7 13l6-6M13 13L7 7"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -451,94 +347,77 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -546,7 +425,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -562,7 +441,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -596,60 +475,25 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-primary-600"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-check-mark"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -671,94 +515,77 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -766,7 +593,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -782,7 +609,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -816,60 +643,25 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-primary-600"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-check-mark"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -891,94 +683,77 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -986,7 +761,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -1002,7 +777,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -1036,60 +811,25 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-primary-600"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-check-mark"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -1110,94 +850,77 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -1205,7 +928,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -1221,7 +944,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -1255,60 +978,25 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-primary-600"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-check-mark"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -1329,94 +1017,77 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -1424,10 +1095,10 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1440,7 +1111,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -1474,60 +1145,25 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-danger-400"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-cross"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M7 13l6-6M13 13L7 7"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -1539,111 +1175,90 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
+            >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              />
+              <div
+                class="flex items-center gap-3"
+              >
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-1"
+                  disabled=""
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-                  />
+                </div>
+                <div>
                   <span
-                    class="text-theme-secondary-400"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
                   >
                     N/A
                   </span>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-                  />
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-1"
-                disabled=""
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                  >
+                    N/A
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -1664,94 +1279,77 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -1759,10 +1357,10 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                        href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1775,7 +1373,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -1809,60 +1407,25 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-danger-400"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-cross"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M7 13l6-6M13 13L7 7"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -1874,111 +1437,90 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
+            >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              />
+              <div
+                class="flex items-center gap-3"
+              >
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-1"
+                  disabled=""
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
+                      0x7F9d7FdA68521c09Bd2749a36514e514abB0866F
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-                  />
+                </div>
+                <div>
                   <span
-                    class="text-theme-secondary-400"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
                   >
                     N/A
                   </span>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-                  />
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-1"
-                disabled=""
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                  >
+                    N/A
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -1999,117 +1541,92 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
+            >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
+              <div
+                class="flex items-center gap-3"
+              >
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
             >
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                </div>
+                <div>
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
                     data-testid="AddressRowMobile--nowallet"
-                  />
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-                  />
+                  >
+                    N/A
+                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <span
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                  >
+                    N/A
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -2130,94 +1647,77 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500 sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Active
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -2225,7 +1725,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -2241,7 +1741,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -2275,60 +1775,25 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-primary-600"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-check-mark"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Active
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -2349,94 +1814,77 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Resigned
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -2444,7 +1892,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -2460,7 +1908,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -2494,60 +1942,25 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-danger-400"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="circle-cross"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="9"
-                              stroke-miterlimit="10"
-                            />
-                            <path
-                              d="M7 13l6-6M13 13L7 7"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Resigned
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>
@@ -2568,94 +1981,77 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
           class="pt-3"
         >
           <div
-            class="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="mobile-table-element"
           >
             <div
-              class="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800"
+              class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+              data-testid="mobile-table-element-header"
             >
+              <span
+                class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+              >
+                Mainsail Wallet 1
+              </span>
               <div
-                class="flex items-center justify-start space-x-3 overflow-hidden"
+                class="flex items-center gap-3"
               >
                 <div
-                  class="flex w-0 flex-1 overflow-hidden"
+                  class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text sm:hidden"
+                  data-testid="AddressRowMobile__wallet-status-0"
                 >
+                  Standby
+                </div>
+                <span
+                  class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden"
+                />
+                <button
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                  data-testid="AddressRowMobile__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid gap-4 px-4 py-3 sm:grid-cols-3"
+              data-testid="mobile-table-element-body"
+            >
+              <div
+                class="grid grid-cols-1 gap-2"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                >
+                  Address
+                </div>
+                <div>
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 1
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
-                      >
-                        <div
-                          style="height: 16px; width: 16px;"
-                        >
-                          <svg
-                            id="copy"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex"
-            >
               <div
-                class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
+                class="grid grid-cols-1 gap-2"
               >
-                <span
-                  class="font-semibold leading-[17px] text-theme-secondary-500"
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting for
-                </span>
-                <div
-                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
-                >
+                </div>
+                <div>
                   <div
                     class="flex items-center"
                   >
@@ -2663,7 +2059,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center [&_svg]:hidden"
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
@@ -2679,7 +2075,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              arkx
+                              D61mfSg…qJ3Dyib
                             </span>
                           </div>
                         </span>
@@ -2713,61 +2109,25 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                       </a>
                     </div>
                   </div>
-                  <div
-                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-                  />
-                  <span>
-                    <div
-                      class="text-theme-warning-300"
-                      data-testid="StatusIcon__icon"
-                    >
-                      <div
-                        style="height: 16px; width: 16px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
-                          >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </span>
                 </div>
               </div>
-              <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 rounded-none px-5 py-6"
-                data-testid="AddressRowMobile__select-0"
-                type="button"
+              <div
+                class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="flex items-center space-x-2"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 >
-                  Vote
+                  Validator Status
                 </div>
-              </button>
+                <div>
+                  <div
+                    class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                    data-testid="AddressRow__wallet-status"
+                  >
+                    Standby
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </td>

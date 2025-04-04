@@ -3,18 +3,18 @@
 exports[`Avatar > should render with profile image 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
     data-testid="Avatar"
   >
     <div
       class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
-        alt="John Doe"
+        alt="Foo Bar"
         class="h-20 w-20 rounded bg-cover bg-center bg-no-repeat object-cover"
         data-testid="ProfileAvatar__image"
         src="avatarImage"
-        title="John Doe"
+        title="Foo Bar"
       />
     </div>
   </div>
@@ -24,22 +24,22 @@ exports[`Avatar > should render with profile image 1`] = `
 exports[`Avatar > should render with svg 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
     data-testid="Avatar"
   >
     <div
       class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
-        alt="John Doe"
+        alt="Foo Bar"
         data-testid="ProfileAvatar__svg"
-        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-        title="John Doe"
+        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+        title="Foo Bar"
       />
       <span
         class="absolute font-semibold text-white"
       >
-        JO
+        FO
       </span>
     </div>
   </div>

@@ -13,6 +13,7 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
+import { isUnit } from "@/utils/test-helpers";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -40,7 +41,7 @@ export const SidePanel = ({
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
 		outsidePress: (event) => !(event.target as HTMLElement).closest(".Toastify"),
-		outsidePressEvent: "mousedown",
+		outsidePressEvent: "pointerdown",
 	});
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
@@ -69,17 +70,20 @@ export const SidePanel = ({
 			<FloatingPortal>
 				{isMounted && (
 					<>
-						<div className="fixed inset-0 z-40 bg-[#212225] bg-opacity-10 backdrop-blur-xl dark:bg-[#101627] dark:bg-opacity-10" />
+						<div className="fixed inset-0 z-40 bg-[#212225] bg-opacity-10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
 						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
-							<FloatingFocusManager context={context}>
+							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
 									data-testid={dataTestId}
 									className="Dialog"
 									ref={refs.setFloating}
 									{...getFloatingProps()}
 								>
-									<div style={{ ...styles }} className={cn("fixed right-0 top-0", className)}>
-										<div className="custom-scroll h-screen w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:w-[608px] md:p-8">
+									<div
+										style={{ ...styles }}
+										className={cn("fixed right-0 top-0 w-full md:w-[608px]", className)}
+									>
+										<div className="custom-scroll h-dvh w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8">
 											<div className="relative mb-4 flex items-start justify-between">
 												{typeof header === "string" ? (
 													<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">

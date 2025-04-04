@@ -1,13 +1,14 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import React from "react";
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Trans, useTranslation } from "react-i18next";
-import { generatePath } from "react-router-dom";
-import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
+
 import { ProfilePaths } from "@/router/paths";
+import React from "react";
+import { generatePath } from "react-router-dom";
+import { truncate } from "@/app/lib/helpers";
 
 interface RequiredParameters {
 	network?: string;
@@ -59,6 +60,14 @@ const defaultNetworks = {
 	"ark.mainnet": {
 		displayName: "ARK",
 		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+	},
+	"mainsail.devnet": {
+		displayName: "Mainsail Devnet",
+		nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+	},
+	"mainsail.mainnet": {
+		displayName: "Mainsail",
+		nethash: "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 	},
 };
 
@@ -245,7 +254,7 @@ export const useSearchParametersValidation = () => {
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
-		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
+		const coin = parameters.get("coin")?.toUpperCase() || "Mainsail";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
@@ -262,7 +271,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
-		if (!allEnabledNetworks.some((item) => item.coin() === coin)) {
+		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
 			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 

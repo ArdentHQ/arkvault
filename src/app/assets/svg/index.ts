@@ -56,6 +56,7 @@ import Grid from "./grid.svg?react";
 import HintSmall from "./hint-small.svg?react";
 import Ledger from "./ledger.svg?react";
 import LedgerAlt from "./ledger-alt.svg?react";
+import LedgerImport from "./ledger-import.svg?react";
 import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
@@ -102,6 +103,12 @@ import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
+import VotesDark from "./votes-dark.svg?react";
+import VotesLight from "./votes-light.svg?react";
+import ExchangesDark from "./exchanges-dark.svg?react";
+import ExchangesLight from "./exchanges-light.svg?react";
+import ContactsDark from "./contacts-dark.svg?react";
+import ContactsLight from "./contacts-light.svg?react";
 import Completed from "./completed.svg?react";
 import YourPassphraseLight from "./your-passphrase-light.svg?react";
 import YourPassphraseDark from "./your-passphrase-dark.svg?react";
@@ -114,6 +121,8 @@ import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
 import MarkedTrash from "./marked-trash.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
+import SettingsDark from "./settings-dark.svg?react";
+import SettingsLight from "./settings-light.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -146,6 +155,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Code,
 	Completed,
 	ConfirmYourPassphrase,
+	ContactsDark,
+	ContactsLight,
 	Contract,
 	Copy,
 	CopyKey,
@@ -160,6 +171,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Download,
 	EllipsisVertical,
 	EllipsisVerticalFilled,
+	ExchangesDark,
+	ExchangesLight,
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWweDark,
@@ -183,6 +196,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ImportWalletLight,
 	Ledger,
 	LedgerAlt,
+	LedgerImport,
 	LedgerImportMethod,
 	List,
 	LoaderLogo,
@@ -211,6 +225,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Server,
 	ServerMultisign,
 	ServerPeer,
+	SettingsDark,
+	SettingsLight,
 	ShieldCheckMark,
 	Sliders,
 	SlidersVertical,
@@ -225,6 +241,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	VotesDark,
+	VotesLight,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
 	YourPassphraseDark,

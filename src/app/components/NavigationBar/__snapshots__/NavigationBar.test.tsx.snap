@@ -572,13 +572,13 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -617,6 +617,16 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -626,32 +636,22 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -1294,13 +1294,13 @@ exports[`NavigationBar > should render full variant when profile restored is fal
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -1339,6 +1339,16 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -1348,32 +1358,22 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -1963,13 +1963,13 @@ exports[`NavigationBar > should render full variant when profile restored is tru
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -2008,6 +2008,16 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -2017,32 +2027,22 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -2634,13 +2634,13 @@ exports[`NavigationBar > should render in lg 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -2679,6 +2679,16 @@ exports[`NavigationBar > should render in lg 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -2688,32 +2698,22 @@ exports[`NavigationBar > should render in lg 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -3305,13 +3305,13 @@ exports[`NavigationBar > should render in md 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -3350,6 +3350,16 @@ exports[`NavigationBar > should render in md 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -3359,32 +3369,22 @@ exports[`NavigationBar > should render in md 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -3976,13 +3976,13 @@ exports[`NavigationBar > should render in sm 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -4021,6 +4021,16 @@ exports[`NavigationBar > should render in sm 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -4030,32 +4040,22 @@ exports[`NavigationBar > should render in sm 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -4647,13 +4647,13 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -4692,6 +4692,16 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -4701,32 +4711,22 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -5318,13 +5318,13 @@ exports[`NavigationBar > should render in xs 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -5363,6 +5363,16 @@ exports[`NavigationBar > should render in xs 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -5372,32 +5382,22 @@ exports[`NavigationBar > should render in xs 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -5989,13 +5989,13 @@ exports[`NavigationBar > should render with custom menu 1`] = `
             class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
           />
           <div
-            class="flex items-center gap-2"
+            class="flex items-center gap-5"
           >
             <div
               class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -6034,6 +6034,16 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                       </svg>
                     </div>
                   </div>
+                  <div
+                    class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0 BTC
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -6043,32 +6053,22 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               data-testid="dropdown__toggle"
             >
               <button
-                class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
               >
                 <div
-                  class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
-                >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 BTC
-                  </span>
-                </div>
-                <div
-                  class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                  class="relative cursor-pointer items-center justify-center rounded align-middle"
                   data-testid="UserMenu"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"

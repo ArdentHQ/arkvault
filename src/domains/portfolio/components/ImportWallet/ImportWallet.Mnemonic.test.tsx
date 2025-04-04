@@ -6,29 +6,30 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	MNEMONICS,
 	render,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	MAINSAIL_MNEMONICS,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 
 let profile: Contracts.IProfile;
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 
-const identityAddress = "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P";
-const mnemonic = "buddy year cost vendor honey tonight viable nut female alarm duck symptom";
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+const identityAddress = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
+const mnemonic = MAINSAIL_MNEMONICS[1];
+const randomAddress = "0x659A76be283644AEc2003aa8ba26485047fd1BFB";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
-const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
+const toggleEncryptionCheckbox = () => userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
@@ -37,9 +38,11 @@ const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 
-const errorText = "data-errortext";
 const password = "S3cUrePa$sword";
-const testNetwork = "ark.devnet";
+const testNetwork = "mainsail.devnet";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
@@ -139,12 +142,12 @@ describe("ImportAddress", () => {
 		expect(mnemonicInput()).toBeInTheDocument();
 
 		await userEvent.clear(mnemonicInput());
-		await userEvent.type(mnemonicInput(), MNEMONICS[3]);
+		await userEvent.type(mnemonicInput(), MAINSAIL_MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
-
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {
@@ -192,11 +195,12 @@ describe("ImportAddress", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked();
+		expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked();
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeChecked());
+		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeChecked());
 
 		await userEvent.click(screen.getByText(commonTranslations.BACK));
 
@@ -208,109 +212,112 @@ describe("ImportAddress", () => {
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked());
+		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked());
 	});
 
-	it("should import by mnemonic with second signature and use password to encrypt both", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		expect(mnemonicInput()).toBeInTheDocument();
-
-		await userEvent.clear(mnemonicInput());
-		await userEvent.type(mnemonicInput(), MNEMONICS[0]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		enableEncryptionToggle();
-
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		});
-
-		await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
-		await userEvent.type(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
-
-		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(successStep()).toBeInTheDocument();
-		});
-	});
-
-	it("should show an error message for invalid second mnemonic", async () => {
-		const walletId = profile
-			.wallets()
-			.findByAddressWithNetwork("DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", testNetwork)
-			?.id();
-		if (walletId) {
-			profile.wallets().forget(walletId);
-		}
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-				withProviders: true,
-			},
-		);
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		await userEvent.clear(mnemonicInput());
-		await userEvent.type(mnemonicInput(), MNEMONICS[0]);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		enableEncryptionToggle();
-
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
-		});
-
-		await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
-		await userEvent.type(
-			screen.getByTestId("EncryptPassword__second-mnemonic"),
-			"invalid second mnemonic fjdkfjdkjfkdjf",
-		);
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-				errorText,
-				walletTranslations.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC,
-			);
-		});
-	});
+	// @TODO enable it when we have 2nd signature implemented
+	// it("should import by mnemonic with second signature and use password to encrypt both", async () => {
+	// 	render(
+	// 		<Route path="/profiles/:profileId/dashboard">
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+	// 		</Route>,
+	// 		{
+	// 			route: route,
+	// 		},
+	// 	);
+	//
+	// 	expect(methodStep()).toBeInTheDocument();
+	//
+	// 	await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+	//
+	// 	await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+	//
+	// 	expect(detailStep()).toBeInTheDocument();
+	//
+	// 	expect(mnemonicInput()).toBeInTheDocument();
+	//
+	// 	await userEvent.clear(mnemonicInput());
+	// 	await userEvent.type(mnemonicInput(), MAINSAIL_MNEMONICS[0]);
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await enableEncryptionToggle();
+	// 	await toggleEncryptionCheckbox();
+	//
+	// 	await userEvent.click(continueButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+	// 	});
+	//
+	// 	await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
+	// 	await userEvent.type(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
+	//
+	// 	await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+	// 	await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+	// 	await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+	// 	await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	// 	await userEvent.click(continueButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(successStep()).toBeInTheDocument();
+	// 	});
+	// });
+	//
+	// it("should show an error message for invalid second mnemonic", async () => {
+	// 	const walletId = profile
+	// 		.wallets()
+	// 		.findByAddressWithNetwork("0x659A76be283644AEc2003aa8ba26485047fd1BFB", testNetwork)
+	// 		?.id();
+	// 	if (walletId) {
+	// 		profile.wallets().forget(walletId);
+	// 	}
+	//
+	// 	render(
+	// 		<Route path="/profiles/:profileId/dashboard">
+	// 			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+	// 		</Route>,
+	// 		{
+	// 			route: route,
+	// 			withProviders: true,
+	// 		},
+	// 	);
+	//
+	// 	expect(methodStep()).toBeInTheDocument();
+	//
+	// 	await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+	//
+	// 	await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+	//
+	// 	expect(detailStep()).toBeInTheDocument();
+	//
+	// 	await userEvent.clear(mnemonicInput());
+	// 	await userEvent.type(mnemonicInput(), MAINSAIL_MNEMONICS[0]);
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await enableEncryptionToggle();
+	// 	await toggleEncryptionCheckbox();
+	//
+	// 	await userEvent.click(continueButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+	// 	});
+	//
+	// 	await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
+	// 	await userEvent.type(
+	// 		screen.getByTestId("EncryptPassword__second-mnemonic"),
+	// 		"invalid second mnemonic fjdkfjdkjfkdjf",
+	// 	);
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
+	// 			errorText,
+	// 			walletTranslations.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC,
+	// 		);
+	// 	});
+	// });
 });

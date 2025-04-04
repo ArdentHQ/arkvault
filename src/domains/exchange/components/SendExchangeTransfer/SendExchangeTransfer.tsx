@@ -1,26 +1,26 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-
-import { Modal } from "@/app/components/Modal";
-import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useFees, useValidation } from "@/app/hooks";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useFees, useValidation } from "@/app/hooks";
+
 import { Address } from "@/app/components/Address";
-import { Networks } from "@ardenthq/sdk";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
-import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
-import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
-import { useLedgerContext } from "@/app/contexts";
-import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
-import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import { BigNumber } from "@/app/lib/helpers";
+import { Button } from "@/app/components/Button";
 import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
+import { Modal } from "@/app/components/Modal";
+import { Networks } from "@ardenthq/sdk";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
+import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { useLedgerContext } from "@/app/contexts";
+import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
+import { useTranslation } from "react-i18next";
 
 interface TransferProperties {
 	onClose: () => void;

@@ -7,56 +7,31 @@ import { Route } from "react-router-dom";
 import { Dashboard } from "./Dashboard";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
-
-import { requestMock, server } from "@/tests/mocks/server";
-import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-// @TODO: Enable & refactor transaction & network tests once mainsail coin support will be completed.
-//        See https://app.clickup.com/t/86dvbvrvf
-describe("Dashboard", () => {
-	beforeEach(() => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: devnetTransactionsFixture.data.slice(0, 2),
-				meta: devnetTransactionsFixture.meta,
-			}),
-			requestMock("https://ark-live.arkvault.io/api/transactions", {
-				data: [],
-				meta: mainnetTransactionsFixture.meta,
-			}),
-		);
-	});
+process.env.USE_MAINSAIL_NETWORK = "true";
 
+describe("Dashboard", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
-
-		const wallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-
-		profile.wallets().push(wallet);
 
 		await syncDelegates(profile);
 
@@ -75,7 +50,7 @@ describe("Dashboard", () => {
 		resetProfileNetworksMock();
 	});
 
-	it.skip("should render loading state when profile is syncing", async () => {
+	it("should render loading state when profile is syncing", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -91,7 +66,7 @@ describe("Dashboard", () => {
 		);
 	});
 
-	it.skip("should display empty block when there are no transactions", async () => {
+	it("should display empty block when there are no transactions", async () => {
 		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
@@ -112,12 +87,12 @@ describe("Dashboard", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByRole("rowgroup")[0]).toBeVisible(),
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it.skip("should open modal when click on a transaction", async () => {
+	it("should open modal when click on a transaction", async () => {
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 
@@ -137,7 +112,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();

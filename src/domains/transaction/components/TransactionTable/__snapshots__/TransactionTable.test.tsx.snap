@@ -84,7 +84,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -132,7 +132,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl lg:min-w-24 min-lg:min-w-24 xl:min-w-32"
               colspan="1"
               data-testid="table__th--5"
               role="columnheader"
@@ -181,7 +181,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell !pl-0 xl:min-w-28 w-36 min-w-36"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell !pl-0 xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -1845,7 +1845,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1893,7 +1893,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl lg:min-w-24 min-lg:min-w-24 xl:min-w-32"
               colspan="1"
               data-testid="table__th--5"
               role="columnheader"
@@ -1942,7 +1942,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell !pl-0 xl:min-w-28 w-36 min-w-36"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell !pl-0 xl:min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"

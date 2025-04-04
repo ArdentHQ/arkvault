@@ -5,14 +5,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { ExchangeStatus } from "./StatusStep.blocks";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
 describe("ExchangeStatus", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
 				address: "inputAddress",

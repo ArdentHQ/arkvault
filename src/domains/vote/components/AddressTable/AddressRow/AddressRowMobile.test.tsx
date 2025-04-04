@@ -11,10 +11,8 @@ import {
 	AddressRowMobileDelegateName,
 } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
-import { server, requestMock } from "@/tests/mocks/server";
 import { createHashHistory } from "history";
 import { within } from "@testing-library/react";
 
@@ -28,11 +26,12 @@ let wallet2: Contracts.IReadWriteWallet;
 
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
+const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
-
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(getMainsailProfileId(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return (
@@ -58,33 +57,35 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 		}),
 	}));
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("AddressRowMobile", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		profile = env.profiles().findById(getMainsailProfileId());
+		wallet = profile.wallets().findById("ee02b13f-8dbf-4191-a9dc-08d2ab72ec28");
 		wallet.data().set(Contracts.WalletFlag.Starred, true);
 		wallet.data().set(Contracts.WalletData.DerivationPath, "0");
 
 		blankWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic: blankWalletPassphrase,
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(blankWallet);
 
 		unvotedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(unvotedWallet);
 
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[1],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[1],
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(wallet2);
 
@@ -93,26 +94,6 @@ describe("AddressRowMobile", () => {
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();
-	});
-
-	beforeEach(() => {
-		server.use(
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
-			requestMock(
-				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
-				{
-					error: "Not Found",
-					message: "Wallet not found",
-					statusCode: 404,
-				},
-				{ status: 404 },
-			),
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${wallet2.address()}`, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			}),
-		);
 	});
 
 	it("should render for a multisignature wallet", async () => {
@@ -128,7 +109,7 @@ describe("AddressRowMobile", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -175,7 +156,7 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRowMobile__select-0")).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRowMobile__select-1")).resolves.toBeVisible();
 
@@ -216,7 +197,7 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		await expect(screen.findByTestId("AddressRowMobile__select-0")).resolves.toBeVisible();
 		await expect(screen.findByTestId("AddressRowMobile__select-1")).resolves.toBeVisible();
@@ -250,9 +231,9 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(document.querySelector("svg#circle-check-mark")).toBeInTheDocument();
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Active");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -285,9 +266,9 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(document.querySelector("svg#clock")).toBeInTheDocument();
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Standby");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -320,9 +301,9 @@ describe("AddressRowMobile", () => {
 			},
 		);
 
-		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
-		expect(document.querySelector("svg#circle-cross")).toBeInTheDocument();
+		expect(screen.getByTestId(ADDRESS_ROW_STATUS_TEST_ID).textContent).toBe("Resigned");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -345,12 +326,12 @@ describe("AddressRowMobile", () => {
 		);
 		const selectButton = screen.getByTestId("AddressRowMobile__select-0");
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(ADDRESS_ROW_STATUS_TEST_ID)).resolves.toBeVisible();
 
 		await userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
-		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
+		expect(onSelect).toHaveBeenCalledWith(wallet.address());
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -127,15 +127,15 @@ exports[`FilterWallets > should render with networks selection 1`] = `
         >
           <li
             class="inline-block cursor-pointer pb-4 pr-4"
-            data-testid="NetworkOption__ark.devnet"
+            data-testid="NetworkOption__mainsail.devnet"
           >
             <div
               class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
             >
               <div
-                aria-label="ARK Devnet"
+                aria-label="Mainsail Devnet"
                 class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                data-testid="NetworkIcon-ARK-ark.devnet"
+                data-testid="NetworkIcon-Mainsail-mainsail.devnet"
               >
                 <div
                   class="text-theme-secondary-300"

@@ -4,22 +4,20 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Toggle } from "@/app/components/Toggle";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 import { useFiles } from "@/app/hooks/use-files";
 import { toasts } from "@/app/services";
-
+import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
+import { Alert } from "@/app/components/Alert";
 const EXTENSION = "wwe";
 
 export const ExportSettings = () => {
 	const { t } = useTranslation();
-
-	const { isXs } = useBreakpoint();
 
 	const form = useForm({ mode: "onChange" });
 	const { register } = form;
@@ -42,7 +40,6 @@ export const ExportSettings = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.EXPORT.OPTIONS.EXCLUDE_EMPTY_WALLETS.DESCRIPTION"),
-			wrapperClass: "pt-4 pb-6",
 		},
 		{
 			isFloatingLabel: true,
@@ -56,7 +53,6 @@ export const ExportSettings = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.EXPORT.OPTIONS.EXCLUDE_LEDGER_WALLETS.DESCRIPTION"),
-			wrapperClass: "py-6",
 		},
 	];
 
@@ -89,22 +85,22 @@ export const ExportSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="export">
-			<Header
-				title={t("SETTINGS.EXPORT.TITLE")}
-				subtitle={t("SETTINGS.EXPORT.SUBTITLE")}
-				titleClassName="mb-2 text-2xl"
-			/>
+			<Form id="export-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+				<SettingsGroup title={t("SETTINGS.EXPORT.TITLE")} description={t("SETTINGS.EXPORT.DESCRIPTION")}>
+					<ListDivided items={walletExportOptions} />
 
-			<Form id="export-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
-				<h2 className="mb-0 text-lg">{t("COMMON.WALLETS")}</h2>
+					<div className="mt-6 space-y-5 border-t border-dashed border-theme-secondary-300 pb-6 pt-6 dark:border-theme-secondary-800">
+						<Alert variant="info">{t("SETTINGS.EXPORT.DESCRIPTION")}</Alert>
+					</div>
+				</SettingsGroup>
 
-				<ListDivided items={walletExportOptions} noBorder={isXs} />
-
-				<FormButtons>
-					<Button data-testid="Export-settings__submit-button" type="submit">
-						{t("COMMON.EXPORT")}
-					</Button>
-				</FormButtons>
+				<SettingsButtonGroup>
+					<FormButtons>
+						<Button data-testid="Export-settings__submit-button" type="submit">
+							{t("COMMON.EXPORT")}
+						</Button>
+					</FormButtons>
+				</SettingsButtonGroup>
 			</Form>
 		</SettingsWrapper>
 	);

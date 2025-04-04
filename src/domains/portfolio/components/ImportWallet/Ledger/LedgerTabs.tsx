@@ -1,8 +1,5 @@
-import { Enums } from "@ardenthq/sdk";
-import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { generatePath } from "react-router";
@@ -11,152 +8,78 @@ import { LedgerImportStep } from "./LedgerImportStep";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerTabsProperties, LedgerTabStep } from "./LedgerTabs.contracts";
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
-import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
-import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { useWalletConfig } from "@/domains/wallet/hooks";
-import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
-import { assertWallet } from "@/utils/assertions";
+import { assertString } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
-import { enabledNetworksCount, profileAllEnabledNetworkIds } from "@/utils/network-utils";
-import { FormButtons } from "@/app/components/Form";
-
-const Paginator = ({
-	activeIndex,
-	isMultiple,
-	isNextDisabled,
-	isCancelDisabled,
-	showCancelButton,
-	isNextLoading,
-	onBack,
-	onCancel,
-	onFinish,
-	onNext,
-	onRetry,
-	showRetry,
-	size,
-}: {
-	activeIndex: LedgerTabStep;
-	isMultiple: boolean;
-	isNextDisabled?: boolean;
-	isCancelDisabled?: boolean;
-	showCancelButton?: boolean;
-	isNextLoading?: boolean;
-	onBack: () => void;
-	onCancel: () => void;
-	onFinish: () => void;
-	onNext: () => void;
-	onRetry?: () => void;
-	showRetry?: boolean;
-	size: number;
-}) => {
-	const { t } = useTranslation();
-
-	return (
-		<FormButtons>
-			{showRetry && (
-				<div className="mr-auto">
-					<Button variant="secondary" onClick={onRetry} data-testid="Paginator__retry-button">
-						<Icon name="ArrowRotateRight" className="py-0.5" />
-						<span className="hidden sm:block">{t("COMMON.RETRY")}</span>
-					</Button>
-				</div>
-			)}
-
-			{showCancelButton && (
-				<Button
-					variant="secondary"
-					onClick={onCancel}
-					data-testid="Paginator__back-button"
-					disabled={isCancelDisabled}
-				>
-					{t("COMMON.CANCEL")}
-				</Button>
-			)}
-
-			{activeIndex < size && !showCancelButton && (
-				<Button variant="secondary" onClick={onBack} data-testid="Paginator__back-button">
-					{t("COMMON.BACK")}
-				</Button>
-			)}
-
-			{activeIndex < size && (
-				<Button
-					disabled={isNextDisabled || isNextLoading}
-					isLoading={isNextLoading}
-					onClick={onNext}
-					data-testid="Paginator__continue-button"
-				>
-					{t("COMMON.CONTINUE")}
-				</Button>
-			)}
-
-			{activeIndex === size && (
-				<Button disabled={isNextDisabled} data-testid="Paginator__finish-button" onClick={onFinish}>
-					{isMultiple ? t("COMMON.GO_TO_PORTFOLIO") : t("COMMON.GO_TO_WALLET")}
-				</Button>
-			)}
-		</FormButtons>
-	);
-};
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
+import { OptionsValue, useWalletImport } from "@/domains/wallet/hooks";
+import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 
 export const LedgerTabs = ({
 	activeIndex = LedgerTabStep.ListenLedgerStep,
 	onClickEditWalletName,
+	onStepChange,
+	onCancel,
+	onSubmit,
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
-
-	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+	const { importWallet } = useWalletImport({ profile: activeProfile });
 
 	const history = useHistory();
-	const {
-		importLedgerWallets,
-		isBusy,
-		listenDevice,
-		disconnect,
-		isAwaitingConnection,
-		isAwaitingDeviceConfirmation,
-		isConnected,
-	} = useLedgerContext();
-	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
+	const { isBusy, disconnect, isAwaitingConnection, isAwaitingDeviceConfirmation, isConnected, listenDevice } =
+		useLedgerContext();
 
-	const { t } = useTranslation();
-
-	const { formState, getValues, handleSubmit } = useFormContext();
+	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
+	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile: activeProfile });
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
 	const [activeTab, setActiveTab] = useState<number>(activeIndex);
 
 	const isMultiple = useMemo(() => importedWallets.length > 1, [importedWallets]);
 
-	const [showRetry, setShowRetry] = useState(false);
+	const [_, setShowRetry] = useState(false);
 	const [cancelling, setCancelling] = useState(false);
 	const retryFunctionReference = useRef<() => void>();
 
 	const importWallets = useCallback(
-		async ({ network, wallets }: any) => {
-			setImportedWallets(wallets);
-			const coin = activeProfile.coins().set(network.coin(), network.id());
-			await importLedgerWallets(wallets, coin, activeProfile);
+		async ({ wallets }: any) => {
+			const device = await listenDevice();
+			const deviceId = device?.id;
+			assertString(deviceId);
 
-			setValue("selectedNetworkIds", uniq([...selectedNetworkIds, coin.network().id()]));
+			setImportedWallets(wallets);
+
+			for (const network of activeProfile.availableNetworks()) {
+				const importedWallets = await Promise.all(
+					wallets.map(({ path, address }) =>
+						importWallet({
+							ledgerOptions: {
+								deviceId,
+								path,
+							},
+							network,
+							type: OptionsValue.LEDGER,
+							value: address,
+						}),
+					),
+				);
+
+				await setSelectedAddresses(
+					[...selectedAddresses, ...importedWallets.map((wallet) => wallet.address())],
+					network,
+				);
+			}
 		},
-		[importLedgerWallets, activeProfile, setValue, selectedNetworkIds],
+		[activeProfile, activeNetwork, selectedAddresses, listenDevice],
 	);
 
 	const isNextDisabled = useMemo(() => isBusy || !isValid, [isBusy, isValid]);
-
-	const isCancelDisabled = useMemo(() => cancelling, [cancelling]);
-
-	const showCancelButton = useMemo(
-		() => [LedgerTabStep.LedgerConnectionStep, LedgerTabStep.LedgerScanStep].includes(activeTab),
-		[activeTab],
-	);
 
 	useKeydown("Enter", (event: KeyboardEvent) => {
 		const target = event.target as Element;
@@ -177,36 +100,12 @@ export const LedgerTabs = ({
 		}
 
 		setActiveTab(activeTab + 1);
+		onStepChange?.(activeTab + 1);
 	}, [activeTab, handleSubmit, importWallets]);
-
-	const returnToDashboard = useCallback(() => {
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
-	}, [activeProfile, history]);
-
-	const handleBack = useCallback(() => {
-		if (activeTab === LedgerTabStep.NetworkStep || onlyHasOneNetwork) {
-			return returnToDashboard();
-		}
-
-		listenDevice();
-
-		// The only possible active tab where the user can go back is the LedgerScanStep
-		return setActiveTab(LedgerTabStep.NetworkStep);
-	}, [activeTab, history, listenDevice]);
-
-	const handleCancel = () => {
-		setCancelling(true);
-	};
 
 	useEffect(() => {
 		const cancel = async () => {
 			await disconnect();
-
-			if (onlyHasOneNetwork) {
-				return returnToDashboard();
-			}
-
-			setActiveTab(LedgerTabStep.ListenLedgerStep);
 		};
 
 		if (cancelling && !isBusy) {
@@ -225,112 +124,76 @@ export const LedgerTabs = ({
 	);
 
 	const handleFinish = useCallback(() => {
-		if (isMultiple) {
-			history.push(`/profiles/${activeProfile.id()}/dashboard`);
-			return;
-		}
-
-		const importedWallet = activeProfile
-			.wallets()
-			.findByAddressWithNetwork(importedWallets[0].address, getValues("network").id());
-
-		assertWallet(importedWallet);
-		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
-	}, [isMultiple, history, activeProfile, getValues, importedWallets]);
+		history.push(`/profiles/${activeProfile.id()}/dashboard`);
+	}, [isMultiple, history, activeProfile, activeNetwork, importedWallets]);
 
 	const handleDeviceNotAvailable = useCallback(() => {
 		history.replace(generatePath(ProfilePaths.Dashboard, { profileId: activeProfile.id() }));
 	}, [history, activeProfile]);
 
-	const handleDeviceAvailable = useCallback(() => {
-		setActiveTab(onlyHasOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
-	}, [setActiveTab]);
-
-	const steps = [
-		t("WALLETS.CONNECT_LEDGER.HEADER"),
-		t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ACCOUNTS"),
-		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE"),
-	];
-
-	const activeTabIndex = useMemo(() => {
-		if (onlyHasOneNetwork) {
-			return activeTab - 1;
-		}
-
-		return activeTab;
-	}, [activeTab]);
+	const handleBack = useCallback(() => {
+		onCancel?.();
+	}, [activeTab, history, listenDevice]);
 
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
-			<StepIndicator steps={steps} activeIndex={activeTabIndex} />
-
-			<div data-testid="LedgerTabs" className="mt-8">
+			<div data-testid="LedgerTabs" className="mt-4">
 				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>
 					<ListenLedger
-						onDeviceAvailable={handleDeviceAvailable}
-						onDeviceNotAvailable={handleDeviceNotAvailable}
-					/>
-				</TabPanel>
-
-				<TabPanel tabId={LedgerTabStep.NetworkStep}>
-					<NetworkStep
-						profile={activeProfile}
-						filter={(network) => {
-							if (!network.allows("Ledger")) {
-								return false;
-							}
-
-							if (!profileAllEnabledNetworkIds(activeProfile).includes(network.id())) {
-								return false;
-							}
-
-							return (
-								network.allows(Enums.FeatureFlag.TransactionTransferLedgerS) ||
-								network.allows(Enums.FeatureFlag.TransactionTransferLedgerX)
-							);
+						noHeading
+						onDeviceAvailable={() => {
+							setActiveTab(LedgerTabStep.LedgerConnectionStep);
+							onStepChange?.(LedgerTabStep.LedgerConnectionStep);
 						}}
-						title={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE")}
-						subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
+						onDeviceNotAvailable={handleDeviceNotAvailable}
 					/>
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerConnectionStep}>
 					<LedgerConnectionStep
 						cancelling={cancelling}
-						onConnect={() => setActiveTab(LedgerTabStep.LedgerScanStep)}
+						onConnect={() => {
+							setActiveTab(LedgerTabStep.LedgerScanStep);
+							onStepChange?.(LedgerTabStep.LedgerScanStep);
+						}}
+						network={activeNetwork}
 					/>
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerScanStep}>
-					<LedgerScanStep cancelling={cancelling} profile={activeProfile} setRetryFn={handleRetry} />
+					<LedgerScanStep
+						cancelling={cancelling}
+						profile={activeProfile}
+						setRetryFn={handleRetry}
+						network={activeNetwork}
+					/>
 				</TabPanel>
 
 				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
 					<LedgerImportStep
+						network={activeNetwork}
 						wallets={importedWallets}
 						profile={activeProfile}
 						onClickEditWalletName={onClickEditWalletName}
 					/>
 				</TabPanel>
-			</div>
 
-			<Paginator
-				activeIndex={activeTab}
-				isMultiple={isMultiple}
-				isNextDisabled={isNextDisabled}
-				isNextLoading={isSubmitting}
-				showCancelButton={showCancelButton}
-				isCancelDisabled={isCancelDisabled}
-				onBack={handleBack}
-				onFinish={handleFinish}
-				onCancel={handleCancel}
-				onNext={handleNext}
-				onRetry={retryFunctionReference.current}
-				showRetry={showRetry}
-				size={5}
-			/>
+				{[LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab) && (
+					<ImportActionToolbar
+						activeTab={activeTab - 2}
+						showSteps
+						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
+						onBack={handleBack}
+						isContinueDisabled={isNextDisabled || isSubmitting}
+						isLoading={isSubmitting}
+						onContinue={handleNext}
+						allSteps={["1", "2"]}
+						isSubmitDisabled={isSubmitting}
+						showPortfoliobutton={activeTab === LedgerTabStep.LedgerImportStep}
+						onSubmit={onSubmit}
+					/>
+				)}
+			</div>
 		</Tabs>
 	);
 };

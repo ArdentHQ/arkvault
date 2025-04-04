@@ -7,7 +7,7 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("WalletDetailNetwork", () => {
 	it("should render", () => {
-		const network = availableNetworksMock.find((network) => network.id() === "ark.devnet");
+		const network = availableNetworksMock.find((network) => network.id() === "mainsail.devnet");
 
 		const { asFragment } = render(<WalletDetailNetwork network={network!} />);
 

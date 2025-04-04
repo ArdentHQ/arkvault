@@ -29,6 +29,7 @@ import {
 	UsernameRegistrationForm,
 } from "@/domains/transaction/components/UsernameRegistrationForm";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -81,13 +82,6 @@ export const SendRegistration = () => {
 	useEffect(() => {
 		register("fees");
 
-		const walletBalance = activeWallet?.balance() ?? 0;
-
-		const type = registrationType === "validatorRegistration" ? "delegateRegistration" : registrationType;
-
-		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register("gasLimit", common.gasLimit(walletBalance, getValues, GasLimit[type], activeWallet?.network()));
-
 		register("inputFeeSettings");
 
 		register("network", { required: true });
@@ -96,6 +90,18 @@ export const SendRegistration = () => {
 		register("suppressWarning");
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
+
+	const type =
+		registrationType === "validatorRegistration"
+			? "delegateRegistration"
+			: (registrationType as keyof typeof GasLimit);
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		gasLimitType: type,
+		wallet: activeWallet,
+	});
 
 	useEffect(() => {
 		if (!activeWallet) {
@@ -250,7 +256,7 @@ export const SendRegistration = () => {
 				<StepsProvider steps={stepCount} activeStep={activeTab}>
 					<Form
 						data-testid="Registration__form"
-						className="mx-auto max-w-xl"
+						className="mx-auto max-w-172"
 						context={form}
 						onSubmit={handleSubmit}
 					>

@@ -2,14 +2,14 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
-import { env, getDefaultPassword, getDefaultProfileId, getPasswordProtectedProfileId } from "@/utils/testing-library";
+import { env, getDefaultPassword, getMainsailProfileId, getPasswordProtectedProfileId } from "@/utils/testing-library";
 
 describe("useProfileExport", () => {
 	let profile: Contracts.IProfile;
 	let passwordProtectedProfile: Contracts.IProfile;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 
 		await env.profiles().restore(profile);

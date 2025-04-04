@@ -1,18 +1,16 @@
 import { Coins, Networks } from "@ardenthq/sdk";
-import { truncate } from "@ardenthq/sdk-helpers";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
+import { Input, InputAddress, InputPassword } from "@/app/components/Input";
+import React, { useEffect, useState } from "react";
+
+import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
-import React, { useState } from "react";
+import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx/WalletEncryptionBanner";
+import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
-import { FormField, FormLabel } from "@/app/components/Form";
-import { Input, InputAddress, InputPassword } from "@/app/components/Input";
-import { Toggle } from "@/app/components/Toggle";
-import { Tooltip } from "@/app/components/Tooltip";
-import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
-import { assertString } from "@/utils/assertions";
-import { Alert } from "@/app/components/Alert";
 
 const validateAddress = async ({
 	findAddress,
@@ -295,19 +293,37 @@ const ImportInputField = ({
 	);
 };
 
-export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) => {
-	const { t } = useTranslation();
-	const { watch, setValue, getValues } = useFormContext();
+export const ImportDetailStep = ({
+	profile,
+	network,
+	importOption,
+}: {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	importOption: ImportOption;
+}) => {
+	const { watch, setValue, clearErrors } = useFormContext();
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
 	const useEncryption = watch("useEncryption") as boolean;
-	const importOption = getValues("importOption") as ImportOption;
+	const acceptResponsibility = watch("acceptResponsibility") as boolean;
 
-	assertString(importOption.value);
+	useEffect(() => {
+		clearErrors(["validation", "confirmEncryptionPassword"]);
+	}, []);
 
 	const handleToggleEncryption = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setValue("useEncryption", event.target.checked);
+
+		if (!event.target.checked) {
+			setValue("acceptResponsibility", false);
+			clearErrors("acceptResponsibility");
+		}
+	};
+
+	const handleToggleResponsibility = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setValue("acceptResponsibility", event.target.checked);
 	};
 
 	return (
@@ -320,34 +336,13 @@ export const ImportDetailStep = ({ profile, network }: { profile: Contracts.IPro
 					network={network}
 				/>
 
-				<div className="rounded-lg border border-theme-secondary-300 transition-all dark:border-theme-dark-700">
-					<div className="flex flex-1 items-center justify-between space-x-5 px-4 py-4 sm:px-6">
-						<span className="font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-dark-50 sm:leading-5">
-							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.TITLE")}
-						</span>
-
-						<Tooltip
-							className="-ml-3 mb-1"
-							content={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.NOT_AVAILABLE")}
-							disabled={importOption.canBeEncrypted}
-						>
-							<span data-testid="ImportWallet__encryption">
-								<Toggle
-									data-testid="ImportWallet__encryption-toggle"
-									disabled={!importOption.canBeEncrypted}
-									checked={useEncryption ?? false}
-									onChange={handleToggleEncryption}
-								/>
-							</span>
-						</Tooltip>
-					</div>
-
-					<div className="rounded-b-lg bg-theme-secondary-100 px-4 pb-4 pt-3 dark:bg-theme-dark-950 sm:px-6">
-						<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200">
-							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.DESCRIPTION")}
-						</span>
-					</div>
-				</div>
+				<WalletEncryptionBanner
+					importOption={importOption}
+					toggleChecked={useEncryption}
+					toggleOnChange={handleToggleEncryption}
+					checkboxChecked={acceptResponsibility}
+					checkboxOnChange={handleToggleResponsibility}
+				/>
 			</div>
 		</section>
 	);

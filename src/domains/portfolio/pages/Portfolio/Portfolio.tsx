@@ -5,7 +5,7 @@ import { useActiveProfile } from "@/app/hooks/env";
 import { useTranslation } from "react-i18next";
 import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
-import { CreateAddressesSidePanel } from "@/domains/wallet/components/CreateAddressSidePanel";
+import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 
 export const Portfolio = () => {
@@ -34,6 +34,7 @@ export const Portfolio = () => {
 					/>
 				</Page>
 			)}
+
 			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 		</>

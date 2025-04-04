@@ -1,10 +1,10 @@
-import { chunk } from "@ardenthq/sdk-helpers";
-import cn from "classnames";
-import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";
+import React, { useMemo } from "react";
 
-import { TableProperties } from "./Table.contracts";
 import { Icon } from "@/app/components/Icon";
+import { TableProperties } from "./Table.contracts";
+import { chunk } from "@/app/lib/helpers";
+import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
 const TableWrapper = ({ ...props }: React.HTMLProps<HTMLDivElement>) => (
@@ -20,6 +20,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	initialState,
 	rowsPerPage,
 	currentPage = 1,
+	footer,
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
@@ -111,6 +112,8 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 						return { ...renderChildNode(row.original, row.index), ...row.getRowProps() };
 					})}
 				</tbody>
+
+				{footer && <tfoot>{footer}</tfoot>}
 			</table>
 		</TableWrapper>
 	);

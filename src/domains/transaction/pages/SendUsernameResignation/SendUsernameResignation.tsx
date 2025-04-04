@@ -17,9 +17,9 @@ import { AuthenticationStep } from "@/domains/transaction/components/Authenticat
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
 
 enum Step {
 	FormStep = 1,
@@ -66,20 +66,19 @@ export const SendUsernameResignation = () => {
 	useEffect(() => {
 		register("fees");
 
-		const walletBalance = activeWallet?.balance() ?? 0;
-
-		register("gasPrice", common.gasPrice(walletBalance, getValues, MIN_GAS_PRICE, activeWallet?.network()));
-		register(
-			"gasLimit",
-			common.gasLimit(walletBalance, getValues, GasLimit["usernameResignation"], activeWallet?.network()),
-		);
-
 		register("senderAddress", { required: true });
 
 		register("inputFeeSettings");
 
 		register("suppressWarning");
 	}, [activeWallet, common, getValues, register]);
+
+	useToggleFeeFields({
+		activeTab,
+		form,
+		gasLimitType: "usernameResignation",
+		wallet: activeWallet,
+	});
 
 	useEffect(() => {
 		if (!activeWallet || activeWallet.address() === senderAddress) {
@@ -156,7 +155,7 @@ export const SendUsernameResignation = () => {
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION")}>
 			<Section className="flex-1">
 				<StepsProvider steps={4} activeStep={activeTab}>
-					<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
+					<Form className="mx-auto max-w-172" context={form} onSubmit={handleSubmit}>
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep

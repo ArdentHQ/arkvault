@@ -5,13 +5,13 @@ import { Route } from "react-router-dom";
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 
@@ -23,21 +23,23 @@ const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
 
 	useEffect(() => {
-		setConfiguration({ profileHasSyncedOnce: true, profileIsSyncingWallets: false });
+		setConfiguration(profile.id(), { profileHasSyncedOnce: true, profileIsSyncingWallets: false });
 	}, []);
 
 	return <Route path="/profiles/:profileId">{children}</Route>;
 };
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("AddressTable", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		wallet = profile.wallets().findById("ee02b13f-8dbf-4191-a9dc-08d2ab72ec28");
 
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();
@@ -59,7 +61,24 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet")).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with empty results", async () => {
+		const { asFragment, container } = render(
+			<Wrapper>
+				<AddressTable wallets={[]} profile={profile} showEmptyResults />
+			</Wrapper>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -77,7 +96,7 @@ describe("AddressTable", () => {
 
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__wallet-status")).resolves.toBeVisible();
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
@@ -113,7 +132,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.queryByTestId("StatusIcon__icon")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("AddressRow__wallet-status")).not.toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 

@@ -52,7 +52,7 @@ describe("useNetworks", () => {
 			result: { current },
 		} = renderHookWithProfile(profile);
 
-		expect(current).toHaveLength(1);
+		expect(current).toHaveLength(2);
 
 		resetMock();
 	});

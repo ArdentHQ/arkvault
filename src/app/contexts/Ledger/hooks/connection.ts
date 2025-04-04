@@ -10,6 +10,7 @@ import { useEnvironmentContext } from "@/app/contexts/Environment";
 import { toasts } from "@/app/services";
 import { useLedgerImport } from "@/app/contexts/Ledger/hooks/import";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
+import { Id } from "react-toastify";
 
 export const useLedgerConnection = () => {
 	const { t } = useTranslation();
@@ -22,12 +23,19 @@ export const useLedgerConnection = () => {
 	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	const { importLedgerWallets } = useLedgerImport({ device, env });
+	const connectedToast = useRef<Id>();
 
 	useEffect(() => {
 		if (deviceName) {
+			if (connectedToast.current) {
+				return;
+			}
+
 			if (isConnected) {
-				toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceName }));
+				connectedToast.current = toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceName }));
+				setTimeout(() => (connectedToast.current = undefined), 2000);
 			} else {
+				connectedToast.current = undefined;
 				toasts.warning(t("COMMON.LEDGER_DISCONNECTED", { device: deviceName }));
 			}
 		}
@@ -46,7 +54,11 @@ export const useLedgerConnection = () => {
 			const { descriptor, deviceModel } = await openTransport();
 
 			setDeviceName(deviceModel?.productName);
-			dispatch({ id: deviceModel?.id || "nanoS", path: descriptor, type: "add" });
+
+			const deviceItem = { id: deviceModel?.id || "nanoS", path: descriptor, type: "add" as const };
+
+			dispatch(deviceItem);
+			return deviceItem;
 		} catch (error) {
 			dispatch({ message: error.message, type: "failed" });
 		}
@@ -89,8 +101,15 @@ export const useLedgerConnection = () => {
 		[dispatch, t],
 	);
 
+	const isAttemptingConnect = useRef(false);
+
 	const connect = useCallback(
 		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
+			if (isAttemptingConnect.current) {
+				return;
+			}
+
+			isAttemptingConnect.current = true;
 			const coinInstance = profile.coins().set(coin, network);
 
 			if (!isLedgerTransportSupported()) {
@@ -99,6 +118,7 @@ export const useLedgerConnection = () => {
 			}
 
 			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+
 			await resetConnectionState();
 
 			dispatch({ type: "waiting" });
@@ -110,10 +130,13 @@ export const useLedgerConnection = () => {
 					hasRequestedAbort: () => abortRetryReference.current,
 					options,
 				});
+
 				dispatch({ type: "connected" });
 			} catch (connectError) {
 				handleLedgerConnectionError(connectError, coinInstance);
 			}
+
+			isAttemptingConnect.current = false;
 		},
 		[],
 	);

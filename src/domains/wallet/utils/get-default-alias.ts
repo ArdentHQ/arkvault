@@ -5,16 +5,26 @@ interface GetDefaultAliasInput {
 	profile: Contracts.IProfile;
 	network?: Networks.Network;
 }
+interface GetLedgerDefaultAliasInput extends GetDefaultAliasInput {
+	path: string;
+}
 
 const makeAlias = (count: number) => `Address #${count}`;
+const makeLedgerAlias = (count: number | string) => `Ledger #${count}`;
 
 const findByAlias = (alias: string, wallets: Contracts.IReadWriteWallet[]) =>
 	wallets.find((wallet) => wallet.alias() === alias);
 
 export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): string => {
 	const wallets = network
-		? profile.wallets().findByCoinWithNetwork(network.coin(), network.id())
-		: profile.wallets().values();
+		? profile
+				.wallets()
+				.findByCoinWithNetwork(network.coin(), network.id())
+				.filter((wallet) => !wallet.isLedger())
+		: profile
+				.wallets()
+				.values()
+				.filter((wallet) => !wallet.isLedger());
 
 	let counter = wallets.length;
 
@@ -27,4 +37,25 @@ export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): str
 	}
 
 	return makeAlias(counter);
+};
+
+export const getLedgerDefaultAlias = ({ profile, network, path }: GetLedgerDefaultAliasInput): string => {
+	const pathCounter = path.slice(-1) ?? 0;
+	let counter = Number(pathCounter) + 1;
+
+	const wallets = network
+		? profile
+				.wallets()
+				.findByCoinWithNetwork(network.coin(), network.id())
+				.filter((wallet) => wallet.isLedger())
+		: profile
+				.wallets()
+				.values()
+				.filter((wallet) => wallet.isLedger());
+
+	while (findByAlias(makeLedgerAlias(counter), wallets)) {
+		counter++;
+	}
+
+	return makeLedgerAlias(counter);
 };

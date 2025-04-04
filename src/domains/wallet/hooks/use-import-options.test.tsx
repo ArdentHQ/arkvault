@@ -19,8 +19,8 @@ describe("useImportOptions", () => {
 			}),
 		);
 
-		expect(current.options).toHaveLength(2);
-		expect(current.options[0].value).toBe(OptionsValue.ADDRESS);
+		expect(current.options).toHaveLength(3);
+		expect(current.options[1].value).toBe(OptionsValue.ADDRESS);
 		expect(current.defaultOption).contains({ label: "Address", value: OptionsValue.ADDRESS });
 	});
 
@@ -40,11 +40,13 @@ describe("useImportOptions", () => {
 			}),
 		);
 
-		expect(current.options).toHaveLength(2);
-		expect(current.options[0].value).toBe(OptionsValue.ADDRESS);
-		expect(current.options[0].canBeEncrypted).toBeDefined();
+		expect(current.options).toHaveLength(3);
+		expect(current.options[0].value).toBe(OptionsValue.LEDGER);
+
 		expect(current.options[1].value).toBe(OptionsValue.SECRET);
 		expect(current.options[1].canBeEncrypted).toBeDefined();
+		expect(current.options[2].value).toBe(OptionsValue.ADDRESS);
+		expect(current.options[2].canBeEncrypted).toBeDefined();
 	});
 
 	it("should convert method name", () => {
@@ -63,9 +65,9 @@ describe("useImportOptions", () => {
 			}),
 		);
 
-		expect(current.options).toHaveLength(2);
-		expect(current.options[0].value).toBe(OptionsValue.ENCRYPTED_WIF);
+		expect(current.options).toHaveLength(3);
 		expect(current.options[1].value).toBe(OptionsValue.BIP84);
+		expect(current.options[2].value).toBe(OptionsValue.ENCRYPTED_WIF);
 	});
 
 	it("should return default option if exist in the available options", () => {
@@ -104,9 +106,8 @@ describe("useImportOptions", () => {
 		);
 
 		expect(current.defaultOption).contains({
-			canBeEncrypted: false,
-			label: "Address",
-			value: OptionsValue.ADDRESS,
+			label: "Ledger",
+			value: OptionsValue.LEDGER,
 		});
 	});
 });

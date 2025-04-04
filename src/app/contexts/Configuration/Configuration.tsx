@@ -1,23 +1,22 @@
 import React from "react";
-
 import { ARK } from "@ardenthq/sdk-ark";
 import { Mainsail } from "@/app/lib/mainsail";
 
 interface ConfigurationContextType {
-	configuration: Record<string, any>;
-	setConfiguration: (configuration: Record<string, any>) => void;
+	configuration: Record<string, Record<string, any>>;
+	setConfiguration: (profileId: string, configuration: Record<string, any>) => void;
+	getProfileConfiguration: (profileId: string | undefined) => Record<string, any>;
 }
 
 interface Properties {
 	children: React.ReactNode;
-	defaultConfiguration?: any;
+	defaultConfiguration?: Record<string, any>;
 }
 
-const ConfigurationContext = React.createContext<any>(undefined);
+const ConfigurationContext = React.createContext<ConfigurationContextType | undefined>(undefined);
 
 const defaultServerStatus = () => {
 	const status = {};
-
 	const allNetworks = [...Object.entries(ARK.manifest.networks), ...Object.entries(Mainsail.manifest.networks)];
 
 	for (const [network, networkConfiguration] of allNetworks) {
@@ -28,42 +27,53 @@ const defaultServerStatus = () => {
 	return status;
 };
 
+const getDefaultProfileConfig = (defaultConfiguration?: Record<string, any>) => ({
+	dashboard: undefined,
+	isProfileInitialSync: true,
+	profileErroredNetworks: [],
+	profileHasSyncedOnce: false,
+	profileIsRestoring: false,
+	profileIsSyncing: true,
+	profileIsSyncingExchangeRates: false,
+	profileIsSyncingWallets: false,
+	restoredProfiles: [],
+	selectedAddresses: [],
+	serverStatus: defaultServerStatus(),
+	...defaultConfiguration,
+});
+
 export const ConfigurationProvider = ({ children, defaultConfiguration }: Properties) => {
-	const [configuration, setConfig] = React.useState<any>({
-		// Domain specific configuration defaults
-		dashboard: undefined,
+	const [configuration, setConfig] = React.useState<Record<string, Record<string, any>>>({});
 
-		isProfileInitialSync: true,
-
-		// Errored networks names after a failed sync.
-		profileErroredNetworks: [],
-
-		profileHasSyncedOnce: false,
-
-		profileIsRestoring: false,
-
-		// Initial sync state of profile. Handled in profile synchronizer.
-		profileIsSyncing: true,
-
-		// Separate flag for exchange rate sync status. Updated by profile sync exchange job.
-		profileIsSyncingExchangeRates: false,
-
-		profileIsSyncingWallets: false,
-		restoredProfiles: [],
-		selectedAddresses: [],
-		serverStatus: defaultServerStatus(),
-		...defaultConfiguration,
-	});
-
-	const setConfiguration = (config: any) => {
-		setConfig((latestConfig: any) => ({ ...latestConfig, ...config }));
+	const setConfiguration = (profileId: string, config: Record<string, any>) => {
+		setConfig((latestConfig) => ({
+			...latestConfig,
+			[profileId]: {
+				...(latestConfig[profileId] || getDefaultProfileConfig(defaultConfiguration)),
+				...config,
+			},
+		}));
 	};
 
-	return (
-		<ConfigurationContext.Provider value={{ ...configuration, setConfiguration } as ConfigurationContextType}>
-			{children}
-		</ConfigurationContext.Provider>
-	);
+	const getProfileConfiguration = (profileId?: string): Record<string, any> => {
+		if (!profileId) {
+			return {};
+		}
+
+		return (
+			configuration[profileId] || {
+				...getDefaultProfileConfig(defaultConfiguration),
+			}
+		);
+	};
+
+	const contextValue: ConfigurationContextType = {
+		configuration,
+		getProfileConfiguration,
+		setConfiguration,
+	};
+
+	return <ConfigurationContext.Provider value={contextValue}>{children}</ConfigurationContext.Provider>;
 };
 
 export const useConfiguration = () => {

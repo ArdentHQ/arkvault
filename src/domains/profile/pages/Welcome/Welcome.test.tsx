@@ -1,32 +1,33 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
-import React from "react";
-import { Route } from "react-router-dom";
-import { truncate } from "@ardenthq/sdk-helpers";
-import { renderHook } from "@testing-library/react";
-import { afterAll, vi } from "vitest";
-import { Welcome } from "./Welcome";
-import { ProfilePaths } from "@/router/paths";
-import { EnvironmentProvider } from "@/app/contexts";
-import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { httpClient, toasts } from "@/app/services";
-import { translations as profileTranslations } from "@/domains/profile/i18n";
-import { StubStorage } from "@/tests/mocks";
 import {
+	act,
 	env,
 	getDefaultPassword,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	getPasswordProtectedProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
-	act,
 } from "@/utils/testing-library";
+import { afterAll, vi } from "vitest";
+import { httpClient, toasts } from "@/app/services";
 
-const fixtureProfileId = getDefaultProfileId();
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { EnvironmentProvider } from "@/app/contexts";
+import { ProfilePaths } from "@/router/paths";
+import React from "react";
+import { Route } from "react-router-dom";
+import { StubStorage } from "@/tests/mocks";
+import { Welcome } from "./Welcome";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { createHashHistory } from "history";
+import { translations as profileTranslations } from "@/domains/profile/i18n";
+import { renderHook } from "@testing-library/react";
+import { truncate } from "@/app/lib/helpers";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
+import userEvent from "@testing-library/user-event";
+
+const fixtureProfileId = getMainsailProfileId();
 const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052";
 
 const submitTestID = "SignIn__submit-button";
@@ -52,10 +53,12 @@ const expectToast = async (text: string) => {
 	await waitFor(() => expect(toastUpdateSpy).toHaveBeenCalledWith(expect.any(String), "error", text));
 };
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("Welcome with deeplink", () => {
 	const history = createHashHistory();
 	const mainnetDeepLink =
-		"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
+		"/?method=transfer&coin=Mainsail&network=mainsail.mainnet&recipient=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23&amount=1.2&memo=ARK";
 
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
@@ -102,7 +105,7 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				// Using transfer page as an example
-				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				route: "/?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 			},
 		);
 
@@ -125,7 +128,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
-			"?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test&vote=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD";
+			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&delegate=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		render(
 			<Route path="/">
@@ -142,7 +145,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[2]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 		await waitFor(() =>
@@ -158,7 +161,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
-			"?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature";
+			"?method=verify&coin=mainsail&network=mainsail.devnet&message=hello+world&signatory=signatory&signature=signature";
 
 		render(
 			<Route path="/">
@@ -175,7 +178,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[2]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 		await waitFor(() =>
@@ -277,7 +280,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=nuke&coin=ark&network=ark.mainnet",
+				route: "/?method=nuke&coin=mainsail&network=mainsail.mainnet",
 			},
 		);
 
@@ -297,7 +300,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ark",
+				route: "/?method=transfer&coin=mainsail",
 			},
 		);
 
@@ -317,7 +320,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ark&network=custom",
+				route: "/?method=transfer&coin=mainsail&network=custom",
 			},
 		);
 
@@ -347,7 +350,7 @@ describe("Welcome with deeplink", () => {
 
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "Mainsail" }));
 	});
 
 	it("should show a warning if there is no network for the given nethash", async () => {
@@ -358,7 +361,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+				route: `/?method=transfer&coin=mainsail&nethash=${nethash}`,
 			},
 		);
 
@@ -377,14 +380,14 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
-		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
+		const nethash = "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
 		const { container } = render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+				route: `/?method=transfer&coin=mainsail&nethash=${nethash}`,
 			},
 		);
 
@@ -394,13 +397,13 @@ describe("Welcome with deeplink", () => {
 
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "Mainsail" }));
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
-		const route = "?method=transfer&coin=ark&network=ark.devnet";
+		const route = "?method=transfer&coin=mainsail&network=mainsail.devnet";
 
 		render(
 			<Route path="/">
@@ -417,7 +420,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[2]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 		await waitFor(() =>
@@ -432,7 +435,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
-			"?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867";
+			"?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
 
 		render(
 			<Route path="/">
@@ -449,11 +452,11 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[2]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 		await waitFor(() =>
-			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/send-transfer${route}`),
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-transfer${route}`),
 		);
 
 		toastWarningSpy.mockRestore();
@@ -495,7 +498,7 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				// Using transfer page as an example
-				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				route: "/?method=transfer&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 			},
 		);
 
@@ -561,7 +564,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
-			"?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message+to+sign";
+			"?method=sign&coin=mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&message=message+to+sign";
 
 		render(
 			<Route path="/">
@@ -578,11 +581,11 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[2]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 		await waitFor(() =>
-			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/sign-message${route}`),
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/sign-message${route}`),
 		);
 
 		toastWarningSpy.mockRestore();
@@ -783,7 +786,7 @@ describe("Welcome", () => {
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[0];
+		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[2];
 
 		await userEvent.click(profileCardMenu);
 

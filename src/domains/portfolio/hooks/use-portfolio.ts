@@ -1,11 +1,11 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
-import { useEnvironmentContext } from "@/app/contexts";
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { Networks } from "@ardenthq/sdk";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { useEnvironmentContext } from "@/app/contexts";
 
 function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	return {

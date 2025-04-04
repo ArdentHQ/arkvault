@@ -1,26 +1,32 @@
+import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
+import { HashHistory, To, createHashHistory } from "history";
+import { RenderResult, render } from "@testing-library/react";
+
 /* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
-import { Mainsail } from "@/app/lib/mainsail";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { render, RenderResult } from "@testing-library/react";
-import { createHashHistory, HashHistory, To } from "history";
-import React from "react";
-import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
-import { I18nextProvider } from "react-i18next";
-import { Router } from "react-router-dom";
-import { Context as ResponsiveContext } from "react-responsive";
-import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
-import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
-import { i18n } from "@/app/i18n";
-import { httpClient } from "@/app/services";
-import { LayoutBreakpoint } from "@/types";
-import fixtureData from "@/tests/fixtures/env/storage.json";
-import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
-import { StubStorage } from "@/tests/mocks";
-import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
+import { DTO } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
+import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import { I18nextProvider } from "react-i18next";
+import { LayoutBreakpoint } from "@/types";
+import { Mainsail } from "@/app/lib/mainsail";
+import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
+import React from "react";
+import { Context as ResponsiveContext } from "react-responsive";
+import { Router } from "react-router-dom";
+import { StubStorage } from "@/tests/mocks";
+import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
+import fixtureData from "@/tests/fixtures/env/storage.json";
+import { httpClient } from "@/app/services";
+import { i18n } from "@/app/i18n";
+import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
+import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
+
 export {
 	mockNanoSTransport,
 	mockLedgerTransportError,
@@ -28,8 +34,6 @@ export {
 	mockConnectedTransport,
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
 	const { profile, profileIsSyncing } = useProfileSynchronizer(options);
@@ -169,6 +173,7 @@ export { renderWithRouter as render, customRender as renderWithoutRouter };
 export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
+export const getDefaultMainsailWalletId = () => Object.keys(Object.values(fixtureData.profiles)[2].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
 export const getDefaultMainsailWalletMnemonic = () =>
 	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise";
@@ -204,8 +209,12 @@ export const MNEMONICS = [
 ];
 
 export const MAINSAIL_MNEMONICS = [
+	// 0x659A76be283644AEc2003aa8ba26485047fd1BFB
 	"join pyramid pitch bracket gasp sword flip elephant property actual current mango man seek merge gather fix unit aspect vault cheap gospel garment spring",
+	// 0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
+	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
+	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
 ];
 
 export const breakpoints: {
@@ -261,6 +270,23 @@ const publicNetworksStub: any = {
 			type: "live",
 		},
 	},
+	mainsail: {
+		mainnet: {
+			...MainsailDefaultManifest,
+			coin: "Mainsail",
+			currency: {
+				ticker: "ARK",
+			},
+			id: "mainsail.mainnet",
+			meta: {
+				...MainsailDefaultManifest.meta,
+				nethash: "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+				version: 30,
+			},
+			name: "Mainnet",
+			type: "live",
+		},
+	},
 };
 
 const testNetworksStub: any = {
@@ -275,6 +301,23 @@ const testNetworksStub: any = {
 			meta: {
 				...DefaultManifest.meta,
 				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				version: 30,
+			},
+			name: "Devnet",
+			type: "test",
+		},
+	},
+	mainsail: {
+		devnet: {
+			...MainsailDefaultManifest,
+			coin: "Mainsail",
+			currency: {
+				ticker: "DARK",
+			},
+			id: "mainsail.devnet",
+			meta: {
+				...MainsailDefaultManifest.meta,
+				nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 				version: 30,
 			},
 			name: "Devnet",
@@ -324,17 +367,26 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 	};
 };
 
-export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile) => {
+export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
 	const networks = {
 		ark: {
 			...publicNetworksStub["ark"],
 			...testNetworksStub["ark"],
+		},
+		mainsail: {
+			...publicNetworksStub["mainsail"],
+			...testNetworksStub["mainsail"],
 		},
 		random: {
 			...customNetworksStub["random-enabled"],
 			...customNetworksStub["random"],
 		},
 	};
+
+	if (onlyMainsail) {
+		delete networks["ark"];
+		delete networks["random"];
+	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
 	const allByCoinMock = vi
@@ -355,7 +407,7 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 // This is probably caused by how jsdom initialization runs with vitest as it's not an issue with jsdom in jest.
 export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet) => {
 	try {
-		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
+		const signatory = await wallet.signatory().mnemonic(getDefaultMainsailWalletMnemonic());
 		await wallet.message().sign({ message: "message", signatory });
 	} catch {
 		//
@@ -399,6 +451,48 @@ export const createTransactionMock = (
 		sender: () => transactionFixture.data.sender,
 		timestamp: () => DateTime.make(),
 		total: () => +transactionFixture.data.amount / 1e8 + +transactionFixture.data.fee / 1e8,
+		type: () => "transfer",
+		usesMultiSignature: () => false,
+		wallet: () => wallet,
+		...overrides,
+	} as any);
+
+/* istanbul ignore next -- @preserve */
+export const createMainsailTransactionMock = (
+	wallet: Contracts.IReadWriteWallet,
+	overrides: Partial<DTO.ExtendedSignedTransactionData> = {},
+) =>
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		amount: () => +mainsailTransactionFixture.data.amount / 1e18,
+		blockId: () => "1",
+		confirmations: () => BigNumber.make(154_178),
+		convertedAmount: () => BigNumber.make(10),
+		data: () => ({ data: () => mainsailTransactionFixture.data.data }),
+		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
+		explorerLinkForBlock: () =>
+			`https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
+		fee: () => +mainsailTransactionFixture.data.fee / 1e18,
+		id: () => mainsailTransactionFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => true,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
+		isMultiSignatureRegistration: () => false,
+		isSuccess: () => true,
+		isTransfer: () => true,
+		isUnvote: () => false,
+		isUsernameRegistration: () => false,
+		isUsernameResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
+		nonce: () => BigNumber.make(1),
+		recipient: () => mainsailTransactionFixture.data.recipient,
+		sender: () => mainsailTransactionFixture.data.senderAddress,
+		timestamp: () => DateTime.make(),
 		type: () => "transfer",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,

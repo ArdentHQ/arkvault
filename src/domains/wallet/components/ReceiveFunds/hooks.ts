@@ -1,6 +1,6 @@
-import { QRCode } from "@ardenthq/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
 
+import { QRCode } from "@/app/lib/helpers";
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { shouldUseDarkColors } from "@/utils/theme";
 

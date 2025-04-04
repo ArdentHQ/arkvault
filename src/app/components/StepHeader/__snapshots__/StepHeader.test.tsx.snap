@@ -14,19 +14,19 @@ exports[`StepHeader > should render 1`] = `
         title
       </span>
       <ul
-        class="flex space-x-3"
+        class="flex flex-row gap-2"
       >
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>
@@ -50,7 +50,7 @@ exports[`StepHeader > should render 1`] = `
             </h1>
           </div>
           <div
-            class="flex items-center leading-5 text-theme-secondary-text"
+            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
             data-testid="header__subtitle"
           >
             subtitle
@@ -81,7 +81,7 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
         </h1>
       </div>
       <div
-        class="flex items-center leading-5 text-theme-secondary-text"
+        class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
         data-testid="header__subtitle"
       >
         subtitle
@@ -105,19 +105,19 @@ exports[`StepHeader > should render with extra 1`] = `
         title
       </span>
       <ul
-        class="flex space-x-3"
+        class="flex flex-row gap-2"
       >
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>
@@ -141,7 +141,7 @@ exports[`StepHeader > should render with extra 1`] = `
             </h1>
           </div>
           <div
-            class="flex items-center leading-5 text-theme-secondary-text"
+            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
             data-testid="header__subtitle"
           >
             subtitle

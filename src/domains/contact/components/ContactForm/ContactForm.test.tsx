@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -6,13 +5,13 @@ import "jest-styled-components";
 import { ContactForm } from "./ContactForm";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	renderResponsive,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const onSave = vi.fn();
@@ -21,15 +20,12 @@ const onChange = vi.fn();
 
 let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
-let validArkDevnetAddress: string;
+let validDevnetAddress: string;
 let resetProfileNetworksMock: () => void;
 
 const addressInput = () => screen.getByTestId("contact-form__address-input");
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
-
-const addressListID = "contact-form__address-list-item";
-const addAddressID = "contact-form__add-address-btn";
 
 describe("ContactForm", () => {
 	beforeAll(() => {
@@ -37,12 +33,12 @@ describe("ContactForm", () => {
 	});
 
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 
 		const [wallet] = profile.wallets().values();
-		validArkDevnetAddress = wallet.address();
+		validDevnetAddress = wallet.address();
 		contact = profile.contacts().values()[0];
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
@@ -117,37 +113,34 @@ describe("ContactForm", () => {
 
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
-
 		await userEvent.type(nameInput(), "name");
 
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		await userEvent.type(addressInput(), validArkDevnetAddress);
+		await userEvent.type(addressInput(), validDevnetAddress);
 
 		await waitFor(() => {
-			expect(addressInput()).toHaveValue(validArkDevnetAddress);
+			expect(addressInput()).toHaveValue(validDevnetAddress);
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId(addAddressID));
-
-		await waitFor(() => {
-			expect(screen.getByTestId(addressListID)).toBeVisible();
+			expect(saveButton()).not.toBeDisabled();
 		});
 
 		validateMock.mockRestore();
 	});
 
 	it("should not add invalid address and should display error message", async () => {
-		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(false),
+			}),
+		});
 
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
 
@@ -162,22 +155,25 @@ describe("ContactForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId(addAddressID));
-
-		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(saveButton()).toBeDisabled();
+		});
+
+		validateMock.mockRestore();
 	});
 
 	it("should not add duplicate address and display error message", async () => {
-		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
+			__construct: vi.fn(),
+			address: () => ({
+				validate: vi.fn().mockResolvedValue(false),
+			}),
+		});
 
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
 
@@ -194,16 +190,14 @@ describe("ContactForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId(addAddressID));
-
-		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(saveButton()).toBeDisabled();
+		});
+
+		validateMock.mockRestore();
 	});
 
 	it("should handle save", async () => {
@@ -223,20 +217,10 @@ describe("ContactForm", () => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		await userEvent.type(addressInput(), validArkDevnetAddress);
+		await userEvent.type(addressInput(), validDevnetAddress);
 
 		await waitFor(() => {
-			expect(addressInput()).toHaveValue(validArkDevnetAddress);
-		});
-
-		await waitFor(() => {
-			expect(screen.queryByTestId(addAddressID)).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId(addAddressID));
-
-		await waitFor(() => {
-			expect(screen.getByTestId(addressListID)).toBeVisible();
+			expect(addressInput()).toHaveValue(validDevnetAddress);
 		});
 
 		await waitFor(() => {
@@ -247,13 +231,11 @@ describe("ContactForm", () => {
 
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalledWith({
-				addresses: [
-					{
-						address: validArkDevnetAddress,
-						coin: "Mainsail",
-						name: validArkDevnetAddress,
-					},
-				],
+				address: {
+					address: validDevnetAddress,
+					coin: "Mainsail",
+					name: validDevnetAddress,
+				},
 				name: expect.any(String),
 			});
 		});
@@ -266,8 +248,6 @@ describe("ContactForm", () => {
 		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
-
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 
 		await userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
 
@@ -285,8 +265,6 @@ describe("ContactForm", () => {
 		});
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
-
 		await userEvent.type(nameInput(), "name");
 
 		await waitFor(() => {
@@ -300,58 +278,9 @@ describe("ContactForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
-		});
-
-		await userEvent.click(screen.getByTestId(addAddressID));
-
-		await waitFor(() => {
-			expect(screen.getByTestId(addressListID)).toBeVisible();
+			expect(saveButton()).not.toBeDisabled();
 		});
 
 		validateMock.mockRestore();
-	});
-
-	it("should remove an address", async () => {
-		render(
-			<ContactForm
-				onChange={onChange}
-				errors={{}}
-				profile={profile}
-				contact={contact}
-				onCancel={onCancel}
-				onSave={onSave}
-			/>,
-		);
-
-		expect(screen.getAllByTestId(addressListID)).toHaveLength(contact.addresses().count());
-
-		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
-
-		await waitFor(() => {
-			expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
-		});
-	});
-
-	it("should remove an address in xs screen", async () => {
-		renderResponsive(
-			<ContactForm
-				onChange={onChange}
-				errors={{}}
-				profile={profile}
-				contact={contact}
-				onCancel={onCancel}
-				onSave={onSave}
-			/>,
-			"xs",
-		);
-
-		expect(screen.getAllByTestId(addressListID)).toHaveLength(contact.addresses().count());
-
-		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn-xs")[0]);
-
-		await waitFor(() => {
-			expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
-		});
 	});
 });

@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-// import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 
 const onSave = vi.fn();
@@ -16,7 +14,6 @@ let profile: Contracts.IProfile;
 
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 const addressInput = () => screen.getByTestId("contact-form__address-input");
-const addAddressButton = () => screen.getByTestId("contact-form__add-address-btn");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
 const modalInner = () => screen.getByTestId("Modal__inner");
 
@@ -25,9 +22,11 @@ const newContact = {
 	name: "Test Contact",
 };
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("CreateContact", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should render", async () => {
@@ -44,12 +43,6 @@ describe("CreateContact", () => {
 	});
 
 	it("should call onSave when form is submitted", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
 		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
 		await waitFor(() => {
@@ -62,12 +55,6 @@ describe("CreateContact", () => {
 		await userEvent.tab();
 
 		await waitFor(() => {
-			expect(addAddressButton()).not.toBeDisabled();
-		});
-
-		await userEvent.click(addAddressButton());
-
-		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
 		});
 
@@ -76,7 +63,6 @@ describe("CreateContact", () => {
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalled();
 		});
-		validateMock.mockRestore();
 	});
 
 	it("should update errors when handleChange is called", async () => {

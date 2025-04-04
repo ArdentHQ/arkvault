@@ -26,7 +26,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
               </h1>
             </div>
             <div
-              class="flex items-center leading-5 text-theme-secondary-text"
+              class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -54,7 +54,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                 </div>
               </div>
               <div
-                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
+                class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
               >
                 <div
                   class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -171,7 +171,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                   </div>
                 </div>
                 <div
-                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border rounded-xl mt-0 sm:mt-2"
+                  class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border rounded-xl mt-0 sm:mt-2"
                 >
                   <div
                     class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
@@ -248,7 +248,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                       <div
                         class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 w-auto !leading-4 sm:min-w-36 sm:text-sm"
                       >
-                        Confirmation time
+                        Confirmation Time
                       </div>
                       <div
                         class="flex flex-row items-center gap-2 lowercase !leading-4 sm:text-sm"

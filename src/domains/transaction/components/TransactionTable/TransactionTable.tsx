@@ -65,7 +65,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				hideSender={hideSender}
 			/>
 		),
-		[showSkeleton, onRowClick, exchangeCurrency, profile],
+		[showSkeleton, onRowClick, exchangeCurrency, profile, hideSender],
 	);
 
 	return (

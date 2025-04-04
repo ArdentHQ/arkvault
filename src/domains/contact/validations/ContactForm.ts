@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
-
 import { lowerCaseEquals } from "@/utils/equals";
 
 const nameMaxLength = 42;

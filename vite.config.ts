@@ -1,12 +1,12 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import svgrPlugin from "vite-plugin-svgr";
 import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
-import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
-import path from "path";
+import { defineConfig } from "vite";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
+import path from "path";
+import react from "@vitejs/plugin-react";
+import svgrPlugin from "vite-plugin-svgr";
+import { visualizer } from "rollup-plugin-visualizer";
 
 
 export default defineConfig(() => {
@@ -35,6 +35,11 @@ export default defineConfig(() => {
 				// https://rollupjs.org/guide/en/#big-list-of-options
 				output: {
 					manualChunks: {
+						ledger: [
+							"@ledgerhq/hw-app-eth",
+							"@ledgerhq/hw-transport-webhid",
+							"@ledgerhq/hw-transport-webusb",
+						],
 						react: [
 							"react",
 							"react-datepicker",
@@ -55,7 +60,6 @@ export default defineConfig(() => {
 						],
 						sdk: ["@ardenthq/sdk"],
 						"sdk-ark": ["@ardenthq/sdk-ark"],
-						"sdk-helpers": ["@ardenthq/sdk-helpers"],
 						"sdk-intl": ["@ardenthq/sdk-intl"],
 						"sdk-profiles": ["@ardenthq/sdk-profiles"],
 					},

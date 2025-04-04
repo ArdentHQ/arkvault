@@ -42,6 +42,7 @@ export const VerifyMessage = () => {
 
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
+	console.log(activeWallet);
 
 	const history = useHistory();
 
@@ -121,7 +122,7 @@ export const VerifyMessage = () => {
 			} else {
 				const coin: Coins.Coin = activeProfile
 					.coins()
-					.set("ARK", activeProfile.networks().allByCoin("ARK")[0].id);
+					.set("Mainsail", activeProfile.networks().allByCoin("Mainsail")[0].id);
 
 				await coin.__construct();
 
@@ -154,7 +155,7 @@ export const VerifyMessage = () => {
 	return (
 		<Page pageTitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.TITLE")}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" data-testid="VerifyMessage" context={form} onSubmit={submitForm}>
+				<Form className="mx-auto max-w-172" data-testid="VerifyMessage" context={form} onSubmit={submitForm}>
 					<Tabs activeId={activeTab}>
 						<StepsProvider steps={2} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>

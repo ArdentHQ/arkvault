@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "@/app/components/Link";
 import {
 	ValidatorRowProperties,
+	ValidatorStatus,
+	ValidatorStatusEnum,
 	useValidatorRow,
 } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRow";
 import { ValidatorRowMobileSkeleton } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorRowMobileSkeleton";
 import { Address } from "@/app/components/Address";
+import {
+	MobileTableElement,
+	MobileTableElementRow,
+	MobileTableElementVariant,
+} from "@/app/components/MobileTableElement";
 
 export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
 	const { isLoading, validator } = properties;
 
-	const { renderButton } = useValidatorRow({ ...properties });
+	const { renderButton, isActive, status } = useValidatorRow({ ...properties });
+
+	const tableElementVariant = useMemo<MobileTableElementVariant | undefined>(() => {
+		if (status === ValidatorStatusEnum.Unvoted) {
+			return MobileTableElementVariant.danger;
+		}
+
+		if (status === ValidatorStatusEnum.Voted) {
+			return MobileTableElementVariant.primary;
+		}
+
+		if (status === ValidatorStatusEnum.Selected) {
+			return MobileTableElementVariant.success;
+		}
+
+		if (status === ValidatorStatusEnum.Changed) {
+			return MobileTableElementVariant.warning;
+		}
+	}, [status]);
 
 	if (isLoading) {
 		return <ValidatorRowMobileSkeleton />;
@@ -22,32 +47,34 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 	return (
 		<tr data-testid="DelegateRowMobile">
 			<td className="pt-3">
-				<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
-						<div className="flex items-center justify-start space-x-3 overflow-hidden">
-							<div className="flex flex-1 space-x-3 overflow-hidden text-sm font-semibold leading-[17px]">
-								<span>{validator.rank()}</span>
-								<Address
-									truncateOnTable
-									address={validator.address()}
-									wrapperClass="justify-start"
-									addressClass="leading-[17px] text-sm w-full"
-								/>
-							</div>
+				<MobileTableElement
+					variant={tableElementVariant}
+					title={validator.rank()}
+					titleExtra={
+						<div className="flex items-center">
+							<ValidatorStatus isActive={isActive} className="mr-3 sm:hidden" />
 
-							<Link
-								to={validator.explorerLink()}
-								tooltip={t("COMMON.OPEN_IN_EXPLORER")}
-								isExternal
-								className="text-sm leading-[17px] [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
-							>
-								<span className="pr-2">{t("COMMON.VIEW")}</span>
-							</Link>
+							<span className="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 sm:hidden" />
+
+							{renderButton()}
 						</div>
-					</div>
+					}
+					bodyClassName="sm:grid-cols-3"
+				>
+					<MobileTableElementRow title={t("COMMON.VALIDATOR")}>
+						<Address address={validator.address()} size="sm" />
+					</MobileTableElementRow>
 
-					<div className="flex">{renderButton()}</div>
-				</div>
+					<MobileTableElementRow title={t("COMMON.STATUS")} className="hidden sm:grid">
+						<ValidatorStatus isActive={isActive} />
+					</MobileTableElementRow>
+
+					<MobileTableElementRow title={t("COMMON.EXPLORER")}>
+						<Link to={validator.explorerLink()} tooltip={t("COMMON.OPEN_IN_EXPLORER")} isExternal>
+							<span className="pr-2">{t("COMMON.VIEW")}</span>
+						</Link>
+					</MobileTableElementRow>
+				</MobileTableElement>
 			</td>
 		</tr>
 	);

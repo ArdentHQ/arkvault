@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Page, Section } from "@/app/components/Layout";
 import { SideBar } from "@/app/components/SideBar";
 import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";
+import { PageHeader } from "@/app/components/Header";
+import { ThemeIcon } from "@/app/components/Icon";
 
 type ActiveSettings = "general" | "export" | "password" | "appearance" | "servers" | "networks";
 
@@ -23,20 +25,32 @@ export const SettingsWrapper = ({
 	const { t } = useTranslation();
 
 	return (
-		<Page
-			pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)}
-			sidebar={
-				<SideBar
-					items={menuItems}
-					activeItem={activeSettings}
-					handleActiveItem={(activeSetting: string) => {
-						history.push(`/profiles/${profile.id()}/settings/${activeSetting}`);
-					}}
-				/>
-			}
-		>
-			<Section className="-mt-2 lg:mt-0" innerClassName="lg:px-12">
-				{children}
+		<Page pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)}>
+			<PageHeader
+				className="lg:-mb-4"
+				title={t("SETTINGS.GENERAL.TITLE")}
+				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
+				titleIcon={<ThemeIcon dimensions={[54, 55]} lightIcon="SettingsLight" darkIcon="SettingsDark" />}
+			/>
+
+			<Section>
+				<div className="flex flex-1">
+					<div className="mx-auto flex w-full flex-col lg:container lg:flex-row lg:space-x-3">
+						<div className="mb-4 md:-mt-4 lg:my-0">
+							<SideBar
+								items={menuItems}
+								activeItem={activeSettings}
+								handleActiveItem={(activeSetting: string) => {
+									history.push(`/profiles/${profile.id()}/settings/${activeSetting}`);
+								}}
+							/>
+						</div>
+
+						<div className="flex-1 border-theme-secondary-300 dark:border-theme-dark-700 sm:overflow-hidden sm:rounded-xl sm:border">
+							{children}
+						</div>
+					</div>
+				</div>
 			</Section>
 		</Page>
 	);

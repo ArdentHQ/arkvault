@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { uniq } from "@/app/lib/helpers";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { uniq } from "@ardenthq/sdk-helpers";
 
 interface Properties extends JSX.IntrinsicAttributes {
 	wallets?: Contracts.IReadWriteWallet[];
