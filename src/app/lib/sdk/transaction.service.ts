@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { BigNumber, NumberLike } from "@ardenthq/sdk-helpers";
+import { BigNumber, NumberLike } from "@/app/lib/helpers";
 import {
 	TransactionService as Contract,
 	DelegateRegistrationInput,

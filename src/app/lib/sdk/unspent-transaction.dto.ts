@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
 import { UnspentTransactionData as Contract } from "./confirmed-transaction.dto.contract";

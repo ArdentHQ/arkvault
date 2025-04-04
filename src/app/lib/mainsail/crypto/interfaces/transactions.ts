@@ -1,4 +1,4 @@
-import { BigNumber, ByteBuffer } from "@ardenthq/sdk-helpers";
+import { BigNumber, ByteBuffer } from "@/app/lib/helpers";
 import { ErrorObject } from "ajv";
 
 export interface ITransaction {

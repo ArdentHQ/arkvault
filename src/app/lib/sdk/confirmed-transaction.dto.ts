@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 /* eslint-disable */
 
-import { BigNumber, Censor } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
 import { KeyValuePair } from "./contracts";
@@ -362,18 +362,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 
 	public setMeta(key: string, value: TransactionDataMeta): void {
 		this.#meta[key] = value;
-	}
-
-	protected censorMemo(memo?: string): string | undefined {
-		if (!memo || memo.length <= 0) {
-			return undefined;
-		}
-
-		const processor: Censor = new Censor();
-
-		if (processor.isBad(memo)) {
-			return undefined;
-		}
 	}
 
 	public async normalizeData(): Promise<void> {

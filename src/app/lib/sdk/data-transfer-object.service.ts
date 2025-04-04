@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { get } from "@ardenthq/sdk-helpers";
+import { get } from "@/app/lib/helpers";
 
 import { MetaPagination } from "./client.contract";
 import { ConfigKey, ConfigRepository } from "./coins";

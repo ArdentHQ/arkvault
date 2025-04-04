@@ -1,4 +1,4 @@
-import { Arr } from "@ardenthq/sdk-helpers";
+import { Arr } from "@/app/lib/helpers";
 
 import { ConfigRepository } from "./coins";
 import { NetworkHost, NetworkHostType } from "./networks";

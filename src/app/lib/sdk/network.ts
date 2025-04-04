@@ -1,4 +1,4 @@
-import { get } from "@ardenthq/sdk-helpers";
+import { get } from "@/app/lib/helpers";
 import { randomHost } from "./helpers";
 import {
 	CoinManifest,

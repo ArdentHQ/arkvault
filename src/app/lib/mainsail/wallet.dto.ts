@@ -1,5 +1,5 @@
-import { Contracts, DTO } from "@ardenthq/sdk";
-import { BigNumber, get, has } from "@ardenthq/sdk-helpers";
+import { Contracts, DTO } from "@/app/lib/sdk";
+import { BigNumber, get, has } from "@/app/lib/helpers";
 
 export class WalletData extends DTO.AbstractWalletData implements Contracts.WalletData {
 	public override primaryKey(): string {

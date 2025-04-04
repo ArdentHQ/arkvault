@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 
 import { BigNumberService } from "./big-number.service";
 import { ConfigRepository } from "./config";

@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 /* eslint-disable import/order */
 
-import { formatString } from "@ardenthq/sdk-helpers";
+import { formatString } from "@/app/lib/helpers";
 import queryString from "query-string";
 import { URL } from "url";
 

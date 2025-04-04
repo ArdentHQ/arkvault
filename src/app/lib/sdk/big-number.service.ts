@@ -1,4 +1,4 @@
-import { BigNumber, NumberLike } from "@ardenthq/sdk-helpers";
+import { BigNumber, NumberLike } from "@/app/lib/helpers";
 
 import { ConfigKey, ConfigRepository } from "./config";
 import { IContainer } from "./container.contracts";

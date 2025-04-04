@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 /* eslint-disable import/order */
 
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { strict as assert } from "assert";
 

@@ -1,6 +1,6 @@
 import { IoC, Services } from "@ardenthq/sdk";
 import { BIP39 } from "@ardenthq/sdk-cryptography";
-import { abort_if, abort_unless } from "@ardenthq/sdk-helpers";
+import { abort_if, abort_unless } from "@/app/lib/helpers";
 
 import { BindingType } from "./coin.contract";
 import { PrivateKey as BasePrivateKey } from "./crypto/identities/private-key";

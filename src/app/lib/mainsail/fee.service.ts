@@ -1,5 +1,5 @@
-import { Contracts, IoC, Services } from "@ardenthq/sdk";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { Contracts, IoC, Services } from "@/app/lib/sdk";
+import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
 import { Request } from "./request";
@@ -50,10 +50,10 @@ export class FeeService extends Services.AbstractFeeService {
 
 	#transform(dynamicFees: Fees): Services.TransactionFee {
 		return {
-			avg: formatUnits(dynamicFees?.avg ?? "0", "gwei"),
+			avg: formatUnits(dynamicFees.avg ?? "0", "gwei"),
 			isDynamic: true,
-			max: formatUnits(dynamicFees?.max ?? "0", "gwei"),
-			min: formatUnits(dynamicFees?.min ?? "0", "gwei"),
+			max: formatUnits(dynamicFees.max ?? "0", "gwei"),
+			min: formatUnits(dynamicFees.min ?? "0", "gwei"),
 			static: BigNumber.make("0"),
 		};
 	}

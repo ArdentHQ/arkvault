@@ -1,6 +1,6 @@
 import { Contracts, Http, IoC, Services, Signatories } from "@ardenthq/sdk";
 import { UUID } from "@ardenthq/sdk-cryptography";
-import { BigNumber, uniq } from "@ardenthq/sdk-helpers";
+import { BigNumber, uniq } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
 import { BindingType } from "./coin.contract";

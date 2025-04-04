@@ -1,6 +1,6 @@
-import { Contracts, DTO, Exceptions, IoC, Services } from "@ardenthq/sdk";
+import { Contracts, DTO, Exceptions, IoC, Services } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
 import { BindingType } from "./coin.contract";

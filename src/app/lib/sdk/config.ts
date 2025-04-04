@@ -1,4 +1,4 @@
-import { get, has, set, unset, ValidatorSchema } from "@ardenthq/sdk-helpers";
+import { get, has, set, unset, ValidatorSchema } from "@/app/lib/helpers";
 
 export class ConfigRepository {
 	readonly #config: Record<string, any>;
