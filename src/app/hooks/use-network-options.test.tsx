@@ -54,7 +54,11 @@ describe("useNetworkOptions hook", () => {
 		const networks = result.current.networkOptions();
 
 		expect(networks).toContainEqual({ isTestNetwork: false, label: "Mainsail", value: "mainsail.mainnet" });
-		expect(networks).not.toContainEqual({ isTestNetwork: true, label: "Mainsail Devnet", value: "mainsail.devnet" });
+		expect(networks).not.toContainEqual({
+			isTestNetwork: true,
+			label: "Mainsail Devnet",
+			value: "mainsail.devnet",
+		});
 	});
 
 	it("should get a network by its id", () => {
