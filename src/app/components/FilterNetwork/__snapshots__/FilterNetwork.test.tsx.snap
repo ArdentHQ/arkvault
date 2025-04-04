@@ -24,92 +24,6 @@ exports[`FilterNetwork > should render public networks 1`] = `
     >
       <li
         class="inline-block cursor-pointer pb-4 pr-4"
-        data-testid="NetworkOption__ark.mainnet"
-      >
-        <div
-          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-        >
-          <div
-            aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-            data-testid="NetworkIcon-ARK-ark.mainnet"
-          >
-            <div
-              class="text-theme-secondary-300"
-              data-testid="NetworkIcon__icon"
-            >
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="ark"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <span
-            class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
-      <li
-        class="inline-block cursor-pointer pb-4 pr-4"
-        data-testid="NetworkOption__ark.devnet"
-      >
-        <div
-          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-        >
-          <div
-            aria-label="ARK Devnet"
-            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-            data-testid="NetworkIcon-ARK-ark.devnet"
-          >
-            <div
-              class="text-theme-secondary-300"
-              data-testid="NetworkIcon__icon"
-            >
-              <div
-                style="height: 20px; width: 20px;"
-              >
-                <svg
-                  id="ark"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <span
-            class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
-      <li
-        class="inline-block cursor-pointer pb-4 pr-4"
         data-testid="NetworkOption__mainsail.mainnet"
       >
         <div
@@ -226,49 +140,6 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
       >
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.mainnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-ARK-ark.mainnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
@@ -324,49 +195,6 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
         class="flex flex-wrap"
         data-testid="NetworkOptions"
       >
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.devnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__mainsail.devnet"
@@ -435,15 +263,15 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
       >
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.mainnet"
+          data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
             class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-primary-500 ring-theme-background duration-100"
           >
             <div
-              aria-label="ARK"
+              aria-label="Mainsail"
               class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-ARK-ark.mainnet"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
                 class="text-theme-primary-500"
@@ -500,49 +328,6 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
             </span>
           </div>
         </li>
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__mainsail.mainnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="Mainsail"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
       </ul>
     </div>
     <div
@@ -557,49 +342,6 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
         class="flex flex-wrap"
         data-testid="NetworkOptions"
       >
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.devnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__mainsail.devnet"
@@ -709,58 +451,15 @@ exports[`FilterNetworks > should toggle view all 1`] = `
       >
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.mainnet"
+          data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
             class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
-              aria-label="ARK"
+              aria-label="Mainsail"
               class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-ARK-ark.mainnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.mainnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-ARK-ark.mainnet"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
                 class="text-theme-secondary-300"
@@ -905,49 +604,6 @@ exports[`FilterNetworks > should toggle view all 1`] = `
       >
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.devnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
@@ -1055,58 +711,15 @@ exports[`FilterNetworks > should toggle view all 2`] = `
       >
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.mainnet"
+          data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
             class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
-              aria-label="ARK"
+              aria-label="Mainsail"
               class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-ARK-ark.mainnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.mainnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-              data-testid="NetworkIcon-ARK-ark.mainnet"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
                 class="text-theme-secondary-300"
@@ -1239,49 +852,6 @@ exports[`FilterNetworks > should toggle view all 2`] = `
       >
         <li
           class="inline-block cursor-pointer pb-4 pr-4"
-          data-testid="NetworkOption__ark.devnet"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="text-theme-secondary-300"
-                data-testid="NetworkIcon__icon"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
-                >
-                  <svg
-                    id="ark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
@@ -1335,92 +905,6 @@ exports[`NetworkOptions > should render available networks options 1`] = `
     class="flex flex-wrap"
     data-testid="NetworkOptions"
   >
-    <li
-      class="inline-block cursor-pointer pb-4 pr-4"
-      data-testid="NetworkOption__ark.mainnet"
-    >
-      <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-      >
-        <div
-          aria-label="ARK"
-          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
-          data-testid="NetworkIcon-ARK-ark.mainnet"
-        >
-          <div
-            class="text-theme-secondary-300"
-            data-testid="NetworkIcon__icon"
-          >
-            <div
-              style="height: 20px; width: 20px;"
-            >
-              <svg
-                id="ark"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
-    <li
-      class="inline-block cursor-pointer pb-4 pr-4"
-      data-testid="NetworkOption__ark.devnet"
-    >
-      <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
-      >
-        <div
-          aria-label="ARK Devnet"
-          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="text-theme-secondary-300"
-            data-testid="NetworkIcon__icon"
-          >
-            <div
-              style="height: 20px; width: 20px;"
-            >
-              <svg
-                id="ark"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
     <li
       class="inline-block cursor-pointer pb-4 pr-4"
       data-testid="NetworkOption__mainsail.mainnet"
