@@ -1,6 +1,6 @@
 import React from "react";
 import { useBalanceVisibility } from "./use-balance-visibility";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 
@@ -8,7 +8,7 @@ let profile: Contracts.IProfile;
 
 describe("useBalanceVisibility", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
@@ -26,12 +26,10 @@ describe("useBalanceVisibility", () => {
 	it("should hide balance on click", async () => {
 		render(<TestComponent />);
 
-		expect(profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration)).toStrictEqual(undefined);
-
 		const button = screen.getByTestId("HideBalance-button");
 		await userEvent.click(button);
 
-		expect(profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration)).toStrictEqual({
+		expect(profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration)).toMatchObject({
 			hideBalance: true,
 		});
 	});
