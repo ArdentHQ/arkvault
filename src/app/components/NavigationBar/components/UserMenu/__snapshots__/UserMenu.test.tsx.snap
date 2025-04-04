@@ -57,7 +57,7 @@ exports[`UserMenu > should render with svg image 1`] = `
           >
             <img
               alt="Profile Avatar"
-              src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+              src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
             />
             <span
               class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"

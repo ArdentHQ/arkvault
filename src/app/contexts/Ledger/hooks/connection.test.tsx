@@ -11,12 +11,12 @@ import { toasts } from "@/app/services";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	getDefaultProfileId,
 	render,
 	screen,
 	waitFor,
 	mockNanoXTransport,
 	mockLedgerTransportError,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
 const LedgerWaitingDevice = "Waiting Device";
@@ -41,7 +41,7 @@ describe("Use Ledger Connection", () => {
 	});
 
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -73,7 +73,7 @@ describe("Use Ledger Connection", () => {
 		}, []);
 
 		const handleImport = async () => {
-			const wallets = [{ address: "DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y", path: "m/44'/1'/0'/0/0" }];
+			const wallets = [{ address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03", path: "m/44'/1'/0'/0/0" }];
 			await importLedgerWallets(wallets, wallet.coin(), profile);
 		};
 
@@ -133,12 +133,12 @@ describe("Use Ledger Connection", () => {
 
 		const importedWallet = profile
 			.wallets()
-			.findByAddressWithNetwork("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y", "ark.devnet");
+			.findByAddressWithNetwork("0x393f3F74F0cd9e790B5192789F31E0A38159ae03", "mainsail.devnet");
 
 		expect(importedWallet?.isLedgerNanoX()).toBe(true);
 		expect(importedWallet?.data().get(Contracts.WalletData.LedgerModel)).toBe(Contracts.WalletLedgerModel.NanoX);
 
-		profile.wallets().forget("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
+		profile.wallets().forget("0x393f3F74F0cd9e790B5192789F31E0A38159ae03");
 		await env.persist();
 	});
 

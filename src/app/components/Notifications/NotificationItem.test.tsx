@@ -3,11 +3,11 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
 import { NotificationItem } from "./NotificationItem";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 let notification: any;
@@ -25,12 +25,14 @@ vi.mock("react-visibility-sensor", () => ({
 	},
 }));
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("Notifications", () => {
 	beforeAll(() => {
-		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", TransactionsFixture));
+		server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", TransactionsFixture));
 
-		profile = env.profiles().findById(getDefaultProfileId());
-		notification = profile.notifications().get("29fdd62d-1c28-4d2c-b46f-667868c5afe1");
+		profile = env.profiles().findById(getMainsailProfileId());
+		notification = profile.notifications().get("7e72ea8c-a190-4c88-8c10-efae894b589a");
 	});
 
 	it("should render notification item", () => {
@@ -55,9 +57,9 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		userEvent.click(screen.getByTestId("NotificationItem__action"));
+		await userEvent.click(screen.getByTestId("NotificationItem__action"));
 
-		await waitFor(() => expect(onAction).toHaveBeenCalledWith("29fdd62d-1c28-4d2c-b46f-667868c5afe1"));
+		await waitFor(() => expect(onAction).toHaveBeenCalledWith("7e72ea8c-a190-4c88-8c10-efae894b589a"));
 	});
 
 	it("should emit onVisibilityChange event", async () => {
