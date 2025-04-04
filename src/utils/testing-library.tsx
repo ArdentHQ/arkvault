@@ -168,11 +168,11 @@ export * from "@testing-library/react";
 
 export { renderWithRouter as render, customRender as renderWithoutRouter };
 
-export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
+export const getDefaultProfileId = () => getMainsailProfileId();
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultMainsailWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
-export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
+export const getDefaultWalletMnemonic = () => getDefaultMainsailWalletMnemonic();
 export const getDefaultMainsailWalletMnemonic = () =>
 	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise";
 export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[0];

@@ -48,7 +48,7 @@ export const bootEnvironmentWithProfileFixtures = async ({
 	// await env.profiles().restore(env.profiles().last(), "password");
 
 	if (shouldRestoreDefaultProfile) {
-		const profile = env.profiles().values()[2];
+		const profile = env.profiles().values()[0];
 		await env.profiles().restore(profile);
 
 		await profile.sync();
