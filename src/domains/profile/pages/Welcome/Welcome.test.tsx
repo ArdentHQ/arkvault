@@ -786,7 +786,7 @@ describe("Welcome", () => {
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[2];
+		const profileCardMenu = screen.getAllByTestId("dropdown__toggle")[0];
 
 		await userEvent.click(profileCardMenu);
 
@@ -823,7 +823,7 @@ describe("Welcome", () => {
 
 		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(1));
 	});
 
 	it("should not select profile on wrong last location", () => {
