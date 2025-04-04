@@ -11,8 +11,6 @@ let validator: Contracts.IReadOnlyWallet;
 
 const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ValidatorRowMobile", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());

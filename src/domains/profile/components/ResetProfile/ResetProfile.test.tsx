@@ -7,8 +7,6 @@ import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/test
 
 let profile: Contracts.IProfile;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ResetProfile", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

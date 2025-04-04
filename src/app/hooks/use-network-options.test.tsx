@@ -15,8 +15,6 @@ const fixtureProfileId = getMainsailProfileId();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useNetworkOptions hook", () => {
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";

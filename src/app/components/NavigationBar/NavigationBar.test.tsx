@@ -56,8 +56,6 @@ const ContainerWithHiddenNavigation = ({ children }) => {
 	return children;
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("NavigationBar", () => {
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;

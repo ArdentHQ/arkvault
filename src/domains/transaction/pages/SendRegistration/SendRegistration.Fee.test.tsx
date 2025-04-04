@@ -76,7 +76,6 @@ const reviewStepID = "ValidatorRegistrationForm__review-step";
 
 describe("Registration Fee", () => {
 	beforeAll(async () => {
-		process.env.USE_MAINSAIL_NETWORK = "true";
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);

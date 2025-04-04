@@ -13,8 +13,6 @@ const wrapper = ({ children }: any) => (
 	<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: false }}>{children}</ConfigurationProvider>
 );
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useWelcomeModal", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

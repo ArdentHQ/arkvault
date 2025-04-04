@@ -10,8 +10,6 @@ import {
 import { mockProfileWithPublicAndTestNetworks } from "./testing-library";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Profile utils", () => {
 	it("#getProfileById", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());

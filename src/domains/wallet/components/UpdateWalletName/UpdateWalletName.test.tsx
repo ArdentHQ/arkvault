@@ -14,8 +14,6 @@ import {
 	waitFor,
 } from "@/utils/testing-library";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("UpdateWalletName", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;

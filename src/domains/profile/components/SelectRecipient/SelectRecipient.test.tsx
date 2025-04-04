@@ -10,8 +10,6 @@ let profile: Contracts.IProfile;
 
 const selectRecipient = () => screen.getByTestId("SelectRecipient__select-recipient");
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("SelectRecipient", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

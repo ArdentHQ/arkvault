@@ -29,8 +29,6 @@ let defaultDelegate: {
 
 let votes: Contracts.VoteRegistryItem[];
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("WalletVote", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

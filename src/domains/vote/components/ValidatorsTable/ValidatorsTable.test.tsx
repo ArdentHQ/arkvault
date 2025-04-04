@@ -20,8 +20,6 @@ const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0
 const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
 const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ValidatorsTable", () => {
 	beforeAll(() => {
 		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);

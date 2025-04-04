@@ -53,8 +53,6 @@ const expectToast = async (text: string) => {
 	await waitFor(() => expect(toastUpdateSpy).toHaveBeenCalledWith(expect.any(String), "error", text));
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Welcome with deeplink", () => {
 	const history = createHashHistory();
 	const mainnetDeepLink =

@@ -18,8 +18,6 @@ let profile: Contracts.IProfile;
 
 const fixtureProfileId = getMainsailProfileId();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("SelectNetworkStep", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(fixtureProfileId);

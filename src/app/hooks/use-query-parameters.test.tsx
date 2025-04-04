@@ -51,9 +51,6 @@ describe("useQueryParameters hook", () => {
 	});
 });
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useNetworkFromQueryParameters hook", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

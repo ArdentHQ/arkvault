@@ -13,8 +13,6 @@ const requiredParameters = {
 	network: "mainsail.devnet",
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useSearchParametersValidation", () => {
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";

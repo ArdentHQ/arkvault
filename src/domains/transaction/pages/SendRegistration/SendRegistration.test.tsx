@@ -147,7 +147,6 @@ const withKeyboard = "with keyboard";
 
 describe("Registration", () => {
 	beforeAll(async () => {
-		process.env.USE_MAINSAIL_NETWORK = "true";
 		vi.useFakeTimers({
 			shouldAdvanceTime: true,
 			toFake: ["setInterval", "clearInterval", "Date"],

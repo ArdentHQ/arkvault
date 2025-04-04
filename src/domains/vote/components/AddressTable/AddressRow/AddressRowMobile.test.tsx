@@ -57,8 +57,6 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 		}),
 	}));
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("AddressRowMobile", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

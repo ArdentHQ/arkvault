@@ -26,8 +26,6 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => (
 	</table>
 );
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("DelegateVoteAmount", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());

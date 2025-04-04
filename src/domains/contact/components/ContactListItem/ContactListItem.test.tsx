@@ -20,8 +20,6 @@ let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ContactListItem", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

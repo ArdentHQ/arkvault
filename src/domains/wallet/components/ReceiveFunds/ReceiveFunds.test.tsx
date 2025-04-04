@@ -17,8 +17,6 @@ import {
 let network: Networks.Network;
 const downloadQrButton = "ReceiveFunds__download-qr";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ReceiveFunds", () => {
 	beforeEach(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());

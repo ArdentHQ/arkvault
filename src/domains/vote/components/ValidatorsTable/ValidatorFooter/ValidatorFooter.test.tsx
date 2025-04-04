@@ -16,8 +16,6 @@ const translations = buildTranslations();
 
 const continueButton = () => screen.getByTestId("DelegateTable__continue-button");
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ValidatorFooter", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());

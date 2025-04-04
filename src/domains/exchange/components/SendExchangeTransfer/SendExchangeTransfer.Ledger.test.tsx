@@ -33,9 +33,6 @@ let useActiveProfileSpy: MockInstance;
 // 	await userEvent.click(firstAddress);
 // };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

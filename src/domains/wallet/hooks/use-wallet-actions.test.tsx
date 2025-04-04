@@ -9,9 +9,6 @@ import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useWalletActions", () => {
 	const history = createHashHistory();
 

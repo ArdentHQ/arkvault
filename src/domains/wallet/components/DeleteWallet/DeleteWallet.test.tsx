@@ -6,8 +6,6 @@ import { render, screen, env, getMainsailProfileId } from "@/utils/testing-libra
 
 const onDelete = vi.fn();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("DeleteWallet", () => {
 	it("should render a modal", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());

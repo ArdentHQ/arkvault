@@ -37,9 +37,6 @@ vi.mock("@/utils/delay", () => ({
 
 const mainsailDevnet = "mainsail.devnet";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;

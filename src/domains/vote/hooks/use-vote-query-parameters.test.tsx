@@ -25,8 +25,6 @@ const delegateAddresses = [
 	"0x137c59f371a7049159ef19a72f908773Ade219b1",
 ];
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useWalletFromQueryParameters hook", () => {
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";

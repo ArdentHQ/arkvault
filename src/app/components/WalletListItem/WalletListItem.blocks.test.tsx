@@ -15,8 +15,6 @@ vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", ()
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("WalletListItem.blocks", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;

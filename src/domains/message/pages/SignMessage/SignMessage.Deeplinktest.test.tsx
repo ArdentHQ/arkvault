@@ -46,9 +46,6 @@ vi.stubGlobal(
 	},
 );
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
