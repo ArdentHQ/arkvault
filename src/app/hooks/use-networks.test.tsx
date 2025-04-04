@@ -60,16 +60,6 @@ describe("useNetworks", () => {
 	it("should prioritize default networks", () => {
 		const mock = vi.spyOn(profile.networks(), "all").mockReturnValue({
 			mainsail: {
-				devnet: {
-					...DefaultManifest,
-					coin: "Mainsail",
-					currency: {
-						ticker: "ARK",
-					},
-					id: "mainsail.devnet",
-					name: "Devnet",
-					type: "test",
-				},
 				custom: {
 					...DefaultManifest,
 					coin: "Mainsail",
@@ -88,6 +78,16 @@ describe("useNetworks", () => {
 					},
 					id: "random.custom",
 					name: "Custom 2",
+					type: "test",
+				},
+				devnet: {
+					...DefaultManifest,
+					coin: "Mainsail",
+					currency: {
+						ticker: "ARK",
+					},
+					id: "mainsail.devnet",
+					name: "Devnet",
 					type: "test",
 				},
 				mainnet: {

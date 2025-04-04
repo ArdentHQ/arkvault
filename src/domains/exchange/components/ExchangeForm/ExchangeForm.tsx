@@ -189,7 +189,9 @@ const ExchangeForm = ({
 		trigger,
 	]);
 
-	const mainsailMainnetNetwork = activeProfile.availableNetworks().find((network) => network.id() === "mainsail.mainnet");
+	const mainsailMainnetNetwork = activeProfile
+		.availableNetworks()
+		.find((network) => network.id() === "mainsail.mainnet");
 	const withSignStep = mainsailMainnetNetwork && fromCurrency?.coin.toLowerCase() === "ark";
 
 	const submitForm = useCallback(async () => {
