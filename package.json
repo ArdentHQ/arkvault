@@ -249,7 +249,10 @@
 				"socks-proxy-agent",
 				"string-hash",
 				"yup",
-				"react-zendesk"
+				"react-zendesk",
+				"@ledgerhq/hw-app-eth",
+				"@ledgerhq/hw-transport-webhid",
+				"@ledgerhq/hw-transport-webusb"
 			]
 		}
 	},
