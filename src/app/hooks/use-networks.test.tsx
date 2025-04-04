@@ -4,7 +4,7 @@ import React from "react";
 import { useNetworks } from "@/app/hooks";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
 describe("useNetworks", () => {
 	let profile: Contracts.IProfile;
@@ -28,7 +28,7 @@ describe("useNetworks", () => {
 
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
