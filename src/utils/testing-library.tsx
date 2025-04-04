@@ -175,7 +175,7 @@ export const getDefaultMainsailWalletId = () => Object.keys(Object.values(fixtur
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
 export const getDefaultMainsailWalletMnemonic = () =>
 	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise";
-export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
+export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[0];
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
