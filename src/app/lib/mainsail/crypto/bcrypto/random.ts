@@ -15,7 +15,6 @@
 "use strict";
 
 import { assert } from "./assert";
-import getRandomValues from "get-random-values";
 
 /*
  * Constants
