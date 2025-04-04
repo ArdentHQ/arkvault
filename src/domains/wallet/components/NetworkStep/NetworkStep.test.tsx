@@ -67,7 +67,7 @@ describe("SelectNetworkStep", () => {
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+		expect(screen.queryByTestId("SelectDropdown")).not.toBeInTheDocument();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});
