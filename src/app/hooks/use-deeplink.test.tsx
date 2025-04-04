@@ -6,7 +6,7 @@ import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import {
 	env,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
@@ -16,13 +16,16 @@ import {
 const history = createHashHistory();
 
 const url =
-	"/?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK";
+	"/?method=transfer&coin=mainsail&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("useDeeplink hook", () => {
 	let profile: Contracts.IProfile;
 
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -64,7 +67,9 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should use the method parameter to detect deeplink", () => {
-		history.push("/?coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK");
+		history.push(
+			"/?coin=mainsail&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
+		);
 
 		render(
 			<Route>
@@ -79,7 +84,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url with errors", async () => {
-		history.push("/?method=transfer&coin=doge&network=ark.devnet");
+		history.push("/?method=transfer&coin=doge&network=mainsail.devnet");
 
 		render(
 			<Route>
@@ -100,7 +105,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should validate url without errors", async () => {
-		history.push("/?method=transfer&coin=ark&network=ark.devnet");
+		history.push("/?method=transfer&coin=mainsail&network=mainsail.devnet");
 
 		render(
 			<Route>
@@ -137,7 +142,7 @@ describe("useDeeplink hook", () => {
 		await userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
 		expect(historySpy).toHaveBeenCalledWith(
-			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK",
+			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer?method=transfer&coin=mainsail&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
 		);
 
 		historySpy.mockRestore();

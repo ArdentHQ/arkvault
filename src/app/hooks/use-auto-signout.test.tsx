@@ -4,13 +4,13 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
-import { act, env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { act, env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
 describe("useAutoSignOut", () => {
 	beforeEach(async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
@@ -24,10 +24,10 @@ describe("useAutoSignOut", () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
-		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+		const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 		history.push(dashboardURL);
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		vi.spyOn(profile.settings(), "get").mockReturnValue(0.001);
 		const Component = () => {
@@ -64,7 +64,7 @@ describe("useAutoSignOut", () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const Component = () => {
 			const { startIdleTimer } = useAutoSignOut(profile);

@@ -1,26 +1,23 @@
 /* eslint-disable @typescript-eslint/require-await */
-import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
-
+import { createHashHistory } from "history";
+import React from "react";
+import userEvent from "@testing-library/user-event";
+import { Route, useHistory, Prompt } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
-import { Prompt, Route, useHistory } from "react-router-dom";
 import {
-	act,
 	env,
 	getMainsailProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
+	act,
 } from "@/utils/testing-library";
-
-import { ApplicationError } from "@/domains/error/pages";
-import { ErrorBoundary } from "react-error-boundary";
-import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import React from "react";
-import { createHashHistory } from "history";
 import { toasts } from "@/app/services";
-import userEvent from "@testing-library/user-event";
-
+import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
+import { ApplicationError } from "@/domains/error/pages";
+import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
@@ -178,6 +175,24 @@ describe("App Main", () => {
 		walletSyncErrorMock.mockRestore();
 		walletRestoreErrorMock.mockRestore();
 		profileSyncMock.mockRestore();
+	});
+
+	it("should enter profile and sync", async () => {
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
+		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
+
+		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
+		history.push(profileUrl);
+
+		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
+
+		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
+		await waitFor(() => expect(successToastSpy).toHaveBeenCalled());
+
+		successToastSpy.mockRestore();
+		warningToastSpy.mockRestore();
+		dismissToastSpy.mockRestore();
 	});
 
 	it("should show warning toast when profile has ledger wallets in an incompatible browser", async () => {

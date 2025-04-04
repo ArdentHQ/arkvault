@@ -386,7 +386,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -809,7 +809,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -1230,7 +1230,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -1561,17 +1561,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 class="pl-2"
                               >
                                 <span
-                                  aria-busy="true"
-                                  aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  data-testid="Amount"
                                 >
-                                  <span
-                                    class="react-loading-skeleton"
-                                    style="width: 100px; height: 16px;"
-                                  >
-                                    ‌
-                                  </span>
-                                  <br />
+                                  0.01989216 ARK
                                 </span>
                               </div>
                               <button
@@ -1890,17 +1883,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 class="pl-2"
                               >
                                 <span
-                                  aria-busy="true"
-                                  aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  data-testid="Amount"
                                 >
-                                  <span
-                                    class="react-loading-skeleton"
-                                    style="width: 100px; height: 16px;"
-                                  >
-                                    ‌
-                                  </span>
-                                  <br />
+                                  0.01989216 ARK
                                 </span>
                               </div>
                               <button
@@ -2219,17 +2205,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 class="pl-2"
                               >
                                 <span
-                                  aria-busy="true"
-                                  aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  data-testid="Amount"
                                 >
-                                  <span
-                                    class="react-loading-skeleton"
-                                    style="width: 100px; height: 16px;"
-                                  >
-                                    ‌
-                                  </span>
-                                  <br />
+                                  0.01989216 ARK
                                 </span>
                               </div>
                               <button
@@ -2986,7 +2965,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -3409,7 +3388,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -3895,7 +3874,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -4395,7 +4374,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -4893,7 +4872,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -5238,17 +5217,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 class="pl-2"
                               >
                                 <span
-                                  aria-busy="true"
-                                  aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  data-testid="Amount"
                                 >
-                                  <span
-                                    class="react-loading-skeleton"
-                                    style="width: 100px; height: 16px;"
-                                  >
-                                    ‌
-                                  </span>
-                                  <br />
+                                  0.01989216 ARK
                                 </span>
                               </div>
                               <button
@@ -5567,17 +5539,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 class="pl-2"
                               >
                                 <span
-                                  aria-busy="true"
-                                  aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  data-testid="Amount"
                                 >
-                                  <span
-                                    class="react-loading-skeleton"
-                                    style="width: 100px; height: 16px;"
-                                  >
-                                    ‌
-                                  </span>
-                                  <br />
+                                  0.01989216 ARK
                                 </span>
                               </div>
                               <button
@@ -5896,17 +5861,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 class="pl-2"
                               >
                                 <span
-                                  aria-busy="true"
-                                  aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
+                                  data-testid="Amount"
                                 >
-                                  <span
-                                    class="react-loading-skeleton"
-                                    style="width: 100px; height: 16px;"
-                                  >
-                                    ‌
-                                  </span>
-                                  <br />
+                                  0.01989216 ARK
                                 </span>
                               </div>
                               <button
@@ -6789,7 +6747,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
@@ -7289,7 +7247,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 ARK
+                              0.01989216 ARK
                             </span>
                           </div>
                         </td>
