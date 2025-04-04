@@ -1123,24 +1123,24 @@ class Curve {
 		if (this.endo) {endo = this.endo.toJSON();}
 
 		return {
-			context,
 			a: undefined,
-			endian: this.endian,
 			b: undefined,
-			hash: this.hash,
-			d: undefined,
-			id: this.id,
 			c: undefined,
-			ossl: this.ossl,
+			context,
+			d: undefined,
+			endian: this.endian,
 			endo,
-			p: this.p.toJSON(),
 			g: this.g.toJSON(pre),
-			type: this.type,
 			h: this.h.toString(16),
+			hash: this.hash,
+			id: this.id,
 			n,
+			ossl: this.ossl,
+			p: this.p.toJSON(),
 			prefix,
 			prime: this.prime,
 			s: undefined,
+			type: this.type,
 			z,
 		};
 	}
@@ -7413,11 +7413,11 @@ g: [
 			],
 			
 
-hash: "SHA256",
+h: "1",
 			
 
 
-h: "1",
+hash: "SHA256",
 			
 			
 
@@ -7461,11 +7461,11 @@ g: [
 			],
 			
 
-hash: "SHA256",
+h: "1",
 			
 
 
-h: "1",
+hash: "SHA256",
 			
 			
 
@@ -7509,11 +7509,11 @@ g: [
 			],
 			
 
-hash: "SHA256",
+h: "1",
 			
 
 
-h: "1",
+hash: "SHA256",
 			
 			
 
@@ -7573,11 +7573,11 @@ g: [
 			],
 			
 
-hash: "SHA384",
+h: "1",
 			
 
 
-h: "1",
+hash: "SHA384",
 			
 			
 
@@ -7653,11 +7653,11 @@ g: [
 			],
 			
 
-hash: "SHA512",
+h: "1",
 			
 
 
-h: "1",
+hash: "SHA512",
 			
 			
 
@@ -7701,18 +7701,14 @@ class SECP256K1 extends ShortCurve {
 		super({
 			a: "0",
 			b: "7",
-			endian: "be",
 			// sqrt(-3)
 c: ["0a2d2ba9 3507f1df 233770c2 a797962c", "c61f6d15 da14ecd4 7d8d27ae 1cd5f852"],
 			
-
-hash: "SHA256",
+endian: "be",
 			
-
 
 // Precomputed endomorphism.
 endo: {
-				beta: ["7ae96a2b 657c0710 6e64479e ac3434e9", "9cf04975 12f58995 c1396c28 719501ee"],
 				basis: [
 					{
 						a: "3086d221a7d46bcde86c90e49284eb15",
@@ -7723,6 +7719,7 @@ endo: {
 						b: "3086d221a7d46bcde86c90e49284eb15",
 					},
 				],
+				beta: ["7ae96a2b 657c0710 6e64479e ac3434e9", "9cf04975 12f58995 c1396c28 719501ee"],
 				lambda: ["5363ad4c c05c30e0 a5261c02 8812645a", "122e22ea 20816678 df02967c 1b23bd72"],
 				pre: [
 					384,
@@ -7731,11 +7728,7 @@ endo: {
 				],
 			},
 			
-			
 
-
-id: "SECP256K1",
-			
 
 
 g: [
@@ -7744,13 +7737,27 @@ g: [
 				pre,
 			],
 			
-
-
-ossl: "secp256k1",
 			
 
 
 h: "1",
+			
+
+
+hash: "SHA256",
+			
+
+
+id: "SECP256K1",
+			
+
+
+n: ["ffffffff ffffffff ffffffff fffffffe", "baaedce6 af48a03b bfd25e8c d0364141"],
+			
+
+
+ossl: "secp256k1",
+			
 			
 
 // 2^256 - 2^32 - 977 (= 3 mod 4)
@@ -7758,14 +7765,10 @@ p: ["ffffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff fffffffe fffffc2f"
 			
 			
 
-n: ["ffffffff ffffffff ffffffff fffffffe", "baaedce6 af48a03b bfd25e8c d0364141"],
-			
+prime: "k256",
 			
 
 type: "short",
-			
-
-prime: "k256",
 			
 			// SVDW
 z: "1",
@@ -7790,10 +7793,10 @@ class BRAINPOOLP256 extends ShortCurve {
 				pre,
 			],
 			
-hash: "SHA256",
+h: "1",
 			
 
-h: "1",
+hash: "SHA256",
 			
 			
 id: "BRAINPOOLP256",
@@ -7845,10 +7848,10 @@ class BRAINPOOLP384 extends ShortCurve {
 				pre,
 			],
 			
-hash: "SHA384",
+h: "1",
 			
 
-h: "1",
+hash: "SHA384",
 			
 			
 id: "BRAINPOOLP384",
@@ -7912,10 +7915,10 @@ class BRAINPOOLP512 extends ShortCurve {
 				pre,
 			],
 			
-hash: "SHA512",
+h: "1",
 			
 
-h: "1",
+hash: "SHA512",
 			
 			
 id: "BRAINPOOLP512",
@@ -7966,11 +7969,11 @@ g: [
 			],
 			
 
-hash: "SHA512",
+h: "8",
 			
 
 
-h: "8",
+hash: "SHA512",
 			
 			
 
@@ -8054,11 +8057,11 @@ g: [
 			],
 			
 
-hash: "SHAKE256",
+h: "4",
 			
 
 
-h: "4",
+hash: "SHAKE256",
 			
 			
 
@@ -8171,11 +8174,11 @@ g: [
 			],
 			
 
-hash: "SHAKE256",
+h: "4",
 			
 
 
-h: "4",
+hash: "SHAKE256",
 			
 			
 
@@ -8260,15 +8263,13 @@ z: "-1",
 class ED25519 extends EdwardsCurve {
 	constructor(pre) {
 		super({
-			context: false,
 			a: "-1",
-			endian: "le",
+			context: false,
 			// -121665 / 121666 mod p
 d: ["52036cee 2b6ffe73 8cc74079 7779e898", "00700a4d 4141d8ab 75eb4dca 135978a3"],
 			
-hash: "SHA512",
+endian: "le",
 			
-
 g: [
 				["216936d3 cd6e53fe c0a4e231 fdd6dc5c", "692cc760 9525a7b2 c9562d60 8f25d51a"],
 				// 4/5
@@ -8277,28 +8278,29 @@ g: [
 			],
 			
 
+h: "8",
+			
+
+
+hash: "SHA512",
+			
+
 
 id: "ED25519",
 			
-
-
-h: "8",
-			
-			
-
-ossl: "ED25519",
 			
 
 n: ["10000000 00000000 00000000 00000000", "14def9de a2f79cd6 5812631a 5cf5d3ed"],
 			
+
+ossl: "ED25519",
+			
 			// 2^255 - 19 (= 5 mod 8)
 p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"],
 			prefix: "SigEd25519 no Ed25519 collisions",
-			type: "edwards",
-			
 			prime: "p25519",
 			
-torsion: [
+			torsion: [
 				[
 					["00000000 00000000 00000000 00000000", "00000000 00000000 00000000 00000000"],
 					["00000000 00000000 00000000 00000000", "00000000 00000000 00000000 00000001"],
@@ -8332,6 +8334,8 @@ torsion: [
 					["7a03ac92 77fdc74e c6cc392c fa53202a", "0f67100d 760b3cba 4fd84d3d 706a17c7"],
 				],
 			],
+			
+type: "edwards",
 			// Elligator 2
 z: "2",
 		});
@@ -8347,9 +8351,8 @@ z: "2",
 class ISO448 extends EdwardsCurve {
 	constructor(pre) {
 		super({
-			context: true,
 			a: "1",
-			endian: "le",
+			context: true,
 			// 39082 / 39081 mod p
 d: [
 				"d78b4bdc 7f0daf19 f24f38c2 9373a2cc",
@@ -8358,9 +8361,8 @@ d: [
 				"243cc32d baa156b9",
 			],
 			
-hash: "SHAKE256",
+endian: "le",
 			
-
 g: [
 				[
 					"79a70b2b 70400553 ae7c9df4 16c792c6",
@@ -8379,16 +8381,16 @@ g: [
 			],
 			
 
+h: "4",
+			
+
+
+hash: "SHAKE256",
+			
+
 
 id: "ISO448",
 			
-
-
-h: "4",
-			
-			
-
-ossl: null,
 			
 
 n: [
@@ -8398,6 +8400,9 @@ n: [
 				"2378c292 ab5844f3",
 			],
 			
+
+ossl: null,
+			
 			// 2^448 - 2^224 - 1 (= 3 mod 4)
 p: [
 				"ffffffff ffffffff ffffffff ffffffff",
@@ -8406,11 +8411,9 @@ p: [
 				"ffffffff ffffffff",
 			],
 			prefix: "SigEd448",
-			type: "edwards",
-			
 			prime: "p448",
 			
-torsion: [
+			torsion: [
 				[
 					[
 						"00000000 00000000 00000000 00000000",
@@ -8468,6 +8471,8 @@ torsion: [
 					],
 				],
 			],
+			
+type: "edwards",
 			// Elligator 2
 z: "-1",
 		});
@@ -8482,9 +8487,8 @@ z: "-1",
 class ED448 extends EdwardsCurve {
 	constructor(pre) {
 		super({
-			context: true,
 			a: "1",
-			endian: "le",
+			context: true,
 			// -39081 mod p
 d: [
 				"ffffffff ffffffff ffffffff ffffffff",
@@ -8493,9 +8497,8 @@ d: [
 				"ffffffff ffff6756",
 			],
 			
-hash: "SHAKE256",
+endian: "le",
 			
-
 g: [
 				[
 					"4f1970c6 6bed0ded 221d15a6 22bf36da",
@@ -8513,16 +8516,16 @@ g: [
 			],
 			
 
+h: "4",
+			
+
+
+hash: "SHAKE256",
+			
+
 
 id: "ED448",
 			
-
-
-h: "4",
-			
-			
-
-ossl: "ED448",
 			
 
 n: [
@@ -8532,6 +8535,9 @@ n: [
 				"2378c292 ab5844f3",
 			],
 			
+
+ossl: "ED448",
+			
 			// 2^448 - 2^224 - 1 (= 3 mod 4)
 p: [
 				"ffffffff ffffffff ffffffff ffffffff",
@@ -8540,11 +8546,9 @@ p: [
 				"ffffffff ffffffff",
 			],
 			prefix: "SigEd448",
-			type: "edwards",
-			
 			prime: "p448",
 			
-torsion: [
+			torsion: [
 				[
 					[
 						"00000000 00000000 00000000 00000000",
@@ -8602,6 +8606,8 @@ torsion: [
 					],
 				],
 			],
+			
+type: "edwards",
 			// Elligator 2
 z: "-1",
 		});
@@ -8616,38 +8622,38 @@ const curves = {
 	BRAINPOOLP256,
 	BRAINPOOLP384,
 	BRAINPOOLP512,
+	ED25519,
+	ED448,
+	ISO448,
 	MONT448,
 	P192,
-	ED25519,
 	P224,
-	ED448,
 	P256,
-	ISO448,
-	__proto__: null,
 	P384,
 	P521,
 	SECP256K1,
 	X25519,
 	X448,
+	__proto__: null,
 };
 
 const cache = {
 	BRAINPOOLP256: null,
 	BRAINPOOLP384: null,
 	BRAINPOOLP512: null,
+	ED25519: null,
+	ED448: null,
+	ISO448: null,
 	MONT448: null,
 	P192: null,
-	ED25519: null,
 	P224: null,
-	ED448: null,
 	P256: null,
-	ISO448: null,
-	__proto__: null,
 	P384: null,
 	P521: null,
 	SECP256K1: null,
 	X25519: null,
 	X448: null,
+	__proto__: null,
 };
 
 function curve(name, ...arguments_) {
