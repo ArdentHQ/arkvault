@@ -18,36 +18,38 @@ import { toasts } from "@/app/services";
 import {
 	act as renderAct,
 	env,
-	getDefaultProfileId,
-	MNEMONICS,
+	getMainsailProfileId,
 	render,
 	screen,
 	syncDelegates,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { beforeAll, vi } from "vitest";
 
 const history = createHashHistory();
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-const arkDevnet = "ark.devnet";
+const mainsailDevnet = "mainsail.devnet";
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		expect(current.shouldRestore(profile)).toBe(true);
 
@@ -58,13 +60,13 @@ describe("useProfileSyncStatus", () => {
 
 	it("#idle", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		expect(current.isIdle()).toBe(true);
 		expect(current.shouldRestore(profile)).toBe(false);
@@ -74,13 +76,13 @@ describe("useProfileSyncStatus", () => {
 
 	it("#restoring", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("restoring");
@@ -94,13 +96,13 @@ describe("useProfileSyncStatus", () => {
 
 	it("#restored", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		act(() => {
 			current.markAsRestored(profile.id());
@@ -114,13 +116,13 @@ describe("useProfileSyncStatus", () => {
 
 	it("#syncing", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("idle");
@@ -135,13 +137,13 @@ describe("useProfileSyncStatus", () => {
 
 	it("#synced", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("synced");
@@ -155,13 +157,13 @@ describe("useProfileSyncStatus", () => {
 
 	it("#completed", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
 			result: { current },
-		} = renderHook(() => useProfileSyncStatus(getDefaultProfileId()), { wrapper });
+		} = renderHook(() => useProfileSyncStatus(getMainsailProfileId()), { wrapper });
 
 		act(() => {
 			current.setStatus("completed");
@@ -176,7 +178,7 @@ describe("useProfileSyncStatus", () => {
 
 describe("useProfileSynchronizer", () => {
 	beforeEach(async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -368,7 +370,7 @@ describe("useProfileSynchronizer", () => {
 	it("should reset sync profile wallets", async () => {
 		history.push(dashboardURL);
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		let configuration: any;
 
 		const Component = () => {
@@ -392,7 +394,7 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ResetSyncProfile")).resolves.toBeVisible();
 
 		await waitFor(() =>
-			expect(configuration.getProfileConfiguration(getDefaultProfileId()).isProfileInitialSync).toBe(false),
+			expect(configuration.getProfileConfiguration(getMainsailProfileId()).isProfileInitialSync).toBe(false),
 		);
 		/*
 		await userEvent.click(screen.getByTestId("ResetSyncProfile"));
@@ -421,9 +423,9 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should sync profile notifications for available wallets", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
 		const profileNotificationsSyncSpy = vi.spyOn(profile.notifications().transactions(), "sync");
 
@@ -453,8 +455,8 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() =>
 			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
 				identifiers: [
-					{ networkId: arkDevnet, type: "address", value: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
-					{ networkId: arkDevnet, type: "address", value: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb" },
+					{ networkId: mainsailDevnet, type: "address", value: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
+					{ networkId: mainsailDevnet, type: "address", value: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54" },
 				],
 			}),
 		);
@@ -467,7 +469,7 @@ describe("useProfileSynchronizer", () => {
 	it("should call on profile updated if new profile id", async () => {
 		const onProfileUpdated = vi.fn();
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const profile2 = await env.profiles().create("new profile 2");
 
 		const dashboardURL = `/profiles/${profile.id()}/dashboard`;
@@ -506,7 +508,7 @@ describe("useProfileSynchronizer", () => {
 	it("should not call on profile updated if profile id changes from dashboard", async () => {
 		const onProfileUpdated = vi.fn();
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const dashboardURL = `/profiles/${profile.id()}/dashboard`;
 		history.push("/");
@@ -545,7 +547,7 @@ describe("useProfileRestore", () => {
 
 	it("should not restore profile if already restored in tests", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
@@ -565,7 +567,7 @@ describe("useProfileRestore", () => {
 	it.skip("should restore and save profile", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		profile.wallets().flush();
 
@@ -669,7 +671,7 @@ describe("useProfileRestore", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		profile.wallets().flush();
 
 		const wrapper = ({ children }: any) => (
@@ -699,23 +701,23 @@ describe("useProfileRestore", () => {
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 		history.push(dashboardURL);
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 
 		profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
-				mnemonic: MNEMONICS[0],
-				network: arkDevnet,
+				coin: "Mainsail",
+				mnemonic: MAINSAIL_MNEMONICS[0],
+				network: mainsailDevnet,
 			}),
 		);
 
 		profile.wallets().push(
 			await profile.walletFactory().fromAddress({
-				address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-				coin: "ARK",
-				network: "ark.mainnet",
+				address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+				coin: "Mainsail",
+				network: "mainsail.mainnet",
 			}),
 		);
 
@@ -736,7 +738,7 @@ describe("useProfileRestore", () => {
 
 		await waitFor(() =>
 			expect(profileSyncMock).toHaveBeenCalledWith({
-				networkId: arkDevnet,
+				networkId: mainsailDevnet,
 				ttl: 10_000,
 			}),
 		);
@@ -772,7 +774,7 @@ describe("useProfileStatusWatcher", () => {
 	it("should not monitor for network status if profile has not finished syncing", async () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
@@ -795,7 +797,7 @@ describe("useProfileStatusWatcher", () => {
 	it("should not monitor for network status if profile is still syncing wallets", async () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
@@ -816,7 +818,7 @@ describe("useProfileStatusWatcher", () => {
 	it("should not monitor for network status if profile has no wallets", async () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
@@ -840,7 +842,7 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
@@ -876,7 +878,7 @@ describe("useProfileStatusWatcher", () => {
 	it("should stay idle if network status has not changed", async () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
@@ -897,13 +899,14 @@ describe("useProfileStatusWatcher", () => {
 		const useStateSpy = vi.spyOn(React, "useState");
 		//@ts-ignore
 		useStateSpy.mockImplementation((initialState, setActualState) => {
+			console.log(initialState, setActualState)
 			// Use actual state if it's not `isInitialSync` in useProfileStatusWatcher
 			if (initialState !== true) {
 				return [initialState, setActualState];
 			}
 
 			if (initialState.profileErroredNetworks) {
-				return [{ ...initialState, profileErroredNetworks: ["ARK Devnet"] }, setActualState];
+				return [{ ...initialState, profileErroredNetworks: ["Mainsail Devnet"] }, setActualState];
 			}
 
 			// Mock `isInitialSync` as false for idle state
@@ -930,16 +933,16 @@ describe("useProfileStatusWatcher", () => {
 	});
 
 	it("should emit error for incompatible ledger wallets", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_UNIT = undefined;
 
 		const ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
-			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-			coin: "ARK",
-			network: arkDevnet,
+			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+			coin: "Mainsail",
+			network: mainsailDevnet,
 			path: "m/44'/1'/0'/0/3",
 		});
 
