@@ -30,7 +30,7 @@ describe("useWalletFromQueryParameters hook", () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getMainsailProfileId());
 		nethash = profile.wallets().first().network().meta().nethash;
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterAll(() => {

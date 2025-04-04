@@ -30,7 +30,7 @@ describe("Use Vote Filters", () => {
 	});
 
 	it("should include only wallets from the active network", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const { wallet: mainsailMainWallet } = await profile.walletFactory().generate({
 			coin: "Mainsail",
@@ -75,7 +75,7 @@ describe("Use Vote Filters", () => {
 	});
 
 	it("should filter wallets based on search query", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const { wallet: wallet1 } = await profile.walletFactory().generate({
 			coin: "Mainsail",
@@ -114,7 +114,7 @@ describe("Use Vote Filters", () => {
 	});
 
 	it("should set hasEmptyResults and hasWallets correctly", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {

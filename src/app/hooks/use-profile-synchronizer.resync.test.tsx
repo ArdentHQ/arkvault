@@ -62,7 +62,7 @@ describe("useProfileSyncStatus", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		const profile = env.profiles().findById(getMainsailProfileId());
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 

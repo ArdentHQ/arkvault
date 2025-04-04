@@ -146,7 +146,7 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
 
 		const profile = env.profiles().first();
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		await env.profiles().restore(profile);
 

@@ -423,7 +423,7 @@ describe("useProfileSynchronizer", () => {
 	it("should sync profile notifications for available wallets", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const profileNotificationsSyncSpy = vi.spyOn(profile.notifications().transactions(), "sync");
 

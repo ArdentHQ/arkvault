@@ -74,7 +74,7 @@ describe("Profile utils", () => {
 
 		const availableNetworksMock = vi.spyOn(profile, "availableNetworks").mockReturnValue([networks[0]]);
 
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
