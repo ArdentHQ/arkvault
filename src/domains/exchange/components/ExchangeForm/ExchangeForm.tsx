@@ -189,8 +189,8 @@ const ExchangeForm = ({
 		trigger,
 	]);
 
-	const arkMainnetNetwork = activeProfile.availableNetworks().find((network) => network.id() === "ark.mainnet");
-	const withSignStep = arkMainnetNetwork && fromCurrency?.coin.toLowerCase() === "ark";
+	const mainsailMainnetNetwork = activeProfile.availableNetworks().find((network) => network.id() === "mainsail.mainnet");
+	const withSignStep = mainsailMainnetNetwork && fromCurrency?.coin.toLowerCase() === "ark";
 
 	const submitForm = useCallback(async () => {
 		const { fromCurrency, toCurrency, recipientWallet, refundWallet, payinAmount, externalId, refundExternalId } =
@@ -412,10 +412,10 @@ const ExchangeForm = ({
 					</div>
 				</Tabs>
 			</Form>
-			{showTransferModal && exchangeTransaction && arkMainnetNetwork && (
+			{showTransferModal && exchangeTransaction && mainsailMainnetNetwork && (
 				<SendExchangeTransfer
 					profile={activeProfile}
-					network={arkMainnetNetwork}
+					network={mainsailMainnetNetwork}
 					exchangeTransaction={exchangeTransaction}
 					onSuccess={(txId: string) => {
 						setTransferTransactionId(txId);
