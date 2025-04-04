@@ -9,11 +9,11 @@ import {
 	render,
 	env,
 	screen,
-	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
@@ -27,7 +27,7 @@ describe("SelectNetworkDropdown", () => {
 
 		profile = env.profiles().findById(fixtureProfileId);
 
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 	});
 
 	afterEach(() => {
@@ -58,7 +58,7 @@ describe("SelectNetworkDropdown", () => {
 				networks={[
 					...networks,
 					{
-						coin: () => "ARK",
+						coin: () => "Mainsail",
 						coinName: () => "Custom Network",
 						id: () => "whatever.custom",
 						isLive: () => true,
@@ -89,7 +89,7 @@ describe("SelectNetworkDropdown", () => {
 
 	it("should render custom network initials", () => {
 		const customNetworkMock = {
-			coin: () => "ARK",
+			coin: () => "Mainsail",
 			coinName: () => "My Coin name",
 			id: () => "whatever.custom",
 			isLive: () => false,

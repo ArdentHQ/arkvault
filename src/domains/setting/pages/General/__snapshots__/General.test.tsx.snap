@@ -344,6 +344,13 @@ exports[`General Settings > should disable submit button when profile is not res
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -2863,6 +2870,13 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
                       </div>
                     </div>
                   </button>
@@ -5430,6 +5444,13 @@ exports[`General Settings > should render 1`] = `
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -7951,6 +7972,13 @@ exports[`General Settings > should update profile 1`] = `
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
                       </div>
                     </div>
                   </button>
@@ -10474,6 +10502,13 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -12994,6 +13029,13 @@ exports[`General Settings > should update the avatar when removing focus from na
                             </g>
                           </svg>
                         </div>
+                      </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
                       </div>
                     </div>
                   </button>

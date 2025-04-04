@@ -10,7 +10,7 @@ import {
 } from "./transport";
 import {
 	env,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	mockNanoXTransport,
 	mockLedgerTransportError,
 	mockConnectedTransport,
@@ -22,7 +22,7 @@ describe("Ledger transport", () => {
 	let ledgerListenSpy: vi.SpyInstance;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();

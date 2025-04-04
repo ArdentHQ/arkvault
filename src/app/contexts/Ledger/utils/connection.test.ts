@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { accessLedgerDevice, accessLedgerApp, persistLedgerConnection } from "./connection";
-import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockNanoXTransport } from "@/utils/testing-library";
 
 describe("Ledger Device Connection", () => {
 	let profile: Contracts.IProfile;
@@ -10,7 +10,7 @@ describe("Ledger Device Connection", () => {
 	let publicKeyPaths: Map<string, string>;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
