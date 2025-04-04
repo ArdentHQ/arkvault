@@ -23,6 +23,7 @@ export default defineConfig(() => {
 			},
 		},
 		define: {
+			'process.browser': true,
 			"process.env": {
 				REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
 				REACT_APP_IS_UNIT: process.env.REACT_APP_IS_UNIT,
