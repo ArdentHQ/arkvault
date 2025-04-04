@@ -177,8 +177,7 @@ describe("App Main", () => {
 		profileSyncMock.mockRestore();
 	});
 
-	// @TODO Shahin will take care of that
-	it.skip("should enter profile and sync", async () => {
+	it("should enter profile and sync", async () => {
 		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
