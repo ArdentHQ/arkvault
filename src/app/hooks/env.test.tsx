@@ -4,14 +4,16 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("useActiveProfile", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 	});
 
