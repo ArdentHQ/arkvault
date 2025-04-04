@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { ByteBuffer } from "./byte-buffer";
 
 const writeReadValues = "should write and read value (%s)";
+const throwRangeError = "should throw RangeError for value (%s)";
 
 describe("ByteBuffer", () => {
 	it("should return valid result & result length", () => {
@@ -73,7 +74,7 @@ describe("ByteBuffer#Int8", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(shouldThrowRangeError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt8(dataset)).toThrowError(RangeError);
