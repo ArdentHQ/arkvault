@@ -12,11 +12,11 @@
  * Assert
  */
 
-export function assert(val, msg) {
-	if (!val) {
-		const err = new Error(msg || "Assertion failed");
+export function assert(value, message) {
+	if (!value) {
+		const err = new Error(message || "Assertion failed");
 
-		if (Error.captureStackTrace) Error.captureStackTrace(err, assert);
+		if (Error.captureStackTrace) {Error.captureStackTrace(err, assert);}
 
 		throw err;
 	}

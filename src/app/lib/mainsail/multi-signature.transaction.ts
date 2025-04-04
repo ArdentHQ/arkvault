@@ -72,7 +72,7 @@ export class PendingMultiSignatureTransaction {
 		}
 
 		const signature: string | undefined = transaction.signatures.find(
-			(signature) => parseInt(signature.substring(0, 2), 16) === index,
+			(signature) => Number.parseInt(signature.slice(0, 2), 16) === index,
 		);
 
 		if (!signature) {

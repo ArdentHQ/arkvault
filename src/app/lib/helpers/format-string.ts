@@ -1,10 +1,10 @@
-export const formatString = (...args: any[]): string => {
-	let output: string = args[0];
+export const formatString = (...arguments_: any[]): string => {
+	let output: string = arguments_[0];
 
-	args.shift();
+	arguments_.shift();
 
-	for (let i = 0; i < args.length; i++) {
-		output = output.replace(`{${i}}`, args[i]);
+	for (const [index, element] of arguments_.entries()) {
+		output = output.replace(`{${index}}`, element);
 	}
 
 	return output;

@@ -31,14 +31,14 @@ const PADDING = Buffer.alloc(64, 0x00);
 PADDING[0] = 0x80;
 
 const K = new Uint32Array([
-	0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98,
-	0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174, 0xe49b69c1, 0xefbe4786,
-	0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152, 0xa831c66d, 0xb00327c8,
-	0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13,
-	0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85, 0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819,
-	0xd6990624, 0xf40e3585, 0x106aa070, 0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a,
-	0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7,
-	0xc67178f2,
+	0x42_8A_2F_98, 0x71_37_44_91, 0xB5_C0_FB_CF, 0xE9_B5_DB_A5, 0x39_56_C2_5B, 0x59_F1_11_F1, 0x92_3F_82_A4, 0xAB_1C_5E_D5, 0xD8_07_AA_98,
+	0x12_83_5B_01, 0x24_31_85_BE, 0x55_0C_7D_C3, 0x72_BE_5D_74, 0x80_DE_B1_FE, 0x9B_DC_06_A7, 0xC1_9B_F1_74, 0xE4_9B_69_C1, 0xEF_BE_47_86,
+	0x0F_C1_9D_C6, 0x24_0C_A1_CC, 0x2D_E9_2C_6F, 0x4A_74_84_AA, 0x5C_B0_A9_DC, 0x76_F9_88_DA, 0x98_3E_51_52, 0xA8_31_C6_6D, 0xB0_03_27_C8,
+	0xBF_59_7F_C7, 0xC6_E0_0B_F3, 0xD5_A7_91_47, 0x06_CA_63_51, 0x14_29_29_67, 0x27_B7_0A_85, 0x2E_1B_21_38, 0x4D_2C_6D_FC, 0x53_38_0D_13,
+	0x65_0A_73_54, 0x76_6A_0A_BB, 0x81_C2_C9_2E, 0x92_72_2C_85, 0xA2_BF_E8_A1, 0xA8_1A_66_4B, 0xC2_4B_8B_70, 0xC7_6C_51_A3, 0xD1_92_E8_19,
+	0xD6_99_06_24, 0xF4_0E_35_85, 0x10_6A_A0_70, 0x19_A4_C1_16, 0x1E_37_6C_08, 0x27_48_77_4C, 0x34_B0_BC_B5, 0x39_1C_0C_B3, 0x4E_D8_AA_4A,
+	0x5B_9C_CA_4F, 0x68_2E_6F_F3, 0x74_8F_82_EE, 0x78_A5_63_6F, 0x84_C8_78_14, 0x8C_C7_02_08, 0x90_BE_FF_FA, 0xA4_50_6C_EB, 0xBE_F9_A3_F7,
+	0xC6_71_78_F2,
 ]);
 
 /**
@@ -54,14 +54,14 @@ class SHA256 {
 	}
 
 	init() {
-		this.state[0] = 0x6a09e667;
-		this.state[1] = 0xbb67ae85;
-		this.state[2] = 0x3c6ef372;
-		this.state[3] = 0xa54ff53a;
-		this.state[4] = 0x510e527f;
-		this.state[5] = 0x9b05688c;
-		this.state[6] = 0x1f83d9ab;
-		this.state[7] = 0x5be0cd19;
+		this.state[0] = 0x6A_09_E6_67;
+		this.state[1] = 0xBB_67_AE_85;
+		this.state[2] = 0x3C_6E_F3_72;
+		this.state[3] = 0xA5_4F_F5_3A;
+		this.state[4] = 0x51_0E_52_7F;
+		this.state[5] = 0x9B_05_68_8C;
+		this.state[6] = 0x1F_83_D9_AB;
+		this.state[7] = 0x5B_E0_CD_19;
 		this.size = 0;
 		return this;
 	}
@@ -87,7 +87,7 @@ class SHA256 {
 		if (pos > 0) {
 			let want = 64 - pos;
 
-			if (want > len) want = len;
+			if (want > len) {want = len;}
 
 			data.copy(this.block, pos, off, off + want);
 
@@ -95,7 +95,7 @@ class SHA256 {
 			len -= want;
 			off += want;
 
-			if (pos < 64) return;
+			if (pos < 64) {return;}
 
 			this._transform(this.block, 0);
 		}
@@ -106,7 +106,7 @@ class SHA256 {
 			len -= 64;
 		}
 
-		if (len > 0) data.copy(this.block, 0, off, off + len);
+		if (len > 0) {data.copy(this.block, 0, off, off + len);}
 	}
 
 	_final(out) {
@@ -115,20 +115,20 @@ class SHA256 {
 		const pos = this.size & 63;
 		const len = this.size * 8;
 
-		writeU32(DESC, (len * (1 / 0x100000000)) >>> 0, 0);
+		writeU32(DESC, (len * (1 / 0x1_00_00_00_00)) >>> 0, 0);
 		writeU32(DESC, len >>> 0, 4);
 
 		this._update(PADDING, 1 + ((119 - pos) & 63));
 		this._update(DESC, 8);
 
-		for (let i = 0; i < 8; i++) {
-			writeU32(out, this.state[i], i * 4);
-			this.state[i] = 0;
+		for (let index = 0; index < 8; index++) {
+			writeU32(out, this.state[index], index * 4);
+			this.state[index] = 0;
 		}
 
-		for (let i = 0; i < 64; i++) this.msg[i] = 0;
+		for (let index = 0; index < 64; index++) {this.msg[index] = 0;}
 
-		for (let i = 0; i < 64; i++) this.block[i] = 0;
+		for (let index = 0; index < 64; index++) {this.block[index] = 0;}
 
 		this.size = FINALIZED;
 
@@ -146,14 +146,14 @@ class SHA256 {
 		let f = this.state[5];
 		let g = this.state[6];
 		let h = this.state[7];
-		let i = 0;
+		let index = 0;
 
-		for (; i < 16; i++) W[i] = readU32(chunk, pos + i * 4);
+		for (; index < 16; index++) {W[index] = readU32(chunk, pos + index * 4);}
 
-		for (; i < 64; i++) W[i] = sigma1(W[i - 2]) + W[i - 7] + sigma0(W[i - 15]) + W[i - 16];
+		for (; index < 64; index++) {W[index] = sigma1(W[index - 2]) + W[index - 7] + sigma0(W[index - 15]) + W[index - 16];}
 
-		for (i = 0; i < 64; i++) {
-			const t1 = h + Sigma1(e) + Ch(e, f, g) + K[i] + W[i];
+		for (index = 0; index < 64; index++) {
+			const t1 = h + Sigma1(e) + Ch(e, f, g) + K[index] + W[index];
 			const t2 = Sigma0(a) + Maj(a, b, c);
 
 			h = g;
@@ -204,7 +204,7 @@ class SHA256 {
 		ctx.update(x);
 		ctx.update(y);
 
-		if (z) ctx.update(z);
+		if (z) {ctx.update(z);}
 
 		return ctx.final();
 	}
@@ -255,14 +255,14 @@ function Maj(x, y, z) {
 }
 
 function readU32(data, off) {
-	return data[off++] * 0x1000000 + data[off++] * 0x10000 + data[off++] * 0x100 + data[off];
+	return data[off++] * 0x1_00_00_00 + data[off++] * 0x1_00_00 + data[off++] * 0x1_00 + data[off];
 }
 
-function writeU32(data, num, off) {
-	data[off++] = num >>> 24;
-	data[off++] = num >>> 16;
-	data[off++] = num >>> 8;
-	data[off++] = num;
+function writeU32(data, number_, off) {
+	data[off++] = number_ >>> 24;
+	data[off++] = number_ >>> 16;
+	data[off++] = number_ >>> 8;
+	data[off++] = number_;
 	return off;
 }
 

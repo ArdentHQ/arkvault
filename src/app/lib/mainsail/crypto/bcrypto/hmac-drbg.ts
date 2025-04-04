@@ -23,7 +23,7 @@ import { assert } from "./assert";
  * Constants
  */
 
-const RESEED_INTERVAL = 0x1000000000000;
+const RESEED_INTERVAL = 0x1_00_00_00_00_00_00;
 const ZERO = Buffer.from([0x00]);
 const ONE = Buffer.from([0x01]);
 
@@ -42,26 +42,26 @@ class HmacDRBG {
 		this.V = Buffer.alloc(hash.size);
 		this.rounds = 0;
 
-		if (entropy) this.init(entropy, nonce, pers);
+		if (entropy) {this.init(entropy, nonce, pers);}
 	}
 
 	init(entropy, nonce, pers) {
-		if (nonce == null) nonce = Buffer.alloc(0);
+		if (nonce == null) {nonce = Buffer.alloc(0);}
 
-		if (pers == null) pers = Buffer.alloc(0);
+		if (pers == null) {pers = Buffer.alloc(0);}
 
 		assert(Buffer.isBuffer(entropy));
 		assert(Buffer.isBuffer(nonce));
 		assert(Buffer.isBuffer(pers));
 
-		for (let i = 0; i < this.V.length; i++) {
-			this.K[i] = 0x00;
-			this.V[i] = 0x01;
+		for (let index = 0; index < this.V.length; index++) {
+			this.K[index] = 0x00;
+			this.V[index] = 0x01;
 		}
 
 		const seed = Buffer.concat([entropy, nonce, pers]);
 
-		if (seed.length < this.minEntropy) throw new Error("Not enough entropy.");
+		if (seed.length < this.minEntropy) {throw new Error("Not enough entropy.");}
 
 		this.update(seed);
 		this.rounds = 1;
@@ -70,16 +70,16 @@ class HmacDRBG {
 	}
 
 	reseed(entropy, add) {
-		if (add == null) add = Buffer.alloc(0);
+		if (add == null) {add = Buffer.alloc(0);}
 
 		assert(Buffer.isBuffer(entropy));
 		assert(Buffer.isBuffer(add));
 
-		if (this.rounds === 0) throw new Error("DRBG not initialized.");
+		if (this.rounds === 0) {throw new Error("DRBG not initialized.");}
 
 		const seed = Buffer.concat([entropy, add]);
 
-		if (seed.length < this.minEntropy) throw new Error("Not enough entropy.");
+		if (seed.length < this.minEntropy) {throw new Error("Not enough entropy.");}
 
 		this.update(seed);
 		this.rounds = 1;
@@ -91,18 +91,18 @@ class HmacDRBG {
 		assert(len >>> 0 === len);
 		assert(add == null || Buffer.isBuffer(add));
 
-		if (this.rounds === 0) throw new Error("DRBG not initialized.");
+		if (this.rounds === 0) {throw new Error("DRBG not initialized.");}
 
-		if (this.rounds > RESEED_INTERVAL) throw new Error("Reseed is required.");
+		if (this.rounds > RESEED_INTERVAL) {throw new Error("Reseed is required.");}
 
-		if (add && add.length > 0) this.update(add);
+		if (add && add.length > 0) {this.update(add);}
 
 		const blocks = Math.ceil(len / this.hash.size);
 		const out = Buffer.alloc(blocks * this.hash.size);
 
-		for (let i = 0; i < blocks; i++) {
+		for (let index = 0; index < blocks; index++) {
 			this.V = this.mac(this.V);
-			this.V.copy(out, i * this.hash.size);
+			this.V.copy(out, index * this.hash.size);
 		}
 
 		this.update(add);
@@ -135,7 +135,7 @@ class HmacDRBG {
 		kmac.update(this.V);
 		kmac.update(ZERO);
 
-		if (seed) kmac.update(seed);
+		if (seed) {kmac.update(seed);}
 
 		this.K = kmac.final();
 		this.V = this.mac(this.V);

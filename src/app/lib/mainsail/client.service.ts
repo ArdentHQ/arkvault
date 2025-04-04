@@ -122,7 +122,7 @@ export class ClientService extends Services.AbstractClientService {
 				"tx",
 			);
 		} catch (error) {
-			response = (error as any).response.json();
+			response = (error).response.json();
 		}
 
 		const { data, errors } = response;
@@ -188,7 +188,7 @@ export class ClientService extends Services.AbstractClientService {
 				result: response.result,
 			};
 		} catch (error) {
-			const errorResponse = (error as any).response?.json();
+			const errorResponse = (error).response?.json();
 			throw new Error(errorResponse?.error?.message || "Failed to make EVM call");
 		}
 	}

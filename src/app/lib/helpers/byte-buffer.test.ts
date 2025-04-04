@@ -108,8 +108,8 @@ describe("ByteBuffer#UInt8", () => {
 
 describe("ByteBuffer#Int16BE", () => {
 	const bufferSize = 2;
-	const min = -32768;
-	const max = 32767;
+	const min = -32_768;
+	const max = 32_767;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -136,7 +136,7 @@ describe("ByteBuffer#Int16BE", () => {
 describe("ByteBuffer#UInt16BE", () => {
 	const bufferSize = 2;
 	const min = 0;
-	const max = 65535;
+	const max = 65_535;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -162,8 +162,8 @@ describe("ByteBuffer#UInt16BE", () => {
 
 describe("ByteBuffer#Int16LE", () => {
 	const bufferSize = 2;
-	const min = -32768;
-	const max = 32767;
+	const min = -32_768;
+	const max = 32_767;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -190,7 +190,7 @@ describe("ByteBuffer#Int16LE", () => {
 describe("ByteBuffer#UInt16LE", () => {
 	const bufferSize = 2;
 	const min = 0;
-	const max = 65535;
+	const max = 65_535;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -216,8 +216,8 @@ describe("ByteBuffer#UInt16LE", () => {
 
 describe("ByteBuffer#Int32BE", () => {
 	const bufferSize = 4;
-	const min = -2147483648;
-	const max = 2147483647;
+	const min = -2_147_483_648;
+	const max = 2_147_483_647;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -244,7 +244,7 @@ describe("ByteBuffer#Int32BE", () => {
 describe("ByteBuffer#UInt32BE", () => {
 	const bufferSize = 4;
 	const min = 0;
-	const max = 4294967295;
+	const max = 4_294_967_295;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -270,8 +270,8 @@ describe("ByteBuffer#UInt32BE", () => {
 
 describe("ByteBuffer#Int32LE", () => {
 	const bufferSize = 4;
-	const min = -2147483648;
-	const max = 2147483647;
+	const min = -2_147_483_648;
+	const max = 2_147_483_647;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -298,7 +298,7 @@ describe("ByteBuffer#Int32LE", () => {
 describe("ByteBuffer#UInt32LE", () => {
 	const bufferSize = 4;
 	const min = 0;
-	const max = 4294967295;
+	const max = 4_294_967_295;
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
@@ -324,8 +324,8 @@ describe("ByteBuffer#UInt32LE", () => {
 
 describe("ByteBuffer#BigInt64BE", () => {
 	const bufferSize = 8;
-	const min = -9223372036854775808n;
-	const max = 9223372036854775807n;
+	const min = -9_223_372_036_854_775_808n;
+	const max = 9_223_372_036_854_775_807n;
 	const validValues = [min, max];
 	const invalidValues = [min - 1n, max + 1n];
 
@@ -378,8 +378,8 @@ describe("ByteBuffer#BigUInt64BE", () => {
 
 describe("ByteBuffer#BigInt64LE", () => {
 	const bufferSize = 8;
-	const min = -9223372036854775808n;
-	const max = 9223372036854775807n;
+	const min = -9_223_372_036_854_775_808n;
+	const max = 9_223_372_036_854_775_807n;
 	const validValues = [min, max];
 	const invalidValues = [min - 1n, max + 1n];
 

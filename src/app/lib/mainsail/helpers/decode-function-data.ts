@@ -20,12 +20,10 @@ export const decodeFunctionData = (data: Hex, abiType: AbiType = AbiType.Consens
 	};
 
 	try {
-		const result = viemDecodeFunctionData({
+		return viemDecodeFunctionData({
 			abi: abiMap[abiType],
 			data,
 		}) as FunctionData;
-
-		return result;
 	} catch (error) {
 		throw new Error(error.message);
 	}

@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
 // @ts-nocheck
 
 /*!
@@ -70,7 +71,7 @@ export class ECDSA {
 	}
 
 	get schnorr() {
-		if (!this._schnorr) this._schnorr = new Schnorr(this.curve, this.xof);
+		if (!this._schnorr) {this._schnorr = new Schnorr(this.curve, this.xof);}
 		return this._schnorr;
 	}
 
@@ -93,7 +94,7 @@ export class ECDSA {
 		let a;
 		try {
 			a = this.curve.decodeScalar(key);
-		} catch (e) {
+		} catch {
 			return false;
 		}
 
@@ -116,7 +117,7 @@ export class ECDSA {
 
 		const a = BN.decode(json.d, this.curve.endian);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
 		return this.curve.encodeScalar(a);
 	}
@@ -124,15 +125,15 @@ export class ECDSA {
 	privateKeyTweakAdd(key, tweak) {
 		const t = this.curve.decodeScalar(tweak);
 
-		if (t.cmp(this.curve.n) >= 0) throw new Error("Invalid scalar.");
+		if (t.cmp(this.curve.n) >= 0) {throw new Error("Invalid scalar.");}
 
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
 		const k = a.add(t).imod(this.curve.n);
 
-		if (k.isZero()) throw new Error("Invalid private key.");
+		if (k.isZero()) {throw new Error("Invalid private key.");}
 
 		return this.curve.encodeScalar(k);
 	}
@@ -140,15 +141,15 @@ export class ECDSA {
 	privateKeyTweakMul(key, tweak) {
 		const t = this.curve.decodeScalar(tweak);
 
-		if (t.isZero() || t.cmp(this.curve.n) >= 0) throw new Error("Invalid scalar.");
+		if (t.isZero() || t.cmp(this.curve.n) >= 0) {throw new Error("Invalid scalar.");}
 
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
 		const k = a.mul(t).imod(this.curve.n);
 
-		if (k.isZero()) throw new Error("Invalid private key.");
+		if (k.isZero()) {throw new Error("Invalid private key.");}
 
 		return this.curve.encodeScalar(k);
 	}
@@ -156,7 +157,7 @@ export class ECDSA {
 	privateKeyNegate(key) {
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
 		const k = a.neg().imod(this.curve.n);
 
@@ -166,7 +167,7 @@ export class ECDSA {
 	privateKeyInvert(key) {
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
 		const k = a.invert(this.curve.n);
 
@@ -176,7 +177,7 @@ export class ECDSA {
 	publicKeyCreate(key, compress) {
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
 		const A = this.curve.g.mulBlind(a);
 
@@ -217,7 +218,7 @@ export class ECDSA {
 
 		try {
 			this.curve.decodePoint(key);
-		} catch (e) {
+		} catch {
 			return false;
 		}
 
@@ -238,16 +239,16 @@ export class ECDSA {
 
 		const x = BN.decode(json.x, this.curve.endian);
 
-		if (x.cmp(this.curve.p) >= 0) throw new Error("Invalid point.");
+		if (x.cmp(this.curve.p) >= 0) {throw new Error("Invalid point.");}
 
 		if (json.y != null) {
 			const y = BN.decode(json.y, this.curve.endian);
 
-			if (y.cmp(this.curve.p) >= 0) throw new Error("Invalid point.");
+			if (y.cmp(this.curve.p) >= 0) {throw new Error("Invalid point.");}
 
 			const A = this.curve.point(x, y);
 
-			if (!A.validate()) throw new Error("Invalid point.");
+			if (!A.validate()) {throw new Error("Invalid point.");}
 
 			return A.encode(compress);
 		}
@@ -260,7 +261,7 @@ export class ECDSA {
 	publicKeyTweakAdd(key, tweak, compress) {
 		const t = this.curve.decodeScalar(tweak);
 
-		if (t.cmp(this.curve.n) >= 0) throw new Error("Invalid scalar.");
+		if (t.cmp(this.curve.n) >= 0) {throw new Error("Invalid scalar.");}
 
 		const A = this.curve.decodePoint(key);
 		const T = this.curve.g.jmul(t);
@@ -272,7 +273,7 @@ export class ECDSA {
 	publicKeyTweakMul(key, tweak, compress) {
 		const t = this.curve.decodeScalar(tweak);
 
-		if (t.isZero() || t.cmp(this.curve.n) >= 0) throw new Error("Invalid scalar.");
+		if (t.isZero() || t.cmp(this.curve.n) >= 0) {throw new Error("Invalid scalar.");}
 
 		const A = this.curve.decodePoint(key);
 		const P = A.mul(t);
@@ -304,7 +305,7 @@ export class ECDSA {
 	signatureNormalize(sig) {
 		const [r, s] = this._decodeCompact(sig);
 
-		if (s.cmp(this.curve.nh) > 0) s.ineg().imod(this.curve.n);
+		if (s.cmp(this.curve.nh) > 0) {s.ineg().imod(this.curve.n);}
 
 		return this._encodeCompact(r, s);
 	}
@@ -312,7 +313,7 @@ export class ECDSA {
 	signatureNormalizeDER(sig) {
 		const [r, s] = this._decodeDER(sig, false);
 
-		if (s.cmp(this.curve.nh) > 0) s.ineg().imod(this.curve.n);
+		if (s.cmp(this.curve.nh) > 0) {s.ineg().imod(this.curve.n);}
 
 		return this._encodeDER(r, s);
 	}
@@ -333,7 +334,7 @@ export class ECDSA {
 		let s;
 		try {
 			[, s] = this._decodeCompact(sig);
-		} catch (e) {
+		} catch {
 			return false;
 		}
 
@@ -346,34 +347,34 @@ export class ECDSA {
 		let s;
 		try {
 			[, s] = this._decodeDER(sig, false);
-		} catch (e) {
+		} catch {
 			return false;
 		}
 
 		return s.cmp(this.curve.nh) <= 0;
 	}
 
-	sign(msg, key) {
-		const [r, s] = this._sign(msg, key);
+	sign(message, key) {
+		const [r, s] = this._sign(message, key);
 		return this._encodeCompact(r, s);
 	}
 
-	signRecoverable(msg, key) {
-		const [r, s, param] = this._sign(msg, key);
-		return [this._encodeCompact(r, s), param];
+	signRecoverable(message, key) {
+		const [r, s, parameter] = this._sign(message, key);
+		return [this._encodeCompact(r, s), parameter];
 	}
 
-	signDER(msg, key) {
-		const [r, s] = this._sign(msg, key);
+	signDER(message, key) {
+		const [r, s] = this._sign(message, key);
 		return this._encodeDER(r, s);
 	}
 
-	signRecoverableDER(msg, key) {
-		const [r, s, param] = this._sign(msg, key);
-		return [this._encodeDER(r, s), param];
+	signRecoverableDER(message, key) {
+		const [r, s, parameter] = this._sign(message, key);
+		return [this._encodeDER(r, s), parameter];
 	}
 
-	_sign(msg, key) {
+	_sign(message, key) {
 		// ECDSA Signing.
 		//
 		// [SEC1] Page 44, Section 4.1.3.
@@ -427,26 +428,26 @@ export class ECDSA {
 		const G = this.curve.g;
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(n) >= 0) {throw new Error("Invalid private key.");}
 
-		const m = this._reduce(msg);
+		const m = this._reduce(message);
 		const nonce = this.curve.encodeScalar(m);
 		const drbg = new HmacDRBG(this.hash, key, nonce);
 
-		for (;;) {
+		for (; ;) {
 			const bytes = drbg.generate(this.curve.scalarSize);
 			const k = this._truncate(bytes);
 
-			if (k.isZero() || k.cmp(n) >= 0) continue;
+			if (k.isZero() || k.cmp(n) >= 0) {continue;}
 
 			const R = G.mulBlind(k);
 
-			if (R.isInfinity()) continue;
+			if (R.isInfinity()) {continue;}
 
 			const x = R.getX();
 			const r = x.mod(n);
 
-			if (r.isZero()) continue;
+			if (r.isZero()) {continue;}
 
 			const b = this.curve.randomScalar(rng);
 			const ki = k.mul(b).fermat(n);
@@ -455,58 +456,58 @@ export class ECDSA {
 			const sk = r.mul(ba).iadd(bm).imod(n);
 			const s = sk.mul(ki).imod(n);
 
-			if (s.isZero()) continue;
+			if (s.isZero()) {continue;}
 
-			let param = R.isOdd() | (!x.eq(r) << 1);
+			let parameter = R.isOdd() | (!x.eq(r) << 1);
 
 			if (s.cmp(nh) > 0) {
 				s.ineg().imod(n);
-				param ^= 1;
+				parameter ^= 1;
 			}
 
-			return [r, s, param];
+			return [r, s, parameter];
 		}
 	}
 
-	verify(msg, sig, key) {
-		assert(Buffer.isBuffer(msg));
+	verify(message, sig, key) {
+		assert(Buffer.isBuffer(message));
 		assert(Buffer.isBuffer(sig));
 		assert(Buffer.isBuffer(key));
 
 		let r, s;
 		try {
 			[r, s] = this._decodeCompact(sig);
-		} catch (e) {
+		} catch {
 			return false;
 		}
 
 		try {
-			return this._verify(msg, r, s, key);
-		} catch (e) {
+			return this._verify(message, r, s, key);
+		} catch {
 			return false;
 		}
 	}
 
-	verifyDER(msg, sig, key) {
-		assert(Buffer.isBuffer(msg));
+	verifyDER(message, sig, key) {
+		assert(Buffer.isBuffer(message));
 		assert(Buffer.isBuffer(sig));
 		assert(Buffer.isBuffer(key));
 
 		let r, s;
 		try {
 			[r, s] = this._decodeDER(sig, false);
-		} catch (e) {
+		} catch {
 			return false;
 		}
 
 		try {
-			return this._verify(msg, r, s, key);
-		} catch (e) {
+			return this._verify(message, r, s, key);
+		} catch {
 			return false;
 		}
 	}
 
-	_verify(msg, r, s, key) {
+	_verify(message, r, s, key) {
 		// ECDSA Verification.
 		//
 		// [SEC1] Page 46, Section 4.1.4.
@@ -539,12 +540,12 @@ export class ECDSA {
 		// to a certain threshold.
 		const { n } = this.curve;
 		const G = this.curve.g;
-		const m = this._reduce(msg);
+		const m = this._reduce(message);
 		const A = this.curve.decodePoint(key);
 
-		if (r.isZero() || r.cmp(n) >= 0) return false;
+		if (r.isZero() || r.cmp(n) >= 0) {return false;}
 
-		if (s.isZero() || s.cmp(n) >= 0) return false;
+		if (s.isZero() || s.cmp(n) >= 0) {return false;}
 
 		const si = s.invert(n);
 		const u1 = m.mul(si).imod(n);
@@ -554,53 +555,53 @@ export class ECDSA {
 		return R.eqR(r);
 	}
 
-	recover(msg, sig, param, compress) {
-		assert(Buffer.isBuffer(msg));
+	recover(message, sig, parameter, compress) {
+		assert(Buffer.isBuffer(message));
 		assert(Buffer.isBuffer(sig));
-		assert(param >>> 0 === param);
-		assert((param & 3) === param, "The recovery param is more than two bits.");
+		assert(parameter >>> 0 === parameter);
+		assert((parameter & 3) === parameter, "The recovery param is more than two bits.");
 
 		let r, s;
 		try {
 			[r, s] = this._decodeCompact(sig);
-		} catch (e) {
+		} catch {
 			return null;
 		}
 
 		let A;
 		try {
-			A = this._recover(msg, r, s, param);
-		} catch (e) {
+			A = this._recover(message, r, s, parameter);
+		} catch {
 			return null;
 		}
 
 		return A.encode(compress);
 	}
 
-	recoverDER(msg, sig, param, compress) {
-		assert(Buffer.isBuffer(msg));
+	recoverDER(message, sig, parameter, compress) {
+		assert(Buffer.isBuffer(message));
 		assert(Buffer.isBuffer(sig));
-		assert(param >>> 0 === param);
-		assert((param & 3) === param, "The recovery param is more than two bits.");
+		assert(parameter >>> 0 === parameter);
+		assert((parameter & 3) === parameter, "The recovery param is more than two bits.");
 
 		let r, s;
 		try {
 			[r, s] = this._decodeDER(sig, false);
-		} catch (e) {
+		} catch {
 			return null;
 		}
 
 		let A;
 		try {
-			A = this._recover(msg, r, s, param);
-		} catch (e) {
+			A = this._recover(message, r, s, parameter);
+		} catch {
 			return null;
 		}
 
 		return A.encode(compress);
 	}
 
-	_recover(msg, r, s, param) {
+	_recover(message, r, s, parameter) {
 		// ECDSA Public Key Recovery.
 		//
 		// [SEC1] Page 47, Section 4.1.6.
@@ -631,21 +632,21 @@ export class ECDSA {
 		// trouble on curves where `p / n > 1`.
 		const { n, pmodn } = this.curve;
 		const G = this.curve.g;
-		const m = this._reduce(msg);
+		const m = this._reduce(message);
 
-		if (r.isZero() || r.cmp(n) >= 0) throw new Error("Invalid R value.");
+		if (r.isZero() || r.cmp(n) >= 0) {throw new Error("Invalid R value.");}
 
-		if (s.isZero() || s.cmp(n) >= 0) throw new Error("Invalid S value.");
+		if (s.isZero() || s.cmp(n) >= 0) {throw new Error("Invalid S value.");}
 
-		const sign = (param & 1) !== 0;
-		const high = param >>> 1;
+		const sign = (parameter & 1) !== 0;
+		const high = parameter >>> 1;
 
 		let x = r;
 
 		if (high) {
-			if (this.curve.highOrder) throw new Error("Invalid high bit.");
+			if (this.curve.highOrder) {throw new Error("Invalid high bit.");}
 
-			if (x.cmp(pmodn) >= 0) throw new Error("Invalid R value.");
+			if (x.cmp(pmodn) >= 0) {throw new Error("Invalid R value.");}
 
 			x = x.add(n);
 		}
@@ -656,7 +657,7 @@ export class ECDSA {
 		const s2 = s.mul(ri).imod(n);
 		const A = G.mulAdd(s1, R, s2);
 
-		if (A.isInfinity()) throw new Error("Invalid point.");
+		if (A.isInfinity()) {throw new Error("Invalid point.");}
 
 		return A;
 	}
@@ -665,11 +666,9 @@ export class ECDSA {
 		const A = this.curve.decodePoint(pub);
 		const a = this.curve.decodeScalar(priv);
 
-		if (a.isZero() || a.cmp(this.curve.n) >= 0) throw new Error("Invalid private key.");
+		if (a.isZero() || a.cmp(this.curve.n) >= 0) {throw new Error("Invalid private key.");}
 
-		if (this.curve.h.cmpn(1) > 0) {
-			if (A.isSmall()) throw new Error("Invalid point.");
-		}
+		if (this.curve.h.cmpn(1) > 0 && A.isSmall()) {throw new Error("Invalid point.");}
 
 		const P = A.mulBlind(a, rng);
 
@@ -680,12 +679,12 @@ export class ECDSA {
 	 * Schnorr
 	 */
 
-	schnorrSign(msg, key) {
-		return this.schnorr.sign(msg, key);
+	schnorrSign(message, key) {
+		return this.schnorr.sign(message, key);
 	}
 
-	schnorrVerify(msg, sig, key) {
-		return this.schnorr.verify(msg, sig, key);
+	schnorrVerify(message, sig, key) {
+		return this.schnorr.verify(message, sig, key);
 	}
 
 	schnorrVerifyBatch(batch) {
@@ -706,14 +705,14 @@ export class ECDSA {
 		const { n } = this.curve;
 		const size = this.curve.scalarSize;
 
-		if (sig.length !== size * 2) throw new Error("Invalid signature size.");
+		if (sig.length !== size * 2) {throw new Error("Invalid signature size.");}
 
 		const Rraw = sig.slice(0, size);
 		const Sraw = sig.slice(size, size * 2);
 		const r = this.curve.decodeScalar(Rraw);
 		const s = this.curve.decodeScalar(Sraw);
 
-		if (r.cmp(n) >= 0 || s.cmp(n) >= 0) throw new Error("Invalid signature.");
+		if (r.cmp(n) >= 0 || s.cmp(n) >= 0) {throw new Error("Invalid signature.");}
 
 		return [r, s];
 	}
@@ -746,14 +745,14 @@ export class ECDSA {
 		[r, pos] = asn1.readInt(sig, pos, strict);
 		[s, pos] = asn1.readInt(sig, pos, strict);
 
-		if (strict && pos !== sig.length) throw new Error("Trailing bytes.");
+		if (strict && pos !== sig.length) {throw new Error("Trailing bytes.");}
 
-		if (r.cmp(n) >= 0 || s.cmp(n) >= 0) throw new Error("Invalid signature.");
+		if (r.cmp(n) >= 0 || s.cmp(n) >= 0) {throw new Error("Invalid signature.");}
 
 		return [r, s];
 	}
 
-	_truncate(msg) {
+	_truncate(message) {
 		// Byte array to integer conversion.
 		//
 		// [SEC1] Step 5, Page 45, Section 4.1.3.
@@ -770,22 +769,22 @@ export class ECDSA {
 		// this nonsense, we simply replicate the
 		// OpenSSL behavior (which, in actuality,
 		// is more similar to the SEC1 behavior).
-		assert(Buffer.isBuffer(msg));
+		assert(Buffer.isBuffer(message));
 
 		const bits = this.curve.n.bitLength();
 		const bytes = (bits + 7) >>> 3;
 
-		if (msg.length > bytes) msg = msg.slice(0, bytes);
+		if (message.length > bytes) {message = message.slice(0, bytes);}
 
-		const m = BN.decode(msg, this.curve.endian);
-		const d = msg.length * 8 - bits;
+		const m = BN.decode(message, this.curve.endian);
+		const d = message.length * 8 - bits;
 
-		if (d > 0) m.iushrn(d);
+		if (d > 0) {m.iushrn(d);}
 
 		return m;
 	}
 
-	_reduce(msg) {
-		return this._truncate(msg).imod(this.curve.n);
+	_reduce(message) {
+		return this._truncate(message).imod(this.curve.n);
 	}
 }

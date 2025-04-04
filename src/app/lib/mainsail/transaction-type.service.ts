@@ -11,9 +11,7 @@ export const TransactionTypes = {
 	...FunctionSigs.ConsensusV1,
 } as const;
 
-export const trimHexPrefix = (type: string): string => {
-	return type.replace(/^0x/, "");
-};
+export const trimHexPrefix = (type: string): string => type.replace(/^0x/, "");
 
 export class TransactionTypeService {
 	public static isTransfer(data: TransactionData): boolean {

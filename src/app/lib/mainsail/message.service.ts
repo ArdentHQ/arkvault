@@ -8,9 +8,9 @@ export class MessageService extends Services.AbstractMessageService {
 			message: input.message,
 			signatory: input.signatory.publicKey(),
 			signature: ARK.signSchnorr(Hash.sha256(input.message), {
-				publicKey: input.signatory.publicKey(),
-				privateKey: input.signatory.privateKey(),
 				compressed: false,
+				privateKey: input.signatory.privateKey(),
+				publicKey: input.signatory.publicKey(),
 			}),
 		};
 	}

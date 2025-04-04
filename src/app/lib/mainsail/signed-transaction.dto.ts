@@ -223,7 +223,7 @@ export class SignedTransactionData
 
 		if (transaction.signature) {
 			const hash = await this.generateHash({ excludeMultiSignature: false });
-			const isValid = Hash.verifySchnorr(hash, transaction.signature, transaction.senderPublicKey!);
+			const isValid = Hash.verifySchnorr(hash, transaction.signature, transaction.senderPublicKey);
 
 			if (!isValid) {
 				transaction.signature = undefined;

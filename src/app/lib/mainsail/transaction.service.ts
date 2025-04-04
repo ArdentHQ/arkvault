@@ -408,7 +408,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const signedTransaction = await signedTransactionBuilder?.build();
 
-		return this.dataTransferObjectService.signedTransaction(signedTransaction.id!, signedTransaction.data);
+		return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
 	}
 }
 

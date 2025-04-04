@@ -20,10 +20,10 @@ function readSize(data, pos, strict) {
 	assert(pos >>> 0 === pos);
 	assert(typeof strict === "boolean");
 
-	if (pos >= data.length) throw new Error("Invalid size.");
+	if (pos >= data.length) {throw new Error("Invalid size.");}
 
 	const field = data[pos];
-	const bytes = field & 0x7f;
+	const bytes = field & 0x7F;
 
 	pos += 1;
 
@@ -34,27 +34,27 @@ function readSize(data, pos, strict) {
 	}
 
 	// Indefinite form.
-	if (strict && bytes === 0) throw new Error("Indefinite length.");
+	if (strict && bytes === 0) {throw new Error("Indefinite length.");}
 
 	// Long form.
 	let size = 0;
 
-	for (let i = 0; i < bytes; i++) {
+	for (let index = 0; index < bytes; index++) {
 		assert(pos < data.length);
 
 		const ch = data[pos];
 
 		pos += 1;
 
-		if (size >= 1 << 24) throw new Error("Length too large.");
+		if (size >= 1 << 24) {throw new Error("Length too large.");}
 
-		size *= 0x100;
+		size *= 0x1_00;
 		size += ch;
 
-		if (strict && size === 0) throw new Error("Unexpected leading zeroes.");
+		if (strict && size === 0) {throw new Error("Unexpected leading zeroes.");}
 	}
 
-	if (strict && size < 0x80) throw new Error("Non-minimal length.");
+	if (strict && size < 0x80) {throw new Error("Non-minimal length.");}
 
 	return [size, pos];
 }
@@ -64,14 +64,14 @@ function readSeq(data, pos, strict = true) {
 	assert(pos >>> 0 === pos);
 	assert(typeof strict === "boolean");
 
-	if (pos >= data.length || data[pos] !== 0x30) throw new Error("Invalid sequence tag.");
+	if (pos >= data.length || data[pos] !== 0x30) {throw new Error("Invalid sequence tag.");}
 
 	pos += 1;
 
 	let size;
 	[size, pos] = readSize(data, pos, strict);
 
-	if (strict && pos + size !== data.length) throw new Error("Trailing bytes.");
+	if (strict && pos + size !== data.length) {throw new Error("Trailing bytes.");}
 
 	return pos;
 }
@@ -81,26 +81,24 @@ function readInt(data, pos, strict = true) {
 	assert(pos >>> 0 === pos);
 	assert(typeof strict === "boolean");
 
-	if (pos >= data.length || data[pos] !== 0x02) throw new Error("Invalid integer tag.");
+	if (pos >= data.length || data[pos] !== 0x02) {throw new Error("Invalid integer tag.");}
 
 	pos += 1;
 
 	let size;
 	[size, pos] = readSize(data, pos, strict);
 
-	if (pos + size > data.length) throw new Error("Integer body out of bounds.");
+	if (pos + size > data.length) {throw new Error("Integer body out of bounds.");}
 
 	if (strict) {
 		// Zero length integer.
-		if (size === 0) throw new Error("Zero length integer.");
+		if (size === 0) {throw new Error("Zero length integer.");}
 
 		// No negatives.
-		if (data[pos] & 0x80) throw new Error("Integers must be positive.");
+		if (data[pos] & 0x80) {throw new Error("Integers must be positive.");}
 
 		// Allow zero only if it prefixes a high bit.
-		if (size > 1) {
-			if (data[pos] === 0x00 && (data[pos + 1] & 0x80) === 0x00) throw new Error("Unexpected leading zeroes.");
-		}
+		if (size > 1 && data[pos] === 0x00 && (data[pos + 1] & 0x80) === 0x00) {throw new Error("Unexpected leading zeroes.");}
 	}
 
 	// Eat leading zeroes.
@@ -110,25 +108,25 @@ function readInt(data, pos, strict = true) {
 	}
 
 	// No reason to have an integer larger than this.
-	if (size > 2048) throw new Error("Invalid integer size.");
+	if (size > 2048) {throw new Error("Invalid integer size.");}
 
-	const num = BN.decode(data.slice(pos, pos + size));
+	const number_ = BN.decode(data.slice(pos, pos + size));
 
 	pos += size;
 
-	return [num, pos];
+	return [number_, pos];
 }
 
 function readVersion(data, pos, version, strict = true) {
 	assert(Buffer.isBuffer(data));
 	assert(pos >>> 0 === pos);
-	assert((version & 0xff) === version);
+	assert((version & 0xFF) === version);
 	assert(typeof strict === "boolean");
 
-	let num;
-	[num, pos] = readInt(data, pos, strict);
+	let number_;
+	[number_, pos] = readInt(data, pos, strict);
 
-	if (num.cmpn(version) !== 0) throw new Error("Invalid version.");
+	if (number_.cmpn(version) !== 0) {throw new Error("Invalid version.");}
 
 	return pos;
 }
@@ -136,15 +134,15 @@ function readVersion(data, pos, version, strict = true) {
 function sizeSize(size) {
 	assert(size >>> 0 === size);
 
-	if (size <= 0x7f)
+	if (size <= 0x7F)
 		// [size]
-		return 1;
+		{return 1;}
 
-	if (size <= 0xff)
+	if (size <= 0xFF)
 		// 0x81 [size]
-		return 2;
+		{return 2;}
 
-	assert(size <= 0xffff);
+	assert(size <= 0xFF_FF);
 
 	return 3; // 0x82 [size-hi] [size-lo]
 }
@@ -153,23 +151,23 @@ function sizeSeq(size) {
 	return 1 + sizeSize(size) + size;
 }
 
-function sizeInt(num) {
-	assert(num instanceof BN);
+function sizeInt(number_) {
+	assert(number_ instanceof BN);
 
 	// 0x02 [size] [0x00?] [int]
-	const bits = num.bitLength();
+	const bits = number_.bitLength();
 
 	let size = (bits + 7) >>> 3;
 
-	if (bits > 0 && (bits & 7) === 0) size += num.testn(bits - 1);
+	if (bits > 0 && (bits & 7) === 0) {size += number_.testn(bits - 1);}
 
-	if (bits === 0) size = 1;
+	if (bits === 0) {size = 1;}
 
 	return 1 + sizeSize(size) + size;
 }
 
 function sizeVersion(version) {
-	assert((version & 0xff) === version);
+	assert((version & 0xFF) === version);
 	return 3;
 }
 
@@ -178,19 +176,19 @@ function writeSize(data, pos, size) {
 	assert(pos >>> 0 === pos);
 	assert(size >>> 0 === size);
 
-	if (size <= 0x7f) {
+	if (size <= 0x7F) {
 		// [size]
 		data[pos++] = size;
-	} else if (size <= 0xff) {
+	} else if (size <= 0xFF) {
 		// 0x81 [size]
 		data[pos++] = 0x81;
 		data[pos++] = size;
 	} else {
 		// 0x82 [size-hi] [size-lo]
-		assert(size <= 0xffff);
+		assert(size <= 0xFF_FF);
 		data[pos++] = 0x82;
 		data[pos++] = size >> 8;
-		data[pos++] = size & 0xff;
+		data[pos++] = size & 0xFF;
 	}
 
 	assert(pos <= data.length);
@@ -207,29 +205,29 @@ function writeSeq(data, pos, size) {
 	return writeSize(data, pos, size);
 }
 
-function writeInt(data, pos, num) {
+function writeInt(data, pos, number_) {
 	assert(Buffer.isBuffer(data));
 	assert(pos >>> 0 === pos);
-	assert(num instanceof BN);
+	assert(number_ instanceof BN);
 
 	// 0x02 [size] [0x00?] [int]
-	const bits = num.bitLength();
+	const bits = number_.bitLength();
 
 	let size = (bits + 7) >>> 3;
 	let pad = 0;
 
-	if (bits > 0 && (bits & 7) === 0) pad = num.testn(bits - 1);
+	if (bits > 0 && (bits & 7) === 0) {pad = number_.testn(bits - 1);}
 
-	if (bits === 0) size = 1;
+	if (bits === 0) {size = 1;}
 
 	data[pos++] = 0x02;
 
 	pos = writeSize(data, pos, pad + size);
 
-	if (pad) data[pos++] = 0x00;
+	if (pad) {data[pos++] = 0x00;}
 
-	if (bits !== 0) num.encode().copy(data, pos);
-	else data[pos] = 0x00;
+	if (bits === 0) {data[pos] = 0x00;}
+	else {number_.encode().copy(data, pos);}
 
 	pos += size;
 
@@ -241,7 +239,7 @@ function writeInt(data, pos, num) {
 function writeVersion(data, pos, version) {
 	assert(Buffer.isBuffer(data));
 	assert(pos >>> 0 === pos);
-	assert((version & 0xff) === version);
+	assert((version & 0xFF) === version);
 	assert(pos + 3 <= data.length);
 
 	data[pos++] = 0x02;
@@ -252,16 +250,16 @@ function writeVersion(data, pos, version) {
 }
 
 export const asn1 = {
-	readSize,
-	readSeq,
 	readInt,
+	readSeq,
+	readSize,
 	readVersion,
-	sizeSize,
-	sizeSeq,
 	sizeInt,
+	sizeSeq,
+	sizeSize,
 	sizeVersion,
-	writeSize,
-	writeSeq,
 	writeInt,
+	writeSeq,
+	writeSize,
 	writeVersion,
 };
