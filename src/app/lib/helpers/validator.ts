@@ -1,7 +1,5 @@
 import Joi from "joi";
 
-
-
 /**
  * Implements data validation functionality, powered by joi, formerly @hapi/joi.
  *
@@ -74,4 +72,4 @@ export class Validator {
 	}
 }
 
-export {default as ValidatorSchema} from "joi";
+export { default as ValidatorSchema } from "joi";

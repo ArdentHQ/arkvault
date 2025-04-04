@@ -51,7 +51,9 @@ export class Schnorr {
 	check() {
 		// [SCHNORR] "Footnotes".
 		// Must be congruent to 3 mod 4.
-		if (this.curve.p.andln(3) !== 3) {throw new Error(`Schnorr is not supported for ${this.curve.id}.`);}
+		if (this.curve.p.andln(3) !== 3) {
+			throw new Error(`Schnorr is not supported for ${this.curve.id}.`);
+		}
 	}
 
 	encode(key) {
@@ -60,9 +62,13 @@ export class Schnorr {
 
 		const { fieldSize } = this.curve;
 
-		if (key.length === 1 + fieldSize) {return key;}
+		if (key.length === 1 + fieldSize) {
+			return key;
+		}
 
-		if (key.length !== 1 + fieldSize * 2) {throw new Error("Invalid point.");}
+		if (key.length !== 1 + fieldSize * 2) {
+			throw new Error("Invalid point.");
+		}
 
 		const out = Buffer.alloc(1 + fieldSize);
 
@@ -79,11 +85,15 @@ export class Schnorr {
 
 		h.init();
 
-		for (const item of items) {h.update(item);}
+		for (const item of items) {
+			h.update(item);
+		}
 
 		let hash = h.final(this.curve.scalarSize);
 
-		if (hash.length > this.curve.scalarSize) {hash = hash.slice(0, this.curve.scalarSize);}
+		if (hash.length > this.curve.scalarSize) {
+			hash = hash.slice(0, this.curve.scalarSize);
+		}
 
 		const number_ = BN.decode(hash, this.curve.endian);
 
@@ -140,16 +150,22 @@ export class Schnorr {
 		const G = this.curve.g;
 		const a = this.curve.decodeScalar(key);
 
-		if (a.isZero() || a.cmp(n) >= 0) {throw new Error("Invalid private key.");}
+		if (a.isZero() || a.cmp(n) >= 0) {
+			throw new Error("Invalid private key.");
+		}
 
 		const A = G.mulBlind(a);
 		const k = this.hashNonce(key, message);
 
-		if (k.isZero()) {throw new Error("Signing failed (k' = 0).");}
+		if (k.isZero()) {
+			throw new Error("Signing failed (k' = 0).");
+		}
 
 		const R = G.mulBlind(k);
 
-		if (!R.isSquare()) {k.ineg().imod(n);}
+		if (!R.isSquare()) {
+			k.ineg().imod(n);
+		}
 
 		const Rraw = R.encodeX();
 		const Araw = A.encode();
@@ -166,7 +182,9 @@ export class Schnorr {
 
 		this.check();
 
-		if (sig.length !== this.curve.fieldSize + this.curve.scalarSize) {return false;}
+		if (sig.length !== this.curve.fieldSize + this.curve.scalarSize) {
+			return false;
+		}
 
 		try {
 			return this._verify(message, sig, key);
@@ -221,14 +239,20 @@ export class Schnorr {
 		const s = this.curve.decodeScalar(sraw);
 		const A = this.curve.decodePoint(key);
 
-		if (r.cmp(p) >= 0 || s.cmp(n) >= 0) {return false;}
+		if (r.cmp(p) >= 0 || s.cmp(n) >= 0) {
+			return false;
+		}
 
 		const e = this.hashChallenge(Rraw, key, message);
 		const R = G.jmulAdd(s, A, e.ineg().imod(n));
 
-		if (!R.isSquare()) {return false;}
+		if (!R.isSquare()) {
+			return false;
+		}
 
-		if (!R.eqX(r)) {return false;}
+		if (!R.eqX(r)) {
+			return false;
+		}
 
 		return true;
 	}
@@ -247,7 +271,9 @@ export class Schnorr {
 			assert(Buffer.isBuffer(sig));
 			assert(Buffer.isBuffer(key));
 
-			if (sig.length !== this.curve.fieldSize + this.curve.scalarSize) {return false;}
+			if (sig.length !== this.curve.fieldSize + this.curve.scalarSize) {
+				return false;
+			}
 		}
 
 		try {
@@ -284,8 +310,8 @@ export class Schnorr {
 		//   G * -lhs + rhs == O
 		const { n } = this.curve;
 		const G = this.curve.g;
-		const points = Array.from({length: 1 + batch.length * 2});
-		const coeffs = Array.from({length: 1 + batch.length * 2});
+		const points = Array.from({ length: 1 + batch.length * 2 });
+		const coeffs = Array.from({ length: 1 + batch.length * 2 });
 		const sum = new BN(0);
 
 		this.rng.init(batch);
@@ -300,7 +326,9 @@ export class Schnorr {
 			const s = this.curve.decodeScalar(sraw);
 			const A = this.curve.decodePoint(key);
 
-			if (s.cmp(n) >= 0) {return false;}
+			if (s.cmp(n) >= 0) {
+				return false;
+			}
 
 			const e = this.hashChallenge(Rraw, key, message);
 			const a = this.rng.generate(index);

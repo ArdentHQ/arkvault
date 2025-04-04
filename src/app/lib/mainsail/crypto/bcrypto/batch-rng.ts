@@ -81,8 +81,12 @@ export class BatchRNG {
 
 			const [s1, s2] = this.encrypt(counter);
 
-			if (s1.isZero() || s1.cmp(this.curve.n) >= 0) {continue;}
-			if (s2.isZero() || s2.cmp(this.curve.n) >= 0) {continue;}
+			if (s1.isZero() || s1.cmp(this.curve.n) >= 0) {
+				continue;
+			}
+			if (s2.isZero() || s2.cmp(this.curve.n) >= 0) {
+				continue;
+			}
 
 			this.cache[0] = s1;
 			this.cache[1] = s2;
@@ -93,7 +97,9 @@ export class BatchRNG {
 	generate(index) {
 		assert(index >>> 0 === index);
 
-		if (index & 1) {this.refresh(index >>> 1);}
+		if (index & 1) {
+			this.refresh(index >>> 1);
+		}
 
 		return this.cache[index & 1];
 	}

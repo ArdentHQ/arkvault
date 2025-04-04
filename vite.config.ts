@@ -8,22 +8,21 @@ import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
 import { visualizer } from "rollup-plugin-visualizer";
 
-
 export default defineConfig(() => {
 	return {
 		resolve: {
 			alias: {
 				"@": path.resolve(__dirname, "./src/"),
-				'node:fs/promises': path.resolve(__dirname, './src/app/lib/shims.ts'),
-				'node:url': path.resolve(__dirname, './src/app/lib/shims.ts'),
-				'node:process': path.resolve(__dirname, './src/app/lib/shims.ts'),
-				perf_hooks: path.resolve(__dirname, './src/app/lib/shims.ts'),
-				worker_threads: path.resolve(__dirname, './src/app/lib/shims.ts'),
-				'node:util': 'util',
+				"node:fs/promises": path.resolve(__dirname, "./src/app/lib/shims.ts"),
+				"node:url": path.resolve(__dirname, "./src/app/lib/shims.ts"),
+				"node:process": path.resolve(__dirname, "./src/app/lib/shims.ts"),
+				perf_hooks: path.resolve(__dirname, "./src/app/lib/shims.ts"),
+				worker_threads: path.resolve(__dirname, "./src/app/lib/shims.ts"),
+				"node:util": "util",
 			},
 		},
 		define: {
-			'process.browser': true,
+			"process.browser": true,
 			"process.env": {
 				REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
 				REACT_APP_IS_UNIT: process.env.REACT_APP_IS_UNIT,
@@ -67,12 +66,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-					visualizer({
-						open: true,
-						brotliSize: true,
-						gzipSize: true,
-						template: "treemap",
-					}),
+						visualizer({
+							open: true,
+							brotliSize: true,
+							gzipSize: true,
+							template: "treemap",
+						}),
 				],
 			},
 		},
@@ -157,7 +156,21 @@ export default defineConfig(() => {
 			},
 			nodePolyfills({
 				// To add only specific polyfills, add them here. If no option is passed, adds all polyfills
-				include: ["buffer", "os", "process", "fs", "path", "http", "https", "crypto", "module", "util", "events", "string_decoder", "url"],
+				include: [
+					"buffer",
+					"os",
+					"process",
+					"fs",
+					"path",
+					"http",
+					"https",
+					"crypto",
+					"module",
+					"util",
+					"events",
+					"string_decoder",
+					"url",
+				],
 				// Whether to polyfill specific globals.
 				globals: {
 					Buffer: true, // can also be 'build', 'dev', or false

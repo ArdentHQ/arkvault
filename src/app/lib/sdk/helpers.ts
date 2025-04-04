@@ -1,4 +1,4 @@
-import { Arr } from "@/app/lib/helpers";
+import { Array_ } from "@/app/lib/helpers";
 
 import { ConfigRepository } from "./coins";
 import { NetworkHost, NetworkHostType } from "./networks";
@@ -7,7 +7,7 @@ export const filterHosts = (hosts: NetworkHost[], type: NetworkHostType): Networ
 	hosts.filter((host: NetworkHost) => host.type === type);
 
 export const randomHost = (hosts: NetworkHost[], type: NetworkHostType): NetworkHost =>
-	Arr.randomElement(filterHosts(hosts, type));
+	Array_.randomElement(filterHosts(hosts, type));
 
 // DRY helpers for coin implementations
 export const filterHostsFromConfig = (config: ConfigRepository, type: NetworkHostType): NetworkHost[] =>

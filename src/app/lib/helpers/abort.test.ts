@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { abort_if, abort_unless } from './abort';
+import { describe, it, expect } from "vitest";
+import { abort_if, abort_unless } from "./abort";
 
 describe("Abort", () => {
 	it("should abort if the condition is met", () => {

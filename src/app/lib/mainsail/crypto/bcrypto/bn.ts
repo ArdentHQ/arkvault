@@ -1,3 +1,4 @@
+/* eslint-disable */
 // @ts-nocheck
 
 /*!
@@ -78,15 +79,17 @@ const zeros = [
 ];
 
 const groupSizes = [
-	0x00, 0x19, 0x10, 0x0C, 0x0B, 0x0A, 0x09, 0x08, 0x08, 0x07, 0x07, 0x07, 0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
+	0x00, 0x19, 0x10, 0x0c, 0x0b, 0x0a, 0x09, 0x08, 0x08, 0x07, 0x07, 0x07, 0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 	0x06, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05,
 ];
 
 const groupBases = [
-	0x00_00_00_00, 0x02_00_00_00, 0x02_90_D7_41, 0x01_00_00_00, 0x02_E9_0E_DD, 0x03_9A_A4_00, 0x02_67_BF_47, 0x01_00_00_00, 0x02_90_D7_41,
-	0x00_98_96_80, 0x01_29_59_C3, 0x02_22_C0_00, 0x03_BD_77_65, 0x00_72_E4_40, 0x00_AD_CE_A1, 0x01_00_00_00, 0x01_70_4F_61, 0x02_06_FC_40,
-	0x02_CD_DC_F9, 0x03_D0_90_00, 0x00_3E_51_85, 0x00_4E_A3_60, 0x00_62_35_F7, 0x00_79_80_00, 0x00_95_02_F9, 0x00_B5_4B_A0, 0x00_DA_F2_6B,
-	0x01_06_9C_00, 0x01_38_F9_AD, 0x01_72_C9_E0, 0x01_B4_D8_9F, 0x02_00_00_00, 0x02_55_28_A1, 0x02_B5_4A_20, 0x03_21_6B_93, 0x03_9A_A4_00,
+	0x00_00_00_00, 0x02_00_00_00, 0x02_90_d7_41, 0x01_00_00_00, 0x02_e9_0e_dd, 0x03_9a_a4_00, 0x02_67_bf_47,
+	0x01_00_00_00, 0x02_90_d7_41, 0x00_98_96_80, 0x01_29_59_c3, 0x02_22_c0_00, 0x03_bd_77_65, 0x00_72_e4_40,
+	0x00_ad_ce_a1, 0x01_00_00_00, 0x01_70_4f_61, 0x02_06_fc_40, 0x02_cd_dc_f9, 0x03_d0_90_00, 0x00_3e_51_85,
+	0x00_4e_a3_60, 0x00_62_35_f7, 0x00_79_80_00, 0x00_95_02_f9, 0x00_b5_4b_a0, 0x00_da_f2_6b, 0x01_06_9c_00,
+	0x01_38_f9_ad, 0x01_72_c9_e0, 0x01_b4_d8_9f, 0x02_00_00_00, 0x02_55_28_a1, 0x02_b5_4a_20, 0x03_21_6b_93,
+	0x03_9a_a4_00,
 ];
 
 const primes = {
@@ -135,14 +138,18 @@ class BN {
 		let index = 0;
 
 		// a.length > b.length
-		if (a.length < b.length) {[a, b] = [b, a];}
+		if (a.length < b.length) {
+			[a, b] = [b, a];
+		}
 
-		if (a !== this) {this._alloc(a.length);}
+		if (a !== this) {
+			this._alloc(a.length);
+		}
 
 		for (; index < b.length; index++) {
 			const r = (a.words[index] | 0) + (b.words[index] | 0) + carry;
 
-			this.words[index] = r & 0x3_FF_FF_FF;
+			this.words[index] = r & 0x3_ff_ff_ff;
 
 			carry = r >>> 26;
 		}
@@ -150,7 +157,7 @@ class BN {
 		for (; carry !== 0 && index < a.length; index++) {
 			const r = (a.words[index] | 0) + carry;
 
-			this.words[index] = r & 0x3_FF_FF_FF;
+			this.words[index] = r & 0x3_ff_ff_ff;
 
 			carry = r >>> 26;
 		}
@@ -162,7 +169,9 @@ class BN {
 			this.words[this.length++] = carry;
 		} else if (a !== this) {
 			// Copy the rest of the words.
-			for (; index < a.length; index++) {this.words[index] = a.words[index];}
+			for (; index < a.length; index++) {
+				this.words[index] = a.words[index];
+			}
 		}
 
 		// Note: we shouldn't need to strip here.
@@ -172,7 +181,9 @@ class BN {
 	_iaddn(number_) {
 		this.words[0] += number_;
 
-		if (this.words[0] < 0x4_00_00_00) {return this;}
+		if (this.words[0] < 0x4_00_00_00) {
+			return this;
+		}
 
 		// Carry.
 		let index = 0;
@@ -232,7 +243,9 @@ class BN {
 
 		const negative = (number_ < 0) | 0;
 
-		if (negative) {number_ = -number_;}
+		if (negative) {
+			number_ = -number_;
+		}
 
 		if (this.negative === negative) {
 			// x + y == x + y
@@ -255,7 +268,9 @@ class BN {
 	add(number_) {
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (number_.length > this.length) {return number_.clone().iadd(this);}
+		if (number_.length > this.length) {
+			return number_.clone().iadd(this);
+		}
 
 		return this.clone().iadd(number_);
 	}
@@ -275,14 +290,16 @@ class BN {
 		// a > b
 		assert(a.length >= b.length);
 
-		if (a !== this) {this._alloc(a.length);}
+		if (a !== this) {
+			this._alloc(a.length);
+		}
 
 		for (; index < b.length; index++) {
 			const r = (a.words[index] | 0) - (b.words[index] | 0) + carry;
 
 			carry = r >> 26;
 
-			this.words[index] = r & 0x3_FF_FF_FF;
+			this.words[index] = r & 0x3_ff_ff_ff;
 		}
 
 		for (; carry !== 0 && index < a.length; index++) {
@@ -290,14 +307,16 @@ class BN {
 
 			carry = r >> 26;
 
-			this.words[index] = r & 0x3_FF_FF_FF;
+			this.words[index] = r & 0x3_ff_ff_ff;
 		}
 
 		assert(carry === 0);
 
 		// Copy rest of the words.
 		if (a !== this) {
-			for (; index < a.length; index++) {this.words[index] = a.words[index];}
+			for (; index < a.length; index++) {
+				this.words[index] = a.words[index];
+			}
 		}
 
 		this.length = Math.max(this.length, index);
@@ -308,7 +327,9 @@ class BN {
 	_isubn(number_) {
 		this.words[0] -= number_;
 
-		if (this.words[0] >= 0) {return this._normalize();}
+		if (this.words[0] >= 0) {
+			return this._normalize();
+		}
 
 		assert(this.length !== 1);
 
@@ -365,7 +386,9 @@ class BN {
 
 		const negative = (number_ < 0) | 0;
 
-		if (negative) {number_ = -number_;}
+		if (negative) {
+			number_ = -number_;
+		}
 
 		if (this.negative === negative) {
 			// x - y == x - y == -(y - x)
@@ -401,13 +424,19 @@ class BN {
 		enforce(BN.isBN(number_), "num", "bignum");
 		enforce(BN.isBN(out), "out", "bignum");
 
-		if (this.length === 10 && number_.length === 10) {return comb10MulTo(this, number_, out);}
+		if (this.length === 10 && number_.length === 10) {
+			return comb10MulTo(this, number_, out);
+		}
 
 		const len = this.length + number_.length;
 
-		if (len < 63) {return smallMulTo(this, number_, out);}
+		if (len < 63) {
+			return smallMulTo(this, number_, out);
+		}
 
-		if (len < 1024) {return bigMulTo(this, number_, out);}
+		if (len < 1024) {
+			return bigMulTo(this, number_, out);
+		}
 
 		return jumboMulTo(this, number_, out);
 	}
@@ -425,20 +454,22 @@ class BN {
 
 		const neg = (number_ < 0) | 0;
 
-		if (neg) {number_ = -number_;}
+		if (neg) {
+			number_ = -number_;
+		}
 
 		// Carry.
 		let carry = 0;
 
 		for (let index = 0; index < this.length; index++) {
 			const w = this.words[index] * number_;
-			const lo = (w & 0x3_FF_FF_FF) + (carry & 0x3_FF_FF_FF);
+			const lo = (w & 0x3_ff_ff_ff) + (carry & 0x3_ff_ff_ff);
 
 			carry >>= 26;
 			carry += (w / 0x4_00_00_00) | 0;
 			carry += lo >>> 26;
 
-			this.words[index] = lo & 0x3_FF_FF_FF;
+			this.words[index] = lo & 0x3_ff_ff_ff;
 		}
 
 		this.negative ^= neg;
@@ -461,7 +492,9 @@ class BN {
 
 		out.words = new Array(len);
 
-		for (let index = 0; index < len; index++) {out.words[index] = 0;}
+		for (let index = 0; index < len; index++) {
+			out.words[index] = 0;
+		}
 
 		return this._mul(number_, out);
 	}
@@ -483,7 +516,9 @@ class BN {
 
 		r.iushrn(bits);
 
-		if (this.negative ^ number_.negative) {return r.isubn(b);}
+		if (this.negative ^ number_.negative) {
+			return r.isubn(b);
+		}
 
 		return r.iaddn(b);
 	}
@@ -502,7 +537,9 @@ class BN {
 
 		nonzero(!b.isZero());
 
-		if (a.isZero()) {return [new BN(0), new BN(0)];}
+		if (a.isZero()) {
+			return [new BN(0), new BN(0)];
+		}
 
 		const as = a.negative;
 		const bs = b.negative;
@@ -514,13 +551,21 @@ class BN {
 		let r = null;
 
 		if (a.ucmp(b) < 0) {
-			if (flags & modes.QUO) {q = new BN(0);}
+			if (flags & modes.QUO) {
+				q = new BN(0);
+			}
 
-			if (flags & modes.REM) {r = a.clone();}
+			if (flags & modes.REM) {
+				r = a.clone();
+			}
 		} else if (b.length === 1) {
-			if (flags & modes.QUO) {q = a.quon(b.words[0]);}
+			if (flags & modes.QUO) {
+				q = a.quon(b.words[0]);
+			}
 
-			if (flags & modes.REM) {r = a.remn(b.words[0]);}
+			if (flags & modes.REM) {
+				r = a.remn(b.words[0]);
+			}
 		} else {
 			[q, r] = a._wordDiv(b, flags);
 		}
@@ -543,15 +588,21 @@ class BN {
 				assert((flags & modes.REM) !== 0);
 
 				if (r.negative !== 0) {
-					if (b.negative === 0) {q.isubn(1);}
-					else {q.iaddn(1);}
+					if (b.negative === 0) {
+						q.isubn(1);
+					} else {
+						q.iaddn(1);
+					}
 				}
 			}
 
 			if (flags & modes.REM && r.negative !== 0) {
-					if (b.negative === 0) {r.iadd(b);}
-					else {r.isub(b);}
+				if (b.negative === 0) {
+					r.iadd(b);
+				} else {
+					r.isub(b);
 				}
+			}
 		}
 
 		return [q, r];
@@ -586,9 +637,11 @@ class BN {
 		if (flags & modes.QUO) {
 			q = new BN(0);
 			q.length = m + 1;
-			q.words = Array.from({length: q.length});
+			q.words = Array.from({ length: q.length });
 
-			for (let index = 0; index < q.length; index++) {q.words[index] = 0;}
+			for (let index = 0; index < q.length; index++) {
+				q.words[index] = 0;
+			}
 		}
 
 		// Diff.
@@ -597,7 +650,9 @@ class BN {
 		d._ishlnsubmul(b, 1, m);
 
 		if (d.negative === 0) {
-			if (q) {q.words[m] = 1;}
+			if (q) {
+				q.words[m] = 1;
+			}
 
 			a = d;
 		}
@@ -608,7 +663,7 @@ class BN {
 			const alo = a.words[b.length + j - 1];
 			const quo = ((ahi * 0x4_00_00_00 + alo) / hi) | 0;
 
-			let qj = Math.min(quo, 0x3_FF_FF_FF);
+			let qj = Math.min(quo, 0x3_ff_ff_ff);
 
 			a._ishlnsubmul(b, qj, j);
 
@@ -619,15 +674,21 @@ class BN {
 				a.ineg();
 			}
 
-			if (q) {q.words[j] = qj;}
+			if (q) {
+				q.words[j] = qj;
+			}
 		}
 
 		// Strip.
-		if (q) {q._strip();}
+		if (q) {
+			q._strip();
+		}
 
 		// Denormalize.
 		// Note: we shouldn't need to strip `a` here.
-		if (flags & modes.REM && shift !== 0) {a.iushrn(shift);}
+		if (flags & modes.REM && shift !== 0) {
+			a.iushrn(shift);
+		}
 
 		return [q, a];
 	}
@@ -641,11 +702,11 @@ class BN {
 		for (; index < number_.length; index++) {
 			const k = (this.words[index + shift] | 0) + carry;
 			const r = number_.words[index] * mul;
-			const w = k - (r & 0x3_FF_FF_FF);
+			const w = k - (r & 0x3_ff_ff_ff);
 
 			carry = (w >> 26) - ((r / 0x4_00_00_00) | 0);
 
-			this.words[index + shift] = w & 0x3_FF_FF_FF;
+			this.words[index + shift] = w & 0x3_ff_ff_ff;
 		}
 
 		for (; index < this.length - shift; index++) {
@@ -653,10 +714,12 @@ class BN {
 
 			carry = w >> 26;
 
-			this.words[index + shift] = w & 0x3_FF_FF_FF;
+			this.words[index + shift] = w & 0x3_ff_ff_ff;
 		}
 
-		if (carry === 0) {return this._strip();}
+		if (carry === 0) {
+			return this._strip();
+		}
 
 		// Subtraction overflow.
 		assert(carry === -1);
@@ -668,7 +731,7 @@ class BN {
 
 			carry = w >> 26;
 
-			this.words[index] = w & 0x3_FF_FF_FF;
+			this.words[index] = w & 0x3_ff_ff_ff;
 		}
 
 		this.negative = 1;
@@ -698,7 +761,9 @@ class BN {
 
 		const neg = (number_ < 0) | 0;
 
-		if (neg) {number_ = -number_;}
+		if (neg) {
+			number_ = -number_;
+		}
 
 		let carry = 0;
 
@@ -734,7 +799,9 @@ class BN {
 	iremn(number_) {
 		let m = this.remrn(number_);
 
-		if (m < 0) {m = -m;}
+		if (m < 0) {
+			m = -m;
+		}
 
 		this.words[0] = m;
 		this.length = 1;
@@ -754,13 +821,17 @@ class BN {
 		enforce(isSMI(number_), "num", "smi");
 		nonzero(number_ !== 0);
 
-		if (number_ < 0) {number_ = -number_;}
+		if (number_ < 0) {
+			number_ = -number_;
+		}
 
 		const p = (1 << 26) % number_;
 
 		let acc = 0;
 
-		for (let index = this.length - 1; index >= 0; index--) {acc = (p * acc + (this.words[index] | 0)) % number_;}
+		for (let index = this.length - 1; index >= 0; index--) {
+			acc = (p * acc + (this.words[index] | 0)) % number_;
+		}
 
 		return this.negative === 0 ? acc : -acc | 0;
 	}
@@ -782,15 +853,20 @@ class BN {
 	}
 
 	idivn(number_) {
-		if (this.negative === 0) {return this.iquon(number_);}
+		if (this.negative === 0) {
+			return this.iquon(number_);
+		}
 
 		const r = this.remrn(number_);
 
 		this.iquon(number_);
 
 		if (r < 0) {
-			if (number_ < 0) {this.iaddn(1);}
-			else {this.isubn(1);}
+			if (number_ < 0) {
+				this.iaddn(1);
+			} else {
+				this.isubn(1);
+			}
 		}
 
 		return this;
@@ -841,8 +917,11 @@ class BN {
 		let r = this.remrn(number_);
 
 		if (r < 0) {
-			if (number_ < 0) {r -= number_;}
-			else {r += number_;}
+			if (number_ < 0) {
+				r -= number_;
+			} else {
+				r += number_;
+			}
 		}
 
 		return r;
@@ -856,7 +935,9 @@ class BN {
 		const [q, r] = this.quorem(number_);
 
 		// Fast case - exact division.
-		if (r.isZero()) {return q;}
+		if (r.isZero()) {
+			return q;
+		}
 
 		const bit = number_.words[0] & 1;
 
@@ -869,10 +950,14 @@ class BN {
 		number_.words[0] |= bit;
 
 		// Round down.
-		if (cmp < 0 || (number_.isOdd() && cmp === 0)) {return q;}
+		if (cmp < 0 || (number_.isOdd() && cmp === 0)) {
+			return q;
+		}
 
 		// Round up.
-		if (this.negative ^ number_.negative) {return q.isubn(1);}
+		if (this.negative ^ number_.negative) {
+			return q.isubn(1);
+		}
 
 		return q.iaddn(1);
 	}
@@ -901,7 +986,9 @@ class BN {
 			for (let j = b - 1; j >= 0; j--) {
 				r = r.sqr();
 
-				if ((word >> j) & 1) {r = r.mul(this);}
+				if ((word >> j) & 1) {
+					r = r.mul(this);
+				}
 			}
 
 			b = 26;
@@ -913,11 +1000,17 @@ class BN {
 	pown(number_) {
 		enforce(isSMI(number_), "num", "smi");
 
-		if (number_ < 0) {number_ = -number_;}
+		if (number_ < 0) {
+			number_ = -number_;
+		}
 
-		if (number_ === 0) {return new BN(1);}
+		if (number_ === 0) {
+			return new BN(1);
+		}
 
-		if (number_ === 1) {return this.clone();}
+		if (number_ === 1) {
+			return this.clone();
+		}
 
 		const bits = countBits(number_);
 
@@ -926,7 +1019,9 @@ class BN {
 		for (let index = bits - 2; index >= 0; index--) {
 			r = r.sqr();
 
-			if ((number_ >> index) & 1) {r = r.mul(this);}
+			if ((number_ >> index) & 1) {
+				r = r.mul(this);
+			}
 		}
 
 		return r;
@@ -947,17 +1042,25 @@ class BN {
 	_rootrem(pow, rem) {
 		enforce(pow >>> 0 === pow, "num", "uint32");
 
-		if (pow === 0) {throw new RangeError("Zeroth root.");}
+		if (pow === 0) {
+			throw new RangeError("Zeroth root.");
+		}
 
-		if (~pow & this.negative) {throw new RangeError("Negative with even root.");}
+		if (~pow & this.negative) {
+			throw new RangeError("Negative with even root.");
+		}
 
-		if (this.ucmpn(1) <= 0) {return [this.clone(), new BN(0)];}
+		if (this.ucmpn(1) <= 0) {
+			return [this.clone(), new BN(0)];
+		}
 
 		let u = new BN(0);
 		let t = BN.shift(1, (this.bitLength() / pow + 1) | 0);
 		let v, r;
 
-		if (this.negative !== 0) {t.ineg();}
+		if (this.negative !== 0) {
+			t.ineg();
+		}
 
 		if (pow === 2) {
 			do {
@@ -1004,7 +1107,9 @@ class BN {
 	isPower(pow) {
 		enforce(pow >>> 0 === pow, "num", "uint32");
 
-		if (pow === 0 || ~pow & this.negative) {return false;}
+		if (pow === 0 || ~pow & this.negative) {
+			return false;
+		}
 
 		const [, r] = this.rootrem(pow);
 
@@ -1037,9 +1142,13 @@ class BN {
 		let x = this;
 		let y = number_;
 
-		if (x === y) {return x;}
+		if (x === y) {
+			return x;
+		}
 
-		if ((x.negative | y.negative) === 0) {return x.iuand(y);}
+		if ((x.negative | y.negative) === 0) {
+			return x.iuand(y);
+		}
 
 		if ((x.negative & y.negative) === 1) {
 			// (-x) & (-y) == ~(x-1) & ~(y-1)
@@ -1054,7 +1163,9 @@ class BN {
 		}
 
 		// Assume x is the positive number.
-		if (x.negative !== 0) {[x, y] = [y.clone(), x];}
+		if (x.negative !== 0) {
+			[x, y] = [y.clone(), x];
+		}
 
 		// x & (-y) == x & ~(y-1)
 		//          == x & ~(y-1)
@@ -1072,7 +1183,9 @@ class BN {
 	iandn(number_) {
 		enforce(isSMI(number_), "num", "smi");
 
-		if ((this.negative | (number_ < 0)) !== 0) {return this.iand(new BN(number_));}
+		if ((this.negative | (number_ < 0)) !== 0) {
+			return this.iand(new BN(number_));
+		}
 
 		this.words[0] &= number_;
 		this.length = 1;
@@ -1094,7 +1207,9 @@ class BN {
 		if ((this.negative | (number_ < 0)) !== 0) {
 			const n = this.iand(new BN(number_));
 
-			if (n.length > 1) {throw new RangeError("Number exceeds 26 bits.");}
+			if (n.length > 1) {
+				throw new RangeError("Number exceeds 26 bits.");
+			}
 
 			return n.negative === 0 ? n.words[0] : -n.words[0];
 		}
@@ -1111,7 +1226,9 @@ class BN {
 
 		this.length = Math.min(this.length, number_.length);
 
-		for (let index = 0; index < this.length; index++) {this.words[index] &= number_.words[index];}
+		for (let index = 0; index < this.length; index++) {
+			this.words[index] &= number_.words[index];
+		}
 
 		return this._strip();
 	}
@@ -1151,9 +1268,13 @@ class BN {
 		let x = this;
 		let y = number_;
 
-		if (x === y) {return x;}
+		if (x === y) {
+			return x;
+		}
 
-		if ((x.negative | y.negative) === 0) {return x.iuor(y);}
+		if ((x.negative | y.negative) === 0) {
+			return x.iuor(y);
+		}
 
 		if ((x.negative & y.negative) === 1) {
 			// (-x) | (-y) == ~(x-1) | ~(y-1)
@@ -1170,7 +1291,9 @@ class BN {
 		// Assume x is the positive number.
 		y = y.clone();
 
-		if (x.negative !== 0) {[x, y] = [y, x];}
+		if (x.negative !== 0) {
+			[x, y] = [y, x];
+		}
 
 		// x | (-y) == x | ~(y-1)
 		//          == ~((y-1) & ~x)
@@ -1186,7 +1309,9 @@ class BN {
 	iorn(number_) {
 		enforce(isSMI(number_), "num", "smi");
 
-		if ((this.negative | (number_ < 0)) !== 0) {return this.ior(new BN(number_));}
+		if ((this.negative | (number_ < 0)) !== 0) {
+			return this.ior(new BN(number_));
+		}
 
 		this.words[0] |= number_;
 
@@ -1210,7 +1335,9 @@ class BN {
 
 		this._expand(number_.length);
 
-		for (let index = 0; index < number_.length; index++) {this.words[index] |= number_.words[index];}
+		for (let index = 0; index < number_.length; index++) {
+			this.words[index] |= number_.words[index];
+		}
 
 		// Note: we shouldn't need to strip here.
 		return this;
@@ -1249,7 +1376,9 @@ class BN {
 			return x;
 		}
 
-		if ((x.negative | y.negative) === 0) {return x.iuxor(y);}
+		if ((x.negative | y.negative) === 0) {
+			return x.iuxor(y);
+		}
 
 		if ((x.negative & y.negative) === 1) {
 			// (-x) ^ (-y) == ~(x-1) ^ ~(y-1)
@@ -1263,7 +1392,9 @@ class BN {
 		}
 
 		// Assume x is the positive number.
-		if (x.negative !== 0) {[x, y] = [y.clone(), x];}
+		if (x.negative !== 0) {
+			[x, y] = [y.clone(), x];
+		}
 
 		// x ^ (-y) == x ^ ~(y-1)
 		//          == ~(x ^ (y-1))
@@ -1280,7 +1411,9 @@ class BN {
 	ixorn(number_) {
 		enforce(isSMI(number_), "num", "smi");
 
-		if ((this.negative | (number_ < 0)) !== 0) {return this.ixor(new BN(number_));}
+		if ((this.negative | (number_ < 0)) !== 0) {
+			return this.ixor(new BN(number_));
+		}
 
 		this.words[0] ^= number_;
 
@@ -1305,16 +1438,22 @@ class BN {
 		let a = this;
 		let b = number_;
 
-		if (a.length < b.length) {[a, b] = [b, a];}
+		if (a.length < b.length) {
+			[a, b] = [b, a];
+		}
 
 		let index = 0;
 
-		for (; index < b.length; index++) {this.words[index] = a.words[index] ^ b.words[index];}
+		for (; index < b.length; index++) {
+			this.words[index] = a.words[index] ^ b.words[index];
+		}
 
 		if (a !== this) {
 			this._alloc(a.length);
 
-			for (; index < a.length; index++) {this.words[index] = a.words[index];}
+			for (; index < a.length; index++) {
+				this.words[index] = a.words[index];
+			}
 		}
 
 		this.length = a.length;
@@ -1368,13 +1507,19 @@ class BN {
 		// Extend the buffer with leading zeroes.
 		this._expand(s);
 
-		if (r > 0) {s -= 1;}
+		if (r > 0) {
+			s -= 1;
+		}
 
 		// Handle complete words.
-		for (; index < s; index++) {this.words[index] ^= 0x3_FF_FF_FF;}
+		for (; index < s; index++) {
+			this.words[index] ^= 0x3_ff_ff_ff;
+		}
 
 		// Handle the residue.
-		if (r > 0) {this.words[index] ^= (1 << r) - 1;}
+		if (r > 0) {
+			this.words[index] ^= (1 << r) - 1;
+		}
 
 		// And remove leading zeroes.
 		return this._strip();
@@ -1444,9 +1589,13 @@ class BN {
 		if (s !== 0) {
 			this._alloc(this.length + s);
 
-			for (let index = this.length - 1; index >= 0; index--) {this.words[index + s] = this.words[index];}
+			for (let index = this.length - 1; index >= 0; index--) {
+				this.words[index + s] = this.words[index];
+			}
 
-			for (let index = 0; index < s; index++) {this.words[index] = 0;}
+			for (let index = 0; index < s; index++) {
+				this.words[index] = 0;
+			}
 
 			this.length += s;
 		}
@@ -1475,7 +1624,9 @@ class BN {
 		if (output) {
 			output._alloc(s);
 
-			for (let index = 0; index < s; index++) {output.words[index] = this.words[index];}
+			for (let index = 0; index < s; index++) {
+				output.words[index] = this.words[index];
+			}
 
 			output.length = s;
 		}
@@ -1484,7 +1635,9 @@ class BN {
 			// No-op, we should not move anything at all.
 		} else if (this.length > s) {
 			this.length -= s;
-			for (let index = 0; index < this.length; index++) {this.words[index] = this.words[index + s];}
+			for (let index = 0; index < this.length; index++) {
+				this.words[index] = this.words[index + s];
+			}
 		} else {
 			this.words[0] = 0;
 			this.length = 1;
@@ -1505,7 +1658,9 @@ class BN {
 		// Push carried bits as a mask.
 		if (output) {
 			if (carry === 0) {
-				if (output.length === 0) {output.words[output.length++] = 0;}
+				if (output.length === 0) {
+					output.words[output.length++] = 0;
+				}
 
 				output._strip();
 			} else {
@@ -1599,8 +1754,11 @@ class BN {
 
 		this._expand(s + 1);
 
-		if (value) {this.words[s] |= 1 << r;}
-		else {this.words[s] &= ~(1 << r);}
+		if (value) {
+			this.words[s] |= 1 << r;
+		} else {
+			this.words[s] &= ~(1 << r);
+		}
 
 		return this._strip();
 	}
@@ -1612,19 +1770,25 @@ class BN {
 		const s = (bit - r) / 26;
 
 		// Fast case: bit is much higher than all existing words.
-		if (this.length <= s) {return this.negative;}
+		if (this.length <= s) {
+			return this.negative;
+		}
 
 		// Check bit and return.
 		const w = this.words[s];
 		const value = (w >> r) & 1;
 
 		if (this.negative !== 0) {
-			if (r > 0 && w & ((1 << r) - 1)) {return value ^ 1;}
+			if (r > 0 && w & ((1 << r) - 1)) {
+				return value ^ 1;
+			}
 
 			let j = s;
 
 			while (j--) {
-				if (this.words[j] > 0) {return value ^ 1;}
+				if (this.words[j] > 0) {
+					return value ^ 1;
+				}
 			}
 		}
 
@@ -1638,7 +1802,9 @@ class BN {
 		const s = (bit - r) / 26;
 
 		// Fast case: bit is much higher than all existing words.
-		if (this.length <= s) {return 0;}
+		if (this.length <= s) {
+			return 0;
+		}
 
 		// Check bit and return.
 		return (this.words[s] >> r) & 1;
@@ -1667,15 +1833,23 @@ class BN {
 
 		let s = (bits - r) / 26;
 
-		if (this.length <= s) {return this;}
+		if (this.length <= s) {
+			return this;
+		}
 
-		if (r !== 0) {s += 1;}
+		if (r !== 0) {
+			s += 1;
+		}
 
 		this.length = Math.min(s, this.length);
 
-		if (r !== 0) {this.words[this.length - 1] &= (1 << r) - 1;}
+		if (r !== 0) {
+			this.words[this.length - 1] &= (1 << r) - 1;
+		}
 
-		if (this.length === 0) {this.words[this.length++] = 0;}
+		if (this.length === 0) {
+			this.words[this.length++] = 0;
+		}
 
 		return this._strip();
 	}
@@ -1700,7 +1874,9 @@ class BN {
 		const shift = pos % 26;
 		const index = (pos - shift) / 26;
 
-		if (index >= this.length) {return 0;}
+		if (index >= this.length) {
+			return 0;
+		}
 
 		let bits = (this.words[index] >> shift) & ((1 << width) - 1);
 
@@ -1719,7 +1895,9 @@ class BN {
 	 */
 
 	ineg() {
-		if (!this.isZero()) {this.negative ^= 1;}
+		if (!this.isZero()) {
+			this.negative ^= 1;
+		}
 
 		return this;
 	}
@@ -1744,11 +1922,15 @@ class BN {
 	cmp(number_) {
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (this.negative !== number_.negative) {return number_.negative - this.negative;}
+		if (this.negative !== number_.negative) {
+			return number_.negative - this.negative;
+		}
 
 		const res = this.ucmp(number_);
 
-		if (this.negative !== 0) {return -res | 0;}
+		if (this.negative !== 0) {
+			return -res | 0;
+		}
 
 		return res;
 	}
@@ -1758,11 +1940,15 @@ class BN {
 
 		const negative = (number_ < 0) | 0;
 
-		if (this.negative !== negative) {return negative - this.negative;}
+		if (this.negative !== negative) {
+			return negative - this.negative;
+		}
 
 		const res = this.ucmpn(number_);
 
-		if (this.negative !== 0) {return -res | 0;}
+		if (this.negative !== 0) {
+			return -res | 0;
+		}
 
 		return res;
 	}
@@ -1808,9 +1994,13 @@ class BN {
 	}
 
 	sign() {
-		if (this.negative !== 0) {return -1;}
+		if (this.negative !== 0) {
+			return -1;
+		}
 
-		if (this.length === 1 && this.words[0] === 0) {return 0;}
+		if (this.length === 1 && this.words[0] === 0) {
+			return 0;
+		}
 
 		return 1;
 	}
@@ -1842,15 +2032,21 @@ class BN {
 	ucmp(number_) {
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (this.length < number_.length) {return -1;}
+		if (this.length < number_.length) {
+			return -1;
+		}
 
-		if (this.length > number_.length) {return 1;}
+		if (this.length > number_.length) {
+			return 1;
+		}
 
 		for (let index = this.length - 1; index >= 0; index--) {
 			const a = this.words[index] | 0;
 			const b = number_.words[index] | 0;
 
-			if (a === b) {continue;}
+			if (a === b) {
+				continue;
+			}
 
 			return (a > b) - (a < b);
 		}
@@ -1861,11 +2057,15 @@ class BN {
 	ucmpn(number_) {
 		enforce(isSMI(number_), "num", "smi");
 
-		if (this.length > 1) {return 1;}
+		if (this.length > 1) {
+			return 1;
+		}
 
 		const w = this.words[0] | 0;
 
-		if (number_ < 0) {number_ = -number_;}
+		if (number_ < 0) {
+			number_ = -number_;
+		}
 
 		return (w > number_) - (w < number_);
 	}
@@ -1885,18 +2085,24 @@ class BN {
 		//   Page 3, Section 3
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (number_.isZero() || number_.isEven()) {throw new Error("jacobi: `num` must be odd.");}
+		if (number_.isZero() || number_.isEven()) {
+			throw new Error("jacobi: `num` must be odd.");
+		}
 
 		let a = this._cloneNormal();
 		let b = number_.clone();
 		let j = 1;
 
 		if (b.isNeg()) {
-			if (a.isNeg()) {j = -1;}
+			if (a.isNeg()) {
+				j = -1;
+			}
 			b.ineg();
 		}
 
-		if (a.isNeg() || a.ucmp(b) >= 0) {a.imod(b);}
+		if (a.isNeg() || a.ucmp(b) >= 0) {
+			a.imod(b);
+		}
 
 		while (!a.isZero()) {
 			const bits = a._makeOdd();
@@ -1904,23 +2110,31 @@ class BN {
 			if (bits & 1) {
 				const bmod8 = b.andln(7);
 
-				if (bmod8 === 3 || bmod8 === 5) {j = -j;}
+				if (bmod8 === 3 || bmod8 === 5) {
+					j = -j;
+				}
 			}
 
 			if (a.ucmp(b) < 0) {
 				[a, b] = [b, a];
 
-				if (a.andln(3) === 3 && b.andln(3) === 3) {j = -j;}
+				if (a.andln(3) === 3 && b.andln(3) === 3) {
+					j = -j;
+				}
 			}
 
 			a._isub(a, b).iushrn(1);
 
 			const bmod8 = b.andln(7);
 
-			if (bmod8 === 3 || bmod8 === 5) {j = -j;}
+			if (bmod8 === 3 || bmod8 === 5) {
+				j = -j;
+			}
 		}
 
-		if (b.cmpn(1) !== 0) {return 0;}
+		if (b.cmpn(1) !== 0) {
+			return 0;
+		}
 
 		return j;
 	}
@@ -1928,11 +2142,17 @@ class BN {
 	kronecker(number_) {
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (this.isZero()) {return number_.ucmpn(1) === 0 ? 1 : 0;}
+		if (this.isZero()) {
+			return number_.ucmpn(1) === 0 ? 1 : 0;
+		}
 
-		if (number_.isZero()) {return this.ucmpn(1) === 0 ? 1 : 0;}
+		if (number_.isZero()) {
+			return this.ucmpn(1) === 0 ? 1 : 0;
+		}
 
-		if (((this.words[0] | number_.words[0]) & 1) === 0) {return 0;}
+		if (((this.words[0] | number_.words[0]) & 1) === 0) {
+			return 0;
+		}
 
 		const x = this;
 		const y = number_.clone();
@@ -1941,7 +2161,9 @@ class BN {
 
 		let k = x.jacobi(y);
 
-		if (bits & 1) {k *= table[x.andln(7)];}
+		if (bits & 1) {
+			k *= table[x.andln(7)];
+		}
 
 		return k | 0;
 	}
@@ -1953,9 +2175,13 @@ class BN {
 	gcd(number_) {
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (this.isZero()) {return number_.abs();}
+		if (this.isZero()) {
+			return number_.abs();
+		}
 
-		if (number_.isZero()) {return this.abs();}
+		if (number_.isZero()) {
+			return this.abs();
+		}
 
 		let a = this.clone();
 		let b = number_.clone();
@@ -1999,7 +2225,9 @@ class BN {
 	lcm(number_) {
 		enforce(BN.isBN(number_), "num", "bignum");
 
-		if (this.isZero() || number_.isZero()) {return new BN(0);}
+		if (this.isZero() || number_.isZero()) {
+			return new BN(0);
+		}
 
 		return this.quo(this.gcd(number_)).mul(number_).iabs();
 	}
@@ -2075,9 +2303,13 @@ class BN {
 			}
 		}
 
-		if (this.negative !== 0) {C.ineg();}
+		if (this.negative !== 0) {
+			C.ineg();
+		}
 
-		if (number_.negative !== 0) {D.ineg();}
+		if (number_.negative !== 0) {
+			D.ineg();
+		}
 
 		return [C, D, y.iushln(g)];
 	}
@@ -2090,13 +2322,19 @@ class BN {
 		enforce(BN.isBN(number_), "num", "bignum");
 		range(number_.sign() > 0, "invert");
 
-		if (number_.isOdd()) {return this._invertp(number_);}
+		if (number_.isOdd()) {
+			return this._invertp(number_);
+		}
 
-		if (number_.cmpn(1) === 0) {throw new RangeError("Not invertible.");}
+		if (number_.cmpn(1) === 0) {
+			throw new RangeError("Not invertible.");
+		}
 
 		const [s, , g] = this.egcd(number_);
 
-		if (g.cmpn(1) !== 0) {throw new RangeError("Not invertible.");}
+		if (g.cmpn(1) !== 0) {
+			throw new RangeError("Not invertible.");
+		}
 
 		return s.imod(number_);
 	}
@@ -2169,9 +2407,13 @@ class BN {
 	isPrime(rng, reps, limit) {
 		enforce(reps >>> 0 === reps, "reps", "uint32");
 
-		if (!this.isPrimeMR(rng, reps + 1, true)) {return false;}
+		if (!this.isPrimeMR(rng, reps + 1, true)) {
+			return false;
+		}
 
-		if (!this.isPrimeLucas(limit)) {return false;}
+		if (!this.isPrimeLucas(limit)) {
+			return false;
+		}
 
 		return true;
 	}
@@ -2187,7 +2429,9 @@ class BN {
 			return n.cmpn(2) === 0 || n.cmpn(3) === 0 || n.cmpn(5) === 0;
 		}
 
-		if (n.isEven()) {return false;}
+		if (n.isEven()) {
+			return false;
+		}
 
 		const nm1 = n.subn(1);
 		const nm3 = nm1.subn(2);
@@ -2210,14 +2454,20 @@ class BN {
 
 			let y = x.toRed(red).redPow(q);
 
-			if (y.cmp(rone) === 0 || y.cmp(rnm1) === 0) {continue;}
+			if (y.cmp(rone) === 0 || y.cmp(rnm1) === 0) {
+				continue;
+			}
 
 			for (let j = 1; j < k; j++) {
 				y = y.redSqr();
 
-				if (y.cmp(rnm1) === 0) {continue next;}
+				if (y.cmp(rnm1) === 0) {
+					continue next;
+				}
 
-				if (y.cmp(rone) === 0) {return false;}
+				if (y.cmp(rone) === 0) {
+					return false;
+				}
 			}
 
 			return false;
@@ -2232,10 +2482,14 @@ class BN {
 		const n = this;
 
 		// Ignore 0 and 1.
-		if (n.cmpn(1) <= 0) {return false;}
+		if (n.cmpn(1) <= 0) {
+			return false;
+		}
 
 		// Two is the only even prime.
-		if (n.isEven()) {return n.cmpn(2) === 0;}
+		if (n.isEven()) {
+			return n.cmpn(2) === 0;
+		}
 
 		let p = 3;
 
@@ -2253,11 +2507,17 @@ class BN {
 			const d = new BN(p * p - 4);
 			const j = d.jacobi(n);
 
-			if (j === -1) {break;}
+			if (j === -1) {
+				break;
+			}
 
-			if (j === 0) {return n.cmpn(p + 2) === 0;}
+			if (j === 0) {
+				return n.cmpn(p + 2) === 0;
+			}
 
-			if (p === 40 && n.isSquare()) {return false;}
+			if (p === 40 && n.isSquare()) {
+				return false;
+			}
 
 			p += 1;
 		}
@@ -2282,13 +2542,19 @@ class BN {
 			const a = vk.muln(p).imod(n);
 			const b = vk1.ushln(1).imod(n);
 
-			if (a.cmp(b) === 0) {return true;}
+			if (a.cmp(b) === 0) {
+				return true;
+			}
 		}
 
 		for (let t = 0; t < r - 1; t++) {
-			if (vk.isZero()) {return true;}
+			if (vk.isZero()) {
+				return true;
+			}
 
-			if (vk.cmpn(2) === 0) {return false;}
+			if (vk.cmpn(2) === 0) {
+				return false;
+			}
 
 			vk = vk.sqr().isubn(2).imod(n);
 		}
@@ -2301,7 +2567,9 @@ class BN {
 	 */
 
 	toTwos(width) {
-		if (this.negative !== 0) {return this.abs().inotn(width).iaddn(1);}
+		if (this.negative !== 0) {
+			return this.abs().inotn(width).iaddn(1);
+		}
 
 		return this.clone();
 	}
@@ -2310,7 +2578,9 @@ class BN {
 		enforce(width >>> 0 === width, "width", "uint32");
 		range(width > 0, "width");
 
-		if (this.testn(width - 1)) {return this.notn(width).iaddn(1).ineg();}
+		if (this.testn(width - 1)) {
+			return this.notn(width).iaddn(1).ineg();
+		}
 
 		return this.clone();
 	}
@@ -2322,7 +2592,9 @@ class BN {
 	toRed(ctx) {
 		enforce(ctx instanceof Red, "ctx", "reduction context");
 
-		if (this.red) {throw new Error("Already in reduction context.");}
+		if (this.red) {
+			throw new Error("Already in reduction context.");
+		}
 
 		return ctx.convertTo(this);
 	}
@@ -2336,7 +2608,9 @@ class BN {
 		enforce(ctx instanceof Red, "ctx", "reduction context");
 
 		if (this.red) {
-			if (!ctx.m.eq(this.red.m) || ctx.mont !== this.red.mont) {throw new Error("Already in reduction context.");}
+			if (!ctx.m.eq(this.red.m) || ctx.mont !== this.red.mont) {
+				throw new Error("Already in reduction context.");
+			}
 		} else {
 			range(this.negative === 0, "red");
 			range(this.ucmp(ctx.m) < 0, "red");
@@ -2618,7 +2892,9 @@ class BN {
 	}
 
 	_alloc(size) {
-		while (this.words.length < size) {this.words.push(0);}
+		while (this.words.length < size) {
+			this.words.push(0);
+		}
 
 		return this;
 	}
@@ -2626,13 +2902,17 @@ class BN {
 	_expand(size) {
 		this._alloc(size);
 
-		while (this.length < size) {this.words[this.length++] = 0;}
+		while (this.length < size) {
+			this.words[this.length++] = 0;
+		}
 
 		return this;
 	}
 
 	_strip() {
-		while (this.length > 1 && this.words[this.length - 1] === 0) {this.length -= 1;}
+		while (this.length > 1 && this.words[this.length - 1] === 0) {
+			this.length -= 1;
+		}
 
 		return this._normalize();
 	}
@@ -2641,7 +2921,9 @@ class BN {
 		assert(this.length > 0);
 
 		// -0 = 0
-		if (this.length === 1 && this.words[0] === 0) {this.negative = 0;}
+		if (this.length === 1 && this.words[0] === 0) {
+			this.negative = 0;
+		}
 
 		return this;
 	}
@@ -2655,7 +2937,9 @@ class BN {
 
 		if (this.length === 1) {
 			// Must be normalized.
-			if (this.words[0] === 0) {assert(this.negative === 0);}
+			if (this.words[0] === 0) {
+				assert(this.negative === 0);
+			}
 			return this;
 		}
 
@@ -2676,27 +2960,35 @@ class BN {
 		range(p.sign() > 0, "invert");
 		assert(p.isOdd());
 
-		if (p.cmpn(1) === 0) {throw new RangeError("Not invertible.");}
+		if (p.cmpn(1) === 0) {
+			throw new RangeError("Not invertible.");
+		}
 
 		const a = this.clone();
 		const b = p.clone();
 		const u = new BN(1);
 		const v = new BN(0);
 
-		if (a.isNeg() || a.ucmp(b) >= 0) {a.imod(b);}
+		if (a.isNeg() || a.ucmp(b) >= 0) {
+			a.imod(b);
+		}
 
 		while (!a.isZero()) {
 			let index = a._makeOdd();
 			let j = b._makeOdd();
 
 			while (index--) {
-				if (u.isOdd()) {u._iadd(u, p);}
+				if (u.isOdd()) {
+					u._iadd(u, p);
+				}
 
 				u.iushrn(1);
 			}
 
 			while (j--) {
-				if (v.isOdd()) {v._iadd(v, p);}
+				if (v.isOdd()) {
+					v._iadd(v, p);
+				}
 
 				v.iushrn(1);
 			}
@@ -2720,7 +3012,9 @@ class BN {
 			}
 		}
 
-		if (b.cmpn(1) !== 0) {throw new RangeError("Not invertible.");}
+		if (b.cmpn(1) !== 0) {
+			throw new RangeError("Not invertible.");
+		}
 
 		assert(v.negative === 0);
 		assert(v.ucmp(p) < 0);
@@ -2731,7 +3025,9 @@ class BN {
 	_makeOdd() {
 		const shift = this.zeroBits();
 
-		if (shift > 0) {this.iushrn(shift);}
+		if (shift > 0) {
+			this.iushrn(shift);
+		}
 
 		return shift;
 	}
@@ -2739,7 +3035,9 @@ class BN {
 	_factor2(number_) {
 		// Find common factor of two.
 		// Expects inputs to be non-zero.
-		if ((this.words[0] | number_.words[0]) & 1) {return 0;}
+		if ((this.words[0] | number_.words[0]) & 1) {
+			return 0;
+		}
 
 		const len = Math.min(this.length, number_.length);
 
@@ -2750,7 +3048,9 @@ class BN {
 
 			r += b;
 
-			if (b !== 26) {break;}
+			if (b !== 26) {
+				break;
+			}
 		}
 
 		return r;
@@ -2772,9 +3072,11 @@ class BN {
 	clone() {
 		const copy = new BN();
 
-		copy.words = Array.from({length: this.length});
+		copy.words = Array.from({ length: this.length });
 
-		for (let index = 0; index < this.length; index++) {copy.words[index] = this.words[index];}
+		for (let index = 0; index < this.length; index++) {
+			copy.words[index] = this.words[index];
+		}
 
 		copy.length = this.length;
 		copy.negative = this.negative;
@@ -2788,7 +3090,9 @@ class BN {
 
 		this._alloc(number_.length);
 
-		for (let index = 0; index < number_.length; index++) {this.words[index] = number_.words[index];}
+		for (let index = 0; index < number_.length; index++) {
+			this.words[index] = number_.words[index];
+		}
 
 		this.length = number_.length;
 		this.negative = number_.negative;
@@ -2835,9 +3139,13 @@ class BN {
 	}
 
 	zeroBits() {
-		if (this.isZero()) {return 0;}
+		if (this.isZero()) {
+			return 0;
+		}
 
-		if (this.isOdd()) {return 0;}
+		if (this.isOdd()) {
+			return 0;
+		}
 
 		let r = 0;
 
@@ -2846,16 +3154,22 @@ class BN {
 
 			r += b;
 
-			if (b !== 26) {break;}
+			if (b !== 26) {
+				break;
+			}
 		}
 
 		return r;
 	}
 
 	isSafe() {
-		if (this.length <= 2) {return true;}
+		if (this.length <= 2) {
+			return true;
+		}
 
-		if (this.length === 3 && this.words[2] === 0x01) {return true;}
+		if (this.length === 3 && this.words[2] === 0x01) {
+			return true;
+		}
 
 		return false;
 	}
@@ -2863,7 +3177,9 @@ class BN {
 	word(pos) {
 		enforce(pos >>> 0 === pos, "pos", "uint32");
 
-		if (pos >= this.length) {return 0;}
+		if (pos >= this.length) {
+			return 0;
+		}
 
 		return this.words[pos];
 	}
@@ -2871,7 +3187,9 @@ class BN {
 	[custom]() {
 		let prefix = "BN";
 
-		if (this.red) {prefix = "BN-R";}
+		if (this.red) {
+			prefix = "BN-R";
+		}
 
 		return `<${prefix}: ${this.toString(10)}>`;
 	}
@@ -2898,7 +3216,9 @@ class BN {
 	toDouble() {
 		let number_ = 0;
 
-		for (let index = this.length - 1; index >= 0; index--) {number_ = number_ * 0x4_00_00_00 + this.words[index];}
+		for (let index = this.length - 1; index >= 0; index--) {
+			number_ = number_ * 0x4_00_00_00 + this.words[index];
+		}
 
 		return this.negative === 0 ? number_ : -number_;
 	}
@@ -2908,7 +3228,9 @@ class BN {
 	}
 
 	toBigInt() {
-		if (!HAS_BIGINT) {throw new Error("BigInt is not supported!");}
+		if (!HAS_BIGINT) {
+			throw new Error("BigInt is not supported!");
+		}
 
 		const s52 = BigInt(52);
 		const s26 = BigInt(26);
@@ -2923,7 +3245,9 @@ class BN {
 			number_ = (number_ << s52) | BigInt(hi + lo);
 		}
 
-		if (index >= 0) {number_ = (number_ << s26) | BigInt(this.words[0]);}
+		if (index >= 0) {
+			number_ = (number_ << s26) | BigInt(this.words[0]);
+		}
 
 		return this.negative === 0 ? number_ : -number_;
 	}
@@ -2935,14 +3259,20 @@ class BN {
 	toString(base, padding) {
 		base = getBase(base);
 
-		if (padding == null) {padding = 0;}
+		if (padding == null) {
+			padding = 0;
+		}
 
-		if (padding === 0) {padding = 1;}
+		if (padding === 0) {
+			padding = 1;
+		}
 
 		enforce(base >>> 0 === base, "base", "uint32");
 		enforce(padding >>> 0 === padding, "padding", "uint32");
 
-		if (base < 2 || base > 36) {throw new RangeError("Base ranges between 2 and 36.");}
+		if (base < 2 || base > 36) {
+			throw new RangeError("Base ranges between 2 and 36.");
+		}
 
 		this._check();
 
@@ -2953,12 +3283,15 @@ class BN {
 
 			for (let index = 0; index < this.length; index++) {
 				const w = this.words[index];
-				const word = (((w << off) | carry) & 0xFF_FF_FF).toString(16);
+				const word = (((w << off) | carry) & 0xff_ff_ff).toString(16);
 
-				carry = (w >>> (24 - off)) & 0xFF_FF_FF;
+				carry = (w >>> (24 - off)) & 0xff_ff_ff;
 
-				if (carry !== 0 || index !== this.length - 1) {out = zeros[6 - word.length] + word + out;}
-				else {out = word + out;}
+				if (carry !== 0 || index !== this.length - 1) {
+					out = zeros[6 - word.length] + word + out;
+				} else {
+					out = word + out;
+				}
 
 				off += 2;
 
@@ -2968,11 +3301,17 @@ class BN {
 				}
 			}
 
-			if (carry !== 0) {out = carry.toString(16) + out;}
+			if (carry !== 0) {
+				out = carry.toString(16) + out;
+			}
 
-			while (out.length % padding !== 0) {out = "0" + out;}
+			while (out.length % padding !== 0) {
+				out = "0" + out;
+			}
 
-			if (this.negative !== 0) {out = "-" + out;}
+			if (this.negative !== 0) {
+				out = "-" + out;
+			}
 
 			return out;
 		}
@@ -2990,15 +3329,24 @@ class BN {
 
 			c.iquon(groupBase);
 
-			if (c.isZero()) {out = r + out;}
-			else {out = zeros[groupSize - r.length] + r + out;}
+			if (c.isZero()) {
+				out = r + out;
+			} else {
+				out = zeros[groupSize - r.length] + r + out;
+			}
 		}
 
-		if (this.isZero()) {out = "0";}
+		if (this.isZero()) {
+			out = "0";
+		}
 
-		while (out.length % padding !== 0) {out = "0" + out;}
+		while (out.length % padding !== 0) {
+			out = "0" + out;
+		}
 
-		if (this.negative !== 0) {out = "-" + out;}
+		if (this.negative !== 0) {
+			out = "-" + out;
+		}
 
 		return out;
 	}
@@ -3016,9 +3364,13 @@ class BN {
 	}
 
 	toArrayLike(ArrayType, endian, length) {
-		if (endian == null) {endian = "be";}
+		if (endian == null) {
+			endian = "be";
+		}
 
-		if (length == null) {length = 0;}
+		if (length == null) {
+			length = 0;
+		}
 
 		enforce(typeof ArrayType === "function", "ArrayType", "function");
 		enforce(endian === "be" || endian === "le", "endian", "endianness");
@@ -3029,7 +3381,9 @@ class BN {
 		const bytes = this.byteLength();
 		const size = length || Math.max(1, bytes);
 
-		if (bytes > size) {throw new RangeError("Byte array longer than desired length.");}
+		if (bytes > size) {
+			throw new RangeError("Byte array longer than desired length.");
+		}
 
 		const res = allocate(ArrayType, size);
 
@@ -3042,14 +3396,20 @@ class BN {
 				const shift = (index & 3) << 1;
 				const word = (this.words[index] << shift) | carry;
 
-				res[pos--] = word & 0xFF;
+				res[pos--] = word & 0xff;
 
-				if (pos >= 0) {res[pos--] = (word >>> 8) & 0xFF;}
+				if (pos >= 0) {
+					res[pos--] = (word >>> 8) & 0xff;
+				}
 
-				if (pos >= 0) {res[pos--] = (word >>> 16) & 0xFF;}
+				if (pos >= 0) {
+					res[pos--] = (word >>> 16) & 0xff;
+				}
 
 				if (shift === 6) {
-					if (pos >= 0) {res[pos--] = (word >>> 24) & 0xFF;}
+					if (pos >= 0) {
+						res[pos--] = (word >>> 24) & 0xff;
+					}
 
 					carry = 0;
 				} else {
@@ -3060,7 +3420,9 @@ class BN {
 			if (pos >= 0) {
 				res[pos--] = carry;
 
-				while (pos >= 0) {res[pos--] = 0;}
+				while (pos >= 0) {
+					res[pos--] = 0;
+				}
 
 				carry = 0;
 			}
@@ -3074,14 +3436,20 @@ class BN {
 				const shift = (index & 3) << 1;
 				const word = (this.words[index] << shift) | carry;
 
-				res[pos++] = word & 0xFF;
+				res[pos++] = word & 0xff;
 
-				if (pos < res.length) {res[pos++] = (word >>> 8) & 0xFF;}
+				if (pos < res.length) {
+					res[pos++] = (word >>> 8) & 0xff;
+				}
 
-				if (pos < res.length) {res[pos++] = (word >>> 16) & 0xFF;}
+				if (pos < res.length) {
+					res[pos++] = (word >>> 16) & 0xff;
+				}
 
 				if (shift === 6) {
-					if (pos < res.length) {res[pos++] = (word >>> 24) & 0xFF;}
+					if (pos < res.length) {
+						res[pos++] = (word >>> 24) & 0xff;
+					}
 
 					carry = 0;
 				} else {
@@ -3092,7 +3460,9 @@ class BN {
 			if (pos < res.length) {
 				res[pos++] = carry;
 
-				while (pos < res.length) {res[pos++] = 0;}
+				while (pos < res.length) {
+					res[pos++] = 0;
+				}
 
 				carry = 0;
 			}
@@ -3116,44 +3486,56 @@ class BN {
 	}
 
 	fromNumber(number_, endian) {
-		if (endian == null) {endian = "be";}
+		if (endian == null) {
+			endian = "be";
+		}
 
 		enforce(isInteger(number_), "num", "integer");
 		enforce(endian === "be" || endian === "le", "endian", "endianness");
 
 		const neg = (number_ < 0) | 0;
 
-		if (neg) {number_ = -number_;}
+		if (neg) {
+			number_ = -number_;
+		}
 
 		if (number_ < 0x4_00_00_00) {
-			this.words[0] = number_ & 0x3_FF_FF_FF;
+			this.words[0] = number_ & 0x3_ff_ff_ff;
 			this.length = 1;
 		} else if (number_ < 0x10_00_00_00_00_00_00) {
-			this.words = [number_ & 0x3_FF_FF_FF, (number_ / 0x4_00_00_00) & 0x3_FF_FF_FF];
+			this.words = [number_ & 0x3_ff_ff_ff, (number_ / 0x4_00_00_00) & 0x3_ff_ff_ff];
 			this.length = 2;
 		} else {
-			this.words = [number_ & 0x3_FF_FF_FF, (number_ / 0x4_00_00_00) & 0x3_FF_FF_FF, 1];
+			this.words = [number_ & 0x3_ff_ff_ff, (number_ / 0x4_00_00_00) & 0x3_ff_ff_ff, 1];
 			this.length = 3;
 		}
 
 		this.negative = neg;
 
-		if (endian === "le") {this.reverse();}
+		if (endian === "le") {
+			this.reverse();
+		}
 
 		return this;
 	}
 
 	fromDouble(number_, endian) {
-		if (endian == null) {endian = "be";}
+		if (endian == null) {
+			endian = "be";
+		}
 
 		enforce(typeof number_ === "number", "num", "double");
 		enforce(endian === "be" || endian === "le", "endian", "endianness");
 
-		if (!isFinite(number_)) {number_ = 0;}
+		if (!isFinite(number_)) {
+			number_ = 0;
+		}
 
 		const neg = (number_ <= -1) | 0;
 
-		if (number_ < 0) {number_ = -number_;}
+		if (number_ < 0) {
+			number_ = -number_;
+		}
 
 		number_ = Math.floor(number_);
 
@@ -3168,23 +3550,31 @@ class BN {
 			number_ = hi;
 		}
 
-		if (this.words.length === 0) {this.words.push(0);}
+		if (this.words.length === 0) {
+			this.words.push(0);
+		}
 
 		this.length = this.words.length;
 		this.negative = neg;
 
-		if (endian === "le") {this.reverse();}
+		if (endian === "le") {
+			this.reverse();
+		}
 
 		return this;
 	}
 
 	fromBigInt(number_, endian) {
-		if (endian == null) {endian = "be";}
+		if (endian == null) {
+			endian = "be";
+		}
 
 		enforce(typeof number_ === "bigint", "num", "bigint");
 		enforce(endian === "be" || endian === "le", "endian", "endianness");
 
-		if (!HAS_BIGINT) {throw new Error("BigInt is not supported!");}
+		if (!HAS_BIGINT) {
+			throw new Error("BigInt is not supported!");
+		}
 
 		// You know the implementation has a
 		// problem when strings are twice
@@ -3194,7 +3584,9 @@ class BN {
 		this._fromHex(number_.toString(16), start);
 		this.negative = start;
 
-		if (endian === "le") {this.reverse();}
+		if (endian === "le") {
+			this.reverse();
+		}
 
 		return this;
 	}
@@ -3210,41 +3602,56 @@ class BN {
 	}
 
 	fromString(str, base, endian) {
-		if (base === "le" || base === "be") {[base, endian] = [endian, base];}
+		if (base === "le" || base === "be") {
+			[base, endian] = [endian, base];
+		}
 
 		base = getBase(base);
 
-		if (endian == null) {endian = "be";}
+		if (endian == null) {
+			endian = "be";
+		}
 
 		enforce(typeof str === "string", "string", "string");
 		enforce(base >>> 0 === base, "base", "uint32");
 		enforce(endian === "be" || endian === "le", "endian", "endianness");
 
-		if (base < 2 || base > 36) {throw new Error("Base ranges between 2 and 36.");}
+		if (base < 2 || base > 36) {
+			throw new Error("Base ranges between 2 and 36.");
+		}
 
 		str = str.replaceAll(/\s+/g, "");
 
 		let start = 0;
 
-		if (str.length > 0 && str.charCodeAt(0) === 0x2D) {start = 1;}
+		if (str.length > 0 && str.charCodeAt(0) === 0x2d) {
+			start = 1;
+		}
 
-		if (base === 16) {this._fromHex(str, start);}
-		else {this._fromBase(str, base, start);}
+		if (base === 16) {
+			this._fromHex(str, start);
+		} else {
+			this._fromBase(str, base, start);
+		}
 
 		this.negative = start;
 
 		this._normalize();
 
-		if (endian === "le") {this.reverse();}
+		if (endian === "le") {
+			this.reverse();
+		}
 
 		return this;
 	}
 
 	_fromHex(str, start) {
 		this.length = Math.max(2, Math.ceil((str.length - start) / 6));
-		this.words = Array.from({length: this.length});
+		this.words = Array.from({ length: this.length });
 
-		for (let index = 0; index < this.length; index++) {this.words[index] = 0;}
+		for (let index = 0; index < this.length; index++) {
+			this.words[index] = 0;
+		}
 
 		// Scan 24-bit chunks and add them to the number.
 		let off = 0;
@@ -3254,10 +3661,10 @@ class BN {
 		for (; index >= start; index -= 6) {
 			const w = parseHex(str, index, index + 6);
 
-			this.words[j] |= (w << off) & 0x3_FF_FF_FF;
+			this.words[j] |= (w << off) & 0x3_ff_ff_ff;
 
 			// `0x3fffff` is intentional here, 26bits max shift + 24bit hex limb.
-			this.words[j + 1] |= (w >>> (26 - off)) & 0x3F_FF_FF;
+			this.words[j + 1] |= (w >>> (26 - off)) & 0x3f_ff_ff;
 
 			off += 24;
 
@@ -3270,8 +3677,8 @@ class BN {
 		if (index + 6 !== start) {
 			const w = parseHex(str, start, index + 6);
 
-			this.words[j] |= (w << off) & 0x3_FF_FF_FF;
-			this.words[j + 1] |= (w >>> (26 - off)) & 0x3F_FF_FF;
+			this.words[j] |= (w << off) & 0x3_ff_ff_ff;
+			this.words[j + 1] |= (w >>> (26 - off)) & 0x3f_ff_ff;
 		}
 
 		return this._strip();
@@ -3287,7 +3694,9 @@ class BN {
 		let limbLen = 0;
 		let limbPow = 1;
 
-		for (; limbPow <= 0x3_FF_FF_FF; limbPow *= base) {limbLen += 1;}
+		for (; limbPow <= 0x3_ff_ff_ff; limbPow *= base) {
+			limbLen += 1;
+		}
 
 		limbLen -= 1;
 		limbPow = (limbPow / base) | 0;
@@ -3318,13 +3727,17 @@ class BN {
 
 	fromJSON(json) {
 		if (BN.isBN(json)) {
-			if (json.red) {return json.fromRed();}
+			if (json.red) {
+				return json.fromRed();
+			}
 
 			return json.clone();
 		}
 
 		if (Array.isArray(json)) {
-			for (const chunk of json) {enforce(typeof chunk === "string", "chunk", "string");}
+			for (const chunk of json) {
+				enforce(typeof chunk === "string", "chunk", "string");
+			}
 
 			json = json.join("");
 		}
@@ -3347,7 +3760,9 @@ class BN {
 	}
 
 	fromArrayLike(data, endian) {
-		if (endian == null) {endian = "be";}
+		if (endian == null) {
+			endian = "be";
+		}
 
 		enforce(data && data.length >>> 0 === data.length, "data", "array-like");
 		enforce(endian === "be" || endian === "le", "endian", "endianness");
@@ -3360,10 +3775,12 @@ class BN {
 		}
 
 		this.length = Math.max(2, Math.ceil(data.length / 3));
-		this.words = Array.from({length: this.length});
+		this.words = Array.from({ length: this.length });
 		this.negative = 0;
 
-		for (let index = 0; index < this.length; index++) {this.words[index] = 0;}
+		for (let index = 0; index < this.length; index++) {
+			this.words[index] = 0;
+		}
 
 		const left = data.length % 3;
 
@@ -3375,8 +3792,8 @@ class BN {
 			for (let index = data.length - 1; index >= 2; index -= 3) {
 				const w = data[index] | (data[index - 1] << 8) | (data[index - 2] << 16);
 
-				this.words[j] |= (w << off) & 0x3_FF_FF_FF;
-				this.words[j + 1] = (w >>> (26 - off)) & 0x3_FF_FF_FF;
+				this.words[j] |= (w << off) & 0x3_ff_ff_ff;
+				this.words[j + 1] = (w >>> (26 - off)) & 0x3_ff_ff_ff;
 
 				off += 24;
 
@@ -3402,8 +3819,8 @@ class BN {
 			for (let index = 0; index < len; index += 3) {
 				const w = data[index] | (data[index + 1] << 8) | (data[index + 2] << 16);
 
-				this.words[j] |= (w << off) & 0x3_FF_FF_FF;
-				this.words[j + 1] = (w >>> (26 - off)) & 0x3_FF_FF_FF;
+				this.words[j] |= (w << off) & 0x3_ff_ff_ff;
+				this.words[j + 1] = (w >>> (26 - off)) & 0x3_ff_ff_ff;
 
 				off += 24;
 
@@ -3426,8 +3843,8 @@ class BN {
 		}
 
 		if (left > 0) {
-			this.words[j] |= (w << off) & 0x3_FF_FF_FF;
-			this.words[j + 1] = (w >>> (26 - off)) & 0x3_FF_FF_FF;
+			this.words[j] |= (w << off) & 0x3_ff_ff_ff;
+			this.words[j + 1] = (w >>> (26 - off)) & 0x3_ff_ff_ff;
 		}
 
 		return this._strip();
@@ -3438,23 +3855,39 @@ class BN {
 	}
 
 	from(number_, base, endian) {
-		if (number_ == null) {return this;}
-
-		if (base === "le" || base === "be") {[base, endian] = [endian, base];}
-
-		if (typeof number_ === "number") {return this.fromNumber(number_, endian);}
-
-		if (typeof number_ === "bigint") {return this.fromBigInt(number_, endian);}
-
-		if (typeof number_ === "string") {return this.fromString(number_, base, endian);}
-
-		if (typeof number_ === "object") {
-			if (BN.isBN(number_)) {return this.fromBN(number_, endian);}
-
-			if (number_.length >>> 0 === number_.length) {return this.fromArrayLike(number_, endian);}
+		if (number_ == null) {
+			return this;
 		}
 
-		if (typeof number_ === "boolean") {return this.fromBool(number_);}
+		if (base === "le" || base === "be") {
+			[base, endian] = [endian, base];
+		}
+
+		if (typeof number_ === "number") {
+			return this.fromNumber(number_, endian);
+		}
+
+		if (typeof number_ === "bigint") {
+			return this.fromBigInt(number_, endian);
+		}
+
+		if (typeof number_ === "string") {
+			return this.fromString(number_, base, endian);
+		}
+
+		if (typeof number_ === "object") {
+			if (BN.isBN(number_)) {
+				return this.fromBN(number_, endian);
+			}
+
+			if (number_.length >>> 0 === number_.length) {
+				return this.fromArrayLike(number_, endian);
+			}
+		}
+
+		if (typeof number_ === "boolean") {
+			return this.fromBool(number_);
+		}
 
 		throw new TypeError("Non-numeric object passed to BN.");
 	}
@@ -3469,7 +3902,9 @@ class BN {
 		for (const number_ of arguments_) {
 			enforce(BN.isBN(number_), "num", "bignum");
 
-			if (!min || number_.cmp(min) < 0) {min = number_;}
+			if (!min || number_.cmp(min) < 0) {
+				min = number_;
+			}
 		}
 
 		return min || new BN(0);
@@ -3481,7 +3916,9 @@ class BN {
 		for (const number_ of arguments_) {
 			enforce(BN.isBN(number_), "num", "bignum");
 
-			if (!max || number_.cmp(max) > 0) {max = number_;}
+			if (!max || number_.cmp(max) > 0) {
+				max = number_;
+			}
 		}
 
 		return max || new BN(0);
@@ -3510,41 +3947,44 @@ class BN {
 	}
 
 	static _prime(name) {
-		if (primes[name]) {return primes[name];}
+		if (primes[name]) {
+			return primes[name];
+		}
 
 		let prime;
 
 		switch (name) {
-		case "p192": {
-		prime = new P192();
-		break;
-		}
-		case "p224": {
-		prime = new P224();
-		break;
-		}
-		case "p521": {
-		prime = new P521();
-		break;
-		}
-		case "k256": {
-		prime = new K256();
-		break;
-		}
-		case "p251": {
-		prime = new P251();
-		break;
-		}
-		case "p25519": {
-		prime = new P25519();
-		break;
-		}
-		case "p448": {
-		prime = new P448();
-		break;
-		}
-		default: { throw new Error(`Unknown prime: "${name}".`);
-		}
+			case "p192": {
+				prime = new P192();
+				break;
+			}
+			case "p224": {
+				prime = new P224();
+				break;
+			}
+			case "p521": {
+				prime = new P521();
+				break;
+			}
+			case "k256": {
+				prime = new K256();
+				break;
+			}
+			case "p251": {
+				prime = new P251();
+				break;
+			}
+			case "p25519": {
+				prime = new P25519();
+				break;
+			}
+			case "p448": {
+				prime = new P448();
+				break;
+			}
+			default: {
+				throw new Error(`Unknown prime: "${name}".`);
+			}
 		}
 
 		primes[name] = prime;
@@ -3557,13 +3997,17 @@ class BN {
 	}
 
 	static pow(number_, exp) {
-		if (number_ === 2) {return BN.shift(1, exp);}
+		if (number_ === 2) {
+			return BN.shift(1, exp);
+		}
 
 		return new BN().fromNumber(number_).pown(exp);
 	}
 
 	static shift(number_, bits) {
-		if (number_ === 1) {return new BN(0).usetn(bits, 1);}
+		if (number_ === 1) {
+			return new BN(0).usetn(bits, 1);
+		}
 
 		return new BN().fromNumber(number_).ishln(bits);
 	}
@@ -3585,11 +4029,15 @@ class BN {
 
 			enforce(Buffer.isBuffer(bytes), "bytes", "buffer");
 
-			if (bytes.length !== size) {throw new RangeError("Invalid number of bytes returned from RNG.");}
+			if (bytes.length !== size) {
+				throw new RangeError("Invalid number of bytes returned from RNG.");
+			}
 
 			const number_ = BN.fromBuffer(bytes);
 
-			if (total > bits) {number_.iushrn(total - bits);}
+			if (total > bits) {
+				number_.iushrn(total - bits);
+			}
 
 			return number_;
 		}
@@ -3602,7 +4050,9 @@ class BN {
 		range(number_.negative === 0, "RNG");
 		nonred(!number_.red, "RNG");
 
-		if (number_.bitLength() > bits) {throw new RangeError("Invalid number of bits returned from RNG.");}
+		if (number_.bitLength() > bits) {
+			throw new RangeError("Invalid number of bits returned from RNG.");
+		}
 
 		return number_;
 	}
@@ -3611,18 +4061,24 @@ class BN {
 		min = BN.cast(min, 16);
 		max = BN.cast(max, 16);
 
-		if (min.cmp(max) > 0) {throw new RangeError("Minimum cannot be greater than maximum.");}
+		if (min.cmp(max) > 0) {
+			throw new RangeError("Minimum cannot be greater than maximum.");
+		}
 
 		const space = max.sub(min).iabs();
 		const bits = space.bitLength();
 
-		if (bits === 0) {return min.clone();}
+		if (bits === 0) {
+			return min.clone();
+		}
 
 		for (;;) {
 			const number_ = BN.randomBits(rng, bits);
 
 			// Maximum is _exclusive_!
-			if (number_.cmp(space) >= 0) {continue;}
+			if (number_.cmp(space) >= 0) {
+				continue;
+			}
 
 			// Minimum is _inclusive_!
 			number_.iadd(min);
@@ -3684,7 +4140,9 @@ class BN {
 	}
 
 	static cast(number_, base, endian) {
-		if (BN.isBN(number_)) {return number_;}
+		if (BN.isBN(number_)) {
+			return number_;
+		}
 
 		return new BN(number_, base, endian);
 	}
@@ -3760,7 +4218,9 @@ class Prime {
 		}
 
 		// Adjust sign.
-		if (neg && !number_.isZero()) {number_._isub(this.p, number_);}
+		if (neg && !number_.isZero()) {
+			number_._isub(this.p, number_);
+		}
 
 		return number_;
 	}
@@ -3807,7 +4267,9 @@ class Prime34 extends Prime {
 		const { red } = x;
 		const r = this.pp1d4(x);
 
-		if (!red.sqr(r).eq(x)) {throw new SquareRootError(r);}
+		if (!red.sqr(r).eq(x)) {
+			throw new SquareRootError(r);
+		}
 
 		return r;
 	}
@@ -3823,7 +4285,9 @@ class Prime34 extends Prime {
 		const x = red.mul(red.mul(u3, v), p);
 		const c = red.mul(v, red.sqr(x));
 
-		if (c.eq(u)) {return x;}
+		if (c.eq(u)) {
+			return x;
+		}
 
 		throw new SquareRootError(x);
 	}
@@ -3856,11 +4320,15 @@ class Prime58 extends Prime {
 		const sm1 = this.sm1._forceRed(red);
 		const r = this.pp3d8(x);
 
-		if (red.sqr(r).eq(x)) {return r;}
+		if (red.sqr(r).eq(x)) {
+			return r;
+		}
 
 		const c = red.mul(r, sm1);
 
-		if (red.sqr(c).eq(x)) {return c;}
+		if (red.sqr(c).eq(x)) {
+			return c;
+		}
 
 		throw new SquareRootError(r);
 	}
@@ -3875,13 +4343,19 @@ class Prime58 extends Prime {
 		const x = red.mul(red.mul(u, v3), p);
 		const c = red.mul(v, red.sqr(x));
 
-		if (c.eq(u)) {return x;}
+		if (c.eq(u)) {
+			return x;
+		}
 
 		const mc = red.ineg(c);
 
-		if (mc.eq(u)) {return red.mul(x, sm1);}
+		if (mc.eq(u)) {
+			return red.mul(x, sm1);
+		}
 
-		if (mc.eq(red.mul(u, sm1))) {throw new SquareRootError(red.mul(x, sm1));}
+		if (mc.eq(red.mul(u, sm1))) {
+			throw new SquareRootError(red.mul(x, sm1));
+		}
 
 		throw new SquareRootError(x);
 	}
@@ -3975,7 +4449,9 @@ class Prime116 extends Prime {
 				m += 1;
 			}
 
-			if (m === 0) {break;}
+			if (m === 0) {
+				break;
+			}
 
 			assert(m < k);
 
@@ -3992,7 +4468,9 @@ class Prime116 extends Prime {
 	divsqrt(u, v) {
 		const { red } = u;
 
-		if (v.isZero()) {throw new SquareRootError(v);}
+		if (v.isZero()) {
+			throw new SquareRootError(v);
+		}
 
 		return this.sqrt(red.div(u, v));
 	}
@@ -4198,12 +4676,14 @@ class K256 extends Prime34 {
 
 	split(input, output) {
 		// 256 = 9 * 26 + 22
-		const mask = 0x3F_FF_FF;
+		const mask = 0x3f_ff_ff;
 		const len = Math.min(input.length, 9);
 
 		output._alloc(len + 1);
 
-		for (let index = 0; index < len; index++) {output.words[index] = input.words[index];}
+		for (let index = 0; index < len; index++) {
+			output.words[index] = input.words[index];
+		}
 
 		output.length = len;
 
@@ -4233,8 +4713,11 @@ class K256 extends Prime34 {
 
 		input.words[index - 10] = prev;
 
-		if (prev === 0 && input.length > 10) {input.length -= 10;}
-		else {input.length -= 9;}
+		if (prev === 0 && input.length > 10) {
+			input.length -= 10;
+		} else {
+			input.length -= 9;
+		}
 
 		input._strip(); // Unsure if we need this.
 	}
@@ -4250,9 +4733,9 @@ class K256 extends Prime34 {
 		for (let index = 0; index < number_.length; index++) {
 			const w = number_.words[index];
 
-			lo += w * 0x3_D1;
+			lo += w * 0x3_d1;
 
-			number_.words[index] = lo & 0x3_FF_FF_FF;
+			number_.words[index] = lo & 0x3_ff_ff_ff;
 
 			lo = w * 0x40 + Math.floor(lo / 0x4_00_00_00);
 		}
@@ -4260,7 +4743,9 @@ class K256 extends Prime34 {
 		// Fast length reduction.
 		if (number_.words[number_.length - 1] === 0) {
 			number_.length -= 1;
-			if (number_.words[number_.length - 1] === 0) {number_.length -= 1;}
+			if (number_.words[number_.length - 1] === 0) {
+				number_.length -= 1;
+			}
 		}
 
 		// Note: we shouldn't need to strip here.
@@ -4333,7 +4818,9 @@ class P251 extends Prime34 {
 
 	imulK(number_) {
 		// K = 0x09
-		if (number_.isZero()) {return number_;}
+		if (number_.isZero()) {
+			return number_;
+		}
 
 		let carry = 0;
 
@@ -4342,7 +4829,7 @@ class P251 extends Prime34 {
 
 			carry = w >>> 26;
 
-			number_.words[index] = w & 0x3_FF_FF_FF;
+			number_.words[index] = w & 0x3_ff_ff_ff;
 		}
 
 		if (carry !== 0) {
@@ -4424,7 +4911,7 @@ class P25519 extends Prime58 {
 
 			carry = w >>> 26;
 
-			number_.words[index] = w & 0x3_FF_FF_FF;
+			number_.words[index] = w & 0x3_ff_ff_ff;
 		}
 
 		if (carry !== 0) {
@@ -4629,7 +5116,9 @@ class Red {
 	}
 
 	imod(a) {
-		if (this.prime) {return this.prime.ireduce(a)._forceRed(this);}
+		if (this.prime) {
+			return this.prime.ireduce(a)._forceRed(this);
+		}
 
 		return a.imod(this.m)._forceRed(this);
 	}
@@ -4639,13 +5128,17 @@ class Red {
 
 		a._iadd(a, b);
 
-		if (a.ucmp(this.m) >= 0) {a._isub(a, this.m);}
+		if (a.ucmp(this.m) >= 0) {
+			a._isub(a, this.m);
+		}
 
 		return a;
 	}
 
 	add(a, b) {
-		if (a.length < b.length) {return this.iadd(b.clone(), a);}
+		if (a.length < b.length) {
+			return this.iadd(b.clone(), a);
+		}
 
 		return this.iadd(a.clone(), b);
 	}
@@ -4653,13 +5146,19 @@ class Red {
 	iaddn(a, number_) {
 		this._verify1(a);
 
-		if (number_ < 0) {return this.isubn(a, -number_);}
+		if (number_ < 0) {
+			return this.isubn(a, -number_);
+		}
 
-		if (this.m.length === 1) {number_ %= this.m.words[0];}
+		if (this.m.length === 1) {
+			number_ %= this.m.words[0];
+		}
 
 		a._iaddn(number_);
 
-		if (a.ucmp(this.m) >= 0) {a._isub(a, this.m);}
+		if (a.ucmp(this.m) >= 0) {
+			a._isub(a, this.m);
+		}
 
 		return a;
 	}
@@ -4699,9 +5198,13 @@ class Red {
 	isubn(a, number_) {
 		this._verify1(a);
 
-		if (number_ < 0) {return this.iaddn(a, -number_);}
+		if (number_ < 0) {
+			return this.iaddn(a, -number_);
+		}
 
-		if (this.m.length === 1) {number_ %= this.m.words[0];}
+		if (this.m.length === 1) {
+			number_ %= this.m.words[0];
+		}
 
 		//  <: a - b mod m == m - (b - a)
 		// >=: a - b mod m == a - b
@@ -4732,7 +5235,9 @@ class Red {
 	imuln(a, number_) {
 		this._verify1(a);
 
-		if (a.isZero()) {return a;}
+		if (a.isZero()) {
+			return a;
+		}
 
 		if (number_ === 0) {
 			a.words[0] = 0;
@@ -4742,20 +5247,28 @@ class Red {
 
 		const neg = number_ < 0;
 
-		if (neg) {number_ = -number_;}
+		if (neg) {
+			number_ = -number_;
+		}
 
-		if (this.m.length === 1) {number_ %= this.m.words[0];}
+		if (this.m.length === 1) {
+			number_ %= this.m.words[0];
+		}
 
 		a.imuln(number_);
 
 		if (number_ <= 16) {
 			// Quick reduction.
-			while (a.ucmp(this.m) >= 0) {a._isub(a, this.m);}
+			while (a.ucmp(this.m) >= 0) {
+				a._isub(a, this.m);
+			}
 		} else {
 			this.imod(a);
 		}
 
-		if (neg) {this.ineg(a);}
+		if (neg) {
+			this.ineg(a);
+		}
 
 		return a;
 	}
@@ -4787,13 +5300,19 @@ class Red {
 	pow(a, number_) {
 		this._verify1(a);
 
-		if (number_.isNeg()) {a = this.invert(a);}
+		if (number_.isNeg()) {
+			a = this.invert(a);
+		}
 
 		// Small exponent.
-		if (number_.length === 1) {return this.pown(a, number_.words[0]);}
+		if (number_.length === 1) {
+			return this.pown(a, number_.words[0]);
+		}
 
 		// Call out to BigInt.
-		if (HAS_BIGINT && !this.prime) {return this.powInt(a, number_);}
+		if (HAS_BIGINT && !this.prime) {
+			return this.powInt(a, number_);
+		}
 
 		// Otherwise, a BN implementation.
 		return this.powNum(a, number_);
@@ -4802,12 +5321,14 @@ class Red {
 	powNum(a, number_) {
 		// Sliding window (odd multiples only).
 		const one = new BN(1).toRed(this);
-		const wnd = Array.from({length: WND_SIZE});
+		const wnd = Array.from({ length: WND_SIZE });
 		const a2 = this.sqr(a);
 
 		wnd[0] = a;
 
-		for (let index = 1; index < WND_SIZE; index++) {wnd[index] = this.mul(wnd[index - 1], a2);}
+		for (let index = 1; index < WND_SIZE; index++) {
+			wnd[index] = this.mul(wnd[index - 1], a2);
+		}
 
 		let index = number_.bitLength();
 		let r = one;
@@ -4843,7 +5364,9 @@ class Red {
 			while (index--) {
 				r = this.sqr(r);
 
-				if ((bits >> index) & 1) {r = this.mul(r, a);}
+				if ((bits >> index) & 1) {
+					r = this.mul(r, a);
+				}
 			}
 		}
 
@@ -4851,7 +5374,9 @@ class Red {
 	}
 
 	powInt(a, number_) {
-		if (this.mb === null) {this.mb = this.m.toBigInt();}
+		if (this.mb === null) {
+			this.mb = this.m.toBigInt();
+		}
 
 		const x = this.intFrom(a.toBigInt());
 		const y = powInt(x, number_, this.mb);
@@ -4861,7 +5386,9 @@ class Red {
 	}
 
 	sqrn(a, n) {
-		while (n--) {a = this.sqr(a);}
+		while (n--) {
+			a = this.sqr(a);
+		}
 
 		return a;
 	}
@@ -4882,9 +5409,13 @@ class Red {
 			number_ = -number_;
 		}
 
-		if (number_ === 0) {return new BN(1).toRed(this);}
+		if (number_ === 0) {
+			return new BN(1).toRed(this);
+		}
 
-		if (number_ === 1) {return a.clone();}
+		if (number_ === 1) {
+			return a.clone();
+		}
 
 		const bits = countBits(number_);
 
@@ -4893,7 +5424,9 @@ class Red {
 		for (let index = bits - 2; index >= 0; index--) {
 			r = this.sqr(r);
 
-			if ((number_ >> index) & 1) {r = this.mul(r, a);}
+			if ((number_ >> index) & 1) {
+				r = this.mul(r, a);
+			}
 		}
 
 		return r;
@@ -4915,14 +5448,20 @@ class Red {
 		this._verify1(x);
 
 		// Optimized square root chain.
-		if (this.prime) {return this.prime.sqrt(x);}
+		if (this.prime) {
+			return this.prime.sqrt(x);
+		}
 
 		// Fast case (p = 3 mod 4).
-		if (this.m.andln(3) === 3) {return this.sqrt3mod4(x);}
+		if (this.m.andln(3) === 3) {
+			return this.sqrt3mod4(x);
+		}
 
 		// Fast case (p = 5 mod 8).
 		if (this.m.andln(7) === 5) {
-			if (this.sm1 != null) {return this.sqrt5mod8sm1(x);}
+			if (this.sm1 != null) {
+				return this.sqrt5mod8sm1(x);
+			}
 			return this.sqrt5mod8(x);
 		}
 
@@ -4934,7 +5473,9 @@ class Red {
 		const e = this.m.addn(1).iushrn(2); // (p + 1) / 4
 		const b = this.pow(x, e);
 
-		if (!this.sqr(b).eq(x)) {throw new SquareRootError(b);}
+		if (!this.sqr(b).eq(x)) {
+			throw new SquareRootError(b);
+		}
 
 		return b;
 	}
@@ -4948,7 +5489,9 @@ class Red {
 		const beta = this.mul(x2, this.sqr(alpha));
 		const b = this.mul(this.mul(alpha, x), this.isub(beta, one));
 
-		if (!this.sqr(b).eq(x)) {throw new SquareRootError(b);}
+		if (!this.sqr(b).eq(x)) {
+			throw new SquareRootError(b);
+		}
 
 		return b;
 	}
@@ -4957,17 +5500,23 @@ class Red {
 		const e = this.m.addn(3).iushrn(3); // (p + 3) / 8
 		const b = this.pow(x, e);
 
-		if (this.sqr(b).eq(x)) {return b;}
+		if (this.sqr(b).eq(x)) {
+			return b;
+		}
 
 		const c = this.mul(b, this.sm1);
 
-		if (this.sqr(c).eq(x)) {return c;}
+		if (this.sqr(c).eq(x)) {
+			return c;
+		}
 
 		throw new SquareRootError(b);
 	}
 
 	sqrt0(x) {
-		if (this.m.cmpn(1) === 0 || !this.m.isOdd()) {throw new Error("Invalid prime.");}
+		if (this.m.cmpn(1) === 0 || !this.m.isOdd()) {
+			throw new Error("Invalid prime.");
+		}
 
 		switch (this.jacobi(x)) {
 			case -1: {
@@ -4986,7 +5535,9 @@ class Red {
 		const e = s._makeOdd();
 		const n = new BN(2).toRed(this);
 
-		while (this.jacobi(n) !== -1) {this.iadd(n, one);}
+		while (this.jacobi(n) !== -1) {
+			this.iadd(n, one);
+		}
 
 		let g = this.pow(n, s);
 		let b = this.pow(x, s);
@@ -5002,7 +5553,9 @@ class Red {
 				m += 1;
 			}
 
-			if (m === 0) {break;}
+			if (m === 0) {
+				break;
+			}
 
 			assert(m < k);
 
@@ -5024,19 +5577,29 @@ class Red {
 		this._verify2(u, v);
 
 		// u = 0, v = 0
-		if (u.isZero() && v.isZero()) {throw new SquareRootError(v);}
+		if (u.isZero() && v.isZero()) {
+			throw new SquareRootError(v);
+		}
 
 		// Optimized inverse square root chain.
-		if (this.prime) {return this.prime.divsqrt(u, v);}
+		if (this.prime) {
+			return this.prime.divsqrt(u, v);
+		}
 
 		// p = 3 mod 4
-		if (this.m.andln(3) === 3) {return this.divsqrt3mod4(u, v);}
+		if (this.m.andln(3) === 3) {
+			return this.divsqrt3mod4(u, v);
+		}
 
 		// p = 5 mod 8
-		if (this.sm1 != null && this.m.andln(7) === 5) {return this.divsqrt5mod8(u, v);}
+		if (this.sm1 != null && this.m.andln(7) === 5) {
+			return this.divsqrt5mod8(u, v);
+		}
 
 		// v = 0
-		if (v.isZero()) {throw new SquareRootError(v);}
+		if (v.isZero()) {
+			throw new SquareRootError(v);
+		}
 
 		return this.sqrt(this.div(u, v));
 	}
@@ -5052,7 +5615,9 @@ class Red {
 		const x = this.mul(this.mul(u3, v), p);
 		const c = this.mul(v, this.sqr(x));
 
-		if (c.eq(u)) {return x;}
+		if (c.eq(u)) {
+			return x;
+		}
 
 		throw new SquareRootError(x);
 	}
@@ -5066,19 +5631,27 @@ class Red {
 		const x = this.mul(this.mul(u, v3), p);
 		const c = this.mul(v, this.sqr(x));
 
-		if (c.eq(u)) {return x;}
+		if (c.eq(u)) {
+			return x;
+		}
 
 		const mc = this.ineg(c);
 
-		if (mc.eq(u)) {return this.mul(x, this.sm1);}
+		if (mc.eq(u)) {
+			return this.mul(x, this.sm1);
+		}
 
-		if (mc.eq(this.mul(u, this.sm1))) {throw new SquareRootError(this.mul(x, this.sm1));}
+		if (mc.eq(this.mul(u, this.sm1))) {
+			throw new SquareRootError(this.mul(x, this.sm1));
+		}
 
 		throw new SquareRootError(x);
 	}
 
 	isSquare(a) {
-		if (this.m.isOdd()) {return this.jacobi(a) >= 0;}
+		if (this.m.isOdd()) {
+			return this.jacobi(a) >= 0;
+		}
 
 		return this.kronecker(a) >= 0;
 	}
@@ -5099,7 +5672,9 @@ class Red {
 
 		if (number_ <= 4) {
 			// Quick reduction.
-			while (a.ucmp(this.m) >= 0) {a._isub(a, this.m);}
+			while (a.ucmp(this.m) >= 0) {
+				a._isub(a, this.m);
+			}
 		} else {
 			this.imod(a);
 		}
@@ -5114,7 +5689,9 @@ class Red {
 	ineg(a) {
 		this._verify1(a);
 
-		if (!a.isZero()) {a._isub(this.m, a);}
+		if (!a.isZero()) {
+			a._isub(this.m, a);
+		}
 
 		return a;
 	}
@@ -5134,7 +5711,9 @@ class Red {
 		if (this.m.length === 1) {
 			number_ %= this.m.words[0];
 
-			if (number_ < 0) {number_ += this.m.words[0];}
+			if (number_ < 0) {
+				number_ += this.m.words[0];
+			}
 
 			return a.ucmpn(number_) === 0;
 		}
@@ -5174,19 +5753,27 @@ class Red {
 	legendre(number_) {
 		this._verify1(number_);
 
-		if (this.m.isEven()) {throw new Error("legendre: `num` must be odd.");}
+		if (this.m.isEven()) {
+			throw new Error("legendre: `num` must be odd.");
+		}
 
 		// Euler's criterion.
 		const e = this.m.subn(1).iushrn(1); // (p - 1) / 2
 		const symbol = this.pow(number_, e);
 
-		if (symbol.isZero()) {return 0;}
+		if (symbol.isZero()) {
+			return 0;
+		}
 
 		const one = new BN(1).toRed(this);
 
-		if (symbol.eq(one)) {return 1;}
+		if (symbol.eq(one)) {
+			return 1;
+		}
 
-		if (symbol.eq(this.ineg(one))) {return -1;}
+		if (symbol.eq(this.ineg(one))) {
+			return -1;
+		}
 
 		throw new Error("Invalid prime.");
 	}
@@ -5217,10 +5804,14 @@ class Red {
 	fermat(a) {
 		this._verify1(a);
 
-		if (a.isZero() || this.m.cmpn(1) === 0) {throw new RangeError("Not invertible.");}
+		if (a.isZero() || this.m.cmpn(1) === 0) {
+			throw new RangeError("Not invertible.");
+		}
 
 		// Optimized inversion chain.
-		if (this.prime) {return this.prime.fermat(a);}
+		if (this.prime) {
+			return this.prime.fermat(a);
+		}
 
 		// Invert using fermat's little theorem.
 		return this.pow(a, this.m.subn(2));
@@ -5236,12 +5827,16 @@ class Red {
 			this._verify1(elem);
 		}
 
-		if (this.m.cmpn(1) === 0 || this.m.isEven()) {throw new RangeError("Not invertible.");}
+		if (this.m.cmpn(1) === 0 || this.m.isEven()) {
+			throw new RangeError("Not invertible.");
+		}
 
 		const len = elems.length;
 		const invs = new Array(len);
 
-		if (len === 0) {return invs;}
+		if (len === 0) {
+			return invs;
+		}
 
 		let acc = new BN(1).toRed(this);
 
@@ -5258,7 +5853,9 @@ class Red {
 		acc = this.invert(acc);
 
 		for (let index = len - 1; index >= 0; index--) {
-			if (elems[index].isZero()) {continue;}
+			if (elems[index].isZero()) {
+				continue;
+			}
 
 			invs[index] = this.mul(acc, invs[index]);
 			acc = this.mul(acc, elems[index]);
@@ -5268,7 +5865,9 @@ class Red {
 	}
 
 	[custom]() {
-		if (this.prime) {return `<Red: ${this.prime.name}>`;}
+		if (this.prime) {
+			return `<Red: ${this.prime.name}>`;
+		}
 
 		return `<Red: ${this.m.toString(10)}>`;
 	}
@@ -5285,7 +5884,9 @@ class Barrett extends Red {
 		this.prime = null;
 		this.n = this.m.bitLength();
 
-		if (this.n % 26 !== 0) {this.n += 26 - (this.n % 26);}
+		if (this.n % 26 !== 0) {
+			this.n += 26 - (this.n % 26);
+		}
 
 		this.k = this.n * 2;
 		this.w = this.k / 26;
@@ -5293,7 +5894,9 @@ class Barrett extends Red {
 	}
 
 	convertTo(number_) {
-		if (number_.length > this.w) {return super.convertTo(number_);}
+		if (number_.length > this.w) {
+			return super.convertTo(number_);
+		}
 
 		return this.imod(number_.clone());
 	}
@@ -5302,9 +5905,13 @@ class Barrett extends Red {
 		let index = 0;
 		let j = this.w;
 
-		while (j < q.length) {q.words[index++] = q.words[j++];}
+		while (j < q.length) {
+			q.words[index++] = q.words[j++];
+		}
 
-		if (index === 0) {q.words[index++] = 0;}
+		if (index === 0) {
+			q.words[index++] = 0;
+		}
 
 		q.length = index;
 	}
@@ -5323,9 +5930,13 @@ class Barrett extends Red {
 
 		a._isub(a, q.mul(this.m));
 
-		if (a.ucmp(this.m) >= 0) {a._isub(a, this.m);}
+		if (a.ucmp(this.m) >= 0) {
+			a._isub(a, this.m);
+		}
 
-		if (neg && !a.isZero()) {a._isub(this.m, a);}
+		if (neg && !a.isZero()) {
+			a._isub(this.m, a);
+		}
 
 		a.red = this;
 
@@ -5364,7 +5975,9 @@ class Mont extends Red {
 	}
 
 	convertTo(number_) {
-		if (number_.isNeg() || number_.ucmp(this.m) >= 0) {return this.imod(number_.ushln(this.n));}
+		if (number_.isNeg() || number_.ucmp(this.m) >= 0) {
+			return this.imod(number_.ushln(this.n));
+		}
 
 		// Equivalent to: (num * 2^n) mod m
 		return this.mul(number_, this.r2);
@@ -5382,7 +5995,9 @@ class Mont extends Red {
 	}
 
 	intFrom(a) {
-		if (this.rib === null) {this.rib = this.ri.toBigInt();}
+		if (this.rib === null) {
+			this.rib = this.ri.toBigInt();
+		}
 
 		return (a * this.rib) % this.mb;
 	}
@@ -5400,13 +6015,17 @@ class Mont extends Red {
 	}
 
 	mul(a, b) {
-		if (a.isZero() || b.isZero()) {return new BN(0)._forceRed(this);}
+		if (a.isZero() || b.isZero()) {
+			return new BN(0)._forceRed(this);
+		}
 
 		const t = a.mul(b);
 		const c = t.umaskn(this.n).mul(this.mi).iumaskn(this.n);
 		const u = t.iadd(c.mul(this.m)).iushrn(this.n);
 
-		if (u.ucmp(this.m) >= 0) {u._isub(u, this.m);}
+		if (u.ucmp(this.m) >= 0) {
+			u._isub(u, this.m);
+		}
 
 		return u._forceRed(this);
 	}
@@ -5414,7 +6033,9 @@ class Mont extends Red {
 	imuln(a, number_) {
 		this._verify1(a);
 
-		if (a.isZero()) {return a;}
+		if (a.isZero()) {
+			return a;
+		}
 
 		if (number_ === 0) {
 			a.words[0] = 0;
@@ -5424,9 +6045,13 @@ class Mont extends Red {
 
 		const neg = number_ < 0;
 
-		if (neg) {number_ = -number_;}
+		if (neg) {
+			number_ = -number_;
+		}
 
-		if (this.m.length === 1) {number_ %= this.m.words[0];}
+		if (this.m.length === 1) {
+			number_ %= this.m.words[0];
+		}
 
 		const bits = countBits(number_);
 
@@ -5437,7 +6062,9 @@ class Mont extends Red {
 			this.imul(a, this.convertTo(new BN(number_)));
 		} else if ((number_ & (number_ - 1)) === 0) {
 			// Optimize for powers of two.
-			for (let index = 0; index < bits - 1; index++) {this.iadd(a, a);}
+			for (let index = 0; index < bits - 1; index++) {
+				this.iadd(a, a);
+			}
 		} else {
 			// Multiply left to right.
 			const c = a.clone();
@@ -5445,11 +6072,15 @@ class Mont extends Red {
 			for (let index = bits - 2; index >= 0; index--) {
 				this.iadd(a, a);
 
-				if ((number_ >> index) & 1) {this.iadd(a, c);}
+				if ((number_ >> index) & 1) {
+					this.iadd(a, c);
+				}
 			}
 		}
 
-		if (neg) {this.ineg(a);}
+		if (neg) {
+			this.ineg(a);
+		}
 
 		return a;
 	}
@@ -5457,7 +6088,9 @@ class Mont extends Red {
 	eqn(a, number_) {
 		this._verify1(a);
 
-		if (number_ === 0) {return a.isZero();}
+		if (number_ === 0) {
+			return a.isZero();
+		}
 
 		return a.ucmp(this.convertTo(new BN(number_))) === 0;
 	}
@@ -5492,7 +6125,9 @@ class Mont extends Red {
 function makeError(Error, message, start) {
 	const err = new Error(message);
 
-	if (Error.captureStackTrace) {Error.captureStackTrace(err, start);}
+	if (Error.captureStackTrace) {
+		Error.captureStackTrace(err, start);
+	}
 
 	return err;
 }
@@ -5547,7 +6182,9 @@ class SquareRootError extends Error {
 		this.message = "X is not a square mod P.";
 		this.result = result.fromRed();
 
-		if (Error.captureStackTrace) {Error.captureStackTrace(this, SquareRootError);}
+		if (Error.captureStackTrace) {
+			Error.captureStackTrace(this, SquareRootError);
+		}
 	}
 }
 
@@ -5556,19 +6193,25 @@ function isInteger(number_) {
 }
 
 function isSMI(number_) {
-	return isInteger(number_) && number_ >= -0x3_FF_FF_FF && number_ <= 0x3_FF_FF_FF;
+	return isInteger(number_) && number_ >= -0x3_ff_ff_ff && number_ <= 0x3_ff_ff_ff;
 }
 
 function allocate(ArrayType, size) {
-	if (ArrayType.allocUnsafeSlow) {return ArrayType.allocUnsafeSlow(size);}
+	if (ArrayType.allocUnsafeSlow) {
+		return ArrayType.allocUnsafeSlow(size);
+	}
 
 	return new ArrayType(size);
 }
 
 function getBase(base) {
-	if (base == null) {return 10;}
+	if (base == null) {
+		return 10;
+	}
 
-	if (typeof base === "number") {return base;}
+	if (typeof base === "number") {
+		return base;
+	}
 
 	switch (base) {
 		case "bin": {
@@ -5593,7 +6236,9 @@ function getBase(base) {
  */
 
 function countBits(w) {
-	if (Math.clz32) {return 32 - Math.clz32(w);}
+	if (Math.clz32) {
+		return 32 - Math.clz32(w);
+	}
 
 	let t = w;
 	let r = 0;
@@ -5623,22 +6268,24 @@ function countBits(w) {
 
 function zeroBits(w) {
 	// Shortcut.
-	if (w === 0) {return 26;}
+	if (w === 0) {
+		return 26;
+	}
 
 	let t = w;
 	let r = 0;
 
-	if ((t & 0x1F_FF) === 0) {
+	if ((t & 0x1f_ff) === 0) {
 		r += 13;
 		t >>>= 13;
 	}
 
-	if ((t & 0x7F) === 0) {
+	if ((t & 0x7f) === 0) {
 		r += 7;
 		t >>>= 7;
 	}
 
-	if ((t & 0xF) === 0) {
+	if ((t & 0xf) === 0) {
 		r += 4;
 		t >>>= 4;
 	}
@@ -5648,7 +6295,9 @@ function zeroBits(w) {
 		t >>>= 2;
 	}
 
-	if ((t & 0x1) === 0) {r += 1;}
+	if ((t & 0x1) === 0) {
+		r += 1;
+	}
 
 	return r;
 }
@@ -5668,10 +6317,10 @@ function parseHex(str, start, end) {
 
 		if (c >= 49 && c <= 54) {
 			// 'a' - 'f'
-			b = c - 49 + 0xA;
+			b = c - 49 + 0xa;
 		} else if (c >= 17 && c <= 22) {
 			// 'A' - 'F'
-			b = c - 17 + 0xA;
+			b = c - 17 + 0xa;
 		} else {
 			// '0' - '9'
 			b = c;
@@ -5681,7 +6330,9 @@ function parseHex(str, start, end) {
 		z |= b;
 	}
 
-	if (z & ~15) {throw new Error("Invalid string.");}
+	if (z & ~15) {
+		throw new Error("Invalid string.");
+	}
 
 	return r;
 }
@@ -5700,16 +6351,18 @@ function parseBase(str, start, end, mul) {
 
 		if (c >= 49) {
 			// 'a'
-			b = c - 49 + 0xA;
+			b = c - 49 + 0xa;
 		} else if (c >= 17) {
 			// 'A'
-			b = c - 17 + 0xA;
+			b = c - 17 + 0xa;
 		} else {
 			// '0' - '9'
 			b = c;
 		}
 
-		if (c < 0 || c > 207 || b >= mul) {throw new Error("Invalid string.");}
+		if (c < 0 || c > 207 || b >= mul) {
+			throw new Error("Invalid string.");
+		}
 
 		r += b;
 	}
@@ -5724,12 +6377,14 @@ function parseBase(str, start, end, mul) {
 function powInt(x, e, m) {
 	// Sliding window (odd multiples only).
 	const one = BigInt(1);
-	const wnd = Array.from({length: WND_SIZE});
+	const wnd = Array.from({ length: WND_SIZE });
 	const x2 = (x * x) % m;
 
 	wnd[0] = x;
 
-	for (let index = 1; index < WND_SIZE; index++) {wnd[index] = (wnd[index - 1] * x2) % m;}
+	for (let index = 1; index < WND_SIZE; index++) {
+		wnd[index] = (wnd[index - 1] * x2) % m;
+	}
 
 	let index = e.bitLength();
 	let r = one;
@@ -5765,7 +6420,9 @@ function powInt(x, e, m) {
 		while (index--) {
 			r = (r * r) % m;
 
-			if ((bits >> index) & 1) {r = (r * x) % m;}
+			if ((bits >> index) & 1) {
+				r = (r * x) % m;
+			}
 		}
 	}
 
@@ -5773,7 +6430,9 @@ function powInt(x, e, m) {
 }
 
 function sqrn(x, n, m) {
-	for (let index = 0; index < n; index++) {x = (x * x) % m;}
+	for (let index = 0; index < n; index++) {
+		x = (x * x) % m;
+	}
 	return x;
 }
 
@@ -5793,7 +6452,7 @@ function smallMulTo(self, number_, out) {
 	const a = self.words[0];
 	const b = number_.words[0];
 	const r = a * b;
-	const lo = r & 0x3_FF_FF_FF;
+	const lo = r & 0x3_ff_ff_ff;
 
 	let carry = (r / 0x4_00_00_00) | 0;
 	let k = 1;
@@ -5806,7 +6465,7 @@ function smallMulTo(self, number_, out) {
 		// `ncarry`, note that ncarry
 		// could be >= 0x3ffffff.
 		let ncarry = carry >>> 26;
-		let rword = carry & 0x3_FF_FF_FF;
+		let rword = carry & 0x3_ff_ff_ff;
 
 		const min = Math.max(0, k - self.length + 1);
 		const max = Math.min(k, number_.length - 1);
@@ -5818,15 +6477,18 @@ function smallMulTo(self, number_, out) {
 			const r = a * b + rword;
 
 			ncarry += (r / 0x4_00_00_00) | 0;
-			rword = r & 0x3_FF_FF_FF;
+			rword = r & 0x3_ff_ff_ff;
 		}
 
 		out.words[k] = rword | 0;
 		carry = ncarry | 0;
 	}
 
-	if (carry === 0) {out.length -= 1;}
-	else {out.words[k] = carry | 0;}
+	if (carry === 0) {
+		out.length -= 1;
+	} else {
+		out.words[k] = carry | 0;
+	}
 
 	return out._strip();
 }
@@ -5851,7 +6513,7 @@ function bigMulTo(self, number_, out) {
 
 		hncarry = 0;
 
-		let rword = carry & 0x3_FF_FF_FF;
+		let rword = carry & 0x3_ff_ff_ff;
 
 		const min = Math.max(0, k - self.length + 1);
 		const max = Math.min(k, number_.length - 1);
@@ -5862,15 +6524,15 @@ function bigMulTo(self, number_, out) {
 			const b = number_.words[j];
 			const r = a * b;
 
-			let lo = r & 0x3_FF_FF_FF;
+			let lo = r & 0x3_ff_ff_ff;
 
 			ncarry = (ncarry + ((r / 0x4_00_00_00) | 0)) | 0;
 			lo = (lo + rword) | 0;
-			rword = lo & 0x3_FF_FF_FF;
+			rword = lo & 0x3_ff_ff_ff;
 			ncarry = (ncarry + (lo >>> 26)) | 0;
 
 			hncarry += ncarry >>> 26;
-			ncarry &= 0x3_FF_FF_FF;
+			ncarry &= 0x3_ff_ff_ff;
 		}
 
 		out.words[k] = rword;
@@ -5878,25 +6540,32 @@ function bigMulTo(self, number_, out) {
 		ncarry = hncarry;
 	}
 
-	if (carry === 0) {out.length -= 1;}
-	else {out.words[k] = carry;}
+	if (carry === 0) {
+		out.length -= 1;
+	} else {
+		out.words[k] = carry;
+	}
 
 	return out._strip();
 }
 
 function jumboMulTo(x, y, out) {
 	// v8 has a 2147483519 bit max (~256mb).
-	if (!HAS_BIGINT || x.length + y.length > 82_595_519) {return bigMulTo(x, y, out);}
+	if (!HAS_BIGINT || x.length + y.length > 82_595_519) {
+		return bigMulTo(x, y, out);
+	}
 
 	const zero = BigInt(0);
-	const mask = BigInt(0x3_FF_FF_FF);
+	const mask = BigInt(0x3_ff_ff_ff);
 	const shift = BigInt(26);
 
 	let z = x.toBigInt() * y.toBigInt();
 
 	const neg = (z < zero) | 0;
 
-	if (neg) {z = -z;}
+	if (neg) {
+		z = -z;
+	}
 
 	let index = 0;
 
@@ -5905,7 +6574,9 @@ function jumboMulTo(x, y, out) {
 		z >>= shift;
 	}
 
-	if (index === 0) {out.words[index++] = 0;}
+	if (index === 0) {
+		out.words[index++] = 0;
+	}
 
 	out.length = index;
 	out.negative = neg;
@@ -5918,64 +6589,64 @@ function comb10MulTo(self, number_, out) {
 	const b = number_.words;
 	const o = out.words;
 	const a0 = a[0] | 0;
-	const al0 = a0 & 0x1F_FF;
+	const al0 = a0 & 0x1f_ff;
 	const ah0 = a0 >>> 13;
 	const a1 = a[1] | 0;
-	const al1 = a1 & 0x1F_FF;
+	const al1 = a1 & 0x1f_ff;
 	const ah1 = a1 >>> 13;
 	const a2 = a[2] | 0;
-	const al2 = a2 & 0x1F_FF;
+	const al2 = a2 & 0x1f_ff;
 	const ah2 = a2 >>> 13;
 	const a3 = a[3] | 0;
-	const al3 = a3 & 0x1F_FF;
+	const al3 = a3 & 0x1f_ff;
 	const ah3 = a3 >>> 13;
 	const a4 = a[4] | 0;
-	const al4 = a4 & 0x1F_FF;
+	const al4 = a4 & 0x1f_ff;
 	const ah4 = a4 >>> 13;
 	const a5 = a[5] | 0;
-	const al5 = a5 & 0x1F_FF;
+	const al5 = a5 & 0x1f_ff;
 	const ah5 = a5 >>> 13;
 	const a6 = a[6] | 0;
-	const al6 = a6 & 0x1F_FF;
+	const al6 = a6 & 0x1f_ff;
 	const ah6 = a6 >>> 13;
 	const a7 = a[7] | 0;
-	const al7 = a7 & 0x1F_FF;
+	const al7 = a7 & 0x1f_ff;
 	const ah7 = a7 >>> 13;
 	const a8 = a[8] | 0;
-	const al8 = a8 & 0x1F_FF;
+	const al8 = a8 & 0x1f_ff;
 	const ah8 = a8 >>> 13;
 	const a9 = a[9] | 0;
-	const al9 = a9 & 0x1F_FF;
+	const al9 = a9 & 0x1f_ff;
 	const ah9 = a9 >>> 13;
 	const b0 = b[0] | 0;
-	const bl0 = b0 & 0x1F_FF;
+	const bl0 = b0 & 0x1f_ff;
 	const bh0 = b0 >>> 13;
 	const b1 = b[1] | 0;
-	const bl1 = b1 & 0x1F_FF;
+	const bl1 = b1 & 0x1f_ff;
 	const bh1 = b1 >>> 13;
 	const b2 = b[2] | 0;
-	const bl2 = b2 & 0x1F_FF;
+	const bl2 = b2 & 0x1f_ff;
 	const bh2 = b2 >>> 13;
 	const b3 = b[3] | 0;
-	const bl3 = b3 & 0x1F_FF;
+	const bl3 = b3 & 0x1f_ff;
 	const bh3 = b3 >>> 13;
 	const b4 = b[4] | 0;
-	const bl4 = b4 & 0x1F_FF;
+	const bl4 = b4 & 0x1f_ff;
 	const bh4 = b4 >>> 13;
 	const b5 = b[5] | 0;
-	const bl5 = b5 & 0x1F_FF;
+	const bl5 = b5 & 0x1f_ff;
 	const bh5 = b5 >>> 13;
 	const b6 = b[6] | 0;
-	const bl6 = b6 & 0x1F_FF;
+	const bl6 = b6 & 0x1f_ff;
 	const bh6 = b6 >>> 13;
 	const b7 = b[7] | 0;
-	const bl7 = b7 & 0x1F_FF;
+	const bl7 = b7 & 0x1f_ff;
 	const bh7 = b7 >>> 13;
 	const b8 = b[8] | 0;
-	const bl8 = b8 & 0x1F_FF;
+	const bl8 = b8 & 0x1f_ff;
 	const bh8 = b8 >>> 13;
 	const b9 = b[9] | 0;
-	const bl9 = b9 & 0x1F_FF;
+	const bl9 = b9 & 0x1f_ff;
 	const bh9 = b9 >>> 13;
 
 	let c = 0;
@@ -5991,9 +6662,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl0)) | 0;
 	hi = Math.imul(ah0, bh0);
 
-	let w0 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w0 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w0 >>> 26)) | 0;
-	w0 &= 0x3_FF_FF_FF;
+	w0 &= 0x3_ff_ff_ff;
 
 	/* k = 1 */
 	lo = Math.imul(al1, bl0);
@@ -6005,9 +6676,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl1)) | 0;
 	hi = (hi + Math.imul(ah0, bh1)) | 0;
 
-	let w1 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w1 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w1 >>> 26)) | 0;
-	w1 &= 0x3_FF_FF_FF;
+	w1 &= 0x3_ff_ff_ff;
 
 	/* k = 2 */
 	lo = Math.imul(al2, bl0);
@@ -6023,9 +6694,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl2)) | 0;
 	hi = (hi + Math.imul(ah0, bh2)) | 0;
 
-	let w2 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w2 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w2 >>> 26)) | 0;
-	w2 &= 0x3_FF_FF_FF;
+	w2 &= 0x3_ff_ff_ff;
 
 	/* k = 3 */
 	lo = Math.imul(al3, bl0);
@@ -6045,9 +6716,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl3)) | 0;
 	hi = (hi + Math.imul(ah0, bh3)) | 0;
 
-	let w3 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w3 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w3 >>> 26)) | 0;
-	w3 &= 0x3_FF_FF_FF;
+	w3 &= 0x3_ff_ff_ff;
 
 	/* k = 4 */
 	lo = Math.imul(al4, bl0);
@@ -6071,9 +6742,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl4)) | 0;
 	hi = (hi + Math.imul(ah0, bh4)) | 0;
 
-	let w4 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w4 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w4 >>> 26)) | 0;
-	w4 &= 0x3_FF_FF_FF;
+	w4 &= 0x3_ff_ff_ff;
 
 	/* k = 5 */
 	lo = Math.imul(al5, bl0);
@@ -6101,9 +6772,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl5)) | 0;
 	hi = (hi + Math.imul(ah0, bh5)) | 0;
 
-	let w5 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w5 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w5 >>> 26)) | 0;
-	w5 &= 0x3_FF_FF_FF;
+	w5 &= 0x3_ff_ff_ff;
 
 	/* k = 6 */
 	lo = Math.imul(al6, bl0);
@@ -6135,9 +6806,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl6)) | 0;
 	hi = (hi + Math.imul(ah0, bh6)) | 0;
 
-	let w6 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w6 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w6 >>> 26)) | 0;
-	w6 &= 0x3_FF_FF_FF;
+	w6 &= 0x3_ff_ff_ff;
 
 	/* k = 7 */
 	lo = Math.imul(al7, bl0);
@@ -6173,9 +6844,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl7)) | 0;
 	hi = (hi + Math.imul(ah0, bh7)) | 0;
 
-	let w7 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w7 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w7 >>> 26)) | 0;
-	w7 &= 0x3_FF_FF_FF;
+	w7 &= 0x3_ff_ff_ff;
 
 	/* k = 8 */
 	lo = Math.imul(al8, bl0);
@@ -6215,9 +6886,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl8)) | 0;
 	hi = (hi + Math.imul(ah0, bh8)) | 0;
 
-	let w8 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w8 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w8 >>> 26)) | 0;
-	w8 &= 0x3_FF_FF_FF;
+	w8 &= 0x3_ff_ff_ff;
 
 	/* k = 9 */
 	lo = Math.imul(al9, bl0);
@@ -6261,9 +6932,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah0, bl9)) | 0;
 	hi = (hi + Math.imul(ah0, bh9)) | 0;
 
-	let w9 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w9 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w9 >>> 26)) | 0;
-	w9 &= 0x3_FF_FF_FF;
+	w9 &= 0x3_ff_ff_ff;
 
 	/* k = 10 */
 	lo = Math.imul(al9, bl1);
@@ -6303,9 +6974,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah1, bl9)) | 0;
 	hi = (hi + Math.imul(ah1, bh9)) | 0;
 
-	let w10 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w10 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w10 >>> 26)) | 0;
-	w10 &= 0x3_FF_FF_FF;
+	w10 &= 0x3_ff_ff_ff;
 
 	/* k = 11 */
 	lo = Math.imul(al9, bl2);
@@ -6341,9 +7012,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah2, bl9)) | 0;
 	hi = (hi + Math.imul(ah2, bh9)) | 0;
 
-	let w11 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w11 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w11 >>> 26)) | 0;
-	w11 &= 0x3_FF_FF_FF;
+	w11 &= 0x3_ff_ff_ff;
 
 	/* k = 12 */
 	lo = Math.imul(al9, bl3);
@@ -6375,9 +7046,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah3, bl9)) | 0;
 	hi = (hi + Math.imul(ah3, bh9)) | 0;
 
-	let w12 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w12 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w12 >>> 26)) | 0;
-	w12 &= 0x3_FF_FF_FF;
+	w12 &= 0x3_ff_ff_ff;
 
 	/* k = 13 */
 	lo = Math.imul(al9, bl4);
@@ -6405,9 +7076,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah4, bl9)) | 0;
 	hi = (hi + Math.imul(ah4, bh9)) | 0;
 
-	let w13 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w13 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w13 >>> 26)) | 0;
-	w13 &= 0x3_FF_FF_FF;
+	w13 &= 0x3_ff_ff_ff;
 
 	/* k = 14 */
 	lo = Math.imul(al9, bl5);
@@ -6431,9 +7102,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah5, bl9)) | 0;
 	hi = (hi + Math.imul(ah5, bh9)) | 0;
 
-	let w14 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w14 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w14 >>> 26)) | 0;
-	w14 &= 0x3_FF_FF_FF;
+	w14 &= 0x3_ff_ff_ff;
 
 	/* k = 15 */
 	lo = Math.imul(al9, bl6);
@@ -6453,9 +7124,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah6, bl9)) | 0;
 	hi = (hi + Math.imul(ah6, bh9)) | 0;
 
-	let w15 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w15 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w15 >>> 26)) | 0;
-	w15 &= 0x3_FF_FF_FF;
+	w15 &= 0x3_ff_ff_ff;
 
 	/* k = 16 */
 	lo = Math.imul(al9, bl7);
@@ -6471,9 +7142,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah7, bl9)) | 0;
 	hi = (hi + Math.imul(ah7, bh9)) | 0;
 
-	let w16 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w16 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w16 >>> 26)) | 0;
-	w16 &= 0x3_FF_FF_FF;
+	w16 &= 0x3_ff_ff_ff;
 
 	/* k = 17 */
 	lo = Math.imul(al9, bl8);
@@ -6485,9 +7156,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah8, bl9)) | 0;
 	hi = (hi + Math.imul(ah8, bh9)) | 0;
 
-	let w17 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w17 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w17 >>> 26)) | 0;
-	w17 &= 0x3_FF_FF_FF;
+	w17 &= 0x3_ff_ff_ff;
 
 	/* k = 18 */
 	lo = Math.imul(al9, bl9);
@@ -6495,9 +7166,9 @@ function comb10MulTo(self, number_, out) {
 	mid = (mid + Math.imul(ah9, bl9)) | 0;
 	hi = Math.imul(ah9, bh9);
 
-	let w18 = (((c + lo) | 0) + ((mid & 0x1F_FF) << 13)) | 0;
+	let w18 = (((c + lo) | 0) + ((mid & 0x1f_ff) << 13)) | 0;
 	c = (((hi + (mid >>> 13)) | 0) + (w18 >>> 26)) | 0;
-	w18 &= 0x3_FF_FF_FF;
+	w18 &= 0x3_ff_ff_ff;
 
 	o[0] = w0;
 	o[1] = w1;
@@ -6529,7 +7200,9 @@ function comb10MulTo(self, number_, out) {
 }
 
 // Polyfill comb.
-if (!Math.imul) {comb10MulTo = smallMulTo;}
+if (!Math.imul) {
+	comb10MulTo = smallMulTo;
+}
 
 /*
  * Expose

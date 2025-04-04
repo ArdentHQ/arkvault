@@ -50,12 +50,12 @@ export class ConfigManager {
 			throw new Error();
 		}
 
-		const path = key.split('.');
+		const path = key.split(".");
 		this.config = assocPath(path, value, this.config);
 	}
 
 	public get<T = any>(key: string): T {
-		const pathArray = key.split('.');
+		const pathArray = key.split(".");
 		return path(pathArray, this.config) as T;
 	}
 

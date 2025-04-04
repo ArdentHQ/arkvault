@@ -42,13 +42,19 @@ class HmacDRBG {
 		this.V = Buffer.alloc(hash.size);
 		this.rounds = 0;
 
-		if (entropy) {this.init(entropy, nonce, pers);}
+		if (entropy) {
+			this.init(entropy, nonce, pers);
+		}
 	}
 
 	init(entropy, nonce, pers) {
-		if (nonce == null) {nonce = Buffer.alloc(0);}
+		if (nonce == null) {
+			nonce = Buffer.alloc(0);
+		}
 
-		if (pers == null) {pers = Buffer.alloc(0);}
+		if (pers == null) {
+			pers = Buffer.alloc(0);
+		}
 
 		assert(Buffer.isBuffer(entropy));
 		assert(Buffer.isBuffer(nonce));
@@ -61,7 +67,9 @@ class HmacDRBG {
 
 		const seed = Buffer.concat([entropy, nonce, pers]);
 
-		if (seed.length < this.minEntropy) {throw new Error("Not enough entropy.");}
+		if (seed.length < this.minEntropy) {
+			throw new Error("Not enough entropy.");
+		}
 
 		this.update(seed);
 		this.rounds = 1;
@@ -70,16 +78,22 @@ class HmacDRBG {
 	}
 
 	reseed(entropy, add) {
-		if (add == null) {add = Buffer.alloc(0);}
+		if (add == null) {
+			add = Buffer.alloc(0);
+		}
 
 		assert(Buffer.isBuffer(entropy));
 		assert(Buffer.isBuffer(add));
 
-		if (this.rounds === 0) {throw new Error("DRBG not initialized.");}
+		if (this.rounds === 0) {
+			throw new Error("DRBG not initialized.");
+		}
 
 		const seed = Buffer.concat([entropy, add]);
 
-		if (seed.length < this.minEntropy) {throw new Error("Not enough entropy.");}
+		if (seed.length < this.minEntropy) {
+			throw new Error("Not enough entropy.");
+		}
 
 		this.update(seed);
 		this.rounds = 1;
@@ -91,11 +105,17 @@ class HmacDRBG {
 		assert(len >>> 0 === len);
 		assert(add == null || Buffer.isBuffer(add));
 
-		if (this.rounds === 0) {throw new Error("DRBG not initialized.");}
+		if (this.rounds === 0) {
+			throw new Error("DRBG not initialized.");
+		}
 
-		if (this.rounds > RESEED_INTERVAL) {throw new Error("Reseed is required.");}
+		if (this.rounds > RESEED_INTERVAL) {
+			throw new Error("Reseed is required.");
+		}
 
-		if (add && add.length > 0) {this.update(add);}
+		if (add && add.length > 0) {
+			this.update(add);
+		}
 
 		const blocks = Math.ceil(len / this.hash.size);
 		const out = Buffer.alloc(blocks * this.hash.size);
@@ -135,7 +155,9 @@ class HmacDRBG {
 		kmac.update(this.V);
 		kmac.update(ZERO);
 
-		if (seed) {kmac.update(seed);}
+		if (seed) {
+			kmac.update(seed);
+		}
 
 		this.K = kmac.final();
 		this.V = this.mac(this.V);

@@ -11,7 +11,7 @@ export const performance = window.performance || {
 };
 export const isMainThread = true;
 export const parentPort = {
-	postMessage: () => {}
+	postMessage: () => {},
 };
 
 export const fileURLToPath = () => {};

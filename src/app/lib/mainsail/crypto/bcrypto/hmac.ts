@@ -71,16 +71,24 @@ class HMAC {
 		// Pad key
 		const pad = Buffer.alloc(this.size);
 
-		for (const [index, element] of key.entries()) {pad[index] = element ^ 0x36;}
+		for (const [index, element] of key.entries()) {
+			pad[index] = element ^ 0x36;
+		}
 
-		for (let index = key.length; index < pad.length; index++) {pad[index] = 0x36;}
+		for (let index = key.length; index < pad.length; index++) {
+			pad[index] = 0x36;
+		}
 
 		this.inner.init(...this.x);
 		this.inner.update(pad);
 
-		for (const [index, element] of key.entries()) {pad[index] = element ^ 0x5C;}
+		for (const [index, element] of key.entries()) {
+			pad[index] = element ^ 0x5C;
+		}
 
-		for (let index = key.length; index < pad.length; index++) {pad[index] = 0x5C;}
+		for (let index = key.length; index < pad.length; index++) {
+			pad[index] = 0x5C;
+		}
 
 		this.outer.init(...this.x);
 		this.outer.update(pad);

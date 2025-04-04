@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // @ts-nocheck
 
 /*!
@@ -282,7 +284,9 @@ class Curve {
 		this.signBit = this.adjustedSize * 8 - 1;
 		this.mask = 0xFF;
 
-		if ((this.fieldBits & 7) !== 0) {this.mask = (1 << (this.fieldBits & 7)) - 1;}
+		if ((this.fieldBits & 7) !== 0) {
+			this.mask = (1 << (this.fieldBits & 7)) - 1;
+		}
 
 		// Curve configuration, optional.
 		this.n = BN.fromJSON(conf.n || "0");
@@ -310,7 +314,9 @@ class Curve {
 		// Torsion.
 		this.torsion = new Array(this.h.word(0));
 
-		for (let index = 0; index < this.torsion.length; index++) {this.torsion[index] = this.point();}
+		for (let index = 0; index < this.torsion.length; index++) {
+			this.torsion[index] = this.point();
+		}
 
 		// Endomorphism.
 		this.endo = null;
@@ -342,7 +348,9 @@ class Curve {
 		if (conf.torsion) {
 			assert(conf.torsion.length === this.torsion.length);
 
-			for (let index = 0; index < this.torsion.length; index++) {this.torsion[index] = this.pointFromJSON(conf.torsion[index]);}
+			for (let index = 0; index < this.torsion.length; index++) {
+				this.torsion[index] = this.pointFromJSON(conf.torsion[index]);
+			}
 		}
 
 		return this;
@@ -377,7 +385,9 @@ class Curve {
 				continue;
 			}
 
-			if (p.isInfinity()) {continue;}
+			if (p.isInfinity()) {
+				continue;
+			}
 
 			p.normalize();
 
@@ -393,7 +403,9 @@ class Curve {
 
 		out.sort((a, b) => a.cmp(b));
 
-		while (out.length < h) {out.push(this.point());}
+		while (out.length < h) {
+			out.push(this.point());
+		}
 
 		return out;
 	}
@@ -431,7 +443,9 @@ class Curve {
 		}
 
 		// Adjust sign.
-		if (k.isNeg()) {acc = acc.neg();}
+		if (k.isNeg()) {
+			acc = acc.neg();
+		}
 
 		return acc;
 	}
@@ -459,9 +473,11 @@ class Curve {
 
 		for (let index = I; index > 0; index--) {
 			for (const [j, nafW] of naf.entries()) {
-
-				if (nafW === index) {b = b.add(points[j]);}
-				else if (nafW === -index) {b = b.sub(points[j]);}
+				if (nafW === index) {
+					b = b.add(points[j]);
+				} else if (nafW === -index) {
+					b = b.sub(points[j]);
+				}
 			}
 
 			a = a.add(b);
@@ -489,10 +505,15 @@ class Curve {
 		for (let index = naf.length - 1; index >= 0; index--) {
 			const z = naf[index];
 
-			if (index !== naf.length - 1) {acc = acc.dbl();}
+			if (index !== naf.length - 1) {
+				acc = acc.dbl();
+			}
 
-			if (z > 0) {acc = acc.add(points[(z - 1) >> 1]);}
-			else if (z < 0) {acc = acc.sub(points[(-z - 1) >> 1]);}
+			if (z > 0) {
+				acc = acc.add(points[(z - 1) >> 1]);
+			} else if (z < 0) {
+				acc = acc.sub(points[(-z - 1) >> 1]);
+			}
 		}
 
 		return acc;
@@ -527,7 +548,9 @@ class Curve {
 			assert(point instanceof Point);
 			assert(coeff instanceof BN);
 
-			if (index > 0 && point.type !== points[index - 1].type) {throw new Error("Cannot mix points.");}
+			if (index > 0 && point.type !== points[index - 1].type) {
+				throw new Error("Cannot mix points.");
+			}
 
 			// Avoid sparse arrays.
 			wnd[index] = null;
@@ -586,13 +609,18 @@ class Curve {
 		let acc = this.jpoint();
 
 		for (let index = max - 1; index >= 0; index--) {
-			if (index !== max - 1) {acc = acc.dbl();}
+			if (index !== max - 1) {
+				acc = acc.dbl();
+			}
 
 			for (let j = 0; j < len; j++) {
 				const z = naf[j][index];
 
-				if (z > 0) {acc = acc.add(wnd[j][(z - 1) >> 1]);}
-				else if (z < 0) {acc = acc.sub(wnd[j][(-z - 1) >> 1]);}
+				if (z > 0) {
+					acc = acc.add(wnd[j][(z - 1) >> 1]);
+				} else if (z < 0) {
+					acc = acc.sub(wnd[j][(-z - 1) >> 1]);
+				}
 			}
 		}
 
@@ -661,7 +689,9 @@ class Curve {
 
 		assert(!k.red);
 
-		if (this.n.isZero()) {return k;}
+		if (this.n.isZero()) {
+			return k;
+		}
 
 		return k.imod(this.n);
 	}
@@ -669,7 +699,9 @@ class Curve {
 	field(number_, base, endian) {
 		const x = BN.cast(number_, base, endian);
 
-		if (x.red) {return x.forceRed(this.red);}
+		if (x.red) {
+			return x.forceRed(this.red);
+		}
 
 		return x.toRed(this.red);
 	}
@@ -692,7 +724,9 @@ class Curve {
 		assert(yy instanceof BN);
 		assert(yz instanceof BN);
 
-		if (xz.isZero() || yz.isZero()) {return this.point();}
+		if (xz.isZero() || yz.isZero()) {
+			return this.point();
+		}
 
 		const z = xz.redMul(yz).redInvert();
 		const x = xx.redMul(yz).redMul(z);
@@ -762,7 +796,9 @@ class Curve {
 		assert(Buffer.isBuffer(bytes));
 		assert(typeof pake === "boolean");
 
-		if (bytes.length !== this.fieldSize * 2) {throw new Error("Invalid hash size.");}
+		if (bytes.length !== this.fieldSize * 2) {
+			throw new Error("Invalid hash size.");
+		}
 
 		// Random oracle encoding.
 		// Ensure a proper distribution.
@@ -801,7 +837,9 @@ class Curve {
 			//   Short Weierstrass: ((A / 3) / B, 0)
 			//   Montgomery: (0, 0)
 			//   Twisted Edwards: (0, -1)
-			if (p1.neg().eq(p1)) {continue;}
+			if (p1.neg().eq(p1)) {
+				continue;
+			}
 
 			const p2 = p0.sub(p1);
 			const hint = randomInt(rng);
@@ -810,7 +848,9 @@ class Curve {
 			try {
 				u2 = this.pointToUniform(p2, hint & 15);
 			} catch (error) {
-				if (error.message === "Invalid point.") {continue;}
+				if (error.message === "Invalid point.") {
+					continue;
+				}
 				throw error;
 			}
 
@@ -858,8 +898,9 @@ class Curve {
 		assert(points.length === 0 || points[0] instanceof Point);
 
 		// Multiply with endomorphism if we're using affine points.
-		if (this.endo && points.length > 0 && points[0].type === types.AFFINE)
-			{return this._endoWnafMulAdd(points, coeffs);}
+		if (this.endo && points.length > 0 && points[0].type === types.AFFINE) {
+			return this._endoWnafMulAdd(points, coeffs);
+		}
 
 		// Otherwise, a regular Shamir's trick.
 		return this._wnafMulAdd(5, points, coeffs);
@@ -908,7 +949,9 @@ class Curve {
 		const zi = this.red.invertAll(z);
 		const out = new Array(len);
 
-		for (let index = 0; index < len; index++) {out[index] = points[index].scale(zi[index]);}
+		for (let index = 0; index < len; index++) {
+			out[index] = points[index].scale(zi[index]);
+		}
 
 		return out;
 	}
@@ -929,10 +972,14 @@ class Curve {
 		let msb = this.scalarSize - 1;
 
 		// Swap endianness.
-		if (this.endian === "be") {[lsb, msb] = [msb, lsb];}
+		if (this.endian === "be") {
+			[lsb, msb] = [msb, lsb];
+		}
 
 		// Adjust for low order.
-		if (this.scalarSize < this.fieldSize) {top = 8;}
+		if (this.scalarSize < this.fieldSize) {
+			top = 8;
+		}
 
 		// Ensure a multiple of the cofactor.
 		scalar[lsb] &= -this.h.word(0) & 0xFF;
@@ -954,7 +1001,9 @@ class Curve {
 
 		let off = 0;
 
-		if (this.endian === "be") {off = this.adjustedSize - this.scalarSize;}
+		if (this.endian === "be") {
+			off = this.adjustedSize - this.scalarSize;
+		}
 
 		const scalar = bytes.slice(off, off + this.scalarSize);
 		const prefix = bytes.slice(this.adjustedSize);
@@ -976,7 +1025,9 @@ class Curve {
 		// [SEC1] Page 13, Section 2.3.6.
 		assert(Buffer.isBuffer(bytes));
 
-		if (bytes.length !== this.fieldSize) {throw new Error("Invalid field element size.");}
+		if (bytes.length !== this.fieldSize) {
+			throw new Error("Invalid field element size.");
+		}
 
 		return BN.decode(bytes, this.endian);
 	}
@@ -991,7 +1042,9 @@ class Curve {
 	decodeAdjusted(bytes) {
 		assert(Buffer.isBuffer(bytes));
 
-		if (bytes.length !== this.adjustedSize) {throw new Error("Invalid field element size.");}
+		if (bytes.length !== this.adjustedSize) {
+			throw new Error("Invalid field element size.");
+		}
 
 		return BN.decode(bytes, this.endian);
 	}
@@ -1008,7 +1061,9 @@ class Curve {
 		// [SEC1] Page 14, Section 2.3.8.
 		assert(Buffer.isBuffer(bytes));
 
-		if (bytes.length !== this.scalarSize) {throw new Error("Invalid scalar size.");}
+		if (bytes.length !== this.scalarSize) {
+			throw new Error("Invalid scalar size.");
+		}
 
 		return BN.decode(bytes, this.endian);
 	}
@@ -1024,7 +1079,9 @@ class Curve {
 		// [RFC8032] Section 5.1.5 & 5.2.5.
 		assert(Buffer.isBuffer(bytes));
 
-		if (bytes.length !== this.scalarSize) {throw new Error("Invalid scalar size.");}
+		if (bytes.length !== this.scalarSize) {
+			throw new Error("Invalid scalar size.");
+		}
 
 		const clamped = this.clamp(Buffer.from(bytes));
 
@@ -1046,7 +1103,9 @@ class Curve {
 	decodeUniform(bytes) {
 		assert(Buffer.isBuffer(bytes));
 
-		if (bytes.length !== this.fieldSize) {throw new Error("Invalid field size.");}
+		if (bytes.length !== this.fieldSize) {
+			throw new Error("Invalid field size.");
+		}
 
 		const x = BN.decode(bytes, this.endian);
 
@@ -1110,17 +1169,23 @@ class Curve {
 			context = this.context;
 		}
 
-		if (!this.n.isZero()) {n = this.n.toJSON();}
+		if (!this.n.isZero()) {
+			n = this.n.toJSON();
+		}
 
 		if (!this.z.isZero()) {
 			z = this.z.fromRed();
 
-			if (this.z.redIsHigh()) {z.isub(this.p);}
+			if (this.z.redIsHigh()) {
+				z.isub(this.p);
+			}
 
 			z = z.toString(16);
 		}
 
-		if (this.endo) {endo = this.endo.toJSON();}
+		if (this.endo) {
+			endo = this.endo.toJSON();
+		}
 
 		return {
 			a: undefined,
@@ -1171,9 +1236,13 @@ class Point {
 	_safeNAF(width) {
 		assert(width >>> 0 === width);
 
-		if (this.pre && this.pre.naf) {return this.pre.naf;}
+		if (this.pre && this.pre.naf) {
+			return this.pre.naf;
+		}
 
-		if (width === 0) {return null;}
+		if (width === 0) {
+			return null;
+		}
 
 		const size = 1 << (width - 2);
 		const points = new Array(size);
@@ -1182,7 +1251,9 @@ class Point {
 
 		points[0] = p;
 
-		for (let index = 1; index < size; index++) {points[index] = points[index - 1].add(dbl);}
+		for (let index = 1; index < size; index++) {
+			points[index] = points[index - 1].add(dbl);
+		}
 
 		return new NAF(width, points);
 	}
@@ -1190,9 +1261,13 @@ class Point {
 	_getNAF(width) {
 		assert(width >>> 0 === width);
 
-		if (this.pre && this.pre.naf) {return this.pre.naf;}
+		if (this.pre && this.pre.naf) {
+			return this.pre.naf;
+		}
 
-		if (width === 0) {return null;}
+		if (width === 0) {
+			return null;
+		}
 
 		const odds = this._safeNAF(width).points;
 		const points = this.curve.affinizeAll(odds);
@@ -1204,9 +1279,13 @@ class Point {
 		assert(width >>> 0 === width);
 		assert(bits >>> 0 === bits);
 
-		if (this.pre && this.pre.windows) {return this.pre.windows;}
+		if (this.pre && this.pre.windows) {
+			return this.pre.windows;
+		}
 
-		if (width === 0) {return null;}
+		if (width === 0) {
+			return null;
+		}
 
 		const size = 1 << width;
 		const steps = ((bits + width - 1) / width) >>> 0;
@@ -1217,7 +1296,9 @@ class Point {
 		for (let index = 0; index < steps; index++) {
 			wnds[index * size] = this.curve.jpoint();
 
-			for (let j = 1; j < size; j++) {wnds[index * size + j] = wnds[index * size + j - 1].add(g);}
+			for (let j = 1; j < size; j++) {
+				wnds[index * size + j] = wnds[index * size + j - 1].add(g);
+			}
 
 			g = g.dblp(width);
 		}
@@ -1231,9 +1312,13 @@ class Point {
 		assert(step >>> 0 === step);
 		assert(power >>> 0 === power);
 
-		if (this.pre && this.pre.doubles) {return this.pre.doubles;}
+		if (this.pre && this.pre.doubles) {
+			return this.pre.doubles;
+		}
 
-		if (step === 0) {return null;}
+		if (step === 0) {
+			return null;
+		}
 
 		const len = Math.ceil(power / step) + 1;
 		const dbls = new Array(len);
@@ -1244,7 +1329,9 @@ class Point {
 		dbls[k++] = acc;
 
 		for (let index = 0; index < power; index += step) {
-			for (let j = 0; j < step; j++) {acc = acc.dbl();}
+			for (let j = 0; j < step; j++) {
+				acc = acc.dbl();
+			}
 
 			dbls[k++] = acc;
 		}
@@ -1261,11 +1348,17 @@ class Point {
 	}
 
 	_getBlinding(rng) {
-		if (this.pre && this.pre.blinding) {return this.pre.blinding;}
+		if (this.pre && this.pre.blinding) {
+			return this.pre.blinding;
+		}
 
-		if (!rng) {return null;}
+		if (!rng) {
+			return null;
+		}
 
-		if (this.curve.n.isZero()) {return null;}
+		if (this.curve.n.isZero()) {
+			return null;
+		}
 
 		// Pregenerate a random blinding value:
 		//
@@ -1285,7 +1378,9 @@ class Point {
 	_hasWindows(k) {
 		assert(k instanceof BN);
 
-		if (!this.pre || !this.pre.windows) {return false;}
+		if (!this.pre || !this.pre.windows) {
+			return false;
+		}
 
 		const { width, bits } = this.pre.windows;
 		const steps = ((bits + width - 1) / width) >>> 0;
@@ -1296,7 +1391,9 @@ class Point {
 	_hasDoubles(k) {
 		assert(k instanceof BN);
 
-		if (!this.pre || !this.pre.doubles) {return false;}
+		if (!this.pre || !this.pre.doubles) {
+			return false;
+		}
 
 		const { step, points } = this.pre.doubles;
 		const power = k.bitLength() + 1;
@@ -1357,7 +1454,9 @@ class Point {
 
 		// Randomization is not possible without
 		// an RNG. Do a normal multiplication.
-		if (!rng) {return [this, k, null];}
+		if (!rng) {
+			return [this, k, null];
+		}
 
 		// If we have no precomputed blinding
 		// factor, there are two possibilities
@@ -1386,7 +1485,9 @@ class Point {
 		// points, we opt for the first method
 		// to avoid randomizing everything.
 		if (this.pre) {
-			if (this.curve.n.isZero()) {return [this, k, null];}
+			if (this.curve.n.isZero()) {
+				return [this, k, null];
+			}
 
 			const a = this.curve.randomScalar(rng);
 			const r = a.mul(this.curve.n);
@@ -1409,17 +1510,29 @@ class Point {
 	precompute(bits, rng) {
 		assert(bits >>> 0 === bits);
 
-		if (!this.pre) {this.pre = new Precomp();}
+		if (!this.pre) {
+			this.pre = new Precomp();
+		}
 
-		if (!this.pre.naf) {this.pre.naf = this._getNAF(9);}
+		if (!this.pre.naf) {
+			this.pre.naf = this._getNAF(9);
+		}
 
-		if (USE_FIXED && !this.pre.windows) {this.pre.windows = this._getWindows(4, bits);}
+		if (USE_FIXED && !this.pre.windows) {
+			this.pre.windows = this._getWindows(4, bits);
+		}
 
-		if (!this.pre.doubles) {this.pre.doubles = this._getDoubles(4, bits + 1);}
+		if (!this.pre.doubles) {
+			this.pre.doubles = this._getDoubles(4, bits + 1);
+		}
 
-		if (!this.pre.beta) {this.pre.beta = this._getBeta();}
+		if (!this.pre.beta) {
+			this.pre.beta = this._getBeta();
+		}
 
-		if (!this.pre.blinding) {this.pre.blinding = this._getBlinding(rng);}
+		if (!this.pre.blinding) {
+			this.pre.blinding = this._getBlinding(rng);
+		}
 
 		return this;
 	}
@@ -1465,7 +1578,9 @@ class Point {
 
 		let r = this;
 
-		for (let index = 0; index < pow; index++) {r = r.dbl();}
+		for (let index = 0; index < pow; index++) {
+			r = r.dbl();
+		}
 
 		return r;
 	}
@@ -1520,7 +1635,9 @@ class Point {
 
 	isSmall() {
 		// Test whether the point is of small order.
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		// P * h = O
 		return this.jmulH().isInfinity();
@@ -1528,7 +1645,9 @@ class Point {
 
 	hasTorsion() {
 		// Test whether the point is in another subgroup.
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		// P * n != O
 		return !this.jmul(this.curve.n).isInfinity();
@@ -1588,11 +1707,17 @@ class Point {
 	}
 
 	jmul(k) {
-		if (USE_FIXED && this._hasWindows(k)) {return this.curve._fixedMul(this, k);}
+		if (USE_FIXED && this._hasWindows(k)) {
+			return this.curve._fixedMul(this, k);
+		}
 
-		if (this._hasDoubles(k)) {return this.curve._fixedNafMul(this, k);}
+		if (this._hasDoubles(k)) {
+			return this.curve._fixedNafMul(this, k);
+		}
 
-		if (this.curve.endo && this.type === types.AFFINE) {return this.curve._endoWnafMulAdd([this], [k]);}
+		if (this.curve.endo && this.type === types.AFFINE) {
+			return this.curve._endoWnafMulAdd([this], [k]);
+		}
 
 		return this.curve._wnafMul(5, this, k);
 	}
@@ -1606,13 +1731,17 @@ class Point {
 		const [p, t, unblind] = this._blind(k, rng);
 		const q = p.jmul(t);
 
-		if (unblind) {return q.add(unblind);}
+		if (unblind) {
+			return q.add(unblind);
+		}
 
 		return q;
 	}
 
 	jmulAdd(k1, p2, k2) {
-		if (this.curve.endo && this.type === types.AFFINE) {return this.curve._endoWnafMulAdd([this, p2], [k1, k2]);}
+		if (this.curve.endo && this.type === types.AFFINE) {
+			return this.curve._endoWnafMulAdd([this, p2], [k1, k2]);
+		}
 
 		return this.curve._wnafMulAdd(5, [this, p2], [k1, k2]);
 	}
@@ -1639,17 +1768,25 @@ class Point {
 	jdivn(k) {
 		assert(!this.curve.n.isZero());
 
-		if (this.curve.h.cmpn(k) === 0) {return this.jdivH();}
+		if (this.curve.h.cmpn(k) === 0) {
+			return this.jdivH();
+		}
 
 		return this.jdiv(new BN(k));
 	}
 
 	jdivH() {
-		if (this.curve.n.isZero()) {return this.toJ();}
+		if (this.curve.n.isZero()) {
+			return this.toJ();
+		}
 
-		if (this.curve.h.cmpn(1) === 0) {return this.toJ();}
+		if (this.curve.h.cmpn(1) === 0) {
+			return this.toJ();
+		}
 
-		if (this.curve.hi === null) {this.curve.hi = this.curve.h.invert(this.curve.n);}
+		if (this.curve.hi === null) {
+			this.curve.hi = this.curve.h.invert(this.curve.n);
+		}
 
 		return this.jmul(this.curve.hi);
 	}
@@ -1667,7 +1804,9 @@ class Point {
 	}
 
 	key() {
-		if (this.isInfinity()) {return `${this.curve.uid}:oo`;}
+		if (this.isInfinity()) {
+			return `${this.curve.uid}:oo`;
+		}
 
 		this.normalize();
 
@@ -1742,8 +1881,11 @@ class ShortCurve extends Curve {
 		super._finalize(conf);
 
 		// Precalculate endomorphism.
-		if (conf.endo == null) {this.endo = this._getEndomorphism();}
-		else {this.endo = Endo.fromJSON(this, conf.endo);}
+		if (conf.endo == null) {
+			this.endo = this._getEndomorphism();
+		} else {
+			this.endo = Endo.fromJSON(this, conf.endo);
+		}
 
 		if (!this.n.isZero()) {
 			this.pmodn = this.p.mod(this.n);
@@ -1793,7 +1935,9 @@ class ShortCurve extends Curve {
 		assert(odd == null || typeof odd === "boolean");
 		assert(!curveA.isZero() || !curveB.isZero());
 
-		if (custom.isZero()) {throw new Error("Invalid coefficient.");}
+		if (custom.isZero()) {
+			throw new Error("Invalid coefficient.");
+		}
 
 		if (curveA.isZero()) {
 			const customB = custom;
@@ -1813,9 +1957,13 @@ class ShortCurve extends Curve {
 			const u2 = u4.redSqrt();
 
 			// Todo: allow odd flag.
-			if (u2.redJacobi() !== 1) {u2.redINeg();}
+			if (u2.redJacobi() !== 1) {
+				u2.redINeg();
+			}
 
-			if (u2.redJacobi() !== 1) {throw new Error("Invalid `a` coefficient.");}
+			if (u2.redJacobi() !== 1) {
+				throw new Error("Invalid `a` coefficient.");
+			}
 
 			return [customA.clone(), curveB.clone()];
 		}
@@ -1825,12 +1973,18 @@ class ShortCurve extends Curve {
 		const u2 = u4.redSqrt();
 
 		if (odd == null) {
-			if (u2.redJacobi() !== 1) {u2.redINeg();}
+			if (u2.redJacobi() !== 1) {
+				u2.redINeg();
+			}
 		} else {
-			if (u2.redIsOdd() !== odd) {u2.redINeg();}
+			if (u2.redIsOdd() !== odd) {
+				u2.redINeg();
+			}
 		}
 
-		if (u2.redJacobi() !== 1) {throw new Error("Invalid `a` coefficient.");}
+		if (u2.redJacobi() !== 1) {
+			throw new Error("Invalid `a` coefficient.");
+		}
 
 		const u6 = u4.redMul(u2);
 		const a = curveA.redMul(u4);
@@ -1861,7 +2015,9 @@ class ShortCurve extends Curve {
 		const b = s.redInvert();
 		const a = r.redMuln(3).redMul(b);
 
-		if (b0 != null) {return MontCurve._isomorphism(a, b, b0);}
+		if (b0 != null) {
+			return MontCurve._isomorphism(a, b, b0);
+		}
 
 		return [a, b];
 	}
@@ -1883,7 +2039,9 @@ class ShortCurve extends Curve {
 		const a = r3.redAdd(s2);
 		const d = r3.redSub(s2);
 
-		if (a0 != null) {return EdwardsCurve._isomorphism(a, d, a0);}
+		if (a0 != null) {
+			return EdwardsCurve._isomorphism(a, d, a0);
+		}
 
 		return [a, d];
 	}
@@ -1925,9 +2083,13 @@ class ShortCurve extends Curve {
 
 			p = p.mul(this.n);
 
-			if (p.isInfinity()) {continue;}
+			if (p.isInfinity()) {
+				continue;
+			}
 
-			if (!p.y.isZero()) {continue;}
+			if (!p.y.isZero()) {
+				continue;
+			}
 
 			break;
 		}
@@ -1936,7 +2098,9 @@ class ShortCurve extends Curve {
 		const r2 = r.redSqr();
 		const s = r2.redMuln(3).redIAdd(this.a).redSqrt();
 
-		if (sign != null && s.redIsOdd() !== sign) {s.redINeg();}
+		if (sign != null && s.redIsOdd() !== sign) {
+			s.redINeg();
+		}
 
 		return [r, s];
 	}
@@ -1990,7 +2154,9 @@ class ShortCurve extends Curve {
 			const u2 = u4.redSqrt();
 
 			// Todo: figure out how to check oddness.
-			if (u2.redJacobi() !== 1) {u2.redINeg();}
+			if (u2.redJacobi() !== 1) {
+				u2.redINeg();
+			}
 
 			const u = u2.redSqrt();
 			const u3 = u2.redMul(u);
@@ -2005,7 +2171,9 @@ class ShortCurve extends Curve {
 		const u6 = this.b.redDiv(this.field(b));
 		const u2 = u4.redSqrt();
 
-		if (!u4.redMul(u2).eq(u6)) {u2.redINeg();}
+		if (!u4.redMul(u2).eq(u6)) {
+			u2.redINeg();
+		}
 
 		assert(u4.redMul(u2).eq(u6));
 
@@ -2030,7 +2198,9 @@ class ShortCurve extends Curve {
 		const u3 = this.g.y.redDiv(this.field(y));
 		const u = u2.redSqrt();
 
-		if (!u2.redMul(u).eq(u3)) {u.redINeg();}
+		if (!u2.redMul(u).eq(u3)) {
+			u.redINeg();
+		}
 
 		assert(u2.redMul(u).eq(u3));
 		assert(!u.isZero());
@@ -2041,7 +2211,9 @@ class ShortCurve extends Curve {
 	_scaleShort(curve) {
 		assert(curve instanceof ShortCurve);
 
-		if (this.g.isInfinity() || curve.g.isInfinity()) {return this._scale0(curve.a, curve.b);}
+		if (this.g.isInfinity() || curve.g.isInfinity()) {
+			return this._scale0(curve.a, curve.b);
+		}
 
 		return this._scale1(curve.g.x, curve.g.y);
 	}
@@ -2094,10 +2266,14 @@ class ShortCurve extends Curve {
 		// [GECC] Example 3.76, Page 128, Section 3.5.
 
 		// No curve params.
-		if (this.n.isZero() || this.g.isInfinity()) {return null;}
+		if (this.n.isZero() || this.g.isInfinity()) {
+			return null;
+		}
 
 		// No efficient endomorphism.
-		if (!this.zeroA || this.p.modrn(3) !== 1 || this.n.modrn(3) !== 1) {return null;}
+		if (!this.zeroA || this.p.modrn(3) !== 1 || this.n.modrn(3) !== 1) {
+			return null;
+		}
 
 		// Solve beta^3 mod p = 1.
 		const [b1, b2] = this._getEndoRoots(this.p);
@@ -2388,19 +2564,28 @@ class ShortCurve extends Curve {
 		let shift = bits + Math.ceil(bits / 2) + 1;
 		let g1, g2;
 
-		if (align) {shift -= shift & 63;}
+		if (align) {
+			shift -= shift & 63;
+		}
 
 		while (shift > bits) {
 			g1 = v2.b.ushln(shift).divRound(d);
 			g2 = v1.b.ushln(shift).divRound(d);
 
-			if (g1.ucmp(d) < 0 && g2.ucmp(d) < 0) {break;}
+			if (g1.ucmp(d) < 0 && g2.ucmp(d) < 0) {
+				break;
+			}
 
-			if (align) {shift -= 64;}
-			else {shift -= 1;}
+			if (align) {
+				shift -= 64;
+			} else {
+				shift -= 1;
+			}
 		}
 
-		if (shift <= bits) {throw new Error("Could not calculate g1 and g2.");}
+		if (shift <= bits) {
+			throw new Error("Could not calculate g1 and g2.");
+		}
 
 		return [shift, g1, g2];
 	}
@@ -2495,8 +2680,8 @@ class ShortCurve extends Curve {
 		assert(this.endo != null);
 
 		const len = points.length;
-		const npoints = Array.from({length: len * 2});
-		const ncoeffs = Array.from({length: len * 2});
+		const npoints = Array.from({ length: len * 2 });
+		const ncoeffs = Array.from({ length: len * 2 });
 
 		for (let index = 0; index < len; index++) {
 			const [p1, p2] = this._endoBeta(points[index]);
@@ -2555,7 +2740,9 @@ class ShortCurve extends Curve {
 		const x = [x1, x2][alpha ^ 1];
 		const y = [y1, y2][alpha ^ 1].redSqrt();
 
-		if (y.redIsOdd() !== u.redIsOdd()) {y.redINeg();}
+		if (y.redIsOdd() !== u.redIsOdd()) {
+			y.redINeg();
+		}
 
 		return this.point(x, y);
 	}
@@ -2606,7 +2793,9 @@ class ShortCurve extends Curve {
 		const d = [d0, d1][r >>> 1]; // r = 2 or 3
 		const u = n.redDivSqrt(d);
 
-		if (u.redIsOdd() !== y.redIsOdd()) {u.redINeg();}
+		if (u.redIsOdd() !== y.redIsOdd()) {
+			u.redINeg();
+		}
 
 		return u;
 	}
@@ -2672,7 +2861,9 @@ class ShortCurve extends Curve {
 		const [x, yy] = this._svdwf(u);
 		const y = yy.redSqrt();
 
-		if (y.redIsOdd() !== u.redIsOdd()) {y.redINeg();}
+		if (y.redIsOdd() !== u.redIsOdd()) {
+			y.redINeg();
+		}
 
 		return this.point(x, y);
 	}
@@ -2751,9 +2942,13 @@ class ShortCurve extends Curve {
 		const u = n.redDivSqrt(d);
 		const [x0] = this._svdwf(u);
 
-		if (!x0.eq(x)) {throw new Error("Invalid point.");}
+		if (!x0.eq(x)) {
+			throw new Error("Invalid point.");
+		}
 
-		if (u.redIsOdd() !== y.redIsOdd()) {u.redINeg();}
+		if (u.redIsOdd() !== y.redIsOdd()) {
+			u.redINeg();
+		}
 
 		return u;
 	}
@@ -2780,7 +2975,9 @@ class ShortCurve extends Curve {
 		const lhs = t0.redMuln(1728);
 		const rhs = b2.redMuln(27).redIAdd(t0);
 
-		if (rhs.isZero()) {throw new Error("Curve is not elliptic.");}
+		if (rhs.isZero()) {
+			throw new Error("Curve is not elliptic.");
+		}
 
 		// (1728 * 4 * a^3) / (4 * a^3 + 27 * b^2)
 		return lhs.redDiv(rhs).fromRed();
@@ -2797,7 +2994,9 @@ class ShortCurve extends Curve {
 	solveX(y) {
 		assert(y instanceof BN);
 
-		if (!this.a.isZero()) {throw new Error("Not implemented.");}
+		if (!this.a.isZero()) {
+			throw new Error("Not implemented.");
+		}
 
 		// x^3 = y^2 - b
 		const y2 = y.redSqr();
@@ -2817,8 +3016,11 @@ class ShortCurve extends Curve {
 
 		if (!this.zeroA) {
 			// Save some cycles for a = -3.
-			if (this.threeA) {y2.redIAdd(x.redMuln(-3));}
-			else {y2.redIAdd(this.a.redMul(x));}
+			if (this.threeA) {
+				y2.redIAdd(x.redMuln(-3));
+			} else {
+				y2.redIAdd(this.a.redMul(x));
+			}
 		}
 
 		return y2;
@@ -2827,7 +3029,9 @@ class ShortCurve extends Curve {
 	validate(point) {
 		assert(point instanceof ShortPoint);
 
-		if (point.inf) {return true;}
+		if (point.inf) {
+			return true;
+		}
 
 		const { x, y } = point;
 		const y2 = this.solveY2(x);
@@ -2839,14 +3043,20 @@ class ShortCurve extends Curve {
 		assert(x instanceof BN);
 		assert(sign == null || typeof sign === "boolean");
 
-		if (!x.red) {x = x.toRed(this.red);}
+		if (!x.red) {
+			x = x.toRed(this.red);
+		}
 
 		const y = this.solveY(x);
 
 		if (sign != null) {
-			if (this.h.cmpn(1) > 0 && y.isZero() && sign) {throw new Error("Invalid point.");}
+			if (this.h.cmpn(1) > 0 && y.isZero() && sign) {
+				throw new Error("Invalid point.");
+			}
 
-			if (y.redIsOdd() !== sign) {y.redINeg();}
+			if (y.redIsOdd() !== sign) {
+				y.redINeg();
+			}
 		}
 
 		return this.point(x, y);
@@ -2856,11 +3066,15 @@ class ShortCurve extends Curve {
 		assert(y instanceof BN);
 		assert(index >>> 0 === index);
 
-		if (!y.red) {y = y.toRed(this.red);}
+		if (!y.red) {
+			y = y.toRed(this.red);
+		}
 
 		const coords = this.solveX(y);
 
-		if (index >= coords.length) {throw new Error("Invalid X coordinate index.");}
+		if (index >= coords.length) {
+			throw new Error("Invalid X coordinate index.");
+		}
 
 		const x = coords[index];
 
@@ -2872,7 +3086,9 @@ class ShortCurve extends Curve {
 		// [ARITH1] Page 286, Section 13.2.3.c.
 		assert(curve instanceof Curve);
 
-		if (!curve.p.eq(this.p)) {return false;}
+		if (!curve.p.eq(this.p)) {
+			return false;
+		}
 
 		let u2, u3;
 		try {
@@ -2929,7 +3145,9 @@ class ShortCurve extends Curve {
 			//   y' = y * u^3
 			//
 			// Where a * u^4 = a' and b * u^6 = b'.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
 			const [u2, u3] = this._scale(point.curve);
 			const x = this.field(point.x);
@@ -2955,7 +3173,9 @@ class ShortCurve extends Curve {
 			//   y = v / B
 			//
 			// Undefined if ((u^3 + A * u^2 + u) / B) is not square.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
 			const { a3, bi } = point.curve;
 			const [u2, u3] = this._scale(point.curve);
@@ -2989,7 +3209,9 @@ class ShortCurve extends Curve {
 			const { a, d, ad6 } = point.curve;
 			const [u2, u3] = this._scale(point.curve);
 
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
 			if (point.x.isZero()) {
 				const x = this.field(ad6).redMul(u2);
@@ -3019,13 +3241,19 @@ class ShortCurve extends Curve {
 		assert(u instanceof BN);
 
 		// z = 0 or b = 0
-		if (this.z.isZero() || this.b.isZero()) {throw new Error("Not implemented.");}
+		if (this.z.isZero() || this.b.isZero()) {
+			throw new Error("Not implemented.");
+		}
 
 		// a != 0, b != 0
-		if (!this.a.isZero()) {return this._sswu(u);}
+		if (!this.a.isZero()) {
+			return this._sswu(u);
+		}
 
 		// p = 1 mod 3, a = 0, b != 0
-		if (!this.c.isZero()) {return this._svdw(u);}
+		if (!this.c.isZero()) {
+			return this._svdw(u);
+		}
 
 		throw new Error("Not implemented.");
 	}
@@ -3046,10 +3274,14 @@ class ShortCurve extends Curve {
 		assert(hint >>> 0 === hint);
 
 		// z = 0 or b = 0
-		if (this.z.isZero() || this.b.isZero()) {throw new Error("Not implemented.");}
+		if (this.z.isZero() || this.b.isZero()) {
+			throw new Error("Not implemented.");
+		}
 
 		// P = O
-		if (p.isInfinity()) {throw new Error("Invalid point.");}
+		if (p.isInfinity()) {
+			throw new Error("Invalid point.");
+		}
 
 		// Add a random torsion component.
 		const index = ((hint >>> 4) & 15) % this.torsion.length;
@@ -3057,10 +3289,14 @@ class ShortCurve extends Curve {
 
 		return wrapErrors(() => {
 			// a != 0, b != 0
-			if (!this.a.isZero()) {return this._sswui(q, hint);}
+			if (!this.a.isZero()) {
+				return this._sswui(q, hint);
+			}
 
 			// p = 1 mod 3, a = 0, b != 0
-			if (!this.c.isZero()) {return this._svdwi(q, hint);}
+			if (!this.c.isZero()) {
+				return this._svdwi(q, hint);
+			}
 
 			throw new Error("Not implemented.");
 		});
@@ -3073,7 +3309,9 @@ class ShortCurve extends Curve {
 	affinizeAll(points) {
 		const out = this.normalizeAll(points);
 
-		for (let index = 0; index < out.length; index++) {out[index] = out[index].toP();}
+		for (let index = 0; index < out.length; index++) {
+			out[index] = out[index].toP();
+		}
 
 		return out;
 	}
@@ -3111,12 +3349,18 @@ class ShortCurve extends Curve {
 		if (sign != null) {
 			const [, u3] = curve._scale(this);
 
-			if (u3.redIsOdd() !== sign) {u3.redINeg();}
+			if (u3.redIsOdd() !== sign) {
+				u3.redINeg();
+			}
 		}
 
-		if (!this.g.isInfinity()) {curve.g = curve.pointFromShort(this.g);}
+		if (!this.g.isInfinity()) {
+			curve.g = curve.pointFromShort(this.g);
+		}
 
-		for (let index = 0; index < this.h.word(0); index++) {curve.torsion[index] = curve.pointFromShort(this.torsion[index]);}
+		for (let index = 0; index < this.h.word(0); index++) {
+			curve.torsion[index] = curve.pointFromShort(this.torsion[index]);
+		}
 
 		return curve;
 	}
@@ -3137,12 +3381,18 @@ class ShortCurve extends Curve {
 		if (sign != null) {
 			const [, u3] = this._scale(curve);
 
-			if (u3.redIsOdd() !== sign) {u3.redINeg();}
+			if (u3.redIsOdd() !== sign) {
+				u3.redINeg();
+			}
 		}
 
-		if (!this.g.isInfinity()) {curve.g = curve.pointFromShort(this.g);}
+		if (!this.g.isInfinity()) {
+			curve.g = curve.pointFromShort(this.g);
+		}
 
-		for (let index = 0; index < this.h.word(0); index++) {curve.torsion[index] = curve.pointFromShort(this.torsion[index]);}
+		for (let index = 0; index < this.h.word(0); index++) {
+			curve.torsion[index] = curve.pointFromShort(this.torsion[index]);
+		}
 
 		return curve;
 	}
@@ -3163,7 +3413,9 @@ class ShortCurve extends Curve {
 		if (sign != null) {
 			const [, u3] = this._scale(curve);
 
-			if (u3.redIsOdd() !== sign) {u3.redINeg();}
+			if (u3.redIsOdd() !== sign) {
+				u3.redINeg();
+			}
 		}
 
 		if (!this.g.isInfinity()) {
@@ -3191,7 +3443,9 @@ class ShortCurve extends Curve {
 		json.a = this.a.fromRed().toJSON();
 		json.b = this.b.fromRed().toJSON();
 
-		if (!this.c.isZero()) {json.c = this.c.fromRed().toJSON();}
+		if (!this.c.isZero()) {
+			json.c = this.c.fromRed().toJSON();
+		}
 
 		return json;
 	}
@@ -3211,7 +3465,9 @@ class ShortPoint extends Point {
 		this.y = this.curve.zero;
 		this.inf = true;
 
-		if (x != null) {this._init(x, y);}
+		if (x != null) {
+			this._init(x, y);
+		}
 	}
 
 	_init(x, y) {
@@ -3221,17 +3477,25 @@ class ShortPoint extends Point {
 		this.x = x;
 		this.y = y;
 
-		if (!this.x.red) {this.x = this.x.toRed(this.curve.red);}
+		if (!this.x.red) {
+			this.x = this.x.toRed(this.curve.red);
+		}
 
-		if (!this.y.red) {this.y = this.y.toRed(this.curve.red);}
+		if (!this.y.red) {
+			this.y = this.y.toRed(this.curve.red);
+		}
 
 		this.inf = false;
 	}
 
 	_getBeta() {
-		if (!this.curve.endo) {return null;}
+		if (!this.curve.endo) {
+			return null;
+		}
 
-		if (this.pre && this.pre.beta) {return this.pre.beta;}
+		if (this.pre && this.pre.beta) {
+			return this.pre.beta;
+		}
 
 		// Augment the point with our beta value.
 		// This is the counterpart to `k2` after
@@ -3258,7 +3522,9 @@ class ShortPoint extends Point {
 	_getJNAF(point) {
 		assert(point instanceof ShortPoint);
 
-		if (this.inf || point.inf) {return super._getJNAF(point);}
+		if (this.inf || point.inf) {
+			return super._getJNAF(point);
+		}
 
 		// Create comb for JSF.
 		const comb = [
@@ -3284,7 +3550,9 @@ class ShortPoint extends Point {
 	}
 
 	clone() {
-		if (this.inf) {return this.curve.point();}
+		if (this.inf) {
+			return this.curve.point();
+		}
 
 		return this.curve.point(this.x, this.y);
 	}
@@ -3295,7 +3563,9 @@ class ShortPoint extends Point {
 
 	neg() {
 		// P = O
-		if (this.inf) {return this;}
+		if (this.inf) {
+			return this;
+		}
 
 		// -(X1, Y1) = (X1, -Y1)
 		return this.curve.point(this.x, this.y.redNeg());
@@ -3314,15 +3584,21 @@ class ShortPoint extends Point {
 		assert(p instanceof ShortPoint);
 
 		// O + P = P
-		if (this.inf) {return p;}
+		if (this.inf) {
+			return p;
+		}
 
 		// P + O = P
-		if (p.inf) {return this;}
+		if (p.inf) {
+			return this;
+		}
 
 		// P + P, P + -P
 		if (this.x.eq(p.x)) {
 			// P + -P = O
-			if (!this.y.eq(p.y)) {return this.curve.point();}
+			if (!this.y.eq(p.y)) {
+				return this.curve.point();
+			}
 
 			// P + P = 2P
 			return this.dbl();
@@ -3370,10 +3646,14 @@ class ShortPoint extends Point {
 		// 1I + 2M + 2S + 3A + 2*2 + 1*3
 
 		// P = O
-		if (this.inf) {return this;}
+		if (this.inf) {
+			return this;
+		}
 
 		// Y1 = 0
-		if (this.y.isZero()) {return this.curve.point();}
+		if (this.y.isZero()) {
+			return this.curve.point();
+		}
 
 		// XX = X1^2
 		const xx = this.x.redSqr();
@@ -3401,13 +3681,17 @@ class ShortPoint extends Point {
 	}
 
 	getX() {
-		if (this.inf) {throw new Error("Invalid point.");}
+		if (this.inf) {
+			throw new Error("Invalid point.");
+		}
 
 		return this.x.fromRed();
 	}
 
 	getY() {
-		if (this.inf) {throw new Error("Invalid point.");}
+		if (this.inf) {
+			throw new Error("Invalid point.");
+		}
 
 		return this.y.fromRed();
 	}
@@ -3416,13 +3700,19 @@ class ShortPoint extends Point {
 		assert(p instanceof ShortPoint);
 
 		// P = Q
-		if (this === p) {return true;}
+		if (this === p) {
+			return true;
+		}
 
 		// P = O
-		if (this.inf) {return p.inf;}
+		if (this.inf) {
+			return p.inf;
+		}
 
 		// Q = O
-		if (p.inf) {return false;}
+		if (p.inf) {
+			return false;
+		}
 
 		// X1 = X2, Y1 = Y2
 		return this.x.eq(p.x) && this.y.eq(p.y);
@@ -3431,11 +3721,17 @@ class ShortPoint extends Point {
 	cmp(point) {
 		assert(point instanceof ShortPoint);
 
-		if (this.inf && !point.inf) {return -1;}
+		if (this.inf && !point.inf) {
+			return -1;
+		}
 
-		if (!this.inf && point.inf) {return 1;}
+		if (!this.inf && point.inf) {
+			return 1;
+		}
 
-		if (this.inf && point.inf) {return 0;}
+		if (this.inf && point.inf) {
+			return 0;
+		}
 
 		return this.order().cmp(point.order()) || this.getX().cmp(point.getX()) || this.getY().cmp(point.getY());
 	}
@@ -3447,25 +3743,33 @@ class ShortPoint extends Point {
 	}
 
 	isOrder2() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.isZero();
 	}
 
 	isOdd() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.redIsOdd();
 	}
 
 	isEven() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.redIsEven();
 	}
 
 	isSquare() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.redJacobi() !== -1;
 	}
@@ -3474,7 +3778,9 @@ class ShortPoint extends Point {
 		assert(x instanceof BN);
 		assert(!x.red);
 
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.getX().eq(x);
 	}
@@ -3484,7 +3790,9 @@ class ShortPoint extends Point {
 		assert(!x.red);
 		assert(!this.curve.n.isZero());
 
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.getX().imod(this.curve.n).eq(x);
 	}
@@ -3527,7 +3835,9 @@ class ShortPoint extends Point {
 
 	toJ() {
 		// (X3, Y3, Z3) = (1, 1, 0)
-		if (this.inf) {return this.curve.jpoint();}
+		if (this.inf) {
+			return this.curve.jpoint();
+		}
 
 		// (X3, Y3, Z3) = (X1, Y1, 1)
 		return this.curve.jpoint(this.x, this.y, this.curve.one);
@@ -3535,14 +3845,18 @@ class ShortPoint extends Point {
 
 	encode(compact) {
 		// [SEC1] Page 10, Section 2.3.3.
-		if (compact == null) {compact = true;}
+		if (compact == null) {
+			compact = true;
+		}
 
 		assert(typeof compact === "boolean");
 
 		const { fieldSize } = this.curve;
 
 		// We do not serialize points at infinity.
-		if (this.inf) {throw new Error("Invalid point.");}
+		if (this.inf) {
+			throw new Error("Invalid point.");
+		}
 
 		// Compressed form (0x02 = even, 0x03 = odd).
 		if (compact) {
@@ -3574,7 +3888,9 @@ class ShortPoint extends Point {
 
 		const len = curve.fieldSize;
 
-		if (bytes.length < 1 + len) {throw new Error("Not a point.");}
+		if (bytes.length < 1 + len) {
+			throw new Error("Not a point.");
+		}
 
 		// Point forms:
 		//
@@ -3593,11 +3909,15 @@ class ShortPoint extends Point {
 		switch (form) {
 			case 0x02:
 			case 0x03: {
-				if (bytes.length !== 1 + len) {throw new Error("Invalid point size for compressed.");}
+				if (bytes.length !== 1 + len) {
+					throw new Error("Invalid point size for compressed.");
+				}
 
 				const x = curve.decodeField(bytes.slice(1, 1 + len));
 
-				if (x.cmp(curve.p) >= 0) {throw new Error("Invalid point.");}
+				if (x.cmp(curve.p) >= 0) {
+					throw new Error("Invalid point.");
+				}
 
 				const p = curve.pointFromX(x, form === 0x03);
 
@@ -3609,20 +3929,28 @@ class ShortPoint extends Point {
 			case 0x04:
 			case 0x06:
 			case 0x07: {
-				if (bytes.length !== 1 + len * 2) {throw new Error("Invalid point size for uncompressed.");}
+				if (bytes.length !== 1 + len * 2) {
+					throw new Error("Invalid point size for uncompressed.");
+				}
 
 				const x = curve.decodeField(bytes.slice(1, 1 + len));
 				const y = curve.decodeField(bytes.slice(1 + len, 1 + 2 * len));
 
 				// [GECC] Algorithm 4.3, Page 180, Section 4.
-				if (x.cmp(curve.p) >= 0 || y.cmp(curve.p) >= 0) {throw new Error("Invalid point.");}
+				if (x.cmp(curve.p) >= 0 || y.cmp(curve.p) >= 0) {
+					throw new Error("Invalid point.");
+				}
 
 				// OpenSSL hybrid encoding.
-				if (form !== 0x04 && form !== (0x06 | y.isOdd())) {throw new Error("Invalid hybrid encoding.");}
+				if (form !== 0x04 && form !== (0x06 | y.isOdd())) {
+					throw new Error("Invalid hybrid encoding.");
+				}
 
 				const p = curve.point(x, y);
 
-				if (!p.validate()) {throw new Error("Invalid point.");}
+				if (!p.validate()) {
+					throw new Error("Invalid point.");
+				}
 
 				assert(!p.isInfinity());
 
@@ -3647,7 +3975,9 @@ class ShortPoint extends Point {
 
 		const x = curve.decodeField(bytes);
 
-		if (x.cmp(curve.p) >= 0) {throw new Error("Invalid point.");}
+		if (x.cmp(curve.p) >= 0) {
+			throw new Error("Invalid point.");
+		}
 
 		return curve.pointFromX(x, false);
 	}
@@ -3658,24 +3988,32 @@ class ShortPoint extends Point {
 
 		const x = curve.decodeField(bytes);
 
-		if (x.cmp(curve.p) >= 0) {throw new Error("Invalid point.");}
+		if (x.cmp(curve.p) >= 0) {
+			throw new Error("Invalid point.");
+		}
 
 		return curve.pointFromX(x);
 	}
 
 	toJSON(pre) {
-		if (this.inf) {return [];}
+		if (this.inf) {
+			return [];
+		}
 
 		const x = this.getX().toJSON();
 		const y = this.getY().toJSON();
 
-		if (pre === true && this.pre) {return [x, y, this.pre.toJSON()];}
+		if (pre === true && this.pre) {
+			return [x, y, this.pre.toJSON()];
+		}
 
 		return [x, y];
 	}
 
 	toPretty() {
-		if (this.inf) {return [];}
+		if (this.inf) {
+			return [];
+		}
 
 		const size = this.curve.fieldSize * 2;
 		const x = toPretty(this.getX(), size);
@@ -3689,19 +4027,25 @@ class ShortPoint extends Point {
 		assert(Array.isArray(json));
 		assert(json.length === 0 || json.length === 2 || json.length === 3);
 
-		if (json.length === 0) {return curve.point();}
+		if (json.length === 0) {
+			return curve.point();
+		}
 
 		const x = BN.fromJSON(json[0]);
 		const y = BN.fromJSON(json[1]);
 		const point = curve.point(x, y);
 
-		if (json.length > 2 && json[2] != null) {point.pre = Precomp.fromJSON(point, json[2]);}
+		if (json.length > 2 && json[2] != null) {
+			point.pre = Precomp.fromJSON(point, json[2]);
+		}
 
 		return point;
 	}
 
 	[custom]() {
-		if (this.inf) {return "<ShortPoint: Infinity>";}
+		if (this.inf) {
+			return "<ShortPoint: Infinity>";
+		}
 
 		return (
 			"<ShortPoint:" + " x=" + this.x.fromRed().toString(16, 2) + " y=" + this.y.fromRed().toString(16, 2) + ">"
@@ -3724,7 +4068,9 @@ class JPoint extends Point {
 		this.z = this.curve.zero;
 		this.zOne = false;
 
-		if (x != null) {this._init(x, y, z);}
+		if (x != null) {
+			this._init(x, y, z);
+		}
 	}
 
 	_init(x, y, z) {
@@ -3736,11 +4082,17 @@ class JPoint extends Point {
 		this.y = y;
 		this.z = z || this.curve.one;
 
-		if (!this.x.red) {this.x = this.x.toRed(this.curve.red);}
+		if (!this.x.red) {
+			this.x = this.x.toRed(this.curve.red);
+		}
 
-		if (!this.y.red) {this.y = this.y.toRed(this.curve.red);}
+		if (!this.y.red) {
+			this.y = this.y.toRed(this.curve.red);
+		}
 
-		if (!this.z.red) {this.z = this.z.toRed(this.curve.red);}
+		if (!this.z.red) {
+			this.z = this.z.toRed(this.curve.red);
+		}
 
 		this.zOne = this.z.eq(this.curve.one);
 	}
@@ -3754,10 +4106,14 @@ class JPoint extends Point {
 		const { a, b } = this.curve;
 
 		// P = O
-		if (this.isInfinity()) {return true;}
+		if (this.isInfinity()) {
+			return true;
+		}
 
 		// Z1 = 1
-		if (this.zOne) {return this.curve.validate(this.toP());}
+		if (this.zOne) {
+			return this.curve.validate(this.toP());
+		}
 
 		// y^2 = x^3 + a * x * z^4 + b * z^6
 		const lhs = this.y.redSqr();
@@ -3769,8 +4125,11 @@ class JPoint extends Point {
 
 		if (!this.curve.zeroA) {
 			// Save some cycles for a = -3.
-			if (this.curve.threeA) {rhs.redIAdd(z4.redIMuln(-3).redMul(this.x));}
-			else {rhs.redIAdd(a.redMul(z4).redMul(this.x));}
+			if (this.curve.threeA) {
+				rhs.redIAdd(z4.redIMuln(-3).redMul(this.x));
+			} else {
+				rhs.redIAdd(a.redMul(z4).redMul(this.x));
+			}
 		}
 
 		return lhs.eq(rhs);
@@ -3781,10 +4140,14 @@ class JPoint extends Point {
 		// 1I + 3M + 1S
 
 		// Z = 1
-		if (this.zOne) {return this;}
+		if (this.zOne) {
+			return this;
+		}
 
 		// P = O
-		if (this.isInfinity()) {return this;}
+		if (this.isInfinity()) {
+			return this;
+		}
 
 		// A = 1 / Z1
 		const a = this.z.redInvert();
@@ -3809,7 +4172,9 @@ class JPoint extends Point {
 		assert(a instanceof BN);
 
 		// P = O
-		if (this.isInfinity()) {return this.curve.jpoint();}
+		if (this.isInfinity()) {
+			return this.curve.jpoint();
+		}
 
 		// AA = A^2
 		const aa = a.redSqr();
@@ -3834,7 +4199,9 @@ class JPoint extends Point {
 	add(p) {
 		assert(p instanceof Point);
 
-		if (p.type === types.AFFINE) {return this._mixedAdd(p);}
+		if (p.type === types.AFFINE) {
+			return this._mixedAdd(p);
+		}
 
 		return this._add(p);
 	}
@@ -3843,16 +4210,24 @@ class JPoint extends Point {
 		assert(p instanceof JPoint);
 
 		// O + P = P
-		if (this.isInfinity()) {return p;}
+		if (this.isInfinity()) {
+			return p;
+		}
 
 		// P + O = P
-		if (p.isInfinity()) {return this;}
+		if (p.isInfinity()) {
+			return this;
+		}
 
 		// Z1 = 1
-		if (this.zOne) {return p._addJA(this);}
+		if (this.zOne) {
+			return p._addJA(this);
+		}
 
 		// Z2 = 1
-		if (p.zOne) {return this._addJA(p);}
+		if (p.zOne) {
+			return this._addJA(p);
+		}
 
 		return this._addJJ(p);
 	}
@@ -3861,10 +4236,14 @@ class JPoint extends Point {
 		assert(p instanceof ShortPoint);
 
 		// O + P = P
-		if (this.isInfinity()) {return p.toJ();}
+		if (this.isInfinity()) {
+			return p.toJ();
+		}
 
 		// P + O = P
-		if (p.isInfinity()) {return this;}
+		if (p.isInfinity()) {
+			return this;
+		}
 
 		return this._addJA(p);
 	}
@@ -3900,7 +4279,9 @@ class JPoint extends Point {
 
 		// H = 0
 		if (h.isZero()) {
-			if (!r.isZero()) {return this.curve.jpoint();}
+			if (!r.isZero()) {
+				return this.curve.jpoint();
+			}
 
 			return this.dbl();
 		}
@@ -3948,7 +4329,9 @@ class JPoint extends Point {
 
 		// H = 0
 		if (h.isZero()) {
-			if (!r.isZero()) {return this.curve.jpoint();}
+			if (!r.isZero()) {
+				return this.curve.jpoint();
+			}
 
 			return this.dbl();
 		}
@@ -3976,16 +4359,24 @@ class JPoint extends Point {
 
 	dbl() {
 		// P = O
-		if (this.isInfinity()) {return this;}
+		if (this.isInfinity()) {
+			return this;
+		}
 
 		// Y1 = 0
-		if (this.y.isZero()) {return this.curve.jpoint();}
+		if (this.y.isZero()) {
+			return this.curve.jpoint();
+		}
 
 		// a = 0
-		if (this.curve.zeroA) {return this._dbl0();}
+		if (this.curve.zeroA) {
+			return this._dbl0();
+		}
 
 		// a = -3
-		if (this.curve.threeA) {return this._dbl3();}
+		if (this.curve.threeA) {
+			return this._dbl3();
+		}
 
 		return this._dblJ();
 	}
@@ -4110,7 +4501,9 @@ class JPoint extends Point {
 	}
 
 	getX() {
-		if (this.isInfinity()) {throw new Error("Invalid point.");}
+		if (this.isInfinity()) {
+			throw new Error("Invalid point.");
+		}
 
 		this.normalize();
 
@@ -4118,7 +4511,9 @@ class JPoint extends Point {
 	}
 
 	getY() {
-		if (this.isInfinity()) {throw new Error("Invalid point.");}
+		if (this.isInfinity()) {
+			throw new Error("Invalid point.");
+		}
 
 		this.normalize();
 
@@ -4129,13 +4524,19 @@ class JPoint extends Point {
 		assert(p instanceof JPoint);
 
 		// P = Q
-		if (this === p) {return true;}
+		if (this === p) {
+			return true;
+		}
 
 		// P = O
-		if (this.isInfinity()) {return p.isInfinity();}
+		if (this.isInfinity()) {
+			return p.isInfinity();
+		}
 
 		// Q = O
-		if (p.isInfinity()) {return false;}
+		if (p.isInfinity()) {
+			return false;
+		}
 
 		// Z1 = Z2
 		if (this.z.eq(p.z)) {
@@ -4148,7 +4549,9 @@ class JPoint extends Point {
 		const x1 = this.x.redMul(zz2);
 		const x2 = p.x.redMul(zz1);
 
-		if (!x1.eq(x2)) {return false;}
+		if (!x1.eq(x2)) {
+			return false;
+		}
 
 		// Y1 * Z2^3 = Y2 * Z1^3
 		const zzz1 = zz1.redMul(this.z);
@@ -4165,11 +4568,17 @@ class JPoint extends Point {
 		const inf1 = this.isInfinity();
 		const inf2 = point.isInfinity();
 
-		if (inf1 && !inf2) {return -1;}
+		if (inf1 && !inf2) {
+			return -1;
+		}
 
-		if (!inf1 && inf2) {return 1;}
+		if (!inf1 && inf2) {
+			return 1;
+		}
 
-		if (inf1 && inf2) {return 0;}
+		if (inf1 && inf2) {
+			return 0;
+		}
 
 		return this.order().cmp(point.order()) || this.getX().cmp(point.getX()) || this.getY().cmp(point.getY());
 	}
@@ -4180,13 +4589,17 @@ class JPoint extends Point {
 	}
 
 	isOrder2() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		return this.y.isZero();
 	}
 
 	isOdd() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		this.normalize();
 
@@ -4194,7 +4607,9 @@ class JPoint extends Point {
 	}
 
 	isEven() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		this.normalize();
 
@@ -4202,7 +4617,9 @@ class JPoint extends Point {
 	}
 
 	isSquare() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		return this.y.redMul(this.z).redJacobi() !== -1;
 	}
@@ -4218,7 +4635,9 @@ class JPoint extends Point {
 		assert(x instanceof BN);
 		assert(!x.red);
 
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		const zz = this.z.redSqr();
 		const rx = x.toRed(this.curve.red).redMul(zz);
@@ -4244,20 +4663,32 @@ class JPoint extends Point {
 		assert(x instanceof BN);
 		assert(!x.red);
 
-		if (!this.curve.smallGap) {return this.toP().eqR(x);}
+		if (!this.curve.smallGap) {
+			return this.toP().eqR(x);
+		}
 
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
-		if (x.cmp(this.curve.p) >= 0) {return false;}
+		if (x.cmp(this.curve.p) >= 0) {
+			return false;
+		}
 
 		const zz = this.z.redSqr();
 		const rx = x.toRed(this.curve.red).redMul(zz);
 
-		if (this.x.eq(rx)) {return true;}
+		if (this.x.eq(rx)) {
+			return true;
+		}
 
-		if (this.curve.highOrder) {return false;}
+		if (this.curve.highOrder) {
+			return false;
+		}
 
-		if (x.cmp(this.curve.pmodn) >= 0) {return false;}
+		if (x.cmp(this.curve.pmodn) >= 0) {
+			return false;
+		}
 
 		const rn = this.curve.redN.redMul(zz);
 
@@ -4268,7 +4699,9 @@ class JPoint extends Point {
 
 	toP() {
 		// P = O
-		if (this.isInfinity()) {return this.curve.point();}
+		if (this.isInfinity()) {
+			return this.curve.point();
+		}
 
 		this.normalize();
 
@@ -4313,7 +4746,9 @@ class JPoint extends Point {
 	}
 
 	[custom]() {
-		if (this.isInfinity()) {return "<JPoint: Infinity>";}
+		if (this.isInfinity()) {
+			return "<JPoint: Infinity>";
+		}
 
 		return (
 			"<JPoint:" +
@@ -4368,7 +4803,9 @@ class MontCurve extends Curve {
 		const b = customB.clone();
 		const c = curveB.redDiv(customB);
 
-		if (c.redJacobi() !== 1) {throw new Error("Invalid `b` coefficient.");}
+		if (c.redJacobi() !== 1) {
+			throw new Error("Invalid `b` coefficient.");
+		}
 
 		return [a, b];
 	}
@@ -4394,7 +4831,9 @@ class MontCurve extends Curve {
 		const wa = n0.redDiv(d0);
 		const wb = n1.redDiv(d1);
 
-		if (a0 != null) {return ShortCurve._isomorphism(wa, wb, a0, odd);}
+		if (a0 != null) {
+			return ShortCurve._isomorphism(wa, wb, a0, odd);
+		}
 
 		return [wa, wb];
 	}
@@ -4442,9 +4881,13 @@ class MontCurve extends Curve {
 		const a = this.a.redAdd(two).redMul(bi);
 		const d = this.a.redSub(two).redMul(bi);
 
-		if (invert) {a.swap(d);}
+		if (invert) {
+			a.swap(d);
+		}
 
-		if (a0 != null) {return EdwardsCurve._isomorphism(a, d, a0);}
+		if (a0 != null) {
+			return EdwardsCurve._isomorphism(a, d, a0);
+		}
 
 		return [a, d];
 	}
@@ -4467,7 +4910,9 @@ class MontCurve extends Curve {
 		//   c = v' / v
 		assert(curve instanceof MontCurve);
 
-		if (this.g.isInfinity() || curve.g.isInfinity()) {return this.field(curve.b).redDivSqrt(this.b);}
+		if (this.g.isInfinity() || curve.g.isInfinity()) {
+			return this.field(curve.b).redDivSqrt(this.b);
+		}
 
 		return this.g.y.redDiv(this.field(curve.g.y));
 	}
@@ -4568,7 +5013,9 @@ class MontCurve extends Curve {
 		const lhs = this.a0.redNeg();
 		const rhs = this.one.redAdd(this.z.redMul(u.redSqr()));
 
-		if (rhs.isZero()) {rhs.inject(this.one);}
+		if (rhs.isZero()) {
+			rhs.inject(this.one);
+		}
 
 		const x1 = lhs.redMul(rhs.redInvert());
 		const x2 = x1.redNeg().redISub(this.a0);
@@ -4578,7 +5025,9 @@ class MontCurve extends Curve {
 		const x0 = [x1, x2][alpha ^ 1];
 		const y0 = [y1, y2][alpha ^ 1].redSqrt();
 
-		if (y0.redIsOdd() !== u.redIsOdd()) {y0.redINeg();}
+		if (y0.redIsOdd() !== u.redIsOdd()) {
+			y0.redINeg();
+		}
 
 		const x = this.b.redMul(x0);
 		const y = this.b.redMul(y0);
@@ -4616,7 +5065,9 @@ class MontCurve extends Curve {
 		const rhs = [d, n][r].redMul(this.z);
 		const u = lhs.redDivSqrt(rhs);
 
-		if (u.redIsOdd() !== y0.redIsOdd()) {u.redINeg();}
+		if (u.redIsOdd() !== y0.redIsOdd()) {
+			u.redINeg();
+		}
 
 		return u;
 	}
@@ -4637,7 +5088,9 @@ class MontCurve extends Curve {
 		const lhs = t0.redPown(3).redIMuln(256);
 		const rhs = a2.redSub(four);
 
-		if (rhs.isZero()) {throw new Error("Curve is not elliptic.");}
+		if (rhs.isZero()) {
+			throw new Error("Curve is not elliptic.");
+		}
 
 		// (256 * (A^2 - 3)^3) / (A^2 - 4)
 		return lhs.redDiv(rhs).fromRed();
@@ -4671,7 +5124,9 @@ class MontCurve extends Curve {
 	validate(point) {
 		assert(point instanceof MontPoint);
 
-		if (point.isInfinity()) {return true;}
+		if (point.isInfinity()) {
+			return true;
+		}
 
 		const { x, y } = point;
 		const y2 = this.solveY2(x);
@@ -4683,14 +5138,20 @@ class MontCurve extends Curve {
 		assert(x instanceof BN);
 		assert(sign == null || typeof sign === "boolean");
 
-		if (!x.red) {x = x.toRed(this.red);}
+		if (!x.red) {
+			x = x.toRed(this.red);
+		}
 
 		const y = this.solveY(x);
 
 		if (sign != null) {
-			if (y.isZero() && sign) {throw new Error("Invalid point.");}
+			if (y.isZero() && sign) {
+				throw new Error("Invalid point.");
+			}
 
-			if (y.redIsOdd() !== sign) {y.redINeg();}
+			if (y.redIsOdd() !== sign) {
+				y.redINeg();
+			}
 		}
 
 		return this.point(x, y);
@@ -4700,7 +5161,9 @@ class MontCurve extends Curve {
 		// [MONT3] Page 3, Section 2.1.
 		assert(curve instanceof Curve);
 
-		if (!curve.p.eq(this.p)) {return false;}
+		if (!curve.p.eq(this.p)) {
+			return false;
+		}
 
 		// M(A,B) <-> M(A,B')
 		if (curve.type === "mont") {
@@ -4708,10 +5171,14 @@ class MontCurve extends Curve {
 			const b = this.field(curve.b);
 
 			// A' = A
-			if (!this.a.eq(a)) {return false;}
+			if (!this.a.eq(a)) {
+				return false;
+			}
 
 			// B' != 0
-			if (this.b.isZero()) {return false;}
+			if (this.b.isZero()) {
+				return false;
+			}
 
 			// jacobi(B / B') = 1
 			const c = b.redDiv(this.b);
@@ -4725,7 +5192,9 @@ class MontCurve extends Curve {
 	isIsogenous(curve) {
 		assert(curve instanceof Curve);
 
-		if (curve.type === "mont") {return false;}
+		if (curve.type === "mont") {
+			return false;
+		}
 
 		return curve.isIsogenous(this);
 	}
@@ -4742,7 +5211,9 @@ class MontCurve extends Curve {
 			//   v = B * y
 			//
 			// Undefined if ((u^3 + A * u^2 + u) / B) is not square.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
 			const { a3, b } = this;
 			const [u2, u3] = this._scale(point.curve);
@@ -4768,7 +5239,9 @@ class MontCurve extends Curve {
 			//   v' = +-sqrt(B / B') * v
 			//
 			// Undefined if (B / B') is not square.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
 			const c = this._scale(point.curve);
 			const u = this.field(point.x);
@@ -4808,9 +5281,13 @@ class MontCurve extends Curve {
 			//
 			// Unexceptional Cases:
 			//   - (+-1, 0) -> (0, 0)
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.x.isZero()) {return this.point(this.zero, this.zero);}
+			if (point.x.isZero()) {
+				return this.point(this.zero, this.zero);
+			}
 
 			const c = z.redSqr().redIMuln(2);
 			const uu = y.redSqr();
@@ -4835,9 +5312,13 @@ class MontCurve extends Curve {
 			//
 			// Unexceptional Cases:
 			//   - (+-sqrt(1 / a), 0) -> (-1, +-sqrt((A - 2) / B))
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.x.isZero()) {return this.point(this.zero, this.zero);}
+			if (point.x.isZero()) {
+				return this.point(this.zero, this.zero);
+			}
 
 			const c = this._scale(point.curve, true);
 			const uu = y.redAdd(z);
@@ -4862,9 +5343,13 @@ class MontCurve extends Curve {
 			//
 			// Unexceptional Cases:
 			//   - (+-sqrt(1 / a), 0) -> (1, +-sqrt((A + 2) / B))
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.x.isZero()) {return this.point(this.zero, this.zero);}
+			if (point.x.isZero()) {
+				return this.point(this.zero, this.zero);
+			}
 
 			const c = this._scale(point.curve, false);
 			const uu = z.redAdd(y);
@@ -4882,7 +5367,9 @@ class MontCurve extends Curve {
 		assert(u instanceof BN);
 
 		// z = 0 or A = 0
-		if (this.z.isZero() || this.a.isZero()) {throw new Error("Not implemented.");}
+		if (this.z.isZero() || this.a.isZero()) {
+			throw new Error("Not implemented.");
+		}
 
 		return this._elligator2(u);
 	}
@@ -4902,10 +5389,14 @@ class MontCurve extends Curve {
 		assert(hint >>> 0 === hint);
 
 		// z = 0 or A = 0
-		if (this.z.isZero() || this.a.isZero()) {throw new Error("Not implemented.");}
+		if (this.z.isZero() || this.a.isZero()) {
+			throw new Error("Not implemented.");
+		}
 
 		// P = O
-		if (p.isInfinity()) {throw new Error("Invalid point.");}
+		if (p.isInfinity()) {
+			throw new Error("Invalid point.");
+		}
 
 		// Add a random torsion component.
 		const index = ((hint >>> 4) & 15) % this.torsion.length;
@@ -4943,12 +5434,18 @@ class MontCurve extends Curve {
 		if (sign != null) {
 			const [, u3] = curve._scale(this);
 
-			if (u3.redIsOdd() !== sign) {u3.redINeg();}
+			if (u3.redIsOdd() !== sign) {
+				u3.redINeg();
+			}
 		}
 
-		if (!this.g.isInfinity()) {curve.g = curve.pointFromMont(this.g);}
+		if (!this.g.isInfinity()) {
+			curve.g = curve.pointFromMont(this.g);
+		}
 
-		for (let index = 0; index < this.h.word(0); index++) {curve.torsion[index] = curve.pointFromMont(this.torsion[index]);}
+		for (let index = 0; index < this.h.word(0); index++) {
+			curve.torsion[index] = curve.pointFromMont(this.torsion[index]);
+		}
 
 		return curve;
 	}
@@ -4970,12 +5467,18 @@ class MontCurve extends Curve {
 		if (sign != null) {
 			const c = curve._scale(this);
 
-			if (c.redIsOdd() !== sign) {c.redINeg();}
+			if (c.redIsOdd() !== sign) {
+				c.redINeg();
+			}
 		}
 
-		if (!this.g.isInfinity()) {curve.g = curve.pointFromMont(this.g);}
+		if (!this.g.isInfinity()) {
+			curve.g = curve.pointFromMont(this.g);
+		}
 
-		for (let index = 0; index < this.h.word(0); index++) {curve.torsion[index] = curve.pointFromMont(this.torsion[index]);}
+		for (let index = 0; index < this.h.word(0); index++) {
+			curve.torsion[index] = curve.pointFromMont(this.torsion[index]);
+		}
 
 		return curve;
 	}
@@ -4997,7 +5500,9 @@ class MontCurve extends Curve {
 		if (sign != null) {
 			const c = curve._scale(this, invert);
 
-			if (c.redIsOdd() !== sign) {c.redINeg();}
+			if (c.redIsOdd() !== sign) {
+				c.redINeg();
+			}
 		}
 
 		if (!this.g.isInfinity()) {
@@ -5041,7 +5546,9 @@ class MontPoint extends Point {
 		this.y = this.curve.zero;
 		this.inf = true;
 
-		if (x != null) {this._init(x, y);}
+		if (x != null) {
+			this._init(x, y);
+		}
 	}
 
 	_init(x, y) {
@@ -5051,15 +5558,21 @@ class MontPoint extends Point {
 		this.x = x;
 		this.y = y;
 
-		if (!this.x.red) {this.x = this.x.toRed(this.curve.red);}
+		if (!this.x.red) {
+			this.x = this.x.toRed(this.curve.red);
+		}
 
-		if (!this.y.red) {this.y = this.y.toRed(this.curve.red);}
+		if (!this.y.red) {
+			this.y = this.y.toRed(this.curve.red);
+		}
 
 		this.inf = false;
 	}
 
 	clone() {
-		if (this.inf) {return this.curve.point();}
+		if (this.inf) {
+			return this.curve.point();
+		}
 
 		return this.curve.point(this.x, this.y);
 	}
@@ -5074,7 +5587,9 @@ class MontPoint extends Point {
 
 	neg() {
 		// P = O
-		if (this.inf) {return this;}
+		if (this.inf) {
+			return this;
+		}
 
 		// -(X1, Y1) = (X1, -Y1)
 		return this.curve.point(this.x, this.y.redNeg());
@@ -5093,15 +5608,21 @@ class MontPoint extends Point {
 		assert(p instanceof MontPoint);
 
 		// O + P = P
-		if (this.inf) {return p;}
+		if (this.inf) {
+			return p;
+		}
 
 		// P + O = P
-		if (p.inf) {return this;}
+		if (p.inf) {
+			return this;
+		}
 
 		// P + P, P + -P
 		if (this.x.eq(p.x)) {
 			// P + -P = O
-			if (!this.y.eq(p.y)) {return this.curve.point();}
+			if (!this.y.eq(p.y)) {
+				return this.curve.point();
+			}
 
 			// P + P = 2P
 			return this.dbl();
@@ -5140,10 +5661,14 @@ class MontPoint extends Point {
 		// 1I + 3M + 2S + 7A + 1*a + 1*b + 1*b + 2*2 + 1*3
 
 		// P = O
-		if (this.inf) {return this;}
+		if (this.inf) {
+			return this;
+		}
 
 		// Y1 = 0
-		if (this.y.isZero()) {return this.curve.point();}
+		if (this.y.isZero()) {
+			return this.curve.point();
+		}
 
 		// M1 = 3 * X1^2
 		const m1 = this.x.redSqr().redIMuln(3);
@@ -5173,13 +5698,17 @@ class MontPoint extends Point {
 	}
 
 	getX() {
-		if (this.inf) {throw new Error("Invalid point.");}
+		if (this.inf) {
+			throw new Error("Invalid point.");
+		}
 
 		return this.x.fromRed();
 	}
 
 	getY() {
-		if (this.inf) {throw new Error("Invalid point.");}
+		if (this.inf) {
+			throw new Error("Invalid point.");
+		}
 
 		return this.y.fromRed();
 	}
@@ -5188,13 +5717,19 @@ class MontPoint extends Point {
 		assert(p instanceof MontPoint);
 
 		// P = Q
-		if (this === p) {return true;}
+		if (this === p) {
+			return true;
+		}
 
 		// P = O
-		if (this.inf) {return p.inf;}
+		if (this.inf) {
+			return p.inf;
+		}
 
 		// Q = O
-		if (p.inf) {return false;}
+		if (p.inf) {
+			return false;
+		}
 
 		// X1 = X2, Y1 = Y2
 		return this.x.eq(p.x) && this.y.eq(p.y);
@@ -5203,11 +5738,17 @@ class MontPoint extends Point {
 	cmp(point) {
 		assert(point instanceof MontPoint);
 
-		if (this.inf && !point.inf) {return -1;}
+		if (this.inf && !point.inf) {
+			return -1;
+		}
 
-		if (!this.inf && point.inf) {return 1;}
+		if (!this.inf && point.inf) {
+			return 1;
+		}
 
-		if (this.inf && point.inf) {return 0;}
+		if (this.inf && point.inf) {
+			return 0;
+		}
 
 		return this.order().cmp(point.order()) || this.getX().cmp(point.getX()) || this.getY().cmp(point.getY());
 	}
@@ -5219,19 +5760,25 @@ class MontPoint extends Point {
 	}
 
 	isOrder2() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.isZero();
 	}
 
 	isOdd() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.redIsOdd();
 	}
 
 	isEven() {
-		if (this.inf) {return false;}
+		if (this.inf) {
+			return false;
+		}
 
 		return this.y.redIsEven();
 	}
@@ -5246,7 +5793,9 @@ class MontPoint extends Point {
 
 	toX() {
 		// (X3, Z3) = (1, 0)
-		if (this.inf) {return this.curve.xpoint();}
+		if (this.inf) {
+			return this.curve.xpoint();
+		}
 
 		// (X3, Z3) = (X1, 1)
 		return this.curve.xpoint(this.x, this.curve.one);
@@ -5262,7 +5811,9 @@ class MontPoint extends Point {
 	}
 
 	toJSON(pre) {
-		if (this.inf) {return [];}
+		if (this.inf) {
+			return [];
+		}
 
 		const x = this.getX().toJSON();
 		const y = this.getY().toJSON();
@@ -5271,7 +5822,9 @@ class MontPoint extends Point {
 	}
 
 	toPretty() {
-		if (this.inf) {return [];}
+		if (this.inf) {
+			return [];
+		}
 
 		const size = this.curve.fieldSize * 2;
 		const x = toPretty(this.getX(), size);
@@ -5285,7 +5838,9 @@ class MontPoint extends Point {
 		assert(Array.isArray(json));
 		assert(json.length === 0 || json.length === 2 || json.length === 3);
 
-		if (json.length === 0) {return curve.point();}
+		if (json.length === 0) {
+			return curve.point();
+		}
 
 		const x = BN.fromJSON(json[0]);
 		const y = BN.fromJSON(json[1]);
@@ -5294,7 +5849,9 @@ class MontPoint extends Point {
 	}
 
 	[custom]() {
-		if (this.inf) {return "<MontPoint: Infinity>";}
+		if (this.inf) {
+			return "<MontPoint: Infinity>";
+		}
 
 		return (
 			"<MontPoint:" + " x=" + this.x.fromRed().toString(16, 2) + " y=" + this.y.fromRed().toString(16, 2) + ">"
@@ -5315,7 +5872,9 @@ class XPoint extends Point {
 		this.x = this.curve.one;
 		this.z = this.curve.zero;
 
-		if (x != null) {this._init(x, z);}
+		if (x != null) {
+			this._init(x, z);
+		}
 	}
 
 	_init(x, z) {
@@ -5325,9 +5884,13 @@ class XPoint extends Point {
 		this.x = x;
 		this.z = z || this.curve.one;
 
-		if (!this.x.red) {this.x = this.x.toRed(this.curve.red);}
+		if (!this.x.red) {
+			this.x = this.x.toRed(this.curve.red);
+		}
 
-		if (!this.z.red) {this.z = this.z.toRed(this.curve.red);}
+		if (!this.z.red) {
+			this.z = this.z.toRed(this.curve.red);
+		}
 	}
 
 	clone() {
@@ -5340,7 +5903,9 @@ class XPoint extends Point {
 	}
 
 	validate() {
-		if (this.isInfinity()) {return true;}
+		if (this.isInfinity()) {
+			return true;
+		}
 
 		// B * y^2 * z = x^3 + A * x^2 * z + x * z^2
 		const { x, z } = this;
@@ -5360,10 +5925,14 @@ class XPoint extends Point {
 		// 1I + 1M
 
 		// P = O
-		if (this.isInfinity()) {return this;}
+		if (this.isInfinity()) {
+			return this;
+		}
 
 		// Z1 = 1
-		if (this.z.eq(this.curve.one)) {return this;}
+		if (this.z.eq(this.curve.one)) {
+			return this;
+		}
 
 		// X3 = X1 / Z1
 		this.x = this.x.redDiv(this.z);
@@ -5378,7 +5947,9 @@ class XPoint extends Point {
 		assert(a instanceof BN);
 
 		// P = O
-		if (this.isInfinity()) {return this.curve.xpoint();}
+		if (this.isInfinity()) {
+			return this.curve.xpoint();
+		}
 
 		// X3 = X1 * A
 		const nx = this.x.redMul(a);
@@ -5471,7 +6042,9 @@ class XPoint extends Point {
 	}
 
 	getX() {
-		if (this.isInfinity()) {throw new Error("Invalid point.");}
+		if (this.isInfinity()) {
+			throw new Error("Invalid point.");
+		}
 
 		this.normalize();
 
@@ -5486,16 +6059,24 @@ class XPoint extends Point {
 		assert(p instanceof XPoint);
 
 		// P = Q
-		if (this === p) {return true;}
+		if (this === p) {
+			return true;
+		}
 
 		// P = O
-		if (this.isInfinity()) {return p.isInfinity();}
+		if (this.isInfinity()) {
+			return p.isInfinity();
+		}
 
 		// Q = O
-		if (p.isInfinity()) {return false;}
+		if (p.isInfinity()) {
+			return false;
+		}
 
 		// Z1 = Z2
-		if (this.z.eq(p.z)) {return this.x.eq(p.x);}
+		if (this.z.eq(p.z)) {
+			return this.x.eq(p.x);
+		}
 
 		// X1 * Z2 = X2 * Z1
 		const x1 = this.x.redMul(p.z);
@@ -5510,11 +6091,17 @@ class XPoint extends Point {
 		const inf1 = this.isInfinity();
 		const inf2 = point.isInfinity();
 
-		if (inf1 && !inf2) {return -1;}
+		if (inf1 && !inf2) {
+			return -1;
+		}
 
-		if (!inf1 && inf2) {return 1;}
+		if (!inf1 && inf2) {
+			return 1;
+		}
 
-		if (inf1 && inf2) {return 0;}
+		if (inf1 && inf2) {
+			return 0;
+		}
 
 		return this.order().cmp(point.order()) || this.getX().cmp(point.getX());
 	}
@@ -5525,7 +6112,9 @@ class XPoint extends Point {
 	}
 
 	isOrder2() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		return this.x.isZero();
 	}
@@ -5539,10 +6128,14 @@ class XPoint extends Point {
 	}
 
 	hasTorsion() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		// X1 = 0, Z1 != 0 (edge case)
-		if (this.x.isZero()) {return true;}
+		if (this.x.isZero()) {
+			return true;
+		}
 
 		return super.hasTorsion();
 	}
@@ -5573,15 +6166,20 @@ class XPoint extends Point {
 		for (let index = bits - 1; index >= 0; index--) {
 			const bit = k.bit(index);
 
-			if (bit === 0) {[a, b] = this.diffAddDbl(a, b);}
-			else {[b, a] = this.diffAddDbl(b, a);}
+			if (bit === 0) {
+				[a, b] = this.diffAddDbl(a, b);
+			} else {
+				[b, a] = this.diffAddDbl(b, a);
+			}
 		}
 
 		return a;
 	}
 
 	jmulBlind(k, rng) {
-		if (!rng) {return this.jmul(k);}
+		if (!rng) {
+			return this.jmul(k);
+		}
 
 		// Randomize if available.
 		return this.randomize(rng).jmul(k);
@@ -5594,7 +6192,9 @@ class XPoint extends Point {
 	toP(sign = null) {
 		assert(sign == null || typeof sign === "boolean");
 
-		if (this.isInfinity()) {return this.curve.point();}
+		if (this.isInfinity()) {
+			return this.curve.point();
+		}
 
 		this.normalize();
 
@@ -5610,7 +6210,9 @@ class XPoint extends Point {
 	}
 
 	key() {
-		if (this.isInfinity()) {return `${this.curve.uid}:oo`;}
+		if (this.isInfinity()) {
+			return `${this.curve.uid}:oo`;
+		}
 
 		this.normalize();
 
@@ -5661,7 +6263,9 @@ class XPoint extends Point {
 	}
 
 	[custom]() {
-		if (this.isInfinity()) {return "<XPoint: Infinity>";}
+		if (this.isInfinity()) {
+			return "<XPoint: Infinity>";
+		}
 
 		return "<XPoint:" + " x=" + this.x.fromRed().toString(16, 2) + " z=" + this.z.fromRed().toString(16, 2) + ">";
 	}
@@ -5712,7 +6316,9 @@ class EdwardsCurve extends Curve {
 		const d = customA.redMul(curveD).redDiv(curveA);
 		const c = curveA.redDiv(customA);
 
-		if (c.redJacobi() !== 1) {throw new Error("Invalid `a` coefficient.");}
+		if (c.redJacobi() !== 1) {
+			throw new Error("Invalid `a` coefficient.");
+		}
 
 		return [a, d];
 	}
@@ -5738,7 +6344,9 @@ class EdwardsCurve extends Curve {
 		const wa = a2.redAdd(ad14).redIAdd(d2).redDivn(-48);
 		const wb = t0.redISub(a3).redISub(d3).redDivn(864);
 
-		if (a0 != null) {return ShortCurve._isomorphism(wa, wb, a0, odd);}
+		if (a0 != null) {
+			return ShortCurve._isomorphism(wa, wb, a0, odd);
+		}
 
 		return [wa, wb];
 	}
@@ -5791,7 +6399,9 @@ class EdwardsCurve extends Curve {
 		const a = apd.redMuln(2).redMul(z);
 		const b = z.redMuln(4);
 
-		if (b0 != null) {return MontCurve._isomorphism(a, b, b0);}
+		if (b0 != null) {
+			return MontCurve._isomorphism(a, b, b0);
+		}
 
 		return [a, b];
 	}
@@ -5859,7 +6469,9 @@ class EdwardsCurve extends Curve {
 		//   c = x' / x
 		assert(curve instanceof EdwardsCurve);
 
-		if (this.g.isInfinity() || curve.g.isInfinity()) {return this.field(curve.a).redDivSqrt(this.a);}
+		if (this.g.isInfinity() || curve.g.isInfinity()) {
+			return this.field(curve.a).redDivSqrt(this.a);
+		}
 
 		return this.g.x.redDiv(this.field(curve.g.x));
 	}
@@ -5868,10 +6480,14 @@ class EdwardsCurve extends Curve {
 		assert(number_ instanceof BN);
 
 		// n * a = n
-		if (this.oneA) {return number_.clone();}
+		if (this.oneA) {
+			return number_.clone();
+		}
 
 		// n * a = -n
-		if (this.mOneA) {return number_.redNeg();}
+		if (this.mOneA) {
+			return number_.redNeg();
+		}
 
 		return this.a.redMul(number_);
 	}
@@ -5880,7 +6496,9 @@ class EdwardsCurve extends Curve {
 		assert(number_ instanceof BN);
 
 		// -d < 0x4000000
-		if (this.smallD) {return number_.redMuln(this.smi);}
+		if (this.smallD) {
+			return number_.redMuln(this.smi);
+		}
 
 		return this.d.redMul(number_);
 	}
@@ -6031,13 +6649,17 @@ class EdwardsCurve extends Curve {
 		const tz = one.redAdd(u);
 		const t = tz.isZero() ? tz : tt.redDiv(tz);
 
-		if (t.redIsOdd() !== Boolean(sign)) {t.redINeg();}
+		if (t.redIsOdd() !== Boolean(sign)) {
+			t.redINeg();
+		}
 
 		return t;
 	}
 
 	_alt() {
-		if (!this.alt) {this.alt = this.toMont();}
+		if (!this.alt) {
+			this.alt = this.toMont();
+		}
 
 		return this.alt;
 	}
@@ -6061,7 +6683,9 @@ class EdwardsCurve extends Curve {
 		const lhs = t0.redPown(3).redIMuln(16);
 		const rhs = ad.redMul(amd4);
 
-		if (rhs.isZero()) {throw new Error("Curve is not elliptic.");}
+		if (rhs.isZero()) {
+			throw new Error("Curve is not elliptic.");
+		}
 
 		// 16 * (a^2 + 14 * a * d + d^2)^3 / (a * d * (a - d)^4)
 		return lhs.redDiv(rhs).fromRed();
@@ -6176,14 +6800,20 @@ class EdwardsCurve extends Curve {
 		assert(x instanceof BN);
 		assert(sign == null || typeof sign === "boolean");
 
-		if (!x.red) {x = x.toRed(this.red);}
+		if (!x.red) {
+			x = x.toRed(this.red);
+		}
 
 		const y = this.solveY(x);
 
 		if (sign != null) {
-			if (y.isZero() && sign) {throw new Error("Invalid point.");}
+			if (y.isZero() && sign) {
+				throw new Error("Invalid point.");
+			}
 
-			if (y.redIsOdd() !== sign) {y.redINeg();}
+			if (y.redIsOdd() !== sign) {
+				y.redINeg();
+			}
 		}
 
 		return this.point(x, y);
@@ -6193,14 +6823,20 @@ class EdwardsCurve extends Curve {
 		assert(y instanceof BN);
 		assert(sign == null || typeof sign === "boolean");
 
-		if (!y.red) {y = y.toRed(this.red);}
+		if (!y.red) {
+			y = y.toRed(this.red);
+		}
 
 		const x = this.solveX(y);
 
 		if (sign != null) {
-			if (x.isZero() && sign) {throw new Error("Invalid point.");}
+			if (x.isZero() && sign) {
+				throw new Error("Invalid point.");
+			}
 
-			if (x.redIsOdd() !== sign) {x.redINeg();}
+			if (x.redIsOdd() !== sign) {
+				x.redINeg();
+			}
 		}
 
 		return this.point(x, y);
@@ -6212,10 +6848,14 @@ class EdwardsCurve extends Curve {
 		assert(curve instanceof Curve);
 		assert(typeof invert === "boolean");
 
-		if (!curve.p.eq(this.p)) {return false;}
+		if (!curve.p.eq(this.p)) {
+			return false;
+		}
 
 		// E(a,d) <-> E(a,b)
-		if (curve.type === "short") {return curve.isIsomorphic(this);}
+		if (curve.type === "short") {
+			return curve.isIsomorphic(this);
+		}
 
 		// E(a,d) <-> M(A,B)
 		// E(a,d) <-> M(-A,-B)
@@ -6253,11 +6893,15 @@ class EdwardsCurve extends Curve {
 		// https://moderncrypto.org/mail-archive/curves/2016/000806.html
 		assert(curve instanceof Curve);
 
-		if (!curve.p.eq(this.p)) {return false;}
+		if (!curve.p.eq(this.p)) {
+			return false;
+		}
 
 		// E(1,d) <-> M(2-4d,1)
 		if (curve.type === "mont") {
-			if (!this.a.eq(this.one)) {return false;}
+			if (!this.a.eq(this.one)) {
+				return false;
+			}
 
 			const a = this.field(curve.a);
 			const b = this.field(curve.b);
@@ -6296,9 +6940,13 @@ class EdwardsCurve extends Curve {
 			//
 			// Unexceptional Cases:
 			//   - ((5 * a' - d') / 12, (a' - d') / 4 * sqrt(a')) -> (sqrt(1/a'), 0)
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.y.isZero()) {return this.point(this.zero, this.one.redNeg());}
+			if (point.y.isZero()) {
+				return this.point(this.zero, this.one.redNeg());
+			}
 
 			const { a, d } = this;
 			const [u2, u3] = this._scale(point.curve);
@@ -6348,9 +6996,13 @@ class EdwardsCurve extends Curve {
 			//   - (1, +-sqrt(A + 2)) -> (0, -1)
 			//
 			// The point (1, v) is invalid on Curve448.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.x.isZero()) {return this.point();}
+			if (point.x.isZero()) {
+				return this.point();
+			}
 
 			const u2 = u.redSqr();
 			const u3 = u2.redMul(u);
@@ -6390,9 +7042,13 @@ class EdwardsCurve extends Curve {
 			//   - (-1, +-sqrt((A - 2) / B)) -> (+-sqrt(1 / a), 0)
 			//
 			// The point (1, v) is invalid on Curve448.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.x.isZero()) {return this.point(this.zero, this.one.redNeg());}
+			if (point.x.isZero()) {
+				return this.point(this.zero, this.one.redNeg());
+			}
 
 			const c = this._scale(point.curve, true);
 			const xx = c.redMul(u);
@@ -6420,9 +7076,13 @@ class EdwardsCurve extends Curve {
 			//   - (1, +-sqrt((A + 2) / B)) -> (+-sqrt(1 / a), 0)
 			//
 			// The point (-1, v) is invalid on Curve25519.
-			if (point.isInfinity()) {return this.point();}
+			if (point.isInfinity()) {
+				return this.point();
+			}
 
-			if (point.x.isZero()) {return this.point(this.zero, this.one.redNeg());}
+			if (point.x.isZero()) {
+				return this.point(this.zero, this.one.redNeg());
+			}
 
 			const c = this._scale(point.curve, false);
 			const xx = c.redMul(u);
@@ -6495,7 +7155,9 @@ class EdwardsCurve extends Curve {
 		assert(u.red === this.red);
 		assert(curve == null || curve instanceof MontCurve);
 
-		if (!curve) {curve = this._alt();}
+		if (!curve) {
+			curve = this._alt();
+		}
 
 		const u0 = curve.field(u);
 		const p0 = curve.pointFromUniform(u0);
@@ -6518,7 +7180,9 @@ class EdwardsCurve extends Curve {
 		assert(hint >>> 0 === hint);
 		assert(curve == null || curve instanceof MontCurve);
 
-		if (!curve) {curve = this._alt();}
+		if (!curve) {
+			curve = this._alt();
+		}
 
 		// Add a random torsion component.
 		const index = ((hint >> 4) & 15) % this.torsion.length;
@@ -6534,7 +7198,9 @@ class EdwardsCurve extends Curve {
 	pointFromHash(bytes, pake, curve = null) {
 		assert(curve == null || curve instanceof MontCurve);
 
-		if (!curve) {curve = this._alt();}
+		if (!curve) {
+			curve = this._alt();
+		}
 
 		const p0 = curve.pointFromHash(bytes, pake);
 
@@ -6546,7 +7212,9 @@ class EdwardsCurve extends Curve {
 		assert(subgroup >>> 0 === subgroup);
 		assert(curve == null || curve instanceof MontCurve);
 
-		if (!curve) {curve = this._alt();}
+		if (!curve) {
+			curve = this._alt();
+		}
 
 		// Add a random torsion component.
 		const index = subgroup % this.torsion.length;
@@ -6578,12 +7246,18 @@ class EdwardsCurve extends Curve {
 		if (sign != null) {
 			const [, u3] = curve._scale(this);
 
-			if (u3.redIsOdd() !== sign) {u3.redINeg();}
+			if (u3.redIsOdd() !== sign) {
+				u3.redINeg();
+			}
 		}
 
-		if (!this.g.isInfinity()) {curve.g = curve.pointFromEdwards(this.g);}
+		if (!this.g.isInfinity()) {
+			curve.g = curve.pointFromEdwards(this.g);
+		}
 
-		for (let index = 0; index < this.h.word(0); index++) {curve.torsion[index] = curve.pointFromEdwards(this.torsion[index]);}
+		for (let index = 0; index < this.h.word(0); index++) {
+			curve.torsion[index] = curve.pointFromEdwards(this.torsion[index]);
+		}
 
 		return curve;
 	}
@@ -6605,12 +7279,18 @@ class EdwardsCurve extends Curve {
 		if (sign != null) {
 			const c = this._scale(curve, invert);
 
-			if (c.redIsOdd() !== sign) {c.redINeg();}
+			if (c.redIsOdd() !== sign) {
+				c.redINeg();
+			}
 		}
 
-		if (!this.g.isInfinity()) {curve.g = curve.pointFromEdwards(this.g);}
+		if (!this.g.isInfinity()) {
+			curve.g = curve.pointFromEdwards(this.g);
+		}
 
-		for (let index = 0; index < this.h.word(0); index++) {curve.torsion[index] = curve.pointFromEdwards(this.torsion[index]);}
+		for (let index = 0; index < this.h.word(0); index++) {
+			curve.torsion[index] = curve.pointFromEdwards(this.torsion[index]);
+		}
 
 		return curve;
 	}
@@ -6632,7 +7312,9 @@ class EdwardsCurve extends Curve {
 		if (sign != null) {
 			const c = curve._scale(this);
 
-			if (c.redIsOdd() !== sign) {c.redINeg();}
+			if (c.redIsOdd() !== sign) {
+				c.redINeg();
+			}
 		}
 
 		if (!this.g.isInfinity()) {
@@ -6660,7 +7342,9 @@ class EdwardsCurve extends Curve {
 		json.a = this.a.fromRed().toJSON();
 		json.d = this.d.fromRed().toJSON();
 
-		if (!this.s.isZero()) {json.s = this.s.fromRed().toJSON();}
+		if (!this.s.isZero()) {
+			json.s = this.s.fromRed().toJSON();
+		}
 
 		return json;
 	}
@@ -6682,7 +7366,9 @@ class EdwardsPoint extends Point {
 		this.t = this.curve.zero;
 		this.zOne = true;
 
-		if (x != null) {this._init(x, y, z, t);}
+		if (x != null) {
+			this._init(x, y, z, t);
+		}
 	}
 
 	_init(x, y, z, t) {
@@ -6696,13 +7382,21 @@ class EdwardsPoint extends Point {
 		this.z = z || this.curve.one;
 		this.t = t || null;
 
-		if (!this.x.red) {this.x = this.x.toRed(this.curve.red);}
+		if (!this.x.red) {
+			this.x = this.x.toRed(this.curve.red);
+		}
 
-		if (!this.y.red) {this.y = this.y.toRed(this.curve.red);}
+		if (!this.y.red) {
+			this.y = this.y.toRed(this.curve.red);
+		}
 
-		if (!this.z.red) {this.z = this.z.toRed(this.curve.red);}
+		if (!this.z.red) {
+			this.z = this.z.toRed(this.curve.red);
+		}
 
-		if (this.t && !this.t.red) {this.t = this.t.toRed(this.curve.red);}
+		if (this.t && !this.t.red) {
+			this.t = this.t.toRed(this.curve.red);
+		}
 
 		this.zOne = this.z.eq(this.curve.one);
 
@@ -6710,7 +7404,9 @@ class EdwardsPoint extends Point {
 
 		if (!this.t) {
 			this.t = this.x.redMul(this.y);
-			if (!this.zOne) {this.t = this.t.redDiv(this.z);}
+			if (!this.zOne) {
+				this.t = this.t.redDiv(this.z);
+			}
 		}
 	}
 
@@ -6732,7 +7428,9 @@ class EdwardsPoint extends Point {
 		// involved (the 4-torsion point
 		// is _not_ representable when
 		// `d` is square).
-		if (this.z.isZero()) {throw new Error("Invalid point.");}
+		if (this.z.isZero()) {
+			throw new Error("Invalid point.");
+		}
 	}
 
 	clone() {
@@ -6744,7 +7442,9 @@ class EdwardsPoint extends Point {
 		// 1I + 2M (+ 1M if extended)
 
 		// Z1 = 1
-		if (this.zOne) {return this;}
+		if (this.zOne) {
+			return this;
+		}
 
 		// A = 1 / Z1
 		const a = this.z.redInvert();
@@ -6797,20 +7497,28 @@ class EdwardsPoint extends Point {
 		assert(p instanceof EdwardsPoint);
 
 		// P = O
-		if (this.isInfinity()) {return p;}
+		if (this.isInfinity()) {
+			return p;
+		}
 
 		// Q = O
-		if (p.isInfinity()) {return this;}
+		if (p.isInfinity()) {
+			return this;
+		}
 
 		// Z1 = 1
-		if (this.zOne) {return p._add(this);}
+		if (this.zOne) {
+			return p._add(this);
+		}
 
 		return this._add(p);
 	}
 
 	_add(p) {
 		// a = -1
-		if (this.curve.mOneA) {return this._addM1(p);}
+		if (this.curve.mOneA) {
+			return this._addM1(p);
+		}
 
 		return this._addA(p);
 	}
@@ -6914,7 +7622,9 @@ class EdwardsPoint extends Point {
 
 	dbl() {
 		// P = O
-		if (this.isInfinity()) {return this;}
+		if (this.isInfinity()) {
+			return this;
+		}
 
 		return this._dbl();
 	}
@@ -6981,7 +7691,9 @@ class EdwardsPoint extends Point {
 		assert(!p.z.isZero());
 
 		// P = Q
-		if (this === p) {return true;}
+		if (this === p) {
+			return true;
+		}
 
 		// Z1 = Z2
 		if (this.z.eq(p.z)) {
@@ -6992,7 +7704,9 @@ class EdwardsPoint extends Point {
 		const x1 = this.x.redMul(p.z);
 		const x2 = p.x.redMul(this.z);
 
-		if (!x1.eq(x2)) {return false;}
+		if (!x1.eq(x2)) {
+			return false;
+		}
 
 		const y1 = this.y.redMul(p.z);
 		const y2 = p.y.redMul(this.z);
@@ -7010,14 +7724,18 @@ class EdwardsPoint extends Point {
 		assert(!this.z.isZero());
 
 		// X1 = 0
-		if (!this.x.isZero()) {return false;}
+		if (!this.x.isZero()) {
+			return false;
+		}
 
 		// Y1 = Z1
 		return this.y.eq(this.z);
 	}
 
 	isOrder2() {
-		if (this.isInfinity()) {return false;}
+		if (this.isInfinity()) {
+			return false;
+		}
 
 		return this.x.isZero();
 	}
@@ -7059,18 +7777,24 @@ class EdwardsPoint extends Point {
 
 		y.setn(curve.signBit, 0);
 
-		if (y.cmp(curve.p) >= 0) {throw new Error("Invalid point.");}
+		if (y.cmp(curve.p) >= 0) {
+			throw new Error("Invalid point.");
+		}
 
 		return curve.pointFromY(y, sign);
 	}
 
 	toJSON(pre) {
-		if (this.isInfinity()) {return [];}
+		if (this.isInfinity()) {
+			return [];
+		}
 
 		const x = this.getX().toJSON();
 		const y = this.getY().toJSON();
 
-		if (pre === true && this.pre) {return [x, y, this.pre.toJSON()];}
+		if (pre === true && this.pre) {
+			return [x, y, this.pre.toJSON()];
+		}
 
 		return [x, y];
 	}
@@ -7088,19 +7812,25 @@ class EdwardsPoint extends Point {
 		assert(Array.isArray(json));
 		assert(json.length === 0 || json.length === 2 || json.length === 3);
 
-		if (json.length === 0) {return curve.point();}
+		if (json.length === 0) {
+			return curve.point();
+		}
 
 		const x = BN.fromJSON(json[0]);
 		const y = BN.fromJSON(json[1]);
 		const point = curve.point(x, y);
 
-		if (json.length > 2 && json[2] != null) {point.pre = Precomp.fromJSON(point, json[2]);}
+		if (json.length > 2 && json[2] != null) {
+			point.pre = Precomp.fromJSON(point, json[2]);
+		}
 
 		return point;
 	}
 
 	[custom]() {
-		if (this.isInfinity()) {return "<EdwardsPoint: Infinity>";}
+		if (this.isInfinity()) {
+			return "<EdwardsPoint: Infinity>";
+		}
 
 		return (
 			"<EdwardsPoint:" +
@@ -7133,9 +7863,13 @@ class Precomp {
 
 		const out = new this.constructor();
 
-		if (this.naf) {out.naf = this.naf.map(func);}
+		if (this.naf) {
+			out.naf = this.naf.map(func);
+		}
 
-		if (this.doubles) {out.doubles = this.doubles.map(func);}
+		if (this.doubles) {
+			out.doubles = this.doubles.map(func);
+		}
 
 		return out;
 	}
@@ -7153,13 +7887,21 @@ class Precomp {
 		assert(point instanceof Point);
 		assert(json && typeof json === "object");
 
-		if (json.naf != null) {this.naf = NAF.fromJSON(point, json.naf);}
+		if (json.naf != null) {
+			this.naf = NAF.fromJSON(point, json.naf);
+		}
 
-		if (json.windows != null) {this.windows = Windows.fromJSON(point, json.windows);}
+		if (json.windows != null) {
+			this.windows = Windows.fromJSON(point, json.windows);
+		}
 
-		if (json.doubles != null) {this.doubles = Doubles.fromJSON(point, json.doubles);}
+		if (json.doubles != null) {
+			this.doubles = Doubles.fromJSON(point, json.doubles);
+		}
 
-		if (json.blinding != null) {this.blinding = Blinding.fromJSON(point, json.blinding);}
+		if (json.blinding != null) {
+			this.blinding = Blinding.fromJSON(point, json.blinding);
+		}
 
 		return this;
 	}
@@ -7185,7 +7927,9 @@ class NAF {
 		const { width } = this;
 		const points = [];
 
-		for (const point of this.points) {points.push(func(point));}
+		for (const point of this.points) {
+			points.push(func(point));
+		}
 
 		return new this.constructor(width, points);
 	}
@@ -7207,7 +7951,9 @@ class NAF {
 		const { width } = json;
 		const points = [point];
 
-		for (const item of json.points) {points.push(curve.pointFromJSON(item));}
+		for (const item of json.points) {
+			points.push(curve.pointFromJSON(item));
+		}
 
 		return new this(width, points);
 	}
@@ -7243,7 +7989,9 @@ class Windows {
 		const { width, bits } = json;
 		const points = [point];
 
-		for (const item of json.points) {points.push(curve.pointFromJSON(item));}
+		for (const item of json.points) {
+			points.push(curve.pointFromJSON(item));
+		}
 
 		return new this(width, bits, points);
 	}
@@ -7265,7 +8013,9 @@ class Doubles {
 		const { step } = this;
 		const points = [];
 
-		for (const point of this.points) {points.push(func(point));}
+		for (const point of this.points) {
+			points.push(func(point));
+		}
 
 		return new this.constructor(step, points);
 	}
@@ -7287,7 +8037,9 @@ class Doubles {
 		const { step } = json;
 		const points = [point];
 
-		for (const item of json.points) {points.push(curve.pointFromJSON(item));}
+		for (const item of json.points) {
+			points.push(curve.pointFromJSON(item));
+		}
 
 		return new this(step, points);
 	}
@@ -7400,40 +8152,34 @@ class P192 extends ShortCurve {
 	constructor(pre) {
 		super({
 			// -3 mod p
-a: ["ffffffff ffffffff ffffffff fffffffe", "ffffffff fffffffc"],
-			
-b: ["64210519 e59c80e7 0fa7e9ab 72243049", "feb8deec c146b9b1"],
-			
-endian: "be",
-			
-g: [
+			a: ["ffffffff ffffffff ffffffff fffffffe", "ffffffff fffffffc"],
+
+			b: ["64210519 e59c80e7 0fa7e9ab 72243049", "feb8deec c146b9b1"],
+
+			endian: "be",
+
+			g: [
 				["188da80e b03090f6 7cbf20eb 43a18800", "f4ff0afd 82ff1012"],
 				["07192b95 ffc8da78 631011ed 6b24cdd5", "73f977a1 1e794811"],
 				pre,
 			],
-			
 
-h: "1",
-			
+			h: "1",
 
+			hash: "SHA256",
 
-hash: "SHA256",
-			
-			
+			id: "P192",
 
-id: "P192",
-			
-			
-n: ["ffffffff ffffffff ffffffff 99def836", "146bc9b1 b4d22831"],
-			
-ossl: "prime192v1",
+			n: ["ffffffff ffffffff ffffffff 99def836", "146bc9b1 b4d22831"],
+
+			ossl: "prime192v1",
 			// 2^192 - 2^64 - 1 (= 3 mod 4)
-p: ["ffffffff ffffffff ffffffff fffffffe", "ffffffff ffffffff"],
+			p: ["ffffffff ffffffff ffffffff fffffffe", "ffffffff ffffffff"],
 			prime: "p192",
-			
+
 			type: "short",
 			// Icart
-z: "-5",
+			z: "-5",
 		});
 	}
 }
@@ -7448,40 +8194,34 @@ class P224 extends ShortCurve {
 	constructor(pre) {
 		super({
 			// -3 mod p
-a: ["ffffffff ffffffff ffffffff fffffffe", "ffffffff ffffffff fffffffe"],
-			
-b: ["b4050a85 0c04b3ab f5413256 5044b0b7", "d7bfd8ba 270b3943 2355ffb4"],
-			
-endian: "be",
-			
-g: [
+			a: ["ffffffff ffffffff ffffffff fffffffe", "ffffffff ffffffff fffffffe"],
+
+			b: ["b4050a85 0c04b3ab f5413256 5044b0b7", "d7bfd8ba 270b3943 2355ffb4"],
+
+			endian: "be",
+
+			g: [
 				["b70e0cbd 6bb4bf7f 321390b9 4a03c1d3", "56c21122 343280d6 115c1d21"],
 				["bd376388 b5f723fb 4c22dfe6 cd4375a0", "5a074764 44d58199 85007e34"],
 				pre,
 			],
-			
 
-h: "1",
-			
+			h: "1",
 
+			hash: "SHA256",
 
-hash: "SHA256",
-			
-			
+			id: "P224",
 
-id: "P224",
-			
-			
-n: ["ffffffff ffffffff ffffffff ffff16a2", "e0b8f03e 13dd2945 5c5c2a3d"],
-			
-ossl: "secp224r1",
+			n: ["ffffffff ffffffff ffffffff ffff16a2", "e0b8f03e 13dd2945 5c5c2a3d"],
+
+			ossl: "secp224r1",
 			// 2^224 - 2^96 + 1 (1 mod 16)
-p: ["ffffffff ffffffff ffffffff ffffffff", "00000000 00000000 00000001"],
+			p: ["ffffffff ffffffff ffffffff ffffffff", "00000000 00000000 00000001"],
 			prime: "p224",
-			
+
 			type: "short",
 			// SSWU
-z: "1f",
+			z: "1f",
 		});
 	}
 }
@@ -7496,40 +8236,34 @@ class P256 extends ShortCurve {
 	constructor(pre) {
 		super({
 			// -3 mod p
-a: ["ffffffff 00000001 00000000 00000000", "00000000 ffffffff ffffffff fffffffc"],
-			
-b: ["5ac635d8 aa3a93e7 b3ebbd55 769886bc", "651d06b0 cc53b0f6 3bce3c3e 27d2604b"],
-			
-endian: "be",
-			
-g: [
+			a: ["ffffffff 00000001 00000000 00000000", "00000000 ffffffff ffffffff fffffffc"],
+
+			b: ["5ac635d8 aa3a93e7 b3ebbd55 769886bc", "651d06b0 cc53b0f6 3bce3c3e 27d2604b"],
+
+			endian: "be",
+
+			g: [
 				["6b17d1f2 e12c4247 f8bce6e5 63a440f2", "77037d81 2deb33a0 f4a13945 d898c296"],
 				["4fe342e2 fe1a7f9b 8ee7eb4a 7c0f9e16", "2bce3357 6b315ece cbb64068 37bf51f5"],
 				pre,
 			],
-			
 
-h: "1",
-			
+			h: "1",
 
+			hash: "SHA256",
 
-hash: "SHA256",
-			
-			
+			id: "P256",
 
-id: "P256",
-			
-			
-n: ["ffffffff 00000000 ffffffff ffffffff", "bce6faad a7179e84 f3b9cac2 fc632551"],
-			
-ossl: "prime256v1",
+			n: ["ffffffff 00000000 ffffffff ffffffff", "bce6faad a7179e84 f3b9cac2 fc632551"],
+
+			ossl: "prime256v1",
 			// 2^256 - 2^224 + 2^192 + 2^96 - 1 (= 3 mod 4)
-p: ["ffffffff 00000001 00000000 00000000", "00000000 ffffffff ffffffff ffffffff"],
+			p: ["ffffffff 00000001 00000000 00000000", "00000000 ffffffff ffffffff ffffffff"],
 			prime: null,
-			
+
 			type: "short",
 			// SSWU
-z: "-a",
+			z: "-a",
 		});
 	}
 }
@@ -7544,21 +8278,21 @@ class P384 extends ShortCurve {
 	constructor(pre) {
 		super({
 			// -3 mod p
-a: [
+			a: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff fffffffe",
 				"ffffffff 00000000 00000000 fffffffc",
 			],
-			
-b: [
+
+			b: [
 				"b3312fa7 e23ee7e4 988e056b e3f82d19",
 				"181d9c6e fe814112 0314088f 5013875a",
 				"c656398d 8a2ed19d 2a85c8ed d3ec2aef",
 			],
-			
-endian: "be",
-			
-g: [
+
+			endian: "be",
+
+			g: [
 				[
 					"aa87ca22 be8b0537 8eb1c71e f320ad74",
 					"6e1d3b62 8ba79b98 59f741e0 82542a38",
@@ -7571,37 +8305,31 @@ g: [
 				],
 				pre,
 			],
-			
 
-h: "1",
-			
+			h: "1",
 
+			hash: "SHA384",
 
-hash: "SHA384",
-			
-			
+			id: "P384",
 
-id: "P384",
-			
-			
-n: [
+			n: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff c7634d81 f4372ddf",
 				"581a0db2 48b0a77a ecec196a ccc52973",
 			],
-			
-ossl: "secp384r1",
+
+			ossl: "secp384r1",
 			// 2^384 - 2^128 - 2^96 + 2^32 - 1 (= 3 mod 4)
-p: [
+			p: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff fffffffe",
 				"ffffffff 00000000 00000000 ffffffff",
 			],
 			prime: null,
-			
+
 			type: "short",
 			// Icart
-z: "-c",
+			z: "-c",
 		});
 	}
 }
@@ -7616,25 +8344,25 @@ class P521 extends ShortCurve {
 	constructor(pre) {
 		super({
 			// -3 mod p
-a: [
+			a: [
 				"000001ff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"fffffffc",
 			],
-			
-b: [
+
+			b: [
 				"00000051 953eb961 8e1c9a1f 929a21a0",
 				"b68540ee a2da725b 99b315f3 b8b48991",
 				"8ef109e1 56193951 ec7e937b 1652c0bd",
 				"3bb1bf07 3573df88 3d2c34f1 ef451fd4",
 				"6b503f00",
 			],
-			
-endian: "be",
-			
-g: [
+
+			endian: "be",
+
+			g: [
 				[
 					"000000c6 858e06b7 0404e9cd 9e3ecb66",
 					"2395b442 9c648139 053fb521 f828af60",
@@ -7651,30 +8379,24 @@ g: [
 				],
 				pre,
 			],
-			
 
-h: "1",
-			
+			h: "1",
 
+			hash: "SHA512",
 
-hash: "SHA512",
-			
-			
+			id: "P521",
 
-id: "P521",
-			
-			
-n: [
+			n: [
 				"000001ff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"fffffffa 51868783 bf2f966b 7fcc0148",
 				"f709a5d0 3bb5c9b8 899c47ae bb6fb71e",
 				"91386409",
 			],
-			
-ossl: "secp521r1",
+
+			ossl: "secp521r1",
 			// 2^521 - 1 (= 3 mod 4)
-p: [
+			p: [
 				"000001ff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
@@ -7682,10 +8404,10 @@ p: [
 				"ffffffff",
 			],
 			prime: "p521",
-			
+
 			type: "short",
 			// SSWU
-z: "-4",
+			z: "-4",
 		});
 	}
 }
@@ -7702,13 +8424,12 @@ class SECP256K1 extends ShortCurve {
 			a: "0",
 			b: "7",
 			// sqrt(-3)
-c: ["0a2d2ba9 3507f1df 233770c2 a797962c", "c61f6d15 da14ecd4 7d8d27ae 1cd5f852"],
-			
-endian: "be",
-			
+			c: ["0a2d2ba9 3507f1df 233770c2 a797962c", "c61f6d15 da14ecd4 7d8d27ae 1cd5f852"],
 
-// Precomputed endomorphism.
-endo: {
+			endian: "be",
+
+			// Precomputed endomorphism.
+			endo: {
 				basis: [
 					{
 						a: "3086d221a7d46bcde86c90e49284eb15",
@@ -7727,51 +8448,32 @@ endo: {
 					["-", "e4437ed6 010e8828 6f547fa9 0abfe4c4", "221208ac 9df506c6 1571b4ae 8ac47f71"],
 				],
 			},
-			
 
-
-
-g: [
+			g: [
 				["79be667e f9dcbbac 55a06295 ce870b07", "029bfcdb 2dce28d9 59f2815b 16f81798"],
 				["483ada77 26a3c465 5da4fbfc 0e1108a8", "fd17b448 a6855419 9c47d08f fb10d4b8"],
 				pre,
 			],
-			
-			
 
+			h: "1",
 
-h: "1",
-			
+			hash: "SHA256",
 
+			id: "SECP256K1",
 
-hash: "SHA256",
-			
+			n: ["ffffffff ffffffff ffffffff fffffffe", "baaedce6 af48a03b bfd25e8c d0364141"],
 
+			ossl: "secp256k1",
 
-id: "SECP256K1",
-			
+			// 2^256 - 2^32 - 977 (= 3 mod 4)
+			p: ["ffffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff fffffffe fffffc2f"],
 
+			prime: "k256",
 
-n: ["ffffffff ffffffff ffffffff fffffffe", "baaedce6 af48a03b bfd25e8c d0364141"],
-			
+			type: "short",
 
-
-ossl: "secp256k1",
-			
-			
-
-// 2^256 - 2^32 - 977 (= 3 mod 4)
-p: ["ffffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff fffffffe fffffc2f"],
-			
-			
-
-prime: "k256",
-			
-
-type: "short",
-			
 			// SVDW
-z: "1",
+			z: "1",
 		});
 	}
 }
@@ -7792,25 +8494,23 @@ class BRAINPOOLP256 extends ShortCurve {
 				["547ef835 c3dac4fd 97f8461a 14611dc9", "c2774513 2ded8e54 5c1d54c7 2f046997"],
 				pre,
 			],
-			
-h: "1",
-			
 
-hash: "SHA256",
-			
-			
-id: "BRAINPOOLP256",
-			
-n: ["a9fb57db a1eea9bc 3e660a90 9d838d71", "8c397aa3 b561a6f7 901e0e82 974856a7"],
-			
-ossl: "brainpoolP256r1",
+			h: "1",
+
+			hash: "SHA256",
+
+			id: "BRAINPOOLP256",
+
+			n: ["a9fb57db a1eea9bc 3e660a90 9d838d71", "8c397aa3 b561a6f7 901e0e82 974856a7"],
+
+			ossl: "brainpoolP256r1",
 			// (= 3 mod 4)
-p: ["a9fb57db a1eea9bc 3e660a90 9d838d72", "6e3bf623 d5262028 2013481d 1f6e5377"],
+			p: ["a9fb57db a1eea9bc 3e660a90 9d838d72", "6e3bf623 d5262028 2013481d 1f6e5377"],
 			prime: null,
-			
+
 			type: "short",
 			// Icart
-z: "-2",
+			z: "-2",
 		});
 	}
 }
@@ -7847,33 +8547,31 @@ class BRAINPOOLP384 extends ShortCurve {
 				],
 				pre,
 			],
-			
-h: "1",
-			
 
-hash: "SHA384",
-			
-			
-id: "BRAINPOOLP384",
-			
-n: [
+			h: "1",
+
+			hash: "SHA384",
+
+			id: "BRAINPOOLP384",
+
+			n: [
 				"8cb91e82 a3386d28 0f5d6f7e 50e641df",
 				"152f7109 ed5456b3 1f166e6c ac0425a7",
 				"cf3ab6af 6b7fc310 3b883202 e9046565",
 			],
-			
-ossl: "brainpoolP384r1",
+
+			ossl: "brainpoolP384r1",
 			// (= 3 mod 4)
-p: [
+			p: [
 				"8cb91e82 a3386d28 0f5d6f7e 50e641df",
 				"152f7109 ed5456b4 12b1da19 7fb71123",
 				"acd3a729 901d1a71 87470013 3107ec53",
 			],
 			prime: null,
-			
+
 			type: "short",
 			// SSWU
-z: "-5",
+			z: "-5",
 		});
 	}
 }
@@ -7914,35 +8612,33 @@ class BRAINPOOLP512 extends ShortCurve {
 				],
 				pre,
 			],
-			
-h: "1",
-			
 
-hash: "SHA512",
-			
-			
-id: "BRAINPOOLP512",
-			
-n: [
+			h: "1",
+
+			hash: "SHA512",
+
+			id: "BRAINPOOLP512",
+
+			n: [
 				"aadd9db8 dbe9c48b 3fd4e6ae 33c9fc07",
 				"cb308db3 b3c9d20e d6639cca 70330870",
 				"553e5c41 4ca92619 41866119 7fac1047",
 				"1db1d381 085ddadd b5879682 9ca90069",
 			],
-			
-ossl: "brainpoolP512r1",
+
+			ossl: "brainpoolP512r1",
 			// (= 3 mod 4)
-p: [
+			p: [
 				"aadd9db8 dbe9c48b 3fd4e6ae 33c9fc07",
 				"cb308db3 b3c9d20e d6639cca 70330871",
 				"7d4d9b00 9bc66842 aecda12a e6a380e6",
 				"2881ff2f 2d82c685 28aa6056 583a48f3",
 			],
 			prime: null,
-			
+
 			type: "short",
 			// Icart
-z: "7",
+			z: "7",
 		});
 	}
 }
@@ -7956,37 +8652,31 @@ class X25519 extends MontCurve {
 	constructor() {
 		super({
 			// 486662
-a: "76d06",
-			
-b: "1",
-			
-endian: "le",
-			
-g: [
+			a: "76d06",
+
+			b: "1",
+
+			endian: "le",
+
+			g: [
 				["00000000 00000000 00000000 00000000", "00000000 00000000 00000000 00000009"],
 				// See: https://www.rfc-editor.org/errata/eid4730
 				["5f51e65e 475f794b 1fe122d3 88b72eb3", "6dc2b281 92839e4d d6163a5d 81312c14"],
 			],
-			
 
-h: "8",
-			
+			h: "8",
 
+			hash: "SHA512",
 
-hash: "SHA512",
-			
-			
+			id: "X25519",
 
-id: "X25519",
-			
-			
-n: ["10000000 00000000 00000000 00000000", "14def9de a2f79cd6 5812631a 5cf5d3ed"],
-			
-ossl: "X25519",
+			n: ["10000000 00000000 00000000 00000000", "14def9de a2f79cd6 5812631a 5cf5d3ed"],
+
+			ossl: "X25519",
 			// 2^255 - 19 (= 5 mod 8)
-p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"],
+			p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"],
 			prime: "p25519",
-			
+
 			torsion: [
 				[],
 				[
@@ -8018,10 +8708,10 @@ p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"
 					["46ce3ed6 a9617c5a d6b7d3eb 19d74ba8", "6cc403d6 127fe4b2 9778eb7c 6daf84d3"],
 				],
 			],
-			
-type: "mont",
+
+			type: "mont",
 			// Elligator 2
-z: "2",
+			z: "2",
 		});
 	}
 }
@@ -8035,13 +8725,13 @@ class X448 extends MontCurve {
 	constructor() {
 		super({
 			// 156326
-a: "262a6",
-			
-b: "1",
-			
-endian: "le",
-			
-g: [
+			a: "262a6",
+
+			b: "1",
+
+			endian: "le",
+
+			g: [
 				[
 					"00000000 00000000 00000000 00000000",
 					"00000000 00000000 00000000 00000000",
@@ -8055,36 +8745,30 @@ g: [
 					"6fd7223d 457b5b1a",
 				],
 			],
-			
 
-h: "4",
-			
+			h: "4",
 
+			hash: "SHAKE256",
 
-hash: "SHAKE256",
-			
-			
+			id: "X448",
 
-id: "X448",
-			
-			
-n: [
+			n: [
 				"3fffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff 7cca23e9",
 				"c44edb49 aed63690 216cc272 8dc58f55",
 				"2378c292 ab5844f3",
 			],
-			
-ossl: "X448",
+
+			ossl: "X448",
 			// 2^448 - 2^224 - 1 (= 3 mod 4)
-p: [
+			p: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff fffffffe ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff",
 			],
 			prime: "p448",
-			
+
 			torsion: [
 				[],
 				[
@@ -8130,10 +8814,10 @@ p: [
 					],
 				],
 			],
-			
-type: "mont",
+
+			type: "mont",
 			// Elligator 2
-z: "-1",
+			z: "-1",
 		});
 	}
 }
@@ -8147,18 +8831,18 @@ class MONT448 extends MontCurve {
 	constructor() {
 		super({
 			// -78160 / -39082 mod p
-a: [
+			a: [
 				"b2cf97d2 d43459a9 31ed36b1 fc4e3cb5",
 				"5d93f8d2 22746997 60ccffc6 49961ed6",
 				"c5b05fca c24864ed 6fb59697 931b78da",
 				"84ddecd8 ca2b5cfb",
 			],
-			
-b: "1",
-			
-endian: "le",
-			
-g: [
+
+			b: "1",
+
+			endian: "le",
+
+			g: [
 				[
 					"ac0d24cc c6c75cb0 eb71f81e 7a6edf51",
 					"48e88aee 009a2a24 e795687e c28e125a",
@@ -8172,36 +8856,30 @@ g: [
 					"556c41a5 913f55fe",
 				],
 			],
-			
 
-h: "4",
-			
+			h: "4",
 
+			hash: "SHAKE256",
 
-hash: "SHAKE256",
-			
-			
+			id: "MONT448",
 
-id: "MONT448",
-			
-			
-n: [
+			n: [
 				"3fffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff 7cca23e9",
 				"c44edb49 aed63690 216cc272 8dc58f55",
 				"2378c292 ab5844f3",
 			],
-			
-ossl: null,
+
+			ossl: null,
 			// 2^448 - 2^224 - 1 (= 3 mod 4)
-p: [
+			p: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff fffffffe ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff",
 			],
 			prime: "p448",
-			
+
 			torsion: [
 				[],
 				[
@@ -8247,10 +8925,10 @@ p: [
 					],
 				],
 			],
-			
-type: "mont",
+
+			type: "mont",
 			// Elligator 2
-z: "-1",
+			z: "-1",
 		});
 	}
 }
@@ -8266,40 +8944,32 @@ class ED25519 extends EdwardsCurve {
 			a: "-1",
 			context: false,
 			// -121665 / 121666 mod p
-d: ["52036cee 2b6ffe73 8cc74079 7779e898", "00700a4d 4141d8ab 75eb4dca 135978a3"],
-			
-endian: "le",
-			
-g: [
+			d: ["52036cee 2b6ffe73 8cc74079 7779e898", "00700a4d 4141d8ab 75eb4dca 135978a3"],
+
+			endian: "le",
+
+			g: [
 				["216936d3 cd6e53fe c0a4e231 fdd6dc5c", "692cc760 9525a7b2 c9562d60 8f25d51a"],
 				// 4/5
 				["66666666 66666666 66666666 66666666", "66666666 66666666 66666666 66666658"],
 				pre,
 			],
-			
 
-h: "8",
-			
+			h: "8",
 
+			hash: "SHA512",
 
-hash: "SHA512",
-			
+			id: "ED25519",
 
+			n: ["10000000 00000000 00000000 00000000", "14def9de a2f79cd6 5812631a 5cf5d3ed"],
 
-id: "ED25519",
-			
-			
+			ossl: "ED25519",
 
-n: ["10000000 00000000 00000000 00000000", "14def9de a2f79cd6 5812631a 5cf5d3ed"],
-			
-
-ossl: "ED25519",
-			
 			// 2^255 - 19 (= 5 mod 8)
-p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"],
+			p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"],
 			prefix: "SigEd25519 no Ed25519 collisions",
 			prime: "p25519",
-			
+
 			torsion: [
 				[
 					["00000000 00000000 00000000 00000000", "00000000 00000000 00000000 00000000"],
@@ -8334,10 +9004,10 @@ p: ["7fffffff ffffffff ffffffff ffffffff", "ffffffff ffffffff ffffffff ffffffed"
 					["7a03ac92 77fdc74e c6cc392c fa53202a", "0f67100d 760b3cba 4fd84d3d 706a17c7"],
 				],
 			],
-			
-type: "edwards",
+
+			type: "edwards",
 			// Elligator 2
-z: "2",
+			z: "2",
 		});
 	}
 }
@@ -8354,16 +9024,16 @@ class ISO448 extends EdwardsCurve {
 			a: "1",
 			context: true,
 			// 39082 / 39081 mod p
-d: [
+			d: [
 				"d78b4bdc 7f0daf19 f24f38c2 9373a2cc",
 				"ad461572 42a50f37 809b1da3 412a12e7",
 				"9ccc9c81 264cfe9a d0809970 58fb61c4",
 				"243cc32d baa156b9",
 			],
-			
-endian: "le",
-			
-g: [
+
+			endian: "le",
+
+			g: [
 				[
 					"79a70b2b 70400553 ae7c9df4 16c792c6",
 					"1128751a c9296924 0c25a07d 728bdc93",
@@ -8379,32 +9049,24 @@ g: [
 				],
 				pre,
 			],
-			
 
-h: "4",
-			
+			h: "4",
 
+			hash: "SHAKE256",
 
-hash: "SHAKE256",
-			
+			id: "ISO448",
 
-
-id: "ISO448",
-			
-			
-
-n: [
+			n: [
 				"3fffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff 7cca23e9",
 				"c44edb49 aed63690 216cc272 8dc58f55",
 				"2378c292 ab5844f3",
 			],
-			
 
-ossl: null,
-			
+			ossl: null,
+
 			// 2^448 - 2^224 - 1 (= 3 mod 4)
-p: [
+			p: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff fffffffe ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
@@ -8412,7 +9074,7 @@ p: [
 			],
 			prefix: "SigEd448",
 			prime: "p448",
-			
+
 			torsion: [
 				[
 					[
@@ -8471,10 +9133,10 @@ p: [
 					],
 				],
 			],
-			
-type: "edwards",
+
+			type: "edwards",
 			// Elligator 2
-z: "-1",
+			z: "-1",
 		});
 	}
 }
@@ -8490,16 +9152,16 @@ class ED448 extends EdwardsCurve {
 			a: "1",
 			context: true,
 			// -39081 mod p
-d: [
+			d: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff fffffffe ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffff6756",
 			],
-			
-endian: "le",
-			
-g: [
+
+			endian: "le",
+
+			g: [
 				[
 					"4f1970c6 6bed0ded 221d15a6 22bf36da",
 					"9e146570 470f1767 ea6de324 a3d3a464",
@@ -8514,32 +9176,24 @@ g: [
 				],
 				pre,
 			],
-			
 
-h: "4",
-			
+			h: "4",
 
+			hash: "SHAKE256",
 
-hash: "SHAKE256",
-			
+			id: "ED448",
 
-
-id: "ED448",
-			
-			
-
-n: [
+			n: [
 				"3fffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff ffffffff 7cca23e9",
 				"c44edb49 aed63690 216cc272 8dc58f55",
 				"2378c292 ab5844f3",
 			],
-			
 
-ossl: "ED448",
-			
+			ossl: "ED448",
+
 			// 2^448 - 2^224 - 1 (= 3 mod 4)
-p: [
+			p: [
 				"ffffffff ffffffff ffffffff ffffffff",
 				"ffffffff ffffffff fffffffe ffffffff",
 				"ffffffff ffffffff ffffffff ffffffff",
@@ -8547,7 +9201,7 @@ p: [
 			],
 			prefix: "SigEd448",
 			prime: "p448",
-			
+
 			torsion: [
 				[
 					[
@@ -8606,10 +9260,10 @@ p: [
 					],
 				],
 			],
-			
-type: "edwards",
+
+			type: "edwards",
 			// Elligator 2
-z: "-1",
+			z: "-1",
 		});
 	}
 }
@@ -8666,7 +9320,9 @@ function curve(name, ...arguments_) {
 	if (!curve) {
 		const Curve = curves[key];
 
-		if (!Curve) {throw new Error(`Curve not found: "${name}".`);}
+		if (!Curve) {
+			throw new Error(`Curve not found: "${name}".`);
+		}
 
 		curve = new Curve(...arguments_);
 		cache[key] = curve;
@@ -8681,7 +9337,9 @@ function register(name, Curve) {
 
 	const key = name.toUpperCase();
 
-	if (curves[key]) {throw new Error(`Curve already registered: "${name}".`);}
+	if (curves[key]) {
+		throw new Error(`Curve already registered: "${name}".`);
+	}
 
 	curves[key] = Curve;
 	cache[key] = null;
@@ -8710,7 +9368,9 @@ function getNAF(k, width, max) {
 
 	assert(bits <= max);
 
-	for (let index = 0; index < max; index++) {naf[index] = 0;}
+	for (let index = 0; index < max; index++) {
+		naf[index] = 0;
+	}
 
 	let index = 0;
 	let carry = 0;
@@ -8751,7 +9411,9 @@ function getFixedNAF(k, width, max, step) {
 	for (let j = 0; j < naf.length; j += step) {
 		let nafW = 0;
 
-		for (let k = j + step - 1; k >= j; k--) {nafW = (nafW << 1) + naf[k];}
+		for (let k = j + step - 1; k >= j; k--) {
+			nafW = (nafW << 1) + naf[k];
+		}
 
 		repr[index++] = nafW;
 	}
@@ -8791,31 +9453,45 @@ function getJSF(k1, k2, max) {
 		let u1 = 0;
 		let u2 = 0;
 
-		if (m14 === 3) {m14 = -1;}
+		if (m14 === 3) {
+			m14 = -1;
+		}
 
-		if (m24 === 3) {m24 = -1;}
+		if (m24 === 3) {
+			m24 = -1;
+		}
 
 		if (m14 & 1) {
 			const m8 = ((b1 & 7) + d1) & 7;
 
-			if ((m8 === 3 || m8 === 5) && m24 === 2) {u1 = -m14;}
-			else {u1 = m14;}
+			if ((m8 === 3 || m8 === 5) && m24 === 2) {
+				u1 = -m14;
+			} else {
+				u1 = m14;
+			}
 		}
 
 		if (m24 & 1) {
 			const m8 = ((b2 & 7) + d2) & 7;
 
-			if ((m8 === 3 || m8 === 5) && m14 === 2) {u2 = -m24;}
-			else {u2 = m24;}
+			if ((m8 === 3 || m8 === 5) && m14 === 2) {
+				u2 = -m24;
+			} else {
+				u2 = m24;
+			}
 		}
 
 		jsf[0][index] = u1 * s1;
 		jsf[1][index] = u2 * s2;
 
 		// Second phase.
-		if (2 * d1 === 1 + u1) {d1 = 1 - d1;}
+		if (2 * d1 === 1 + u1) {
+			d1 = 1 - d1;
+		}
 
-		if (2 * d2 === 1 + u2) {d2 = 1 - d2;}
+		if (2 * d2 === 1 + u2) {
+			d2 = 1 - d2;
+		}
 	}
 
 	for (let index = bits; index < max; index++) {
@@ -8849,7 +9525,9 @@ function assert(value, message) {
 	if (!value) {
 		const err = new Error(message || "Assertion failed");
 
-		if (Error.captureStackTrace) {Error.captureStackTrace(err, assert);}
+		if (Error.captureStackTrace) {
+			Error.captureStackTrace(err, assert);
+		}
 
 		throw err;
 	}
@@ -8873,8 +9551,11 @@ function mod(x, y) {
 	let r = x % y;
 
 	if (r < 0) {
-		if (y < 0) {r -= y;}
-		else {r += y;}
+		if (y < 0) {
+			r -= y;
+		} else {
+			r += y;
+		}
 	}
 
 	return r;
@@ -8886,7 +9567,9 @@ function cubeRoot(x) {
 
 	const p = x.red.m;
 
-	if (p.cmpn(3) <= 0) {return x.clone();}
+	if (p.cmpn(3) <= 0) {
+		return x.clone();
+	}
 
 	// p = 2 mod 3
 	if (p.modrn(3) === 2) {
@@ -8904,7 +9587,9 @@ function cubeRoot(x) {
 		const r = x.redPow(e);
 		const c = r.redSqr().redMul(r);
 
-		if (!c.eq(x)) {throw new Error("X is not a cube mod P.");}
+		if (!c.eq(x)) {
+			throw new Error("X is not a cube mod P.");
+		}
 
 		return r;
 	}
@@ -8916,7 +9601,9 @@ function cubeRoot(x) {
 		const r = x.redPow(e);
 		const c = r.redSqr().redMul(r);
 
-		if (!c.eq(x)) {throw new Error("X is not a cube mod P.");}
+		if (!c.eq(x)) {
+			throw new Error("X is not a cube mod P.");
+		}
 
 		return r;
 	}
@@ -8950,7 +9637,9 @@ function cubeRoots(x) {
 function uncube(x) {
 	// Find a cube root which is also a quadratic residue.
 	for (const root of cubeRoots(x)) {
-		if (root.redJacobi() >= 0) {return root;}
+		if (root.redJacobi() >= 0) {
+			return root;
+		}
 	}
 
 	throw new Error("X^(1/3) is not a square mod P.");
@@ -8967,11 +9656,15 @@ function memoize(method, self) {
 		const index = invert & 1;
 		const item = cache.get(curve);
 
-		if (item && item[index] !== null) {return item[index];}
+		if (item && item[index] !== null) {
+			return item[index];
+		}
 
 		const result = method.call(self, curve, invert);
 
-		if (!cache.has(curve)) {cache.set(curve, [null, null]);}
+		if (!cache.has(curve)) {
+			cache.set(curve, [null, null]);
+		}
 
 		cache.get(curve)[index] = result;
 
@@ -8983,7 +9676,9 @@ function toPretty(x, size) {
 	assert(x instanceof BN);
 	assert(size >>> 0 === size);
 
-	if (size & 7) {size += 8 - (size & 7);}
+	if (size & 7) {
+		size += 8 - (size & 7);
+	}
 
 	const str = x.toString(16, size);
 	const chunks = [];
@@ -8991,9 +9686,13 @@ function toPretty(x, size) {
 
 	assert((str.length & 7) === 0);
 
-	for (let index = 0; index < str.length; index += 8) {chunks.push(str.slice(index, index + 8));}
+	for (let index = 0; index < str.length; index += 8) {
+		chunks.push(str.slice(index, index + 8));
+	}
 
-	for (let index = 0; index < chunks.length; index += 4) {out.push(chunks.slice(index, index + 4).join(" "));}
+	for (let index = 0; index < chunks.length; index += 4) {
+		out.push(chunks.slice(index, index + 4).join(" "));
+	}
 
 	return out;
 }

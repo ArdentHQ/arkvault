@@ -20,7 +20,9 @@ function readSize(data, pos, strict) {
 	assert(pos >>> 0 === pos);
 	assert(typeof strict === "boolean");
 
-	if (pos >= data.length) {throw new Error("Invalid size.");}
+	if (pos >= data.length) {
+		throw new Error("Invalid size.");
+	}
 
 	const field = data[pos];
 	const bytes = field & 0x7F;
@@ -34,7 +36,9 @@ function readSize(data, pos, strict) {
 	}
 
 	// Indefinite form.
-	if (strict && bytes === 0) {throw new Error("Indefinite length.");}
+	if (strict && bytes === 0) {
+		throw new Error("Indefinite length.");
+	}
 
 	// Long form.
 	let size = 0;
@@ -46,15 +50,21 @@ function readSize(data, pos, strict) {
 
 		pos += 1;
 
-		if (size >= 1 << 24) {throw new Error("Length too large.");}
+		if (size >= 1 << 24) {
+			throw new Error("Length too large.");
+		}
 
 		size *= 0x1_00;
 		size += ch;
 
-		if (strict && size === 0) {throw new Error("Unexpected leading zeroes.");}
+		if (strict && size === 0) {
+			throw new Error("Unexpected leading zeroes.");
+		}
 	}
 
-	if (strict && size < 0x80) {throw new Error("Non-minimal length.");}
+	if (strict && size < 0x80) {
+		throw new Error("Non-minimal length.");
+	}
 
 	return [size, pos];
 }
@@ -64,14 +74,18 @@ function readSeq(data, pos, strict = true) {
 	assert(pos >>> 0 === pos);
 	assert(typeof strict === "boolean");
 
-	if (pos >= data.length || data[pos] !== 0x30) {throw new Error("Invalid sequence tag.");}
+	if (pos >= data.length || data[pos] !== 0x30) {
+		throw new Error("Invalid sequence tag.");
+	}
 
 	pos += 1;
 
 	let size;
 	[size, pos] = readSize(data, pos, strict);
 
-	if (strict && pos + size !== data.length) {throw new Error("Trailing bytes.");}
+	if (strict && pos + size !== data.length) {
+		throw new Error("Trailing bytes.");
+	}
 
 	return pos;
 }
@@ -81,24 +95,34 @@ function readInt(data, pos, strict = true) {
 	assert(pos >>> 0 === pos);
 	assert(typeof strict === "boolean");
 
-	if (pos >= data.length || data[pos] !== 0x02) {throw new Error("Invalid integer tag.");}
+	if (pos >= data.length || data[pos] !== 0x02) {
+		throw new Error("Invalid integer tag.");
+	}
 
 	pos += 1;
 
 	let size;
 	[size, pos] = readSize(data, pos, strict);
 
-	if (pos + size > data.length) {throw new Error("Integer body out of bounds.");}
+	if (pos + size > data.length) {
+		throw new Error("Integer body out of bounds.");
+	}
 
 	if (strict) {
 		// Zero length integer.
-		if (size === 0) {throw new Error("Zero length integer.");}
+		if (size === 0) {
+			throw new Error("Zero length integer.");
+		}
 
 		// No negatives.
-		if (data[pos] & 0x80) {throw new Error("Integers must be positive.");}
+		if (data[pos] & 0x80) {
+			throw new Error("Integers must be positive.");
+		}
 
 		// Allow zero only if it prefixes a high bit.
-		if (size > 1 && data[pos] === 0x00 && (data[pos + 1] & 0x80) === 0x00) {throw new Error("Unexpected leading zeroes.");}
+		if (size > 1 && data[pos] === 0x00 && (data[pos + 1] & 0x80) === 0x00) {
+			throw new Error("Unexpected leading zeroes.");
+		}
 	}
 
 	// Eat leading zeroes.
@@ -108,7 +132,9 @@ function readInt(data, pos, strict = true) {
 	}
 
 	// No reason to have an integer larger than this.
-	if (size > 2048) {throw new Error("Invalid integer size.");}
+	if (size > 2048) {
+		throw new Error("Invalid integer size.");
+	}
 
 	const number_ = BN.decode(data.slice(pos, pos + size));
 
@@ -126,7 +152,9 @@ function readVersion(data, pos, version, strict = true) {
 	let number_;
 	[number_, pos] = readInt(data, pos, strict);
 
-	if (number_.cmpn(version) !== 0) {throw new Error("Invalid version.");}
+	if (number_.cmpn(version) !== 0) {
+		throw new Error("Invalid version.");
+	}
 
 	return pos;
 }
@@ -134,13 +162,15 @@ function readVersion(data, pos, version, strict = true) {
 function sizeSize(size) {
 	assert(size >>> 0 === size);
 
-	if (size <= 0x7F)
+	if (size <= 0x7F) {
 		// [size]
-		{return 1;}
+		return 1;
+	}
 
-	if (size <= 0xFF)
+	if (size <= 0xFF) {
 		// 0x81 [size]
-		{return 2;}
+		return 2;
+	}
 
 	assert(size <= 0xFF_FF);
 
@@ -159,9 +189,13 @@ function sizeInt(number_) {
 
 	let size = (bits + 7) >>> 3;
 
-	if (bits > 0 && (bits & 7) === 0) {size += number_.testn(bits - 1);}
+	if (bits > 0 && (bits & 7) === 0) {
+		size += number_.testn(bits - 1);
+	}
 
-	if (bits === 0) {size = 1;}
+	if (bits === 0) {
+		size = 1;
+	}
 
 	return 1 + sizeSize(size) + size;
 }
@@ -216,18 +250,27 @@ function writeInt(data, pos, number_) {
 	let size = (bits + 7) >>> 3;
 	let pad = 0;
 
-	if (bits > 0 && (bits & 7) === 0) {pad = number_.testn(bits - 1);}
+	if (bits > 0 && (bits & 7) === 0) {
+		pad = number_.testn(bits - 1);
+	}
 
-	if (bits === 0) {size = 1;}
+	if (bits === 0) {
+		size = 1;
+	}
 
 	data[pos++] = 0x02;
 
 	pos = writeSize(data, pos, pad + size);
 
-	if (pad) {data[pos++] = 0x00;}
+	if (pad) {
+		data[pos++] = 0x00;
+	}
 
-	if (bits === 0) {data[pos] = 0x00;}
-	else {number_.encode().copy(data, pos);}
+	if (bits === 0) {
+		data[pos] = 0x00;
+	} else {
+		number_.encode().copy(data, pos);
+	}
 
 	pos += size;
 

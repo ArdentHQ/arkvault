@@ -1,6 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { ByteBuffer } from "./byte-buffer";
 
+const writeReadValues = "should write and read value (%s)";
+const throwRangeError = "should throw RangeError for value (%s)"
+
 describe("ByteBuffer", () => {
 	it("should return valid result & result length", () => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(1));
@@ -59,7 +62,7 @@ describe("ByteBuffer#Int8", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeInt8(dataset);
 
@@ -71,7 +74,7 @@ describe("ByteBuffer#Int8", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(shouldThrowRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt8(dataset)).toThrowError(RangeError);
@@ -86,7 +89,7 @@ describe("ByteBuffer#UInt8", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeUInt8(dataset);
 
@@ -98,7 +101,7 @@ describe("ByteBuffer#UInt8", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt8(dataset)).toThrowError(RangeError);
@@ -113,7 +116,7 @@ describe("ByteBuffer#Int16BE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeInt16BE(dataset);
 
@@ -125,7 +128,7 @@ describe("ByteBuffer#Int16BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt16BE(dataset)).toThrowError(RangeError);
@@ -140,7 +143,7 @@ describe("ByteBuffer#UInt16BE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeUInt16BE(dataset);
 
@@ -152,7 +155,7 @@ describe("ByteBuffer#UInt16BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt16BE(dataset)).toThrowError(RangeError);
@@ -167,7 +170,7 @@ describe("ByteBuffer#Int16LE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeInt16LE(dataset);
 
@@ -179,7 +182,7 @@ describe("ByteBuffer#Int16LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt16LE(dataset)).toThrowError(RangeError);
@@ -194,7 +197,7 @@ describe("ByteBuffer#UInt16LE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeUInt16LE(dataset);
 
@@ -206,7 +209,7 @@ describe("ByteBuffer#UInt16LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt16LE(dataset)).toThrowError(RangeError);
@@ -221,7 +224,7 @@ describe("ByteBuffer#Int32BE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeInt32BE(dataset);
 
@@ -233,7 +236,7 @@ describe("ByteBuffer#Int32BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt32BE(dataset)).toThrowError(RangeError);
@@ -248,7 +251,7 @@ describe("ByteBuffer#UInt32BE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeUInt32BE(dataset);
 
@@ -260,7 +263,7 @@ describe("ByteBuffer#UInt32BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt32BE(dataset)).toThrowError(RangeError);
@@ -275,7 +278,7 @@ describe("ByteBuffer#Int32LE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeInt32LE(dataset);
 
@@ -287,7 +290,7 @@ describe("ByteBuffer#Int32LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt32LE(dataset)).toThrowError(RangeError);
@@ -302,7 +305,7 @@ describe("ByteBuffer#UInt32LE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1, max + 1];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeUInt32LE(dataset);
 
@@ -314,7 +317,7 @@ describe("ByteBuffer#UInt32LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt32LE(dataset)).toThrowError(RangeError);
@@ -329,7 +332,7 @@ describe("ByteBuffer#BigInt64BE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1n, max + 1n];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeBigInt64BE(dataset);
 
@@ -341,7 +344,7 @@ describe("ByteBuffer#BigInt64BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigInt64BE(dataset)).toThrowError(RangeError);
@@ -356,7 +359,7 @@ describe("ByteBuffer#BigUInt64BE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1n, max + 1n];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeBigUInt64BE(dataset);
 
@@ -368,7 +371,7 @@ describe("ByteBuffer#BigUInt64BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigUInt64BE(dataset)).toThrowError(RangeError);
@@ -383,7 +386,7 @@ describe("ByteBuffer#BigInt64LE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1n, max + 1n];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeBigInt64LE(dataset);
 
@@ -395,7 +398,7 @@ describe("ByteBuffer#BigInt64LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigInt64LE(dataset)).toThrowError(RangeError);
@@ -410,7 +413,7 @@ describe("ByteBuffer#BigUInt64LE", () => {
 	const validValues = [min, max];
 	const invalidValues = [min - 1n, max + 1n];
 
-	it.each(validValues)("should write and read value (%s)", (dataset) => {
+	it.each(validValues)(writeReadValues, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 		byteBuffer.writeBigUInt64LE(dataset);
 
@@ -422,7 +425,7 @@ describe("ByteBuffer#BigUInt64LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)("should throw RangeError for value (%s)", (dataset) => {
+	it.each(invalidValues)(invalidScalarError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigUInt64LE(dataset)).toThrowError(RangeError);

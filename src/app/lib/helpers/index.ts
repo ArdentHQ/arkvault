@@ -23,7 +23,7 @@ export * from "./uniq-by.js";
 export * from "./upper-first.js";
 export * from "./abort.js";
 export * from "./format-string.js";
-export * from "./arr.js";
+export * from "./array.js";
 export * from "./validator.js";
 export * from "./has.js";
 export * from "./set.js";

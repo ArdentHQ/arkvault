@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+
 import { Collections, Contracts, DTO, IoC, Services } from "@ardenthq/sdk";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { UsernamesAbi } from "@mainsail/evm-contracts";
@@ -82,7 +84,7 @@ export class ClientService extends Services.AbstractClientService {
 							amount: 0,
 							id: vote,
 						},
-				  ]
+					]
 				: [],
 		};
 	}
@@ -122,7 +124,7 @@ export class ClientService extends Services.AbstractClientService {
 				"tx",
 			);
 		} catch (error) {
-			response = (error).response.json();
+			response = error.response.json();
 		}
 
 		const { data, errors } = response;
@@ -188,7 +190,7 @@ export class ClientService extends Services.AbstractClientService {
 				result: response.result,
 			};
 		} catch (error) {
-			const errorResponse = (error).response?.json();
+			const errorResponse = error.response?.json();
 			throw new Error(errorResponse?.error?.message || "Failed to make EVM call");
 		}
 	}

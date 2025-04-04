@@ -37,7 +37,9 @@ class ChaCha20 {
 		this.bytes = new Uint8Array(this.stream.buffer);
 		this.pos = -1;
 
-		if (BIG_ENDIAN) {this.bytes = Buffer.alloc(64);}
+		if (BIG_ENDIAN) {
+			this.bytes = Buffer.alloc(64);
+		}
 	}
 
 	/**
@@ -48,13 +50,17 @@ class ChaCha20 {
 	 */
 
 	init(key, nonce, counter) {
-		if (counter == null) {counter = 0;}
+		if (counter == null) {
+			counter = 0;
+		}
 
 		assert(Buffer.isBuffer(key));
 		assert(Buffer.isBuffer(nonce));
 		assert(Number.isSafeInteger(counter));
 
-		if (key.length !== 16 && key.length !== 32) {throw new RangeError("Invalid key size.");}
+		if (key.length !== 16 && key.length !== 32) {
+			throw new RangeError("Invalid key size.");
+		}
 
 		if (nonce.length >= 24) {
 			key = ChaCha20.derive(key, nonce.slice(0, 16));
@@ -76,31 +82,31 @@ class ChaCha20 {
 		this.state[12] = counter >>> 0;
 
 		switch (nonce.length) {
-		case 8: {
-			this.state[13] = (counter / 0x1_00_00_00_00) >>> 0;
-			this.state[14] = readU32(nonce, 0);
-			this.state[15] = readU32(nonce, 4);
-		
-		break;
-		}
-		case 12: {
-			this.state[13] = readU32(nonce, 0);
-			this.state[14] = readU32(nonce, 4);
-			this.state[15] = readU32(nonce, 8);
-		
-		break;
-		}
-		case 16: {
-			this.state[12] = readU32(nonce, 0);
-			this.state[13] = readU32(nonce, 4);
-			this.state[14] = readU32(nonce, 8);
-			this.state[15] = readU32(nonce, 12);
-		
-		break;
-		}
-		default: {
-			throw new RangeError("Invalid nonce size.");
-		}
+			case 8: {
+				this.state[13] = (counter / 0x1_00_00_00_00) >>> 0;
+				this.state[14] = readU32(nonce, 0);
+				this.state[15] = readU32(nonce, 4);
+
+				break;
+			}
+			case 12: {
+				this.state[13] = readU32(nonce, 0);
+				this.state[14] = readU32(nonce, 4);
+				this.state[15] = readU32(nonce, 8);
+
+				break;
+			}
+			case 16: {
+				this.state[12] = readU32(nonce, 0);
+				this.state[13] = readU32(nonce, 4);
+				this.state[14] = readU32(nonce, 8);
+				this.state[15] = readU32(nonce, 12);
+
+				break;
+			}
+			default: {
+				throw new RangeError("Invalid nonce size.");
+			}
 		}
 
 		this.pos = 0;
@@ -117,7 +123,9 @@ class ChaCha20 {
 	encrypt(data) {
 		assert(Buffer.isBuffer(data));
 
-		if (this.pos === -1) {throw new Error("Context is not initialized.");}
+		if (this.pos === -1) {
+			throw new Error("Context is not initialized.");
+		}
 
 		for (let index = 0; index < data.length; index++) {
 			if ((this.pos & 63) === 0) {
@@ -136,7 +144,9 @@ class ChaCha20 {
 	 */
 
 	_block() {
-		for (let index = 0; index < 16; index++) {this.stream[index] = this.state[index];}
+		for (let index = 0; index < 16; index++) {
+			this.stream[index] = this.state[index];
+		}
 
 		for (let index = 0; index < 10; index++) {
 			qround(this.stream, 0, 4, 8, 12);
@@ -149,15 +159,21 @@ class ChaCha20 {
 			qround(this.stream, 3, 4, 9, 14);
 		}
 
-		for (let index = 0; index < 16; index++) {this.stream[index] += this.state[index];}
+		for (let index = 0; index < 16; index++) {
+			this.stream[index] += this.state[index];
+		}
 
 		if (BIG_ENDIAN) {
-			for (let index = 0; index < 16; index++) {writeU32(this.bytes, this.stream[index], index * 4);}
+			for (let index = 0; index < 16; index++) {
+				writeU32(this.bytes, this.stream[index], index * 4);
+			}
 		}
 
 		this.state[12] += 1;
 
-		if (this.state[12] === 0) {this.state[13] += 1;}
+		if (this.state[12] === 0) {
+			this.state[13] += 1;
+		}
 	}
 
 	/**
@@ -171,7 +187,9 @@ class ChaCha20 {
 		}
 
 		if (BIG_ENDIAN) {
-			for (let index = 0; index < 64; index++) {this.bytes[index] = 0;}
+			for (let index = 0; index < 64; index++) {
+				this.bytes[index] = 0;
+			}
 		}
 
 		this.pos = -1;
@@ -190,9 +208,13 @@ class ChaCha20 {
 		assert(Buffer.isBuffer(key));
 		assert(Buffer.isBuffer(nonce));
 
-		if (key.length !== 16 && key.length !== 32) {throw new RangeError("Invalid key size.");}
+		if (key.length !== 16 && key.length !== 32) {
+			throw new RangeError("Invalid key size.");
+		}
 
-		if (nonce.length !== 16) {throw new RangeError("Invalid nonce size.");}
+		if (nonce.length !== 16) {
+			throw new RangeError("Invalid nonce size.");
+		}
 
 		const state = new Uint32Array(16);
 

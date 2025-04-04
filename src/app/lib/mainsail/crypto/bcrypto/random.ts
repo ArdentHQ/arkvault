@@ -53,11 +53,15 @@ function randomBytes(size) {
 function randomFill(data, off, size) {
 	assert(Buffer.isBuffer(data));
 
-	if (off == null) {off = 0;}
+	if (off == null) {
+		off = 0;
+	}
 
 	assert(off >>> 0 === off);
 
-	if (size == null) {size = data.length - off;}
+	if (size == null) {
+		size = data.length - off;
+	}
 
 	assert(size >>> 0 === size);
 	assert(off + size <= data.length);
@@ -95,7 +99,9 @@ function randomRange(min, max) {
 
 	const space = max - min;
 
-	if (space === 0) {return min;}
+	if (space === 0) {
+		return min;
+	}
 
 	const top = -space >>> 0;
 
@@ -122,7 +128,9 @@ function randomFillSync(data, off, size) {
 	assert(size >>> 0 === size);
 	assert(off + size <= data.byteLength);
 
-	if (size > 2 ** 31 - 1) {throw new RangeError('The value "size" is out of range.');}
+	if (size > 2 ** 31 - 1) {
+		throw new RangeError('The value "size" is out of range.');
+	}
 
 	const offset = data.byteOffset + off;
 	const array = new Uint8Array(data.buffer, offset, size);
@@ -131,12 +139,16 @@ function randomFillSync(data, off, size) {
 		for (let index = 0; index < array.length; index += MAX_BYTES) {
 			let j = index + MAX_BYTES;
 
-			if (j > array.length) {j = array.length;}
+			if (j > array.length) {
+				j = array.length;
+			}
 
 			getRandomValues(array.subarray(index, j));
 		}
 	} else {
-		if (array.length > 0) {getRandomValues(array);}
+		if (array.length > 0) {
+			getRandomValues(array);
+		}
 	}
 }
 
