@@ -181,7 +181,7 @@ export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordPro
 
 const environmentWithMocks = () =>
 	new Environment({
-		coins: { ARK, Mainsail },
+		coins: { Mainsail },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),
