@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import { createHashHistory } from "history";
 import { useConfiguration, ConfigurationProvider } from "@/app/contexts";
 import { useServerHealthStatus } from "@/app/hooks";
-import { render, screen, getDefaultProfileId } from "@/utils/testing-library";
+import { render, screen, getMainsailProfileId } from "@/utils/testing-library";
 import { ServerStatus } from "@/utils/peers";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Route } from "react-router-dom";
 
 const history = createHashHistory();
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 describe("useServerHealthStatus", () => {
 	beforeAll(() => {
@@ -20,7 +20,7 @@ describe("useServerHealthStatus", () => {
 		const { status } = useServerHealthStatus();
 
 		useEffect(() => {
-			setConfiguration(getDefaultProfileId(), { serverStatus });
+			setConfiguration(getMainsailProfileId(), { serverStatus });
 		}, []);
 
 		return <div data-testid={`ServerHealthStatus--${status.value}`} />;
@@ -36,7 +36,7 @@ describe("useServerHealthStatus", () => {
 
 	it("should render as healthy", async () => {
 		render(<ServerHealthStatusWrapper status={{ "ark.devnet": { up: true } }} />, {
-			route: `/profiles/${getDefaultProfileId()}/votes`,
+			route: `/profiles/${getMainsailProfileId()}/votes`,
 		});
 
 		await expect(screen.findByTestId("ServerHealthStatus--0")).resolves.toBeVisible();
@@ -44,7 +44,7 @@ describe("useServerHealthStatus", () => {
 
 	it("should render as downgraded", async () => {
 		render(<ServerHealthStatusWrapper status={{ "ark.devnet": { down: false, up: true } }} />, {
-			route: `/profiles/${getDefaultProfileId()}/votes`,
+			route: `/profiles/${getMainsailProfileId()}/votes`,
 		});
 
 		await expect(screen.findByTestId("ServerHealthStatus--1")).resolves.toBeVisible();
@@ -52,7 +52,7 @@ describe("useServerHealthStatus", () => {
 
 	it("should render as unavailable", async () => {
 		render(<ServerHealthStatusWrapper status={{ "ark.devnet": { down: false } }} />, {
-			route: `/profiles/${getDefaultProfileId()}/votes`,
+			route: `/profiles/${getMainsailProfileId()}/votes`,
 		});
 
 		await expect(screen.findByTestId("ServerHealthStatus--2")).resolves.toBeVisible();
