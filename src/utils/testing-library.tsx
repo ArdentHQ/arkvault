@@ -306,7 +306,7 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 	};
 };
 
-export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
+export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile) => {
 	const networks = {
 		mainsail: {
 			...publicNetworksStub["mainsail"],
