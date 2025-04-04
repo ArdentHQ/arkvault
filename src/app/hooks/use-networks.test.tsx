@@ -2,7 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 import { useNetworks } from "@/app/hooks";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import DefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getMainsailProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
@@ -52,27 +52,27 @@ describe("useNetworks", () => {
 			result: { current },
 		} = renderHookWithProfile(profile);
 
-		expect(current).toHaveLength(2);
+		expect(current).toHaveLength(1);
 
 		resetMock();
 	});
 
 	it("should prioritize default networks", () => {
 		const mock = vi.spyOn(profile.networks(), "all").mockReturnValue({
-			ark: {
-				cdevnet: {
+			mainsail: {
+				devnet: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
-					id: "ark.devnet",
+					id: "mainsail.devnet",
 					name: "Devnet",
 					type: "test",
 				},
 				custom: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
@@ -82,7 +82,7 @@ describe("useNetworks", () => {
 				},
 				custom2: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
@@ -92,7 +92,7 @@ describe("useNetworks", () => {
 				},
 				mainnet: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
@@ -125,7 +125,7 @@ describe("useNetworks", () => {
 		} = renderHook(
 			() =>
 				useNetworks({
-					filter: (network) => network.id() === "ark.mainnet",
+					filter: (network) => network.id() === "mainsail.mainnet",
 					profile: profile,
 				}),
 			{
@@ -134,7 +134,7 @@ describe("useNetworks", () => {
 		);
 
 		expect(current).toHaveLength(1);
-		expect(current[0].id()).toBe("ark.mainnet");
+		expect(current[0].id()).toBe("mainsail.mainnet");
 
 		resetMock();
 	});
