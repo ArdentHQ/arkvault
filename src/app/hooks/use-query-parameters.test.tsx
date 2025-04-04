@@ -51,6 +51,9 @@ describe("useQueryParameters hook", () => {
 	});
 });
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
+
 describe("useNetworkFromQueryParameters hook", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -73,7 +76,7 @@ describe("useNetworkFromQueryParameters hook", () => {
 	};
 
 	it("should find network from query parameters using network id", () => {
-		history.push("/?network=ark.devnet");
+		history.push("/?network=mainsail.devnet");
 
 		render(<TestComponent />, { history, withProviders: false });
 
