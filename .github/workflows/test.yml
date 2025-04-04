@@ -602,6 +602,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/domains/network
+            COVERAGE_THRESHOLD_BRANCHES: 96.55
         strategy:
             matrix:
                 node-version:
