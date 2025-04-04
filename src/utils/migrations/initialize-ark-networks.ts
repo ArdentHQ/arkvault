@@ -1,4 +1,3 @@
-import { ARK } from "@ardenthq/sdk-ark";
 import { isE2E, isPreview } from "@/utils/test-helpers";
 
 export const initializeArkNetworks = ({ data }) => {
@@ -6,11 +5,11 @@ export const initializeArkNetworks = ({ data }) => {
 		data.networks = {};
 	}
 
-	data.networks.ark = {
-		mainnet: ARK.manifest.networks["ark.mainnet"],
-	};
-
+	// data.networks.ark = {
+	// 	mainnet: ARK.manifest.networks["ark.mainnet"],
+	// };
+	//
 	if (isE2E() || isPreview()) {
-		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
+	// 	data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
 	}
 };

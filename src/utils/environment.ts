@@ -1,4 +1,3 @@
-import { ARK } from "@ardenthq/sdk-ark";
 import { Environment } from "@ardenthq/sdk-profiles";
 import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { StubStorage } from "@/tests/mocks";
@@ -16,7 +15,6 @@ export const initializeEnvironment = (): Environment => {
 
 	const env = new Environment({
 		coins: {
-			ARK,
 			Mainsail,
 		},
 		httpClient,

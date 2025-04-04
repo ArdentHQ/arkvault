@@ -5,11 +5,9 @@ import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
-import { ARK } from "@ardenthq/sdk-ark";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { I18nextProvider } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";
 import { Mainsail } from "@ardenthq/sdk-mainsail";
@@ -258,18 +256,6 @@ export const renderResponsiveWithRoute = (
 };
 
 const publicNetworksStub: any = {
-	ark: {
-		mainnet: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "ark.mainnet",
-			name: "Mainnet",
-			type: "live",
-		},
-	},
 	mainsail: {
 		mainnet: {
 			...MainsailDefaultManifest,
@@ -291,23 +277,6 @@ const publicNetworksStub: any = {
 };
 
 const testNetworksStub: any = {
-	ark: {
-		devnet: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "ark.devnet",
-			meta: {
-				...DefaultManifest.meta,
-				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-				version: 30,
-			},
-			name: "Devnet",
-			type: "test",
-		},
-	},
 	mainsail: {
 		devnet: {
 			...MainsailDefaultManifest,
@@ -329,39 +298,6 @@ const testNetworksStub: any = {
 	},
 };
 
-const customNetworksStub: any = {
-	random: {
-		custom: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "random.custom",
-			name: "Devnet",
-			type: "test",
-		},
-	},
-	"random-enabled": {
-		custom: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "random-enabled.custom",
-			meta: {
-				enabled: true,
-				epoch: "2017-03-21T13:00:00.000Z",
-				nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
-				version: 23,
-			},
-			name: "Devnet",
-			type: "test",
-		},
-	},
-};
-
 export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) => {
 	const mock = vi.spyOn(profile.networks(), "all").mockReturnValue(publicNetworksStub);
 
@@ -372,24 +308,11 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 
 export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
 	const networks = {
-		ark: {
-			...publicNetworksStub["ark"],
-			...testNetworksStub["ark"],
-		},
 		mainsail: {
 			...publicNetworksStub["mainsail"],
 			...testNetworksStub["mainsail"],
 		},
-		random: {
-			...customNetworksStub["random-enabled"],
-			...customNetworksStub["random"],
-		},
 	};
-
-	if (onlyMainsail) {
-		delete networks["ark"];
-		delete networks["random"];
-	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
 	const allByCoinMock = vi
