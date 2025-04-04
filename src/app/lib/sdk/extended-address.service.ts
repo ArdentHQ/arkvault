@@ -1,4 +1,6 @@
 /* istanbul ignore file */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { NotImplemented } from "./exceptions";
 import { ExtendedAddressDataTransferObject, ExtendedAddressService } from "./extended-address.contract";

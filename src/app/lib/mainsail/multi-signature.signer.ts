@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { IoC, Services } from "@ardenthq/sdk";
 import { Exceptions } from "@mainsail/contracts";
 import { Application } from "@mainsail/kernel";

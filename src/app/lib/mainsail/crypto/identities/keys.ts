@@ -1,6 +1,6 @@
 import { Hash, secp256k1, WIF } from "@ardenthq/sdk-cryptography";
 
-import { Network } from "../interfaces/networks";
+import { Network } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import { KeyPair } from "./contracts";
 import { NetworkVersionError } from "./errors";
 import { getWIF } from "./helpers";

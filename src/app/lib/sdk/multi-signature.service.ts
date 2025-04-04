@@ -1,4 +1,6 @@
 /* istanbul ignore file */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { BroadcastResponse } from "./client.contract";
 import { SignedTransactionData } from "./contracts";

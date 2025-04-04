@@ -13,9 +13,8 @@ export class ProberService extends Services.AbstractProberService {
 
 	public override async evaluate(host: string): Promise<boolean> {
 		try {
-			const { data } = (
-				await this.#httpClient.get(`${host}/node/configuration/crypto`.replace(/\/$/, ""))
-			).json();
+			const response = await this.#httpClient.get(`${host}/node/configuration/crypto`.replace(/\/$/, ""));
+			const { data } = response.json();
 
 			return data.network.client.token === this.#configRepository.get(Coins.ConfigKey.CurrencyTicker);
 		} catch {

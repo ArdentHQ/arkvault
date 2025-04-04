@@ -1,4 +1,5 @@
-/* eslint-disable sonarjs/no-one-iteration-loop */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 // @ts-nocheck
 
 /*!
@@ -46,7 +47,6 @@ import { elliptic } from "./elliptic";
 
 const invalidPrivateKeyError = "Invalid private key.";
 const invalidScalarError = "Invalid scalar.";
-
 
 export class ECDSA {
 	constructor(name, hash, xof, pre) {

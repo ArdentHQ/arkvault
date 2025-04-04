@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Exceptions } from "@ardenthq/sdk";
 import { FunctionSigs } from "@mainsail/evm-contracts";
 

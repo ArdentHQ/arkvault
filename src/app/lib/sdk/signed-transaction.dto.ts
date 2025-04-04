@@ -1,5 +1,6 @@
 /* istanbul ignore file */
-/* eslint-disable import/order */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";

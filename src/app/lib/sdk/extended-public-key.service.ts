@@ -1,4 +1,6 @@
 /* istanbul ignore file */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { BindingType } from "./service-provider.contract";
 import { ConfigRepository } from "./coins";

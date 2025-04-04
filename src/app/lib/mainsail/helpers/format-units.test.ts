@@ -2,7 +2,7 @@ import { describe } from "@ardenthq/sdk-test";
 
 import { formatUnits } from "./format-units";
 
-describe("formatUnits", async ({ assert, it }) => {
+describe("formatUnits", ({ assert, it }) => {
 	it("should format the value to wei", () => {
 		assert.equal(formatUnits("1", "wei").valueOf(), "1");
 	});

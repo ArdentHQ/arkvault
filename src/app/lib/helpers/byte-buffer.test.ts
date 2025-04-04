@@ -2,7 +2,6 @@ import { describe, it, expect } from "vitest";
 import { ByteBuffer } from "./byte-buffer";
 
 const writeReadValues = "should write and read value (%s)";
-const throwRangeError = "should throw RangeError for value (%s)"
 
 describe("ByteBuffer", () => {
 	it("should return valid result & result length", () => {

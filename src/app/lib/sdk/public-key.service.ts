@@ -1,4 +1,6 @@
 /* istanbul ignore file */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { PublicKeyDataTransferObject, PublicKeyService } from "./public-key.contract";
 

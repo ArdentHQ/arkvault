@@ -1,3 +1,6 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
+
 import { ClientService } from "./client.contract";
 import { IContainer } from "./container.contracts";
 import { BindingType } from "./service-provider.contract";

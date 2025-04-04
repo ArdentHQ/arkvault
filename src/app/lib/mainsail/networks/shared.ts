@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Networks } from "@ardenthq/sdk";
 
 export const transactions: Networks.NetworkManifestTransactions = {

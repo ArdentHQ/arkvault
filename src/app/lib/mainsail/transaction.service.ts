@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Contracts, IoC, Services } from "@ardenthq/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";

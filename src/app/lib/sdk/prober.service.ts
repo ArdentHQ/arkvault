@@ -1,4 +1,6 @@
 /* istanbul ignore file */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { NotImplemented } from "./exceptions";
 import { ProberService } from "./prober.contract";

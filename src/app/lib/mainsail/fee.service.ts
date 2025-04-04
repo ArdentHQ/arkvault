@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 

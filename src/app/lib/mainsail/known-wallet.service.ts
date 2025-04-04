@@ -15,7 +15,8 @@ export class KnownWalletService extends Services.AbstractKnownWalletService {
 		}
 
 		try {
-			const results = (await this.httpClient.get(this.#source)).json();
+			const response = await this.httpClient.get(this.#source);
+			const results = response.json();
 
 			if (Array.isArray(results)) {
 				return results;

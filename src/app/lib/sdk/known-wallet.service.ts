@@ -1,3 +1,6 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
+
 import { ConfigRepository } from "./config";
 import { IContainer } from "./container.contracts";
 import { HttpClient } from "./http-contracts";

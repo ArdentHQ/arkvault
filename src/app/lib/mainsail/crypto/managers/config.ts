@@ -1,10 +1,10 @@
 import deepmerge from "deepmerge";
 
-import { InvalidMilestoneConfigurationError } from "../errors";
-import { IMilestone } from "../interfaces/index";
-import { NetworkConfig } from "../interfaces/networks";
-import * as networks from "../networks/index";
-import { NetworkName } from "../types";
+import { InvalidMilestoneConfigurationError } from "@/app/lib/mainsail/crypto/errors";
+import { IMilestone } from "@/app/lib/mainsail/crypto/interfaces/index";
+import { NetworkConfig } from "@/app/lib/mainsail/crypto/interfaces/networks";
+import * as networks from "@/app/lib/mainsail/crypto/networks/index";
+import { NetworkName } from "@/app/lib/mainsail/crypto/types";
 import { assocPath, path } from "rambda";
 
 export interface MilestoneSearchResult {
@@ -47,7 +47,7 @@ export class ConfigManager {
 
 	public set<T = any>(key: string, value: T): void {
 		if (!this.config) {
-			throw new Error();
+			throw new Error("Config not found.");
 		}
 
 		const path = key.split(".");
@@ -71,7 +71,7 @@ export class ConfigManager {
 		height = height || this.height;
 
 		if (!this.milestones) {
-			throw new Error();
+			throw new Error("Milestone not found.");
 		}
 
 		return this.milestones.some((milestone) => milestone.height === height);
@@ -79,7 +79,7 @@ export class ConfigManager {
 
 	public getMilestone(height?: number): { [key: string]: any } {
 		if (!this.milestone || !this.milestones) {
-			throw new Error();
+			throw new Error("Milestone not found.");
 		}
 
 		if (!height && this.height) {
@@ -139,7 +139,7 @@ export class ConfigManager {
 
 	private buildConstants(): void {
 		if (!this.config) {
-			throw new Error();
+			throw new Error("Config not found.");
 		}
 
 		this.milestones = this.config.milestones.sort((a, b) => a.height - b.height);
@@ -150,11 +150,9 @@ export class ConfigManager {
 
 		let lastMerged = 0;
 
-		const overwriteMerge = (destination, source, options) => source;
-
 		while (lastMerged < this.milestones.length - 1) {
 			this.milestones[lastMerged + 1] = deepmerge(this.milestones[lastMerged], this.milestones[lastMerged + 1], {
-				arrayMerge: overwriteMerge,
+				arrayMerge: (_, source) => source,
 			});
 			lastMerged++;
 		}
@@ -162,7 +160,7 @@ export class ConfigManager {
 
 	private validateMilestones(): void {
 		if (!this.config) {
-			throw new Error();
+			throw new Error("Config not found.");
 		}
 
 		const delegateMilestones = this.config.milestones

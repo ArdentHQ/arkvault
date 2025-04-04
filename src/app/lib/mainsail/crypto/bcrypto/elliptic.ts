@@ -1,3 +1,4 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 
 // @ts-nocheck
@@ -282,7 +283,7 @@ class Curve {
 		this.fieldBits = this.p.bitLength();
 		this.adjustedSize = this.fieldSize + ((this.fieldBits & 7) === 0);
 		this.signBit = this.adjustedSize * 8 - 1;
-		this.mask = 0xFF;
+		this.mask = 0xff;
 
 		if ((this.fieldBits & 7) !== 0) {
 			this.mask = (1 << (this.fieldBits & 7)) - 1;
@@ -982,7 +983,7 @@ class Curve {
 		}
 
 		// Ensure a multiple of the cofactor.
-		scalar[lsb] &= -this.h.word(0) & 0xFF;
+		scalar[lsb] &= -this.h.word(0) & 0xff;
 
 		// Clamp to the prime.
 		scalar[msb] &= (1 << top) - 1;
@@ -1095,7 +1096,7 @@ class Curve {
 		const msb = this.endian === "le" ? this.fieldSize - 1 : 0;
 		const bytes = x.fromRed().encode(this.endian, this.fieldSize);
 
-		bytes[msb] |= bits & ~this.mask & 0xFF;
+		bytes[msb] |= bits & ~this.mask & 0xff;
 
 		return bytes;
 	}

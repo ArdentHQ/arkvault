@@ -2,7 +2,7 @@ import { describe } from "@ardenthq/sdk-test";
 
 import { parseUnits } from "./parse-units";
 
-describe("parseUnits", async ({ assert, it }) => {
+describe("parseUnits", ({ assert, it }) => {
 	it("should parse the value to wei", () => {
 		assert.equal(parseUnits(1, "wei").valueOf(), "1");
 	});

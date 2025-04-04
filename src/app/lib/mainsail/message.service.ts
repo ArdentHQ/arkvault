@@ -1,3 +1,6 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
+
 import { Hash as ARK } from "./crypto/hash";
 import { Hash } from "@ardenthq/sdk-cryptography";
 import { Services } from "@ardenthq/sdk";

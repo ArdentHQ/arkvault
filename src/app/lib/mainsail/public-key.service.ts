@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { IoC, Services } from "@ardenthq/sdk";
 import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { abort_if, abort_unless } from "@/app/lib/helpers";

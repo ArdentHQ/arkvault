@@ -1,6 +1,6 @@
-import { NetworkConfig } from "../interfaces/networks";
-import * as networks from "../networks/index";
-import { NetworkName } from "../types";
+import { NetworkConfig } from "@/app/lib/mainsail/crypto/interfaces/networks";
+import * as networks from "@/app/lib/mainsail/crypto/networks/index";
+import { NetworkName } from "@/app/lib/mainsail/crypto/types";
 
 export class NetworkManager {
 	public static all(): Record<NetworkName, NetworkConfig> {

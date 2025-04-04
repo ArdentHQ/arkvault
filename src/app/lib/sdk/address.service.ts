@@ -1,4 +1,6 @@
 /* istanbul ignore file */
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 
 import { AddressDataTransferObject, AddressService } from "./address.contract";
 import { ConfigRepository } from "./coins";

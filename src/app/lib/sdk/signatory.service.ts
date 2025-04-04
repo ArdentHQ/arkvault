@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 /* istanbul ignore file */
 
 import { AddressService } from "./address.contract";

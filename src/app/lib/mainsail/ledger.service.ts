@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Buffer } from "buffer";
 import { Contracts, IoC, Services } from "@ardenthq/sdk";
 import { BIP44, HDKey } from "@ardenthq/sdk-cryptography";

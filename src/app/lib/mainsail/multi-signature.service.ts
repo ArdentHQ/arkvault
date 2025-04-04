@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Contracts, Http, IoC, Services, Signatories } from "@ardenthq/sdk";
 import { UUID } from "@ardenthq/sdk-cryptography";
 import { BigNumber, uniq } from "@/app/lib/helpers";

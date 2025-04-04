@@ -1,4 +1,4 @@
-import { Network } from "../interfaces/networks";
+import { Network } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import { Keys } from "./keys";
 
 export class PrivateKey {
