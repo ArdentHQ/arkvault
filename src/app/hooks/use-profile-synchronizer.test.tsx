@@ -23,7 +23,8 @@ import {
 	screen,
 	syncDelegates,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks, MAINSAIL_MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
+	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { beforeAll, vi } from "vitest";
 
@@ -899,7 +900,7 @@ describe("useProfileStatusWatcher", () => {
 		const useStateSpy = vi.spyOn(React, "useState");
 		//@ts-ignore
 		useStateSpy.mockImplementation((initialState, setActualState) => {
-			console.log(initialState, setActualState)
+			console.log(initialState, setActualState);
 			// Use actual state if it's not `isInitialSync` in useProfileStatusWatcher
 			if (initialState !== true) {
 				return [initialState, setActualState];
