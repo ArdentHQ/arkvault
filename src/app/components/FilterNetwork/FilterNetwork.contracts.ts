@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@ardenthq/sdk";
 
 export interface ToggleAllOptionProperties {
 	onClick?: any;
