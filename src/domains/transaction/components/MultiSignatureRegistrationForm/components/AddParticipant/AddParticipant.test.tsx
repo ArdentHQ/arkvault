@@ -46,7 +46,9 @@ describe("Add Participant", () => {
 		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "0x659A76be283644AEc2003aa8ba26485047fd1BFB");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("0x659A76be283644AEc2003aa8ba26485047fd1BFB");
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
+				"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			);
 		});
 
 		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
@@ -131,7 +133,9 @@ describe("Add Participant", () => {
 		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f");
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
+				"0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f",
+			);
 		});
 
 		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
