@@ -35,11 +35,6 @@ export default defineConfig(() => {
 				// https://rollupjs.org/guide/en/#big-list-of-options
 				output: {
 					manualChunks: {
-						ledger: [
-							"@ledgerhq/hw-app-eth",
-							"@ledgerhq/hw-transport-webhid",
-							"@ledgerhq/hw-transport-webusb",
-						],
 						react: [
 							"react",
 							"react-datepicker",
