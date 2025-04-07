@@ -34,65 +34,6 @@ export const networkName = (network: Networks.NetworkManifest) => `${network.nam
 export const networkInitials = (network: Networks.NetworkManifest): string =>
 	networkName(network).slice(0, 2).toUpperCase();
 
-// export const buildNetwork = (
-// 	networkData: UserCustomNetwork,
-// 	response: NodeConfigurationResponse,
-// ): Networks.NetworkManifest => {
-// 	const arkNetwork = ARK.manifest.networks["ark.mainnet"];
-//
-// 	const constants: Networks.NetworkManifestConstants = {
-// 		...arkNetwork.constants,
-// 	};
-//
-// 	constants.slip44 = Number(networkData.slip44);
-//
-// 	const currency = {
-// 		decimals: arkNetwork.currency.decimals,
-// 		symbol: response.symbol ?? arkNetwork.currency.symbol,
-// 		ticker: networkData.ticker ?? arkNetwork.currency.ticker,
-// 	};
-//
-// 	const { explorer, featureFlags, governance, importMethods, transactions } = arkNetwork;
-//
-// 	const hosts: Networks.NetworkHost[] = [
-// 		{
-// 			failedCount: 0,
-// 			host: networkData.address,
-// 			type: "full",
-// 		},
-// 	];
-//
-// 	if (networkData.explorer) {
-// 		hosts.push({
-// 			host: networkData.explorer,
-// 			type: "explorer",
-// 		});
-// 	}
-//
-// 	const meta = {
-// 		epoch: response.constants?.epoch,
-// 		nethash: response.nethash,
-// 		version: response.version,
-// 	};
-//
-// 	return {
-// 		coin: networkData.name,
-// 		constants,
-// 		currency,
-// 		explorer,
-// 		featureFlags,
-// 		governance,
-// 		hosts,
-// 		id: `${UUID.random()}.custom`,
-// 		importMethods,
-// 		knownWallets: networkData.knownWallets,
-// 		meta,
-// 		name: networkData.name,
-// 		transactions,
-// 		type: networkData.type,
-// 	};
-// };
-
 export const isCustomNetwork = (network?: Networks.NetworkManifest | Networks.Network): boolean => {
 	if (typeof network?.id === "function") {
 		return network.id().endsWith(".custom");
