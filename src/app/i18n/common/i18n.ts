@@ -428,6 +428,7 @@ export const translations = {
 		FIELD_INVALID: "{{field}} invalid",
 		FIELD_REQUIRED: "{{field}} required",
 		GAS_LIMIT_IS_TOO_LOW: "Gas limit cannot be less than {{minGasLimit}}",
+		GAS_PRICE_IS_TOO_HIGH: "Gas price cannot be greater than {{maxGasPrice}}",
 		GAS_PRICE_IS_TOO_LOW: "Gas price cannot be less than {{minGasPrice}}",
 		HOST_FORMAT: "The host format is invalid",
 		ILLEGAL_CHARACTERS: "The following characters are not allowed: {{- characters}}",

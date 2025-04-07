@@ -1,8 +1,11 @@
 import { Networks } from "@ardenthq/sdk";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
-
+import { configManager } from "@ardenthq/sdk-mainsail";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";
+
+import { formatUnits } from "@ardenthq/sdk-mainsail";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const common = (t: TFunction) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
@@ -68,6 +71,17 @@ export const common = (t: TFunction) => ({
 				if (gasPrice < minGasPrice) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {
 						minGasPrice,
+					});
+				}
+
+				const maximumGasPrice = formatUnits(
+					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
+					"gwei",
+				);
+
+				if (maximumGasPrice.isLessThan(gasPrice ?? 0)) {
+					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_HIGH", {
+						maxGasPrice: maximumGasPrice,
 					});
 				}
 
