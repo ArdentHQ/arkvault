@@ -6,7 +6,7 @@ import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
 import { server } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 describe("useTransactionExport hook", () => {
 	let profile: Contracts.IProfile;
@@ -48,7 +48,7 @@ describe("useTransactionExport hook", () => {
 
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Success));
 		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
-		await waitFor(() => expect(result.current.count).toBe(15));
+		await waitFor(() => expect(result.current.count).toBe(10));
 	});
 
 	it("should export all transactions", async () => {
@@ -70,7 +70,7 @@ describe("useTransactionExport hook", () => {
 
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Success));
 		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
-		await waitFor(() => expect(result.current.count).toBe(15));
+		await waitFor(() => expect(result.current.count).toBe(10));
 	});
 
 	it("should export current transactions", async () => {
@@ -92,7 +92,7 @@ describe("useTransactionExport hook", () => {
 
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Success));
 		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
-		await waitFor(() => expect(result.current.count).toBe(15));
+		await waitFor(() => expect(result.current.count).toBe(10));
 	});
 
 	it("should export last month transactions", async () => {
@@ -114,7 +114,7 @@ describe("useTransactionExport hook", () => {
 
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Success));
 		await waitFor(() => expect(result.current.file.content.length).toBeGreaterThan(1));
-		await waitFor(() => expect(result.current.count).toBe(15));
+		await waitFor(() => expect(result.current.count).toBe(10));
 	});
 
 	it("should start export and fail", async () => {
@@ -167,7 +167,7 @@ describe("useTransactionExport hook", () => {
 	it("should properly handle errors", async () => {
 		const { result } = renderExportHook();
 
-		const handler = http.get(`https://ark-test.arkvault.io/api/transactions`, ({ request }) => {
+		const handler = http.get(`https://dwallets-evm.mainsailhq.com/api/transactions`, ({ request }) => {
 			const url = new URL(request.url);
 			const to = url.searchParams.get("timestamp.to");
 
@@ -177,6 +177,11 @@ describe("useTransactionExport hook", () => {
 					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
 					meta: {
 						...transactionsFixture.meta,
+						"count": 15,
+						"next": "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
+						"pageCount": 2,
+						"totalCount": 63,
+						"totalCountIsEstimate": true,
 					},
 				});
 			}

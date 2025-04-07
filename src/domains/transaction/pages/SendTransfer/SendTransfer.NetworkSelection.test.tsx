@@ -19,10 +19,10 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
-import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/node-fees.json";
+import transactionFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/transaction-fees.json";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
