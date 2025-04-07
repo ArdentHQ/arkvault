@@ -22,7 +22,7 @@ import { httpClient } from "@/app/services";
 import { i18n } from "@/app/i18n";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 
 export {
@@ -213,6 +213,8 @@ export const MAINSAIL_MNEMONICS = [
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
 	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
 	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
+	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
+	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch"
 ];
 
 export const breakpoints: {
