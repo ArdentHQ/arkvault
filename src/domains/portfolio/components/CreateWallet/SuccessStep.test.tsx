@@ -7,9 +7,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import { SuccessStep } from "./SuccessStep";
 import { env, getMainsailProfileId, renderResponsive, screen } from "@/utils/testing-library";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("SuccessStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;

@@ -61,9 +61,6 @@ const firstVoteButtonID = "DelegateRow__toggle-0";
 
 const searchInputID = "SearchableTableWrapper__search-input";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
@@ -86,7 +83,7 @@ describe("Votes", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		server.use(
 			requestMock(

@@ -23,9 +23,6 @@ let resetProfileNetworksMock: () => void;
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("Dashboard", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);

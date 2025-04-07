@@ -15,7 +15,7 @@ import { minVersionList, useLedgerContext } from "@/app/contexts";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { MultiSignatureDetail } from "./MultiSignatureDetail";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Route } from "react-router-dom";
 import { Signatories } from "@ardenthq/sdk";
 import { translations } from "@/domains/transaction/i18n";

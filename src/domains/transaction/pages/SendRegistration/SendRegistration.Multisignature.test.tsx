@@ -16,13 +16,13 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
 import { createHashHistory } from "history";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
-import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

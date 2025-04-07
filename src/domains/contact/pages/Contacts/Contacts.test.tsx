@@ -65,8 +65,6 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 		},
 	]);
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Contacts", () => {
 	let resetProfileNetworksMock: () => void;
 	let mockContact: Contracts.IContact;

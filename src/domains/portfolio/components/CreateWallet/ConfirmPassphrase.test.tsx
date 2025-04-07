@@ -9,9 +9,6 @@ import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen } from "@
 
 let profile: Contracts.IProfile;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("ConfirmPassphraseStep", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

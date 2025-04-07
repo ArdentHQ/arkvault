@@ -100,7 +100,6 @@ let mnemonicMock;
 
 describe("SendValidatorResignation", () => {
 	beforeAll(async () => {
-		process.env.USE_MAINSAIL_NETWORK = "true";
 		vi.useFakeTimers({
 			shouldAdvanceTime: true,
 			toFake: ["setInterval", "clearInterval", "Date"],

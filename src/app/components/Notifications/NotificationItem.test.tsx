@@ -25,8 +25,6 @@ vi.mock("react-visibility-sensor", () => ({
 	},
 }));
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Notifications", () => {
 	beforeAll(() => {
 		server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", TransactionsFixture));

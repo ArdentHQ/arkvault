@@ -25,9 +25,6 @@ const renderForm = () =>
 		}),
 	);
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("WalletOverviewStep", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

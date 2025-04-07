@@ -6,8 +6,6 @@ import { useProfileBalance } from "./use-profile-balance";
 import { ConfigurationProvider } from "@/app/contexts";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useProfileBalance", () => {
 	it("should get converted balance", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());

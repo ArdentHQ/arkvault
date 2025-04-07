@@ -326,14 +326,14 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -430,7 +430,7 @@ exports[`Add Participant > should fail to find 1`] = `
                     readonly=""
                     tabindex="-1"
                     type="text"
-                    value="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
+                    value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                   />
                 </div>
                 <div
@@ -516,7 +516,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           name="address"
                           placeholder="Address"
                           type="text"
-                          value="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
+                          value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
                         />
                       </div>
                       <div
@@ -714,14 +714,14 @@ exports[`Add Participant > should fail to find 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -818,7 +818,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                     readonly=""
                     tabindex="-1"
                     type="text"
-                    value="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    value="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                   />
                 </div>
                 <div
@@ -889,7 +889,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                     <div
                       class="invisible fixed w-auto whitespace-nowrap"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD…
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6…
                     </div>
                     <div
                       class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
@@ -901,7 +901,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           class="no-ligatures transition-colors duration-200 font-semibold"
                           data-testid="TruncateEnd"
                         >
-                          ARK Wallet 1
+                          Mainsail Wallet …
                         </span>
                       </div>
                       <div
@@ -919,7 +919,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           name="address"
                           placeholder="Address"
                           type="text"
-                          value="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          value="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                         />
                         <span
                           class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -928,7 +928,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           <span
                             class="truncate"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </span>
                         </span>
                       </div>
@@ -1123,7 +1123,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -1220,7 +1220,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                     readonly=""
                     tabindex="-1"
                     type="text"
-                    value="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
+                    value="0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f"
                   />
                 </div>
                 <div
@@ -1306,7 +1306,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           name="address"
                           placeholder="Address"
                           type="text"
-                          value="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
+                          value="0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f"
                         />
                       </div>
                       <div
@@ -1504,14 +1504,14 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -1892,14 +1892,14 @@ exports[`Add Participant > should handle exception on find and show address not 
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -2181,7 +2181,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                    0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                   </span>
                 </div>
               </div>
@@ -2298,16 +2298,6 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                     <div
                       class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
-                      <div
-                        class="flex items-center"
-                      >
-                        <span
-                          class="no-ligatures transition-colors duration-200 font-semibold"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 2
-                        </span>
-                      </div>
                       <div
                         class="relative flex h-full flex-1"
                       >
@@ -2477,14 +2467,14 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -2612,14 +2602,14 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 2
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                    0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                   </span>
                 </div>
               </div>

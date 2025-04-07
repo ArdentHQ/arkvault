@@ -29,8 +29,6 @@ const Wrapper = ({ children }) => {
 	return <Route path="/profiles/:profileId">{children}</Route>;
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("AddressTable", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

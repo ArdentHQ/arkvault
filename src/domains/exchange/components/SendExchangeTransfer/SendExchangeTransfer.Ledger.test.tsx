@@ -14,7 +14,7 @@ import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import { afterAll, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
 import { renderHook } from "@testing-library/react";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useTranslation } from "react-i18next";
 
 let profile: Contracts.IProfile;
@@ -32,9 +32,6 @@ let useActiveProfileSpy: MockInstance;
 //
 // 	await userEvent.click(firstAddress);
 // };
-
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {

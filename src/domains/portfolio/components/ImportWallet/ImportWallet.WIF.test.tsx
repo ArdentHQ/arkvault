@@ -30,9 +30,6 @@ const testNetwork = "mainsail.devnet";
 let network;
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("ImportWallet WIF", () => {
 	let resetProfileNetworksMock: () => void;
 	const wif = "wif.1111";

@@ -7,8 +7,6 @@ import { env, getMainsailProfileId, renderResponsive, screen } from "@/utils/tes
 
 let profile: Contracts.IProfile;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("VotesHeader", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

@@ -37,9 +37,6 @@ vi.mock("@/utils/delay", () => ({
 
 const mainsailDevnet = "mainsail.devnet";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
@@ -426,7 +423,7 @@ describe("useProfileSynchronizer", () => {
 	it("should sync profile notifications for available wallets", async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const profileNotificationsSyncSpy = vi.spyOn(profile.notifications().transactions(), "sync");
 
@@ -900,7 +897,6 @@ describe("useProfileStatusWatcher", () => {
 		const useStateSpy = vi.spyOn(React, "useState");
 		//@ts-ignore
 		useStateSpy.mockImplementation((initialState, setActualState) => {
-			console.log(initialState, setActualState);
 			// Use actual state if it's not `isInitialSync` in useProfileStatusWatcher
 			if (initialState !== true) {
 				return [initialState, setActualState];

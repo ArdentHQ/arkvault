@@ -2,8 +2,6 @@ import { vi } from "vitest";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { hasNetworksWithLedgerSupport } from "./network-utils";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Network utils", () => {
 	it("should have available networks with ledger support", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());

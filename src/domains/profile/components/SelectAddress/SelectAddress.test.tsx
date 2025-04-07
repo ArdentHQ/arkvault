@@ -9,9 +9,6 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallets: Contracts.IReadWriteWallet[];
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("SelectAddress", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

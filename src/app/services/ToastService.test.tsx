@@ -84,7 +84,6 @@ describe("ToastService", () => {
 			let toastId: ToastId;
 
 			const showMessage = () => {
-				console.log("show");
 				toastId = toasts.info("info message");
 			};
 

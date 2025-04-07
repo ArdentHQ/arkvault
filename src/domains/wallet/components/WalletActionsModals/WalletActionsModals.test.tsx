@@ -10,9 +10,6 @@ import { env, getMainsailProfileId, render, syncDelegates } from "@/utils/testin
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("WalletActionsModals", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;

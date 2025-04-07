@@ -16,9 +16,9 @@ exports[`VoteList > should render in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -29,21 +29,10 @@ exports[`VoteList > should render in lg 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -59,9 +48,9 @@ exports[`VoteList > should render in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -72,21 +61,10 @@ exports[`VoteList > should render in lg 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -102,9 +80,9 @@ exports[`VoteList > should render in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -115,21 +93,10 @@ exports[`VoteList > should render in lg 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -154,9 +121,9 @@ exports[`VoteList > should render in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -167,21 +134,10 @@ exports[`VoteList > should render in md 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -197,9 +153,9 @@ exports[`VoteList > should render in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -210,21 +166,10 @@ exports[`VoteList > should render in md 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -240,9 +185,9 @@ exports[`VoteList > should render in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -253,21 +198,10 @@ exports[`VoteList > should render in md 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -291,21 +225,10 @@ exports[`VoteList > should render in sm 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -317,9 +240,9 @@ exports[`VoteList > should render in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -334,21 +257,10 @@ exports[`VoteList > should render in sm 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -360,9 +272,9 @@ exports[`VoteList > should render in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -377,21 +289,10 @@ exports[`VoteList > should render in sm 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -403,9 +304,9 @@ exports[`VoteList > should render in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -430,9 +331,9 @@ exports[`VoteList > should render in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -443,21 +344,10 @@ exports[`VoteList > should render in xl 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -473,9 +363,9 @@ exports[`VoteList > should render in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -486,21 +376,10 @@ exports[`VoteList > should render in xl 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -516,9 +395,9 @@ exports[`VoteList > should render in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -529,21 +408,10 @@ exports[`VoteList > should render in xl 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -567,21 +435,10 @@ exports[`VoteList > should render in xs 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -593,9 +450,9 @@ exports[`VoteList > should render in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -610,21 +467,10 @@ exports[`VoteList > should render in xs 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -636,9 +482,9 @@ exports[`VoteList > should render in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -653,21 +499,10 @@ exports[`VoteList > should render in xs 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -679,9 +514,9 @@ exports[`VoteList > should render in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -706,9 +541,9 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -719,21 +554,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -759,9 +583,9 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -772,21 +596,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -812,9 +625,9 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -825,21 +638,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -874,9 +676,9 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -887,21 +689,10 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -927,9 +718,9 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -940,21 +731,10 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -980,9 +760,9 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -993,21 +773,10 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -1051,21 +820,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -1077,9 +835,9 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -1104,21 +862,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -1130,9 +877,9 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -1157,21 +904,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -1183,9 +919,9 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -1210,9 +946,9 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -1223,21 +959,10 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -1263,9 +988,9 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -1276,21 +1001,10 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -1316,9 +1030,9 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>
@@ -1329,21 +1043,10 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -1387,21 +1090,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              arkx
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
           </span>
         </div>
       </div>
@@ -1413,9 +1105,9 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%2345A2EB%22%2F%3E%3C%2Fsvg%3E"
-            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+            alt="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+            title="0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
           />
         </div>
       </div>
@@ -1440,21 +1132,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_42
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+            0x3F8eCbF08078F22038235F9834540A960E99085b
           </span>
         </div>
       </div>
@@ -1466,9 +1147,9 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+            alt="0x3F8eCbF08078F22038235F9834540A960E99085b"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="0x3F8eCbF08078F22038235F9834540A960E99085b"
           />
         </div>
       </div>
@@ -1493,21 +1174,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="font-semibold text-base text-theme-text"
-            data-testid="Address__alias"
-          >
-            <span
-              class="no-ligatures transition-colors duration-200"
-              data-testid="TruncateEnd"
-            >
-              genesis_17
-            </span>
-          </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+            0x137c59f371a7049159ef19a72f908773Ade219b1
           </span>
         </div>
       </div>
@@ -1519,9 +1189,9 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            alt="0x137c59f371a7049159ef19a72f908773Ade219b1"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%235CA481%22%2F%3E%3C%2Fsvg%3E"
-            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+            title="0x137c59f371a7049159ef19a72f908773Ade219b1"
           />
         </div>
       </div>

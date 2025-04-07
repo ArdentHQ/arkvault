@@ -41,9 +41,6 @@ const detailStep = () => screen.getByTestId("ImportWallet__detail-step");
 const password = "S3cUrePa$sword";
 const testNetwork = "mainsail.devnet";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
 

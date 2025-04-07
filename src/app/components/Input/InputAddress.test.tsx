@@ -12,8 +12,6 @@ import { env, getMainsailProfileId, render, screen } from "@/utils/testing-libra
 
 let profile: Contracts.IProfile;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("InputAddress", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
