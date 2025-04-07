@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Amount } from "./Amount";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
@@ -10,7 +10,7 @@ let profile: Contracts.IProfile;
 
 describe("Amount", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();

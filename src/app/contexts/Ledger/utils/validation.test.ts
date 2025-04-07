@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { hasRequiredAppVersion } from "./validation";
 
-import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockNanoXTransport } from "@/utils/testing-library";
 
 describe("Persist App Validation", () => {
 	let profile: Contracts.IProfile;
@@ -9,7 +9,7 @@ describe("Persist App Validation", () => {
 	let ledgerListenSpy: vi.SpyInstance;
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();

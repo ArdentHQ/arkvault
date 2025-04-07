@@ -7,7 +7,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
 import {
 	env,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
@@ -17,6 +17,7 @@ import {
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { ApplicationError } from "@/domains/error/pages";
+import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 const history = createHashHistory();
 
 vi.mock("@/utils/delay", () => ({
@@ -83,7 +84,7 @@ describe("App Router", () => {
 		});
 
 		act(() => {
-			history.push(`/profiles/${getDefaultProfileId()}/prompt`);
+			history.push(`/profiles/${getMainsailProfileId()}/prompt`);
 		});
 
 		await userEvent.click(screen.getByTestId("prompt_action"));
@@ -105,9 +106,11 @@ describe("App Router", () => {
 const renderComponent = (path = "/", options = {}) => {
 	render(
 		<ErrorBoundary FallbackComponent={ApplicationError}>
-			<Route path={path}>
-				<Main />
-			</Route>
+			<ExchangeProvider>
+				<Route path={path}>
+					<Main />
+				</Route>
+			</ExchangeProvider>
 		</ErrorBoundary>,
 		{
 			history,
@@ -117,6 +120,9 @@ const renderComponent = (path = "/", options = {}) => {
 		},
 	);
 };
+
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+process.env.USE_MAINSAIL_NETWORK = "true";
 
 describe("App Main", () => {
 	beforeEach(() => {
@@ -140,10 +146,10 @@ describe("App Main", () => {
 	it("should fail to sync", async () => {
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
 
 		const profile = env.profiles().first();
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
 
 		await env.profiles().restore(profile);
 
@@ -176,7 +182,7 @@ describe("App Main", () => {
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
-		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
 		history.push(profileUrl);
 
 		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
@@ -190,12 +196,12 @@ describe("App Main", () => {
 	});
 
 	it("should show warning toast when profile has ledger wallets in an incompatible browser", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 
 		const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
-			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-			coin: "ARK",
-			network: "ark.devnet",
+			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 			path: "m/44'/1'/0'/0/3",
 		});
 
@@ -206,7 +212,7 @@ describe("App Main", () => {
 		const restoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
 		history.push(profileUrl);
 
 		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
@@ -229,7 +235,7 @@ describe("App Main", () => {
 			return useProfileSynchronizer(useProfileSynchronizer);
 		});
 
-		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
+		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
 
 		history.push(profileUrl);
 

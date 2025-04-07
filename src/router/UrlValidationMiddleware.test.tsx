@@ -1,5 +1,5 @@
 import { UrlValidationMiddleware } from "./UrlValidationMiddleware";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { Middleware } from "@/router/router.types";
 
 let subject: Middleware;
@@ -32,7 +32,7 @@ describe("UrlValidationMiddleware", () => {
 
 	it("should validate profile in url", () => {
 		const location = {
-			pathname: `/profiles/${getDefaultProfileId()}/dashboard`,
+			pathname: `/profiles/${getMainsailProfileId()}/dashboard`,
 		};
 		const redirect = vi.fn();
 		const parameters = { env, history: { replace: vi.fn() }, location, redirect };

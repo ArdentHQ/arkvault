@@ -137,7 +137,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       <div
                         class="no-ligatures text-theme-secondary-900 dark:text-theme-text"
                       >
-                        127d3...b10cd
+                        0e529...3b051
                       </div>
                     </div>
                     <div
@@ -276,25 +276,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
-                                <span
-                                  class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                                  data-testid="Address__alias"
-                                >
-                                  <span
-                                    class="no-ligatures transition-colors duration-200"
-                                    data-testid="TruncateEnd"
-                                  >
-                                    ARK Wallet 2
-                                  </span>
-                                </span>
                                 <div
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                     data-testid="Address__address"
                                   >
-                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                    0xAAB708d34d694C046E0e4F5A2C388e54edb54b3D
                                   </span>
                                   <span>
                                      
@@ -355,25 +344,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 <div
                                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                                 >
-                                  <span
-                                    class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-                                    data-testid="Address__alias"
-                                  >
-                                    <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
-                                    >
-                                      ARK Wallet 2
-                                    </span>
-                                  </span>
                                   <div
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
-                                      D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                                     </span>
                                     <span>
                                        
@@ -557,7 +535,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       class="whitespace-nowrap text-sm"
                                       data-testid="Amount"
                                     >
-                                      + 1 DARK
+                                      + 1 ARK
                                     </span>
                                   </div>
                                 </div>
@@ -586,7 +564,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="whitespace-nowrap text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   data-testid="Amount"
                                 >
-                                  0.28629325 DARK
+                                  0.0004019 ARK
                                 </span>
                               </div>
                               <div
@@ -677,7 +655,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 <div
                                   class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                 >
-                                  02.10.2020 12:48 PM
+                                  03.04.2025 8:34 AM
                                 </div>
                               </div>
                               <div
@@ -704,7 +682,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
-                                  href="https://test.arkscan.io/blocks/e6d4760c50419d8665731d3391ba209767f3073d4b2b6661078ff220034d197e"
+                                  href="https://explorer-evm-test.mainsailhq.com/blocks/7b6f4c321e3f8a4553dd52b9ddd34581c76a2883702f0a2d3f5021504f3e44bb"
                                   rel="noopener noreferrer"
                                 >
                                   <span
@@ -762,7 +740,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 <div
                                   class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                 >
-                                  15
+                                  0
                                 </div>
                               </div>
                             </div>
@@ -864,7 +842,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-success-600 sm:text-base"
                             >
                               <span>
-                                1 Confirmations
+                                808 Confirmations
                                  
                               </span>
                             </p>

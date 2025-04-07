@@ -8,13 +8,15 @@ import { useForm } from "react-hook-form";
 import { InputAddress, InputAddressProperties } from "./InputAddress";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+process.env.RESTORE_MAINSAIL_PROFILE = "true";
+
 describe("InputAddress", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	const TestInputAddress = (properties: InputAddressProperties) => (
@@ -34,7 +36,7 @@ describe("InputAddress", () => {
 		const { result } = renderHook(() => useForm({ mode: "onChange" }));
 		const { register, errors } = result.current;
 
-		render(<TestInputAddress coin="ARK" network="ark.devnet" registerRef={register} profile={profile} />);
+		render(<TestInputAddress coin="Mainsail" network="mainsail.devnet" registerRef={register} profile={profile} />);
 
 		await userEvent.type(screen.getByTestId("InputAddress__input"), "Abc");
 
@@ -47,12 +49,12 @@ describe("InputAddress", () => {
 		const onValidAddress = vi.fn();
 		const { result } = renderHook(() => useForm({ mode: "onChange" }));
 		const { register, errors } = result.current;
-		const validAddress = "DT11QcbKqTXJ59jrUTpcMyggTcwmyFYRTM";
+		const validAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		render(
 			<TestInputAddress
-				coin="ARK"
-				network="ark.devnet"
+				coin="Mainsail"
+				network="mainsail.devnet"
 				registerRef={register}
 				onValidAddress={onValidAddress}
 				profile={profile}
@@ -77,8 +79,8 @@ describe("InputAddress", () => {
 		render(
 			<TestInputAddress
 				profile={profile}
-				coin="ARK"
-				network="ark.devnet"
+				coin="Mainsail"
+				network="mainsail.devnet"
 				registerRef={register}
 				additionalRules={{ minLength: 10 }}
 			/>,

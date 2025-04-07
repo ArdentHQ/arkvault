@@ -1,6 +1,6 @@
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { HideBalance } from "./HideBalance";
 import userEvent from "@testing-library/user-event";
 import { Contracts } from "@ardenthq/sdk-profiles";
@@ -10,7 +10,7 @@ let profile: Contracts.IProfile;
 
 describe("HideBalance", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();

@@ -4,7 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTheme, ViewingModeType } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";
 import * as themeUtils from "@/utils/theme";
-import { env, getDefaultProfileId, act } from "@/utils/testing-library";
+import { env, getMainsailProfileId, act } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
 import { renderHook } from "@testing-library/react";
 
@@ -146,7 +146,7 @@ describe("useTheme", () => {
 
 	describe("setProfileTheme", () => {
 		it("should set theme from profile settings", async () => {
-			const profile = env.profiles().findById(getDefaultProfileId());
+			const profile = env.profiles().findById(getMainsailProfileId());
 			await env.profiles().restore(profile);
 
 			const {
@@ -167,7 +167,7 @@ describe("useTheme", () => {
 		});
 
 		it("should not set theme from profile settings", async () => {
-			const profile = env.profiles().findById(getDefaultProfileId());
+			const profile = env.profiles().findById(getMainsailProfileId());
 			await env.profiles().restore(profile);
 
 			const {
@@ -199,7 +199,7 @@ describe("useTheme", () => {
 				})),
 			});
 
-			const profile = env.profiles().findById(getDefaultProfileId());
+			const profile = env.profiles().findById(getMainsailProfileId());
 			await env.profiles().restore(profile);
 
 			const {

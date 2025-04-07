@@ -15,6 +15,7 @@ export interface LedgerDerivationScheme {
 
 export const minVersionList: Record<string, any> = {
 	ARK: "2.1.0",
+	Mainsail: "2.1.0",
 };
 
 export type LedgerTransport = any;

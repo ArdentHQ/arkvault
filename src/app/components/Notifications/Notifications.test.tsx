@@ -3,12 +3,11 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
 import { Notifications } from "./Notifications";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
 
 let profile: Contracts.IProfile;
 
@@ -28,13 +27,13 @@ vi.mock("react-visibility-sensor", () => ({
 describe("Notifications", () => {
 	beforeEach(async () => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: NotificationTransactionsFixtures.data,
-				meta: TransactionsFixture.meta,
+				meta: NotificationTransactionsFixtures.meta,
 			}),
 		);
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();

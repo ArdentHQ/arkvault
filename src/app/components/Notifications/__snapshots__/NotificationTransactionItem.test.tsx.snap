@@ -35,14 +35,14 @@ exports[`Notifications > should render in xs 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                   </span>
                 </div>
               </div>
@@ -66,7 +66,7 @@ exports[`Notifications > should render in xs 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 20 DARK
+                    + 2 ARK
                   </span>
                 </div>
               </div>
@@ -114,14 +114,14 @@ exports[`Notifications > should render in xs 2`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                    0x93485b57ff3DeD81430D08579142fAe8234c6A17
                   </span>
                 </div>
               </div>
@@ -145,7 +145,7 @@ exports[`Notifications > should render in xs 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 20 DARK
+                    + 2 ARK
                   </span>
                 </div>
               </div>
@@ -194,14 +194,14 @@ exports[`Notifications > should render in xs 3`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -214,7 +214,7 @@ exports[`Notifications > should render in xs 3`] = `
               <span
                 data-testid="TimeAgo"
               >
-                2 months ago
+                A few seconds ago
               </span>
             </div>
           </td>
@@ -236,7 +236,7 @@ exports[`Notifications > should render in xs 3`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      + 20 DARK
+                      + 2 ARK
                     </span>
                   </div>
                 </div>
@@ -289,14 +289,14 @@ exports[`Notifications > should render in xs 4`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -309,7 +309,7 @@ exports[`Notifications > should render in xs 4`] = `
               <span
                 data-testid="TimeAgo"
               >
-                2 months ago
+                A few seconds ago
               </span>
             </div>
           </td>
@@ -331,7 +331,7 @@ exports[`Notifications > should render in xs 4`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      + 20 DARK
+                      + 2 ARK
                     </span>
                   </div>
                 </div>
@@ -384,14 +384,14 @@ exports[`Notifications > should render in xs 5`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -404,7 +404,7 @@ exports[`Notifications > should render in xs 5`] = `
               <span
                 data-testid="TimeAgo"
               >
-                2 months ago
+                A few seconds ago
               </span>
             </div>
           </td>
@@ -426,7 +426,7 @@ exports[`Notifications > should render in xs 5`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      + 20 DARK
+                      + 2 ARK
                     </span>
                   </div>
                 </div>
@@ -479,14 +479,14 @@ exports[`Notifications > should render notification item 1`] = `
                       class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
-                      ARK Wallet 1
+                      Mainsail Wallet …
                     </span>
                   </span>
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                   </span>
                 </div>
               </div>
@@ -499,7 +499,7 @@ exports[`Notifications > should render notification item 1`] = `
               <span
                 data-testid="TimeAgo"
               >
-                2 months ago
+                A few seconds ago
               </span>
             </div>
           </td>
@@ -521,7 +521,7 @@ exports[`Notifications > should render notification item 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      + 20 DARK
+                      + 2 ARK
                     </span>
                   </div>
                 </div>

@@ -3,14 +3,14 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { ZendeskProvider, useZendesk } from "./Zendesk";
-import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
+import { render, screen, env, getMainsailProfileId, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 const webWidgetSelector = "#webWidget";
 
 describe("Zendesk Context Provider", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should render provider", () => {

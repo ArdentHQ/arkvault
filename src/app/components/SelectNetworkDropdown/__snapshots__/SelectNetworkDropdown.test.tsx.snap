@@ -19,7 +19,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
           readonly=""
           tabindex="-1"
           type="text"
-          value="ark.devnet"
+          value="mainsail.devnet"
         />
       </div>
     </div>
@@ -40,7 +40,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
           <div
             class="invisible fixed w-auto whitespace-nowrap"
           >
-            ARK Devnet
+            Mainsail Devnet
             …
           </div>
           <div
@@ -59,7 +59,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                 id="downshift-4-input"
                 placeholder="Select option"
                 type="text"
-                value="ARK Devnet"
+                value="Mainsail Devnet"
               />
               <span
                 class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
@@ -68,7 +68,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                 <span
                   class="truncate"
                 >
-                  ARK Devnet
+                  Mainsail Devnet
                 </span>
               </span>
             </div>
