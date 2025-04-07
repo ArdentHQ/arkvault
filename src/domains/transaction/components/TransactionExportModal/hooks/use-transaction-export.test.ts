@@ -177,11 +177,11 @@ describe("useTransactionExport hook", () => {
 					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
 					meta: {
 						...transactionsFixture.meta,
-						"count": 15,
-						"next": "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
-						"pageCount": 2,
-						"totalCount": 63,
-						"totalCountIsEstimate": true,
+						count: 15,
+						next: "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
+						pageCount: 2,
+						totalCount: 63,
+						totalCountIsEstimate: true,
 					},
 				});
 			}
