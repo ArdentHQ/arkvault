@@ -2530,7 +2530,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                                0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                               </span>
                             </div>
                           </div>
@@ -2543,7 +2543,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 DARK
+                              0 ARK
                             </span>
                           </div>
                         </td>
@@ -6235,7 +6235,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                                0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                               </span>
                             </div>
                           </div>
@@ -6248,7 +6248,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               class="whitespace-nowrap text-sm leading-[17px]"
                               data-testid="Amount"
                             >
-                              0 DARK
+                              0 ARK
                             </span>
                           </div>
                         </td>

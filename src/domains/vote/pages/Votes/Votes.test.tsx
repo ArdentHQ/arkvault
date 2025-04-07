@@ -549,9 +549,9 @@ describe("Votes", () => {
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 		const mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			coin: "Mainsail",
+			network: "mainsail.mainnet",
 		});
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});

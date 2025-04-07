@@ -82,9 +82,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
 
 		const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
-			address: "FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-			coin: "ARK",
-			network: "ark.devnet",
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 			path: "m/44'/1'/0'/0/3",
 		});
 

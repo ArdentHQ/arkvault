@@ -53,11 +53,11 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 
 		for (const wallet of data.wallets) {
 			if (wallet?.address && wallet?.balance.ARK) {
-				await profile.coins().set("ARK", "ark.mainnet").__construct();
+				await profile.coins().set("Mainsail", "mainsail.mainnet").__construct();
 			}
 
 			if (wallet?.address && wallet?.balance.DARK) {
-				await profile.coins().set("ARK", "ark.devnet").__construct();
+				await profile.coins().set("Mainsail", "mainsail.devnet").__construct();
 			}
 		}
 
@@ -66,8 +66,8 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 				if (wallet.address && wallet.balance.ARK) {
 					const importedWallet = await profile.walletFactory().fromAddress({
 						address: wallet.address,
-						coin: "ARK",
-						network: "ark.mainnet",
+						coin: "Mainsail",
+						network: "mainsail.mainnet",
 					});
 					profile.wallets().push(importedWallet);
 					return wallet;
@@ -76,8 +76,8 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 				if (wallet.address && wallet.balance.DARK) {
 					const importedWallet = await profile.walletFactory().fromAddress({
 						address: wallet.address,
-						coin: "ARK",
-						network: "ark.devnet",
+						coin: "Mainsail",
+						network: "mainsail.devnet",
 					});
 					profile.wallets().push(importedWallet);
 					return importedWallet;

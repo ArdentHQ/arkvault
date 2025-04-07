@@ -45,7 +45,6 @@
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@ardenthq/sdk": "2.0.0-alpha.67",
-		"@ardenthq/sdk-ark": "2.0.0-alpha.67",
 		"@ardenthq/sdk-intl": "2.0.0-alpha.67",
 		"@ardenthq/sdk-mainsail": "2.0.0-alpha.67",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.67",
@@ -184,7 +183,6 @@
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
 				"@ardenthq/sdk",
-				"@ardenthq/sdk-ark",
 				"@ardenthq/sdk-mainsail",
 				"@ardenthq/sdk-intl",
 				"@ardenthq/sdk-profiles",

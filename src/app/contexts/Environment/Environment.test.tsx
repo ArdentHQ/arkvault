@@ -1,4 +1,4 @@
-import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -26,7 +26,7 @@ const Details = () => {
 };
 
 const App = ({ database }) => {
-	env.reset({ coins: { ARK }, httpClient, storage: database });
+	env.reset({ coins: { Mainsail }, httpClient, storage: database });
 
 	return (
 		<EnvironmentProvider env={env}>
@@ -59,7 +59,7 @@ describe("Environment Context", () => {
 	});
 
 	it("should render the wrapper properly", () => {
-		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+		env.reset({ coins: { Mainsail }, httpClient, storage: new StubStorage() });
 
 		const { container, asFragment } = render(
 			<EnvironmentProvider env={env}>
