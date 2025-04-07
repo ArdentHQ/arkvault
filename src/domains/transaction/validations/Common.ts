@@ -7,6 +7,7 @@ import { TransactionFees } from "@/types";
 export const common = (t: TFunction) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
 		validate: () => {
+			console.log({ balance, fees, network });
 			return true;
 		},
 	}),
