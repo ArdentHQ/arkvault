@@ -1,5 +1,5 @@
 import { Contracts, IoC, Services } from "@ardenthq/sdk";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { Utils } from "@mainsail/crypto-transaction";
 import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
@@ -155,7 +155,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const { address } = await this.#signerData(input);
 		const nonce = await this.#generateNonce(address, input);
 
-		const vote = input.data.votes?.at(0);
+		const vote = input.data.votes.at(0);
 		const isVote = !!vote;
 
 		const data = encodeFunctionData({
@@ -419,7 +419,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 				...signature,
 				senderAddress,
 				senderPublicKey,
-				v: parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
+				v: Number.parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
 			};
 
 			// Reassign public key to match the signer, as `build` changes it.
@@ -427,12 +427,12 @@ export class TransactionService extends Services.AbstractTransactionService {
 			signedTransaction.data.senderPublicKey = senderPublicKey;
 			signedTransaction.data.senderAddress = senderAddress;
 
-			return this.dataTransferObjectService.signedTransaction(signedTransaction.id!, signedTransaction.data);
+			return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
 		}
 
 		const signedTransaction = await transaction?.build(transaction.data);
 
-		return this.dataTransferObjectService.signedTransaction(signedTransaction.id!, signedTransaction.data);
+		return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
 	}
 }
 
