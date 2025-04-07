@@ -1,20 +1,18 @@
+/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, IoC, Services } from "@ardenthq/sdk";
 import { BIP44, HDKey } from "@ardenthq/sdk-cryptography";
 import { Exceptions } from "@mainsail/contracts";
 
-import { Interfaces } from "./crypto/index.js";
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
 
 export class LedgerService extends Services.AbstractLedgerService {
-	readonly #clientService!: Services.ClientService;
 	readonly #addressService!: Services.AddressService;
 	readonly #dataTransferObjectService: Services.DataTransferObjectService;
 	#ledger!: Services.LedgerTransport;
 	#ethLedgerService!: any;
 	#transport!: any;
-
-	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
 	#extractAddressIndexFromPath(path: string): string {
 		return path.split("/").slice(-2).join("/");
@@ -47,7 +45,6 @@ export class LedgerService extends Services.AbstractLedgerService {
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#clientService = container.get(IoC.BindingType.ClientService);
 		this.#addressService = container.get(IoC.BindingType.AddressService);
 		this.#dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
 	}
@@ -60,7 +57,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 		this.#ledger = await this.ledgerTransportFactory();
 
 		if (setupTransport) {
-			const data = setupTransport?.(this.#ledger);
+			const data = setupTransport(this.#ledger);
 
 			this.#transport = data?.transport;
 			this.#ethLedgerService = data?.ledgerService;
@@ -106,6 +103,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 	}
 
 	public override async signMessage(path: string, payload: string): Promise<string> {
+		console.log({ path, payload });
 		throw new Exceptions.NotImplemented(this.constructor.name, this.signMessage.name);
 	}
 
@@ -118,8 +116,6 @@ export class LedgerService extends Services.AbstractLedgerService {
 		const pageSize = 5;
 		const page = 0;
 		const slip44 = this.configRepository.get<number>("network.constants.slip44");
-
-		const addresses: Record<string, { address: string; publicKey: string }> = {};
 		const path = `m/44'/${slip44}'/0'`;
 
 		let initialAddressIndex = 0;

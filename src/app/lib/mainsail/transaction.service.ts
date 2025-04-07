@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/no-await-expression-member */
+
 import { Contracts, IoC, Services } from "@ardenthq/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { Utils } from "@mainsail/crypto-transaction";
@@ -430,8 +432,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
 		}
 
-		const signedTransaction = await transaction?.build(transaction.data);
-
+		const signedTransaction = await signedTransactionBuilder?.build();
 		return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
 	}
 }
