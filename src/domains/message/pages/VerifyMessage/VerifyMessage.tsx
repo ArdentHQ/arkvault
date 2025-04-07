@@ -42,7 +42,6 @@ export const VerifyMessage = () => {
 
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
-	console.log(activeWallet);
 
 	const history = useHistory();
 

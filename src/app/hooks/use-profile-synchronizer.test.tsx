@@ -897,7 +897,6 @@ describe("useProfileStatusWatcher", () => {
 		const useStateSpy = vi.spyOn(React, "useState");
 		//@ts-ignore
 		useStateSpy.mockImplementation((initialState, setActualState) => {
-			console.log(initialState, setActualState);
 			// Use actual state if it's not `isInitialSync` in useProfileStatusWatcher
 			if (initialState !== true) {
 				return [initialState, setActualState];
