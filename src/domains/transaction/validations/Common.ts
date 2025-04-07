@@ -24,10 +24,7 @@ export const common = (t: TFunction) => ({
 				}
 
 				const minimumGasLimit = Math.max(
-					formatUnits(
-						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasLimit"]).toString(),
-						"gwei",
-					).toNumber(),
+					configManager.getMilestone()["gas"]["minimumGasLimit"],
 					defaultGasLimit,
 				);
 
@@ -37,12 +34,9 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const maximumGasLimit = formatUnits(
-					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasLimit"]).toString(),
-					"gwei",
-				);
+				const maximumGasLimit = configManager.getMilestone()["gas"]["maximumGasLimit"];
 
-				if (gasLimit > maximumGasLimit.toNumber()) {
+				if (gasLimit > maximumGasLimit) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_HIGH", {
 						maxGasLimit: maximumGasLimit,
 					});
