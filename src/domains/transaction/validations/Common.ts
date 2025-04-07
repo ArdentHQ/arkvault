@@ -23,9 +23,28 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (gasLimit < defaultGasLimit) {
+				const minimumGasLimit = Math.max(
+					formatUnits(
+						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasLimit"]).toString(),
+						"gwei",
+					).toNumber(),
+					defaultGasLimit,
+				);
+
+				if (gasLimit < minimumGasLimit) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
 						minGasLimit: defaultGasLimit,
+					});
+				}
+
+				const maximumGasLimit = formatUnits(
+					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasLimit"]).toString(),
+					"gwei",
+				);
+
+				if (gasLimit > maximumGasLimit.toNumber()) {
+					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_HIGH", {
+						maxGasLimit: maximumGasLimit,
 					});
 				}
 

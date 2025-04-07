@@ -427,6 +427,7 @@ export const translations = {
 		EXISTS: "{{field}} already exists",
 		FIELD_INVALID: "{{field}} invalid",
 		FIELD_REQUIRED: "{{field}} required",
+		GAS_LIMIT_IS_TOO_HIGH: "Gas limit cannot be greater than {{maxGasLimit}}",
 		GAS_LIMIT_IS_TOO_LOW: "Gas limit cannot be less than {{minGasLimit}}",
 		GAS_PRICE_IS_TOO_HIGH: "Gas price cannot be greater than {{maxGasPrice}}",
 		GAS_PRICE_IS_TOO_LOW: "Gas price cannot be less than {{minGasPrice}}",
