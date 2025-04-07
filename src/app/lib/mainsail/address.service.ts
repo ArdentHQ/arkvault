@@ -3,8 +3,8 @@ import { strict as assert } from "assert";
 import { Contracts, Identifiers } from "@mainsail/contracts";
 import { IoC, Services } from "@ardenthq/sdk";
 import { BIP39 } from "@ardenthq/sdk-cryptography";
-import { abort_if, abort_unless } from "@/app/lib/helpers";
-import { BindingType } from "./coin.contract";
+import { abort_if, abort_unless } from "@ardenthq/sdk-helpers";
+import { BindingType } from "./coin.contract.js";
 
 export class AddressService extends Services.AbstractAddressService {
 	readonly #app: Application;
@@ -36,7 +36,10 @@ export class AddressService extends Services.AbstractAddressService {
 		);
 	}
 
-	public override async fromMnemonic(mnemonic: string): Promise<Services.AddressDataTransferObject> {
+	public override async fromMnemonic(
+		mnemonic: string,
+		options?: Services.IdentityOptions,
+	): Promise<Services.AddressDataTransferObject> {
 		abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
 
 		return {
@@ -58,14 +61,20 @@ export class AddressService extends Services.AbstractAddressService {
 		};
 	}
 
-	public override async fromPublicKey(publicKey: string): Promise<Services.AddressDataTransferObject> {
+	public override async fromPublicKey(
+		publicKey: string,
+		options?: Services.IdentityOptions,
+	): Promise<Services.AddressDataTransferObject> {
 		return {
 			address: await this.#addressFactory.fromPublicKey(publicKey),
 			type: "bip39",
 		};
 	}
 
-	public override async fromPrivateKey(privateKey: string): Promise<Services.AddressDataTransferObject> {
+	public override async fromPrivateKey(
+		privateKey: string,
+		options?: Services.IdentityOptions,
+	): Promise<Services.AddressDataTransferObject> {
 		const keyPair = await this.#keyPairFactory.fromPrivateKey(Buffer.from(privateKey, "hex"));
 
 		return {
