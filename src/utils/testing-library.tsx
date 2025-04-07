@@ -214,7 +214,7 @@ export const MAINSAIL_MNEMONICS = [
 	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
 	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
 	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
-	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch"
+	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 ];
 
 export const breakpoints: {
