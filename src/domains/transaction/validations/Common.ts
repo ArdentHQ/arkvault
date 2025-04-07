@@ -68,9 +68,17 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (gasPrice < minGasPrice) {
+				const minimumGasPrice = Math.max(
+					formatUnits(
+						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"]).toString(),
+						"gwei",
+					).toNumber(),
+					minGasPrice,
+				);
+
+				if (gasPrice < minimumGasPrice) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {
-						minGasPrice,
+						minGasPrice: minimumGasPrice,
 					});
 				}
 
