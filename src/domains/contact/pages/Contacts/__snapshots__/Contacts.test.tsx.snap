@@ -2535,7 +2535,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                           type="button"
                                         >
                                           <div
-                                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                            class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                                           >
                                             <div
                                               style="height: 16px; width: 16px;"
@@ -2691,7 +2691,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                           type="button"
                                         >
                                           <div
-                                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                            class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                                           >
                                             <div
                                               style="height: 16px; width: 16px;"
