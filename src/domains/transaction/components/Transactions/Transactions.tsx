@@ -59,7 +59,7 @@ export const Transactions = memo(function Transactions({
 		hasFilter,
 		hasMore,
 		setSortBy,
-		sortBy
+		sortBy,
 	} = useProfileTransactions({ limit: 30, profile, wallets });
 
 	const showMore = !!selectedTransactionTypes?.length && hasMore;
@@ -254,7 +254,7 @@ export const Transactions = memo(function Transactions({
 					sortBy={sortBy}
 					onSortChange={(column, desc) => {
 						if (sortBy.column !== column || sortBy.desc !== desc) {
-							setSortBy({column, desc});
+							setSortBy({ column, desc });
 						}
 					}}
 				/>

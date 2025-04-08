@@ -81,11 +81,7 @@ const syncWallets = async (wallets: Contracts.IReadWriteWallet[]) => {
 	);
 };
 
-export const useProfileTransactions = ({
-	profile,
-	wallets,
-	limit = 30,
-}: ProfileTransactionsProperties) => {
+export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
@@ -94,17 +90,17 @@ export const useProfileTransactions = ({
 	const { syncOnChainUsernames } = useWalletAlias();
 	const allTransactionTypes = [...types.core];
 
-	const [sortBy, setSortBy] = useState<SortBy>({column: "date", desc: true});
+	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
 
-	const getSortStr = ({column, desc}: SortBy): string => {
+	const getSortStr = ({ column, desc }: SortBy): string => {
 		const columnMap = {
 			"Fiat Value": "amount",
 			amount: "amount",
 			date: "timestamp",
-		}
+		};
 
 		return columnMap[column] + ":" + (desc ? "desc" : "asc");
-	}
+	};
 
 	const orderBy = getSortStr(sortBy);
 

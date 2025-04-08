@@ -27,7 +27,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
 
-	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, state, } = useTable<RowDataType>(
+	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, state } = useTable<RowDataType>(
 		{
 			autoResetSortBy: false,
 			columns: tableColumns,
@@ -39,7 +39,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 		useSortBy,
 	);
 
-	const { id, desc } = (state.sortBy[0])
+	const { id, desc } = state.sortBy[0];
 
 	useEffect(() => {
 		onSortChange?.(id, desc);
