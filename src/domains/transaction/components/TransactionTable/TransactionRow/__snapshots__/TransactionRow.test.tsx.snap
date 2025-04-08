@@ -108,17 +108,19 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <span
-                        class="font-semibold text-sm text-theme-text"
-                        data-testid="Address__alias"
+                      <div
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          ARK Wallet 1
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </span>
-                      </span>
+                        <span>
+                           
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <button
@@ -185,17 +187,19 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
+                        <div
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures transition-colors duration-200"
-                            data-testid="TruncateEnd"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            ARK Wallet 1
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                           </span>
-                        </span>
+                          <span>
+                             
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -269,17 +273,19 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="font-semibold text-sm text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
                       >
-                        ARK Wallet 1
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                       </span>
-                    </span>
+                      <span>
+                         
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <button
@@ -351,17 +357,19 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="font-semibold text-sm text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
                       >
-                        ARK Wallet 1
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                       </span>
-                    </span>
+                      <span>
+                         
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <button
@@ -562,17 +570,19 @@ exports[`TransactionRow > should render 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <span
-                        class="font-semibold text-sm text-theme-text"
-                        data-testid="Address__alias"
+                      <div
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          ARK Wallet 1
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </span>
-                      </span>
+                        <span>
+                           
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <button
@@ -639,17 +649,19 @@ exports[`TransactionRow > should render 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
+                        <div
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures transition-colors duration-200"
-                            data-testid="TruncateEnd"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            ARK Wallet 1
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                           </span>
-                        </span>
+                          <span>
+                             
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -723,17 +735,19 @@ exports[`TransactionRow > should render 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="font-semibold text-sm text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
                       >
-                        ARK Wallet 1
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                       </span>
-                    </span>
+                      <span>
+                         
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <button
@@ -805,17 +819,19 @@ exports[`TransactionRow > should render 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="font-semibold text-sm text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
                       >
-                        ARK Wallet 1
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                       </span>
-                    </span>
+                      <span>
+                         
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <button
@@ -1008,17 +1024,19 @@ exports[`TransactionRow > should render responsive 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
+                            <div
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                data-testid="Address__address"
                               >
-                                ARK Wallet 1
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                               </span>
-                            </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1082,17 +1100,19 @@ exports[`TransactionRow > should render responsive 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
+                            <div
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                data-testid="Address__address"
                               >
-                                ARK Wallet 1
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                               </span>
-                            </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1286,17 +1306,19 @@ exports[`TransactionRow > should render responsive 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
+                            <div
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                data-testid="Address__address"
                               >
-                                ARK Wallet 1
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                               </span>
-                            </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1360,17 +1382,19 @@ exports[`TransactionRow > should render responsive 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
+                            <div
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                data-testid="Address__address"
                               >
-                                ARK Wallet 1
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                               </span>
-                            </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1885,17 +1909,19 @@ exports[`TransactionRow > should render with currency 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <span
-                        class="font-semibold text-sm text-theme-text"
-                        data-testid="Address__alias"
+                      <div
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          ARK Wallet 1
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </span>
-                      </span>
+                        <span>
+                           
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <button
@@ -1962,17 +1988,19 @@ exports[`TransactionRow > should render with currency 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
+                        <div
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures transition-colors duration-200"
-                            data-testid="TruncateEnd"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            ARK Wallet 1
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                           </span>
-                        </span>
+                          <span>
+                             
+                          </span>
+                        </div>
                       </div>
                     </div>
                     <button
@@ -2046,17 +2074,19 @@ exports[`TransactionRow > should render with currency 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="font-semibold text-sm text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
                       >
-                        ARK Wallet 1
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                       </span>
-                    </span>
+                      <span>
+                         
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <button
@@ -2128,17 +2158,19 @@ exports[`TransactionRow > should render with currency 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="font-semibold text-sm text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
                       >
-                        ARK Wallet 1
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                       </span>
-                    </span>
+                      <span>
+                         
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <button

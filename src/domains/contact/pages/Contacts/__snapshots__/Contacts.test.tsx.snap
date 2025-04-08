@@ -454,6 +454,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -1958,6 +1959,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -3199,6 +3201,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -4703,6 +4706,7 @@ exports[`Contacts > should render without contacts 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
