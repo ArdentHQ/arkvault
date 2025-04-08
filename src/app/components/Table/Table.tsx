@@ -42,7 +42,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	const { id, desc } = state.sortBy[0] ?? {};
 
 	useEffect(() => {
-		if (id && desc) {
+		if (id && desc !== undefined) {
 			onSortChange?.(id, desc);
 		}
 	}, [id, desc, onSortChange]);
