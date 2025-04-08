@@ -482,7 +482,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.type(screen.getByTestId("input"), "text");
 
-		expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
+		await expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
 	});
 
 	it("should render logo-only variant", () => {

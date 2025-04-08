@@ -154,7 +154,7 @@ export const Address = ({
 						>
 							<Icon
 								name="Copy"
-								className="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+								className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 							/>
 						</Clipboard>
 					)}
