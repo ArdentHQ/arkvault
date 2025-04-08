@@ -42,7 +42,9 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	const { id, desc } = state.sortBy[0] ?? {};
 
 	useEffect(() => {
-		onSortChange?.(id, desc);
+		if (id && desc) {
+			onSortChange?.(id, desc);
+		}
 	}, [id, desc, onSortChange]);
 
 	const rowsList = useMemo(() => {
