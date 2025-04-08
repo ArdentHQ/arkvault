@@ -319,6 +319,7 @@ export const translations = {
 	RANK: "Rank",
 	RATE: "Rate",
 	RATING: "Rating",
+	RECEIVE_FUNDS: "Receive Funds",
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
 	"RECIPIENT_#": "Recipient #{{count}}",
@@ -362,6 +363,7 @@ export const translations = {
 	SEND: "Send",
 	SENDER: "Sender",
 	SENDER_ADDRESS: "Sender address",
+	SEND_FUNDS: "Send Funds",
 	SERVER_STATUS: {
 		DOWNGRADED:
 			"One or more networks are experiencing downgraded performance. See server settings for additional information.",

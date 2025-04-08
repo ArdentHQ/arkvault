@@ -355,7 +355,11 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<ServerStatusIndicator profile={profile} />
 							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
-								<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
+								<Tooltip
+									content={
+										wallets.length > 0 ? t("COMMON.RECEIVE_FUNDS") : t("COMMON.NOTICE_NO_WALLETS")
+									}
+								>
 									<div>
 										<NavigationButtonWrapper>
 											<Button
@@ -368,13 +372,18 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 											>
 												<Icon name="Received" size="lg" className="p-1" />
 											</Button>
+											´{" "}
 										</NavigationButtonWrapper>
 									</div>
 								</Tooltip>
 							</div>
 							<div className="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
-								<Tooltip content={wallets.length > 0 ? undefined : t("COMMON.NOTICE_NO_WALLETS")}>
+								<Tooltip
+									content={
+										wallets.length > 0 ? t("COMMON.SEND_FUNDS") : t("COMMON.NOTICE_NO_WALLETS")
+									}
+								>
 									<div>
 										<NavigationButtonWrapper>
 											<Button
