@@ -155,6 +155,13 @@ export const Transactions = memo(function Transactions({
 		return !hasEmptyResults || hasMore;
 	}, [hasEmptyResults, hasMore, isLoadingTransactions, hasFilter]);
 
+
+	const onSortChange = useCallback((column: string, desc: boolean) => {
+		if (sortBy.column !== column || sortBy.desc !== desc) {
+			setSortBy({ column, desc });
+		}
+	}, [sortBy.desc, sortBy.column, setSortBy]);
+
 	if (!isVisible) {
 		return <></>;
 	}
@@ -252,11 +259,7 @@ export const Transactions = memo(function Transactions({
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={sortBy}
-					onSortChange={(column, desc) => {
-						if (sortBy.column !== column || sortBy.desc !== desc) {
-							setSortBy({ column, desc });
-						}
-					}}
+					onSortChange={onSortChange}
 				/>
 
 				{hasEmptyResults && (

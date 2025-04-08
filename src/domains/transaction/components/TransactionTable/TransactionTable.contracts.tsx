@@ -11,7 +11,7 @@ export interface TransactionTableProperties {
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
 	sortBy: SortBy;
-	onSortChange?: (column: string, desc: boolean) => void;
+	onSortChange: (column: string, desc: boolean) => void;
 }
 
 export interface Transaction {

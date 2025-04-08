@@ -77,9 +77,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				columns={columns}
 				data={data}
 				initialState={initialState}
-				onSortChange={(column, desc) => {
-					onSortChange?.(column, desc);
-				}}
+				onSortChange={onSortChange}
 				manualSortBy
 				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
