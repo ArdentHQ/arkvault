@@ -32,6 +32,7 @@ import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { httpClient } from "@/app/services";
 
 enum Step {
 	FormStep = 1,
@@ -307,6 +308,9 @@ export const SendVote = () => {
 			assertWallet(senderWallet);
 
 			if (unvotes.length > 0 && votes.length > 0) {
+				// Ensures the cache is flushed so it always fetches the latest wallet nonce
+				httpClient.forgetWalletCache(env, activeWallet);
+
 				if (senderWallet.network().votingMethod() === "simple") {
 					const { uuid, transaction } = await transactionBuilder.build(
 						"vote",
