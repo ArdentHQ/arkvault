@@ -175,7 +175,7 @@ describe("App", () => {
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
-		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
+		await expect(screen.findByText("Foo Bar")).resolves.toBeVisible();
 	});
 
 	it("should not migrate profiles", async () => {

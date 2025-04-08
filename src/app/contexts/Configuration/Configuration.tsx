@@ -1,5 +1,4 @@
 import React from "react";
-import { ARK } from "@ardenthq/sdk-ark";
 import { Mainsail } from "@/app/lib/mainsail";
 
 interface ConfigurationContextType {
@@ -17,7 +16,7 @@ const ConfigurationContext = React.createContext<ConfigurationContextType | unde
 
 const defaultServerStatus = () => {
 	const status = {};
-	const allNetworks = [...Object.entries(ARK.manifest.networks), ...Object.entries(Mainsail.manifest.networks)];
+	const allNetworks = [...Object.entries(Mainsail.manifest.networks)];
 
 	for (const [network, networkConfiguration] of allNetworks) {
 		const fullHost = networkConfiguration.hosts.find((host) => host.type === "full");

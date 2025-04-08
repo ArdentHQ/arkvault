@@ -9,8 +9,6 @@ import { env, getMainsailProfileId, render, screen } from "@/utils/testing-libra
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useActiveProfile", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

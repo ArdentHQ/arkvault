@@ -23,9 +23,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useProfileSyncStatus", () => {
 	it("should sync profile and handle resync with errored networks", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
@@ -65,7 +62,7 @@ describe("useProfileSyncStatus", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		const profile = env.profiles().findById(getMainsailProfileId());
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 

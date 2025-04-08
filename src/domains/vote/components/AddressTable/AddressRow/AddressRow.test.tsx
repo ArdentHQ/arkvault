@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 import { createHashHistory } from "history";
 
 import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
-import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { data } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 
@@ -51,8 +51,6 @@ const votingMockReturnValue = (delegatesIndex: number[]) =>
 			username: data[index].username,
 		}),
 	}));
-
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("AddressRow", () => {
 	beforeAll(async () => {
@@ -476,7 +474,7 @@ describe("AddressRow", () => {
 		expect(container).toBeInTheDocument();
 
 		const address = screen.getByTestId("AddressRow__wallet-vote");
-		expect(address).toHaveTextContent("D61mf…3Dyib");
+		expect(address).toHaveTextContent("0x1Bf…353e2");
 
 		votesMock.mockRestore();
 	});

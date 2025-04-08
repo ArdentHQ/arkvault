@@ -40,9 +40,6 @@ const secretInputID = "ImportWallet__secret-input";
 const errorText = "data-errortext";
 const testNetwork = "mainsail.devnet";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("ImportAddress Validations", () => {
 	let resetProfileNetworksMock: () => void;
 

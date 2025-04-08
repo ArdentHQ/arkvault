@@ -14,9 +14,6 @@ const wrapper = ({ children }: any) => (
 	</EnvironmentProvider>
 );
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useWalletFilters", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

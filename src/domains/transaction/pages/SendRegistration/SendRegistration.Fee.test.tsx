@@ -21,7 +21,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -76,7 +76,6 @@ const reviewStepID = "ValidatorRegistrationForm__review-step";
 
 describe("Registration Fee", () => {
 	beforeAll(async () => {
-		process.env.USE_MAINSAIL_NETWORK = "true";
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);

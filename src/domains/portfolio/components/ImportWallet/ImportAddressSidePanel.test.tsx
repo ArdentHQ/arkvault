@@ -46,9 +46,6 @@ const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-i
 const testNetwork = "mainsail.devnet";
 let network;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("ImportSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
 

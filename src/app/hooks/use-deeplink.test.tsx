@@ -18,9 +18,6 @@ const history = createHashHistory();
 const url =
 	"/?method=transfer&coin=mainsail&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useDeeplink hook", () => {
 	let profile: Contracts.IProfile;
 

@@ -5,15 +5,13 @@ import React from "react";
 import { ValidatorRow } from "./ValidatorRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { data } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
 
 const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
-
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("ValidatorRow", () => {
 	beforeAll(() => {

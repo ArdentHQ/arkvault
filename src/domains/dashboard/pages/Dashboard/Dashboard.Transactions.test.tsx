@@ -27,8 +27,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("Dashboard", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);

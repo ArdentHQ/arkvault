@@ -5,7 +5,7 @@ import { useTransaction } from "./use-transaction";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 describe("useTransaction", () => {
 	let profile: Contracts.IProfile;

@@ -9,8 +9,6 @@ const UNKNOWN_ADDRESS = "unknown-address";
 const ONCHAIN_USERNAME = "onchain_username";
 const WALLET_NAME = "Mainsail Wallet 1";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useWalletAlias", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;

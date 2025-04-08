@@ -22,8 +22,6 @@ const newContact = {
 	name: "Test Contact",
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("CreateContact", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

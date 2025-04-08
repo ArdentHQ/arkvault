@@ -26,8 +26,6 @@ const getList = (listType: ListType) => {
 	return recipients;
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useSearchWallet", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

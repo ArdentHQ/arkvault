@@ -15,9 +15,6 @@ const wrapper = ({ children }) => (
 	</EnvironmentProvider>
 );
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("useWalletConfig", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -26,7 +23,7 @@ describe("useWalletConfig", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {

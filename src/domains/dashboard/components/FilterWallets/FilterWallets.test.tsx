@@ -15,8 +15,6 @@ const defaultConfiguration: DashboardConfiguration = {
 	walletsDisplayType: "all",
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("FilterWallets", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

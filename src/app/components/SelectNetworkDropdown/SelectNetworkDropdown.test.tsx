@@ -27,7 +27,7 @@ describe("SelectNetworkDropdown", () => {
 
 		profile = env.profiles().findById(fixtureProfileId);
 
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {

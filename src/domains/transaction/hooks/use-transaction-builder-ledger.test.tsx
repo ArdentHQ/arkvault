@@ -7,7 +7,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { LedgerProvider } from "@/app/contexts";
 import React from "react";
 import { Services } from "@ardenthq/sdk";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useTransactionBuilder } from "./use-transaction-builder";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>

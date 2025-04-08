@@ -3,9 +3,7 @@ import { setupServer } from "msw/node";
 
 import {
 	cryptoCompareHandlers,
-	devnetHandlers,
 	exchangeHandlers,
-	mainnetHandlers,
 	mainsailDevnetHandlers,
 	mainsailMainnetHandlers,
 	miscHandlers,
@@ -50,9 +48,7 @@ export const requestMockOnce = (path: string, data: undefined | string | object,
 
 const restHandlers = [
 	...cryptoCompareHandlers,
-	...devnetHandlers,
 	...exchangeHandlers,
-	...mainnetHandlers,
 	...mainsailDevnetHandlers,
 	...mainsailMainnetHandlers,
 	...miscHandlers,

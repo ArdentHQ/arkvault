@@ -13,8 +13,6 @@ const requiredParameters = {
 	network: "mainsail.devnet",
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useSearchParametersValidation", () => {
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -460,13 +458,13 @@ describe("useSearchParametersValidation", () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
-			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"amount=10&coin=mainsail&method=transfer&network=mainsail.devnet&recipient=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "NETWORK_NO_WALLETS", value: "ARK Devnet" },
+			error: { type: "NETWORK_NO_WALLETS", value: "Mainsail Devnet" },
 		});
 
 		mockAvailableWallets.mockRestore();
@@ -476,7 +474,7 @@ describe("useSearchParametersValidation", () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
-			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+			"coin=mainsail&method=transfer&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -484,7 +482,7 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
 			error: {
 				type: "NETWORK_NO_WALLETS",
-				value: "ARK Devnet",
+				value: "Mainsail Devnet",
 			},
 		});
 

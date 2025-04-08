@@ -19,8 +19,6 @@ const walletsList = (wallets, isSelected) => (
 	</ul>
 );
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;

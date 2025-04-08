@@ -1,6 +1,6 @@
 import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
-import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { data } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
 
 describe("#urlParameters", () => {
 	describe.each(["vote", "unvote"])("append/get %s parameters", (parameterName) => {

@@ -8,8 +8,6 @@ import { env, getMainsailProfileId, render, screen } from "@/utils/testing-libra
 
 let wallet: Contracts.IReadWriteWallet;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("WalletIcons", () => {
 	beforeEach(async () => {
 		wallet = env.profiles().findById(getMainsailProfileId()).wallets().first();

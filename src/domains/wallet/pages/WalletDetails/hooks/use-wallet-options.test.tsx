@@ -6,8 +6,6 @@ import { renderHook } from "@testing-library/react";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;

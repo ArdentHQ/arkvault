@@ -123,7 +123,7 @@ beforeEach(() => {
 
 	if (process.env.MOCK_AVAILABLE_NETWORKS !== "false") {
 		try {
-			const profileId = process.env.USE_MAINSAIL_NETWORK ? getMainsailProfileId() : getDefaultProfileId();
+			const profileId = getMainsailProfileId();
 
 			const profile = env.profiles().findById(profileId);
 			const networks = profile

@@ -8,7 +8,7 @@ import { TransactionExportModal } from ".";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 const history = createHashHistory();
 

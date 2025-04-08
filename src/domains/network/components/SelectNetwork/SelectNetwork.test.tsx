@@ -24,7 +24,7 @@ describe("SelectNetwork", () => {
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		render(<SelectNetwork profile={profile} networks={profile.availableNetworks()} />, {});
 
-		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+		expect(screen.queryByTestId("SelectDropdown")).not.toBeInTheDocument();
 
 		resetProfileNetworksMock();
 	});

@@ -27,9 +27,6 @@ const fixtureProfileId = getMainsailProfileId();
 const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("EncryptionPasswordStep", () => {
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({

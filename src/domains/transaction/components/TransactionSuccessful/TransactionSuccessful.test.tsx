@@ -6,7 +6,7 @@ import { TransactionSuccessful } from "./TransactionSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
