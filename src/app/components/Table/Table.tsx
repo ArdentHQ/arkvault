@@ -1,5 +1,5 @@
 import { HeaderGroup, useSortBy, useTable } from "react-table";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 
 import { Icon } from "@/app/components/Icon";
 import { TableProperties } from "./Table.contracts";
@@ -21,20 +21,29 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	rowsPerPage,
 	currentPage = 1,
 	footer,
+	manualSortBy,
+	onSortChange,
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
 
-	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable<RowDataType>(
+	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, state, } = useTable<RowDataType>(
 		{
 			autoResetSortBy: false,
 			columns: tableColumns,
 			data: tableData,
 			disableSortRemove: true,
 			initialState,
+			manualSortBy,
 		},
 		useSortBy,
 	);
+
+	const { id, desc } = (state.sortBy[0]) as Record<string, boolean>;
+
+	useEffect(() => {
+		onSortChange?.(id, desc);
+	}, [id, desc, onSortChange]);
 
 	const rowsList = useMemo(() => {
 		if (!rowsPerPage || rows.length === 0) {

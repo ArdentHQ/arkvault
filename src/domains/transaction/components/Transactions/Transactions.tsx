@@ -58,6 +58,8 @@ export const Transactions = memo(function Transactions({
 		hasEmptyResults,
 		hasFilter,
 		hasMore,
+		setSortBy,
+		sortBy
 	} = useProfileTransactions({ limit: 30, profile, wallets });
 
 	const showMore = !!selectedTransactionTypes?.length && hasMore;
@@ -249,6 +251,12 @@ export const Transactions = memo(function Transactions({
 					onRowClick={setTransactionModalItem}
 					profile={profile}
 					hideSender={selectedWallets === 1}
+					sortBy={sortBy}
+					onSortChange={(column, desc) => {
+						if (sortBy.column !== column || sortBy.desc !== desc) {
+							setSortBy({column, desc});
+						}
+					}}
 				/>
 
 				{hasEmptyResults && (

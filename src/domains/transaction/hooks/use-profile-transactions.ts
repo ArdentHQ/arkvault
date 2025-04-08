@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
+import { SortBy } from "@/app/components/Table";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -84,7 +85,6 @@ export const useProfileTransactions = ({
 	profile,
 	wallets,
 	limit = 30,
-	orderBy = "timestamp:desc",
 }: ProfileTransactionsProperties) => {
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
@@ -93,6 +93,20 @@ export const useProfileTransactions = ({
 	const { types } = useTransactionTypes({ wallets });
 	const { syncOnChainUsernames } = useWalletAlias();
 	const allTransactionTypes = [...types.core];
+
+	const [sortBy, setSortBy] = useState<SortBy>({column: "date", desc: true});
+
+	const getSortStr = ({column, desc}: SortBy): string => {
+		const columnMap = {
+			"Fiat Value": "amount",
+			amount: "amount",
+			date: "timestamp",
+		}
+
+		return columnMap[column] + ":" + (desc ? "desc" : "asc");
+	}
+
+	const orderBy = getSortStr(sortBy);
 
 	const [
 		{
@@ -184,7 +198,7 @@ export const useProfileTransactions = ({
 		return () => {
 			isMounted.current = false;
 		};
-	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const updateFilters = useCallback(
 		({
@@ -283,7 +297,7 @@ export const useProfileTransactions = ({
 			isLoadingMore: false,
 			transactions: [...state.transactions, ...items],
 		}));
-	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes, orderBy]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	/**
 	 * Run periodically every 30 seconds to check for new transactions
@@ -348,6 +362,8 @@ export const useProfileTransactions = ({
 		isLoadingMore,
 		isLoadingTransactions,
 		selectedTransactionTypes,
+		setSortBy,
+		sortBy,
 		transactions: selectedTransactionTypes?.length ? transactions : [],
 		updateFilters,
 	};
