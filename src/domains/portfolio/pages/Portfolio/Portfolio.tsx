@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Page } from "@/app/components/Layout";
 import { DashboardEmpty } from "@/domains/dashboard/pages/Dashboard/Dashboard.Empty";
 import { useActiveProfile } from "@/app/hooks/env";
@@ -7,7 +7,6 @@ import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
-import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
@@ -16,11 +15,6 @@ export const Portfolio = () => {
 	const { selectedWallets } = usePortfolio({ profile });
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
-
-	useEffect(() => {
-		const address = Address.fromPassphrase("test")
-		console.log({ address })
-	}, [])
 
 	return (
 		<>
