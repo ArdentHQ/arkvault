@@ -24,8 +24,8 @@ importers:
         specifier: 2.0.0-alpha.67
         version: 2.0.0-alpha.67
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.1
-        version: 0.0.1
+        specifier: ^0.0.2
+        version: 0.0.2
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0(encoding@0.1.13)
@@ -470,8 +470,8 @@ packages:
   '@arkecosystem/ledger-transport@2.0.0':
     resolution: {integrity: sha512-PeqzDwebeWvQf+j6/p84wO8aTdIP+YvBoGcJlFWibErxMf2v1AYSNu+yHSRCZPxF+Fz9SOHetnrrebWbHph8zg==}
 
-  '@arkecosystem/typescript-crypto@0.0.1':
-    resolution: {integrity: sha512-hwhKMr3zLCffFXs0KFu8U7yrzNKGIlHKhQhcvV+/8lwDMy0ftsSGxUt4ep2G38Z4NtR23MxyR1Ho7SRLn0pKaw==}
+  '@arkecosystem/typescript-crypto@0.0.2':
+    resolution: {integrity: sha512-jrgWMLZyomBLZWhcIwzKlh0Af5JUUuJjgG8yM6/MSpjh4mz+POYn/3a5khcXsb2Bju4Aiof2bB+flrlsA3cyrQ==}
     engines: {node: '>=20.12.2'}
 
   '@babel/code-frame@7.24.7':
@@ -8925,7 +8925,7 @@ snapshots:
       '@ledgerhq/errors': 5.50.0
       '@ledgerhq/hw-transport': 5.51.1
 
-  '@arkecosystem/typescript-crypto@0.0.1':
+  '@arkecosystem/typescript-crypto@0.0.2':
     dependencies:
       '@noble/secp256k1': 2.2.3
       bignumber.js: 9.1.2
