@@ -13991,7 +13991,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 data-testid="Input__addon-end"
                               >
                                 <span
-                                  data-errortext="Profile Name required"
+                                  data-errortext="Profile Name required."
                                   data-testid="Input__error"
                                 >
                                   <div
