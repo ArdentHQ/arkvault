@@ -11,6 +11,7 @@ import { minVersionList } from "@/app/contexts";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
 
+import { afterAll } from "vitest";
 const history = createHashHistory();
 
 describe("LedgerConnectionStep", () => {
@@ -48,7 +49,7 @@ describe("LedgerConnectionStep", () => {
 
 		return (
 			<FormProvider {...form}>
-				<LedgerConnectionStep onConnect={onConnect} onFailed={onFailed} cancelling={cancelling} />
+				<LedgerConnectionStep onConnect={onConnect} onFailed={onFailed} cancelling={cancelling} network={wallet.network()} />
 			</FormProvider>
 		);
 	};
@@ -130,24 +131,23 @@ describe("LedgerConnectionStep", () => {
 	it("should show update error if app version is less than minimum version", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
-
-		const publicKeyPaths = new Map([
-			["m/44'/111'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
-			["m/44'/111'/1'/0/0", wallet.publicKey()!],
-			["m/44'/111'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
-		]);
-
-		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockResolvedValue(publicKeyPaths.values().next().value);
-
+	
 		const outdatedVersion = "1.0.1";
-		const getVersionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(outdatedVersion);
-
+		getVersionSpy.mockResolvedValueOnce(outdatedVersion);
+	
+		const getPublicKeySpy = vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation(() => {
+			throw new Error(
+				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+					coin: wallet.network().coin(),
+					version: outdatedVersion,
+				}),
+			);
+		});
+	
 		const onFailed = vi.fn();
-
+	
 		history.push(`/profiles/${profile.id()}`);
-
+	
 		const ledgerTransportMock = mockNanoXTransport();
 		render(
 			<Route path="/profiles/:profileId">
@@ -157,7 +157,7 @@ describe("LedgerConnectionStep", () => {
 				history,
 			},
 		);
-
+	
 		expect(
 			screen.getByText(
 				t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", {
@@ -165,7 +165,7 @@ describe("LedgerConnectionStep", () => {
 				}),
 			),
 		).toBeInTheDocument();
-
+	
 		await waitFor(
 			() =>
 				expect(
@@ -178,13 +178,13 @@ describe("LedgerConnectionStep", () => {
 				).resolves.toBeVisible(),
 			{ timeout: 3000 },
 		);
-
+	
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
-
+	
 		getPublicKeySpy.mockRestore();
-		getVersionSpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
+	
 
 	it("should render cancel screen", async () => {
 		const { result } = renderHook(() => useTranslation());
