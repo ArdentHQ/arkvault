@@ -287,7 +287,7 @@ describe("VerifyMessage", () => {
 
 		await userEvent.click(verifyButton());
 
-		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
 	});
 
 	it("should return to dashboard when accessed through deeplink", async () => {

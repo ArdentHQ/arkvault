@@ -101,7 +101,7 @@ describe("ByteBuffer#UInt8", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt8(dataset)).toThrowError(RangeError);
@@ -128,7 +128,7 @@ describe("ByteBuffer#Int16BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt16BE(dataset)).toThrowError(RangeError);
@@ -155,7 +155,7 @@ describe("ByteBuffer#UInt16BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt16BE(dataset)).toThrowError(RangeError);
@@ -182,7 +182,7 @@ describe("ByteBuffer#Int16LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt16LE(dataset)).toThrowError(RangeError);
@@ -209,7 +209,7 @@ describe("ByteBuffer#UInt16LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt16LE(dataset)).toThrowError(RangeError);
@@ -236,7 +236,7 @@ describe("ByteBuffer#Int32BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt32BE(dataset)).toThrowError(RangeError);
@@ -263,7 +263,7 @@ describe("ByteBuffer#UInt32BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt32BE(dataset)).toThrowError(RangeError);
@@ -290,7 +290,7 @@ describe("ByteBuffer#Int32LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeInt32LE(dataset)).toThrowError(RangeError);
@@ -317,7 +317,7 @@ describe("ByteBuffer#UInt32LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeUInt32LE(dataset)).toThrowError(RangeError);
@@ -344,7 +344,7 @@ describe("ByteBuffer#BigInt64BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigInt64BE(dataset)).toThrowError(RangeError);
@@ -371,7 +371,7 @@ describe("ByteBuffer#BigUInt64BE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigUInt64BE(dataset)).toThrowError(RangeError);
@@ -398,7 +398,7 @@ describe("ByteBuffer#BigInt64LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigInt64LE(dataset)).toThrowError(RangeError);
@@ -425,7 +425,7 @@ describe("ByteBuffer#BigUInt64LE", () => {
 		expect(byteBuffer.getResultLength()).toBe(bufferSize);
 	});
 
-	it.each(invalidValues)(invalidScalarError, (dataset) => {
+	it.each(invalidValues)(throwRangeError, (dataset) => {
 		const byteBuffer = new ByteBuffer(Buffer.alloc(bufferSize));
 
 		expect(() => byteBuffer.writeBigUInt64LE(dataset)).toThrowError(RangeError);
