@@ -32,9 +32,9 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                 class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
               >
                 <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                  title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                 />
               </div>
             </div>
@@ -59,7 +59,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
               </div>
             </div>
@@ -98,9 +98,9 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                 class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
               >
                 <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                  title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                 />
               </div>
             </div>
@@ -125,7 +125,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
               </div>
             </div>
@@ -176,7 +176,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -195,7 +195,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -214,7 +214,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -276,9 +276,9 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                 class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
               >
                 <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                  title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                 />
               </div>
             </div>
@@ -303,7 +303,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
               </div>
             </div>
@@ -354,7 +354,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -373,7 +373,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -392,7 +392,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -454,9 +454,9 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                 class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
               >
                 <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23B6D7F8%22%2F%3E%3C%2Fsvg%3E"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
+                  title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
                 />
               </div>
             </div>
@@ -481,7 +481,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
               </div>
             </div>
@@ -532,7 +532,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -551,7 +551,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>
@@ -570,7 +570,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </div>
             </div>

@@ -454,6 +454,8 @@ exports[`Exchange > should render empty 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´
+                   
                 </div>
               </div>
             </div>
@@ -1320,6 +1322,8 @@ exports[`Exchange > should render with exchanges 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´
+                   
                 </div>
               </div>
             </div>

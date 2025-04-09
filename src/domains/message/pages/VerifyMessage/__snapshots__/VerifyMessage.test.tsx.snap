@@ -457,6 +457,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -1453,6 +1454,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
