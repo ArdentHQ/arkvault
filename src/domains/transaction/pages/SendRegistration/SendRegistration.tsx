@@ -172,6 +172,7 @@ export const SendRegistration = () => {
 
 			if (registrationType === "multiSignature") {
 				const transaction = await sendMultiSignature({
+					env,
 					fee,
 					minParticipants,
 					participants,
