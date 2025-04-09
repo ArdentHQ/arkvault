@@ -1,5 +1,5 @@
 import { Coins, Networks } from "@ardenthq/sdk";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 
 const createNetwork = (coin: Coins.CoinBundle, network: string) =>
 	new Networks.Network(coin.manifest, coin.manifest.networks[network]);
