@@ -44,6 +44,7 @@
 	},
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
+		"@ardenthq/sdk": "2.0.0-alpha.67",
 		"@ardenthq/sdk-intl": "2.0.0-alpha.67",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.67",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
@@ -209,6 +210,7 @@
 				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
+				"@ardenthq/sdk",
 				"@ardenthq/sdk-intl",
 				"@ardenthq/sdk-profiles",
 				"@tippyjs/react",
