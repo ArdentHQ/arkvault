@@ -1,24 +1,22 @@
-import { describe } from "@ardenthq/sdk-test";
+import { describe, it, expect } from "vitest";
+import { formatUnits } from "./format-units";
 
-import { parseUnits } from "./parse-units";
-
-describe("parseUnits", ({ assert, it }) => {
-	it("should parse the value to wei", () => {
-		assert.equal(parseUnits(1, "wei").valueOf(), "1");
+describe("formatUnits", () => {
+	it("should format the value to wei", () => {
+		expect(formatUnits("1", "wei").valueOf()).toBe("1");
 	});
 
-	it("should parse the value to gwei", () => {
-		assert.equal(parseUnits(1, "gwei").valueOf(), "1000000000");
+	it("should format the value to gwei", () => {
+		expect(formatUnits("1000000000", "gwei").valueOf()).toBe("1");
 	});
 
-	it("should parse the value to ark", () => {
-		assert.equal(parseUnits(1, "ark").valueOf(), "1000000000000000000");
+	it("should format the value to ark", () => {
+		expect(formatUnits("1000000000000000000", "ark").valueOf()).toBe("1");
 	});
 
 	it("should throw an error for unsupported units", () => {
-		assert.throws(
-			() => parseUnits(1, "btc"),
-			"Unsupported unit: btc. Supported units are 'wei', 'gwei', and 'ark'.",
+		expect(() => formatUnits("1", "btc")).toThrow(
+			"Unsupported unit: btc. Supported units are 'wei', 'gwei', and 'ark'."
 		);
 	});
 });
