@@ -1,4 +1,4 @@
-import { ConfigRepository } from "./config";
+import { ConfigRepository } from "@/app/lib/sdk/config";
 import { Http } from "@/app/lib/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
