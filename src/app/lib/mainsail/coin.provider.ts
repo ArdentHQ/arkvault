@@ -3,7 +3,7 @@ import { Container } from "@mainsail/container";
 import { Identifiers } from "@mainsail/contracts";
 import { ServiceProvider as CoreCryptoAddressKeccak } from "@mainsail/crypto-address-keccak256";
 import { ServiceProvider as CoreCryptoConfig } from "@mainsail/crypto-config";
-import { ServiceProvider as CoreCryptoConsensusBls12381 } from "@mainsail/crypto-consensus-bls12-381";
+//import { ServiceProvider as CoreCryptoConsensusBls12381 } from "@mainsail/crypto-consensus-bls12-381";
 import { ServiceProvider as CoreCryptoHashBcrypto } from "@mainsail/crypto-hash-bcrypto";
 import { ServiceProvider as CoreCryptoKeyPairEcdsa } from "@mainsail/crypto-key-pair-ecdsa";
 import { ServiceProvider as CoreCryptoSignatureEcdsa } from "@mainsail/crypto-signature-ecdsa";
@@ -75,7 +75,7 @@ export class ServiceProvider extends IoC.AbstractServiceProvider {
 		await app.resolve(CoreCryptoAddressKeccak).register();
 		await app.resolve(CoreCryptoHashBcrypto).register();
 		await app.resolve(CoreCryptoTransaction).register();
-		await app.resolve(CoreCryptoConsensusBls12381).register();
+		//await app.resolve(CoreCryptoConsensusBls12381).register();
 		await app.resolve(CoreCryptoWif).register();
 		await app.resolve(CoreCryptoSerializer).register();
 		await app.resolve(EvmCallBuilder).register();
