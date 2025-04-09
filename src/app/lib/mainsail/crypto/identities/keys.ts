@@ -1,9 +1,9 @@
-import { Hash, secp256k1, WIF } from "@ardenthq/sdk-cryptography";
+import { Hash, secp256k1, WIF } from "@/app/lib/crypto";
 
 import { Network } from "@/app/lib/mainsail/crypto/interfaces/networks";
-import { KeyPair } from "./contracts";
-import { NetworkVersionError } from "./errors";
-import { getWIF } from "./helpers";
+import { KeyPair } from "./contracts.js";
+import { NetworkVersionError } from "./errors.js";
+import { getWIF } from "./helpers.js";
 
 export class Keys {
 	public static fromPassphrase(passphrase: string, compressed = true): KeyPair {

@@ -14,9 +14,6 @@ importers:
       '@ardenthq/sdk':
         specifier: 2.0.0-alpha.67
         version: 2.0.0-alpha.67
-      '@ardenthq/sdk-cryptography':
-        specifier: 2.0.0-alpha.67
-        version: 2.0.0-alpha.67
       '@ardenthq/sdk-intl':
         specifier: 2.0.0-alpha.67
         version: 2.0.0-alpha.67
@@ -92,6 +89,9 @@ importers:
       '@noble/hashes':
         specifier: ^1.7.1
         version: 1.7.1
+      '@noble/secp256k1':
+        specifier: ^2.2.3
+        version: 2.2.3
       '@scure/base':
         specifier: ^1.2.4
         version: 1.2.4
@@ -119,6 +119,9 @@ importers:
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
+      create-xpub:
+        specifier: ^2.1.0
+        version: 2.1.0
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
@@ -146,6 +149,9 @@ importers:
       get-random-values:
         specifier: ^3.0.0
         version: 3.0.0
+      hdkey:
+        specifier: ^2.1.0
+        version: 2.1.0
       i18next:
         specifier: ^23.11.5
         version: 23.12.2
@@ -2187,6 +2193,9 @@ packages:
 
   '@noble/secp256k1@1.7.1':
     resolution: {integrity: sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw==}
+
+  '@noble/secp256k1@2.2.3':
+    resolution: {integrity: sha512-l7r5oEQym9Us7EAigzg30/PQAvynhMt2uoYtT3t26eGDVm9Yii5mZ5jWSWmZ/oSIR2Et0xfc6DXrG0bZ787V3w==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -10891,6 +10900,8 @@ snapshots:
   '@noble/hashes@1.7.1': {}
 
   '@noble/secp256k1@1.7.1': {}
+
+  '@noble/secp256k1@2.2.3': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

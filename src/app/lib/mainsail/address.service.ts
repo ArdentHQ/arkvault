@@ -2,7 +2,7 @@ import { Application } from "@mainsail/kernel";
 import { strict as assert } from "assert";
 import { Contracts, Identifiers } from "@mainsail/contracts";
 import { IoC, Services } from "@ardenthq/sdk";
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { BIP39 } from "@/app/lib/crypto/bip39";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
 import { BindingType } from "./coin.contract.js";
 

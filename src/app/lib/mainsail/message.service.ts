@@ -2,8 +2,8 @@
 /* eslint-disable */
 
 import { Hash as ARK } from "./crypto/hash";
-import { Hash } from "@ardenthq/sdk-cryptography";
-import { Services } from "@ardenthq/sdk";
+import { Hash } from "@/app/lib/crypto";
+import { Services } from "@/app/lib/sdk";
 
 export class MessageService extends Services.AbstractMessageService {
 	public override async sign(input: Services.MessageInput): Promise<Services.SignedMessage> {

@@ -1,7 +1,7 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 import { Contracts, Http, IoC, Services, Signatories } from "@ardenthq/sdk";
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@/app/lib/crypto";
 import { BigNumber, uniq } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
