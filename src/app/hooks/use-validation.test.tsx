@@ -39,7 +39,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasPrice(balance, getValuesMock, 5, mockNetwork);
 			const isValid = validation.validate.valid(0);
 
-			expect(isValid).toBe("Gas Price required");
+			expect(isValid).toBe("Gas Price required.");
 		});
 
 		it("should error for gasPrice is less than min value", () => {
@@ -51,7 +51,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasPrice(balance, getValuesMock, 5, mockNetwork);
 			const isValid = validation.validate.valid(3);
 
-			expect(isValid).toBe("Gas price cannot be less than 5");
+			expect(isValid).toBe("Gas price cannot be less than 5.");
 		});
 
 		it("should error for zero balance", () => {
@@ -114,7 +114,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasLimit(0, getValuesMock, 21_000, mockNetwork);
 			const isValid = validation.validate.valid(0);
 
-			expect(isValid).toBe("Gas Limit required");
+			expect(isValid).toBe("Gas Limit required.");
 		});
 
 		it("should error for gasPrice is less than default value", () => {
@@ -126,7 +126,7 @@ describe("useValidation hook", () => {
 			const validation = current.common.gasLimit(0, getValuesMock, 21_000, mockNetwork);
 			const isValid = validation.validate.valid(300);
 
-			expect(isValid).toBe("Gas limit cannot be less than 21000");
+			expect(isValid).toBe("Gas limit cannot be less than 21000.");
 		});
 
 		it("should error for zero balance", () => {
