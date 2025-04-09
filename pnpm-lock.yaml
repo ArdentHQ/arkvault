@@ -11,9 +11,6 @@ importers:
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
         version: 1.2.0
-      '@ardenthq/sdk':
-        specifier: 2.0.0-alpha.67
-        version: 2.0.0-alpha.67
       '@ardenthq/sdk-intl':
         specifier: 2.0.0-alpha.67
         version: 2.0.0-alpha.67
