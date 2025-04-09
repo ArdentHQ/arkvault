@@ -202,7 +202,7 @@ export const PortfolioHeader = ({
 											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
 										/>
 									</div>
-									<div className="gap-3 sm:ml-1.5 leading-[17px] flex items-center">
+									<div className="flex items-center gap-3 leading-[17px] sm:ml-1.5">
 										<WalletIcons
 											wallet={wallet}
 											exclude={["isKnown", "isStarred", "isTestNetwork"]}
