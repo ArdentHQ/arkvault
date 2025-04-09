@@ -17,6 +17,7 @@ import cn from "classnames";
 import { t } from "i18next";
 import { useLocalStorage } from "usehooks-ts";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
 
 export const AddressesSidePanel = ({
 	profile,
@@ -434,32 +435,36 @@ export const AddressesSidePanel = ({
 			)}
 
 			<div className="space-y-1">
-				{addressesToShow.map((wallet, index) => (
-					<AddressRow
-						profile={profile}
-						errorMessage={
-							!hasSelectedAddresses() && !isDeleteMode && index === 0
-								? "You need to have at least one address selected."
-								: undefined
-						}
-						isError={(!hasSelectedAddresses() && !isDeleteMode) || wallet.address() === addressToDelete}
-						key={wallet.address()}
-						wallet={wallet}
-						toggleAddress={toggleAddressSelection}
-						isSelected={isSelected(wallet)}
-						isSingleView={activeMode === AddressViewSelection.single}
-						usesDeleteMode={isDeleteMode}
-						onDelete={(address: string) => setAddressToDelete(address)}
-						deleteContent={
-							addressToDelete === wallet.address() ? (
-								<DeleteAddressMessage
-									onCancelDelete={resetDeleteState}
-									onConfirmDelete={() => onDelete?.(wallet.address())}
-								/>
-							) : undefined
-						}
-					/>
-				))}
+				{addressesToShow.length === 0 ? (
+					<EmptyBlock size="sm">{t("WALLETS.ADDRESSES_SIDE_PANEL.NO_SEARCH_RESULTS")}</EmptyBlock>
+				) : (
+					addressesToShow.map((wallet, index) => (
+						<AddressRow
+							profile={profile}
+							errorMessage={
+								!hasSelectedAddresses() && !isDeleteMode && index === 0
+									? "You need to have at least one address selected."
+									: undefined
+							}
+							isError={(!hasSelectedAddresses() && !isDeleteMode) || wallet.address() === addressToDelete}
+							key={wallet.address()}
+							wallet={wallet}
+							toggleAddress={toggleAddressSelection}
+							isSelected={isSelected(wallet)}
+							isSingleView={activeMode === AddressViewSelection.single}
+							usesDeleteMode={isDeleteMode}
+							onDelete={(address: string) => setAddressToDelete(address)}
+							deleteContent={
+								addressToDelete === wallet.address() ? (
+									<DeleteAddressMessage
+										onCancelDelete={resetDeleteState}
+										onConfirmDelete={() => onDelete?.(wallet.address())}
+									/>
+								) : undefined
+							}
+						/>
+					))
+				)}
 			</div>
 		</SidePanel>
 	);
