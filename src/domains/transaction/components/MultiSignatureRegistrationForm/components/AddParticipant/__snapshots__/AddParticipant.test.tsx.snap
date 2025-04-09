@@ -50,7 +50,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                   data-testid="Input__addon-end"
                 >
                   <span
-                    data-errortext="The address could not be found"
+                    data-errortext="The address could not be found."
                     data-testid="Input__error"
                   >
                     <div
@@ -136,7 +136,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                         data-testid="Input__addon-end"
                       >
                         <span
-                          data-errortext="The address could not be found"
+                          data-errortext="The address could not be found."
                           data-testid="Input__error"
                         >
                           <div
@@ -438,7 +438,7 @@ exports[`Add Participant > should fail to find 1`] = `
                   data-testid="Input__addon-end"
                 >
                   <span
-                    data-errortext="The address could not be found"
+                    data-errortext="The address could not be found."
                     data-testid="Input__error"
                   >
                     <div
@@ -524,7 +524,7 @@ exports[`Add Participant > should fail to find 1`] = `
                         data-testid="Input__addon-end"
                       >
                         <span
-                          data-errortext="The address could not be found"
+                          data-errortext="The address could not be found."
                           data-testid="Input__error"
                         >
                           <div
@@ -826,7 +826,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                   data-testid="Input__addon-end"
                 >
                   <span
-                    data-errortext="The address is already in the list"
+                    data-errortext="The address is already in the list."
                     data-testid="Input__error"
                   >
                     <div
@@ -937,7 +937,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                         data-testid="Input__addon-end"
                       >
                         <span
-                          data-errortext="The address is already in the list"
+                          data-errortext="The address is already in the list."
                           data-testid="Input__error"
                         >
                           <div
@@ -1228,7 +1228,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                   data-testid="Input__addon-end"
                 >
                   <span
-                    data-errortext="The public key could not be found"
+                    data-errortext="The public key could not be found."
                     data-testid="Input__error"
                   >
                     <div
@@ -1314,7 +1314,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                         data-testid="Input__addon-end"
                       >
                         <span
-                          data-errortext="The public key could not be found"
+                          data-errortext="The public key could not be found."
                           data-testid="Input__error"
                         >
                           <div
@@ -1616,7 +1616,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                   data-testid="Input__addon-end"
                 >
                   <span
-                    data-errortext="The address could not be found"
+                    data-errortext="The address could not be found."
                     data-testid="Input__error"
                   >
                     <div
@@ -1702,7 +1702,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                         data-testid="Input__addon-end"
                       >
                         <span
-                          data-errortext="The address could not be found"
+                          data-errortext="The address could not be found."
                           data-testid="Input__error"
                         >
                           <div
