@@ -47,7 +47,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 			/>
 
 			{!!error && (
-				<div className="-mb-2 mt-6">
+				<div className="mt-6 -mb-2">
 					<Alert variant="danger">{error}</Alert>
 				</div>
 			)}

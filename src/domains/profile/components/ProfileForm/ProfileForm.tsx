@@ -118,7 +118,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							/>
 						</FormField>
 
-						<div className="mt-4 border-theme-secondary-300 dark:border-theme-secondary-800 sm:ml-4 sm:mt-0 sm:border-l sm:pl-4">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 sm:mt-0 sm:ml-4 sm:border-l sm:pl-4">
 							<FormField name="viewingMode">
 								<FormLabel label={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")} />
 								<ButtonGroup className="space-x-2">
@@ -163,7 +163,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 									})
 								}
 							/>
-							<span className="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+							<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm whitespace-pre-line">
 								<Trans
 									i18nKey="PROFILE.PAGE_CREATE_PROFILE.DISCLAIMER"
 									components={{

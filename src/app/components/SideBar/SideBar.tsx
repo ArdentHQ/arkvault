@@ -34,15 +34,15 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 
 	return (
 		<>
-			<div className="relative -mx-6 -mt-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:m-0 md:border-t-0 md:bg-transparent md:p-0 dark:md:bg-transparent lg:hidden">
+			<div className="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent">
 				<Dropdown
 					placement="bottom-start"
 					wrapperClass="sm:w-full px-6 sm:px-6 md:px-10 -mt-2"
 					options={options}
 					onSelect={({ value }) => handleActiveItem(String(value))}
 					toggleContent={(isOpen) => (
-						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300">
-							<span className="flex-1 font-semibold leading-tight">{selectedLabel}</span>
+						<div className="dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border">
+							<span className="flex-1 leading-tight font-semibold">{selectedLabel}</span>
 
 							<Icon
 								name="ChevronDownSmall"
@@ -54,7 +54,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 				/>
 			</div>
 
-			<div className="hidden w-[200px] rounded-xl border border-theme-secondary-300 p-1 dark:border-theme-dark-700 lg:block">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block">
 				<ul className="space-y-1">
 					{items.map(({ label, route, itemKey }, index) => (
 						<SideBarItem

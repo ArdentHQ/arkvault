@@ -17,10 +17,10 @@ export const PageSkeleton = () => {
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className="hidden min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] sm:block">
+						<div className="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 hidden min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] sm:block dark:bg-[url('/welcome-bg-dark.svg')]">
 							<WelcomeSlider />
 						</div>
-						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6">
+						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
 							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
 								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">

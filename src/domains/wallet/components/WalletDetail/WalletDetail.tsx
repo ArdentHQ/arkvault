@@ -44,7 +44,7 @@ export const WalletDetail = React.forwardRef<HTMLDivElement, TransactionDetailPr
 			<div className="flex w-full items-center justify-between space-x-4">
 				<div className="w-40 space-y-2 whitespace-nowrap sm:flex-1">
 					{label && (
-						<div className="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+						<div className="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 							{label}
 						</div>
 					)}

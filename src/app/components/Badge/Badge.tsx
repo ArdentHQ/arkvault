@@ -27,19 +27,19 @@ export const Wrapper = forwardRef<HTMLSpanElement, BadgeStyleProperties>(
 			ref={ref}
 			{...props}
 			className={twMerge(
-				"absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform",
+				"absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform",
 				cn({
 					"bottom-0 left-0 -translate-x-1/2 translate-y-1/2": position === "bottom-left",
-					"bottom-0 right-0 translate-x-1/2 translate-y-1/2": position === "bottom-right",
 					"bottom-1 translate-y-full": position === "bottom",
 					"h-2 w-2": size === "sm",
 					"h-6 w-6": size === "lg",
-					"left-0 top-0 -translate-x-1/2 -translate-y-1/2": position === "top-left",
 					"left-1 -translate-x-full": position === "left",
-					"right-0 top-0 -translate-y-1/2 translate-x-1/2": position === "top-right",
+					"right-0 bottom-0 translate-x-1/2 translate-y-1/2": position === "bottom-right",
 					"right-1 translate-x-full": position === "right",
 					"shadow-[0_0_0_3px_theme-background]": size === "sm" && !noShadow,
 					"shadow-[0_0_0_5px_theme-background]": size !== "sm" && !noShadow,
+					"top-0 left-0 -translate-x-1/2 -translate-y-1/2": position === "top-left",
+					"top-0 right-0 translate-x-1/2 -translate-y-1/2": position === "top-right",
 					"top-1 -translate-y-full": position === "top",
 				}),
 				props.className,
@@ -55,7 +55,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProperties>(
 		<Wrapper
 			ref={reference}
 			className={cn(
-				"flex items-center justify-center rounded-full border-2 bg-theme-background align-middle",
+				"bg-theme-background flex items-center justify-center rounded-full border-2 align-middle",
 				className,
 			)}
 			{...properties}

@@ -11,7 +11,7 @@ export const DashboardEmpty = ({
 }) => (
 	<>
 		<div className="hidden items-center justify-center sm:flex">
-			<div className="mt-6 flex h-page max-w-[45.25rem] px-4 md:mt-0 md:items-center md:px-0">
+			<div className="h-page mt-6 flex max-w-[45.25rem] px-4 md:mt-0 md:items-center md:px-0">
 				<DashboardSetupAddressCards onCreateAddress={onCreateAddress} onImportAddress={onImportAddress} />
 			</div>
 		</div>

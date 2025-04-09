@@ -38,7 +38,7 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 		(recipient: RecipientItem, index: number) => (
 			<TableRow key={index} border className="relative">
 				<TableCell variant="start" innerClassName="pl-6">
-					<span className="text-sm font-semibold leading-[17px] text-theme-text">{index + 1}</span>
+					<span className="text-theme-text text-sm leading-[17px] font-semibold">{index + 1}</span>
 				</TableCell>
 
 				<TableCell>
@@ -53,7 +53,7 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 				</TableCell>
 
 				<TableCell variant="end" innerClassName="justify-end pr-6">
-					<span className="whitespace-nowrap text-sm font-semibold leading-[17px]">
+					<span className="text-sm leading-[17px] font-semibold whitespace-nowrap">
 						<Amount ticker={ticker} value={recipient.amount as number} />
 					</span>
 				</TableCell>

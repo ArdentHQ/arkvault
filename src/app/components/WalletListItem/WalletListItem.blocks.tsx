@@ -46,7 +46,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 				<Icon
 					className={cn("transition-all duration-300 ease-in-out", {
 						"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-						"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200": !wallet.isStarred(),
+						"stroke-theme-warning-400 hover:fill-theme-warning-200 fill-transparent": !wallet.isStarred(),
 					})}
 					name={"StarFilled"}
 					dimensions={starIconDimensions}
@@ -57,7 +57,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 
 	return (
 		<TableCell variant="start" size="sm" innerClassName="space-x-3 pl-4 ml-2" data-testid="TableCell_Starred">
-			<div className="flex h-5 items-center pr-3 dark:border-theme-secondary-800">
+			<div className="dark:border-theme-secondary-800 flex h-5 items-center pr-3">
 				<Tooltip
 					content={
 						wallet.isStarred()
@@ -73,7 +73,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 						<Icon
 							className={cn("transition-all duration-300 ease-in-out", {
 								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-								"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200":
+								"stroke-theme-warning-400 hover:fill-theme-warning-200 fill-transparent":
 									!wallet.isStarred(),
 							})}
 							name={"StarFilled"}
@@ -184,7 +184,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 	const renderCurrency = () => {
 		if (wallet.network().isTest()) {
 			return (
-				<span className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700">
+				<span className="text-theme-navy-200 md:text-theme-secondary-500 dark:md:text-theme-secondary-700 text-xs font-semibold md:text-base">
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
 			);
@@ -196,7 +196,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 
 		return (
 			<Amount
-				className="text-xs font-semibold text-theme-navy-200 dark:text-white md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500"
+				className="text-theme-navy-200 md:text-theme-secondary-700 dark:md:text-theme-secondary-500 text-xs font-semibold md:text-base dark:text-white"
 				ticker={wallet.exchangeCurrency()}
 				value={wallet.convertedBalance()}
 			/>
@@ -242,7 +242,7 @@ export const WalletItemExtraDetails = ({ wallet }: { wallet: Contracts.IReadWrit
 	return (
 		<>
 			<Info
-				className="border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 border-r pr-3 empty:border-r-0"
 				wallet={wallet}
 				isLargeScreen={false}
 			/>
@@ -279,10 +279,10 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
-				"w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background dark:focus:ring-theme-primary-400",
+				"bg-theme-primary-100 focus:ring-theme-primary-400 dark:bg-theme-background dark:focus:ring-theme-primary-400 w-full rounded-xl p-2 text-left focus:ring-2 focus:outline-hidden",
 				{
-					"dark:ring-2 dark:ring-theme-secondary-800": !selected,
-					"ring-2 ring-theme-primary-600": selected,
+					"dark:ring-theme-secondary-800 dark:ring-2": !selected,
+					"ring-theme-primary-600 ring-2": selected,
 				},
 			)}
 			tabIndex={onClick ? 0 : -1}
@@ -297,7 +297,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			{(balance !== undefined || onButtonClick !== undefined) && (
 				<div className="mt-2 flex overflow-hidden rounded-xl">
 					{balance !== undefined && (
-						<div className="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold">
+						<div className="bg-theme-primary-500 flex flex-1 flex-col justify-between space-y-1 px-4 py-3 font-semibold">
 							{balance}
 						</div>
 					)}
@@ -305,15 +305,15 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 					{onButtonClick !== undefined && (
 						<div
 							className={cn("flex", {
-								"grow": balance === undefined,
+								grow: balance === undefined,
 							})}
 							onClick={handleStopPropagation}
 						>
 							<button
 								data-testid="WalletListItemMobile--button"
 								className={cn({
+									"bg-theme-primary-500 text-theme-primary-400 cursor-not-allowed": isButtonDisabled,
 									"bg-theme-primary-600 text-white": !isButtonDisabled,
-									"cursor-not-allowed bg-theme-primary-500 text-theme-primary-400": isButtonDisabled,
 									"flex grow items-center justify-center px-3 py-3 font-semibold": true,
 								})}
 								type="button"
@@ -344,7 +344,7 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
-				"flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background",
+				"bg-theme-primary-100 dark:bg-theme-background flex w-full cursor-pointer flex-row rounded-xl border-2",
 				{
 					"border-theme-primary-100 dark:border-theme-secondary-800": !selected,
 					"border-theme-primary-600 dark:border-theme-primary-600": selected,
@@ -355,10 +355,10 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 		>
 			<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
 				<div className="flex flex-row gap-1.5">
-					<span className="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					<span className="text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm font-semibold">
 						<TruncateEnd text={name} maxChars={maxCharacters} showTooltip={name.length > maxCharacters} />
 					</span>
-					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold">
 						({type})
 					</span>
 				</div>
@@ -367,8 +367,8 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 			</div>
 			<div
 				className={cn("flex w-11 items-center justify-center", {
-					"rounded-r-lg bg-theme-primary-600 dark:bg-theme-primary-600": selected,
-					"rounded-r-xl bg-theme-primary-100 dark:bg-theme-background": !selected,
+					"bg-theme-primary-100 dark:bg-theme-background rounded-r-xl": !selected,
+					"bg-theme-primary-600 dark:bg-theme-primary-600 rounded-r-lg": selected,
 				})}
 			>
 				<div>
@@ -399,7 +399,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 		<div
 			data-testid={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
 			className={cn(
-				"flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background",
+				"bg-theme-primary-100 dark:bg-theme-background flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl p-2 ring-2",
 				{
 					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
 					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
@@ -408,18 +408,18 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 			tabIndex={onClick ? 0 : -1}
 			onClick={onClick}
 		>
-			<div className="flex flex-col gap-2 pl-2 pt-2">
-				<span className="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128">
+			<div className="flex flex-col gap-2 pt-2 pl-2">
+				<span className="text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128">
 					{name}
 				</span>
-				<span className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+				<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold">
 					{address}
 				</span>
 			</div>
 
-			<div className="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white">
+			<div className="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white">
 				<div className="pl-2">{balance}</div>
-				<button className="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3">
+				<button className="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3">
 					{t("COMMON.SELECT")}
 				</button>
 			</div>
@@ -449,14 +449,14 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 						size="icon"
 						disabled={isButtonDisabled}
 						variant="transparent"
-						className="pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+						className="text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 pr-0 text-sm hover:underline"
 						onClick={onSend}
 					>
 						<div className="pr-3">{t("COMMON.SEND")}</div>
 					</Button>
 				</div>
 			</Tooltip>
-			<div className="h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800" />
+			<div className="bg-theme-secondary-300 dark:bg-theme-secondary-800 h-4 w-px" />
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					placement="bottom-end"
@@ -465,7 +465,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className="text-theme-gray-700 ml-3 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
+							className="text-theme-gray-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 ml-3 h-6 w-6 rounded bg-transparent dark:hover:text-white"
 						>
 							<Icon name="EllipsisVerticalFilled" size="md" />
 						</Button>

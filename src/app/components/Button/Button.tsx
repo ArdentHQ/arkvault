@@ -47,7 +47,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 							</>
 						</span>
 
-						<div className="absolute left-0 top-0 flex h-full w-full items-center justify-center">
+						<div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
 							<ButtonSpinner variant={variant} />
 						</div>
 					</div>

@@ -137,7 +137,7 @@ const MultiPaymentAddressing = ({
 				direction={direction}
 				style={isAdvanced && variant === "recipient" ? "return" : direction}
 			/>
-			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold">
 				{(direction === "return" || direction === "sent") && (
 					<>
 						{t("COMMON.MULTIPLE")}{" "}

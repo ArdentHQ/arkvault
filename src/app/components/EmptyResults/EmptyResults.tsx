@@ -11,7 +11,7 @@ interface EmptyResultsProperties {
 
 export const EmptyResults = ({ className, title, subtitle }: EmptyResultsProperties) => (
 	<div
-		className={cn("flex h-full flex-col justify-center bg-theme-background text-center", className)}
+		className={cn("bg-theme-background flex h-full flex-col justify-center text-center", className)}
 		data-testid="EmptyResults"
 	>
 		<div>

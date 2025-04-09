@@ -11,7 +11,7 @@ const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HT
 		{...props}
 		ref={ref}
 		className={cn(
-			"dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px]",
+			"dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border",
 			props.className,
 		)}
 	/>
@@ -53,7 +53,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 			<SearchBarInputWrapper
 				data-testid="HeaderSearchInput__input"
 				ref={reference}
-				className="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700"
+				className="border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
 			>
 				<button
 					data-testid="HeaderSearchInput__input__reset"

@@ -78,7 +78,7 @@ const ParticipantRow = ({
 	wallet: Contracts.IReadWriteWallet;
 	transaction: DTO.ExtendedSignedTransactionData;
 }) => (
-	<TableRow className="max-md:border-transparent! group relative" key={wallet.address()}>
+	<TableRow className="group relative max-md:border-transparent!" key={wallet.address()}>
 		<TableCell
 			variant="start"
 			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
@@ -91,7 +91,7 @@ const ParticipantRow = ({
 				<AddressCopy address={wallet.address()} />
 			</div>
 
-			<div className="ml-2 border-l border-theme-secondary-300 pl-2 dark:border-theme-secondary-800 sm:hidden">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 ml-2 border-l pl-2 sm:hidden">
 				<ParticipantStatus
 					transaction={transaction}
 					wallet={transaction.wallet()}
@@ -111,7 +111,7 @@ const ParticipantRow = ({
 );
 
 const ParticipantRowSkeleton = () => (
-	<TableRow className="max-md:border-transparent! group relative">
+	<TableRow className="group relative max-md:border-transparent!">
 		<TableCell
 			variant="start"
 			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
@@ -124,7 +124,7 @@ const ParticipantRowSkeleton = () => (
 				<Skeleton width={20} height={20} />
 			</div>
 
-			<div className="ml-2 border-l border-theme-secondary-300 pl-2 dark:border-theme-secondary-800 sm:hidden">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 ml-2 border-l pl-2 sm:hidden">
 				<Skeleton width={20} height={20} />
 			</div>
 		</TableCell>
@@ -157,7 +157,7 @@ export const Signatures = ({
 	const data = isLoading ? skeletonRows : participants;
 
 	return (
-		<TableWrapper className="sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800">
+		<TableWrapper className="sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800 sm:border-b-[5px]">
 			<Table
 				columns={[
 					{
