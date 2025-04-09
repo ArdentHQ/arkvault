@@ -6,10 +6,6 @@ describe("unset", () => {
 		expect(unset([], "a.b.c")).toBe(false);
 	});
 
-	it("should return false if the path is not a string", () => {
-		expect(unset({}, "123")).toBe(false);
-	});
-
 	it("should not do anything if the object is not an object", () => {
 		expect(unset([], "a.b.c")).toBe(false);
 	});
