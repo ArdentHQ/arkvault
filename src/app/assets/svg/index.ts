@@ -75,6 +75,7 @@ import PublicKeyImportMethod from "./public-key-import-method.svg?react";
 import Server from "./server.svg?react";
 import ServerMultisign from "./server-multisign.svg?react";
 import ServerPeer from "./server-peer.svg?react";
+import SecondSignature from "./second-signature.svg?react";
 import Forbidden from "./forbidden.svg?react";
 import Plus from "./plus.svg?react";
 import QRCode from "./qr-code.svg?react";
@@ -219,6 +220,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	PublicKeyImportMethod,
 	QRCode,
 	QuestionMarkSmall,
+	SecondSignature,
 	SecretImportMethod,
 	SelectNetworkDark,
 	SelectNetworkLight,
