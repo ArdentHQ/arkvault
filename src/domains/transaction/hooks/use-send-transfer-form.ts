@@ -16,7 +16,7 @@ import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-t
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
-import { httpClient } from "@/app/services";
+
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
@@ -33,7 +33,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	});
 
 	const transactionBuilder = useTransactionBuilder();
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
 
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
@@ -109,9 +109,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
 
 			const abortSignal = abortReference.current.signal;
-
-			// Ensures the cache is flushed so it always fetches the latest wallet nonce
-			httpClient.forgetWalletCache(env, wallet);
 
 			const { uuid, transaction } = await transactionBuilder.build(
 				getTransferType({ recipients }),

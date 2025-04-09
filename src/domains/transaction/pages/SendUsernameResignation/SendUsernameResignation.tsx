@@ -20,6 +20,7 @@ import { TransactionSuccessful } from "@/domains/transaction/components/Transact
 import { assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
+import { httpClient } from "@/app/services";
 
 enum Step {
 	FormStep = 1,
@@ -45,7 +46,7 @@ export const SendUsernameResignation = () => {
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const { persist } = useEnvironmentContext();
+	const { persist, env } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
 
@@ -118,6 +119,8 @@ export const SendUsernameResignation = () => {
 		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
 
 		try {
+			httpClient.forgetWalletCache(env, activeWallet);
+
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
