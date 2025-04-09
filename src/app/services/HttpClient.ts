@@ -1,4 +1,5 @@
-import { Http } from "@ardenthq/sdk";
+import { ConfigRepository } from "./config";
+import { Http } from "@/app/lib/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./Cache";
@@ -91,7 +92,7 @@ export class HttpClient extends Http.AbstractRequest {
 
 	public forgetWalletCache(environment: Environment, wallet: Contracts.IReadWriteWallet) {
 		const selectHost = environment.hostSelector(wallet.profile());
-		const { host } = selectHost(wallet.coin().config(), "full");
+		const { host } = selectHost(wallet.coin().config() as unknown as ConfigRepository, "full");
 
 		const cacheKey = this.buildCacheKey("get", `${host}/wallets/${wallet.address()}`, {});
 
