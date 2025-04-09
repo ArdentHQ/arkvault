@@ -21,14 +21,20 @@ describe("LedgerImportStep", () => {
 		{ address: "DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES", isNew: true, path: derivationPath },
 	];
 
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		profile.wallets().flush();
+	});
+
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		for (const { address, path } of ledgerWallets) {
 			const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
 				address,
-				coin: "ARK",
-				network: "ark.devnet",
+				coin: "Mainsail",
+				network: "mainsail.devnet",
 				path,
 			});
 
@@ -45,11 +51,12 @@ describe("LedgerImportStep", () => {
 	});
 
 	afterEach(() => {
+		vi.useFakeTimers();
 		vi.runOnlyPendingTimers();
 		vi.useRealTimers();
 
 		for (const { address } of ledgerWallets) {
-			const wallet = profile.wallets().findByAddressWithNetwork(address, "ark.devnet");
+			const wallet = profile.wallets().findByAddressWithNetwork(address, "mainsail.devnet");
 
 			if (wallet) {
 				profile.wallets().forget(wallet.id());
@@ -60,7 +67,7 @@ describe("LedgerImportStep", () => {
 	const renderComponent = (breakpoint: string, wallets: LedgerData[] = ledgerWallets) => {
 		const onClickEditWalletName = vi.fn();
 
-		const network = profile.wallets().findByAddressWithNetwork(wallets[0].address, "ark.devnet")?.network();
+		const network = profile.wallets().findByAddressWithNetwork(wallets[0].address, "mainsail.devnet")?.network();
 
 		const Component = () => {
 			const form = useForm<any>({
@@ -74,6 +81,7 @@ describe("LedgerImportStep", () => {
 							onClickEditWalletName={onClickEditWalletName}
 							wallets={wallets}
 							profile={profile}
+							network={network}
 						/>
 					</LedgerProvider>
 				</FormProvider>
