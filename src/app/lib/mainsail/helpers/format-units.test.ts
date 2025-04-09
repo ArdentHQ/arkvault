@@ -16,7 +16,7 @@ describe("formatUnits", () => {
 
 	it("should throw an error for unsupported units", () => {
 		expect(() => formatUnits("1", "btc")).toThrow(
-			"Unsupported unit: btc. Supported units are 'wei', 'gwei', and 'ark'."
+			"Unsupported unit: btc. Supported units are 'wei', 'gwei', and 'ark'.",
 		);
 	});
 });
