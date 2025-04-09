@@ -163,18 +163,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 2
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -198,7 +187,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -258,7 +247,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -435,18 +424,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 2
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -470,7 +448,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -530,7 +508,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -587,18 +565,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                     >
                       <span
-                        class="font-semibold text-base text-theme-text"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 2
-                        </span>
-                      </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                         data-testid="Address__address"
                       >
                         D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -644,7 +611,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -726,7 +693,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -903,18 +870,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
-                    >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        ARK Wallet 2
-                      </span>
-                    </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -938,7 +894,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -998,7 +954,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -1055,18 +1011,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                     >
                       <span
-                        class="font-semibold text-base text-theme-text"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 2
-                        </span>
-                      </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                         data-testid="Address__address"
                       >
                         D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1112,7 +1057,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
@@ -1194,7 +1139,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 DARK
+                      - 1 ARK
                     </span>
                   </div>
                 </div>
