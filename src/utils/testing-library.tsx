@@ -10,7 +10,7 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { I18nextProvider } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import React from "react";
 import { Context as ResponsiveContext } from "react-responsive";

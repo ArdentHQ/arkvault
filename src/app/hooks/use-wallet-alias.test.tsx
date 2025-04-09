@@ -40,7 +40,7 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
-			alias: "Genesis 1",
+			alias: undefined,
 			isContact: false,
 		});
 	});
