@@ -83,7 +83,7 @@ exports[`InputFee > simple view type > should display converted values when on l
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -136,7 +136,7 @@ exports[`InputFee > simple view type > should display converted values when on l
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -189,7 +189,7 @@ exports[`InputFee > simple view type > should display converted values when on l
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -656,7 +656,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -698,7 +698,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -740,7 +740,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -833,7 +833,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -875,7 +875,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -917,7 +917,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1010,7 +1010,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1052,7 +1052,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1094,7 +1094,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1187,7 +1187,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1229,7 +1229,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1271,7 +1271,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1364,7 +1364,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1406,7 +1406,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1448,7 +1448,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1552,7 +1552,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1605,7 +1605,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1658,7 +1658,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1762,7 +1762,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1815,7 +1815,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1868,7 +1868,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -1972,7 +1972,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2025,7 +2025,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2078,7 +2078,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2182,7 +2182,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2235,7 +2235,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2288,7 +2288,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2392,7 +2392,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2445,7 +2445,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>
@@ -2498,7 +2498,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 DARK
+                0 ARK
               </span>
             </div>
           </div>

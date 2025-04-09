@@ -1,12 +1,12 @@
 import { FormField, FormLabel } from "@/app/components/Form";
-import React, { ChangeEvent, useEffect, useRef } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
 
 import { Alert } from "@/app/components/Alert";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { ThemeIcon } from "@/app/components/Icon";
@@ -18,9 +18,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { t } = useTranslation();
 
 	const { usernameRegistration } = useValidation();
-
 	const { getValues, register, setValue, errors } = useFormContext();
 	const username = getValues("username");
+	const senderAddress = getValues("senderAddress");
 
 	const userExistsController = useRef<AbortController | undefined>(undefined);
 	const { activeNetwork: network } = useActiveNetwork({ profile });
@@ -52,6 +52,16 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	};
 
+	const currentUsername = useMemo(() => {
+		if (!senderAddress) {
+			return;
+		}
+
+		const wallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id())!;
+
+		return wallet.username();
+	}, [senderAddress, network]);
+
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
 			<StepHeader
@@ -62,9 +72,21 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				}
 			/>
 
-			<Alert variant="info" className="mt-6">
-				{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
-			</Alert>
+			{currentUsername ? (
+				<Alert className="mt-6">
+					<Trans
+						i18nKey="TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO_ALREADY_REGISTERED"
+						values={{
+							username: currentUsername,
+						}}
+						components={{ bold: <strong /> }}
+					/>
+				</Alert>
+			) : (
+				<Alert variant="info" className="mt-6">
+					{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
+				</Alert>
+			)}
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="senderAddress">

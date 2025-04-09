@@ -460,6 +460,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -2984,6 +2985,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -5553,6 +5555,7 @@ exports[`General Settings > should render 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -8078,6 +8081,7 @@ exports[`General Settings > should update profile 1`] = `
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -10603,6 +10607,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>
@@ -13127,6 +13132,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       </div>
                     </div>
                   </button>
+                  ´ 
                 </div>
               </div>
             </div>

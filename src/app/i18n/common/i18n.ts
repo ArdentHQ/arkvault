@@ -319,6 +319,7 @@ export const translations = {
 	RANK: "Rank",
 	RATE: "Rate",
 	RATING: "Rating",
+	RECEIVE: "Receive",
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
 	"RECIPIENT_#": "Recipient #{{count}}",
