@@ -354,7 +354,7 @@ describe("ImportSidePanel", () => {
 			await waitFor(() => expect(continueButton()).not.toBeEnabled());
 
 			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Invalid Private Key");
+				expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Invalid Private Key.");
 			});
 
 			coinMock.mockRestore();
