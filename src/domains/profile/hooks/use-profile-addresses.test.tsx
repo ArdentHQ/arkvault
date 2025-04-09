@@ -6,8 +6,6 @@ import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("useProfileAddresses", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

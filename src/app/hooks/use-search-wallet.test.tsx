@@ -5,7 +5,7 @@ import React from "react";
 import { useSearchWallet } from "./use-search-wallet";
 import { EnvironmentProvider } from "@/app/contexts/Environment";
 import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 enum ListType {
 	wallets = "wallets",
@@ -28,7 +28,7 @@ const getList = (listType: ListType) => {
 
 describe("useSearchWallet", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallets = profile.wallets().values();
 
 		recipients = wallets.map((wallet) => ({
@@ -61,7 +61,7 @@ describe("useSearchWallet", () => {
 		expect(result.current.filteredList).toHaveLength(2);
 
 		act(() => {
-			result.current.setSearchKeyword("D8rr7B1d");
+			result.current.setSearchKeyword("0xcd15953dD07");
 		});
 
 		const { filteredList } = result.current;
@@ -73,7 +73,7 @@ describe("useSearchWallet", () => {
 				? (filteredList[0] as Contracts.IReadWriteWallet).address()
 				: filteredList[0].address;
 
-		expect(address).toBe("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		expect(address).toBe("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6");
 	});
 
 	it.each([ListType.wallets, ListType.recipients])("should filter %s by alias", (listType) => {
@@ -82,7 +82,7 @@ describe("useSearchWallet", () => {
 		expect(result.current.filteredList).toHaveLength(2);
 
 		act(() => {
-			result.current.setSearchKeyword("Ark Wallet 1");
+			result.current.setSearchKeyword("Mainsail Wallet 1");
 		});
 
 		const { filteredList } = result.current;
@@ -94,7 +94,7 @@ describe("useSearchWallet", () => {
 				? (filteredList[0] as Contracts.IReadWriteWallet).alias()
 				: filteredList[0].alias;
 
-		expect(alias).toBe("ARK Wallet 1");
+		expect(alias).toBe("Mainsail Wallet 1");
 	});
 
 	it.each([ListType.wallets, ListType.recipients])(

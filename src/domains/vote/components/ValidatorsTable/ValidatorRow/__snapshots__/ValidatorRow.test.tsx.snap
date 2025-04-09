@@ -29,7 +29,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    
@@ -160,7 +160,7 @@ exports[`ValidatorRow > should render 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    
@@ -291,7 +291,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    
@@ -467,7 +467,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    
@@ -598,7 +598,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    
@@ -720,7 +720,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                  0x3F8eCbF08078F22038235F9834540A960E99085b
                 </span>
                 <span>
                    
@@ -842,7 +842,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                  0x137c59f371a7049159ef19a72f908773Ade219b1
                 </span>
                 <span>
                    
@@ -978,7 +978,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    
@@ -1109,7 +1109,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                 </span>
                 <span>
                    

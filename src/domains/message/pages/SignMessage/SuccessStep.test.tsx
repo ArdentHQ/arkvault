@@ -8,8 +8,6 @@ import { env, getMainsailProfileId, renderResponsiveWithRoute, screen } from "@/
 
 const history = createHashHistory();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("SignMessage success step", () => {
 	it.each(["xs", "lg"])("should render success step in %s", async (breakpoint) => {
 		const profile = env.profiles().findById(getMainsailProfileId());

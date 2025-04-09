@@ -5,11 +5,9 @@ import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
-import { ARK } from "@ardenthq/sdk-ark";
 import { BigNumber } from "@/app/lib/helpers";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { I18nextProvider } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";
 import { Mainsail } from "@ardenthq/sdk-mainsail";
@@ -24,7 +22,7 @@ import { httpClient } from "@/app/services";
 import { i18n } from "@/app/i18n";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 import mainsailTransactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 
 export {
@@ -170,20 +168,20 @@ export * from "@testing-library/react";
 
 export { renderWithRouter as render, customRender as renderWithoutRouter };
 
-export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
+export const getDefaultProfileId = () => getMainsailProfileId();
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
-export const getDefaultMainsailWalletId = () => Object.keys(Object.values(fixtureData.profiles)[2].wallets)[0];
-export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
+export const getDefaultMainsailWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
+export const getDefaultWalletMnemonic = () => getDefaultMainsailWalletMnemonic();
 export const getDefaultMainsailWalletMnemonic = () =>
 	"embody plug round swamp sick minor notable catch idle discover barely easily audit near essence crater stand arch phone border minimum smile above exercise";
-export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
+export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[0];
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
 const environmentWithMocks = () =>
 	new Environment({
-		coins: { ARK, Mainsail },
+		coins: { Mainsail },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),
@@ -215,6 +213,8 @@ export const MAINSAIL_MNEMONICS = [
 	"monkey wage old pistol text garage toss evolve twenty mirror easily alarm ocean catch phrase hen enroll verb trade great limb diesel sight describe",
 	// 0x393f3F74F0cd9e790B5192789F31E0A38159ae03
 	"fade object horse net sleep diagram will casino firm scorpion deal visit this much yard apology guess habit gold crack great old media fury",
+	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
+	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 ];
 
 export const breakpoints: {
@@ -258,23 +258,12 @@ export const renderResponsiveWithRoute = (
 };
 
 const publicNetworksStub: any = {
-	ark: {
-		mainnet: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "ark.mainnet",
-			name: "Mainnet",
-			type: "live",
-		},
-	},
 	mainsail: {
 		mainnet: {
 			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
+				...MainsailDefaultManifest.currency,
 				ticker: "ARK",
 			},
 			id: "mainsail.mainnet",
@@ -290,68 +279,20 @@ const publicNetworksStub: any = {
 };
 
 const testNetworksStub: any = {
-	ark: {
-		devnet: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "DARK",
-			},
-			id: "ark.devnet",
-			meta: {
-				...DefaultManifest.meta,
-				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-				version: 30,
-			},
-			name: "Devnet",
-			type: "test",
-		},
-	},
 	mainsail: {
 		devnet: {
 			...MainsailDefaultManifest,
 			coin: "Mainsail",
 			currency: {
-				ticker: "DARK",
+				decimals: 18,
+				symbol: "TѦ",
+				ticker: "ARK",
 			},
 			id: "mainsail.devnet",
 			meta: {
 				...MainsailDefaultManifest.meta,
 				nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 				version: 30,
-			},
-			name: "Devnet",
-			type: "test",
-		},
-	},
-};
-
-const customNetworksStub: any = {
-	random: {
-		custom: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "random.custom",
-			name: "Devnet",
-			type: "test",
-		},
-	},
-	"random-enabled": {
-		custom: {
-			...DefaultManifest,
-			coin: "ARK",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "random-enabled.custom",
-			meta: {
-				enabled: true,
-				epoch: "2017-03-21T13:00:00.000Z",
-				nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
-				version: 23,
 			},
 			name: "Devnet",
 			type: "test",
@@ -367,26 +308,13 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 	};
 };
 
-export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile, onlyMainsail = false) => {
+export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile) => {
 	const networks = {
-		ark: {
-			...publicNetworksStub["ark"],
-			...testNetworksStub["ark"],
-		},
 		mainsail: {
 			...publicNetworksStub["mainsail"],
 			...testNetworksStub["mainsail"],
 		},
-		random: {
-			...customNetworksStub["random-enabled"],
-			...customNetworksStub["random"],
-		},
 	};
-
-	if (onlyMainsail) {
-		delete networks["ark"];
-		delete networks["random"];
-	}
 
 	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
 	const allByCoinMock = vi

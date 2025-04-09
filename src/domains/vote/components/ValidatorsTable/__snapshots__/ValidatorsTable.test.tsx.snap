@@ -26940,7 +26940,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -27062,7 +27062,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -27184,7 +27184,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -27756,7 +27756,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -27878,7 +27878,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -28000,7 +28000,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -28572,7 +28572,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -28694,7 +28694,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -28816,7 +28816,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -29388,7 +29388,7 @@ exports[`ValidatorsTable > should render 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -29510,7 +29510,7 @@ exports[`ValidatorsTable > should render 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -29632,7 +29632,7 @@ exports[`ValidatorsTable > should render 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -30258,7 +30258,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -30426,7 +30426,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -30594,7 +30594,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -31233,7 +31233,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -31355,7 +31355,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -31477,7 +31477,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -32049,7 +32049,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -32171,7 +32171,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -32293,7 +32293,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -32870,7 +32870,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -32992,7 +32992,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -33114,7 +33114,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -34165,7 +34165,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -34287,7 +34287,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -34409,7 +34409,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -35035,7 +35035,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -35202,7 +35202,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -35370,7 +35370,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -36009,7 +36009,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -36131,7 +36131,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -36253,7 +36253,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -36826,7 +36826,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -36948,7 +36948,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -37070,7 +37070,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -37647,7 +37647,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -37769,7 +37769,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -37891,7 +37891,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -38517,7 +38517,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -38684,7 +38684,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -38852,7 +38852,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -39491,7 +39491,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -39613,7 +39613,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -39735,7 +39735,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -40307,7 +40307,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -40429,7 +40429,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -40551,7 +40551,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  
@@ -41124,7 +41124,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                               </span>
                               <span>
                                  
@@ -41246,7 +41246,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+                                0x3F8eCbF08078F22038235F9834540A960E99085b
                               </span>
                               <span>
                                  
@@ -41368,7 +41368,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
-                                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                                0x137c59f371a7049159ef19a72f908773Ade219b1
                               </span>
                               <span>
                                  

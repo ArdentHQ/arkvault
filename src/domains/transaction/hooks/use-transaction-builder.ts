@@ -2,9 +2,10 @@ import { DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 
 import { Services } from "@ardenthq/sdk";
 import { upperFirst } from "@/app/lib/helpers";
-import { useLedgerContext } from "@/app/contexts";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
 import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
+import { httpClient } from "@/app/services";
 
 type SignFunction = (input: any) => Promise<string>;
 
@@ -31,6 +32,7 @@ const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileC
 
 export const useTransactionBuilder = () => {
 	const { abortConnectionRetry } = useLedgerContext();
+	const { env } = useEnvironmentContext();
 
 	const build = async (
 		type: string,
@@ -40,6 +42,9 @@ export const useTransactionBuilder = () => {
 			abortSignal?: AbortSignal;
 		},
 	): Promise<{ uuid: string; transaction: DTO.ExtendedSignedTransactionData }> => {
+		// Ensures the cache is flushed so it always fetches the latest wallet nonce
+		httpClient.forgetWalletCache(env, wallet);
+
 		await wallet.transaction().sync();
 
 		const service = wallet.transaction();

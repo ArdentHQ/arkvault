@@ -61,9 +61,6 @@ const firstVoteButtonID = "DelegateRow__toggle-0";
 
 const searchInputID = "SearchableTableWrapper__search-input";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("Votes", () => {
 	beforeAll(async () => {
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
@@ -86,7 +83,7 @@ describe("Votes", () => {
 	});
 
 	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile, true);
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		server.use(
 			requestMock(
@@ -549,9 +546,9 @@ describe("Votes", () => {
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 		const mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			coin: "Mainsail",
+			network: "mainsail.mainnet",
 		});
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});

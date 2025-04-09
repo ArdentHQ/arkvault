@@ -44,7 +44,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -242,7 +242,7 @@ exports[`AddressRow > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -440,7 +440,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -638,7 +638,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -837,7 +837,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -985,7 +985,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1056,13 +1056,18 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                href="https://test.arkscan.io/wallets/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
-                  arkx
+                  <span
+                    class="no-ligatures"
+                    data-testid="TruncateMiddle"
+                  >
+                    0x1Bf…353e2
+                  </span>
                 </span>
                 <div
                   class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
@@ -1182,7 +1187,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1253,13 +1258,18 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
-                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                href="https://test.arkscan.io/wallets/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
-                  arkx
+                  <span
+                    class="no-ligatures"
+                    data-testid="TruncateMiddle"
+                  >
+                    0x1Bf…353e2
+                  </span>
                 </span>
                 <div
                   class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
@@ -1379,7 +1389,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1557,7 +1567,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1700,7 +1710,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -1878,7 +1888,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2021,7 +2031,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2089,7 +2099,12 @@ exports[`AddressRow > should render with active validator 1`] = `
                 <span
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
-                  arkx
+                  <span
+                    class="no-ligatures"
+                    data-testid="TruncateMiddle"
+                  >
+                    0x1Bf…353e2
+                  </span>
                 </span>
                 <div
                   class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
@@ -2214,7 +2229,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2282,7 +2297,12 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                 <span
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
-                  arkx
+                  <span
+                    class="no-ligatures"
+                    data-testid="TruncateMiddle"
+                  >
+                    0x1Bf…353e2
+                  </span>
                 </span>
                 <div
                   class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
@@ -2409,7 +2429,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                   >
                     <div
                       style="height: 16px; width: 16px;"
@@ -2477,7 +2497,12 @@ exports[`AddressRow > should render with standby validator 1`] = `
                 <span
                   class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
-                  arkx
+                  <span
+                    class="no-ligatures"
+                    data-testid="TruncateMiddle"
+                  >
+                    0x1Bf…353e2
+                  </span>
                 </span>
                 <div
                   class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"

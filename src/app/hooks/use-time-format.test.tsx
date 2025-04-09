@@ -6,12 +6,12 @@ import React from "react";
 import { Router } from "react-router-dom";
 
 import { useTimeFormat } from "./use-time-format";
-import { env, getDefaultProfileId, WithProviders } from "@/utils/testing-library";
+import { env, getMainsailProfileId, WithProviders } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 const wrapper = ({ children }: any) => (
 	<WithProviders>
@@ -22,7 +22,7 @@ const wrapper = ({ children }: any) => (
 describe("useTimeFormat", () => {
 	beforeAll(() => {
 		history.push(dashboardURL);
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 	});
 
 	it("should return format without profile route", () => {

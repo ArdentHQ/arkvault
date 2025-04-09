@@ -6,7 +6,7 @@ import { ValidatorsTable } from "./ValidatorsTable";
 import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
-import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { data } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
 import { env, getMainsailProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
@@ -19,8 +19,6 @@ const pressingContinueButton = async () => await userEvent.click(screen.getByTes
 const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
 const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
 const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
-
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
 
 describe("ValidatorsTable", () => {
 	beforeAll(() => {

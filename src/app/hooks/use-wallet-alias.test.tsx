@@ -3,11 +3,11 @@ import { renderHook } from "@testing-library/react";
 import React from "react";
 import { useWalletAlias } from "./use-wallet-alias";
 import { EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
+import { env, getMainsailProfileId, getDefaultMainsailWalletId } from "@/utils/testing-library";
 
 const UNKNOWN_ADDRESS = "unknown-address";
 const ONCHAIN_USERNAME = "onchain_username";
-const WALLET_NAME = "ARK Wallet 1";
+const WALLET_NAME = "Mainsail Wallet 1";
 
 describe("useWalletAlias", () => {
 	let profile: Contracts.IProfile;
@@ -15,10 +15,10 @@ describe("useWalletAlias", () => {
 	const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 
 	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await env.knownWallets().syncAll(profile);
-		wallet = profile.wallets().findById(getDefaultWalletId());
+		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
 	it("should return undefined alias when no wallet or contact or delegate was found", () => {
@@ -34,13 +34,13 @@ describe("useWalletAlias", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
-				address: "known-wallet-address",
+				address: "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
 				network: wallet.network(),
 				profile,
 			}),
 		).toStrictEqual({
-			address: "known-wallet-address",
-			alias: "test known wallet",
+			address: "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
+			alias: "Genesis 1",
 			isContact: false,
 		});
 	});

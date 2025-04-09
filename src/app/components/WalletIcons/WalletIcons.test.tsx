@@ -4,13 +4,13 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { WalletIcons, WalletIconsSkeleton } from "./WalletIcons";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 
 describe("WalletIcons", () => {
 	beforeEach(async () => {
-		wallet = env.profiles().findById(getDefaultProfileId()).wallets().first();
+		wallet = env.profiles().findById(getMainsailProfileId()).wallets().first();
 		await wallet.synchroniser().identity();
 	});
 

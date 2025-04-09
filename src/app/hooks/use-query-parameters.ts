@@ -10,7 +10,7 @@ export const useQueryParameters = () => {
 };
 
 const isAllowedNetwork = (network: string) => {
-	const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
+	const allowedNetworks = new Set(["mainsail.devnet", "mainsail.mainnet"]);
 
 	return allowedNetworks.has(network);
 };

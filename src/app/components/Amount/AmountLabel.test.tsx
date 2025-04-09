@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { AmountLabel } from "./AmountLabel";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 
@@ -10,7 +10,7 @@ let profile: Contracts.IProfile;
 
 describe("AmountLabel", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();

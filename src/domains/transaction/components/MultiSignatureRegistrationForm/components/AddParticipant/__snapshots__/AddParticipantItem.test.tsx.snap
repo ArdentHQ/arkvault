@@ -81,14 +81,14 @@ exports[`Add Participant item > should render 1`] = `
                 class="no-ligatures transition-colors duration-200"
                 data-testid="TruncateEnd"
               >
-                ARK Wallet 2
+                Mainsail Wallet …
               </span>
             </span>
             <span
               class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base leading-5 text-theme-secondary-500 dark:text-theme-secondary-500 font-semibold text-base"
               data-testid="Address__address"
             >
-              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
             </span>
           </div>
         </div>

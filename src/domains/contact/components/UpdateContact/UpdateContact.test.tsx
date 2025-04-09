@@ -25,8 +25,6 @@ const onSave = vi.fn();
 
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("UpdateContact", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

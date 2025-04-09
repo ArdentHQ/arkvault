@@ -7,8 +7,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("Wallet transaction counts", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;

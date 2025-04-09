@@ -5,7 +5,7 @@ import { act, renderHook } from "@testing-library/react";
 
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
-import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
@@ -29,7 +29,7 @@ describe("useWalletImport", () => {
 		</EnvironmentProvider>
 	);
 	beforeAll(async () => {
-		profile = env.profiles().first();
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 

@@ -11,7 +11,7 @@ import {
 	render,
 	screen,
 	env,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
@@ -53,7 +53,7 @@ describe("useQueryParameters hook", () => {
 
 describe("useNetworkFromQueryParameters hook", () => {
 	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		nethash = profile.wallets().first().network().meta().nethash;
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -73,7 +73,7 @@ describe("useNetworkFromQueryParameters hook", () => {
 	};
 
 	it("should find network from query parameters using network id", () => {
-		history.push("/?network=ark.devnet");
+		history.push("/?network=mainsail.devnet");
 
 		render(<TestComponent />, { history, withProviders: false });
 

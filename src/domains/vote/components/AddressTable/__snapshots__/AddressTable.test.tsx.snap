@@ -241,7 +241,7 @@ exports[`AddressTable > should render 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -633,7 +633,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                       >
                         <div
                           style="height: 16px; width: 16px;"
@@ -1258,7 +1258,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                        class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                       >
                         <div
                           style="height: 16px; width: 16px;"

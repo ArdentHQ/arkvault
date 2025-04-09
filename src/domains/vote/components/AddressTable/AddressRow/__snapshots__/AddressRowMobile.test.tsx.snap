@@ -441,7 +441,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                              0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
                             </span>
                           </div>
                         </span>
@@ -609,7 +609,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSg…qJ3Dyib
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -777,7 +777,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSg…qJ3Dyib
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -944,7 +944,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSg…qJ3Dyib
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -1741,7 +1741,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSg…qJ3Dyib
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -1908,7 +1908,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSg…qJ3Dyib
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>
@@ -2075,7 +2075,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                               class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
-                              D61mfSg…qJ3Dyib
+                              0x1Bf9c…e1353e2
                             </span>
                           </div>
                         </span>

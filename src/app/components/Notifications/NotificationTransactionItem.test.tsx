@@ -4,13 +4,12 @@ import React, { useEffect } from "react";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
 import { httpClient } from "@/app/services";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor, renderResponsive } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, renderResponsive } from "@/utils/testing-library";
 
 import { server, requestMock } from "@/tests/mocks/server";
 
-import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
-import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/mainsail/devnet/notification-transactions.json";
+import TransactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
@@ -33,18 +32,21 @@ describe("Notifications", () => {
 		httpClient.clearCache();
 
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: NotificationTransactionsFixtures.data,
 				meta: TransactionsFixture.meta,
 			}),
 		);
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 		await profile.notifications().transactions().sync();
-		notificationTransaction = profile.notifications().transactions().transaction(TransactionFixture.id());
+		notificationTransaction = profile
+			.notifications()
+			.transactions()
+			.transaction("4dc401ca6683b7c2bc380165204e3a291c66b0648dbc43a04e76b6d130e5cb5f");
 	});
 
 	it("should render notification item", async () => {
@@ -83,7 +85,7 @@ describe("Notifications", () => {
 		);
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1));
 
-		expect(screen.getByTestId("Address__alias")).toHaveTextContent("ARK Wallet 1");
+		expect(screen.getByTestId("Address__alias").textContent).contains("Mainsail Wallet");
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should emit events onTransactionClick in xs", async (breakpoint) => {

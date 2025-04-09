@@ -16,8 +16,6 @@ const options = [
 	{ label: "Option 2", value: "option_2" },
 ];
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ContactListItemMobile", () => {
 	let profile: Contracts.IProfile;
 	let contact: Contracts.IContact;

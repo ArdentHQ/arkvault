@@ -20,6 +20,8 @@ const wallets = [
 	"0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 	"0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
 	"0xfb36D3cc82953351A7f9a0Fd09c17D271ecBEB03", // abc
+	"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+	"0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f", // cold wallet
 ];
 
 export const mainsailDevnetHandlers = [

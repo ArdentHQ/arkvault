@@ -18,8 +18,6 @@ let profile: Contracts.IProfile;
 
 const fixtureProfileId = getMainsailProfileId();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("SelectNetworkStep", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -67,7 +65,7 @@ describe("SelectNetworkStep", () => {
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+		expect(screen.queryByTestId("SelectDropdown")).not.toBeInTheDocument();
 
 		mockProfileWithOnlyPublicNetworksReset();
 	});

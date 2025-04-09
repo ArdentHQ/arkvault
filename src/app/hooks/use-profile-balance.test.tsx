@@ -4,11 +4,11 @@ import React from "react";
 
 import { useProfileBalance } from "./use-profile-balance";
 import { ConfigurationProvider } from "@/app/contexts";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 describe("useProfileBalance", () => {
 	it("should get converted balance", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
@@ -19,7 +19,7 @@ describe("useProfileBalance", () => {
 	});
 
 	it("should get zero balance if loading", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
 		const {
@@ -30,7 +30,7 @@ describe("useProfileBalance", () => {
 	});
 
 	it("should update balance", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockReturnValue(10_000);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
@@ -45,7 +45,7 @@ describe("useProfileBalance", () => {
 	});
 
 	it("should default to zero when exception is thrown", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const mockProfileStatus = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockImplementation(() => {
 			throw new Error("profile is not restored");
@@ -64,7 +64,7 @@ describe("useProfileBalance", () => {
 	});
 
 	it("should default to zero if converted balance is undefined", async () => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockReturnValue(undefined);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;

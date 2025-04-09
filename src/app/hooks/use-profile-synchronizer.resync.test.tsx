@@ -9,7 +9,7 @@ import { useConfiguration } from "@/app/contexts";
 import {
 	act as renderAct,
 	env,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
@@ -17,7 +17,7 @@ import {
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -61,7 +61,7 @@ describe("useProfileSyncStatus", () => {
 
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
@@ -103,7 +103,7 @@ describe("useProfileSyncStatus", () => {
 		});
 		const onProfileSyncStart = vi.fn();
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileSyncSpy = vi.spyOn(profile, "sync").mockImplementationOnce(() => {
 			throw new Error("unknown");
 		});
@@ -150,7 +150,7 @@ describe("useProfileSyncStatus", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getMainsailProfileId());
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		await env.profiles().restore(profile);

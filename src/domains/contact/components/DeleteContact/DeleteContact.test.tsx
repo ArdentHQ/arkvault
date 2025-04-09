@@ -11,8 +11,6 @@ let profile: Contracts.IProfile;
 
 const onDelete = vi.fn();
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("DeleteContact", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());

@@ -109,6 +109,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
 
 			const abortSignal = abortReference.current.signal;
+
 			const { uuid, transaction } = await transactionBuilder.build(
 				getTransferType({ recipients }),
 				transactionInput,
@@ -117,6 +118,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 					abortSignal,
 				},
 			);
+
 			const response = await wallet.transaction().broadcast(uuid);
 
 			handleBroadcastError(response);

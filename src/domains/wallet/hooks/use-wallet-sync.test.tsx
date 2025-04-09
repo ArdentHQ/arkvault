@@ -3,13 +3,13 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react";
 
 import { useWalletSync } from "./use-wallet-sync";
-import { env } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
 describe("useWalletSync", () => {
 	beforeAll(async () => {
-		profile = env.profiles().first();
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});

@@ -15,8 +15,6 @@ import {
 
 let network: Networks.Network;
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-
 describe("ReceiveFundsForm", () => {
 	beforeEach(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());

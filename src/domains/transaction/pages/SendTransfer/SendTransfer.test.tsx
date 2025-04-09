@@ -33,11 +33,11 @@ import { Route } from "react-router-dom";
 import { SendTransfer } from "./SendTransfer";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { createHashHistory } from "history";
-import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/node-fees.json";
 import { renderHook } from "@testing-library/react";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
 
 const passphrase = getDefaultWalletMnemonic();

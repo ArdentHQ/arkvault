@@ -11,7 +11,7 @@ import * as environmentHooks from "@/app/hooks/env";
 import { useNavigationContext } from "@/app/contexts";
 import {
 	env as mockedTestEnvironment,
-	getDefaultProfileId,
+	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
@@ -19,13 +19,13 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
-const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 const webWidgetSelector = "#webWidget";
 const navigationBarLogoButtonSelector = "NavigationBarLogo--button";
 
 vi.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
-	mockedTestEnvironment.profiles().findById(getDefaultProfileId()),
+	mockedTestEnvironment.profiles().findById(getMainsailProfileId()),
 );
 
 vi.spyOn(navigation, "getNavigationMenu").mockReturnValue([
@@ -62,7 +62,7 @@ describe("NavigationBar", () => {
 
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = mockedTestEnvironment.profiles().findById(getDefaultProfileId());
+		profile = mockedTestEnvironment.profiles().findById(getMainsailProfileId());
 
 		history.push(dashboardURL);
 	});
@@ -152,7 +152,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.getByTestId(navigationBarLogoButtonSelector));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${getMainsailProfileId()}/dashboard`);
 
 		historySpy.mockRestore();
 	});
@@ -482,7 +482,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.type(screen.getByTestId("input"), "text");
 
-		expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
+		await expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
 	});
 
 	it("should render logo-only variant", () => {

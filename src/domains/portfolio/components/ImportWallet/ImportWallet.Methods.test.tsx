@@ -43,9 +43,6 @@ const secretInputID = "ImportWallet__secret-input";
 const password = "S3cUrePa$sword";
 const testNetwork = "mainsail.devnet";
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("ImportAddress Methods", () => {
 	let resetProfileNetworksMock: () => void;
 

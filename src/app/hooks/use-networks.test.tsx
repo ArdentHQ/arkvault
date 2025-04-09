@@ -2,9 +2,9 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 import { useNetworks } from "@/app/hooks";
-import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
+import DefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
 describe("useNetworks", () => {
 	let profile: Contracts.IProfile;
@@ -28,7 +28,7 @@ describe("useNetworks", () => {
 
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
 	});
@@ -52,27 +52,17 @@ describe("useNetworks", () => {
 			result: { current },
 		} = renderHookWithProfile(profile);
 
-		expect(current).toHaveLength(2);
+		expect(current).toHaveLength(1);
 
 		resetMock();
 	});
 
 	it("should prioritize default networks", () => {
 		const mock = vi.spyOn(profile.networks(), "all").mockReturnValue({
-			ark: {
-				cdevnet: {
-					...DefaultManifest,
-					coin: "ARK",
-					currency: {
-						ticker: "ARK",
-					},
-					id: "ark.devnet",
-					name: "Devnet",
-					type: "test",
-				},
+			mainsail: {
 				custom: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
@@ -82,7 +72,7 @@ describe("useNetworks", () => {
 				},
 				custom2: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
@@ -90,9 +80,19 @@ describe("useNetworks", () => {
 					name: "Custom 2",
 					type: "test",
 				},
+				devnet: {
+					...DefaultManifest,
+					coin: "Mainsail",
+					currency: {
+						ticker: "ARK",
+					},
+					id: "mainsail.devnet",
+					name: "Devnet",
+					type: "test",
+				},
 				mainnet: {
 					...DefaultManifest,
-					coin: "ARK",
+					coin: "Mainsail",
 					currency: {
 						ticker: "ARK",
 					},
@@ -125,7 +125,7 @@ describe("useNetworks", () => {
 		} = renderHook(
 			() =>
 				useNetworks({
-					filter: (network) => network.id() === "ark.mainnet",
+					filter: (network) => network.id() === "mainsail.mainnet",
 					profile: profile,
 				}),
 			{
@@ -134,7 +134,7 @@ describe("useNetworks", () => {
 		);
 
 		expect(current).toHaveLength(1);
-		expect(current[0].id()).toBe("ark.mainnet");
+		expect(current[0].id()).toBe("mainsail.mainnet");
 
 		resetMock();
 	});

@@ -36,9 +36,6 @@ const expectHeading = async (text: string) => {
 	});
 };
 
-process.env.RESTORE_MAINSAIL_PROFILE = "true";
-process.env.USE_MAINSAIL_NETWORK = "true";
-
 describe("SignMessage with encrypted mnemonic", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

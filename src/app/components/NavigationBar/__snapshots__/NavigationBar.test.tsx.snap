@@ -207,7 +207,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -427,6 +427,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -651,12 +652,12 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -927,7 +928,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -1148,6 +1149,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -1373,7 +1375,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
@@ -1598,7 +1600,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -1818,6 +1820,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -2042,12 +2045,12 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -2269,7 +2272,7 @@ exports[`NavigationBar > should render in lg 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -2489,6 +2492,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -2713,12 +2717,12 @@ exports[`NavigationBar > should render in lg 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -2940,7 +2944,7 @@ exports[`NavigationBar > should render in md 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -3160,6 +3164,7 @@ exports[`NavigationBar > should render in md 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -3384,12 +3389,12 @@ exports[`NavigationBar > should render in md 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -3611,7 +3616,7 @@ exports[`NavigationBar > should render in sm 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -3831,6 +3836,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -4055,12 +4061,12 @@ exports[`NavigationBar > should render in sm 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -4282,7 +4288,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -4502,6 +4508,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -4726,12 +4733,12 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -4953,7 +4960,7 @@ exports[`NavigationBar > should render in xs 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -5173,6 +5180,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -5397,12 +5405,12 @@ exports[`NavigationBar > should render in xs 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>
@@ -5624,7 +5632,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
             >
               <a
                 class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                 title="Portfolio"
               >
                 Portfolio
@@ -5844,6 +5852,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     </div>
                   </div>
                 </button>
+                ´ 
               </div>
             </div>
           </div>
@@ -6068,12 +6077,12 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     >
                       <img
                         alt="Profile Avatar"
-                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23289548%22%2F%3E%3C%2Fsvg%3E"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                       />
                       <span
                         class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                       >
-                        JO
+                        FO
                       </span>
                     </div>
                   </div>

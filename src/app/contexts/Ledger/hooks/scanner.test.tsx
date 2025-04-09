@@ -4,7 +4,7 @@ import React from "react";
 
 import { useLedgerScanner } from "./scanner";
 import { useLedgerContext } from "@/app/contexts/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { env, render, screen, waitFor, mockNanoXTransport, getMainsailProfileId } from "@/utils/testing-library";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 const walletsList = (wallets, isSelected) => (
@@ -57,7 +57,7 @@ describe("Use Ledger Scanner", () => {
 			}),
 		);
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
 
 		await env.profiles().restore(profile);
