@@ -95,7 +95,7 @@ const ContractAddressing = ({
 					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
 					isExternal
 					showExternalIcon={false}
-					className="text-sm font-semibold"
+					className="whitespace-nowrap text-sm font-semibold"
 				>
 					{t("COMMON.CONTRACT")}
 				</Link>
@@ -242,7 +242,7 @@ export const TransactionRowAddressing = ({
 							to={transaction.wallet().coin().link().wallet(recipientAddress)}
 							isExternal
 							showExternalIcon={false}
-							className="text-sm font-semibold"
+							className="whitespace-nowrap text-sm font-semibold"
 						>
 							{t("COMMON.CONTRACT")}
 						</Link>
