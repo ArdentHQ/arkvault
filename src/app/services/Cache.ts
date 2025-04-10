@@ -2,7 +2,7 @@ import { DateTime } from "@ardenthq/sdk-intl";
 
 interface CacheItem {
 	value: any;
-	expires_at: DateTime;
+	expires_at: number;
 }
 
 export class Cache {
