@@ -1,24 +1,27 @@
-import { Contracts, DTO, Exceptions } from "@/app/lib/sdk";
+import { Contracts, DTO, Exceptions, IoC } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
+import { Utils } from "@mainsail/crypto-transaction";
+import { Application } from "@mainsail/kernel";
 import { Hex } from "viem";
 
+import { BindingType } from "./coin.contract";
+import { Hash } from "./crypto/hash";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
-import { RawTransactionData } from "@/app/lib/sdk/signed-transaction.dto.contract";
 
 export class SignedTransactionData
 	extends DTO.AbstractSignedTransactionData
-	implements Contracts.SignedTransactionData {
+	implements Contracts.SignedTransactionData
+{
+	#app: Application;
 
-	public override configure(signedData: RawTransactionData, serialized: string) {
-		this.identifier = signedData.id;
-		this.signedData = signedData;
-		this.serialized = serialized;
+	public constructor(container: IoC.Container) {
+		super(container);
 
-		return this;
+		this.#app = container.get(BindingType.Application);
 	}
 
 	public override sender(): string {
@@ -38,7 +41,7 @@ export class SignedTransactionData
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return BigNumber.make(this.signedData.value);
+		return this.bigNumberService.make(this.signedData.value);
 	}
 
 	public override fee(): BigNumber {
@@ -184,9 +187,48 @@ export class SignedTransactionData
 	}
 
 	public override async toBroadcast() {
-		console.log({ serialized: this.serialized });
+		const serialized = await this.#app.resolve(Utils).toBytes(this.broadcastData);
 
-		return this.serialized;
+		return serialized.toString("hex");
+	}
+
+	public async generateHash(options: { excludeMultiSignature?: boolean } = {}) {
+		return this.#app.resolve(Utils).toHash(this.signedData, {
+			excludeMultiSignature: options?.excludeMultiSignature ?? true,
+			excludeSignature: true,
+		});
+	}
+
+	public override async sanitizeSignatures(): Promise<void> {
+		const transaction = this.signedData;
+
+		const validSignatures: string[] = [];
+		const signatures: string[] = this.signedData.signatures ?? ([] as string[]);
+
+		for (const signature of signatures) {
+			const publicKeyIndex: number = Number.parseInt(signature.slice(0, 2), 16);
+			const partialSignature: string = signature.slice(2, 130);
+			const publicKey: string = transaction.multiSignature.publicKeys[publicKeyIndex];
+
+			const hash = await this.generateHash();
+
+			const isValid = Hash.verifySchnorr(hash, partialSignature, publicKey);
+
+			if (isValid) {
+				validSignatures.push(signature);
+			}
+		}
+
+		transaction.signatures = validSignatures;
+
+		if (transaction.signature) {
+			const hash = await this.generateHash({ excludeMultiSignature: false });
+			const isValid = Hash.verifySchnorr(hash, transaction.signature, transaction.senderPublicKey);
+
+			if (!isValid) {
+				transaction.signature = undefined;
+			}
+		}
 	}
 
 	private normalizedData() {

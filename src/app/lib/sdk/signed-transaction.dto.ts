@@ -11,12 +11,14 @@ import { IContainer } from "./container.contracts";
 import { RawTransactionData, SignedTransactionData } from "./contracts";
 import { NotImplemented } from "./exceptions";
 import { BindingType } from "./service-provider.contract";
+import { BigNumberService } from "./services";
 import { SignedTransactionObject } from "./signed-transaction.dto.contract";
 
 export class AbstractSignedTransactionData implements SignedTransactionData {
 	protected identifier!: string;
 	protected signedData!: RawTransactionData;
-	protected serialized: string;
+	protected broadcastData!: any;
+	protected decimals!: number | undefined;
 
 	readonly #types = [
 		{ method: "isIpfs", type: "ipfs" },
@@ -39,12 +41,24 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		{ method: "isDelegateResignation", type: "delegateResignation" },
 	];
 
-	public configure(identifier: string, signedData: RawTransactionData, serialized: string) {
+	protected readonly bigNumberService: BigNumberService;
+
+	public constructor(container: IContainer) {
+		this.bigNumberService = container.get(BindingType.BigNumberService);
+	}
+
+	public configure(
+		identifier: string,
+		signedData: RawTransactionData,
+		broadcastData?: any,
+		decimals?: number | string,
+	) {
 		assert.ok(signedData);
 
 		this.identifier = identifier;
-		this.serialized = serialized;
 		this.signedData = signedData;
+		this.broadcastData = broadcastData ?? signedData;
+		this.decimals = typeof decimals === "string" ? Number.parseInt(decimals) : decimals;
 
 		return this;
 	}
@@ -254,7 +268,7 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		if (this.isMultiPayment()) {
 			return this.payments().map((payment: { recipientId: string; amount: BigNumber }) => ({
 				address: payment.recipientId,
-				amount: BigNumber.make(payment.amount)
+				amount: this.bigNumberService.make(payment.amount),
 			}));
 		}
 
