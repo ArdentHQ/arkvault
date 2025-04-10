@@ -21,7 +21,7 @@ export const translations = {
 	CONFIRMATIONS_COUNT: "{{count}} Confirmations",
 	CONFIRMED: "Confirmed",
 	CONTACT_SEACH: {
-		DESCRIPTION: "Find and select preferred address from you saved wallets",
+		DESCRIPTION: "Find and select preferred address from your saved wallets.",
 		TITLE: "My addresses",
 	},
 	CORE: "CORE",
@@ -85,8 +85,8 @@ export const translations = {
 		FAST: "Fast",
 		SLOW: "Slow",
 	},
-	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself",
-	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self",
+	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself.",
+	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self.",
 	ID: "ID",
 	INCOMING: "Incoming",
 	INPUT_FEE_VIEW_TYPE: {
@@ -99,7 +99,7 @@ export const translations = {
 		DESCRIPTION:
 			"Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.",
 		LOADING_MESSAGE: "Waiting for confirmation …",
-		REJECTED: "The operation has been rejected by the user",
+		REJECTED: "The operation has been rejected by the user.",
 		TITLE: "Confirm Your Transaction",
 	},
 	LINK_TYPES: {
@@ -140,7 +140,7 @@ export const translations = {
 			TOO_LOW:
 				"You have selected a low fee. Your transaction may never be confirmed. Do you wish to continue anyway?",
 		},
-		DO_NOT_WARN: "Don’t warn me about fees again",
+		DO_NOT_WARN: "Don’t warn me about fees again.",
 		TITLE: "Fee Warning",
 	},
 	MODAL_MULTISIGNATURE_DETAIL: {
@@ -158,13 +158,13 @@ export const translations = {
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
 	},
 	MODAL_OVERWRITE_VALUES: {
-		CLEAR_PREFILLED_LABEL: "Remove prefilled data not included in QR",
+		CLEAR_PREFILLED_LABEL: "Remove prefilled data not included in QR.",
 		TITLE: "Overwrite Data",
 		WARNING:
 			"The data scanned via QR conflicts with pre-filled input fields. Please confirm if you wish to overwrite the following data.",
 	},
 	MODAL_QR_CODE: {
-		DESCRIPTION: "Hold a compatible QR code in front of your device's camera to scan the information",
+		DESCRIPTION: "Hold a compatible QR code in front of your device's camera to scan the information.",
 		ERROR: "Something went wrong.",
 		INVALID_QR_CODE: "The uploaded QR code is invalid.",
 		PERMISSION_ERROR: {
@@ -201,11 +201,11 @@ export const translations = {
 		AWAITING_SOME_SIGNATURES: "One or more transactions are awaiting our signature.",
 		AWAITING_SUFFICIENT_SIGNATURES: "Awaiting sufficient signatures",
 		ERROR: {
-			ADDRESS_ALREADY_ADDED: "The address is already in the list",
-			ADDRESS_NOT_FOUND: "The address could not be found",
-			FAILED_TO_BROADCAST: "Failed to broadcast your transaction",
-			FAILED_TO_SIGN: "Failed to sign the transaction",
-			PUBLIC_KEY_NOT_FOUND: "The public key could not be found",
+			ADDRESS_ALREADY_ADDED: "The address is already in the list.",
+			ADDRESS_NOT_FOUND: "The address could not be found.",
+			FAILED_TO_BROADCAST: "Failed to broadcast your transaction.",
+			FAILED_TO_SIGN: "Failed to sign the transaction.",
+			PUBLIC_KEY_NOT_FOUND: "The public key could not be found.",
 		},
 		GENERATED_ADDRESS: "Multisignature Address",
 		MIN_SIGNATURES: "Minimum Required Signatures",
@@ -217,7 +217,7 @@ export const translations = {
 		PARTICIPANTS_COUNT: "Multisignature Participants ({{count}})",
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",
-		REMOVE_NOT_ALLOWED: "Your own address cannot be removed",
+		REMOVE_NOT_ALLOWED: "Your own address cannot be removed.",
 		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and wallets.",
 		SELECT_PARTICIPANT_TITLE: "Select Participant",
 	},
@@ -237,7 +237,7 @@ export const translations = {
 	PAGE_TRANSACTION_SEND: {
 		FORM_STEP: {
 			DESCRIPTION: "Enter details below to send your transaction.",
-			FEE_UPDATE: "The selected fee has been changed",
+			FEE_UPDATE: "The selected fee has been changed.",
 			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
 			SCAN: "Scan",
 			SCAN_FULL: "Scan QR-Code",
@@ -286,12 +286,12 @@ export const translations = {
 	PARTICIPANTS: "Participants",
 	PENDING: {
 		DESCRIPTION:
-			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:",
-		STATUS_TEXT: "This transaction is pending confirmation",
+			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is the relevant information for your transaction:",
+		STATUS_TEXT: "This transaction is pending confirmation.",
 		TITLE: "Pending Confirmation",
 	},
 	PHOTO_VIDEO: {
-		DESCRIPTION: "Get more users and add more information about yourself",
+		DESCRIPTION: "Get more users and add more information about yourself.",
 		TITLE: "Photo and Video",
 	},
 	QR_CODE_SUCCESS: "QR code was successfully read.",
@@ -299,11 +299,11 @@ export const translations = {
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
 	RECIPIENTS_COUNT: "Recipients ({{count}})",
-	RECIPIENTS_HELPTEXT: "Selecting Multiple allows you to add multiple recipients in one transaction",
+	RECIPIENTS_HELPTEXT: "Selecting Multiple allows you to add multiple recipients in one transaction.",
 	REGISTRATION: "Registration",
 	REGISTRATION_TYPE: "Registration Type",
 	REPOSITORIES: {
-		DESCRIPTION: "Show your projects through your repository",
+		DESCRIPTION: "Show your projects through your repository.",
 		TITLE: "Repository",
 	},
 	RETURN: "Return",
@@ -321,7 +321,7 @@ export const translations = {
 	SIGN_CONTINUE: "Sign & Continue",
 	SINGLE: "Single",
 	SOCIAL_MEDIA: {
-		DESCRIPTION: "Tell people more about yourself through social media",
+		DESCRIPTION: "Tell people more about yourself through social media.",
 		TITLE: "Social Media",
 	},
 	STATUS: "Status",
@@ -344,7 +344,7 @@ export const translations = {
 	TRANSACTION_EXECUTION_ERROR: "Error encountered during contract execution.",
 	TRANSACTION_FEE: "Transaction Fee",
 	TRANSACTION_ID: "Transaction ID",
-	TRANSACTION_REMOVED: "Transaction successfully removed",
+	TRANSACTION_REMOVED: "Transaction successfully removed.",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
@@ -363,7 +363,7 @@ export const translations = {
 		VOTE_COMBINATION: "Vote Swap",
 	},
 
-	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address",
+	TRANSACTION_TYPE_NOT_AVAILABLE: "Transaction type not available for this address.",
 	TYPE: "Type",
 
 	UNVOTES: "Unvotes",
@@ -375,15 +375,15 @@ export const translations = {
 		COIN_MISMATCH: "data is for another coin.",
 		COIN_MISSING: "coin parameter is missing.",
 		COIN_NOT_SUPPORTED: "coin <strong>{{coin}}</strong> is not supported.",
-		FEE_NEGATIVE: "Fee cannot be negative",
-		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network",
+		FEE_NEGATIVE: "Fee cannot be negative.",
+		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network.",
 		INVALID_QR: "Invalid QR",
 		INVALID_QR_REASON: "Invalid QR: {{reason}}",
 		INVALID_URI: "Invalid URI",
-		LOW_BALANCE: "The balance is too low",
+		LOW_BALANCE: "The balance is too low.",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
 		MESSAGE_MISSING: "message parameter is missing.",
-		METHOD_MISSING: "method parameter is missing",
+		METHOD_MISSING: "method parameter is missing.",
 		METHOD_NOT_SUPPORTED: "method <strong>{{method}}</strong> is not supported.",
 		NETHASH_NOT_ENABLED: "network with nethash <strong>{{nethash}}</strong> is not enabled or available.",
 		NETWORK_INVALID: "network <strong>{{network}}</strong> is invalid.",
@@ -392,8 +392,8 @@ export const translations = {
 		NETWORK_NO_WALLETS:
 			"the current profile has no wallets available for the <strong>{{network}}</strong> network.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
-		SIGNATORY_MISSING: "signatory is missing",
-		SIGNATURE_MISSING: "signature is missing",
+		SIGNATORY_MISSING: "signatory is missing.",
+		SIGNATURE_MISSING: "signature is missing.",
 		VALIDATOR_MISSING: "validator name or public key parameter is missing.",
 		VALIDATOR_NOT_FOUND: "validator <strong>{{validator}}</strong> could not be found.",
 		VALIDATOR_OR_PUBLICKEY:

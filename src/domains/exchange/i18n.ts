@@ -3,9 +3,9 @@ export const translations = {
 	EMPTY_MESSAGE: "You haven't made any swaps yet. Once you initiate a transaction they will show up here.",
 
 	ERROR: {
-		GENERIC: "Your order could not be placed",
-		INVALID_ADDRESS: "The provided address is not a valid {{ticker}} address",
-		INVALID_REFUND_ADDRESS: "The provided refund address is not a valid {{ticker}} address",
+		GENERIC: "Your order could not be placed.",
+		INVALID_ADDRESS: "The provided address is not a valid {{ticker}} address.",
+		INVALID_REFUND_ADDRESS: "The provided refund address is not a valid {{ticker}} address.",
 	},
 
 	EXCHANGE_FORM: {
@@ -37,7 +37,7 @@ export const translations = {
 	},
 
 	EXCHANGE_NAME: "Exchange Name",
-	EXPECTED_AMOUNT_HINT: "The final payout amount might be different",
+	EXPECTED_AMOUNT_HINT: "The final payout amount might be different.",
 
 	MANUAL_TRANSFER: "Manual Transfer",
 	MODAL_DELETE_EXCHANGE_TRANSACTION: {
@@ -60,7 +60,7 @@ export const translations = {
 
 	PAGE_EXCHANGES: {
 		ADD_EXCHANGE: "Add Exchange",
-		DELETE_CONFIRMATION: "The exchange transaction <bold>{{orderId}}</bold> has been deleted",
+		DELETE_CONFIRMATION: "The exchange transaction <bold>{{orderId}}</bold> has been deleted.",
 		EMPTY_MESSAGE: "There are currently no exchange providers available, please try again at a later time.",
 		SUBTITLE: "Choose one of the exchange providers below to swap directly from within the wallet.",
 		TITLE: "Exchange",
@@ -71,7 +71,7 @@ export const translations = {
 		REMOVE: "Remove Refund Wallet",
 	},
 
-	SELECT_EXCHANGE_MESSAGE: "Select one of the exchanges you have installed",
+	SELECT_EXCHANGE_MESSAGE: "Select one of the exchanges you have installed.",
 
 	STATUS: {
 		CONFIRMING: "Confirming",
@@ -101,8 +101,8 @@ export const translations = {
 	},
 
 	VALIDATION: {
-		INVALID_ADDRESS: "Not a valid {{ticker}} address",
-		MIN_AMOUNT: "The minimal exchange amount is {{amount}} {{ticker}}",
+		INVALID_ADDRESS: "Not a valid {{ticker}} address.",
+		MIN_AMOUNT: "The minimal exchange amount is {{amount}} {{ticker}}.",
 		PAIR_NOT_AVAILABLE: "The pair <bold>{{from}}</bold> / <bold>{{to}}</bold> is not available.",
 	},
 

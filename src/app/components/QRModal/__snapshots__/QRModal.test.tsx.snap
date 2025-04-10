@@ -69,7 +69,7 @@ exports[`QRModal > should render 1`] = `
             <div
               class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
-              Hold a compatible QR code in front of your device's camera to scan the information
+              Hold a compatible QR code in front of your device's camera to scan the information.
             </div>
             <div
               class="relative -mx-10 -mb-10 mt-4 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black"

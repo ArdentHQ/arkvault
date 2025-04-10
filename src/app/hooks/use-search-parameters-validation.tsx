@@ -77,7 +77,7 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 
 	if (delegateName) {
 		try {
-			return env.delegates().findByUsername(network?.coin(), network?.id(), delegateName);
+			return env.delegates().findByUsername(network.coin(), network.id(), delegateName);
 		} catch {
 			//
 		}
@@ -85,7 +85,7 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 
 	if (delegatePublicKey) {
 		try {
-			return env.delegates().findByPublicKey(network?.coin(), network?.id(), delegatePublicKey);
+			return env.delegates().findByPublicKey(network.coin(), network.id(), delegatePublicKey);
 		} catch {
 			//
 		}
@@ -267,7 +267,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.MissingMethod } };
 		}
 
-		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
+		if (requiredParameters?.coin && coin !== requiredParameters.coin) {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
@@ -282,7 +282,7 @@ export const useSearchParametersValidation = () => {
 		let network: Networks.Network | undefined;
 
 		if (networkId) {
-			if (requiredParameters?.network && networkId !== requiredParameters?.network) {
+			if (requiredParameters?.network && networkId !== requiredParameters.network) {
 				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
@@ -309,7 +309,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		if (nethash) {
-			if (requiredParameters?.nethash && nethash !== requiredParameters?.nethash) {
+			if (requiredParameters?.nethash && nethash !== requiredParameters.nethash) {
 				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
@@ -317,7 +317,7 @@ export const useSearchParametersValidation = () => {
 
 			if (!network) {
 				/* istanbul ignore next -- @preserve */
-				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
+				for (const { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
 					if (defaultNethash === nethash) {
 						return { error: { type: SearchParametersError.NetworkNotEnabled, value: displayName } };
 					}

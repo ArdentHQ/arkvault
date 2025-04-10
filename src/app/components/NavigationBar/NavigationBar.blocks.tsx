@@ -370,7 +370,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 											>
 												<Icon name="Received" size="lg" className="p-1" />
 											</Button>
-											´{" "}
 										</NavigationButtonWrapper>
 									</div>
 								</Tooltip>

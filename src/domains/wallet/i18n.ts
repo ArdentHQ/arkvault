@@ -1,7 +1,8 @@
 export const translations = {
 	ADDRESSES_SIDE_PANEL: {
-		DELETE_INFO: "You can delete your addresses from the app here",
+		DELETE_INFO: "You can delete your addresses from the app here.",
 		MANAGE_HINT: "You can manage and remove your addresses here.",
+		NO_SEARCH_RESULTS: "Your search did not match any results.",
 		SEARCH_BY: "Search by Name or Address",
 		TITLE: "Choose Address",
 		TOGGLE: {
@@ -13,7 +14,7 @@ export const translations = {
 		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
 		HEADER: "Connect and Authorize Ledger Device",
 		TITLE: "Connect Ledger Device",
-		WAITING_DEVICE: "Waiting for confirmation  ...",
+		WAITING_DEVICE: "Waiting for confirmation ...",
 	},
 
 	MESSAGE: "Message",
@@ -37,15 +38,15 @@ export const translations = {
 			"ARK Vault requires the use of a chromium based browser when using a Ledger device. Please use another browser like Chrome.",
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
-		CONNECT_SUCCESS: "Successfully connected",
-		DEVICE_NOT_AVAILABLE: "Unable to detect Ledger device",
+		CONNECT_SUCCESS: "Successfully connected.",
+		DEVICE_NOT_AVAILABLE: "Unable to detect Ledger device.",
 		DEVICE_NOT_SUPPORTED:
 			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
 		GENERIC_CONNECTION_ERROR:
 			"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
 		LEDGER_NANO_S: "Ledger Nano S",
 		LEDGER_NANO_X: "Ledger Nano X",
-		NO_DEVICE_FOUND: "Ledger device has not been found in time",
+		NO_DEVICE_FOUND: "Ledger device has not been found in time.",
 		OPEN_APP: "Open the {{coin}} app on your device ...",
 		TITLE: "Ledger Wallet",
 		UPDATE_ERROR: "The {{coin}} app version is {{version}}. Please update the {{coin}} app via Ledger Live.",
@@ -85,7 +86,7 @@ export const translations = {
 	},
 
 	MULTIPLE_ADDRESSES_HINT:
-		"Your address has been automatically added to <br/> the overview.  You can select it here to make changes.",
+		"Your address has been automatically added to <br/> the overview. You can select it here to make changes.",
 
 	PAGE_CREATE_WALLET: {
 		NETWORK_STEP: {
@@ -143,7 +144,7 @@ export const translations = {
 				CHECKBOX: "I understand and accept responsibility.",
 				DESCRIPTION:
 					"Set an encryption password to replace your mnemonic passphrase when signing transactions and messages.",
-				NOT_AVAILABLE: "Encryption not available for this import type",
+				NOT_AVAILABLE: "Encryption not available for this import type.",
 				TITLE: "Use Wallet Encryption",
 				WARNING:
 					"You must still securely store your mnemonic passphrase. Losing it will result in permanent loss of access to your funds!",
@@ -182,25 +183,25 @@ export const translations = {
 		},
 
 		METHOD_STEP: {
-			ADDRESS_DESCRIPTION: "Import an address by entering your public address",
-			LEDGER_DESCRIPTION: "Import address(es) via your Ledger hardware wallet",
-			MNEMONIC_DESCRIPTION: "Import an address by entering your 12 or 24 mnemonic phrase",
+			ADDRESS_DESCRIPTION: "Import an address by entering your public address.",
+			LEDGER_DESCRIPTION: "Import address(es) via your Ledger hardware wallet.",
+			MNEMONIC_DESCRIPTION: "Import an address by entering your 12 or 24 mnemonic phrase.",
 			MNEMONIC_TITLE: "Import Mnemonic",
-			PUBLIC_KEY_DESCRIPTION: "Import an address by entering your public key",
+			PUBLIC_KEY_DESCRIPTION: "Import an address by entering your public key.",
 			PUBLIC_KEY_TITLE: "Import Public Key",
-			SECRET_DESCRIPTION: "Import an address by entering your custom password",
+			SECRET_DESCRIPTION: "Import an address by entering your custom password.",
 			SECRET_TITLE: "Import Secret",
 			SUBTITLE: "Select the method you want to use to import your address.",
 			TITLE: "Import",
 		},
 
 		PASSPHRASE_CONFIRMATION_STEP: {
-			SUBTITLE: "Confirm your password to continue",
+			SUBTITLE: "Confirm your password to continue.",
 			TITLE: "Confirm your passphrase",
 		},
 
 		SUCCESS_STEP: {
-			SUBTITLE: "The address has been successfully imported",
+			SUBTITLE: "The address has been successfully imported.",
 			TITLE: "Import Completed",
 		},
 
@@ -208,11 +209,11 @@ export const translations = {
 
 		VALIDATION: {
 			DECRYPT_WIF_ASSERTION: "Failed to decrypt WIF. Please check your password.",
-			INVALID_MNEMONIC: "The given value is not BIP39 compliant",
-			INVALID_PRIVATE_KEY: "Invalid Private Key",
-			INVALID_PUBLIC_KEY: "Invalid Public Key",
-			INVALID_SECRET: "The given value is BIP39 compliant. Please change Import Type to 'Mnemonic'",
-			INVALID_WIF: "Invalid WIF",
+			INVALID_MNEMONIC: "The given value is not BIP39 compliant.",
+			INVALID_PRIVATE_KEY: "Invalid Private Key.",
+			INVALID_PUBLIC_KEY: "Invalid Public Key.",
+			INVALID_SECRET: "The given value is BIP39 compliant. Please change Import Type to 'Mnemonic'.",
+			INVALID_WIF: "Invalid WIF.",
 		},
 	},
 
@@ -255,9 +256,9 @@ export const translations = {
 			LOCKED_UNVOTES: "Locked Unvotes",
 			LOCKED_VOTES: "Locked Votes",
 			MULTIVOTE: "Multivote",
-			NOT_FORGING_COUNT: "{{count}} of your validators are currently not in a forging position",
-			NOT_FORGING_one: "Your validator is currently not in a forging position",
-			NOT_FORGING_other: "Your validators are currently not in a forging position",
+			NOT_FORGING_COUNT: "{{count}} of your validators are currently not in a forging position.",
+			NOT_FORGING_one: "Your validator is currently not in a forging position.",
+			NOT_FORGING_other: "Your validators are currently not in a forging position.",
 			RESIGNED_COUNT: "Resigned {{count}}",
 			RESIGNED_one: "Resigned",
 			RESIGNED_other: "All Resigned",
@@ -286,7 +287,7 @@ export const translations = {
 	UPDATING_WALLET_DATA: "Updating Wallet Data",
 
 	VALIDATION: {
-		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet",
+		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet.",
 	},
 	WALLET_NAME: "Wallet Name",
 };
