@@ -25,7 +25,7 @@ function readSize(data, pos, strict) {
 	}
 
 	const field = data[pos];
-	const bytes = field & 0x7F;
+	const bytes = field & 0x7f;
 
 	pos += 1;
 
@@ -146,7 +146,7 @@ function readInt(data, pos, strict = true) {
 function readVersion(data, pos, version, strict = true) {
 	assert(Buffer.isBuffer(data));
 	assert(pos >>> 0 === pos);
-	assert((version & 0xFF) === version);
+	assert((version & 0xff) === version);
 	assert(typeof strict === "boolean");
 
 	let number_;
@@ -162,17 +162,17 @@ function readVersion(data, pos, version, strict = true) {
 function sizeSize(size) {
 	assert(size >>> 0 === size);
 
-	if (size <= 0x7F) {
+	if (size <= 0x7f) {
 		// [size]
 		return 1;
 	}
 
-	if (size <= 0xFF) {
+	if (size <= 0xff) {
 		// 0x81 [size]
 		return 2;
 	}
 
-	assert(size <= 0xFF_FF);
+	assert(size <= 0xff_ff);
 
 	return 3; // 0x82 [size-hi] [size-lo]
 }
@@ -201,7 +201,7 @@ function sizeInt(number_) {
 }
 
 function sizeVersion(version) {
-	assert((version & 0xFF) === version);
+	assert((version & 0xff) === version);
 	return 3;
 }
 
@@ -210,19 +210,19 @@ function writeSize(data, pos, size) {
 	assert(pos >>> 0 === pos);
 	assert(size >>> 0 === size);
 
-	if (size <= 0x7F) {
+	if (size <= 0x7f) {
 		// [size]
 		data[pos++] = size;
-	} else if (size <= 0xFF) {
+	} else if (size <= 0xff) {
 		// 0x81 [size]
 		data[pos++] = 0x81;
 		data[pos++] = size;
 	} else {
 		// 0x82 [size-hi] [size-lo]
-		assert(size <= 0xFF_FF);
+		assert(size <= 0xff_ff);
 		data[pos++] = 0x82;
 		data[pos++] = size >> 8;
-		data[pos++] = size & 0xFF;
+		data[pos++] = size & 0xff;
 	}
 
 	assert(pos <= data.length);
@@ -282,7 +282,7 @@ function writeInt(data, pos, number_) {
 function writeVersion(data, pos, version) {
 	assert(Buffer.isBuffer(data));
 	assert(pos >>> 0 === pos);
-	assert((version & 0xFF) === version);
+	assert((version & 0xff) === version);
 	assert(pos + 3 <= data.length);
 
 	data[pos++] = 0x02;

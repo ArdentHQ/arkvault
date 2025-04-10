@@ -349,7 +349,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 		}
 
 		if (input.signatory.actsWithMultiSignature()) {
-			address = this.#addressService.fromMultiSignature({ min: input.signatory.asset().min, publicKeys: input.signatory.asset().publicKeys }).address
+			address = this.#addressService.fromMultiSignature({
+				min: input.signatory.asset().min,
+				publicKeys: input.signatory.asset().publicKeys,
+			}).address;
 		}
 
 		if (input.signatory.actsWithLedger()) {

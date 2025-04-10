@@ -39,4 +39,3 @@ export class PublicKeyService {
 		throw new Exceptions.NotImplemented(this.constructor.name, this.verifyPublicKeyWithBLS.name);
 	}
 }
-

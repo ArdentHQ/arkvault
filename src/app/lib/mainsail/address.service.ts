@@ -39,7 +39,6 @@ export class AddressService {
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
 	}
 
-
 	public fromPublicKey(publicKey: string): Services.AddressDataTransferObject {
 		return {
 			address: Address.fromPublicKey(publicKey),

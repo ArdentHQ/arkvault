@@ -68,9 +68,9 @@ class ChaCha20 {
 		}
 
 		this.state[0] = 0x61_70_78_65;
-		this.state[1] = key.length < 32 ? 0x31_20_64_6E : 0x33_20_64_6E;
-		this.state[2] = key.length < 32 ? 0x79_62_2D_36 : 0x79_62_2D_32;
-		this.state[3] = 0x6B_20_65_74;
+		this.state[1] = key.length < 32 ? 0x31_20_64_6e : 0x33_20_64_6e;
+		this.state[2] = key.length < 32 ? 0x79_62_2d_36 : 0x79_62_2d_32;
+		this.state[3] = 0x6b_20_65_74;
 		this.state[4] = readU32(key, 0);
 		this.state[5] = readU32(key, 4);
 		this.state[6] = readU32(key, 8);
@@ -219,9 +219,9 @@ class ChaCha20 {
 		const state = new Uint32Array(16);
 
 		state[0] = 0x61_70_78_65;
-		state[1] = key.length < 32 ? 0x31_20_64_6E : 0x33_20_64_6E;
-		state[2] = key.length < 32 ? 0x79_62_2D_36 : 0x79_62_2D_32;
-		state[3] = 0x6B_20_65_74;
+		state[1] = key.length < 32 ? 0x31_20_64_6e : 0x33_20_64_6e;
+		state[2] = key.length < 32 ? 0x79_62_2d_36 : 0x79_62_2d_32;
+		state[3] = 0x6b_20_65_74;
 		state[4] = readU32(key, 0);
 		state[5] = readU32(key, 4);
 		state[6] = readU32(key, 8);
