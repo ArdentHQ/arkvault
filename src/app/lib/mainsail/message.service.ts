@@ -14,9 +14,9 @@ export class MessageService {
 
 	public verify(input: Services.SignedMessage): boolean {
 		const message = new Message({
+			message: input.message,
 			publicKey: input.signatory,
 			signature: input.signature,
-			message: input.message,
 		});
 
 		return message.verify();
