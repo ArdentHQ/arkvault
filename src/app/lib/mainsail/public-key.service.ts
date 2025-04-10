@@ -1,70 +1,41 @@
-/* eslint unicorn/no-abusive-eslint-disable: "off" */
-/* eslint-disable */
-import { IoC, Services } from "@ardenthq/sdk";
+import { Services, Exceptions } from "@/app/lib/sdk";
 import { BIP39 } from "@/app/lib/crypto";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
-import { Contracts, Identifiers } from "@mainsail/contracts";
-import { Application } from "@mainsail/kernel";
 
-import { BindingType } from "./coin.contract";
+import { PublicKey } from "@arkecosystem/typescript-crypto";
 
-export class PublicKeyService extends Services.AbstractPublicKeyService {
-	readonly #app: Application;
-	readonly #publicKeyFactory: Contracts.Crypto.PublicKeyFactory;
-
-	public constructor(container: IoC.IContainer) {
-		super(container);
-
-		this.#app = container.get(BindingType.Application);
-
-		this.#publicKeyFactory = this.#app.getTagged<Contracts.Crypto.PublicKeyFactory>(
-			Identifiers.Cryptography.Identity.PublicKey.Factory,
-			"type",
-			"wallet",
-		);
-	}
-
-	public override async fromMnemonic(
-		mnemonic: string,
-		options?: Services.IdentityOptions,
-	): Promise<Services.PublicKeyDataTransferObject> {
+export class PublicKeyService {
+	public fromMnemonic(mnemonic: string): Services.PublicKeyDataTransferObject {
 		abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
 
 		return {
-			publicKey: await this.#publicKeyFactory.fromMnemonic(mnemonic),
+			publicKey: PublicKey.fromPassphrase(mnemonic).publicKey,
 		};
 	}
 
-	public override async fromMultiSignature(
-		min: number,
-		publicKeys: string[],
-	): Promise<Services.PublicKeyDataTransferObject> {
-		return {
-			publicKey: await this.#publicKeyFactory.fromMultiSignatureAsset({ min, publicKeys }),
-		};
-	}
-
-	public override async fromSecret(secret: string): Promise<Services.PublicKeyDataTransferObject> {
+	public fromSecret(secret: string): Services.PublicKeyDataTransferObject {
 		abort_if(BIP39.compatible(secret), "The given value is BIP39 compliant. Please use [fromMnemonic] instead.");
 
 		return {
-			publicKey: await this.#publicKeyFactory.fromMnemonic(secret),
+			publicKey: PublicKey.fromPassphrase(secret).publicKey,
 		};
 	}
 
-	public override async fromWIF(wif: string): Promise<Services.PublicKeyDataTransferObject> {
-		return {
-			publicKey: await this.#publicKeyFactory.fromWIF(wif),
-		};
+	// @TODO: Implement
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	public fromMultiSignature(min: number, publicKeys: string[]): Promise<Services.PublicKeyDataTransferObject> {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
 	}
 
-	public override async verifyPublicKeyWithBLS(publicKey: string): Promise<boolean> {
-		const consensusPublicKeyFactory: Contracts.Crypto.PublicKeyFactory = this.#app.getTagged(
-			Identifiers.Cryptography.Identity.PublicKey.Factory,
-			"type",
-			"consensus",
-		);
+	// @TODO: Implement
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	public fromWIF(wif: string): Promise<Services.PublicKeyDataTransferObject> {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.fromWIF.name);
+	}
 
-		return await consensusPublicKeyFactory.verify(publicKey);
+	// @TODO: Implement
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	public verifyPublicKeyWithBLS(publicKey: string): Promise<boolean> {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.verifyPublicKeyWithBLS.name);
 	}
 }

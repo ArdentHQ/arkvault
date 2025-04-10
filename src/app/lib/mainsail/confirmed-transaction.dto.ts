@@ -1,20 +1,20 @@
-import { Contracts, DTO, Exceptions, IoC, Services } from "@/app/lib/sdk";
+import { Contracts, DTO, Exceptions, IoC } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 
-import { BindingType } from "./coin.contract";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
+import { AddressService } from "./address.service";
 
 export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionData {
-	readonly #addressService: Services.AddressService;
+	readonly #addressService: AddressService;
 
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#addressService = container.get(BindingType.AddressService);
+		this.#addressService = new AddressService(container);
 	}
 
 	public override id(): string {

@@ -6,9 +6,10 @@ import { Exceptions } from "@mainsail/contracts";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
+import { AddressService } from "./address.service.js";
 
 export class LedgerService extends Services.AbstractLedgerService {
-	readonly #addressService!: Services.AddressService;
+	readonly #addressService!: AddressService;
 	readonly #dataTransferObjectService: Services.DataTransferObjectService;
 	#ledger!: Services.LedgerTransport;
 	#ethLedgerService!: any;
@@ -45,7 +46,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#addressService = container.get(IoC.BindingType.AddressService);
+		this.#addressService = new AddressService(container);
 		this.#dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
 	}
 
@@ -131,7 +132,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 			const addressIndex = initialAddressIndex + addressIndexIterator;
 			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(`${path}/0/${addressIndex}`);
 
-			const { address } = await this.#addressService.fromPublicKey(extendedPublicKey);
+			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
 
 			ledgerWallets[`${path}/0/${addressIndex}`] = this.#dataTransferObjectService.wallet({
 				address,

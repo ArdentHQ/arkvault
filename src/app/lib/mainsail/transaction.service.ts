@@ -13,6 +13,7 @@ import { applyCryptoConfiguration } from "./config.js";
 import { Interfaces } from "./crypto/index.js";
 import { parseUnits } from "./helpers/parse-units.js";
 import { Request } from "./request.js";
+import { AddressService } from "./address.service.js";
 
 const wellKnownContracts = {
 	consensus: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
@@ -33,7 +34,7 @@ type TransactionsInputs =
 
 export class TransactionService extends Services.AbstractTransactionService {
 	readonly #ledgerService!: Services.LedgerService;
-	readonly #addressService!: Services.AddressService;
+	readonly #addressService!: AddressService;
 	readonly #publicKeyService!: Services.PublicKeyService;
 	readonly #request: Request;
 	readonly #app: Application;
@@ -44,7 +45,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		super(container);
 
 		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
-		this.#addressService = container.get(IoC.BindingType.AddressService);
+		this.#addressService = new AddressService(container);
 		this.#publicKeyService = container.get(IoC.BindingType.PublicKeyService);
 		this.#app = container.get(BindingType.Application);
 
@@ -333,33 +334,24 @@ export class TransactionService extends Services.AbstractTransactionService {
 		let publicKey: string | undefined;
 
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
-			address = (await this.#addressService.fromMnemonic(input.signatory.signingKey())).address;
+			address = this.#addressService.fromMnemonic(input.signatory.signingKey()).address;
 			publicKey = (await this.#publicKeyService.fromMnemonic(input.signatory.signingKey())).publicKey;
 		}
 
 		if (input.signatory.actsWithSecret() || input.signatory.actsWithConfirmationSecret()) {
-			address = (await this.#addressService.fromSecret(input.signatory.signingKey())).address;
+			address = this.#addressService.fromSecret(input.signatory.signingKey()).address;
 			publicKey = (await this.#publicKeyService.fromSecret(input.signatory.signingKey())).publicKey;
 		}
 
 		if (input.signatory.actsWithWIF() || input.signatory.actsWithConfirmationWIF()) {
-			address = (await this.#addressService.fromWIF(input.signatory.signingKey())).address;
+			address = this.#addressService.fromWIF(input.signatory.signingKey()).address;
 			publicKey = (await this.#publicKeyService.fromWIF(input.signatory.signingKey())).publicKey;
-		}
-
-		if (input.signatory.actsWithMultiSignature()) {
-			address = (
-				await this.#addressService.fromMultiSignature({
-					min: input.signatory.asset().min,
-					publicKeys: input.signatory.asset().publicKeys,
-				})
-			).address;
 		}
 
 		if (input.signatory.actsWithLedger()) {
 			publicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
-			address = (await this.#addressService.fromPublicKey(extendedPublicKey)).address;
+			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
 		}
 
 		return { address, publicKey };
