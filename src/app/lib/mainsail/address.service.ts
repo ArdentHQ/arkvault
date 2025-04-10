@@ -34,7 +34,7 @@ export class AddressService {
 		};
 	}
 
-	public fromMultiSignature(input: MultisignatureAddressInput): Promise<AddressDataTransferObject> {
+	public fromMultiSignature(input: MultisignatureAddressInput): AddressDataTransferObject {
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
 	}
 
