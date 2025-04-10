@@ -34,6 +34,7 @@ export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 		transaction.isDelegateResignation(),
 		transaction.isVote(),
 		transaction.isUnvote(),
+		transaction.isUsernameRegistration(),
 	].some(Boolean);
 
 /**
@@ -44,14 +45,14 @@ export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>
-	<T>(promise: Promise<T>) =>
-		new Promise<T>((resolve, reject) => {
-			if (signal) {
-				signal.addEventListener("abort", () => {
-					callback?.();
-					reject("ERR_ABORT");
-				});
-			}
+		<T>(promise: Promise<T>) =>
+			new Promise<T>((resolve, reject) => {
+				if (signal) {
+					signal.addEventListener("abort", () => {
+						callback?.();
+						reject("ERR_ABORT");
+					});
+				}
 
-			return promise.then(resolve).catch(reject);
-		});
+				return promise.then(resolve).catch(reject);
+			});
