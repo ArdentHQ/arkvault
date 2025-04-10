@@ -47,6 +47,7 @@
 		"@ardenthq/sdk": "2.0.0-alpha.67",
 		"@ardenthq/sdk-intl": "2.0.0-alpha.67",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.67",
+		"@arkecosystem/typescript-crypto": "0.0.2",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
 		"@floating-ui/react": "^0.26.25",
 		"@konforti/react-truncate": "^1.1.0",

@@ -1,98 +1,79 @@
 import { Application } from "@mainsail/kernel";
-import { strict as assert } from "assert";
-import { Contracts, Identifiers } from "@mainsail/contracts";
-import { IoC, Services } from "@ardenthq/sdk";
-import { BIP39 } from "@/app/lib/crypto/bip39";
+import { IoC, Services, Exceptions } from "@/app/lib/sdk";
+import { BIP39 } from "@/app/lib/crypto";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
+import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
+
+import { Contracts, Identifiers } from "@mainsail/contracts";
 import { BindingType } from "./coin.contract.js";
+import { MultisignatureAddressInput } from "@/app/lib/sdk/shared.contract";
+import { AddressDataTransferObject } from "@/app/lib/sdk/address.contract.js";
 
-export class AddressService extends Services.AbstractAddressService {
+export class AddressService {
 	readonly #app: Application;
-	readonly #addressFactory: Contracts.Crypto.AddressFactory;
-	readonly #publicKeyFactory: Contracts.Crypto.PublicKeyFactory;
-	readonly #keyPairFactory: Contracts.Crypto.KeyPairFactory;
 
+	// @TODO: Remove constructor and IoC related calls once @mainsail packages will be deprecated.
+	// Temporarily keeping it as removing `getTagged` throws an exception on page load, related to IoC container initialization:
+	// "Uncaught TypeError: Reflect.hasOwnMetadata is not a function".
 	public constructor(container: IoC.IContainer) {
-		super(container);
-
 		this.#app = container.get(BindingType.Application);
 
-		this.#addressFactory = this.#app.getTagged<Contracts.Crypto.AddressFactory>(
+		this.#app.getTagged<Contracts.Crypto.AddressFactory>(
 			Identifiers.Cryptography.Identity.Address.Factory,
 			"type",
 			"wallet",
 		);
-
-		this.#publicKeyFactory = this.#app.getTagged<Contracts.Crypto.PublicKeyFactory>(
-			Identifiers.Cryptography.Identity.PublicKey.Factory,
-			"type",
-			"wallet",
-		);
-
-		this.#keyPairFactory = this.#app.getTagged<Contracts.Crypto.KeyPairFactory>(
-			Identifiers.Cryptography.Identity.KeyPair.Factory,
-			"type",
-			"wallet",
-		);
 	}
 
-	public override async fromMnemonic(mnemonic: string): Promise<Services.AddressDataTransferObject> {
+	public fromMnemonic(mnemonic: string): Services.AddressDataTransferObject {
 		abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
 
 		return {
-			address: await this.#addressFactory.fromMnemonic(mnemonic),
+			address: Address.fromPassphrase(mnemonic),
 			type: "bip39",
 		};
 	}
 
-	public override async fromMultiSignature({
-		min,
-		publicKeys,
-	}: Services.MultisignatureAddressInput): Promise<Services.AddressDataTransferObject> {
-		assert.ok(publicKeys);
-		assert.ok(min);
+	public fromMultiSignature(input: MultisignatureAddressInput): Promise<AddressDataTransferObject> {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
+	}
 
+
+	public fromPublicKey(publicKey: string): Services.AddressDataTransferObject {
 		return {
-			address: await this.#addressFactory.fromMultiSignatureAsset({ min, publicKeys }),
+			address: Address.fromPublicKey(publicKey),
 			type: "bip39",
 		};
 	}
 
-	public override async fromPublicKey(publicKey: string): Promise<Services.AddressDataTransferObject> {
+	public fromPrivateKey(privateKey: string): Services.AddressDataTransferObject {
 		return {
-			address: await this.#addressFactory.fromPublicKey(publicKey),
+			address: Address.fromPrivateKey(privateKey),
 			type: "bip39",
 		};
 	}
 
-	public override async fromPrivateKey(privateKey: string): Promise<Services.AddressDataTransferObject> {
-		const keyPair = await this.#keyPairFactory.fromPrivateKey(Buffer.from(privateKey, "hex"));
-
-		return {
-			address: await this.#addressFactory.fromPrivateKey(keyPair),
-			type: "bip39",
-		};
-	}
-
-	public override async fromSecret(secret: string): Promise<Services.AddressDataTransferObject> {
+	public fromSecret(secret: string): Services.AddressDataTransferObject {
 		abort_if(BIP39.compatible(secret), "The given value is BIP39 compliant. Please use [fromMnemonic] instead.");
 
-		const publicKey = await this.#publicKeyFactory.fromMnemonic(secret);
+		const publicKey = PublicKey.fromPassphrase(secret);
 
 		return {
-			address: await this.#addressFactory.fromPublicKey(publicKey),
+			address: Address.fromPublicKey(publicKey.publicKey),
 			type: "bip39",
 		};
 	}
 
-	public override async fromWIF(wif: string): Promise<Services.AddressDataTransferObject> {
+	public fromWIF(wif: string): Services.AddressDataTransferObject {
+		const privateKey = PrivateKey.fromWif(wif);
+
 		return {
-			address: await this.#addressFactory.fromWIF(wif),
+			address: Address.fromPrivateKey(privateKey.privateKey),
 			type: "bip39",
 		};
 	}
 
-	public override async validate(address: string): Promise<boolean> {
-		return await this.#addressFactory.validate(address);
+	public validate(address: string): boolean {
+		return Address.validate(address);
 	}
 }
