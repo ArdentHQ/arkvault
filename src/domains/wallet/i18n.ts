@@ -2,6 +2,7 @@ export const translations = {
 	ADDRESSES_SIDE_PANEL: {
 		DELETE_INFO: "You can delete your addresses from the app here.",
 		MANAGE_HINT: "You can manage and remove your addresses here.",
+		NO_SEARCH_RESULTS: "Your search did not match any results.",
 		SEARCH_BY: "Search by Name or Address",
 		TITLE: "Choose Address",
 		TOGGLE: {
