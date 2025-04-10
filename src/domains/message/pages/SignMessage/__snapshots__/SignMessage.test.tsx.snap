@@ -457,7 +457,6 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -1550,7 +1549,6 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
