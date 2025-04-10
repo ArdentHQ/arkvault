@@ -22,20 +22,20 @@ export class PublicKeyService {
 	}
 
 	// @TODO: Implement
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	public fromMultiSignature(min: number, publicKeys: string[]): Promise<Services.PublicKeyDataTransferObject> {
-		console.log({ min, publicKeys })
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
 	}
 
 	// @TODO: Implement
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	public fromWIF(wif: string): Promise<Services.PublicKeyDataTransferObject> {
-		console.log({ wif })
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromWIF.name);
 	}
 
 	// @TODO: Implement
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	public verifyPublicKeyWithBLS(publicKey: string): Promise<boolean> {
-		console.log({ publicKey })
 		throw new Exceptions.NotImplemented(this.constructor.name, this.verifyPublicKeyWithBLS.name);
 	}
 }

@@ -34,6 +34,7 @@ export class AddressService {
 		};
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	public fromMultiSignature(input: MultisignatureAddressInput): AddressDataTransferObject {
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
 	}

@@ -83,11 +83,11 @@ class HMAC {
 		this.inner.update(pad);
 
 		for (const [index, element] of key.entries()) {
-			pad[index] = element ^ 0x5c;
+			pad[index] = element ^ 0x5C;
 		}
 
 		for (let index = key.length; index < pad.length; index++) {
-			pad[index] = 0x5c;
+			pad[index] = 0x5C;
 		}
 
 		this.outer.init(...this.x);
