@@ -133,6 +133,9 @@ export const AddressesSidePanel = ({
 		if (activeMode === AddressViewSelection.single) {
 			setSelectedAddresses([address]);
 			await setSingleSelectedAddress([address]);
+
+			onOpenChange(false);
+			onClose([address]);
 		} else {
 			if (selectedAddresses.includes(address)) {
 				const newSelection = selectedAddresses.filter((a) => a !== address);
