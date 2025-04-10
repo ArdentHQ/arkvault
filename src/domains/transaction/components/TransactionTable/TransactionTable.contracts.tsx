@@ -1,4 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { SortBy } from "@/app/components/Table";
 
 export interface TransactionTableProperties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -9,6 +10,8 @@ export interface TransactionTableProperties {
 	skeletonRowsLimit?: number;
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
+	sortBy: SortBy;
+	onSortChange: (column: string, desc: boolean) => void;
 }
 
 export interface Transaction {

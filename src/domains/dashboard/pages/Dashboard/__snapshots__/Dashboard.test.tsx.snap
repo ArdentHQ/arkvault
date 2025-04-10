@@ -454,7 +454,6 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -1672,47 +1671,14 @@ exports[`Dashboard > should render 1`] = `
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
-                          style="cursor: pointer;"
-                          title="Toggle SortBy"
                         >
                           <div
-                            class="flex flex-inline align-top justify-end flex-row-reverse"
+                            class="flex flex-inline align-top justify-end"
                           >
                             <div
                               class=""
                             >
                               Amount (ARK)
-                            </div>
-                            <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                            >
-                              <div
-                                class="transition-transform rotate-180"
-                                role="img"
-                              >
-                                <div
-                                  style="height: 10px; width: 10px;"
-                                >
-                                  <svg
-                                    id="chevron-down-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <path
-                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </th>
@@ -1721,47 +1687,14 @@ exports[`Dashboard > should render 1`] = `
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
-                          style="cursor: pointer;"
-                          title="Toggle SortBy"
                         >
                           <div
-                            class="flex flex-inline align-top justify-end flex-row-reverse"
+                            class="flex flex-inline align-top justify-end"
                           >
                             <div
                               class=""
                             >
                               Fiat Value
-                            </div>
-                            <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                            >
-                              <div
-                                class="transition-transform rotate-180"
-                                role="img"
-                              >
-                                <div
-                                  style="height: 10px; width: 10px;"
-                                >
-                                  <svg
-                                    id="chevron-down-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <path
-                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </th>
@@ -2399,7 +2332,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2476,7 +2409,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2551,7 +2484,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4212,7 +4145,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4289,7 +4222,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4364,7 +4297,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4645,7 +4578,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4722,7 +4655,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4797,7 +4730,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
