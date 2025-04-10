@@ -348,13 +348,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 			publicKey = (await this.#publicKeyService.fromWIF(input.signatory.signingKey())).publicKey;
 		}
 
-		if (input.signatory.actsWithMultiSignature()) {
-			address = this.#addressService.fromMultiSignature({
-				min: input.signatory.asset().min,
-				publicKeys: input.signatory.asset().publicKeys,
-			}).address;
-		}
-
 		if (input.signatory.actsWithLedger()) {
 			publicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
