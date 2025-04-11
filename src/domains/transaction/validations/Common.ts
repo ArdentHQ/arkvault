@@ -1,10 +1,8 @@
 import { Networks } from "@ardenthq/sdk";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
-import { configManager } from "@ardenthq/sdk-mainsail";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";
-
-import { formatUnits } from "@ardenthq/sdk-mainsail";
+import { formatUnits, configManager } from "@ardenthq/sdk-mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 export const common = (t: TFunction) => ({
