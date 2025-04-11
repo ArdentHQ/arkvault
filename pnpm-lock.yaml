@@ -12,17 +12,17 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@ardenthq/sdk':
-        specifier: 2.0.0-alpha.68
-        version: 2.0.0-alpha.68
+        specifier: 2.0.0-alpha.69
+        version: 2.0.0-alpha.69
       '@ardenthq/sdk-intl':
-        specifier: 2.0.0-alpha.68
-        version: 2.0.0-alpha.68
+        specifier: 2.0.0-alpha.69
+        version: 2.0.0-alpha.69
       '@ardenthq/sdk-mainsail':
-        specifier: 2.0.0-alpha.68
-        version: 2.0.0-alpha.68(encoding@0.1.13)(typescript@5.5.4)
+        specifier: 2.0.0-alpha.69
+        version: 2.0.0-alpha.69(encoding@0.1.13)(typescript@5.5.4)
       '@ardenthq/sdk-profiles':
-        specifier: 2.0.0-alpha.68
-        version: 2.0.0-alpha.68
+        specifier: 2.0.0-alpha.69
+        version: 2.0.0-alpha.69
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0(encoding@0.1.13)
@@ -436,32 +436,32 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.68':
-    resolution: {integrity: sha512-Tv4RE2LGwvbx3gnLLuUy1JDwqnJBOOPjmY/yhqK0lN4KIdr6wndXIF20qnudRguCmxepH57yRN6HG8+Z2QvD/g==}
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.69':
+    resolution: {integrity: sha512-MNP9qkoaW2JLQMtctcsfk/mDG28bW9AS+bIJ/N9MmelaAHRYuQl2jrNf7U6Ai7LDh4Q75GYP6KtzlTQrpnRmLw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-helpers@2.0.0-alpha.68':
-    resolution: {integrity: sha512-LX9uzBPUjEB4Zvr7aSABsKlXurL8yFWcVT3FBaiiA+qjaj0jAlDujl2U/nlKLexWDYbyLO9cqINtlEaWYGcc0g==}
+  '@ardenthq/sdk-helpers@2.0.0-alpha.69':
+    resolution: {integrity: sha512-4vFXy7I5L6M0LcBXYv3jg7OSUBkfvhpey2VemDYzZC5GX4S6kBg0FuKlYgwP7jyQNAel0fTaichw2QOHvNefiQ==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-intl@2.0.0-alpha.68':
-    resolution: {integrity: sha512-pkGBt0k4pt1ocytIAxPkn2fg4HNjiOcKkr2nBZKB1sEjALjjmA3utGBlQPbe9XnGqXhfrfO6cqyJ4yYtx450MA==}
+  '@ardenthq/sdk-intl@2.0.0-alpha.69':
+    resolution: {integrity: sha512-PaGQ8H4mBDiM2y937QuOd6DOffLTOSQzFjH4ZQItKRBDP/ntEfqRatufO3FqWNFH+1iKvu63YWj2pu2Sk/589A==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.68':
-    resolution: {integrity: sha512-yG1hbJ3zHGPkXsiT2RoOB0h8AB7+We2pTCyw/OtPcerRvV6HSOwDWTrP6mrEu176yg5ZFnNTjx0cYqex1VRMrg==}
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.69':
+    resolution: {integrity: sha512-SlbhR3+BDf/TZyL4X2IbPGqOsLXUhhgGox3P4fJSBi+6dY/97zg+QJiJ7oq8GtdCQkCslmQCfkZ8E8RiVkq0zQ==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-markets@2.0.0-alpha.68':
-    resolution: {integrity: sha512-QWf3ymwRf2kZWW0PHVgD494/U3GNFbYgQ67vzq9PEgyjVsTBIor94upr00PKC9JusQhNm8Yn8FqXnEk7UG5J/Q==}
+  '@ardenthq/sdk-markets@2.0.0-alpha.69':
+    resolution: {integrity: sha512-djEdqeVYgxJcSrZk5bt1GF8V5pwgBOL0j5/xi2iHpfSwOc5zGcLuvUefF3XXmX8HeccUb6fsUmST8USfBnKE7Q==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-profiles@2.0.0-alpha.68':
-    resolution: {integrity: sha512-sVCGVu4nAklaHvM+Gs+w9ZBLrx/BDYorfrbLN7x/d0BV+sQzNgJynEuLjgMAG0Zgickp7LmOdyqN1UkcMZWZaQ==}
+  '@ardenthq/sdk-profiles@2.0.0-alpha.69':
+    resolution: {integrity: sha512-y97aK17GwvFnA3KlI+ZEBAuaDryxXCWc/FN7xmOSAGIPRTV6PZIjyUdsODC3B+wA5iv1xrGbCXYgHV0rwlTAbA==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk@2.0.0-alpha.68':
-    resolution: {integrity: sha512-Axh4MPeaPyNtQJJBVjrxu778YEKB6cJy8+dqkd3EIPhPnGiOoqwQ9DZITNgFUdhsm7sK7f+gPncFZ3GlPic3Rw==}
+  '@ardenthq/sdk@2.0.0-alpha.69':
+    resolution: {integrity: sha512-FEhtSTCILX59iAZDzxkzHreVeFfrR4gHQtcF0qqU9bOCWtexcZwUEf4kQNzLgA+nM86RhKaABZCXuMLkWQSH1w==}
     engines: {node: '>=16.0.0'}
 
   '@arkecosystem/ledger-transport@2.0.0':
@@ -8778,7 +8778,7 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.68':
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.69':
     dependencies:
       '@noble/hashes': 0.5.9
       '@noble/secp256k1': 1.7.1
@@ -8796,7 +8796,7 @@ snapshots:
       typeforce: 1.18.0
       uuid: 8.3.2
 
-  '@ardenthq/sdk-helpers@2.0.0-alpha.68':
+  '@ardenthq/sdk-helpers@2.0.0-alpha.69':
     dependencies:
       '@hapi/bourne': 2.1.0
       bad-words: 3.0.4
@@ -8810,17 +8810,17 @@ snapshots:
       qrcode: 1.5.4
       query-string: 7.1.3
 
-  '@ardenthq/sdk-intl@2.0.0-alpha.68':
+  '@ardenthq/sdk-intl@2.0.0-alpha.69':
     dependencies:
       dayjs: 1.11.13
       dinero.js: 1.9.1
 
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.68(encoding@0.1.13)(typescript@5.5.4)':
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.69(encoding@0.1.13)(typescript@5.5.4)':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.68
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.68
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.68
-      '@ardenthq/sdk-intl': 2.0.0-alpha.68
+      '@ardenthq/sdk': 2.0.0-alpha.69
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.69
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.69
+      '@ardenthq/sdk-intl': 2.0.0-alpha.69
       '@arkecosystem/ledger-transport': 2.0.0
       '@mainsail/container': 0.0.1-evm.14
       '@mainsail/contracts': 0.0.1-evm.14
@@ -8860,18 +8860,18 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@ardenthq/sdk-markets@2.0.0-alpha.68':
+  '@ardenthq/sdk-markets@2.0.0-alpha.69':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.68
-      '@ardenthq/sdk-intl': 2.0.0-alpha.68
+      '@ardenthq/sdk': 2.0.0-alpha.69
+      '@ardenthq/sdk-intl': 2.0.0-alpha.69
 
-  '@ardenthq/sdk-profiles@2.0.0-alpha.68':
+  '@ardenthq/sdk-profiles@2.0.0-alpha.69':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.68
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.68
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.68
-      '@ardenthq/sdk-intl': 2.0.0-alpha.68
-      '@ardenthq/sdk-markets': 2.0.0-alpha.68
+      '@ardenthq/sdk': 2.0.0-alpha.69
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.69
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.69
+      '@ardenthq/sdk-intl': 2.0.0-alpha.69
+      '@ardenthq/sdk-markets': 2.0.0-alpha.69
       joi: 17.13.3
       localforage: 1.10.0
       node-cache: 5.1.2
@@ -8881,10 +8881,10 @@ snapshots:
       semver: 7.7.1
       type-fest: 2.19.0
 
-  '@ardenthq/sdk@2.0.0-alpha.68':
+  '@ardenthq/sdk@2.0.0-alpha.69':
     dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.68
-      '@ardenthq/sdk-intl': 2.0.0-alpha.68
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.69
+      '@ardenthq/sdk-intl': 2.0.0-alpha.69
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.1.0
