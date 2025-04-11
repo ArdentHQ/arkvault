@@ -505,7 +505,7 @@ describe("CreateAddressSidePanel", () => {
 			},
 		);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeInTheDocument();
 
 		const scrollableElement = screen.getByTestId("SidePanel__scrollable-content");
 
@@ -516,11 +516,9 @@ describe("CreateAddressSidePanel", () => {
 			resizeObserverCallback([{ target: scrollableElement } as ResizeObserverEntry], {} as ResizeObserver);
 		});
 
-		await waitFor(() => {
-			expect(screen.queryByTestId("CreateAddressSidePanel__footer")).toBeInTheDocument();
-		});
+		expect(screen.getByTestId("CreateAddressSidePanel__footer")).toBeInTheDocument();
 
-		expect(screen.queryByTestId("CreateAddressSidePanel__footer")).toHaveClass("shadow-footer-side-panel");
+		expect(screen.getByTestId("CreateAddressSidePanel__footer")).toHaveClass("shadow-footer-side-panel");
 	});
 
 	it("should not apply footer shadow when content is not scrollable", async () => {
@@ -548,7 +546,7 @@ describe("CreateAddressSidePanel", () => {
 			},
 		);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeInTheDocument();
 
 		const scrollableElement = screen.getByTestId("SidePanel__scrollable-content");
 
@@ -559,10 +557,8 @@ describe("CreateAddressSidePanel", () => {
 			resizeObserverCallback([{ target: scrollableElement }], {} as ResizeObserver);
 		});
 
-		await waitFor(() => {
-			expect(screen.queryByTestId("CreateAddressSidePanel__footer")).toBeInTheDocument();
-		});
+		expect(screen.getByTestId("CreateAddressSidePanel__footer")).toBeInTheDocument();
 
-		expect(screen.queryByTestId("CreateAddressSidePanel__footer")).not.toHaveClass("shadow-footer-side-panel");
+		expect(screen.getByTestId("CreateAddressSidePanel__footer")).not.toHaveClass("shadow-footer-side-panel");
 	});
 });
