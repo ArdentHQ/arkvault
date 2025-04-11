@@ -333,7 +333,6 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -1670,7 +1669,6 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -2757,7 +2755,6 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -3978,7 +3975,6 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -4972,7 +4968,6 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>

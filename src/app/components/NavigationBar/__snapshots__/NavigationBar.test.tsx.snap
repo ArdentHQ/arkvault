@@ -427,7 +427,6 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -1149,7 +1148,6 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -1820,7 +1818,6 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -2492,7 +2489,6 @@ exports[`NavigationBar > should render in lg 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -3164,7 +3160,6 @@ exports[`NavigationBar > should render in md 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -3836,7 +3831,6 @@ exports[`NavigationBar > should render in sm 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -4508,7 +4502,6 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -5180,7 +5173,6 @@ exports[`NavigationBar > should render in xs 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>
@@ -5852,7 +5844,6 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     </div>
                   </div>
                 </button>
-                ´ 
               </div>
             </div>
           </div>

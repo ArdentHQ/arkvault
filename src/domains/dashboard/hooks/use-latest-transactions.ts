@@ -16,7 +16,6 @@ export const useLatestTransactions = ({ profile, profileIsSyncing }: LatestTrans
 
 	const { updateFilters, transactions, isLoadingTransactions } = useProfileTransactions({
 		limit,
-		orderBy: "timestamp:desc",
 		profile,
 		wallets: selectedWallets,
 	});
