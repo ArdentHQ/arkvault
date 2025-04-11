@@ -182,9 +182,9 @@ describe("useValidation hook", () => {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
 
-			const balance = BigNumber.make(0.0006).toNumber();
+			const balance = BigNumber.make(0.0002).toNumber();
 			const validation = current.common.gasLimit(balance, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(10_000);
+			const isValid = validation.validate.valid(21_000);
 
 			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
