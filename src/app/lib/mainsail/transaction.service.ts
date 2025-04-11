@@ -91,8 +91,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const nonce = await this.#generateNonce(address, input);
 
 		const { transaction } = (
-			await TransactionBuilder.new()
-				.value(parseUnits(input.data.amount, "ark").valueOf())
+			await TransactionBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
 				.recipientAddress(input.data.to)
 				.nonce(nonce)
 				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
