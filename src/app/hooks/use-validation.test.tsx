@@ -4,7 +4,7 @@ import React from "react";
 import { env } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react";
 import { useValidation } from "./use-validation";
-import { beforeAll, vi } from "vitest";
+import { vi } from "vitest";
 
 const mockNetwork = {
 	coin: vi.fn,
