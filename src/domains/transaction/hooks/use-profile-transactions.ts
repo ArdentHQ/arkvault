@@ -336,20 +336,19 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return transactions.length === 0 && !isLoadingTransactions;
 	}, [isLoadingTransactions, transactions.length]);
 
-	const addresses = wallets
-		.sort((a, b) => a.address() > b.address() ? -1 : 1)
-		.join('-');
+	const addresses = wallets.sort((a, b) => (a.address() > b.address() ? -1 : 1)).join("-");
 
-	const transactionTypes = selectedTransactionTypes?.join('-')
+	const transactionTypes = selectedTransactionTypes?.join("-");
 
-	const jobs = useMemo(() => {
-		return [
+	const jobs = useMemo(
+		() => [
 			{
 				callback: checkNewTransactions,
 				interval: 15_000,
 			},
-		]
-	}, [addresses, activeMode, transactionTypes, activeTransactionType])
+		],
+		[addresses, activeMode, transactionTypes, activeTransactionType],
+	);
 
 	const { start, stop } = useSynchronizer(jobs);
 
