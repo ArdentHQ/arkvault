@@ -86,6 +86,7 @@ export const SidePanel = ({
 										className={cn("fixed right-0 top-0 w-full md:w-[608px]", className)}
 									>
 										<div
+											data-testid="SidePanel__scrollable-content"
 											className="custom-scroll h-dvh w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8"
 											ref={scrollRef}
 										>
