@@ -461,7 +461,6 @@ exports[`Votes > should filter current delegates 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -1824,7 +1823,6 @@ exports[`Votes > should open the create wallet side panel 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -2651,7 +2649,6 @@ exports[`Votes > should open the import wallet side panel 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -3485,7 +3482,6 @@ exports[`Votes > should render 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -11458,7 +11454,6 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -19431,7 +19426,6 @@ exports[`Votes > should select a validator 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>
@@ -27665,7 +27659,6 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       </div>
                     </div>
                   </button>
-                  ´ 
                 </div>
               </div>
             </div>

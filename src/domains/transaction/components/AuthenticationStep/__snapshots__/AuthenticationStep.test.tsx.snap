@@ -516,7 +516,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
-          This transaction is pending confirmation
+          This transaction is pending confirmation.
         </p>
       </div>
     </div>
@@ -570,7 +570,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
-          This transaction is pending confirmation
+          This transaction is pending confirmation.
         </p>
       </div>
     </div>
@@ -624,7 +624,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         <p
           class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
-          This transaction is pending confirmation
+          This transaction is pending confirmation.
         </p>
       </div>
     </div>
@@ -1354,7 +1354,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
-          This transaction is pending confirmation
+          This transaction is pending confirmation.
         </p>
       </div>
     </div>
@@ -1408,7 +1408,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
-          This transaction is pending confirmation
+          This transaction is pending confirmation.
         </p>
       </div>
     </div>
@@ -1462,7 +1462,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         <p
           class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
-          This transaction is pending confirmation
+          This transaction is pending confirmation.
         </p>
       </div>
     </div>
