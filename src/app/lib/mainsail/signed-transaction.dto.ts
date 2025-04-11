@@ -11,8 +11,8 @@ import { RawTransactionData } from "@/app/lib/sdk/signed-transaction.dto.contrac
 
 export class SignedTransactionData
 	extends DTO.AbstractSignedTransactionData
-	implements Contracts.SignedTransactionData {
-
+	implements Contracts.SignedTransactionData
+{
 	public override configure(signedData: RawTransactionData, serialized: string) {
 		this.identifier = signedData.id;
 		this.signedData = signedData;
@@ -183,9 +183,7 @@ export class SignedTransactionData
 		return !!this.signedData.multiSignature;
 	}
 
-	public override async toBroadcast() {
-		console.log({ serialized: this.serialized });
-
+	public override toBroadcast() {
 		return this.serialized;
 	}
 

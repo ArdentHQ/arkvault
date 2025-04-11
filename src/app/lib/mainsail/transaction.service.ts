@@ -1,5 +1,3 @@
-
-
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";
@@ -90,17 +88,15 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const { address } = await this.#signerData(input);
 		const nonce = await this.#generateNonce(address, input);
 
-		const { transaction } = (
-			await TransactionBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
-				.recipientAddress(input.data.to)
-				.nonce(nonce)
-				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-				.gasLimit(input.gasLimit)
-				.network(this.#configCrypto.crypto.network.chainId)
-				.sign(input.signatory.signingKey())
-		);
+		const { transaction } = await TransactionBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
+			.recipientAddress(input.data.to)
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"))
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async validatorRegistration(
@@ -135,7 +131,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
 
-		return new SignedTransactionData().configure()
+		return this.#buildTransaction(input, transaction);
 	}
 
 	public override async delegateRegistration(
@@ -360,10 +356,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		return wallet.nonce().toFixed(0);
 	}
 
-	async #buildTransaction(
-		input: Services.TransactionInputs,
-		transaction: TransactionBuilder,
-	): Promise<SignedTransactionData> {
+	async #buildTransaction(input: Services.TransactionInputs, transaction: any): Promise<SignedTransactionData> {
 		let signedTransactionBuilder;
 
 		if (input.signatory.actsWithMnemonic()) {
@@ -376,7 +369,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		if (input.signatory.actsWithSecret()) {
 			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-			console.log("withSecret")
+			console.log("withSecret");
 		}
 
 		if (input.signatory.actsWithConfirmationSecret()) {
@@ -409,12 +402,12 @@ export class TransactionService extends Services.AbstractTransactionService {
 			//return new SignedTransactionData().configure(signedTransactionBuilder.transaction.data.id, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.serialize().toString("hex"))
 		}
 
-		console.log({ signedTransactionBuilder })
+		console.log({ signedTransactionBuilder });
 
 		return new SignedTransactionData().configure(
 			signedTransactionBuilder.transaction.data,
-			signedTransactionBuilder.transaction.serialize().toString("hex")
-		)
+			signedTransactionBuilder.transaction.serialize().toString("hex"),
+		);
 	}
 }
 

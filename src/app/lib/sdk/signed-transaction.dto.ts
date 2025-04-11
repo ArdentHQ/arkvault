@@ -7,16 +7,14 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { strict as assert } from "assert";
 
 import { MultiPaymentItem, MultiPaymentRecipient } from "./confirmed-transaction.dto.contract";
-import { IContainer } from "./container.contracts";
 import { RawTransactionData, SignedTransactionData } from "./contracts";
 import { NotImplemented } from "./exceptions";
-import { BindingType } from "./service-provider.contract";
 import { SignedTransactionObject } from "./signed-transaction.dto.contract";
 
 export class AbstractSignedTransactionData implements SignedTransactionData {
 	protected identifier!: string;
 	protected signedData!: RawTransactionData;
-	protected serialized: string;
+	protected serialized!: string;
 
 	readonly #types = [
 		{ method: "isIpfs", type: "ipfs" },
@@ -204,7 +202,7 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 	}
 
 	public toBroadcast(): any {
-		return this.normalizeTransactionData(this.broadcastData);
+		throw new NotImplemented(this.constructor.name, this.toBroadcast.name);
 	}
 
 	public toSignedData(): any {
@@ -254,7 +252,7 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		if (this.isMultiPayment()) {
 			return this.payments().map((payment: { recipientId: string; amount: BigNumber }) => ({
 				address: payment.recipientId,
-				amount: BigNumber.make(payment.amount)
+				amount: BigNumber.make(payment.amount),
 			}));
 		}
 
