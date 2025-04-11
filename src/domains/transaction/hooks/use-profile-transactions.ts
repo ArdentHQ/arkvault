@@ -299,7 +299,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	 * Run periodically every 30 seconds to check for new transactions
 	 */
 	const checkNewTransactions = async () => {
-		
 		await syncWallets(wallets);
 		const response = await fetchTransactions({
 			cursor: 1,
