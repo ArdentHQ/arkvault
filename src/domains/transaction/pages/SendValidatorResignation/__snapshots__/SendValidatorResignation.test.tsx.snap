@@ -218,6 +218,13 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -580,7 +587,9 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
             class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >
@@ -759,7 +768,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                                 type="button"
                               >
                                 <div
-                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                  class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                                 >
                                   <div
                                     style="height: 16px; width: 16px;"
@@ -1545,6 +1554,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1907,7 +1923,9 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
             class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >
@@ -2622,6 +2640,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -2984,7 +3009,9 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
             class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >
@@ -3163,7 +3190,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                                 type="button"
                               >
                                 <div
-                                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                  class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                                 >
                                   <div
                                     style="height: 16px; width: 16px;"
@@ -3833,6 +3860,13 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -4195,7 +4229,9 @@ exports[`SendValidatorResignation > Validator Resignation > should render 3rd st
             class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >
@@ -4817,6 +4853,13 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -5179,7 +5222,9 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
             class="space-y-5 mx-auto max-w-172"
             data-testid="Form"
           >
-            <div>
+            <div
+              class=""
+            >
               <div
                 data-testid="tab-pabel__active-panel"
               >

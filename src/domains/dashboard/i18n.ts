@@ -1,5 +1,5 @@
 export const translations = {
-	CREATE_OR_IMPORT_DESCRIPTION: "Choose whether to import an existing address or create a new one",
+	CREATE_OR_IMPORT_DESCRIPTION: "Choose whether to import an existing address or create a new one.",
 	DASHBOARD_PAGE: {
 		TITLE: "Dashboard",
 	},
@@ -19,7 +19,7 @@ export const translations = {
 		EMPTY_MESSAGE:
 			"You don't have any transactions yet. Once transactions have been made they will show up in your history.",
 		NO_RESULTS:
-			"You don’t have any <bold>{{type}}</bold> transactions yet. Once transactions have been made they will show up in your history",
+			"You don’t have any <bold>{{type}}</bold> transactions yet. Once transactions have been made they will show up in your history.",
 		TITLE: "Latest Transactions",
 	},
 
