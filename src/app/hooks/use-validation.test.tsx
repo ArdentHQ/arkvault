@@ -15,24 +15,6 @@ const getValuesMock = () => ({
 	gasPrice: 10,
 });
 
-vi.mock("@ardenthq/sdk-mainsail", async () => {
-	const { ...original } = await vi.importActual("@ardenthq/sdk-mainsail");
-
-	return {
-		...original,
-		configManager: {
-			getMilestone: vi.fn(() => ({
-				gas: {
-					maximumGasLimit: 2_000_000,
-					maximumGasPrice: 10_000_000_000_000,
-					minimumGasLimit: 21_000,
-					minimumGasPrice: 5_000_000_000,
-				},
-			})),
-		},
-	};
-});
-
 const LOW_BALANCE_MESSAGE = "The balance is too low";
 
 describe("useValidation hook", () => {
