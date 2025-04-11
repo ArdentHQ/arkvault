@@ -42,7 +42,11 @@ export const usernameRegistration = (t: any) => ({
 			unique: debounceAsync(async (value) => {
 				try {
 					await usernameExists(network, value, controller);
-				} catch {
+				} catch (error) {
+					if (error && error.name === "AbortError") {
+						return true;
+					}
+
 					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 				}
 			}, 300) as () => Promise<ValidateResult>,
