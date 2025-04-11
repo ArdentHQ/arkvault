@@ -15,6 +15,10 @@ export const common = (t: TFunction) => ({
 	gasLimit: (balance = 0, getValues: () => object, defaultGasLimit: number, network?: Networks.Network) => ({
 		validate: {
 			valid: (gasLimit: number) => {
+				if (!network?.coin()) {
+					return true;
+				}
+
 				if (gasLimit === 0) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.GAS_LIMIT"),
@@ -38,10 +42,6 @@ export const common = (t: TFunction) => ({
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_HIGH", {
 						maxGasLimit: maximumGasLimit,
 					});
-				}
-
-				if (!network?.coin()) {
-					return true;
 				}
 
 				if (Math.sign(balance) <= 0) {
@@ -73,9 +73,20 @@ export const common = (t: TFunction) => ({
 	gasPrice: (balance = 0, getValues: () => object, minGasPrice: number, network?: Networks.Network) => ({
 		validate: {
 			valid: (gasPrice: number) => {
+				if (!network?.coin()) {
+					return true;
+				}
+
 				if (gasPrice === 0) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.GAS_PRICE"),
+					});
+				}
+
+				if (Math.sign(balance) <= 0) {
+					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
+						balance: 0,
+						coinId: network.coin(),
 					});
 				}
 
@@ -101,17 +112,6 @@ export const common = (t: TFunction) => ({
 				if (maximumGasPrice.isLessThan(gasPrice ?? 0)) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_HIGH", {
 						maxGasPrice: maximumGasPrice,
-					});
-				}
-
-				if (!network?.coin()) {
-					return true;
-				}
-
-				if (Math.sign(balance) <= 0) {
-					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
-						balance: 0,
-						coinId: network.coin(),
 					});
 				}
 

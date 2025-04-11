@@ -4,6 +4,7 @@ import React from "react";
 import { env } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react";
 import { useValidation } from "./use-validation";
+import { beforeAll, vi } from "vitest";
 
 const mockNetwork = {
 	coin: vi.fn,
@@ -14,9 +15,31 @@ const getValuesMock = () => ({
 	gasPrice: 10,
 });
 
+vi.mock("@ardenthq/sdk-mainsail", async () => {
+	const { ...original } = await vi.importActual("@ardenthq/sdk-mainsail");
+
+	return {
+		...original,
+		configManager: {
+			getMilestone: vi.fn(() => ({
+				gas: {
+					maximumGasLimit: 2_000_000,
+					maximumGasPrice: 10_000_000_000_000,
+					minimumGasLimit: 21_000,
+					minimumGasPrice: 5_000_000_000,
+				},
+			})),
+		},
+	};
+});
+
 const LOW_BALANCE_MESSAGE = "The balance is too low";
 
 describe("useValidation hook", () => {
+	afterAll(() => {
+		vi.restoreAllMocks();
+	});
+
 	describe("Common#gasPrice", () => {
 		it("should ignore validation if network not provided", () => {
 			const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
@@ -47,7 +70,7 @@ describe("useValidation hook", () => {
 			const {
 				result: { current },
 			} = renderHook(() => useValidation(), { wrapper });
-			const balance = BigNumber.ZERO;
+			const balance = BigNumber.make(5).toNumber();
 			const validation = current.common.gasPrice(balance, getValuesMock, 5, mockNetwork);
 			const isValid = validation.validate.valid(3);
 
@@ -86,7 +109,7 @@ describe("useValidation hook", () => {
 
 			const balance = BigNumber.make(0.0006).toNumber();
 			const validation = current.common.gasPrice(balance, getValuesMock, 5, mockNetwork);
-			const isValid = validation.validate.valid(7_000_000);
+			const isValid = validation.validate.valid(10_000);
 
 			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
@@ -161,7 +184,7 @@ describe("useValidation hook", () => {
 
 			const balance = BigNumber.make(0.0006).toNumber();
 			const validation = current.common.gasLimit(balance, getValuesMock, 21_000, mockNetwork);
-			const isValid = validation.validate.valid(7_000_000);
+			const isValid = validation.validate.valid(10_000);
 
 			expect(isValid).contains(LOW_BALANCE_MESSAGE);
 		});
