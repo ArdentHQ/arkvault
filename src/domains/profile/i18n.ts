@@ -47,7 +47,7 @@ export const translations = {
 	MODAL_RESET_PROFILE: {
 		DESCRIPTION:
 			"By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets. This action cannot be undone. Do you want to reset your settings?",
-		SUCCESS: "Your profile has been reset successfully",
+		SUCCESS: "Your profile has been reset successfully.",
 		TITLE: "Reset Profile Settings",
 	},
 	MODAL_SELECT_ADDRESS: {
@@ -95,7 +95,7 @@ export const translations = {
 			"I accept the <linkTerms>Terms of Service</linkTerms> and <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>",
 		TITLE: "Create Profile",
 		VALIDATION: {
-			NAME_EXISTS: "A profile with this name already exists",
+			NAME_EXISTS: "A profile with this name already exists.",
 		},
 	},
 	PAGE_WELCOME: {

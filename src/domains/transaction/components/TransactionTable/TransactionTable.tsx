@@ -18,6 +18,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	onRowClick,
 	profile,
 	hideSender = false,
+	sortBy,
+	onSortChange,
 }) => {
 	const [coinName, setCoinName] = useState<string>();
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
@@ -36,12 +38,12 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 		() => ({
 			sortBy: [
 				{
-					desc: true,
-					id: "date",
+					desc: sortBy.desc,
+					id: sortBy.column,
 				},
 			],
 		}),
-		[],
+		[sortBy.column, sortBy.desc],
 	);
 
 	const showSkeleton = isLoading && transactions.length === 0;
@@ -75,6 +77,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				columns={columns}
 				data={data}
 				initialState={initialState}
+				onSortChange={onSortChange}
+				manualSortBy
 				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
 				{renderTableRow}
