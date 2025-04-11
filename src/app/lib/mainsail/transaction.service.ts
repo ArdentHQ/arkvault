@@ -328,9 +328,8 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.toString();
 	}
 
-	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string; publicKey?: string }> {
+	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
-		let publicKey: string | undefined;
 
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
 			address = this.#addressService.fromMnemonic(input.signatory.signingKey()).address;
@@ -344,20 +343,12 @@ export class TransactionService extends Services.AbstractTransactionService {
 			address = this.#addressService.fromWIF(input.signatory.signingKey()).address;
 		}
 
-		if (input.signatory.actsWithMultiSignature()) {
-			address = this.#addressService.fromMultiSignature({
-				min: input.signatory.asset().min,
-				publicKeys: input.signatory.asset().publicKeys,
-			}).address;
-		}
-
 		if (input.signatory.actsWithLedger()) {
-			//publicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
 			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
 		}
 
-		return { address, publicKey };
+		return { address };
 	}
 
 	async #generateNonce(address?: string, input?: Services.TransactionInputs): Promise<string> {
