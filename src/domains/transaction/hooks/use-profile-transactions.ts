@@ -289,6 +289,7 @@ export const useProfileTransactions = ({
 	 * Run periodically every 30 seconds to check for new transactions
 	 */
 	const checkNewTransactions = async () => {
+		
 		await syncWallets(wallets);
 		const response = await fetchTransactions({
 			cursor: 1,
@@ -326,12 +327,22 @@ export const useProfileTransactions = ({
 		return transactions.length === 0 && !isLoadingTransactions;
 	}, [isLoadingTransactions, transactions.length]);
 
-	const { start, stop } = useSynchronizer([
-		{
-			callback: checkNewTransactions,
-			interval: 30_000,
-		},
-	]);
+	const addresses = wallets
+		.sort((a, b) => a.address() > b.address() ? -1 : 1)
+		.join('-');
+
+	const transactionTypes = selectedTransactionTypes?.join('-')
+
+	const jobs = useMemo(() => {
+		return [
+			{
+				callback: checkNewTransactions,
+				interval: 15_000,
+			},
+		]
+	}, [addresses, activeMode, transactionTypes, activeTransactionType])
+
+	const { start, stop } = useSynchronizer(jobs);
 
 	useEffect(() => {
 		start();
