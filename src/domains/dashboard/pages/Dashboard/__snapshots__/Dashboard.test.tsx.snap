@@ -860,7 +860,7 @@ exports[`Dashboard > should render 1`] = `
                         Address
                       </p>
                       <div
-                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-125"
+                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
@@ -880,6 +880,9 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex items-center gap-3 leading-[17px] sm:ml-1.5"
+                      />
                     </div>
                     <div
                       class="flex flex-row items-center gap-3"

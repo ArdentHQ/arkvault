@@ -194,7 +194,7 @@ export const PortfolioHeader = ({
 									<p className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5">
 										{t("COMMON.ADDRESS")}
 									</p>
-									<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-125">
+									<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]">
 										<Address
 											alignment="center"
 											address={wallet.address()}
@@ -202,11 +202,13 @@ export const PortfolioHeader = ({
 											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
 										/>
 									</div>
-									<WalletIcons
-										wallet={wallet}
-										exclude={["isKnown", "isSecondSignature", "isStarred", "isTestNetwork"]}
-										iconColor="text-theme-secondary-300 dark:text-theme-dark-700"
-									/>
+									<div className="flex items-center gap-3 leading-[17px] sm:ml-1.5">
+										<WalletIcons
+											wallet={wallet}
+											exclude={["isKnown", "isStarred", "isTestNetwork"]}
+											iconColor="text-theme-secondary-300 dark:text-theme-dark-700 !p-0"
+										/>
+									</div>
 								</div>
 							)}
 

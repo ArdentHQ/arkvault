@@ -353,6 +353,7 @@ export const translations = {
 	},
 	SECOND_MNEMONIC: "2nd Mnemonic",
 	SECOND_SECRET: "2nd Secret",
+	SECOND_SIGNATURE: "Second Signature",
 	SECRET: "Secret",
 	SECURITY: "Security",
 	SELECT: "Select",
