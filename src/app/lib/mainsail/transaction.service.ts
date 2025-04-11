@@ -384,15 +384,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
 		}
 
-		if (input.signatory.actsWithWIF()) {
-			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-		}
-
-		if (input.signatory.actsWithConfirmationWIF()) {
-			signedTransactionBuilder = await transaction.signWithWif(input.signatory.signingKey());
-			// transaction.secondSignWithWif(input.signatory.confirmKey());
-		}
-
 		if (input.signatory.actsWithSecret()) {
 			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
 			console.log("withSecret")
