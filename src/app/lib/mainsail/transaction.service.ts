@@ -1,24 +1,21 @@
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
-import { BigNumber } from "@/app/lib/helpers";
-import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";
-import { EvmCallBuilder as TransactionBuilder } from "@arkecosystem/typescript-crypto";
-import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
-import { Application } from "@mainsail/kernel";
-import { encodeFunctionData } from "viem";
+import {
+	EvmCallBuilder,
+	MultipaymentBuilder,
+	UnvoteBuilder,
+	UsernameRegistrationBuilder,
+	UsernameResignationBuilder,
+	ValidatorRegistrationBuilder,
+	ValidatorResignationBuilder,
+	VoteBuilder,
+} from "@arkecosystem/typescript-crypto";
 
 import { BindingType } from "./coin.contract.js";
 import { applyCryptoConfiguration } from "./config.js";
 import { Interfaces } from "./crypto/index.js";
 import { parseUnits } from "./helpers/parse-units.js";
-import { Request } from "./request.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
-
-const wellKnownContracts = {
-	consensus: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
-	multiPayment: "0x00EFd0D4639191C49908A7BddbB9A11A994A8527",
-	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
-};
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: number;
@@ -34,8 +31,6 @@ type TransactionsInputs =
 export class TransactionService extends Services.AbstractTransactionService {
 	readonly #ledgerService!: Services.LedgerService;
 	readonly #addressService!: AddressService;
-	readonly #request: Request;
-	readonly #app: Application;
 
 	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
@@ -44,18 +39,11 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
 		this.#addressService = new AddressService(container);
-		this.#app = container.get(BindingType.Application);
 
 		this.#configCrypto = {
 			crypto: container.get(BindingType.Crypto),
 			height: container.get(BindingType.Height),
 		};
-
-		this.#request = new Request(
-			container.get(IoC.BindingType.ConfigRepository),
-			container.get(IoC.BindingType.HttpClient),
-			container.get(IoC.BindingType.NetworkHostSelector),
-		);
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
@@ -85,10 +73,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 		this.#assertGasFee(input);
 		this.#assertAmount(input);
 
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
+		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await TransactionBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
+		const { transaction } = await EvmCallBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
 			.recipientAddress(input.data.to)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
@@ -112,26 +99,17 @@ export class TransactionService extends Services.AbstractTransactionService {
 			);
 		}
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
+		const nonce = await this.#generateNonce(input);
 
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
-
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: [`0x${input.data.validatorPublicKey}`],
-			functionName: "registerValidator",
-		});
-
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.gasLimit(input.gasLimit)
-			.recipientAddress(wellKnownContracts.consensus)
-			.payload(data.slice(2))
+		const { transaction } = await ValidatorRegistrationBuilder.new()
+			.validatorPublicKey(`0x${input.data.validatorPublicKey}`)
 			.nonce(nonce)
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async delegateRegistration(
@@ -147,29 +125,31 @@ export class TransactionService extends Services.AbstractTransactionService {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
-
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
-
 		const vote = input.data.votes.at(0);
 		const isVote = !!vote;
 
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: isVote ? [vote.id] : [],
-			functionName: isVote ? "vote" : "unvote",
-		});
+		const nonce = await this.#generateNonce(input);
 
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.recipientAddress(wellKnownContracts.consensus)
-			.gasLimit(input.gasLimit)
-			.payload(data.slice(2))
+		if (!isVote) {
+			const { transaction } = await UnvoteBuilder.new()
+				.nonce(nonce)
+				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+				.gasLimit(input.gasLimit)
+				.network(this.#configCrypto.crypto.network.chainId)
+				.sign(input.signatory.signingKey());
+
+			return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		}
+
+		const { transaction } = await VoteBuilder.new()
+			.vote(vote.id)
 			.nonce(nonce)
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	/**
@@ -186,35 +166,21 @@ export class TransactionService extends Services.AbstractTransactionService {
 			);
 		}
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
+		const nonce = await this.#generateNonce(input);
 
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
-
-		const recipients: string[] = [];
-		const amounts: number[] = [];
+		const builder = MultipaymentBuilder.new()
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId);
 
 		for (const payment of input.data.payments) {
-			recipients.push(payment.to);
-			amounts.push(parseUnits(payment.amount, "ark").toNumber());
+			builder.pay(payment.to, parseUnits(payment.amount, "ark").toNumber());
 		}
 
-		const data = encodeFunctionData({
-			abi: MultiPaymentAbi.abi,
-			args: [recipients, amounts],
-			functionName: "pay",
-		});
+		const { transaction } = await builder.sign(input.signatory.signingKey());
 
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.gasLimit(input.gasLimit)
-			.recipientAddress(wellKnownContracts.multiPayment)
-			.payload(data.slice(2))
-			.nonce(nonce)
-			.value(amounts.reduce((a, b) => a + b, 0).toString())
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
-
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async usernameRegistration(
@@ -230,26 +196,17 @@ export class TransactionService extends Services.AbstractTransactionService {
 			);
 		}
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
+		const nonce = await this.#generateNonce(input);
 
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
-
-		const data = encodeFunctionData({
-			abi: UsernamesAbi.abi,
-			args: [input.data.username],
-			functionName: "registerUsername",
-		});
-
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.gasLimit(input.gasLimit)
-			.recipientAddress(wellKnownContracts.username)
-			.payload(data.slice(2))
+		const { transaction } = await UsernameRegistrationBuilder.new()
+			.username(input.data.username)
 			.nonce(nonce)
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async usernameResignation(
@@ -258,26 +215,16 @@ export class TransactionService extends Services.AbstractTransactionService {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
+		const nonce = await this.#generateNonce(input);
 
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
-
-		const data = encodeFunctionData({
-			abi: UsernamesAbi.abi,
-			args: [],
-			functionName: "resignUsername",
-		});
-
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.gasLimit(input.gasLimit)
-			.recipientAddress(wellKnownContracts.username)
-			.payload(data.slice(2))
+		const { transaction } = await UsernameResignationBuilder.new()
 			.nonce(nonce)
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async validatorResignation(
@@ -286,41 +233,22 @@ export class TransactionService extends Services.AbstractTransactionService {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
+		const nonce = await this.#generateNonce(input);
 
-		const { address } = await this.#signerData(input);
-		const nonce = await this.#generateNonce(address, input);
-
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: [],
-			functionName: "resignValidator",
-		});
-
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.gasLimit(input.gasLimit)
-			.recipientAddress(wellKnownContracts.consensus)
-			.payload(data.slice(2))
+		const { transaction } = await ValidatorResignationBuilder.new()
 			.nonce(nonce)
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async delegateResignation(
 		input: Services.DelegateResignationInput,
 	): Promise<Contracts.SignedTransactionData> {
 		return this.validatorResignation(input);
-	}
-
-	public override async estimateExpiration(value?: string): Promise<string | undefined> {
-		const { data: blockchain } = await this.#request.get("blockchain");
-		const { data: configuration } = await this.#request.get("node/configuration");
-
-		return BigNumber.make(blockchain.block.height)
-			.plus((value ? Number(value) : 5) * configuration.constants.activeValidators)
-			.toString();
 	}
 
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
@@ -346,63 +274,43 @@ export class TransactionService extends Services.AbstractTransactionService {
 		return { address };
 	}
 
-	async #generateNonce(address?: string, input?: Services.TransactionInputs): Promise<string> {
-		if (input?.nonce) {
+	async #generateNonce(input: Services.TransactionInputs): Promise<string> {
+		if (input.nonce) {
 			return input.nonce;
 		}
 
+		const { address } = await this.#signerData(input);
 		const wallet = await this.clientService.wallet({ type: "address", value: address! });
 
 		return wallet.nonce().toFixed(0);
 	}
 
-	async #buildTransaction(input: Services.TransactionInputs, transaction: any): Promise<SignedTransactionData> {
+	// @TODO: Implement.
+	// eslint-disable-next-line no-unused-private-class-members
+	#signWithLedger(): SignedTransactionData {
 		let signedTransactionBuilder;
 
-		if (input.signatory.actsWithMnemonic()) {
-			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-		}
-
-		if (input.signatory.actsWithConfirmationMnemonic()) {
-			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-		}
-
-		if (input.signatory.actsWithSecret()) {
-			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-			console.log("withSecret");
-		}
-
-		if (input.signatory.actsWithConfirmationSecret()) {
-			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-			// transaction.secondSign(input.signatory.confirmKey());
-		}
-
-		// @TODO: refactor
-		if (input.signatory.actsWithLedger()) {
-			//const senderPublicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
-			//const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
-			//const senderAddress = (await this.#addressService.fromPublicKey(extendedPublicKey)).address;
-			//
-			//const serialized = await this.#app.resolve(Utils).toBytes(transaction.data);
-			//const signature = await this.#ledgerService.sign(input.signatory.signingKey(), serialized.toString("hex"));
-			//
-			//transaction.data = {
-			//	...transaction.data,
-			//	...signature,
-			//	senderAddress,
-			//	senderPublicKey,
-			//	v: Number.parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
-			//};
-			//
-			//// Reassign public key to match the signer, as `build` changes it.
-			//const signedTransaction = await transaction.build(transaction.data);
-			//signedTransaction.data.senderPublicKey = senderPublicKey;
-			//signedTransaction.data.senderAddress = senderAddress;
-			//
-			//return new SignedTransactionData().configure(signedTransactionBuilder.transaction.data.id, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.serialize().toString("hex"))
-		}
-
-		console.log({ signedTransactionBuilder });
+		//const senderPublicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
+		//const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
+		//const senderAddress = (await this.#addressService.fromPublicKey(extendedPublicKey)).address;
+		//
+		//const serialized = await this.#app.resolve(Utils).toBytes(transaction.data);
+		//const signature = await this.#ledgerService.sign(input.signatory.signingKey(), serialized.toString("hex"));
+		//
+		//transaction.data = {
+		//	...transaction.data,
+		//	...signature,
+		//	senderAddress,
+		//	senderPublicKey,
+		//	v: Number.parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
+		//};
+		//
+		//// Reassign public key to match the signer, as `build` changes it.
+		//const signedTransaction = await transaction.build(transaction.data);
+		//signedTransaction.data.senderPublicKey = senderPublicKey;
+		//signedTransaction.data.senderAddress = senderAddress;
+		//
+		//return new SignedTransactionData().configure(signedTransactionBuilder.transaction.data.id, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.serialize().toString("hex"))
 
 		return new SignedTransactionData().configure(
 			signedTransactionBuilder.transaction.data,
@@ -410,5 +318,3 @@ export class TransactionService extends Services.AbstractTransactionService {
 		);
 	}
 }
-
-export { wellKnownContracts };
