@@ -166,7 +166,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transaction.sender(),
 					transaction.recipient(),
 					...transaction.recipients().map(({ address }) => address),
-				]);
+				])
+				.filter(Boolean);
 
 			const uniqueAddresses = [...new Set(addresses)] as string[];
 
