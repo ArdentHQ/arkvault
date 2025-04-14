@@ -19,7 +19,7 @@ import { TransactionService } from "./transaction.service";
 import { WalletData } from "./wallet.dto";
 import { WIFService } from "./wif.service";
 
-// export { configManager } from "./crypto/managers/config.js";
+export { configManager } from "./crypto/managers/config.js";
 export * from "./crypto/managers/network";
 export * from "./helpers/format-units";
 export * from "./helpers/parse-units";
