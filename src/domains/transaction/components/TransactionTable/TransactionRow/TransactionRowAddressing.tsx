@@ -85,6 +85,9 @@ const ContractAddressing = ({
 	t: any;
 }) => {
 	const { isDarkMode } = useTheme();
+	const address = isContractDeployment(transaction)
+			? transaction.data().data.receipt.deployedContractAddress
+			: transaction.recipient();
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
@@ -92,7 +95,7 @@ const ContractAddressing = ({
 
 			<div className="flex w-full items-center justify-between space-x-4">
 				<Link
-					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+					to={transaction.wallet().coin().link().wallet(address)}
 					isExternal
 					showExternalIcon={false}
 					className="whitespace-nowrap text-sm font-semibold"
@@ -102,7 +105,7 @@ const ContractAddressing = ({
 
 				<Clipboard
 					variant="icon"
-					data={transaction.sender()}
+					data={address}
 					tooltip={t("COMMON.COPY_ADDRESS")}
 					tooltipDarkTheme={isDarkMode}
 				>
