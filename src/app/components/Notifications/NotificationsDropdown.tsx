@@ -8,7 +8,8 @@ import { Icon } from "@/app/components/Icon";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
 import { Notifications, useNotifications } from "@/app/components/Notifications";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-
+import { Tooltip } from "@/app/components/Tooltip";
+import { useTranslation } from "react-i18next";
 export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile }) => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
 		undefined,
@@ -16,21 +17,25 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 
 	const { hasUnread } = useNotifications({ profile });
 
+	const { t } = useTranslation();
+
 	return (
 		<div>
 			<Dropdown
 				wrapperClass="mt-2"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
-						<Button
-							variant="transparent"
-							size="icon"
-							data-testid="NavigationBar__buttons--notifications"
-							className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
-						>
-							<Icon name="Bell" size="lg" className="p-1" />
-							{hasUnread && <Dot />}
-						</Button>
+						<Tooltip content={t("COMMON.NOTIFICATIONS.TITLE")}>
+							<Button
+								variant="transparent"
+								size="icon"
+								data-testid="NavigationBar__buttons--notifications"
+								className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+							>
+								<Icon name="Bell" size="lg" className="p-1" />
+								{hasUnread && <Dot />}
+							</Button>
+						</Tooltip>
 					</NavigationButtonWrapper>
 				}
 			>

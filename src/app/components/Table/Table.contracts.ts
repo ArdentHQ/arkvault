@@ -11,6 +11,13 @@ export interface TableProperties<RowDataType extends Record<never, unknown>> {
 	rowsPerPage?: number;
 	currentPage?: number;
 	footer?: React.ReactNode;
+	manualSortBy?: boolean;
+	onSortChange?: (column: string, desc: boolean) => void;
+}
+
+export interface SortBy {
+	column: string;
+	desc: boolean;
 }
 
 export interface TableColumn {

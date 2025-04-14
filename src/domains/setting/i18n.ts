@@ -36,7 +36,7 @@ export const translations = {
 		SAVE_GENERAL_CUSTOMIZATIONS: "Save general settings customizations",
 		SUBTITLE:
 			"Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.",
-		SUCCESS: "Your settings have been exported successfully",
+		SUCCESS: "Your settings have been exported successfully.",
 		TITLE: "Export Profile",
 	},
 
@@ -44,7 +44,7 @@ export const translations = {
 		APPEARANCE: {
 			TITLE: "Appearance",
 		},
-		ERROR: "Your profile settings could not be updated",
+		ERROR: "Your profile settings could not be updated.",
 		MENU_ITEM: "General",
 		OTHER: {
 			ADDRESS_NAMING: {
@@ -93,7 +93,7 @@ export const translations = {
 			TITLE: "Personal Details",
 			UPLOAD_AVATAR: "Upload Avatar",
 			VALIDATION: {
-				NAME_EXISTS: "Profile name already exists",
+				NAME_EXISTS: "Profile name already exists.",
 			},
 		},
 		SECURITY: {
@@ -103,7 +103,7 @@ export const translations = {
 			TITLE: "Security",
 		},
 		SUBTITLE: "Customize your wallet to suit your needs.",
-		SUCCESS: "Your profile settings have been updated",
+		SUCCESS: "Your profile settings have been updated.",
 		TITLE: "Settings",
 		UNSUPPORTED_CURRENCY: "{{currency}} is not supported by {{provider}}. Currency has been changed to USD.",
 	},
@@ -156,7 +156,7 @@ export const translations = {
 			FETCHING_ERROR:
 				"We were unable to connect to the provided server or failed to find the expected information. Please check your input and try again.",
 			MULTISIG_SERVER: "Multisig Server",
-			NETWORK_MISMATCH_ERROR: "Failed to connect to host because it is on another network",
+			NETWORK_MISMATCH_ERROR: "Failed to connect to host because it is on another network.",
 			NETWORK_PLACEHOLDER: "https://ip:port/api or https://domain",
 			PEER_SERVER: "Network Peer",
 			SUCCESS_MESSAGE:
@@ -198,11 +198,11 @@ export const translations = {
 			},
 		},
 		PEERS_STATUS_TOOLTIPS: {
-			HEALTHY: "Peer is healthy",
-			WITH_ISSUES: "Peer is not resolving",
+			HEALTHY: "Peer is healthy.",
+			WITH_ISSUES: "Peer is not resolving.",
 		},
 		SUBTITLE: "Manage custom network peers and multisignature servers for your Profile.",
-		SUCCESS: "Your server settings has been successfully updated.",
+		SUCCESS: "Your server settings have been successfully updated.",
 		TITLE: "Peers & Multisig Servers",
 	},
 

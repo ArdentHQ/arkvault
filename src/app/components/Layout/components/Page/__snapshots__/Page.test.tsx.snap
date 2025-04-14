@@ -18,9 +18,8 @@ exports[`Page > should render with navigation context 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -96,9 +95,8 @@ exports[`Page > should render with navigation context 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -345,6 +343,13 @@ exports[`Page > should render with navigation context 1`] = `
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -415,9 +420,8 @@ exports[`Page > should render with navigation context 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -468,9 +472,8 @@ exports[`Page > should render with navigation context 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -509,6 +512,95 @@ exports[`Page > should render with navigation context 1`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
@@ -563,7 +655,7 @@ exports[`Page > should render with navigation context 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        $0.00
+                        0 BTC
                       </span>
                     </div>
                   </div>
@@ -594,7 +686,9 @@ exports[`Page > should render with navigation context 1`] = `
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
-                        />
+                        >
+                          FO
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -630,9 +724,8 @@ exports[`Page > should render with navigation context 2`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -708,9 +801,8 @@ exports[`Page > should render with navigation context 2`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -957,6 +1049,13 @@ exports[`Page > should render with navigation context 2`] = `
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1027,9 +1126,8 @@ exports[`Page > should render with navigation context 2`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -1080,9 +1178,8 @@ exports[`Page > should render with navigation context 2`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -1121,6 +1218,95 @@ exports[`Page > should render with navigation context 2`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
@@ -1175,7 +1361,7 @@ exports[`Page > should render with navigation context 2`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        $0.00
+                        0 BTC
                       </span>
                     </div>
                   </div>
@@ -1206,7 +1392,9 @@ exports[`Page > should render with navigation context 2`] = `
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
-                        />
+                        >
+                          FO
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1242,9 +1430,8 @@ exports[`Page > should render with navigation context 3`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -1320,9 +1507,8 @@ exports[`Page > should render with navigation context 3`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -1569,6 +1755,13 @@ exports[`Page > should render with navigation context 3`] = `
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -1639,9 +1832,8 @@ exports[`Page > should render with navigation context 3`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -1692,9 +1884,8 @@ exports[`Page > should render with navigation context 3`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -1733,6 +1924,95 @@ exports[`Page > should render with navigation context 3`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
@@ -1787,7 +2067,7 @@ exports[`Page > should render with navigation context 3`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        $0.00
+                        0 BTC
                       </span>
                     </div>
                   </div>
@@ -1818,7 +2098,9 @@ exports[`Page > should render with navigation context 3`] = `
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
-                        />
+                        >
+                          FO
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1854,9 +2136,8 @@ exports[`Page > should render with sidebar = false 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -1932,9 +2213,8 @@ exports[`Page > should render with sidebar = false 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -2181,6 +2461,13 @@ exports[`Page > should render with sidebar = false 1`] = `
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -2251,9 +2538,8 @@ exports[`Page > should render with sidebar = false 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2304,9 +2590,8 @@ exports[`Page > should render with sidebar = false 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2345,6 +2630,95 @@ exports[`Page > should render with sidebar = false 1`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
@@ -2399,7 +2773,7 @@ exports[`Page > should render with sidebar = false 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        $0.00
+                        0 BTC
                       </span>
                     </div>
                   </div>
@@ -2430,7 +2804,9 @@ exports[`Page > should render with sidebar = false 1`] = `
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
-                        />
+                        >
+                          FO
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2462,9 +2838,8 @@ exports[`Page > should render with sidebar = true 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -2540,9 +2915,8 @@ exports[`Page > should render with sidebar = true 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -2789,6 +3163,13 @@ exports[`Page > should render with sidebar = true 1`] = `
                           </svg>
                         </div>
                       </div>
+                      <div
+                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                      >
+                        <div
+                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                        />
+                      </div>
                     </div>
                   </button>
                 </div>
@@ -2859,9 +3240,8 @@ exports[`Page > should render with sidebar = true 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2912,9 +3292,8 @@ exports[`Page > should render with sidebar = true 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2953,6 +3332,95 @@ exports[`Page > should render with sidebar = true 1`] = `
             </div>
             <div
               class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+            />
+            <div
+              class="hidden sm:block"
+            >
+              <div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group"
+                  >
+                    <button
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      data-testid="NavigationBar__buttons--network"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <span
+                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                        >
+                          <div>
+                            <div
+                              style="height: 14px; width: 14px;"
+                            >
+                              <svg
+                                fill="none"
+                                height="14"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 14 14"
+                                width="14"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  id="Frame 9852"
+                                >
+                                  <path
+                                    d="M3 3.36257V1.81641H11.1236V3.36257H7.97656V11.9982H6.14702V3.36257H3Z"
+                                    fill="currentColor"
+                                    id="T"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                        >
+                          Testnet
+                        </span>
+                        <div
+                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          role="img"
+                        >
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
@@ -3007,7 +3475,7 @@ exports[`Page > should render with sidebar = true 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        $0.00
+                        0 BTC
                       </span>
                     </div>
                   </div>
@@ -3038,7 +3506,9 @@ exports[`Page > should render with sidebar = true 1`] = `
                         />
                         <span
                           class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
-                        />
+                        >
+                          FO
+                        </span>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,5 @@
 import { Services, Signatories } from "@ardenthq/sdk";
-import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { Environment, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 import { useRef } from "react";
 
 import { useLedgerContext } from "@/app/contexts";
@@ -7,6 +7,7 @@ import { Participant } from "@/domains/transaction/components/MultiSignatureRegi
 import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError, withAbortPromise } from "@/domains/transaction/utils";
 import { assertString } from "@/utils/assertions";
+import { httpClient } from "@/app/services";
 
 interface SendMultisignatureProperties {
 	wallet: ProfileContracts.IReadWriteWallet;
@@ -14,6 +15,7 @@ interface SendMultisignatureProperties {
 	minParticipants: number;
 	fee: Services.TransactionFee;
 	signatory: Signatories.Signatory;
+	env: Environment;
 }
 
 interface AddSignatureProperties {
@@ -39,6 +41,7 @@ const sendMultiSignature = async ({
 	minParticipants,
 	fee,
 	signatory,
+	env,
 }: SendMultisignatureProperties) => {
 	// TODO: Handle ledger wallets of other participants without public keys (use derivation path)
 	const restPublicKeys = participants
@@ -47,6 +50,8 @@ const sendMultiSignature = async ({
 
 	const senderPublicKey = await getPublicKey(wallet);
 	assertString(senderPublicKey);
+
+	httpClient.forgetWalletCache(env, wallet);
 
 	const publicKeys = [senderPublicKey, ...restPublicKeys];
 	await wallet.transaction().sync();

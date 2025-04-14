@@ -5,7 +5,7 @@ export const translations = {
 			"It looks like you don't have any Contacts yet. After adding new Contacts, they can be viewed here.",
 		NO_CONTACTS_FOUND: `Your search query "{{query}}" does not match any Contacts.`,
 		SEARCH_PLACEHOLDER: "Enter Contact Name",
-		SUBTITLE: "Manage your frequent Contacts",
+		SUBTITLE: "Manage your frequent Contacts.",
 		TITLE: "Contacts",
 	},
 
@@ -33,13 +33,13 @@ export const translations = {
 	},
 
 	VALIDATION: {
-		ADDRESS_IS_INVALID: "The address is not valid",
-		CONTACT_ADDRESS_EXISTS: "Contact with this address already exists",
-		CONTACT_NAME_EXISTS: "Contact with name {{name}} already exists",
-		CONTACT_NAME_EXISTS_SUFFIX: "already exists",
-		NAME_EXISTS: "A contact named '{{name}}' already exists on this profile",
-		NETWORK_NOT_AVAILABLE: "Network not available",
-		NO_BALANCE: "Insufficient balance to send transaction on this network",
-		NO_WALLETS: "You don’t have any wallets matching the network of this address",
+		ADDRESS_IS_INVALID: "The address is not valid.",
+		CONTACT_ADDRESS_EXISTS: "Contact with this address already exists.",
+		CONTACT_NAME_EXISTS: "Contact with name {{name}} already exists.",
+		CONTACT_NAME_EXISTS_SUFFIX: "already exists.",
+		NAME_EXISTS: "A contact named '{{name}}' already exists on this profile.",
+		NETWORK_NOT_AVAILABLE: "Network not available.",
+		NO_BALANCE: "Insufficient balance to send transaction on this network.",
+		NO_WALLETS: "You don’t have any wallets matching the network of this address.",
 	},
 };

@@ -7,7 +7,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Amount } from "@/app/components/Amount";
 import { useProfileBalance } from "@/app/hooks/use-profile-balance";
 import { useConfiguration } from "@/app/contexts";
-
+import { useTranslation } from "react-i18next";
+import { Tooltip } from "@/app/components/Tooltip";
 export const HideBalance = ({ profile, className }: { profile: Contracts.IProfile; className?: string }) => {
 	const { hideBalance, setHideBalance } = useBalanceVisibility({ profile });
 	const { profileIsSyncingExchangeRates } = useConfiguration().getProfileConfiguration(profile.id());
@@ -16,25 +17,28 @@ export const HideBalance = ({ profile, className }: { profile: Contracts.IProfil
 		profile,
 	});
 	const ticker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) || "USD";
+	const { t } = useTranslation();
 
 	return (
 		<div className={twMerge("m-0 flex items-center gap-2 space-x-0", className)}>
-			<Button
-				variant="transparent"
-				onClick={() => setHideBalance(!hideBalance)}
-				className="group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
-				data-testid="HideBalance-button"
-			>
-				{hideBalance ? (
-					<Icon name="EyeSlash" size="lg" data-testid="HideBalance-icon-hide" />
-				) : (
-					<Icon name="Eye" size="lg" data-testid="HideBalance-icon-show" />
-				)}
+			<Tooltip content={hideBalance ? t("COMMON.SHOW_BALANCE") : t("COMMON.HIDE_BALANCE")}>
+				<Button
+					variant="transparent"
+					onClick={() => setHideBalance(!hideBalance)}
+					className="group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+					data-testid="HideBalance-button"
+				>
+					{hideBalance ? (
+						<Icon name="EyeSlash" size="lg" data-testid="HideBalance-icon-hide" />
+					) : (
+						<Icon name="Eye" size="lg" data-testid="HideBalance-icon-show" />
+					)}
 
-				<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex">
-					<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
-				</div>
-			</Button>
+					<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex">
+						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
+					</div>
+				</Button>
+			</Tooltip>
 		</div>
 	);
 };

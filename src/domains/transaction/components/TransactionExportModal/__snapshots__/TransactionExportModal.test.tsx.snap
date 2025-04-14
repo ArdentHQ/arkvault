@@ -75,7 +75,9 @@ exports[`TransactionExportModal > should render 1`] = `
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
@@ -712,7 +714,9 @@ exports[`TransactionExportModal > should render error status 1`] = `
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
@@ -1349,7 +1353,9 @@ exports[`TransactionExportModal > should render progress status 1`] = `
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
@@ -1441,7 +1447,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                       <div
                         class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
                       >
-                        1 transactions have been retrieved and are ready to be exported.
+                        10 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
@@ -1490,7 +1496,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                           <div
                             class="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </div>
                         </div>
                         <div
@@ -1637,7 +1643,9 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
@@ -1729,7 +1737,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       <div
                         class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
                       >
-                        1 transactions have been retrieved and are ready to be exported.
+                        10 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
@@ -1778,7 +1786,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                           <div
                             class="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </div>
                         </div>
                         <div
@@ -1925,7 +1933,9 @@ exports[`TransactionExportModal > should render success and stay open if downloa
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
@@ -2017,7 +2027,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       <div
                         class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
                       >
-                        1 transactions have been retrieved and are ready to be exported.
+                        10 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
@@ -2066,7 +2076,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                           <div
                             class="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </div>
                         </div>
                         <div
@@ -2213,7 +2223,9 @@ exports[`TransactionExportModal > should render success status 1`] = `
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >
@@ -2850,7 +2862,9 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
               class="space-y-5 mt-4"
               data-testid="Form"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   data-testid="tab-pabel__active-panel"
                 >

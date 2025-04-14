@@ -860,7 +860,7 @@ exports[`Dashboard > should render 1`] = `
                         Address
                       </p>
                       <div
-                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-125"
+                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
@@ -880,6 +880,9 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex items-center gap-3 leading-[17px] sm:ml-1.5"
+                      />
                     </div>
                     <div
                       class="flex flex-row items-center gap-3"
@@ -1671,47 +1674,14 @@ exports[`Dashboard > should render 1`] = `
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
-                          style="cursor: pointer;"
-                          title="Toggle SortBy"
                         >
                           <div
-                            class="flex flex-inline align-top justify-end flex-row-reverse"
+                            class="flex flex-inline align-top justify-end"
                           >
                             <div
                               class=""
                             >
                               Amount (ARK)
-                            </div>
-                            <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                            >
-                              <div
-                                class="transition-transform rotate-180"
-                                role="img"
-                              >
-                                <div
-                                  style="height: 10px; width: 10px;"
-                                >
-                                  <svg
-                                    id="chevron-down-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <path
-                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </th>
@@ -1720,47 +1690,14 @@ exports[`Dashboard > should render 1`] = `
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
-                          style="cursor: pointer;"
-                          title="Toggle SortBy"
                         >
                           <div
-                            class="flex flex-inline align-top justify-end flex-row-reverse"
+                            class="flex flex-inline align-top justify-end"
                           >
                             <div
                               class=""
                             >
                               Fiat Value
-                            </div>
-                            <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                            >
-                              <div
-                                class="transition-transform rotate-180"
-                                role="img"
-                              >
-                                <div
-                                  style="height: 10px; width: 10px;"
-                                >
-                                  <svg
-                                    id="chevron-down-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <path
-                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </th>
@@ -2398,7 +2335,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2475,7 +2412,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2550,7 +2487,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2819,7 +2756,7 @@ exports[`Dashboard > should render 1`] = `
                               >
                                 <div
                                   class="flex w-full flex-row gap-2"
-                                  data-testid="TransactionRowAddressing__container_advanced_recipient"
+                                  data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
                                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -2828,30 +2765,21 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="flex min-w-36 grow items-center justify-between space-x-4"
+                                    class="flex w-full items-center justify-between space-x-4"
                                   >
-                                    <div
-                                      class="grow"
-                                      data-testid="TransactionRowAddressing__address-container"
+                                    <a
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                      rel="noopener noreferrer"
                                     >
-                                      <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      <span
+                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                       >
-                                        <div
-                                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                                        >
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                          </span>
-                                          <span>
-                                             
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
+                                        Contract
+                                      </span>
+                                    </a>
                                     <button
                                       class="ring-focus relative focus:outline-none"
                                       data-ring-focus-margin="-m-1"
@@ -2859,7 +2787,7 @@ exports[`Dashboard > should render 1`] = `
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                        class="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                       >
                                         <div
                                           style="height: 16px; width: 16px;"
@@ -2905,7 +2833,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <div
                               class="flex w-full flex-row gap-2"
-                              data-testid="TransactionRowAddressing__container_advanced_recipient"
+                              data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -2914,30 +2842,21 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex min-w-36 grow items-center justify-between space-x-4"
+                                class="flex w-full items-center justify-between space-x-4"
                               >
-                                <div
-                                  class="grow"
-                                  data-testid="TransactionRowAddressing__address-container"
+                                <a
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="Link"
+                                  href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                  rel="noopener noreferrer"
                                 >
-                                  <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  <span
+                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                   >
-                                    <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
-                                    >
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                      </span>
-                                      <span>
-                                         
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                                    Contract
+                                  </span>
+                                </a>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -2945,7 +2864,7 @@ exports[`Dashboard > should render 1`] = `
                                   type="button"
                                 >
                                   <div
-                                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                    class="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                   >
                                     <div
                                       style="height: 16px; width: 16px;"
@@ -2989,7 +2908,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <div
                               class="flex w-full flex-row gap-2"
-                              data-testid="TransactionRowAddressing__container"
+                              data-testid="TransactionRowAddressing__vote"
                             >
                               <div
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -2998,30 +2917,21 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex min-w-36 grow items-center justify-between space-x-4"
+                                class="flex w-full items-center justify-between space-x-4"
                               >
-                                <div
-                                  class="grow"
-                                  data-testid="TransactionRowAddressing__address-container"
+                                <a
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="Link"
+                                  href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                  rel="noopener noreferrer"
                                 >
-                                  <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  <span
+                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                   >
-                                    <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
-                                    >
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                      </span>
-                                      <span>
-                                         
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                                    Contract
+                                  </span>
+                                </a>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -3279,7 +3189,7 @@ exports[`Dashboard > should render 1`] = `
                               >
                                 <div
                                   class="flex w-full flex-row gap-2"
-                                  data-testid="TransactionRowAddressing__container_advanced_recipient"
+                                  data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
                                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -3288,30 +3198,21 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="flex min-w-36 grow items-center justify-between space-x-4"
+                                    class="flex w-full items-center justify-between space-x-4"
                                   >
-                                    <div
-                                      class="grow"
-                                      data-testid="TransactionRowAddressing__address-container"
+                                    <a
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                      rel="noopener noreferrer"
                                     >
-                                      <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      <span
+                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                       >
-                                        <div
-                                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                                        >
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                          </span>
-                                          <span>
-                                             
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
+                                        Contract
+                                      </span>
+                                    </a>
                                     <button
                                       class="ring-focus relative focus:outline-none"
                                       data-ring-focus-margin="-m-1"
@@ -3319,7 +3220,7 @@ exports[`Dashboard > should render 1`] = `
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                        class="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                       >
                                         <div
                                           style="height: 16px; width: 16px;"
@@ -3365,7 +3266,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <div
                               class="flex w-full flex-row gap-2"
-                              data-testid="TransactionRowAddressing__container_advanced_recipient"
+                              data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -3374,30 +3275,21 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex min-w-36 grow items-center justify-between space-x-4"
+                                class="flex w-full items-center justify-between space-x-4"
                               >
-                                <div
-                                  class="grow"
-                                  data-testid="TransactionRowAddressing__address-container"
+                                <a
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="Link"
+                                  href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                  rel="noopener noreferrer"
                                 >
-                                  <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  <span
+                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                   >
-                                    <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
-                                    >
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                      </span>
-                                      <span>
-                                         
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                                    Contract
+                                  </span>
+                                </a>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -3405,7 +3297,7 @@ exports[`Dashboard > should render 1`] = `
                                   type="button"
                                 >
                                   <div
-                                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                    class="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                   >
                                     <div
                                       style="height: 16px; width: 16px;"
@@ -3449,7 +3341,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <div
                               class="flex w-full flex-row gap-2"
-                              data-testid="TransactionRowAddressing__container"
+                              data-testid="TransactionRowAddressing__vote"
                             >
                               <div
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -3458,30 +3350,21 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex min-w-36 grow items-center justify-between space-x-4"
+                                class="flex w-full items-center justify-between space-x-4"
                               >
-                                <div
-                                  class="grow"
-                                  data-testid="TransactionRowAddressing__address-container"
+                                <a
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="Link"
+                                  href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                  rel="noopener noreferrer"
                                 >
-                                  <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  <span
+                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                   >
-                                    <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
-                                    >
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                      </span>
-                                      <span>
-                                         
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                                    Contract
+                                  </span>
+                                </a>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -3739,7 +3622,7 @@ exports[`Dashboard > should render 1`] = `
                               >
                                 <div
                                   class="flex w-full flex-row gap-2"
-                                  data-testid="TransactionRowAddressing__container_advanced_recipient"
+                                  data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
                                     class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -3748,30 +3631,21 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="flex min-w-36 grow items-center justify-between space-x-4"
+                                    class="flex w-full items-center justify-between space-x-4"
                                   >
-                                    <div
-                                      class="grow"
-                                      data-testid="TransactionRowAddressing__address-container"
+                                    <a
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                      rel="noopener noreferrer"
                                     >
-                                      <div
-                                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                      <span
+                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                       >
-                                        <div
-                                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                                        >
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                            data-testid="Address__address"
-                                          >
-                                            0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                          </span>
-                                          <span>
-                                             
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
+                                        Contract
+                                      </span>
+                                    </a>
                                     <button
                                       class="ring-focus relative focus:outline-none"
                                       data-ring-focus-margin="-m-1"
@@ -3779,7 +3653,7 @@ exports[`Dashboard > should render 1`] = `
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                        class="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                       >
                                         <div
                                           style="height: 16px; width: 16px;"
@@ -3825,7 +3699,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <div
                               class="flex w-full flex-row gap-2"
-                              data-testid="TransactionRowAddressing__container_advanced_recipient"
+                              data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -3834,30 +3708,21 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex min-w-36 grow items-center justify-between space-x-4"
+                                class="flex w-full items-center justify-between space-x-4"
                               >
-                                <div
-                                  class="grow"
-                                  data-testid="TransactionRowAddressing__address-container"
+                                <a
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="Link"
+                                  href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                  rel="noopener noreferrer"
                                 >
-                                  <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  <span
+                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                   >
-                                    <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
-                                    >
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                      </span>
-                                      <span>
-                                         
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                                    Contract
+                                  </span>
+                                </a>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -3865,7 +3730,7 @@ exports[`Dashboard > should render 1`] = `
                                   type="button"
                                 >
                                   <div
-                                    class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                                    class="text-theme-secondary-700 hover:text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                                   >
                                     <div
                                       style="height: 16px; width: 16px;"
@@ -3909,7 +3774,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <div
                               class="flex w-full flex-row gap-2"
-                              data-testid="TransactionRowAddressing__container"
+                              data-testid="TransactionRowAddressing__vote"
                             >
                               <div
                                 class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
@@ -3918,30 +3783,21 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex min-w-36 grow items-center justify-between space-x-4"
+                                class="flex w-full items-center justify-between space-x-4"
                               >
-                                <div
-                                  class="grow"
-                                  data-testid="TransactionRowAddressing__address-container"
+                                <a
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="Link"
+                                  href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
+                                  rel="noopener noreferrer"
                                 >
-                                  <div
-                                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  <span
+                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                                   >
-                                    <div
-                                      class="relative grow leading-[17px] sm:leading-5 text-left"
-                                    >
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
-                                      >
-                                        0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6
-                                      </span>
-                                      <span>
-                                         
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                                    Contract
+                                  </span>
+                                </a>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -4211,7 +4067,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4288,7 +4144,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4363,7 +4219,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4644,7 +4500,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4721,7 +4577,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4796,7 +4652,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"

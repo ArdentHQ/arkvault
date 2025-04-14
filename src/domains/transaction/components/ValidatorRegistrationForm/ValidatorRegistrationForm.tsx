@@ -7,6 +7,7 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { httpClient } from "@/app/services";
 
 const component = ({
 	activeTab,
@@ -61,6 +62,8 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 	clearErrors("mnemonic");
 	const { network, senderAddress, validatorPublicKey, gasPrice, gasLimit } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+
+	httpClient.forgetWalletCache(env, senderWallet);
 
 	const transactionId = await senderWallet.transaction().signValidatorRegistration({
 		data: {
