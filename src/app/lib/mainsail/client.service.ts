@@ -8,9 +8,14 @@ import dotify from "node-dotify";
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { Request } from "./request";
-import { wellKnownContracts } from "./transaction.service";
 
 import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
+
+const wellKnownContracts = {
+	consensus: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
+	multiPayment: "0x00EFd0D4639191C49908A7BddbB9A11A994A8527",
+	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
+};
 
 export class ClientService extends Services.AbstractClientService {
 	readonly #request: Request;
