@@ -72,9 +72,10 @@ export const TransactionDetailContent = ({
 						network={transaction.wallet().network()}
 						recipients={recipients}
 						labelClassName={labelClassName}
-						interactedWith={isContractDeployment(transaction)
-							? transaction.data().data.receipt.deployedContractAddress
-							: undefined
+						interactedWith={
+							isContractDeployment(transaction)
+								? transaction.data().data.receipt.deployedContractAddress
+								: undefined
 						}
 					/>
 				</DetailPadded>
