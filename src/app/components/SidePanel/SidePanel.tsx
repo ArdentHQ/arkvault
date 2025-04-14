@@ -22,6 +22,7 @@ interface SidePanelProps {
 	header?: React.ReactNode | string;
 	dataTestId?: string;
 	className?: string;
+	scrollRef?: React.RefObject<HTMLDivElement>;
 }
 
 export const SidePanel = ({
@@ -31,6 +32,7 @@ export const SidePanel = ({
 	header,
 	dataTestId,
 	className,
+	scrollRef,
 }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
@@ -83,7 +85,11 @@ export const SidePanel = ({
 										style={{ ...styles }}
 										className={cn("fixed right-0 top-0 w-full md:w-[608px]", className)}
 									>
-										<div className="custom-scroll h-dvh w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8">
+										<div
+											data-testid="SidePanel__scrollable-content"
+											className="custom-scroll h-dvh w-full overflow-y-scroll bg-theme-background p-4 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8"
+											ref={scrollRef}
+										>
 											<div className="relative mb-4 flex items-start justify-between">
 												{typeof header === "string" ? (
 													<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">

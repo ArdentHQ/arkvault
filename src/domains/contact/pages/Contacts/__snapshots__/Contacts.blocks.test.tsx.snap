@@ -16,7 +16,7 @@ exports[`ContactsHeader > should render responsive 1`] = `
       <div
         class="flex items-center text-sm leading-5 text-theme-secondary-text"
       >
-        Manage your frequent Contacts
+        Manage your frequent Contacts.
       </div>
     </div>
   </section>
@@ -135,7 +135,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
                 class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
                 data-testid="header__subtitle"
               >
-                Manage your frequent Contacts
+                Manage your frequent Contacts.
               </div>
             </div>
           </div>
