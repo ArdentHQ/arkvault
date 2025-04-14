@@ -342,7 +342,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		.toSorted((a, b) => a.localeCompare(b))
 		.join('-');
 
-	const transactionTypes = selectedTransactionTypes?.join('-')
+	const transactionTypes = selectedTransactionTypes?.join('-');
 
 	const jobs = useMemo(() => {
 		return [
