@@ -1,3 +1,4 @@
+import { path } from "rambda";
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import {
 	EvmCallBuilder,
@@ -125,12 +126,11 @@ export class TransactionService extends Services.AbstractTransactionService {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
-		const vote = input.data.votes.at(0);
-		const isVote = !!vote;
-
+		const vote: { id: string } | undefined = path(["data", "votes", 0], input);
+		const unvote: { id: string } | undefined = path(["data", "unvotes", 0], input);
 		const nonce = await this.#generateNonce(input);
 
-		if (!isVote) {
+		if (unvote) {
 			const { transaction } = await UnvoteBuilder.new()
 				.nonce(nonce)
 				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
@@ -138,7 +138,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 				.network(this.#configCrypto.crypto.network.chainId)
 				.sign(input.signatory.signingKey());
 
-			return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+			if (!vote) {
+				return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+			}
 		}
 
 		const { transaction } = await VoteBuilder.new()
