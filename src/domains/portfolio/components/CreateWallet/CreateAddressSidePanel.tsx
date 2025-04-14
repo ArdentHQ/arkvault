@@ -1,5 +1,5 @@
 import { DefaultTReturn, TOptions } from "i18next";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -23,6 +23,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { StepIndicator } from "@/app/components/StepIndicator";
+import classNames from "classnames";
 
 enum Step {
 	WalletOverviewStep = 1,
@@ -65,6 +66,30 @@ export const CreateAddressesSidePanel = ({
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
+	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+	const [isScrollable, setIsScrollable] = useState(false);
+
+	useEffect(() => {
+		if (!open) {
+			return;
+		}
+
+		const checkScrollable = () => {
+			const el = scrollContainerRef.current;
+			if (el) {
+				setIsScrollable(el.scrollHeight > el.clientHeight);
+			}
+		};
+
+		checkScrollable();
+
+		const resizeObserver = new ResizeObserver(() => checkScrollable());
+		if (scrollContainerRef.current) {
+			resizeObserver.observe(scrollContainerRef.current);
+		}
+
+		return () => resizeObserver.disconnect();
+	}, [open]);
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -243,6 +268,7 @@ export const CreateAddressesSidePanel = ({
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
+			scrollRef={scrollContainerRef}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0">
 				<Tabs activeId={activeTab} className="pb-20">
@@ -269,7 +295,13 @@ export const CreateAddressesSidePanel = ({
 					</div>
 				</Tabs>
 
-				<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
+				<div
+					data-testid="CreateAddressSidePanel__footer"
+					className={classNames(
+						"fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8",
+						{ "shadow-footer-side-panel": isScrollable },
+					)}
+				>
 					<div className="hidden min-w-[136px] sm:block">
 						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
 					</div>
