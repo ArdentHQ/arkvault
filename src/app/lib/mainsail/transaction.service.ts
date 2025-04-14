@@ -1,9 +1,7 @@
-/* eslint-disable unicorn/no-await-expression-member */
-
-import { Contracts, IoC, Services } from "@ardenthq/sdk";
+import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
-import { Utils } from "@mainsail/crypto-transaction";
 import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";
+import { TransferBuilder } from "@arkecosystem/typescript-crypto";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { Application } from "@mainsail/kernel";
 import { encodeFunctionData } from "viem";
@@ -14,6 +12,7 @@ import { Interfaces } from "./crypto/index.js";
 import { parseUnits } from "./helpers/parse-units.js";
 import { Request } from "./request.js";
 import { AddressService } from "./address.service.js";
+import { SignedTransactionData } from "./signed-transaction.dto";
 
 const wellKnownContracts = {
 	consensus: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
@@ -35,7 +34,6 @@ type TransactionsInputs =
 export class TransactionService extends Services.AbstractTransactionService {
 	readonly #ledgerService!: Services.LedgerService;
 	readonly #addressService!: AddressService;
-	readonly #publicKeyService!: Services.PublicKeyService;
 	readonly #request: Request;
 	readonly #app: Application;
 
@@ -46,7 +44,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
 		this.#addressService = new AddressService(container);
-		this.#publicKeyService = container.get(IoC.BindingType.PublicKeyService);
 		this.#app = container.get(BindingType.Application);
 
 		this.#configCrypto = {
@@ -83,26 +80,24 @@ export class TransactionService extends Services.AbstractTransactionService {
 		}
 	}
 
-	public override async transfer(input: Services.TransferInput): Promise<Contracts.SignedTransactionData> {
+	public override async transfer(input: Services.TransferInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 		this.#assertAmount(input);
 
-		const transaction = this.#app.resolve(EvmCallBuilder);
-
 		const { address } = await this.#signerData(input);
 		const nonce = await this.#generateNonce(address, input);
 
-		transaction
-			.network(this.#configCrypto.crypto.network.chainId)
-			.gasLimit(input.gasLimit)
-			.recipientAddress(input.data.to)
-			.payload("")
-			.nonce(nonce)
+		const { transaction } = await TransferBuilder.new()
 			.value(parseUnits(input.data.amount, "ark").valueOf())
-			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber());
+			.recipientAddress(input.data.to)
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
 
-		return this.#buildTransaction(input, transaction);
+		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
 	public override async validatorRegistration(
@@ -329,32 +324,23 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.toString();
 	}
 
-	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string; publicKey?: string }> {
+	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
-		let publicKey: string | undefined;
 
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
 			address = this.#addressService.fromMnemonic(input.signatory.signingKey()).address;
-			publicKey = (await this.#publicKeyService.fromMnemonic(input.signatory.signingKey())).publicKey;
 		}
 
 		if (input.signatory.actsWithSecret() || input.signatory.actsWithConfirmationSecret()) {
 			address = this.#addressService.fromSecret(input.signatory.signingKey()).address;
-			publicKey = (await this.#publicKeyService.fromSecret(input.signatory.signingKey())).publicKey;
-		}
-
-		if (input.signatory.actsWithWIF() || input.signatory.actsWithConfirmationWIF()) {
-			address = this.#addressService.fromWIF(input.signatory.signingKey()).address;
-			publicKey = (await this.#publicKeyService.fromWIF(input.signatory.signingKey())).publicKey;
 		}
 
 		if (input.signatory.actsWithLedger()) {
-			publicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
 			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
 		}
 
-		return { address, publicKey };
+		return { address };
 	}
 
 	async #generateNonce(address?: string, input?: Services.TransactionInputs): Promise<string> {
@@ -367,10 +353,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		return wallet.nonce().toFixed(0);
 	}
 
-	async #buildTransaction(
-		input: Services.TransactionInputs,
-		transaction: any,
-	): Promise<Contracts.SignedTransactionData> {
+	async #buildTransaction(input: Services.TransactionInputs, transaction: any): Promise<SignedTransactionData> {
 		let signedTransactionBuilder;
 
 		if (input.signatory.actsWithMnemonic()) {
@@ -379,16 +362,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		if (input.signatory.actsWithConfirmationMnemonic()) {
 			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-			// transaction.secondSign(input.signatory.confirmKey());
-		}
-
-		if (input.signatory.actsWithWIF()) {
-			signedTransactionBuilder = await transaction.signWithWif(input.signatory.signingKey());
-		}
-
-		if (input.signatory.actsWithConfirmationWIF()) {
-			signedTransactionBuilder = await transaction.signWithWif(input.signatory.signingKey());
-			// transaction.secondSignWithWif(input.signatory.confirmKey());
 		}
 
 		if (input.signatory.actsWithSecret()) {
@@ -400,32 +373,37 @@ export class TransactionService extends Services.AbstractTransactionService {
 			// transaction.secondSign(input.signatory.confirmKey());
 		}
 
+		// @TODO: refactor
 		if (input.signatory.actsWithLedger()) {
-			const senderPublicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
-			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
-			const senderAddress = (await this.#addressService.fromPublicKey(extendedPublicKey)).address;
-
-			const serialized = await this.#app.resolve(Utils).toBytes(transaction.data);
-			const signature = await this.#ledgerService.sign(input.signatory.signingKey(), serialized.toString("hex"));
-
-			transaction.data = {
-				...transaction.data,
-				...signature,
-				senderAddress,
-				senderPublicKey,
-				v: Number.parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
-			};
-
-			// Reassign public key to match the signer, as `build` changes it.
-			const signedTransaction = await transaction?.build(transaction.data);
-			signedTransaction.data.senderPublicKey = senderPublicKey;
-			signedTransaction.data.senderAddress = senderAddress;
-
-			return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
+			//const senderPublicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
+			//const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
+			//const senderAddress = (await this.#addressService.fromPublicKey(extendedPublicKey)).address;
+			//
+			//const serialized = await this.#app.resolve(Utils).toBytes(transaction.data);
+			//const signature = await this.#ledgerService.sign(input.signatory.signingKey(), serialized.toString("hex"));
+			//
+			//transaction.data = {
+			//	...transaction.data,
+			//	...signature,
+			//	senderAddress,
+			//	senderPublicKey,
+			//	v: Number.parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
+			//};
+			//
+			//// Reassign public key to match the signer, as `build` changes it.
+			//const signedTransaction = await transaction.build(transaction.data);
+			//signedTransaction.data.senderPublicKey = senderPublicKey;
+			//signedTransaction.data.senderAddress = senderAddress;
+			//
+			//return new SignedTransactionData().configure(signedTransactionBuilder.transaction.data.id, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.serialize().toString("hex"))
 		}
 
-		const signedTransaction = await signedTransactionBuilder?.build();
-		return this.dataTransferObjectService.signedTransaction(signedTransaction.id, signedTransaction.data);
+		console.log({ signedTransactionBuilder });
+
+		return new SignedTransactionData().configure(
+			signedTransactionBuilder.transaction.data,
+			signedTransactionBuilder.transaction.serialize().toString("hex"),
+		);
 	}
 }
 

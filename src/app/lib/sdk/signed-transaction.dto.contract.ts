@@ -19,7 +19,7 @@ export interface SignedTransactionObject {
 export interface SignedTransactionData {
 	setAttributes(attributes: { identifier: string }): void;
 
-	configure(identifier: string, signedData: RawTransactionData, broadcastData?: any, decimals?: number | string);
+	configure(identifier: string, signedData: RawTransactionData, serialized?: string, decimals?: number | string);
 
 	// All
 	id(): string;
@@ -77,5 +77,4 @@ export interface SignedTransactionData {
 	validatorPublicKey(): string;
 	hash(): string;
 	recipients(): MultiPaymentRecipient[];
-	sanitizeSignatures(): Promise<void>;
 }
