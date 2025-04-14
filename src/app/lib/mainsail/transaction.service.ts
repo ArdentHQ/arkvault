@@ -1,7 +1,7 @@
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";
-import { EvmCallBuilder as TransactionBuilder, TransferBuilder } from "@arkecosystem/typescript-crypto";
+import { TransferBuilder } from "@arkecosystem/typescript-crypto";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { Application } from "@mainsail/kernel";
 import { encodeFunctionData } from "viem";
@@ -366,7 +366,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		if (input.signatory.actsWithSecret()) {
 			signedTransactionBuilder = await transaction.sign(input.signatory.signingKey());
-			console.log("withSecret");
 		}
 
 		if (input.signatory.actsWithConfirmationSecret()) {
