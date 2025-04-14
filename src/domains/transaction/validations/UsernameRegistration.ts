@@ -55,7 +55,6 @@ export const usernameRegistration = (t: any) => ({
 				try {
 					await usernameExists(network, value, controller);
 				} catch (error) {
-					console.log(error, error.name)
 					if (error.name === "UsernameExistsError") {
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 					}
