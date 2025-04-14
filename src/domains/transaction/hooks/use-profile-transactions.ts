@@ -338,7 +338,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 
 	const addresses = wallets
-		.map((address) => address.address())
+		.map((wallet) => wallet.address())
 		.toSorted((a, b) => a.localeCompare(b))
 		.join('-');
 
