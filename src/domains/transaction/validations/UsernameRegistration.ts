@@ -40,6 +40,12 @@ export const usernameRegistration = (t: any) => ({
 		validate: {
 			pattern: (value: string) => validateUsername(t, value),
 			unique: debounceAsync(async (value) => {
+				const error = validateUsername(t, value);
+
+				if (error) {
+					return error;
+				}
+
 				try {
 					await usernameExists(network, value, controller);
 				} catch {
