@@ -1,7 +1,6 @@
 import { path } from "rambda";
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import {
-	EvmCallBuilder,
 	MultipaymentBuilder,
 	UnvoteBuilder,
 	UsernameRegistrationBuilder,
