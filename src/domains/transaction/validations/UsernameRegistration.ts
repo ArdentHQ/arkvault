@@ -38,7 +38,6 @@ export const usernameRegistration = (t: any) => ({
 			field: t("COMMON.USERNAME"),
 		}),
 		validate: {
-			pattern: (value: string) => validateUsername(t, value),
 			unique: debounceAsync(async (value) => {
 				const error = validateUsername(t, value);
 
