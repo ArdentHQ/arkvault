@@ -6,6 +6,7 @@ import {
 	UnvoteBuilder,
 	UsernameRegistrationBuilder,
 	UsernameResignationBuilder,
+	TransferBuilder,
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
@@ -76,7 +77,8 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await EvmCallBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
+		const { transaction } = await TransferBuilder.new()
+			.value(parseUnits(input.data.amount, "ark").valueOf())
 			.recipientAddress(input.data.to)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
@@ -262,10 +264,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		if (input.signatory.actsWithSecret() || input.signatory.actsWithConfirmationSecret()) {
 			address = this.#addressService.fromSecret(input.signatory.signingKey()).address;
-		}
-
-		if (input.signatory.actsWithWIF() || input.signatory.actsWithConfirmationWIF()) {
-			address = this.#addressService.fromWIF(input.signatory.signingKey()).address;
 		}
 
 		if (input.signatory.actsWithLedger()) {
