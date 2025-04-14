@@ -58,7 +58,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				return transactionTypes[type].label;
 			}
 
-			return type;
+			return t("TRANSACTION.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT");
 		},
 		types: {
 			core: useMemo(() => {
