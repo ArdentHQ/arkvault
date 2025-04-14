@@ -3,6 +3,13 @@ import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
 
+class UsernameExistsError extends Error {
+	constructor(message: string) {
+		super(message);
+		this.name = "UsernameExistsError";
+	}
+}
+
 const validateUsername = (t: any, value: string): string | undefined => {
 	if (value.startsWith("_")) {
 		return t("COMMON.VALIDATION.LEADING_UNDERSCORE");
@@ -47,8 +54,12 @@ export const usernameRegistration = (t: any) => ({
 
 				try {
 					await usernameExists(network, value, controller);
-				} catch {
-					return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
+				} catch (error) {
+					if (error.name === "UsernameExistsError") {
+						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
+					}
+
+					return true;
 				}
 			}, 300) as () => Promise<ValidateResult>,
 		},
@@ -72,6 +83,6 @@ const usernameExists = async (
 	const response = await fetch(endpoints[network.id()] + username, { signal: controller.current?.signal });
 
 	if (response.ok) {
-		throw new Error("Username is occupied!");
+		throw new UsernameExistsError("Username is occupied!");
 	}
 };
