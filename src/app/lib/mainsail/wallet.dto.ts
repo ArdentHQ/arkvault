@@ -84,6 +84,10 @@ export class WalletData extends DTO.AbstractWalletData implements Contracts.Wall
 		return !!this.#getProperty(["multiSignature", "attributes.multiSignature"]);
 	}
 
+	public override isSecondSignature(): boolean {
+		return !!this.#getProperty(["secondPublicKey", "attributes.secondPublicKey"]);
+	}
+
 	#getProperty<T>(keys: string[]): T | undefined {
 		for (const key of keys) {
 			if (has(this.data, key)) {
