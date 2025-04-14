@@ -34,6 +34,8 @@ export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 		transaction.isDelegateResignation(),
 		transaction.isVote(),
 		transaction.isUnvote(),
+		transaction.isUsernameRegistration(),
+		transaction.isUsernameResignation(),
 	].some(Boolean);
 
 /**

@@ -322,6 +322,8 @@ module.exports = {
 				"votes-filter": "0 15px 35px 0 rgba(var(--theme-color-secondary-900-rgb), 0.1)",
 				"footer-smooth": "0px -7px 35px 0px rgba(33, 34, 37, 0.08)",
 				"footer-smooth-dark": "0px -7px 35px 0px rgba(18, 18, 19, 0.4)",
+				"footer-side-panel":
+					"0px -11px 7px rgba(61, 62, 64, 0.02), 0px -5px 5px rgba(61, 62, 64, 0.03), 0px -1px 3px rgba(61, 62, 64, 0.03)",
 			},
 			transitionProperty: {
 				background: "background-color",
