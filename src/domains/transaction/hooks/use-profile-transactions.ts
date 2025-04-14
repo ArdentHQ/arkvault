@@ -336,8 +336,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return transactions.length === 0 && !isLoadingTransactions;
 	}, [isLoadingTransactions, transactions.length]);
 
+
 	const addresses = wallets
-		.sort((a, b) => a.address() > b.address() ? -1 : 1)
+		.toSorted((a, b) => a.address().localeCompare(b.address()))
+		.map((address) => address.address())
 		.join('-');
 
 	const transactionTypes = selectedTransactionTypes?.join('-')
