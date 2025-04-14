@@ -1,10 +1,10 @@
-import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
+
+import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
-import { SortBy } from "@/app/components/Table";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -166,7 +166,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					transaction.sender(),
 					transaction.recipient(),
 					...transaction.recipients().map(({ address }) => address),
-				]);
+				])
+				.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
 
 			const uniqueAddresses = [...new Set(addresses)] as string[];
 

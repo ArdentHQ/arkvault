@@ -16,6 +16,7 @@ interface Properties {
 	labelClassName?: string;
 	network: Networks.Network;
 	explorerLink?: string;
+	interactedWith?: string;
 }
 
 export const TransactionAddresses = ({
@@ -25,6 +26,7 @@ export const TransactionAddresses = ({
 	network,
 	labelClassName,
 	explorerLink,
+	interactedWith,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -51,6 +53,19 @@ export const TransactionAddresses = ({
 					})}
 				/>
 			</div>
+
+			{interactedWith && (
+				<div className="mt-3 flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+					<DetailTitle className={labelClassName}>{t("COMMON.CONTRACT")}</DetailTitle>
+					<Address
+						truncateOnTable
+						address={interactedWith}
+						showCopyButton
+						wrapperClass="justify-end sm:justify-start"
+						addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+					/>
+				</div>
+			)}
 
 			{explorerLink && (
 				<TransactionRecipients
