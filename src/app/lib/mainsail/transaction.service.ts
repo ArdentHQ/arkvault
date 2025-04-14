@@ -1,7 +1,7 @@
 import { Contracts, IoC, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { EvmCallBuilder } from "@mainsail/crypto-transaction-evm-call";
-import { EvmCallBuilder as TransactionBuilder } from "@arkecosystem/typescript-crypto";
+import { EvmCallBuilder as TransactionBuilder, TransferBuilder } from "@arkecosystem/typescript-crypto";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { Application } from "@mainsail/kernel";
 import { encodeFunctionData } from "viem";
@@ -88,7 +88,8 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const { address } = await this.#signerData(input);
 		const nonce = await this.#generateNonce(address, input);
 
-		const { transaction } = await TransactionBuilder.new({ value: parseUnits(input.data.amount, "ark").valueOf() })
+		const { transaction } = await TransferBuilder.new()
+			.value(parseUnits(input.data.amount, "ark").valueOf())
 			.recipientAddress(input.data.to)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
@@ -332,10 +333,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		if (input.signatory.actsWithSecret() || input.signatory.actsWithConfirmationSecret()) {
 			address = this.#addressService.fromSecret(input.signatory.signingKey()).address;
-		}
-
-		if (input.signatory.actsWithWIF() || input.signatory.actsWithConfirmationWIF()) {
-			address = this.#addressService.fromWIF(input.signatory.signingKey()).address;
 		}
 
 		if (input.signatory.actsWithLedger()) {
