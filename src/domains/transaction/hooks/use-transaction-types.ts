@@ -11,10 +11,10 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 	const { t } = useTranslation();
 
 	const transactionTypes: Record<string, { label: string }> = {
-		delegateRegistration: {
+		validatorRegistration: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 		},
-		delegateResignation: {
+		validatorResignation: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
 		},
 		htlcClaim: {
