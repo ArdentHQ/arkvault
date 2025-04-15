@@ -8,7 +8,7 @@ exports[`Welcome > should change route to create profile 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -20,7 +20,7 @@ exports[`Welcome > should change route to create profile 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -45,7 +45,7 @@ exports[`Welcome > should change route to create profile 1`] = `
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -63,13 +63,13 @@ exports[`Welcome > should change route to create profile 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -102,7 +102,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -149,7 +149,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -196,7 +196,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -243,7 +243,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -290,7 +290,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -337,7 +337,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -384,7 +384,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -424,21 +424,21 @@ exports[`Welcome > should change route to create profile 1`] = `
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -447,7 +447,7 @@ exports[`Welcome > should change route to create profile 1`] = `
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -520,7 +520,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -533,7 +533,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -574,7 +574,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -614,11 +614,11 @@ exports[`Welcome > should change route to create profile 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -706,7 +706,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -718,7 +718,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -743,7 +743,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -755,7 +755,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -780,7 +780,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -798,13 +798,13 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -837,7 +837,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -884,7 +884,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -931,7 +931,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -978,7 +978,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1025,7 +1025,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -1072,7 +1072,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -1119,7 +1119,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1159,21 +1159,21 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -1182,7 +1182,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -1255,7 +1255,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -1268,7 +1268,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1319,11 +1319,11 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -1363,7 +1363,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1404,7 +1404,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -1444,11 +1444,11 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -1536,7 +1536,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -1548,7 +1548,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -1573,7 +1573,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -1585,7 +1585,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1610,7 +1610,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -1628,13 +1628,13 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -1667,7 +1667,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1714,7 +1714,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -1761,7 +1761,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -1808,7 +1808,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1855,7 +1855,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -1902,7 +1902,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -1949,7 +1949,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -1989,21 +1989,21 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -2012,7 +2012,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -2085,7 +2085,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -2098,7 +2098,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2149,11 +2149,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2193,7 +2193,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2234,7 +2234,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -2274,11 +2274,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -2366,7 +2366,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -2378,7 +2378,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -2403,7 +2403,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -2415,7 +2415,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -2440,7 +2440,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -2458,13 +2458,13 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -2497,7 +2497,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2544,7 +2544,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -2591,7 +2591,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -2638,7 +2638,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2685,7 +2685,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -2732,7 +2732,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -2779,7 +2779,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -2819,21 +2819,21 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -2842,7 +2842,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -2915,7 +2915,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -2928,7 +2928,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2979,11 +2979,11 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3023,7 +3023,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3064,7 +3064,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -3104,11 +3104,11 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3196,7 +3196,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -3208,7 +3208,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -3233,7 +3233,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -3245,7 +3245,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3270,7 +3270,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -3288,13 +3288,13 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -3327,7 +3327,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -3374,7 +3374,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -3421,7 +3421,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -3468,7 +3468,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -3515,7 +3515,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -3562,7 +3562,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -3609,7 +3609,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -3649,21 +3649,21 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -3672,7 +3672,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -3745,7 +3745,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -3758,7 +3758,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3809,11 +3809,11 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -3853,7 +3853,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3894,7 +3894,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -3934,11 +3934,11 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -4026,7 +4026,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -4038,7 +4038,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -4063,7 +4063,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -4075,7 +4075,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4100,7 +4100,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -4118,13 +4118,13 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -4157,7 +4157,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -4204,7 +4204,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -4251,7 +4251,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -4298,7 +4298,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -4345,7 +4345,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -4392,7 +4392,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -4439,7 +4439,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -4479,21 +4479,21 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -4502,7 +4502,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -4575,7 +4575,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -4588,7 +4588,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4639,11 +4639,11 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -4683,7 +4683,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4724,7 +4724,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -4764,11 +4764,11 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -4856,7 +4856,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -4868,7 +4868,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -4893,7 +4893,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -4905,7 +4905,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4930,7 +4930,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -4948,13 +4948,13 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -4987,7 +4987,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5034,7 +5034,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5081,7 +5081,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -5128,7 +5128,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5175,7 +5175,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5222,7 +5222,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -5269,7 +5269,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5309,21 +5309,21 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -5332,7 +5332,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -5405,7 +5405,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -5418,7 +5418,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -5459,7 +5459,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -5499,11 +5499,11 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -5591,7 +5591,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -5603,7 +5603,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -5628,7 +5628,7 @@ exports[`Welcome > should render with profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -5640,7 +5640,7 @@ exports[`Welcome > should render with profiles 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5665,7 +5665,7 @@ exports[`Welcome > should render with profiles 1`] = `
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -5683,13 +5683,13 @@ exports[`Welcome > should render with profiles 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -5722,7 +5722,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5769,7 +5769,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5816,7 +5816,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -5863,7 +5863,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -5910,7 +5910,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -5957,7 +5957,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -6004,7 +6004,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6044,21 +6044,21 @@ exports[`Welcome > should render with profiles 1`] = `
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -6067,7 +6067,7 @@ exports[`Welcome > should render with profiles 1`] = `
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
@@ -6140,7 +6140,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       Select Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Choose from an existing Profile below or create a new Profile to get started.
                     </p>
@@ -6153,7 +6153,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -6204,11 +6204,11 @@ exports[`Welcome > should render with profiles 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -6248,7 +6248,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="border-theme-primary-200 transition-colors-shadow hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 flex cursor-pointer items-center rounded-lg border leading-tight duration-100 ease-linear"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -6289,7 +6289,7 @@ exports[`Welcome > should render with profiles 1`] = `
                               </span>
                             </div>
                             <div
-                              class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
+                              class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 border-r pr-3"
                               data-testid="Icon__Lock"
                             >
                               <div
@@ -6329,11 +6329,11 @@ exports[`Welcome > should render with profiles 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <div
-                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              class="group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5"
                               tabindex="1"
                             >
                               <div
-                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                               >
                                 <div
                                   style="height: 16px; width: 16px;"
@@ -6421,7 +6421,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -6433,7 +6433,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -6458,7 +6458,7 @@ exports[`Welcome > should render without profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -6470,7 +6470,7 @@ exports[`Welcome > should render without profiles 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -6495,7 +6495,7 @@ exports[`Welcome > should render without profiles 1`] = `
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -6513,13 +6513,13 @@ exports[`Welcome > should render without profiles 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
+          class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
           >
             <div
-              class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] mb-6 sm:mb-0"
+              class="border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')] mb-6 sm:mb-0"
             >
               <div
                 class="slick-slider slick-initialized"
@@ -6552,7 +6552,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6599,7 +6599,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -6646,7 +6646,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -6693,7 +6693,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6740,7 +6740,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Easy Access to Your Digital Assets
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                             </p>
@@ -6787,7 +6787,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Integrated Exchanges
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                             </p>
@@ -6834,7 +6834,7 @@ exports[`Welcome > should render without profiles 1`] = `
                               Fully Customizable
                             </h3>
                             <p
-                              class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
                             >
                               Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                             </p>
@@ -6874,21 +6874,21 @@ exports[`Welcome > should render without profiles 1`] = `
                       class="slick-active"
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                     <li
                       class=""
                     >
                       <button
-                        class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
                       />
                     </li>
                      
@@ -6897,7 +6897,7 @@ exports[`Welcome > should render without profiles 1`] = `
               </div>
             </div>
             <div
-              class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
+              class="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
             >
               <div
                 class="mx-auto flex max-w-[400px] flex-col h-full"
@@ -6970,7 +6970,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       Create Profile
                     </h2>
                     <p
-                      class="text-base leading-7 text-theme-secondary-text"
+                      class="text-theme-secondary-text text-base leading-7"
                     >
                       Create a new Profile to get started.
                     </p>
@@ -7030,7 +7030,7 @@ exports[`Welcome > should render without profiles 1`] = `
                   class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
                 >
                   <p
-                    class="text-center text-base text-theme-secondary-text"
+                    class="text-theme-secondary-text text-center text-base"
                   >
                     <span>
                       Exported a Profile before? 
@@ -7042,7 +7042,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
