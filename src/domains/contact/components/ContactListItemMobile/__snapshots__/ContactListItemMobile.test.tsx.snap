@@ -3,7 +3,7 @@
 exports[`ContactListItemMobile > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-xs border border-theme-secondary-300 dark:border-theme-secondary-800"
     data-testid="mobile-table-element"
   >
     <div
@@ -19,7 +19,7 @@ exports[`ContactListItemMobile > should render 1`] = `
         class="flex items-center gap-3"
       >
         <button
-          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
           data-testid="ContactListItemMobileAddress__send-button"
           type="button"
         >
@@ -106,7 +106,7 @@ exports[`ContactListItemMobile > should render 1`] = `
                 0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
               </span>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="ring-focus relative focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -156,7 +156,7 @@ exports[`ContactListItemMobile > should render 1`] = `
 exports[`ContactListItemMobile > should render addresses 1`] = `
 <DocumentFragment>
   <div
-    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-xs border border-theme-secondary-300 dark:border-theme-secondary-800"
     data-testid="mobile-table-element"
   >
     <div
@@ -172,7 +172,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
         class="flex items-center gap-3"
       >
         <button
-          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
           data-testid="ContactListItemMobileAddress__send-button"
           type="button"
         >
@@ -259,7 +259,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                 0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
               </span>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="ring-focus relative focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
