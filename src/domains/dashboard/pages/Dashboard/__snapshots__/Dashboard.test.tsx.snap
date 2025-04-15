@@ -14,7 +14,7 @@ exports[`Dashboard > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -54,7 +54,7 @@ exports[`Dashboard > should render 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,7 +91,7 @@ exports[`Dashboard > should render 1`] = `
           class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -137,7 +137,7 @@ exports[`Dashboard > should render 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 hover:dark:bg-theme-dark-700"
+            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded-xs focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700"
           >
             <div
               class="mx-auto"
@@ -177,7 +177,7 @@ exports[`Dashboard > should render 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded-xs"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -211,7 +211,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -222,7 +222,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -233,7 +233,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -244,7 +244,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -262,7 +262,7 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="flex h-7 cursor-pointer items-center rounded-xs text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
                   type="button"
                 >
                   <div>
@@ -303,7 +303,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -364,7 +364,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -416,7 +416,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -468,7 +468,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -522,7 +522,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -530,7 +530,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
                         >
                           <div>
                             <div
@@ -605,7 +605,7 @@ exports[`Dashboard > should render 1`] = `
                 class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -663,18 +663,18 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
                 >
                   <div
-                    class="relative cursor-pointer items-center justify-center rounded align-middle"
+                    class="relative cursor-pointer items-center justify-center rounded-xs align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                       >
                         <img
                           alt="Profile Avatar"
@@ -753,7 +753,7 @@ exports[`Dashboard > should render 1`] = `
                   class="flex flex-row items-center gap-1"
                 >
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
                     type="button"
                   >
                     <div
@@ -800,7 +800,7 @@ exports[`Dashboard > should render 1`] = `
                     class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dark:border-theme-dark-700"
                   />
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
                     type="button"
                   >
                     <div
@@ -846,7 +846,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex flex-col gap-0.5"
               >
                 <div
-                  class="flex w-full flex-col gap-3 rounded bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
+                  class="flex w-full flex-col gap-3 rounded-xs bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg"
                 >
                   <div
                     class="flex w-full flex-row items-center justify-between"
@@ -891,7 +891,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex items-center gap-2"
                       >
                         <button
-                          class="ring-focus relative focus:outline-none space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 hover:dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="ring-focus relative focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -930,7 +930,7 @@ exports[`Dashboard > should render 1`] = `
                           </span>
                         </button>
                         <button
-                          class="ring-focus relative focus:outline-none space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 hover:dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="ring-focus relative focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -970,7 +970,7 @@ exports[`Dashboard > should render 1`] = `
                         class="hidden sm:flex"
                       >
                         <button
-                          class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 hover:dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:dark:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
                           data-testid="WalletHeader__refresh"
                           type="button"
                         >
@@ -1044,7 +1044,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex flex-row items-center gap-3"
                     >
                       <button
-                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
                         data-testid="WalletHeader__send-button"
                         type="button"
                       >
@@ -1064,7 +1064,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="dropdown__toggle"
                         >
                           <button
-                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
+                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
                             type="button"
                           >
                             <div
@@ -1119,7 +1119,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="WalletVote"
                   >
                     <div
-                      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+                      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded-xs border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
                     >
                       <div
                         class="flex w-full flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
@@ -1163,7 +1163,7 @@ exports[`Dashboard > should render 1`] = `
                           Delegate Status
                         </p>
                         <div
-                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid dark:border-theme-success-800"
+                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid dark:border-theme-success-800"
                         >
                           Active
                         </div>
@@ -1176,7 +1176,7 @@ exports[`Dashboard > should render 1`] = `
                       class="md:max-md:self-end w-full md:w-auto"
                     >
                       <button
-                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
+                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
                         data-testid="WalletVote__button"
                         type="button"
                       >
@@ -1219,7 +1219,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </button>
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
                         data-testid="WalletVote__button_mobile"
                         type="button"
                       >
@@ -1287,7 +1287,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-transactions"
                   role="tab"
@@ -1308,7 +1308,7 @@ exports[`Dashboard > should render 1`] = `
         </div>
       </div>
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1 !pt-2"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 pt-2!"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10"
@@ -1324,7 +1324,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-all"
                   role="tab"
@@ -1339,7 +1339,7 @@ exports[`Dashboard > should render 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-received"
                   role="tab"
@@ -1354,7 +1354,7 @@ exports[`Dashboard > should render 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-sent"
                   role="tab"
@@ -1381,7 +1381,7 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="dropdown__toggle-Transactions--filter-dropdown"
                 >
                   <div
-                    class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
+                    class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xs border border-theme-secondary-300 p-3 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
                   >
                     <span
                       class="text-base font-semibold leading-tight"
@@ -1429,7 +1429,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
+                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1504,7 +1504,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
+                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1721,7 +1721,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/2dc489ca6683b7c2bc380165204e3a291c66b0648dbc43a04e76b6d130e5cb5f"
@@ -1774,7 +1774,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Transfer
@@ -1795,7 +1795,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -1824,7 +1824,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -1872,7 +1872,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -1901,7 +1901,7 @@ exports[`Dashboard > should render 1`] = `
                                       </div>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -1956,7 +1956,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -1985,7 +1985,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2038,7 +2038,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 From
@@ -2067,7 +2067,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2119,7 +2119,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -2175,7 +2175,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/2c0e9cb5f377847502246b6b32d8c106ae1b389bbcfd27cc85de6a744b9d4364"
@@ -2228,7 +2228,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Registration
@@ -2249,7 +2249,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -2278,7 +2278,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2326,7 +2326,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -2335,7 +2335,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2348,7 +2348,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -2403,7 +2403,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -2412,7 +2412,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2425,7 +2425,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2478,7 +2478,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -2487,7 +2487,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -2500,7 +2500,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2552,7 +2552,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -2608,7 +2608,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/11701c71669f2b845492f4a95e3bde60fd5fa9ee797f2f56f12820bce39d2e22"
@@ -2661,7 +2661,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Username Registration
@@ -2682,7 +2682,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -2711,7 +2711,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2759,7 +2759,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -2768,7 +2768,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -2781,7 +2781,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -2836,7 +2836,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -2845,7 +2845,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -2858,7 +2858,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2911,7 +2911,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -2920,7 +2920,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -2933,7 +2933,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2985,7 +2985,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -3041,7 +3041,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/1e6860facc12f6e70ba1d8af193642590aa17326b410f2b8f60dc1d2cccc4b30"
@@ -3094,7 +3094,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Username Resignation
@@ -3115,7 +3115,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -3144,7 +3144,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -3192,7 +3192,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -3201,7 +3201,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -3214,7 +3214,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -3269,7 +3269,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -3278,7 +3278,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -3291,7 +3291,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3344,7 +3344,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -3353,7 +3353,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -3366,7 +3366,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3418,7 +3418,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -3474,7 +3474,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/e9ba7e89a5bd094fc0ccee3fdf5c12bac8e011d5e5915cdddaf2b37e4bb01e2e"
@@ -3527,7 +3527,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Username Registration
@@ -3548,7 +3548,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -3577,7 +3577,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -3625,7 +3625,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -3634,7 +3634,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -3647,7 +3647,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -3702,7 +3702,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -3711,7 +3711,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -3724,7 +3724,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3777,7 +3777,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -3786,7 +3786,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
@@ -3799,7 +3799,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3851,7 +3851,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -3907,7 +3907,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/f40aa73e55716cb8d8ef889132250d6f155fbb94fa7991a55739ffe58ea68fb2"
@@ -3960,7 +3960,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Vote
@@ -3981,7 +3981,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -4010,7 +4010,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4058,7 +4058,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -4067,7 +4067,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4080,7 +4080,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -4135,7 +4135,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -4144,7 +4144,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4157,7 +4157,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4210,7 +4210,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -4219,7 +4219,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4232,7 +4232,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4284,7 +4284,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -4340,7 +4340,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/45117603947dc51f6465eed3690b0937b2c1ce4d8826160e508e6b4489cf880e"
@@ -4393,7 +4393,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Vote
@@ -4414,7 +4414,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -4443,7 +4443,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4491,7 +4491,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__vote_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -4500,7 +4500,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4513,7 +4513,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -4568,7 +4568,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -4577,7 +4577,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4590,7 +4590,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4643,7 +4643,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__vote"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -4652,7 +4652,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
@@ -4665,7 +4665,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4717,7 +4717,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -4773,7 +4773,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/d1dc3f92abd9f25d3bea7927cc28664e091394690bd5b600eb774050da0450c5"
@@ -4826,7 +4826,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Transfer
@@ -4847,7 +4847,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -4876,7 +4876,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4924,7 +4924,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -4953,7 +4953,7 @@ exports[`Dashboard > should render 1`] = `
                                       </div>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -5008,7 +5008,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -5037,7 +5037,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5090,7 +5090,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -5119,7 +5119,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5171,7 +5171,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -5227,7 +5227,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/8f26a1983e22e87054244d65ac675dde891ef0bd2454768209fbbfe5ad95cacc"
@@ -5280,7 +5280,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Multipayment
@@ -5301,7 +5301,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -5330,7 +5330,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -5378,7 +5378,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__multipayment"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -5409,7 +5409,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__multipayment"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -5438,7 +5438,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__multipayment"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -5466,7 +5466,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
@@ -5522,7 +5522,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex flex-col gap-1 font-semibold"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/transactions/11051f5fdeb68d8d3692d87ad1e53435f88a197407b615cee348c1bf0a1628f8"
@@ -5575,7 +5575,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Transfer
@@ -5596,7 +5596,7 @@ exports[`Dashboard > should render 1`] = `
                                 data-testid="TransactionRowAddressing__container_advanced_sender"
                               >
                                 <div
-                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                  class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                   data-testid="TransactionRowAddressing__label"
                                 >
                                   From
@@ -5627,7 +5627,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -5675,7 +5675,7 @@ exports[`Dashboard > should render 1`] = `
                                   data-testid="TransactionRowAddressing__container_advanced_recipient"
                                 >
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                     data-testid="TransactionRowAddressing__label"
                                   >
                                     To
@@ -5704,7 +5704,7 @@ exports[`Dashboard > should render 1`] = `
                                       </div>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-none"
+                                      class="ring-focus relative focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -5759,7 +5759,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container_advanced_recipient"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 To
@@ -5788,7 +5788,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5841,7 +5841,7 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="TransactionRowAddressing__container"
                             >
                               <div
-                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                                class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded-xs px-1 py-[3px] dark:border"
                                 data-testid="TransactionRowAddressing__label"
                               >
                                 From
@@ -5872,7 +5872,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5924,7 +5924,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex flex-col items-end gap-1"
                             >
                               <div
-                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
