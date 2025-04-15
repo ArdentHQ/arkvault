@@ -235,10 +235,36 @@ exports[`InputDate > should render 1`] = `
                     2
                   </div>
                   <div
-                    aria-disabled="false"
-                    aria-label="Choose Friday, June 5th, 2020"
+                    aria-disabled="true"
+                    aria-label="Not available Friday, July 3rd, 2020"
                     aria-selected="false"
-                    class="react-datepicker__day react-datepicker__day--005"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--disabled"
+                    role="option"
+                    tabindex="-1"
+                    title=""
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="true"
+                    aria-label="Not available Saturday, July 4th, 2020"
+                    aria-selected="false"
+                    class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--disabled react-datepicker__day--weekend"
+                    role="option"
+                    tabindex="-1"
+                    title=""
+                  >
+                    4
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="true"
+                    aria-label="Not available Sunday, July 5th, 2020"
+                    aria-selected="false"
+                    class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--disabled react-datepicker__day--weekend"
                     role="option"
                     tabindex="-1"
                     title=""
@@ -246,41 +272,15 @@ exports[`InputDate > should render 1`] = `
                     5
                   </div>
                   <div
-                    aria-disabled="false"
-                    aria-label="Choose Saturday, June 6th, 2020"
+                    aria-disabled="true"
+                    aria-label="Not available Monday, July 6th, 2020"
                     aria-selected="false"
-                    class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend"
+                    class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
                     title=""
                   >
                     6
-                  </div>
-                </div>
-                <div
-                  class="react-datepicker__week"
-                >
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, June 7th, 2020"
-                    aria-selected="false"
-                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend"
-                    role="option"
-                    tabindex="-1"
-                    title=""
-                  >
-                    7
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Monday, June 8th, 2020"
-                    aria-selected="false"
-                    class="react-datepicker__day react-datepicker__day--008"
-                    role="option"
-                    tabindex="-1"
-                    title=""
-                  >
-                    8
                   </div>
                   <div
                     aria-disabled="false"
