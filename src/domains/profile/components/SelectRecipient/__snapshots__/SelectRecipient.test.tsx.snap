@@ -12,14 +12,14 @@ exports[`SelectRecipient > should render disabled 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+          class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -43,7 +43,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -60,7 +60,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default text-theme-secondary-text"
                     data-testid="SelectDropdown__input"
                     disabled=""
                     id="SelectRecipient__dropdown-input"
@@ -142,14 +142,14 @@ exports[`SelectRecipient > should render empty 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+          class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -173,7 +173,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -190,7 +190,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
+                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -206,7 +206,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                     class=""
                   >
                     <div
-                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                      class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                       data-testid="SelectRecipient__select-recipient"
                     >
                       <div>
@@ -271,7 +271,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+          class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
@@ -279,7 +279,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
             <input
               aria-invalid="true"
               autocomplete="off"
-              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -352,7 +352,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
@@ -370,7 +370,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     aria-invalid="true"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
+                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -430,7 +430,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     class="pl-3"
                   >
                     <div
-                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                      class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                       data-testid="SelectRecipient__select-recipient"
                     >
                       <div>
@@ -495,14 +495,14 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
         data-testid="SelectDropdown"
       >
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+          class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -526,17 +526,17 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="flex items-center"
                 >
                   <div
-                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm shrink-0"
+                    class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-8 w-8 text-sm shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                     >
                       <img
                         alt="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
@@ -554,7 +554,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -570,7 +570,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     class=""
                   >
                     <div
-                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                      class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                       data-testid="SelectRecipient__select-recipient"
                     >
                       <div>

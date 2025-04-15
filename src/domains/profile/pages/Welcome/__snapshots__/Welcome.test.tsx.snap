@@ -20,7 +20,7 @@ exports[`Welcome > should change route to create profile 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -63,7 +63,7 @@ exports[`Welcome > should change route to create profile 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -94,7 +94,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -121,7 +121,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -141,7 +141,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -168,7 +168,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -188,7 +188,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -215,7 +215,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -235,7 +235,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -262,7 +262,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -282,7 +282,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -309,7 +309,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -329,7 +329,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -356,7 +356,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -376,7 +376,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -403,7 +403,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -548,11 +548,11 @@ exports[`Welcome > should change route to create profile 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -659,7 +659,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -712,7 +712,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -755,7 +755,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -798,7 +798,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -829,7 +829,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -856,7 +856,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -876,7 +876,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -903,7 +903,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -923,7 +923,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -950,7 +950,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -970,7 +970,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -997,7 +997,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -1017,7 +1017,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1044,7 +1044,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -1064,7 +1064,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1091,7 +1091,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -1111,7 +1111,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1138,7 +1138,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -1283,11 +1283,11 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -1378,11 +1378,11 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -1489,7 +1489,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -1542,7 +1542,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -1585,7 +1585,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1628,7 +1628,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -1659,7 +1659,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1686,7 +1686,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -1706,7 +1706,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1733,7 +1733,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -1753,7 +1753,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1780,7 +1780,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -1800,7 +1800,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1827,7 +1827,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -1847,7 +1847,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1874,7 +1874,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -1894,7 +1894,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1921,7 +1921,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -1941,7 +1941,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -1968,7 +1968,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -2113,11 +2113,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -2208,11 +2208,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -2319,7 +2319,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -2372,7 +2372,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -2415,7 +2415,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -2458,7 +2458,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -2489,7 +2489,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2516,7 +2516,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -2536,7 +2536,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2563,7 +2563,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -2583,7 +2583,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2610,7 +2610,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -2630,7 +2630,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2657,7 +2657,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -2677,7 +2677,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2704,7 +2704,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -2724,7 +2724,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2751,7 +2751,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -2771,7 +2771,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -2798,7 +2798,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -2943,11 +2943,11 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -3038,11 +3038,11 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -3149,7 +3149,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -3202,7 +3202,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -3245,7 +3245,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3288,7 +3288,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -3319,7 +3319,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3346,7 +3346,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -3366,7 +3366,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3393,7 +3393,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -3413,7 +3413,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3440,7 +3440,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -3460,7 +3460,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3487,7 +3487,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -3507,7 +3507,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3534,7 +3534,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -3554,7 +3554,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3581,7 +3581,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -3601,7 +3601,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -3628,7 +3628,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -3773,11 +3773,11 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -3868,11 +3868,11 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -3979,7 +3979,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4032,7 +4032,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -4075,7 +4075,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4118,7 +4118,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -4149,7 +4149,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4176,7 +4176,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -4196,7 +4196,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4223,7 +4223,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -4243,7 +4243,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4270,7 +4270,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -4290,7 +4290,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4317,7 +4317,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -4337,7 +4337,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4364,7 +4364,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -4384,7 +4384,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4411,7 +4411,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -4431,7 +4431,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -4458,7 +4458,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -4603,11 +4603,11 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -4698,11 +4698,11 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -4809,7 +4809,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4862,7 +4862,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -4905,7 +4905,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4948,7 +4948,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -4979,7 +4979,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5006,7 +5006,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -5026,7 +5026,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5053,7 +5053,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -5073,7 +5073,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5100,7 +5100,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -5120,7 +5120,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5147,7 +5147,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -5167,7 +5167,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5194,7 +5194,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -5214,7 +5214,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5241,7 +5241,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -5261,7 +5261,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5288,7 +5288,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -5433,11 +5433,11 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -5544,7 +5544,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -5597,7 +5597,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -5640,7 +5640,7 @@ exports[`Welcome > should render with profiles 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5683,7 +5683,7 @@ exports[`Welcome > should render with profiles 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -5714,7 +5714,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5741,7 +5741,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -5761,7 +5761,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5788,7 +5788,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -5808,7 +5808,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5835,7 +5835,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -5855,7 +5855,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5882,7 +5882,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -5902,7 +5902,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5929,7 +5929,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -5949,7 +5949,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -5976,7 +5976,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -5996,7 +5996,7 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6023,7 +6023,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -6168,11 +6168,11 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -6263,11 +6263,11 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -6374,7 +6374,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -6427,7 +6427,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
@@ -6470,7 +6470,7 @@ exports[`Welcome > should render without profiles 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -6513,7 +6513,7 @@ exports[`Welcome > should render without profiles 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+          class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
         >
           <div
             class="flex flex-col gap-3 lg:flex-row"
@@ -6544,7 +6544,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6571,7 +6571,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -6591,7 +6591,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6618,7 +6618,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -6638,7 +6638,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6665,7 +6665,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -6685,7 +6685,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6712,7 +6712,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -6732,7 +6732,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6759,7 +6759,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Easy Access to Your Digital Assets"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                             />
@@ -6779,7 +6779,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6806,7 +6806,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Integrated Exchanges"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                             />
@@ -6826,7 +6826,7 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                           >
                             <h3
                               class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -6853,7 +6853,7 @@ exports[`Welcome > should render without profiles 1`] = `
                             </div>
                             <img
                               alt="Fully Customizable"
-                              class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                              class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                               loading="lazy"
                               src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                             />
@@ -6983,7 +6983,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       data-testid="ProfileList"
                     />
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -7036,7 +7036,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
