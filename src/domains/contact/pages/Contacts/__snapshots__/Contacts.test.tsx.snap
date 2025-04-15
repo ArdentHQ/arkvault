@@ -7,7 +7,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -51,7 +51,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -88,7 +88,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -128,7 +128,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -137,7 +137,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded-xs focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded-xs focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -177,7 +177,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded-xs"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded-xs"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -210,7 +210,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -221,7 +221,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -233,7 +233,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -244,7 +244,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -262,7 +262,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded-xs text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded-xs focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -340,10 +340,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -352,7 +352,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -394,7 +394,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -406,7 +406,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -458,7 +458,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -507,7 +507,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -522,7 +522,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -530,7 +530,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded-xs border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -558,12 +558,12 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -596,16 +596,16 @@ exports[`Contacts > should render compact on md screen 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded-xs px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -645,7 +645,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -663,14 +663,14 @@ exports[`Contacts > should render compact on md screen 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded-xs align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -681,7 +681,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -702,10 +702,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-end justify-between bg-theme-background"
+            class="bg-theme-background flex items-end justify-between"
           >
             <div
               class="space-y-2"
@@ -805,7 +805,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Manage your frequent Contacts.
@@ -820,13 +820,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-center rounded-xs border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded-xs border sm:hidden"
           >
             <button
-              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 h-12 w-full"
               data-testid="contacts__add-contact-btn-mobile"
               type="button"
             >
@@ -861,7 +861,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </div>
                 </div>
                 <span
-                  class="whitespace-nowrap text-base font-semibold"
+                  class="text-base font-semibold whitespace-nowrap"
                 >
                   Add Contact
                 </span>
@@ -874,7 +874,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
@@ -883,7 +883,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               class="flex flex-col"
             >
               <div
-                class="relative flex items-center overflow-hidden rounded-xs border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
                 data-testid="SearchableTableWrapper__search-input"
               >
                 <div
@@ -942,14 +942,14 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                       data-testid="Input"
                       placeholder="Enter Contact Name"
                       type="text"
@@ -958,7 +958,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </div>
                 </div>
                 <button
-                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
+                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 mr-6 hidden h-8 py-0 leading-none sm:block"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -993,7 +993,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </div>
                     <span
-                      class="whitespace-nowrap text-base font-semibold"
+                      class="text-base font-semibold whitespace-nowrap"
                     >
                       Add Contact
                     </span>
@@ -1119,7 +1119,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
+                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
                           data-testid="ContactListItem"
                         >
                           <td>
@@ -1127,7 +1127,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
                             >
                               <span
-                                class="text-sm font-semibold leading-[17px]"
+                                class="text-sm leading-[17px] font-semibold"
                                 data-testid="ContactListItem__name"
                               >
                                 <span
@@ -1231,7 +1231,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -1243,7 +1243,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   </button>
                                 </div>
                                 <div
-                                  class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] m-0! border-theme-secondary-300 dark:border-theme-secondary-800"
+                                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
                                 />
                                 <div
                                   class="visible"
@@ -1254,14 +1254,14 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     data-testid="dropdown__toggle"
                                   >
                                     <button
-                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-3 p-1"
                                       type="button"
                                     >
                                       <div
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                          class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -1305,7 +1305,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
+                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
                           data-testid="ContactListItem"
                         >
                           <td>
@@ -1313,7 +1313,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
                             >
                               <span
-                                class="text-sm font-semibold leading-[17px]"
+                                class="text-sm leading-[17px] font-semibold"
                                 data-testid="ContactListItem__name"
                               >
                                 <span
@@ -1417,7 +1417,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -1429,7 +1429,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                   </button>
                                 </div>
                                 <div
-                                  class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] m-0! border-theme-secondary-300 dark:border-theme-secondary-800"
+                                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
                                 />
                                 <div
                                   class="visible"
@@ -1440,14 +1440,14 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     data-testid="dropdown__toggle"
                                   >
                                     <button
-                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-3 p-1"
                                       type="button"
                                     >
                                       <div
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                          class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -1511,7 +1511,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1555,7 +1555,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1592,7 +1592,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1632,7 +1632,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -1641,7 +1641,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded-xs focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded-xs focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -1681,7 +1681,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded-xs"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded-xs"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -1714,7 +1714,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -1725,7 +1725,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -1737,7 +1737,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -1748,7 +1748,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -1766,7 +1766,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded-xs text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded-xs focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -1844,10 +1844,10 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -1856,7 +1856,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -1898,7 +1898,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -1910,7 +1910,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1962,7 +1962,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -2011,7 +2011,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -2026,7 +2026,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -2034,7 +2034,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded-xs border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -2062,12 +2062,12 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -2100,16 +2100,16 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded-xs px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -2149,7 +2149,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2167,14 +2167,14 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded-xs align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2185,7 +2185,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -2203,7 +2203,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
       class="flex flex-1 flex-col"
     >
       <section
-        class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-8 py-6 dark:bg-black"
+        class="bg-theme-secondary-100 flex h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -2214,7 +2214,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             Contacts
           </h1>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-5"
           >
             Manage your frequent Contacts.
           </div>
@@ -2224,13 +2224,13 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-center rounded-xs border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded-xs border sm:hidden"
           >
             <button
-              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 h-12 w-full"
               data-testid="contacts__add-contact-btn-mobile"
               type="button"
             >
@@ -2265,7 +2265,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   </div>
                 </div>
                 <span
-                  class="whitespace-nowrap text-base font-semibold"
+                  class="text-base font-semibold whitespace-nowrap"
                 >
                   Add Contact
                 </span>
@@ -2278,7 +2278,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
@@ -2287,7 +2287,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="flex flex-col"
             >
               <div
-                class="relative flex items-center overflow-hidden rounded-xs border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
                 data-testid="SearchableTableWrapper__search-input"
               >
                 <div
@@ -2346,14 +2346,14 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                       data-testid="Input"
                       placeholder="Enter Contact Name"
                       type="text"
@@ -2362,7 +2362,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   </div>
                 </div>
                 <button
-                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
+                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 mr-6 hidden h-8 py-0 leading-none sm:block"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -2397,7 +2397,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       </div>
                     </div>
                     <span
-                      class="whitespace-nowrap text-base font-semibold"
+                      class="text-base font-semibold whitespace-nowrap"
                     >
                       Add Contact
                     </span>
@@ -2430,11 +2430,11 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                               data-testid="mobile-table-element"
                             >
                               <div
-                                class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+                                class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
                                 data-testid="mobile-table-element-header"
                               >
                                 <span
-                                  class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                                  class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
                                 >
                                   Brian
                                 </span>
@@ -2442,7 +2442,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                   class="flex items-center gap-3"
                                 >
                                   <button
-                                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 p-0 text-sm hover:underline"
                                     data-testid="ContactListItemMobileAddress__send-button"
                                     type="button"
                                   >
@@ -2453,7 +2453,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     </div>
                                   </button>
                                   <span
-                                    class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                                    class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
                                   />
                                   <div
                                     aria-expanded="false"
@@ -2461,7 +2461,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     data-testid="dropdown__toggle"
                                   >
                                     <button
-                                      class="flex text-theme-secondary-700"
+                                      class="text-theme-secondary-700 flex"
                                       type="button"
                                     >
                                       <div>
@@ -2510,7 +2510,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                   class="grid grid-cols-1 gap-2"
                                 >
                                   <div
-                                    class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                                   >
                                     Address
                                   </div>
@@ -2586,11 +2586,11 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                               data-testid="mobile-table-element"
                             >
                               <div
-                                class="flex space-x-3 overflow-auto px-4 py-3 dark:bg-theme-dark-950 bg-theme-secondary-100 dark:bg-black"
+                                class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
                                 data-testid="mobile-table-element-header"
                               >
                                 <span
-                                  class="flex-1 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-text"
+                                  class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
                                 >
                                   Mock Contact
                                 </span>
@@ -2598,7 +2598,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                   class="flex items-center gap-3"
                                 >
                                   <button
-                                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 p-0 text-sm hover:underline"
                                     data-testid="ContactListItemMobileAddress__send-button"
                                     type="button"
                                   >
@@ -2609,7 +2609,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     </div>
                                   </button>
                                   <span
-                                    class="block h-5 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                                    class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
                                   />
                                   <div
                                     aria-expanded="false"
@@ -2617,7 +2617,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                     data-testid="dropdown__toggle"
                                   >
                                     <button
-                                      class="flex text-theme-secondary-700"
+                                      class="text-theme-secondary-700 flex"
                                       type="button"
                                     >
                                       <div>
@@ -2666,7 +2666,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                   class="grid grid-cols-1 gap-2"
                                 >
                                   <div
-                                    class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                                   >
                                     Address
                                   </div>
@@ -2752,7 +2752,7 @@ exports[`Contacts > should render with contacts 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2796,7 +2796,7 @@ exports[`Contacts > should render with contacts 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2833,7 +2833,7 @@ exports[`Contacts > should render with contacts 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2873,7 +2873,7 @@ exports[`Contacts > should render with contacts 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -2882,7 +2882,7 @@ exports[`Contacts > should render with contacts 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded-xs focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded-xs focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -2922,7 +2922,7 @@ exports[`Contacts > should render with contacts 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded-xs"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded-xs"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -2955,7 +2955,7 @@ exports[`Contacts > should render with contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -2966,7 +2966,7 @@ exports[`Contacts > should render with contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -2978,7 +2978,7 @@ exports[`Contacts > should render with contacts 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -2989,7 +2989,7 @@ exports[`Contacts > should render with contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -3007,7 +3007,7 @@ exports[`Contacts > should render with contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded-xs text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded-xs focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -3085,10 +3085,10 @@ exports[`Contacts > should render with contacts 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -3097,7 +3097,7 @@ exports[`Contacts > should render with contacts 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -3139,7 +3139,7 @@ exports[`Contacts > should render with contacts 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -3151,7 +3151,7 @@ exports[`Contacts > should render with contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -3203,7 +3203,7 @@ exports[`Contacts > should render with contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -3252,7 +3252,7 @@ exports[`Contacts > should render with contacts 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -3267,7 +3267,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -3275,7 +3275,7 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded-xs border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -3303,12 +3303,12 @@ exports[`Contacts > should render with contacts 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -3341,16 +3341,16 @@ exports[`Contacts > should render with contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded-xs px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -3390,7 +3390,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -3408,14 +3408,14 @@ exports[`Contacts > should render with contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded-xs align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -3426,7 +3426,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -3447,10 +3447,10 @@ exports[`Contacts > should render with contacts 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-end justify-between bg-theme-background"
+            class="bg-theme-background flex items-end justify-between"
           >
             <div
               class="space-y-2"
@@ -3550,7 +3550,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Manage your frequent Contacts.
@@ -3565,13 +3565,13 @@ exports[`Contacts > should render with contacts 1`] = `
         class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-center rounded-xs border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded-xs border sm:hidden"
           >
             <button
-              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 h-12 w-full"
               data-testid="contacts__add-contact-btn-mobile"
               type="button"
             >
@@ -3606,7 +3606,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   </div>
                 </div>
                 <span
-                  class="whitespace-nowrap text-base font-semibold"
+                  class="text-base font-semibold whitespace-nowrap"
                 >
                   Add Contact
                 </span>
@@ -3619,7 +3619,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
@@ -3628,7 +3628,7 @@ exports[`Contacts > should render with contacts 1`] = `
               class="flex flex-col"
             >
               <div
-                class="relative flex items-center overflow-hidden rounded-xs border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
                 data-testid="SearchableTableWrapper__search-input"
               >
                 <div
@@ -3687,14 +3687,14 @@ exports[`Contacts > should render with contacts 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                       data-testid="Input"
                       placeholder="Enter Contact Name"
                       type="text"
@@ -3703,7 +3703,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   </div>
                 </div>
                 <button
-                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
+                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 mr-6 hidden h-8 py-0 leading-none sm:block"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -3738,7 +3738,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </div>
                     <span
-                      class="whitespace-nowrap text-base font-semibold"
+                      class="text-base font-semibold whitespace-nowrap"
                     >
                       Add Contact
                     </span>
@@ -3864,7 +3864,7 @@ exports[`Contacts > should render with contacts 1`] = `
                         role="rowgroup"
                       >
                         <tr
-                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
+                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
                           data-testid="ContactListItem"
                         >
                           <td>
@@ -3872,7 +3872,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
                             >
                               <span
-                                class="text-sm font-semibold leading-[17px]"
+                                class="text-sm leading-[17px] font-semibold"
                                 data-testid="ContactListItem__name"
                               >
                                 <span
@@ -3976,7 +3976,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -3988,7 +3988,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                   </button>
                                 </div>
                                 <div
-                                  class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] m-0! border-theme-secondary-300 dark:border-theme-secondary-800"
+                                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
                                 />
                                 <div
                                   class="visible"
@@ -3999,14 +3999,14 @@ exports[`Contacts > should render with contacts 1`] = `
                                     data-testid="dropdown__toggle"
                                   >
                                     <button
-                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-3 p-1"
                                       type="button"
                                     >
                                       <div
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                          class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -4050,7 +4050,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           </td>
                         </tr>
                         <tr
-                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
+                          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
                           data-testid="ContactListItem"
                         >
                           <td>
@@ -4058,7 +4058,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 whitespace-nowrap"
                             >
                               <span
-                                class="text-sm font-semibold leading-[17px]"
+                                class="text-sm leading-[17px] font-semibold"
                                 data-testid="ContactListItem__name"
                               >
                                 <span
@@ -4162,7 +4162,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                   data-testid="ContactListItem__send-button-wrapper"
                                 >
                                   <button
-                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 text-sm hover:underline"
                                     data-testid="ContactListItem__send-button"
                                     type="button"
                                   >
@@ -4174,7 +4174,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                   </button>
                                 </div>
                                 <div
-                                  class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] m-0! border-theme-secondary-300 dark:border-theme-secondary-800"
+                                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 m-0!"
                                 />
                                 <div
                                   class="visible"
@@ -4185,14 +4185,14 @@ exports[`Contacts > should render with contacts 1`] = `
                                     data-testid="dropdown__toggle"
                                   >
                                     <button
-                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-3 p-1"
                                       type="button"
                                     >
                                       <div
                                         class="flex items-center space-x-2"
                                       >
                                         <div
-                                          class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                                          class="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
                                         >
                                           <div
                                             style="height: 16px; width: 16px;"
@@ -4256,7 +4256,7 @@ exports[`Contacts > should render without contacts 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4300,7 +4300,7 @@ exports[`Contacts > should render without contacts 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4337,7 +4337,7 @@ exports[`Contacts > should render without contacts 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4377,7 +4377,7 @@ exports[`Contacts > should render without contacts 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -4386,7 +4386,7 @@ exports[`Contacts > should render without contacts 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded-xs focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded-xs focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -4426,7 +4426,7 @@ exports[`Contacts > should render without contacts 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded-xs"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded-xs"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -4459,7 +4459,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -4470,7 +4470,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -4482,7 +4482,7 @@ exports[`Contacts > should render without contacts 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -4493,7 +4493,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -4511,7 +4511,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded-xs text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded-xs focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -4589,10 +4589,10 @@ exports[`Contacts > should render without contacts 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -4601,7 +4601,7 @@ exports[`Contacts > should render without contacts 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -4643,7 +4643,7 @@ exports[`Contacts > should render without contacts 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -4655,7 +4655,7 @@ exports[`Contacts > should render without contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -4707,7 +4707,7 @@ exports[`Contacts > should render without contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -4756,7 +4756,7 @@ exports[`Contacts > should render without contacts 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -4771,7 +4771,7 @@ exports[`Contacts > should render without contacts 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -4779,7 +4779,7 @@ exports[`Contacts > should render without contacts 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded-xs border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -4807,12 +4807,12 @@ exports[`Contacts > should render without contacts 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -4845,16 +4845,16 @@ exports[`Contacts > should render without contacts 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded-xs px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -4894,7 +4894,7 @@ exports[`Contacts > should render without contacts 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -4912,14 +4912,14 @@ exports[`Contacts > should render without contacts 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded-xs align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -4930,7 +4930,7 @@ exports[`Contacts > should render without contacts 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -4951,10 +4951,10 @@ exports[`Contacts > should render without contacts 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-end justify-between bg-theme-background"
+            class="bg-theme-background flex items-end justify-between"
           >
             <div
               class="space-y-2"
@@ -5054,7 +5054,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Manage your frequent Contacts.
@@ -5069,13 +5069,13 @@ exports[`Contacts > should render without contacts 1`] = `
         class="w-full first:pt-8 last:pb-8 py-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-center rounded-xs border border-theme-secondary-300 dark:border-theme-secondary-800 sm:hidden"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded-xs border sm:hidden"
           >
             <button
-              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 h-12 w-full text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300"
+              class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 h-12 w-full"
               data-testid="contacts__add-contact-btn-mobile"
               type="button"
             >
@@ -5110,7 +5110,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   </div>
                 </div>
                 <span
-                  class="whitespace-nowrap text-base font-semibold"
+                  class="text-base font-semibold whitespace-nowrap"
                 >
                   Add Contact
                 </span>
@@ -5123,7 +5123,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 md:px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
@@ -5132,7 +5132,7 @@ exports[`Contacts > should render without contacts 1`] = `
               class="flex flex-col"
             >
               <div
-                class="relative flex items-center overflow-hidden rounded-xs border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
                 data-testid="SearchableTableWrapper__search-input"
               >
                 <div
@@ -5191,14 +5191,14 @@ exports[`Contacts > should render without contacts 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                       data-testid="Input"
                       placeholder="Enter Contact Name"
                       type="text"
@@ -5207,7 +5207,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   </div>
                 </div>
                 <button
-                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 mr-6 hidden h-8 py-0 leading-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 sm:block"
+                  class="px-3 space-x-2 text-sm relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 mr-6 hidden h-8 py-0 leading-none sm:block"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -5242,7 +5242,7 @@ exports[`Contacts > should render without contacts 1`] = `
                       </div>
                     </div>
                     <span
-                      class="whitespace-nowrap text-base font-semibold"
+                      class="text-base font-semibold whitespace-nowrap"
                     >
                       Add Contact
                     </span>
@@ -5369,23 +5369,23 @@ exports[`Contacts > should render without contacts 1`] = `
                       />
                       <tfoot>
                         <tr
-                          class="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+                          class="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
                           data-testid="EmptyResults"
                         >
                           <td
-                            class="pb-4 pt-[11px]"
+                            class="pt-[11px] pb-4"
                             colspan="4"
                           >
                             <div
                               class="flex flex-col items-center justify-center"
                             >
                               <h3
-                                class="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold"
                               >
                                 No Results
                               </h3>
                               <p
-                                class="text-sm text-theme-secondary-700 dark:text-theme-secondary-600"
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm"
                               >
                                 No results found. Refine your search and try again.
                               </p>
