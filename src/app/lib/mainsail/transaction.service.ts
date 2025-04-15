@@ -86,7 +86,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	public override async validatorRegistration(
@@ -109,11 +112,14 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
-			.network(this.#configCrypto.crypto.network.chainId)
+			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	public override async delegateRegistration(
@@ -138,12 +144,15 @@ export class TransactionService extends Services.AbstractTransactionService {
 				.nonce(nonce)
 				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 				.gasLimit(input.gasLimit)
-				.network(this.#configCrypto.crypto.network.chainId)
+				.network(this.#configCrypto.crypto.network.chainId);
 
 			await this.#sign(input, builder);
 
 			if (!vote) {
-				return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+				return new SignedTransactionData().configure(
+					builder.transaction.data,
+					builder.transaction.serialize().toString("hex"),
+				);
 			}
 		}
 
@@ -156,7 +165,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	/**
@@ -187,7 +199,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	public override async usernameRegistration(
@@ -210,11 +225,14 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
-			.network(this.#configCrypto.crypto.network.chainId)
+			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	public override async usernameResignation(
@@ -234,7 +252,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	public override async validatorResignation(
@@ -254,7 +275,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
 	}
 
 	public override async delegateResignation(
@@ -295,20 +319,23 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
 		if (input.signatory.actsWithLedger()) {
-			return this.#signWithLedger(input, builder.transaction)
+			return this.#signWithLedger(input, builder.transaction);
 		}
 
 		await builder.sign(input.signatory.signingKey());
 	}
 
 	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
-		const signature = await this.#ledgerService.sign(input.signatory.signingKey(), transaction.serialize().toString("hex"));
+		const signature = await this.#ledgerService.sign(
+			input.signatory.signingKey(),
+			transaction.serialize().toString("hex"),
+		);
 
 		transaction.data = {
 			...transaction.data,
 			...signature,
 			id: transaction.getId(),
-			v: Number.parseInt(signature.v) + 27
-		}
+			v: Number.parseInt(signature.v) + 27,
+		};
 	}
 }
