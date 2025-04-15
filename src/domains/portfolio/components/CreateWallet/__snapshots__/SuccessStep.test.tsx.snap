@@ -26,18 +26,18 @@ exports[`SuccessStep > should render (lg) 1`] = `
           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
         >
           <div
-            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
             >
               <div
-                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
               >
                  Address 
               </div>
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full!"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
@@ -46,7 +46,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -107,13 +107,13 @@ exports[`SuccessStep > should render (lg) 1`] = `
           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
         >
           <div
-            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="flex w-full items-center justify-between sm:justify-start"
             >
               <div
-                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
               >
                  Name
               </div>
@@ -121,7 +121,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
               >
                 <div
-                  class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
+                  class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
                 >
                    Mainsail Wallet 1 
                 </div>
@@ -133,7 +133,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   />
                 </div>
                 <button
-                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-0 py-0 text-theme-navy-600"
+                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-0 py-0 text-theme-navy-600"
                   data-testid="CreateWallet__edit-alias"
                   type="button"
                 >
@@ -207,18 +207,18 @@ exports[`SuccessStep > should render (xs) 1`] = `
           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
         >
           <div
-            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
             >
               <div
-                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
               >
                  Address 
               </div>
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full!"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
@@ -227,7 +227,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -288,13 +288,13 @@ exports[`SuccessStep > should render (xs) 1`] = `
           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
         >
           <div
-            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="flex w-full items-center justify-between sm:justify-start"
             >
               <div
-                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
               >
                  Name
               </div>
@@ -302,7 +302,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
               >
                 <div
-                  class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
+                  class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
                 >
                    Mainsail Wallet 1 
                 </div>
@@ -314,7 +314,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   />
                 </div>
                 <button
-                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-0 py-0 text-theme-navy-600"
+                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-0 py-0 text-theme-navy-600"
                   data-testid="CreateWallet__edit-alias"
                   type="button"
                 >

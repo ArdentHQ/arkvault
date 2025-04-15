@@ -24,7 +24,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         class="flex flex-col gap-2"
       >
         <div
-          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
+          class="w-full cursor-pointer overflow-hidden rounded-xs border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
@@ -36,7 +36,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0! text-theme-primary-600 dark:text-theme-secondary-500"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -97,7 +97,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -163,7 +163,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           </div>
         </div>
         <div
-          class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
+          class="w-full cursor-pointer overflow-hidden rounded-xs border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background"
           data-testid="LedgerMobileItem__wrapper"
         >
           <div
@@ -175,7 +175,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0! text-theme-primary-600 dark:text-theme-secondary-500"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -236,7 +236,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -485,7 +485,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </div>
                         <button
-                          class="ring-focus relative focus:outline-none"
+                          class="ring-focus relative focus:outline-hidden"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -540,7 +540,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
-                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
+                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -615,7 +615,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </div>
                         <button
-                          class="ring-focus relative focus:outline-none"
+                          class="ring-focus relative focus:outline-hidden"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -670,7 +670,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
-                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
+                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-2.5 p-4"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -767,7 +767,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -868,7 +868,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     Address #1
                   </span>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0! text-theme-primary-600 dark:text-theme-secondary-500"
                     data-testid="LedgerImportStep__edit-alias"
                     type="button"
                   >
@@ -963,7 +963,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                     DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -1061,7 +1061,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                   class="h-5 w-px border-transparent bg-theme-secondary-300 dark:bg-theme-secondary-800"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0! text-theme-primary-600 dark:text-theme-secondary-500"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
