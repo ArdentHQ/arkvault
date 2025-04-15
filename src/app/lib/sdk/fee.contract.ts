@@ -14,14 +14,14 @@ export interface TransactionFees {
 	// Core
 	transfer: TransactionFee;
 	secondSignature: TransactionFee;
-	delegateRegistration: TransactionFee;
+	validatorRegistration: TransactionFee;
 	usernameRegistration: TransactionFee;
 	usernameResignation: TransactionFee;
 	vote: TransactionFee;
 	multiSignature: TransactionFee;
 	ipfs: TransactionFee;
 	multiPayment: TransactionFee;
-	delegateResignation: TransactionFee;
+	validatorResignation: TransactionFee;
 }
 
 export interface FeeService {
