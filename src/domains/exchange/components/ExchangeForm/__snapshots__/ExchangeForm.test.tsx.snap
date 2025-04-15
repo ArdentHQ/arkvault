@@ -56,7 +56,7 @@ exports[`ConfirmationStep > should render 1`] = `
           class="flex items-center space-x-3"
         >
           <span
-            class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+            class="flex h-6 w-6 items-center justify-center rounded-xs bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
           >
             1
           </span>
@@ -91,7 +91,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/transaction/payinHash"
@@ -139,7 +139,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -194,7 +194,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/address/payinAddress"
@@ -242,7 +242,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -290,7 +290,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 Amount Sent
               </span>
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
+                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap font-semibold leading-5"
@@ -313,7 +313,7 @@ exports[`ConfirmationStep > should render 1`] = `
           class="flex items-center space-x-3"
         >
           <span
-            class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+            class="flex h-6 w-6 items-center justify-center rounded-xs bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
           >
             2
           </span>
@@ -366,7 +366,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -414,7 +414,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 Amount Received
               </span>
               <div
-                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
+                class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
               >
                 <span
                   class="whitespace-nowrap font-semibold leading-5"
@@ -484,7 +484,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
                     data-testid="FormLabel"
                     for="fromCurrency"
                   >
@@ -495,14 +495,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                           data-testid="select-list__input"
                           name="fromCurrency"
                           readonly=""
@@ -527,7 +527,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             id="fromCurrency-label"
                           />
                           <div
-                            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                            class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
                               class="hidden sm:block"
@@ -544,7 +544,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 aria-controls="fromCurrency-menu"
                                 aria-labelledby="fromCurrency-label"
                                 autocomplete="off"
-                                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
+                                class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default"
                                 data-testid="SelectDropdown__input"
                                 id="fromCurrency-input"
                                 name="fromCurrency"
@@ -619,7 +619,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
                     data-testid="FormLabel"
                     for="payinAmount"
                   >
@@ -629,14 +629,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     class="relative"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                           data-testid="InputCurrency"
                           name="payinAmount"
                           placeholder="Enter an amount"
@@ -676,7 +676,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   </span>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
                   data-testid="ExchangeForm__swap-button"
                   disabled=""
                   type="button"
@@ -725,7 +725,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
                       data-testid="FormLabel"
                       for="toCurrency"
                     >
@@ -736,14 +736,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                        class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                            class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                             data-testid="select-list__input"
                             name="toCurrency"
                             readonly=""
@@ -768,7 +768,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                               id="toCurrency-label"
                             />
                             <div
-                              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                             >
                               <div
                                 class="hidden sm:block"
@@ -785,7 +785,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                   aria-controls="toCurrency-menu"
                                   aria-labelledby="toCurrency-label"
                                   autocomplete="off"
-                                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
+                                  class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default"
                                   data-testid="SelectDropdown__input"
                                   id="toCurrency-input"
                                   name="toCurrency"
@@ -860,7 +860,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
                       data-testid="FormLabel"
                       for="payoutAmount"
                     >
@@ -870,14 +870,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       class="relative"
                     >
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                            class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                             data-testid="InputCurrency"
                             name="payoutAmount"
                             placeholder="Enter an amount"
@@ -897,7 +897,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
-                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+                    class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
                     data-testid="FormLabel"
                     for="recipientWallet"
                   >
@@ -925,7 +925,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                         data-testid="SelectDropdown"
                       >
                         <div
-                          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                          class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                         >
                           <div
                             class="relative flex h-full flex-1"
@@ -933,7 +933,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             <input
                               aria-invalid="false"
                               autocomplete="off"
-                              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                              class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                               data-testid="select-list__input"
                               name="recipientWallet"
                               readonly=""
@@ -958,7 +958,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 id="SelectRecipient__dropdown-label"
                               />
                               <div
-                                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -969,7 +969,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default text-theme-secondary-text"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
                                     id="SelectRecipient__dropdown-input"
@@ -1003,7 +1003,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
             class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
               data-testid="ExchangeForm__back-button"
               type="button"
             >
@@ -1014,7 +1014,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               </div>
             </button>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
               data-testid="ExchangeForm__continue-button"
               disabled=""
               type="button"
@@ -1123,7 +1123,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                   class="flex items-center space-x-3"
                 >
                   <span
-                    class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                    class="flex h-6 w-6 items-center justify-center rounded-xs bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                   >
                     1
                   </span>
@@ -1158,7 +1158,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/transaction/payinHash?from=changenow"
@@ -1206,7 +1206,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none"
+                            class="ring-focus relative focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1261,7 +1261,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/address/payinAddress?from=changenow"
@@ -1309,7 +1309,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none"
+                            class="ring-focus relative focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1357,7 +1357,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         Amount Sent
                       </span>
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
+                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
                       >
                         <span
                           class="whitespace-nowrap font-semibold leading-5"
@@ -1380,7 +1380,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                   class="flex items-center space-x-3"
                 >
                   <span
-                    class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                    class="flex h-6 w-6 items-center justify-center rounded-xs bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                   >
                     2
                   </span>
@@ -1415,7 +1415,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/transaction/payoutHash"
@@ -1463,7 +1463,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none"
+                            class="ring-focus relative focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1518,7 +1518,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                            class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/wallets/payoutAddress"
@@ -1566,7 +1566,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none"
+                            class="ring-focus relative focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1614,7 +1614,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         Amount Received
                       </span>
                       <div
-                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
+                        class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
                       >
                         <span
                           class="whitespace-nowrap font-semibold leading-5"
@@ -1640,7 +1640,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
               class="flex w-full flex-col gap-3 sm:flex-row-reverse"
             >
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                 data-testid="ExchangeForm__finish-button"
                 type="button"
               >
@@ -1651,7 +1651,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 </div>
               </button>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                 data-testid="ExchangeForm__new-exchange"
                 type="button"
               >
@@ -1728,7 +1728,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1804,7 +1804,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                     class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none"
+                      class="ring-focus relative focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1854,7 +1854,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 !h-6 !w-6 !border-[3px]"
+                    class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 dark:border-black dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
                   />
                 </span>
                 <span
@@ -1950,7 +1950,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                     class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none"
+                      class="ring-focus relative focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1995,7 +1995,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
             >
               If you have any question about your exchange, please contact ChangeNOW support team via email at 
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="mailto:support@changenow.io"
@@ -2059,7 +2059,7 @@ exports[`FormStep > should render 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
             data-testid="FormLabel"
             for="fromCurrency"
           >
@@ -2070,14 +2070,14 @@ exports[`FormStep > should render 1`] = `
             data-testid="SelectDropdown"
           >
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+              class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                  class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                   data-testid="select-list__input"
                   name="fromCurrency"
                   readonly=""
@@ -2102,7 +2102,7 @@ exports[`FormStep > should render 1`] = `
                     id="fromCurrency-label"
                   />
                   <div
-                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                    class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="hidden sm:block"
@@ -2119,7 +2119,7 @@ exports[`FormStep > should render 1`] = `
                         aria-controls="fromCurrency-menu"
                         aria-labelledby="fromCurrency-label"
                         autocomplete="off"
-                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                        class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default text-theme-secondary-text"
                         data-testid="SelectDropdown__input"
                         disabled=""
                         id="fromCurrency-input"
@@ -2195,7 +2195,7 @@ exports[`FormStep > should render 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
             data-testid="FormLabel"
             for="payinAmount"
           >
@@ -2205,14 +2205,14 @@ exports[`FormStep > should render 1`] = `
             class="relative"
           >
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                  class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                   data-testid="InputCurrency"
                   name="payinAmount"
                   placeholder="Enter an amount"
@@ -2252,7 +2252,7 @@ exports[`FormStep > should render 1`] = `
           </span>
         </div>
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
           data-testid="ExchangeForm__swap-button"
           disabled=""
           type="button"
@@ -2301,7 +2301,7 @@ exports[`FormStep > should render 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
               data-testid="FormLabel"
               for="toCurrency"
             >
@@ -2312,14 +2312,14 @@ exports[`FormStep > should render 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     autocomplete="off"
-                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                     data-testid="select-list__input"
                     name="toCurrency"
                     readonly=""
@@ -2344,7 +2344,7 @@ exports[`FormStep > should render 1`] = `
                       id="toCurrency-label"
                     />
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="hidden sm:block"
@@ -2361,7 +2361,7 @@ exports[`FormStep > should render 1`] = `
                           aria-controls="toCurrency-menu"
                           aria-labelledby="toCurrency-label"
                           autocomplete="off"
-                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                          class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default text-theme-secondary-text"
                           data-testid="SelectDropdown__input"
                           disabled=""
                           id="toCurrency-input"
@@ -2437,7 +2437,7 @@ exports[`FormStep > should render 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
               data-testid="FormLabel"
               for="payoutAmount"
             >
@@ -2447,14 +2447,14 @@ exports[`FormStep > should render 1`] = `
               class="relative"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
                     autocomplete="off"
-                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                    class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                     data-testid="InputCurrency"
                     name="payoutAmount"
                     placeholder="Enter an amount"
@@ -2474,7 +2474,7 @@ exports[`FormStep > should render 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
-            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:!text-theme-primary-600"
+            class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 hover:text-theme-primary-600!"
             data-testid="FormLabel"
             for="recipientWallet"
           >
@@ -2502,7 +2502,7 @@ exports[`FormStep > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2510,7 +2510,7 @@ exports[`FormStep > should render 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                      class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
                       data-testid="select-list__input"
                       name="recipientWallet"
                       readonly=""
@@ -2535,7 +2535,7 @@ exports[`FormStep > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2546,7 +2546,7 @@ exports[`FormStep > should render 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                            class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base! cursor-default text-theme-secondary-text"
                             data-testid="SelectDropdown__input"
                             disabled=""
                             id="SelectRecipient__dropdown-input"
@@ -2699,7 +2699,7 @@ exports[`ReviewStep > should render 1`] = `
           class="flex cursor-pointer items-center space-x-3"
         >
           <input
-            class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-white [&:not(:checked)]:dark:border-theme-dark-500 [&:not(:checked)]:dark:!bg-theme-dark-900 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 disabled:dark:border-theme-dark-600 disabled:dark:bg-theme-dark-800 disabled:checked:dark:border-theme-dark-600 disabled:checked:dark:bg-theme-dark-800 disabled:checked:dark:text-theme-dark-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 checked:dark:checked:text-theme-dark-navy-500 checked:dark:hover:text-theme-dark-navy-600 [&:not(:checked)]:hover:border-theme-primary-600 dark:[&:not(:checked)]:hover:border-theme-dark-navy-500"
+            class="custom-checkbox h-5! w-5! cursor-pointer rounded-xs! border-2! transition duration-150 ease-in-out focus:ring-theme-primary-400! focus:ring-offset-0! not-checked:border-theme-secondary-300 not-checked:bg-white! dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900! disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 dark:disabled:border-theme-dark-600 dark:disabled:bg-theme-dark-800 dark:disabled:checked:border-theme-dark-600 dark:disabled:checked:bg-theme-dark-800 dark:disabled:checked:text-theme-dark-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600 not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500"
             name="hasAgreedToTerms"
             type="checkbox"
           />
@@ -2708,7 +2708,7 @@ exports[`ReviewStep > should render 1`] = `
           >
             I've read and agree to the ChangeNOW 
             <a
-              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/terms-of-use"
@@ -2749,7 +2749,7 @@ exports[`ReviewStep > should render 1`] = `
             </a>
              and 
             <a
-              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+              class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/privacy-policy"
@@ -2818,7 +2818,7 @@ exports[`StatusStep > should render 1`] = `
         class="flex text-theme-primary-300 dark:text-theme-secondary-600"
       >
         <button
-          class="ring-focus relative focus:outline-none"
+          class="ring-focus relative focus:outline-hidden"
           data-ring-focus-margin="-m-1"
           data-testid="clipboard-icon__wrapper"
           type="button"
@@ -2894,7 +2894,7 @@ exports[`StatusStep > should render 1`] = `
             class="flex text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -2944,7 +2944,7 @@ exports[`StatusStep > should render 1`] = `
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600 !h-6 !w-6 !border-[3px]"
+            class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 dark:border-black dark:border-l-theme-primary-600 h-6! w-6! border-[3px]!"
           />
         </span>
         <span
@@ -3040,7 +3040,7 @@ exports[`StatusStep > should render 1`] = `
             class="flex text-theme-primary-300 dark:text-theme-secondary-600"
           >
             <button
-              class="ring-focus relative focus:outline-none"
+              class="ring-focus relative focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -3085,7 +3085,7 @@ exports[`StatusStep > should render 1`] = `
     >
       If you have any question about your exchange, please contact ChangeNOW support team via email at 
       <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
+        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="mailto:support@changenow.io"
