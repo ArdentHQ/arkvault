@@ -7,7 +7,7 @@ exports[`ExchangeCard > should render 1`] = `
   >
     <div>
       <button
-        class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-hidden transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-hidden dark:border-theme-secondary-800"
+        class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -35,7 +35,7 @@ exports[`ExchangeCard > should render 1`] = `
           </div>
         </div>
         <div
-          class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+          class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
         />
       </button>
     </div>
@@ -50,7 +50,7 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
   >
     <div>
       <button
-        class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-hidden transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-hidden dark:border-theme-secondary-800"
+        class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -78,7 +78,7 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
           </div>
         </div>
         <div
-          class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+          class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
         />
       </button>
     </div>
