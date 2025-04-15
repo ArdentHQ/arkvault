@@ -59,7 +59,7 @@ const ModalContent = ({
 }: ModalContentProperties) => (
 	<div
 		className={twMerge(
-			"relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
+			"bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
 			"px-6 pt-4 md:p-8",
 			noButtons && "pb-24",
 			className,
@@ -67,7 +67,7 @@ const ModalContent = ({
 		data-testid="Modal__inner"
 	>
 		{!hideCloseButton && (
-			<div className="absolute right-0 top-0 z-10 mr-6 mt-4 rounded-xs bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8">
+			<div className="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded-xs transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white">
 				<Button
 					data-testid="Modal__close-button"
 					variant="transparent"
@@ -86,7 +86,7 @@ const ModalContent = ({
 					{banner}
 
 					<div className="absolute bottom-0 left-0 mb-10 ml-10">
-						<h2 className={`m-0 text-4xl font-extrabold leading-tight ${titleClass || "text-theme-text"}`}>
+						<h2 className={`m-0 text-4xl leading-tight font-extrabold ${titleClass || "text-theme-text"}`}>
 							{title}
 						</h2>
 					</div>
@@ -103,7 +103,7 @@ const ModalContent = ({
 				{image}
 
 				{description && (
-					<div className="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base">
+					<div className="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base">
 						{description}
 					</div>
 				)}

@@ -25,7 +25,7 @@ export const SettingsGroup = ({
 	<div className={cn("relative flex flex-col", className)} {...properties}>
 		{title && <SettingsGroupHeader description={description}>{title}</SettingsGroupHeader>}
 
-		<div className="pb-6 pt-4 sm:px-6">{children}</div>
+		<div className="pt-4 pb-6 sm:px-6">{children}</div>
 	</div>
 );
 
@@ -54,14 +54,14 @@ const SettingsGroupHeader = ({
 }) => (
 	<div
 		className={cn(
-			"-mx-3 block border-l-2 border-theme-primary-400 bg-theme-secondary-100 px-2.5 py-3 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:mx-0 sm:-mt-px sm:border-l-0 sm:border-t sm:border-theme-secondary-300 sm:px-6",
+			"border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6",
 			className,
 		)}
 		{...properties}
 	>
-		<h2 className="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{children}</h2>
+		<h2 className="text-theme-secondary-700 dark:text-theme-dark-200 mb-0 text-base font-semibold">{children}</h2>
 
-		{description && <p className="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>}
+		{description && <p className="text-theme-secondary-700 dark:text-theme-dark-200 mt-1 text-sm">{description}</p>}
 	</div>
 );
 

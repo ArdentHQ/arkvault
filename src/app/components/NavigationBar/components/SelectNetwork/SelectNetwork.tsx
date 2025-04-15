@@ -28,8 +28,8 @@ export const SelectNetworkMobile = ({ profile }: { profile: Contracts.IProfile }
 	const isMainnet = activeNetwork.isLive();
 
 	return (
-		<div className="flex w-full items-center justify-between bg-theme-secondary-100 px-6 py-4 text-theme-text dark:bg-theme-dark-950">
-			<span className="font-semibold text-theme-secondary-700 dark:text-theme-dark-200">Network</span>
+		<div className="bg-theme-secondary-100 text-theme-text dark:bg-theme-dark-950 flex w-full items-center justify-between px-6 py-4">
+			<span className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold">Network</span>
 			<Dropdown
 				placement="bottom-end"
 				wrapperClass="w-68"

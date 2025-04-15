@@ -25,14 +25,14 @@ export const AddRecipientItem: React.FC<{
 			dataTestId="AddRecipientItem"
 			titleSlot={
 				<div className="flex w-full items-center justify-between">
-					<div className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500">
+					<div className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
 					<Button
 						onClick={() => onDelete(index)}
 						data-testid="AddRecipientItem--deleteButton_mobile"
 						size="icon"
-						className="p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
+						className="text-theme-secondary-700 dark:text-theme-secondary-500 p-0 sm:hidden"
 						variant="transparent"
 					>
 						<Icon name="Trash" size="lg" />
@@ -67,7 +67,7 @@ export const AddRecipientItem: React.FC<{
 								<Amount
 									ticker={ticker}
 									value={amount!}
-									className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+									className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
 								/>
 							}
 						/>
@@ -77,7 +77,7 @@ export const AddRecipientItem: React.FC<{
 			rightSlot={
 				<div className="flex items-center gap-3">
 					<div className="flex flex-col items-end space-y-2">
-						<div className="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500">
+						<div className="text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold whitespace-nowrap">
 							{showExchangeAmount ? (
 								<span data-testid="AddRecipientItem--exchangeAmount" className="hidden sm:inline">
 									<Amount
@@ -93,7 +93,7 @@ export const AddRecipientItem: React.FC<{
 						<Amount
 							ticker={ticker}
 							value={amount!}
-							className="font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+							className="text-theme-secondary-900 dark:text-theme-secondary-200 leading-5 font-semibold"
 						/>
 					</div>
 					<Button

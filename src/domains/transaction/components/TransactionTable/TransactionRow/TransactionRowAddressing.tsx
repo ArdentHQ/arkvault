@@ -98,7 +98,7 @@ const ContractAddressing = ({
 					to={transaction.wallet().coin().link().wallet(address)}
 					isExternal
 					showExternalIcon={false}
-					className="whitespace-nowrap text-sm font-semibold"
+					className="text-sm font-semibold whitespace-nowrap"
 				>
 					{t("COMMON.CONTRACT")}
 				</Link>
@@ -140,7 +140,7 @@ const MultiPaymentAddressing = ({
 				direction={direction}
 				style={isAdvanced && variant === "recipient" ? "return" : direction}
 			/>
-			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold">
 				{(direction === "return" || direction === "sent") && (
 					<>
 						{t("COMMON.MULTIPLE")}{" "}
@@ -245,7 +245,7 @@ export const TransactionRowAddressing = ({
 							to={transaction.wallet().coin().link().wallet(recipientAddress)}
 							isExternal
 							showExternalIcon={false}
-							className="whitespace-nowrap text-sm font-semibold"
+							className="text-sm font-semibold whitespace-nowrap"
 						>
 							{t("COMMON.CONTRACT")}
 						</Link>

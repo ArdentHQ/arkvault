@@ -19,14 +19,14 @@ interface TransferOverwriteModalProperties {
 }
 
 const DetailLabel = ({ label }: { label: string }) => (
-	<div className="mb-2 text-sm font-semibold text-theme-secondary-500">{label}</div>
+	<div className="text-theme-secondary-500 mb-2 text-sm font-semibold">{label}</div>
 );
 
 const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; newNode: ReactNode }) => (
-	<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-		<div className="min-w-0 flex-1 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
+	<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex rounded-xl border">
+		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 min-w-0 flex-1 border-r">
 			<div
-				className="border-b border-theme-secondary-300 px-3 py-2.5 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 border-b px-3 py-2.5"
 				data-testid="OverwriteDetail__Current"
 			>
 				<DetailLabel label="Current value" />
@@ -44,13 +44,13 @@ const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; new
 );
 
 const AvailableValue = ({ value }: { value: string }) => (
-	<div className="truncate font-medium text-theme-secondary-900 dark:text-theme-secondary-200">{value}</div>
+	<div className="text-theme-secondary-900 dark:text-theme-secondary-200 truncate font-medium">{value}</div>
 );
 
 const UnavailableValue = () => {
 	const { t } = useTranslation();
 
-	return <div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>;
+	return <div className="text-theme-secondary-500 font-medium">{t("COMMON.NOT_AVAILABLE")}</div>;
 };
 
 const DetailText = ({ value }: { value: string | null }) =>
@@ -132,7 +132,7 @@ export const TransferOverwriteModal = ({
 				)}
 			</div>
 
-			<label className="mt-4 inline-flex cursor-pointer items-center space-x-3 pb-10 text-theme-secondary-text md:pb-0">
+			<label className="text-theme-secondary-text mt-4 inline-flex cursor-pointer items-center space-x-3 pb-10 md:pb-0">
 				<Checkbox
 					data-testid="OverwriteModal__clear_prefilled"
 					checked={clearPrefilled}

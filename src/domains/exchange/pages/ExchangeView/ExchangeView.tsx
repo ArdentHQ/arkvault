@@ -95,7 +95,7 @@ export const ExchangeView = () => {
 
 				<div
 					className={cn(
-						"relative w-full grow flex-col bg-theme-background p-6 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:p-10 sm:shadow-2xl lg:max-w-2xl",
+						"bg-theme-background sm:rounded-2.5xl relative w-full grow flex-col p-6 sm:max-w-xl sm:grow-0 sm:p-10 sm:shadow-2xl lg:max-w-2xl",
 						isReady ? "flex" : "hidden",
 					)}
 				>

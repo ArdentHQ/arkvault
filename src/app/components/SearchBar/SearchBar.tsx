@@ -19,11 +19,11 @@ export const SearchBar = ({ placeholder, className, children, onSearch }: Search
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="SearchBar" className={cn("bg-theme-secondary-100 px-10 pb-8 pt-8", className)}>
-			<div className="flex items-center rounded-xs bg-theme-background px-10 py-6 shadow-xl">
-				{children || <Icon name="MagnifyingGlass" className="mr-8 w-4 text-theme-secondary-300" />}
+		<div data-testid="SearchBar" className={cn("bg-theme-secondary-100 px-10 pt-8 pb-8", className)}>
+			<div className="bg-theme-background flex items-center rounded-xs px-10 py-6 shadow-xl">
+				{children || <Icon name="MagnifyingGlass" className="text-theme-secondary-300 mr-8 w-4" />}
 
-				<div className="mr-4 flex-1 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800">
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mr-4 flex-1 border-l pl-4">
 					<Input
 						placeholder={placeholder || t("COMMON.SEARCH_BAR.PLACEHOLDER")}
 						onChange={(event) => setQuery((event.target as HTMLInputElement).value)}

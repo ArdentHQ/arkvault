@@ -32,7 +32,7 @@ export const NetworkOption = memo(
 					<div className="flex items-center space-x-4">
 						<NetworkIcon network={network} iconSize={iconSize} showTooltip={false} isCompact />
 
-						<div className="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200">
+						<div className="text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold">
 							{networkDisplayName(network)}
 						</div>
 					</div>
@@ -47,7 +47,7 @@ export const NetworkOption = memo(
 export const NetworkOptions = ({ disabled = false, networks = [], onSelect, selected }: NetworkOptionsProperties) => (
 	<div
 		data-testid="NetworkOptions"
-		className="flex-col space-x-0 space-y-3 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
+		className="flex-col space-y-3 space-x-0 sm:flex sm:flex-row sm:space-y-0 sm:space-x-3"
 	>
 		{networks.map((network: Networks.Network) => (
 			<NetworkOption

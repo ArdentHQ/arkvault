@@ -19,10 +19,10 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 	return (
 		<div className="flex flex-col text-left" data-testid="FilterWallets">
 			<div className="mb-6">
-				<div className="font-semibold text-theme-secondary-text">
+				<div className="text-theme-secondary-text font-semibold">
 					{t("DASHBOARD.FILTER_WALLETS.CRYPTOASSET.TITLE")}
 				</div>
-				<div className="mt-1 text-sm font-semibold text-theme-secondary-500">
+				<div className="text-theme-secondary-500 mt-1 text-sm font-semibold">
 					{t("DASHBOARD.FILTER_WALLETS.CRYPTOASSET.DESCRIPTION")}
 				</div>
 			</div>
@@ -37,16 +37,16 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 				}}
 			/>
 
-			<div className="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800" />
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-2 mb-6 border-t border-dotted" />
 
 			<div className="flex flex-col">
 				<div className="flex items-center justify-between">
 					<div>
-						<div className="font-semibold text-theme-secondary-text">
+						<div className="text-theme-secondary-text font-semibold">
 							{t("DASHBOARD.FILTER_WALLETS.WALLETS.TITLE")}
 						</div>
 
-						<div className="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500">
+						<div className="text-theme-secondary-500 mt-2 pr-12 text-sm font-semibold">
 							{t("DASHBOARD.FILTER_WALLETS.WALLETS.DESCRIPTION")}
 						</div>
 					</div>
@@ -59,7 +59,7 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 						toggleContent={(isOpen: boolean) => (
 							<div
 								data-testid="filter-wallets__wallets"
-								className="flex cursor-pointer items-center justify-end text-theme-secondary-text"
+								className="text-theme-secondary-text flex cursor-pointer items-center justify-end"
 							>
 								<span className="mr-2 inline-block font-semibold">
 									{walletDisplayOptions.find((option) => option.value === walletsDisplayType)?.label}

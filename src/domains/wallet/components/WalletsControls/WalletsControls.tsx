@@ -83,7 +83,7 @@ export const WalletsControls = React.memo(
 
 		return (
 			<div data-testid="WalletControls" className="flex items-center justify-end">
-				<div className="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative">
+				<div className="border-theme-secondary-300 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 static mr-0 flex items-center pr-0 sm:mr-8 sm:border-r sm:pr-5 md:relative">
 					<Dropdown
 						placement="bottom"
 						toggleContent={
@@ -150,7 +150,7 @@ export const WalletsControls = React.memo(
 				<div className="flex items-center sm:hidden">
 					<Dropdown
 						toggleContent={
-							<span className="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600">
+							<span className="text-theme-primary-300 dark:text-theme-secondary-600 -mx-1 flex items-center px-5 py-3">
 								<Icon name="Plus" />
 							</span>
 						}

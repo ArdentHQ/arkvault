@@ -234,7 +234,7 @@ export const GeneralSettings: React.FC = () => {
 				<Button
 					onClick={() => setIsResetProfileOpen(true)}
 					variant="danger"
-					className="w-full bg-theme-danger-50 sm:w-auto"
+					className="bg-theme-danger-50 w-full sm:w-auto"
 				>
 					<Icon name="ArrowRotateLeft" />
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
@@ -298,12 +298,12 @@ export const GeneralSettings: React.FC = () => {
 			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
 					<div className="group space-y-2">
-						<span className="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600">
+						<span className="text-theme-secondary-text group-hover:text-theme-primary-600 cursor-default text-sm font-semibold transition-colors duration-100">
 							{t("SETTINGS.GENERAL.PERSONAL.PROFILE_IMAGE")}
 						</span>
 
 						<div className="relative flex flex-row sm:space-x-3">
-							<div className="hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg bg-theme-primary-50 px-4 dark:bg-theme-dark-950 sm:flex">
+							<div className="bg-theme-primary-50 dark:bg-theme-dark-950 hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg px-4 sm:flex">
 								<Image
 									className="hidden lg:block"
 									name={isDarkMode ? "ProfileImageExampleDark" : "ProfileImageExampleLight"}
@@ -413,7 +413,7 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 						</div>
 
-						<div className="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4">
+						<div className="mt-5 flex flex-col sm:mt-0 sm:ml-5 sm:w-2/4">
 							<FormField name="locale">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.LANGUAGE")} />
 								<Select

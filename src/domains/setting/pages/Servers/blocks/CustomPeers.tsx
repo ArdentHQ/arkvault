@@ -61,30 +61,30 @@ const PeerRow = ({
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
 			<TableCell variant="start" innerClassName={rowColor}>
-				<div className="relative flex w-full flex-col md-lg:h-5 md-lg:overflow-hidden">
-					<div className="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full">
+				<div className="md-lg:h-5 md-lg:overflow-hidden relative flex w-full flex-col">
+					<div className="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col">
 						<TruncatedWithTooltip
-							className="cursor-pointer truncate text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50"
+							className="text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer truncate text-sm font-semibold transition-colors duration-100"
 							text={name}
 						/>
 
 						<TruncatedWithTooltip
-							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden"
+							className="text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden text-xs font-semibold"
 							text={address}
 						/>
 					</div>
 				</div>
 			</TableCell>
 
-			<TableCell className="hidden md-lg:table-cell" innerClassName={rowColor}>
+			<TableCell className="md-lg:table-cell hidden" innerClassName={rowColor}>
 				<TruncatedWithTooltip
 					text={address}
-					className="cursor-pointer text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-72 lg:max-w-44 xl:max-w-72"
+					className="text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer text-sm font-semibold transition-colors duration-100 md:max-w-72 lg:max-w-44 xl:max-w-72"
 				/>
 			</TableCell>
 
 			<TableCell innerClassName={rowColor}>
-				<div className="flex h-11 items-center text-theme-secondary-900 dark:text-theme-dark-50">
+				<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex h-11 items-center">
 					{height === undefined ? (
 						<span className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</span>
 					) : (
@@ -115,7 +115,7 @@ const PeerRow = ({
 
 			<TableCell variant="end" innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
-					<div className="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-r pr-3">
 						<Toggle
 							data-testid="CustomPeers-toggle"
 							defaultChecked={checked}
@@ -268,7 +268,7 @@ const CustomPeersPeer: React.VFC<{
 											<Button
 												variant="transparent"
 												size="icon"
-												className="-m-3 text-theme-secondary-700 dark:text-theme-dark-200"
+												className="text-theme-secondary-700 dark:text-theme-dark-200 -m-3"
 											>
 												<Icon name="EllipsisVerticalFilled" size="md" />
 											</Button>
@@ -282,7 +282,7 @@ const CustomPeersPeer: React.VFC<{
 									<Icon
 										name="ChevronDownSmall"
 										className={cn(
-											"text-theme-secondary-700 transition-transform dark:text-theme-dark-200",
+											"text-theme-secondary-700 dark:text-theme-dark-200 transition-transform",
 											{ "rotate-180": isExpanded },
 										)}
 										size="sm"
@@ -299,18 +299,18 @@ const CustomPeersPeer: React.VFC<{
 						>
 							<TruncatedWithTooltip
 								text={address}
-								className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+								className="text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold"
 							/>
 						</MobileTableElementRow>
 
 						<MobileTableElementRow title={t("COMMON.HEIGHT")}>
-							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+							<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm font-semibold">
 								{height}
 							</span>
 						</MobileTableElementRow>
 
 						<MobileTableElementRow title={t("COMMON.TYPE")}>
-							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+							<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold">
 								<Icon
 									className="text-theme-secondary-700"
 									size="lg"
@@ -321,7 +321,7 @@ const CustomPeersPeer: React.VFC<{
 						</MobileTableElementRow>
 
 						<MobileTableElementRow title={t("COMMON.STATUS")} className="sm:hidden">
-							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+							<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold">
 								<CustomPeerStatusIcon status={serverStatus} />
 								<div>
 									{serverStatus === true && (
@@ -339,7 +339,7 @@ const CustomPeersPeer: React.VFC<{
 							</div>
 						</MobileTableElementRow>
 
-						<div className="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden">
+						<div className="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden">
 							<Button variant="secondary" size="sm" onClick={() => handleSelectOption({ value: "edit" })}>
 								<Icon name="Pencil" />
 							</Button>
@@ -392,11 +392,11 @@ const CustomPeersTableFooter = ({
 		<tr data-testid="EmptyResults">
 			<td colSpan={totalColumns}>
 				{isEmpty && (
-					<div className="py-3 text-center text-theme-secondary-700 dark:text-theme-dark-200">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 py-3 text-center">
 						{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}
 					</div>
 				)}
-				<div className="hidden border-t border-theme-secondary-300 px-6 pb-2 pt-3 dark:border-theme-dark-700 md:block">
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 hidden border-t px-6 pt-3 pb-2 md:block">
 					<Button
 						data-testid="CustomPeers--addnew"
 						onClick={addNewServerHandler}

@@ -101,10 +101,10 @@ export const SignIn: React.VFC<SignInProperties> = ({ isOpen, profile, onCancel,
 					<ProfileAvatar profile={profile} />
 
 					<div className="flex flex-col">
-						<p className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+						<p className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 							{t("COMMON.NAME")}
 						</p>
-						<p className="font-semibold text-theme-text" data-testid="profile-card__user--name">
+						<p className="text-theme-text font-semibold" data-testid="profile-card__user--name">
 							<span>{profile.name()}</span>
 						</p>
 					</div>

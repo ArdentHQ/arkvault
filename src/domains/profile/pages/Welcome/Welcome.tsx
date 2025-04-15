@@ -222,7 +222,7 @@ export const Welcome = () => {
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(
-								"min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')]",
+								"border-theme-navy-100 bg-theme-navy-50 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 min-w-0 basis-1/2 rounded-xl border bg-[url('/welcome-bg-white.svg')] dark:bg-[url('/welcome-bg-dark.svg')]",
 								{
 									"hidden sm:block": hasProfiles,
 									"mb-6 sm:mb-0": !hasProfiles,
@@ -231,7 +231,7 @@ export const Welcome = () => {
 						>
 							<WelcomeSlider />
 						</div>
-						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6">
+						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
 							<div
 								className={cn("mx-auto flex max-w-[400px] flex-col", {
 									"h-[calc(100vh_-_160px)] sm:h-full": hasProfiles,
@@ -252,7 +252,7 @@ export const Welcome = () => {
 												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.TITLE")}
 										</h2>
 
-										<p className="text-base leading-7 text-theme-secondary-text">
+										<p className="text-theme-secondary-text text-base leading-7">
 											{hasProfiles
 												? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION")
 												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.DESCRIPTION")}
@@ -280,7 +280,7 @@ export const Welcome = () => {
 								</div>
 
 								<div className="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0">
-									<p className="text-center text-base text-theme-secondary-text">
+									<p className="text-theme-secondary-text text-center text-base">
 										<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
 										<Link
 											to="/profiles/import"

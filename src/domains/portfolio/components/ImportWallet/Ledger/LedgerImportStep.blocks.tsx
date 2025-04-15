@@ -15,10 +15,10 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 
 export const SectionHeaderMobile = ({ title }: { title: string }) => (
 	<div
-		className="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+		className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
 		data-testid="SectionHeaderMobile__wrapper"
 	>
-		<span className="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">{title}</span>
+		<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold">{title}</span>
 	</div>
 );
 
@@ -51,8 +51,8 @@ const EditButton = ({ onClick }: { onClick: () => void }) => {
 const DesktopImportSection = ({ title, children }: { title: string; children: React.ReactNode }) => (
 	<div className="flex flex-col gap-4" data-tesid="DesktopImportSection__wrapper">
 		<div className="flex flex-col gap-2">
-			<span className="text-base font-semibold text-theme-secondary-700">{title}</span>
-			<div className="flex flex-col gap-4 rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800">
+			<span className="text-theme-secondary-700 text-base font-semibold">{title}</span>
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col gap-4 rounded-xl border px-6 py-5">
 				{children}
 			</div>
 		</div>
@@ -102,7 +102,7 @@ export const SingleImport = ({
 						<SectionBodyItem title={t("COMMON.NAME")}>
 							<div className="flex flex-row items-center gap-2">
 								{wallet.alias()}
-								<hr className="h-5 w-px border-transparent bg-theme-secondary-300 dark:bg-theme-secondary-800" />
+								<hr className="bg-theme-secondary-300 dark:bg-theme-secondary-800 h-5 w-px border-transparent" />
 								<EditButton onClick={() => onClickEditWalletName(wallet)} />
 							</div>
 						</SectionBodyItem>
@@ -119,7 +119,7 @@ export const SingleImport = ({
 					<Address address={ledgerWallet.address} showCopyButton truncateOnTable />
 				</SectionBodyItem>
 
-				<hr className="w-full border border-dashed border-theme-secondary-300 dark:border-theme-secondary-800" />
+				<hr className="border-theme-secondary-300 dark:border-theme-secondary-800 w-full border border-dashed" />
 
 				<SectionBodyItem title={t("COMMON.BALANCE")}>
 					<Amount value={ledgerWallet.balance ?? 0} ticker={network.ticker()} />
@@ -156,15 +156,15 @@ export const ImportedLedgerMobileItem = ({
 
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
-			<div className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
-				<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+			<div className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black">
+				<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold">
 					{name}
 				</span>
 
 				<EditButton onClick={onClick} />
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
+			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
 				<MobileSection title={t("COMMON.ADDRESS")}>
 					<Address
 						address={address}
