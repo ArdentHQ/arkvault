@@ -1,4 +1,4 @@
-@config "../favicon.svg../tailwind.config.js";
+@config "../../tailwind.config.js";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
