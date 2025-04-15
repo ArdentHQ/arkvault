@@ -24,7 +24,7 @@ const ArrowButtonStyled = ({
 		type={type}
 		{...props}
 		className={twMerge(
-			"flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600",
+			"flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-primary-200 dark:disabled:border-theme-secondary-700 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-600",
 			cn({
 				"border-b border-theme-secondary-400 dark:border-theme-secondary-700": !isDownArrow,
 			}),
