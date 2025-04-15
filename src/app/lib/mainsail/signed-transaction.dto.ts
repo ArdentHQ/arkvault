@@ -18,7 +18,10 @@ export class SignedTransactionData
 		this.identifier = signedData.id;
 		this.signedData = signedData;
 		this.serialized = serialized;
-		this.signedData.senderAddress = Address.fromPublicKey(signedData.senderPublicKey);
+
+		if (!this.signedData.senderAddress) {
+			this.signedData.senderAddress = Address.fromPublicKey(signedData.senderPublicKey);
+		}
 
 		return this;
 	}
