@@ -1,5 +1,5 @@
 import { Application } from "@mainsail/kernel";
-import { IoC, Services, } from "@/app/lib/sdk";
+import { IoC, Services } from "@/app/lib/sdk";
 import { BIP39 } from "@/app/lib/crypto";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
 import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
