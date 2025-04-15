@@ -75,7 +75,7 @@ const NodeStatusNode: React.VFC<{
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="flex-grow font-semibold">{renderDisplayName()}</div>
+			<div className="grow font-semibold">{renderDisplayName()}</div>
 
 			<div className="cursor-pointer">
 				{isOnline === true && (
