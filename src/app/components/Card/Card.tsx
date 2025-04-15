@@ -26,9 +26,9 @@ const StyledButton = ({ variant, onClick, ...props }: StyledButtonProps) => (
 		{...props}
 		onClick={onClick}
 		className={twMerge(
-			"relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800",
+			"relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-hidden transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-hidden dark:border-theme-secondary-800",
 			cn({
-				"hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:shadow-xl hover:dark:border-theme-secondary-800 hover:dark:bg-theme-secondary-800":
+				"hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:shadow-xl dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800":
 					typeof onClick === "function" && variant === "primary",
 				"hover:border-theme-primary-700 hover:bg-theme-primary-700 hover:text-white hover:shadow-xl":
 					typeof onClick === "function" && variant === "secondary",
