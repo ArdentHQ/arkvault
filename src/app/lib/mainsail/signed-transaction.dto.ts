@@ -1,4 +1,4 @@
-import { Contracts, DTO, Exceptions } from "@/app/lib/sdk";
+import { Contracts, DTO } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
