@@ -35,7 +35,7 @@ export const InstallPWA = () => {
 						<div className="w-full border-b border-theme-secondary-300 dark:border-theme-secondary-700 sm:h-full sm:w-auto sm:border-l" />
 					</div>
 
-					<div className="mx-auto flex max-w-60 flex-grow flex-col justify-center text-center text-theme-text sm:max-w-full sm:px-4 sm:text-left">
+					<div className="mx-auto flex max-w-60 grow flex-col justify-center text-center text-theme-text sm:max-w-full sm:px-4 sm:text-left">
 						<div>
 							<span className="font-semibold">ARK</span>VAULT
 						</div>
