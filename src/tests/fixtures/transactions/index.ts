@@ -43,7 +43,6 @@ export const TransactionFixture = {
 	isReturn: () => false,
 	isTransfer: () => true,
 	isSecondSignature: () => false,
-	isMultiSignatureRegistration: () => false,
 	usesMultiSignature: () => false,
 	isDelegateRegistration: () => false,
 	isDelegateResignation: () => false,

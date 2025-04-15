@@ -6,19 +6,6 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
-// This function determines if an unconfirmed musig transaction is a returning transaction.
-// It uses `sender()` and `recipient()` methods to do checks instead of using the active
-// wallet. It is because unconfirmed transactions should be reflected from the sender perspective.
-const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionData): boolean => {
-	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
-
-	const isMusig = [usesMultiSignature, !transaction.isConfirmed(), !transaction.isMultiSignatureRegistration()].every(
-		Boolean,
-	);
-
-	return isMusig ? transaction.sender() === transaction.recipient() : false;
-};
-
 const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
 
@@ -27,7 +14,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	}
 
 	// should return 0 as we don't want to show a hint
-	if (transaction.isReturn() || isReturnUnconfirmedMusigTransaction(transaction)) {
+	if (transaction.isReturn()) {
 		return returnedAmount;
 	}
 

@@ -31,17 +31,6 @@ export const SentStep = ({
 			<p className="text-theme-secondary-700">
 				{t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.STEP_3.DESCRIPTION")}
 			</p>
-
-			<div className="mt-4">
-				<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
-				<div className="mt-2">
-					<Signatures
-						transaction={transaction}
-						profile={wallet.profile()}
-						publicKeys={transactionPublicKeys(transaction).publicKeys}
-					/>
-				</div>
-			</div>
 		</section>
 	);
 };

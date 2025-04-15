@@ -1,6 +1,6 @@
 import { BuildTransferDataProperties } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 
-export const buildTransferData = async ({ coin, recipients, memo, isMultiSignature }: BuildTransferDataProperties) => {
+export const buildTransferData = async ({ coin, recipients, memo, }: BuildTransferDataProperties) => {
 	let data: Record<string, any> = {};
 
 	if (recipients?.length === 1) {
@@ -23,7 +23,7 @@ export const buildTransferData = async ({ coin, recipients, memo, isMultiSignatu
 		data.memo = memo;
 	}
 
-	const rounds = isMultiSignature ? "211" : "5";
+	const rounds = "5";
 	const expiration = await coin.transaction().estimateExpiration(rounds);
 
 	if (expiration) {

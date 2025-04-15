@@ -3,12 +3,10 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Tooltip } from "@/app/components/Tooltip";
-import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { AddressCopy, AddressLabel } from "@/app/components/Address";
-import { useMusigParticipants } from "@/domains/transaction/hooks/use-musig-participants";
 import { Skeleton } from "@/app/components/Skeleton";
 
 const ParticipantStatus = ({
@@ -21,50 +19,12 @@ const ParticipantStatus = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
-	const { isAwaitingOurFinalSignature } = useMultiSignatureStatus({ transaction, wallet });
-
-	const isAwaitingSignature = useMemo(() => {
-		try {
-			if (
-				transaction.isMultiSignatureRegistration() &&
-				!wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
-				!wallet.transaction().isAwaitingOtherSignatures(transaction.id())
-			) {
-				return false;
-			}
-
-			if (transaction.isMultiSignatureRegistration() && isAwaitingOurFinalSignature) {
-				return false;
-			}
-
-			return wallet.transaction().isAwaitingSignatureByPublicKey(transaction.id(), publicKey);
-		} catch {
-			return false;
-		}
-	}, [wallet, transaction, publicKey]);
-
-	const status = isAwaitingSignature ? t("COMMON.AWAITING_SIGNATURE") : t("COMMON.SIGNED");
+	const status = t("COMMON.SIGNED");
 
 	return (
 		<div data-testid="Signatures__participant-status" className="relative">
 			<Tooltip content={status}>
 				<div>
-					{isAwaitingSignature && (
-						<Icon
-							size="lg"
-							name="Clock"
-							data-testid="ParticipantStatus__waiting"
-							className="text-theme-secondary-500 dark:text-theme-secondary-700"
-						/>
-					)}
-					{!isAwaitingSignature && (
-						<Icon
-							name="CircleCheckMark"
-							size="lg"
-							className="text-theme-primary-500"
-							data-testid="ParticipantStatus__signed"
-						/>
-					)}
 				</div>
 			</Tooltip>
 		</div>
@@ -146,11 +106,8 @@ export const Signatures = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { participants, isLoading } = useMusigParticipants({
-		network: transaction.wallet().network(),
-		profile,
-		publicKeys,
-	});
+	const participants = 5;
+	const isLoading = true;
 
 	const skeletonRows = Array.from({ length: publicKeys.length }, () => ({}) as Contracts.IReadWriteWallet);
 

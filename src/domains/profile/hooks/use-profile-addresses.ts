@@ -16,15 +16,6 @@ interface ProfileAddressesProperties {
 	network?: Networks.Network;
 }
 
-const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
-	try {
-		return wallet.isMultiSignature();
-	} catch {
-		/* istanbul ignore next -- @preserve */
-		return false;
-	}
-};
-
 export const useProfileAddresses = (
 	{ profile, network }: ProfileAddressesProperties,
 	exceptMultiSignature?: boolean,
@@ -48,10 +39,6 @@ export const useProfileAddresses = (
 
 		for (const wallet of profileWallets) {
 			if (!isNetworkSelected(wallet.network().id())) {
-				continue;
-			}
-
-			if (exceptMultiSignature && isMultiSignature(wallet)) {
 				continue;
 			}
 
