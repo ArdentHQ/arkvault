@@ -65,7 +65,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 	const renderToggle = () => {
 		if (!toggleContent) {
 			return (
-				<div className="cursor-pointer outline-none focus:outline-none">
+				<div className="cursor-pointer outline-hidden focus:outline-hidden">
 					<Icon name={toggleIcon} size={toggleSize} />
 				</div>
 			);
@@ -138,7 +138,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 						<Wrapper
 							variant={options && variant === undefined ? "options" : variant}
 							className={cn(
-								"dropdown-body overflow-hidden bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900",
+								"dropdown-body overflow-hidden bg-white p-1 shadow-xl outline-hidden dark:bg-theme-dark-900",
 								{
 									rounded: variant !== "options",
 									"rounded-xl": variant === "options",
