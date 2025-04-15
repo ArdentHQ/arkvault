@@ -40,7 +40,7 @@ export const TransactionSummary = ({
 					<Amount
 						ticker={senderWallet.currency()}
 						value={transaction.fee()}
-						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance
 						profile={profile}
 					/>
@@ -53,7 +53,7 @@ export const TransactionSummary = ({
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}
-						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance
 						profile={profile}
 					/>

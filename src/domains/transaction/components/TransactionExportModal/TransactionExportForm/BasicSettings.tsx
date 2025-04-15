@@ -19,7 +19,7 @@ const DateRangeSelection = ({ className, minStartDate }: { className?: string; m
 	return (
 		<div
 			className={cn(
-				"flex w-full flex-col space-y-5 rounded-lg bg-theme-secondary-background px-5 py-4 md:flex-row md:space-x-5 md:space-y-0",
+				"bg-theme-secondary-background flex w-full flex-col space-y-5 rounded-lg px-5 py-4 md:flex-row md:space-y-0 md:space-x-5",
 				className,
 			)}
 		>
@@ -107,7 +107,7 @@ const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 						isOpen={isOpen}
 						disabled={isDisabled}
 						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-						label={<div className="whitespace-nowrap leading-tight">{selected?.label}</div>}
+						label={<div className="leading-tight whitespace-nowrap">{selected?.label}</div>}
 					/>
 				)}
 			/>

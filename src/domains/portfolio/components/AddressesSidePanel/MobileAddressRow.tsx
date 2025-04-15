@@ -56,7 +56,7 @@ export const MobileAddressRow = ({
 						)}
 
 						<div
-							className={cn("truncate text-sm font-semibold leading-[17px]", {
+							className={cn("truncate text-sm leading-[17px] font-semibold", {
 								"group-hover:text-theme-primary-900 group-hover:dark:text-theme-dark-200": !isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
 							})}
@@ -69,7 +69,7 @@ export const MobileAddressRow = ({
 								onClick={() => onDelete(wallet.address())}
 								data-testid={`AddressRow--delete-${wallet.address()}`}
 								size="icon"
-								className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 hover:dark:text-white"
+								className="text-theme-secondary-700 hover:bg-theme-danger-400 dark:text-theme-secondary-500 p-1 hover:text-white hover:dark:text-white"
 								variant="transparent"
 							>
 								<Icon name="Trash" dimensions={[16, 16]} />
@@ -81,14 +81,14 @@ export const MobileAddressRow = ({
 								data-testid="icon-MarkedTrash"
 								name="MarkedTrash"
 								dimensions={[16, 16]}
-								className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
+								className="text-theme-secondary-500 dark:text-theme-dark-500 p-1"
 							/>
 						)}
 					</div>
 				}
 			>
 				<div className={cn("sm:w-full sm:p-0")}>
-					<div className="space-y-4 px-4 pb-4 pt-3 sm:hidden">
+					<div className="space-y-4 px-4 pt-3 pb-4 sm:hidden">
 						<InfoDetail
 							label="Address"
 							body={
@@ -105,13 +105,13 @@ export const MobileAddressRow = ({
 								<Amount
 									ticker={wallet.network().ticker()}
 									value={wallet.balance()}
-									className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+									className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
 								/>
 							}
 						/>
 					</div>
 					{!!errorMessage && (
-						<div className="flex space-x-4 rounded-b-sm bg-theme-danger-50 px-4 py-3 dark:bg-theme-dark-800">
+						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 flex space-x-4 rounded-b-sm px-4 py-3">
 							<div className="mx-[2px] mt-1 flex w-5 justify-center">
 								<Icon
 									name="CircleCross"
@@ -119,7 +119,7 @@ export const MobileAddressRow = ({
 									size="md"
 								/>
 							</div>
-							<p className="max-w-60 text-sm text-theme-secondary-700 dark:text-theme-dark-50">
+							<p className="text-theme-secondary-700 dark:text-theme-dark-50 max-w-60 text-sm">
 								{errorMessage}
 							</p>
 						</div>

@@ -49,7 +49,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 
 			{fileFormat === ".wwe" && (
 				<p
-					className="mt-4 text-center text-base text-theme-secondary-text"
+					className="text-theme-secondary-text mt-4 text-center text-base"
 					data-testid="SelectFileStep__WweImport"
 				>
 					<span>{t("PROFILE.IMPORT.SELECT_FILE_STEP.LEGACY_IMPORT")} </span>

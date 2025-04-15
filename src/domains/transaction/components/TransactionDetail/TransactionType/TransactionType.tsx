@@ -46,7 +46,7 @@ export const TransactionType = ({
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
-								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
+								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
 									{transaction.username()}
 								</div>
 							</div>
@@ -60,7 +60,7 @@ export const TransactionType = ({
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
-								<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
+								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
 									{validatorPublickey(transaction)}
 								</div>
 							</div>
@@ -75,7 +75,7 @@ export const TransactionType = ({
 
 									<div className="flex w-full justify-between sm:justify-start">
 										<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
-										<div className="max-sm:text-sm font-semibold leading-5">
+										<div className="leading-5 font-semibold max-sm:text-sm">
 											<MusigGeneratedAddress
 												publicKeys={publicKeys}
 												min={min}
@@ -90,7 +90,7 @@ export const TransactionType = ({
 
 							<div className="flex w-full items-center justify-between sm:justify-start">
 								<DetailLabelText>{t("TRANSACTION.SIGNATURES")}</DetailLabelText>
-								<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
+								<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 									{min} {t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", { length: publicKeys.length })}
 								</div>
 							</div>

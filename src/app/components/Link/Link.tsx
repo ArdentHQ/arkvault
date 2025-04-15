@@ -21,7 +21,7 @@ const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisab
 		className={twMerge(
 			"relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
 			cn({
-				"cursor-not-allowed text-theme-secondary-text": isDisabled,
+				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500":
 					!isDisabled,
 			}),
@@ -40,7 +40,7 @@ const Content = ({
 	<span
 		{...props}
 		className={twMerge(
-			"break-all border-b border-transparent transition-colors delay-100 duration-200",
+			"border-b border-transparent break-all transition-colors delay-100 duration-200",
 			cn({
 				"group-hover/inner:border-current": !isDisabled && showExternalIcon,
 				"hover:border-current": !isDisabled && !showExternalIcon,

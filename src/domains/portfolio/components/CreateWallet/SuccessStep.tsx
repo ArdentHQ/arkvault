@@ -42,7 +42,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 				<DetailWrapper label={t("COMMON.ADDRESS_NAME")}>
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
-						<div className="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5">
+						<div className="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5">
 							<div className="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none">
 								{" "}
 								{wallet.alias()}{" "}
@@ -57,7 +57,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 								data-testid="CreateWallet__edit-alias"
 								type="button"
 								variant="transparent"
-								className="space-x-0 px-0 py-0 text-theme-navy-600"
+								className="text-theme-navy-600 space-x-0 px-0 py-0"
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" />

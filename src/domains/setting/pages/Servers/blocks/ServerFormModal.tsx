@@ -92,7 +92,7 @@ const ServerFormModal: React.VFC<{
 				<div data-testid="Servertype-fetching" className="flex items-center space-x-2">
 					<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Clock" />
 
-					<span className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold">
 						{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_DETAILS")}
 					</span>
 				</div>
@@ -104,7 +104,7 @@ const ServerFormModal: React.VFC<{
 				<div data-testid="Servertype-unknown" className="flex items-center space-x-2">
 					<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Forbidden" />
 
-					<span className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold">
 						{t("COMMON.NOT_AVAILABLE")}
 					</span>
 				</div>
@@ -118,7 +118,7 @@ const ServerFormModal: React.VFC<{
 					name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
 				/>
 
-				<span className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+				<span className="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold">
 					{serverType === "musig"
 						? t("SETTINGS.SERVERS.ADD_NEW_SERVER.MULTISIG_SERVER")
 						: t("SETTINGS.SERVERS.ADD_NEW_SERVER.PEER_SERVER")}

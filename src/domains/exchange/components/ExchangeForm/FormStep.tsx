@@ -293,7 +293,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				>
 					{currency?.coin?.toUpperCase()}
 				</span>
-				<span className="dark:theme-text-secondary-700 text-sm text-theme-secondary-500">{currency.name}</span>
+				<span className="dark:theme-text-secondary-700 text-theme-secondary-500 text-sm">{currency.name}</span>
 			</div>
 		);
 	};

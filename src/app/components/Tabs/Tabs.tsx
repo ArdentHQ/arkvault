@@ -91,7 +91,7 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 
 export const TabScroll = ({ children }) => (
 	<div data-testid="TabScroll" className="relative z-0">
-		<div className="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950">
+		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5">
 			<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 		</div>
 	</div>
@@ -107,7 +107,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			role="tab"
 			type="button"
 			className={twMerge(
-				"rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg",
+				"rounded-xs px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg",
 				properties.className,
 			)}
 			ref={reference}
@@ -132,7 +132,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			{properties.count !== undefined && (
 				<span
 					data-testid={`tabs__tab-button-${properties.tabId}-count`}
-					className="ml-2 rounded-xs bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
+					className="bg-theme-primary-100 dark:bg-theme-secondary-900 ml-2 rounded-xs px-1.5 py-0.5 text-sm font-semibold"
 				>
 					{properties.count}
 				</span>

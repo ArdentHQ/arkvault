@@ -99,7 +99,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			if (showUserIcon) {
 				addons.end = {
 					content: (
-						<div className="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white">
+						<div className="text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white">
 							<Icon name="User" size="lg" />
 						</div>
 					),
@@ -120,7 +120,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				<button
 					data-testid="SelectAddress__wrapper"
 					className={cn(
-						"relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400",
+						"focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-none",
 						{ "cursor-default": disabled },
 					)}
 					type="button"

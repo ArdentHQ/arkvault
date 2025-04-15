@@ -19,7 +19,7 @@ const ContractLabel = () => {
 			color="neutral"
 			size="xs"
 			noBorder
-			className="max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[2px] dark:border"
+			className="max-w-40 truncate rounded-xs px-1 py-[2px] whitespace-nowrap dark:border"
 			data-testid="TransactionRow__type"
 		>
 			<div className="flex items-center space-x-1.5">
@@ -102,7 +102,7 @@ export const TransactionRecipients = ({
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+					<span className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 							({recipients.length}){" "}
@@ -152,7 +152,7 @@ export const TransactionRecipientsModal = ({
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="inline-flex items-center gap-1 text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+					<span className="inline-flex items-center gap-1 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span
 							className="text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -169,7 +169,7 @@ export const TransactionRecipientsModal = ({
 						onClick={() => setShowModal(true)}
 						variant="transparent"
 						data-testid="TransactionRecipientsModal--ShowList"
-						className="p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+						className="text-theme-navy-600 decoration-theme-navy-600 p-0 text-sm leading-[17px] underline decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
 					>
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
 					</Button>

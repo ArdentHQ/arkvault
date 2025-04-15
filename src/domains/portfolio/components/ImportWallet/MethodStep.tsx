@@ -35,7 +35,7 @@ const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option:
 	<div
 		onClick={() => onSelect(option)}
 		tabIndex={0}
-		className="group cursor-pointer space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
+		className="group border-theme-primary-200 hover:bg-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 cursor-pointer space-y-2 rounded-lg border p-4 sm:p-6"
 	>
 		<div className="flex items-center space-x-2">
 			{option.icon && (
@@ -43,12 +43,12 @@ const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option:
 					{option.icon}
 				</div>
 			)}
-			<div className="font-semibold leading-5 text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-theme-dark-50 dark:group-hover:text-white">
+			<div className="text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-theme-dark-50 leading-5 font-semibold dark:group-hover:text-white">
 				{option.label}
 			</div>
 		</div>
 		{option.description && (
-			<div className="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-primary-500 dark:text-theme-dark-200 dark:group-hover:text-white sm:block">
+			<div className="text-theme-secondary-700 group-hover:text-theme-primary-500 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block dark:group-hover:text-white">
 				{option.description}
 			</div>
 		)}

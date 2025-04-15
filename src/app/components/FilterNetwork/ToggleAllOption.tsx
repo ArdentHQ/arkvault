@@ -17,10 +17,10 @@ export const ToggleAllOption = ({ onClick, isHidden = false, isSelected = false 
 		<Circle
 			size="lg"
 			data-testid="network__viewall"
-			className="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800"
+			className="border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer"
 			onClick={onClick}
 		>
-			<div className="text-sm font-semibold text-theme-primary-700">{t("COMMON.ALL")}</div>
+			<div className="text-theme-primary-700 text-sm font-semibold">{t("COMMON.ALL")}</div>
 
 			<Badge
 				className={`${

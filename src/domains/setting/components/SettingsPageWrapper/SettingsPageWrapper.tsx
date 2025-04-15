@@ -46,7 +46,7 @@ export const SettingsWrapper = ({
 							/>
 						</div>
 
-						<div className="flex-1 border-theme-secondary-300 dark:border-theme-dark-700 sm:overflow-hidden sm:rounded-xl sm:border">
+						<div className="border-theme-secondary-300 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border">
 							{children}
 						</div>
 					</div>

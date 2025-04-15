@@ -27,7 +27,7 @@ const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrap
 				"h-6 w-6 text-xs": size === "avatarMobile",
 				"h-8 w-8 text-sm": size === "sm",
 				"ring-0": !noShadow && shadowClassName,
-				"ring-0 ring-theme-background": !noShadow && !shadowClassName,
+				"ring-theme-background ring-0": !noShadow && !shadowClassName,
 			}),
 			props.className,
 		)}
@@ -59,7 +59,7 @@ export const Avatar = ({
 			<div
 				className={cn(
 					"inline-flex h-full w-full items-center justify-center overflow-hidden align-middle",
-					{ "ring-2 ring-theme-primary-200 dark:ring-theme-primary-600": highlight },
+					{ "ring-theme-primary-200 dark:ring-theme-primary-600 ring-2": highlight },
 					innerClassName,
 				)}
 			>

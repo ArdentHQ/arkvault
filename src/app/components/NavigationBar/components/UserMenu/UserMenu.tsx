@@ -32,7 +32,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const renderAvatarSection = useCallback(
 		(isOpen: boolean) => (
-			<button className="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700">
+			<button className="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5">
 				<div
 					className="relative cursor-pointer items-center justify-center rounded-xs align-middle"
 					data-testid="UserMenu"
@@ -44,7 +44,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 									alt="Profile Avatar"
 									src={`data:image/svg+xml;utf8,${encodeURIComponent(avatarImage)}`}
 								/>
-								<span className="absolute text-xs font-semibold text-theme-background dark:text-theme-text">
+								<span className="text-theme-background dark:text-theme-text absolute text-xs font-semibold">
 									{userInitials}
 								</span>
 							</>
@@ -70,7 +70,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 			options={userMenuActions}
 			toggleContent={renderAvatarSection}
 			top={
-				<div className="flex items-center justify-between bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden">
+				<div className="bg-theme-secondary-100 text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden flex items-center justify-between px-6 py-3 text-sm leading-[17px] font-semibold">
 					<p>{t("COMMON.BALANCE")}:</p>
 					<div className="flex items-center gap-2">
 						<HideBalance className="md-lg:hidden" profile={profile} />
