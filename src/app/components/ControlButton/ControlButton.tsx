@@ -10,15 +10,15 @@ const ControlButtonStyled = ({
 	<button
 		{...properties}
 		className={twMerge(
-			"relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700",
+			"relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-hidden disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 dark:disabled:text-theme-secondary-700",
 			cn({
-				"hover:bg-theme-primary-100 hover:text-theme-primary-700 hover:dark:bg-theme-secondary-800 hover:dark:text-white":
+				"hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white":
 					disabled || noBorder,
-				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded":
+				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:data-focus-visible-added:rounded-xs":
 					!noBorder && !disabled,
 				"hover:text-theme-primary-400": !disabled,
 				"mx-0.5 px-2.5": !noBorder,
-				"rounded px-2 py-1.5": noBorder,
+				"rounded-xs px-2 py-1.5": noBorder,
 			}),
 			properties.className,
 		)}
