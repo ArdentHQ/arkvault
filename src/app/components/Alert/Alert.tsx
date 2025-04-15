@@ -75,7 +75,7 @@ const AlertChevron = ({ collapsed, variant, ...props }: AlertChevronProperties) 
 	<span
 		{...props}
 		className={twMerge(
-			"!ml-auto transform transition-transform duration-100",
+			"ml-auto! transform transition-transform duration-100",
 			cn({
 				"rotate-0": collapsed,
 				"rotate-180": !collapsed,

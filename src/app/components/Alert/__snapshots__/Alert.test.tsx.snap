@@ -111,7 +111,7 @@ exports[`Alert > should render as collapsible 1`] = `
         Warning
       </span>
       <span
-        class="!ml-auto transform transition-transform duration-100 rotate-180 text-theme-warning-700 dark:text-white"
+        class="ml-auto! transform transition-transform duration-100 rotate-180 text-theme-warning-700 dark:text-white"
         data-testid="Alert__chevron"
       >
         <div
