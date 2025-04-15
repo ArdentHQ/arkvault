@@ -8,6 +8,7 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
 import { RawTransactionData } from "@/app/lib/sdk/signed-transaction.dto.contract";
+import { Address } from "@arkecosystem/typescript-crypto";
 
 export class SignedTransactionData
 	extends DTO.AbstractSignedTransactionData
@@ -17,6 +18,7 @@ export class SignedTransactionData
 		this.identifier = signedData.id;
 		this.signedData = signedData;
 		this.serialized = serialized;
+		this.signedData.senderAddress = Address.fromPublicKey(signedData.senderPublicKey);
 
 		return this;
 	}
