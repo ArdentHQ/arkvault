@@ -68,7 +68,7 @@ describe("SelectRecipient", () => {
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
 		const focusSpy = vi.spyOn(recipientInputField, "focus");
-		const blurSpy = vi.spyOn(recipientInputField, "blur-xs");
+		const blurSpy = vi.spyOn(recipientInputField, "blur");
 
 		// 1. Focus the select input which opens the drodpown
 		await userEvent.click(recipientInputField);
@@ -93,7 +93,7 @@ describe("SelectRecipient", () => {
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
 		const focusSpy = vi.spyOn(recipientInputField, "focus");
-		const blurSpy = vi.spyOn(recipientInputField, "blur-xs");
+		const blurSpy = vi.spyOn(recipientInputField, "blur");
 
 		await userEvent.click(selectRecipient());
 
