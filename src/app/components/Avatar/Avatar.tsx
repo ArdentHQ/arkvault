@@ -19,7 +19,7 @@ const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrap
 	<div
 		{...props}
 		className={twMerge(
-			"relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100",
+			"relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100",
 			cn({
 				"h-11 w-11 text-sm": size === "lg",
 				"h-16 w-16 text-xl": size === "xl",
@@ -39,7 +39,7 @@ const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrap
 export const Avatar = ({
 	address = "",
 	className,
-	innerClassName = "rounded",
+	innerClassName = "rounded-xs",
 	highlight,
 	noShadow,
 	shadowClassName,
