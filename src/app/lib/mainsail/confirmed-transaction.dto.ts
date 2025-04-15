@@ -61,7 +61,7 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return this.bigNumberService.make(this.data.amount);
+		return formatUnits(this.data.amount, "ark");
 	}
 
 	public override fee(): BigNumber {
