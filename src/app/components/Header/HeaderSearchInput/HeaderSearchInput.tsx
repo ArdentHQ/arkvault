@@ -57,7 +57,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 			>
 				<button
 					data-testid="HeaderSearchInput__input__reset"
-					className={cn("transition-all duration-300 focus:outline-none", { "mr-4": query !== "" })}
+					className={cn("transition-all duration-300 focus:outline-hidden", { "mr-4": query !== "" })}
 					onClick={handleQueryReset}
 					type="button"
 				>

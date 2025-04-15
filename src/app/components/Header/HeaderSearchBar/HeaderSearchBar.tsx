@@ -94,7 +94,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 
 					<button
 						data-testid="header-search-bar__reset"
-						className={cn("transition-all duration-300 focus:outline-none", {
+						className={cn("transition-all duration-300 focus:outline-hidden", {
 							"mr-4": query !== "" || alwaysDisplayClearButton,
 						})}
 						onClick={handleQueryReset}
