@@ -53,8 +53,6 @@ export interface ConfirmedTransactionData {
 
 	nonce(): BigNumber;
 
-	asset(): Record<string, unknown>;
-
 	inputs(): UnspentTransactionData[];
 
 	outputs(): UnspentTransactionData[];
@@ -105,9 +103,6 @@ export interface ConfirmedTransactionData {
 	publicKeys(): string[];
 
 	min(): number;
-
-	// IPFS
-	hash(): string;
 
 	// Multi-Payment
 	payments(): MultiPaymentItem[];
