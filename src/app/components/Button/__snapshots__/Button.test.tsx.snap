@@ -182,7 +182,7 @@ exports[`Button > should render loading with icon 1`] = `
           </div>
         </span>
         <div
-          class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+          class="absolute top-0 left-0 flex h-full w-full items-center justify-center"
         >
           <div
             class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"
@@ -338,7 +338,7 @@ exports[`Button > should render with loading state enabled 1`] = `
           Click Me
         </span>
         <div
-          class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+          class="absolute top-0 left-0 flex h-full w-full items-center justify-center"
         >
           <div
             class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"

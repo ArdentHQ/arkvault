@@ -10,12 +10,12 @@ exports[`FilterWallets > should render 1`] = `
       class="mb-6"
     >
       <div
-        class="font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text font-semibold"
       >
         Filter Networks
       </div>
       <div
-        class="mt-1 text-sm font-semibold text-theme-secondary-500"
+        class="text-theme-secondary-500 mt-1 text-sm font-semibold"
       >
         Select the networks to show.
       </div>
@@ -24,7 +24,7 @@ exports[`FilterWallets > should render 1`] = `
       class="space-y-2"
     />
     <div
-      class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-2 mb-6 border-t border-dotted"
     />
     <div
       class="flex flex-col"
@@ -34,12 +34,12 @@ exports[`FilterWallets > should render 1`] = `
       >
         <div>
           <div
-            class="font-semibold text-theme-secondary-text"
+            class="text-theme-secondary-text font-semibold"
           >
             Your Wallets
           </div>
           <div
-            class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
+            class="text-theme-secondary-500 mt-2 pr-12 text-sm font-semibold"
           >
             Select which wallets to view.
           </div>
@@ -50,7 +50,7 @@ exports[`FilterWallets > should render 1`] = `
           data-testid="dropdown__toggle"
         >
           <div
-            class="flex cursor-pointer items-center justify-end text-theme-secondary-text"
+            class="text-theme-secondary-text flex cursor-pointer items-center justify-end"
             data-testid="filter-wallets__wallets"
           >
             <span
@@ -100,12 +100,12 @@ exports[`FilterWallets > should render with networks selection 1`] = `
       class="mb-6"
     >
       <div
-        class="font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text font-semibold"
       >
         Filter Networks
       </div>
       <div
-        class="mt-1 text-sm font-semibold text-theme-secondary-500"
+        class="text-theme-secondary-500 mt-1 text-sm font-semibold"
       >
         Select the networks to show.
       </div>
@@ -117,7 +117,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
         data-testid="FilterNetwork"
       >
         <div
-          class="mb-3 text-sm font-semibold text-theme-secondary-700"
+          class="text-theme-secondary-700 mb-3 text-sm font-semibold"
         >
           Development Networks
         </div>
@@ -126,11 +126,11 @@ exports[`FilterWallets > should render with networks selection 1`] = `
           data-testid="NetworkOptions"
         >
           <li
-            class="inline-block cursor-pointer pb-4 pr-4"
+            class="inline-block cursor-pointer pr-4 pb-4"
             data-testid="NetworkOption__mainsail.devnet"
           >
             <div
-              class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+              class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
             >
               <div
                 aria-label="Mainsail Devnet"
@@ -162,7 +162,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
                 </div>
               </div>
               <span
-                class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
               >
                 <span />
               </span>
@@ -172,7 +172,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
       </div>
     </div>
     <div
-      class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-2 mb-6 border-t border-dotted"
     />
     <div
       class="flex flex-col"
@@ -182,12 +182,12 @@ exports[`FilterWallets > should render with networks selection 1`] = `
       >
         <div>
           <div
-            class="font-semibold text-theme-secondary-text"
+            class="text-theme-secondary-text font-semibold"
           >
             Your Wallets
           </div>
           <div
-            class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
+            class="text-theme-secondary-500 mt-2 pr-12 text-sm font-semibold"
           >
             Select which wallets to view.
           </div>
@@ -198,7 +198,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
           data-testid="dropdown__toggle"
         >
           <div
-            class="flex cursor-pointer items-center justify-end text-theme-secondary-text"
+            class="text-theme-secondary-text flex cursor-pointer items-center justify-end"
             data-testid="filter-wallets__wallets"
           >
             <span

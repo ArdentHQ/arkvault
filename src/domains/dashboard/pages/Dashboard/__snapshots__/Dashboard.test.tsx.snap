@@ -7,7 +7,7 @@ exports[`Dashboard > should render 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -51,7 +51,7 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -88,7 +88,7 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -128,7 +128,7 @@ exports[`Dashboard > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -137,7 +137,7 @@ exports[`Dashboard > should render 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded-xs focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded-xs focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -177,7 +177,7 @@ exports[`Dashboard > should render 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded-xs"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded-xs"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -211,7 +211,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -222,7 +222,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -233,7 +233,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -244,7 +244,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -262,7 +262,7 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded-xs text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded-xs focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -340,10 +340,10 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -352,7 +352,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -394,7 +394,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -406,7 +406,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -458,7 +458,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -507,7 +507,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -522,7 +522,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -530,7 +530,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded-xs border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -558,12 +558,12 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -596,16 +596,16 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded-xs px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -645,7 +645,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -663,14 +663,14 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded-xs align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded-xs align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -681,7 +681,7 @@ exports[`Dashboard > should render 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -705,11 +705,11 @@ exports[`Dashboard > should render 1`] = `
           class="lg:container m-0 p-0 md:px-0 md:mx-auto"
         >
           <header
-            class="lg:container md:px-10 md:pt-8"
+            class="md:px-10 md:pt-8 lg:container"
             data-testid="WalletHeader"
           >
             <div
-              class="flex flex-col gap-3 bg-theme-primary-100 px-2 pb-2 pt-3 dark:bg-theme-dark-950 sm:gap-2 md:rounded-xl"
+              class="bg-theme-primary-100 dark:bg-theme-dark-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
             >
               <div
                 class="z-30 flex w-full flex-row items-center justify-between px-4"
@@ -719,7 +719,7 @@ exports[`Dashboard > should render 1`] = `
                   class="flex h-fit flex-row items-center gap-1"
                 >
                   <p
-                    class="hidden rounded-l text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50 sm:block"
+                    class="text-theme-secondary-900 dark:text-theme-dark-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
                   >
                     Viewing:
                   </p>
@@ -753,7 +753,7 @@ exports[`Dashboard > should render 1`] = `
                   class="flex flex-row items-center gap-1"
                 >
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
                     type="button"
                   >
                     <div
@@ -790,17 +790,17 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <p
-                        class="hidden text-base font-semibold leading-5 sm:block"
+                        class="hidden text-base leading-5 font-semibold sm:block"
                       >
                         Import
                       </p>
                     </div>
                   </button>
                   <div
-                    class="relative mx-2 inline-block border-l border-t-0 border-solid align-middle h-4 border-theme-primary-300 dark:border-theme-dark-700"
+                    class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 h-4"
                   />
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
+                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
                     type="button"
                   >
                     <div
@@ -834,7 +834,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <p
-                        class="hidden text-base font-semibold leading-5 sm:block"
+                        class="hidden text-base leading-5 font-semibold sm:block"
                       >
                         Create
                       </p>
@@ -855,7 +855,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex flex-row items-center gap-1.5"
                     >
                       <p
-                        class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:block md:text-base md:leading-5"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5"
                       >
                         Address
                       </p>
@@ -964,7 +964,7 @@ exports[`Dashboard > should render 1`] = `
                         </button>
                       </div>
                       <div
-                        class="relative border-l border-t-0 border-solid align-middle mx-0 hidden h-[17px] border-theme-secondary-300 p-0 dark:border-theme-dark-700 sm:block"
+                        class="relative border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 mx-0 hidden h-[17px] p-0 sm:block"
                       />
                       <div
                         class="hidden sm:flex"
@@ -1006,7 +1006,7 @@ exports[`Dashboard > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-t clear-both flex w-full min-w-full my-0 h-px border-dashed border-theme-secondary-300 dark:border-theme-dark-700"
+                    class="border-t clear-both flex w-full min-w-full border-theme-secondary-300 dark:border-theme-dark-700 my-0 h-px border-dashed"
                   />
                   <div
                     class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
@@ -1016,12 +1016,12 @@ exports[`Dashboard > should render 1`] = `
                       data-testid="WalletHeader__balance"
                     >
                       <p
-                        class="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
                       >
                         Total Balance
                       </p>
                       <div
-                        class="flex flex-row items-center text-lg font-semibold leading-[21px] text-theme-secondary-900 md:text-2xl md:leading-[29px]"
+                        class="text-theme-secondary-900 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
                       >
                         <span
                           class="whitespace-nowrap dark:text-theme-dark-50"
@@ -1030,10 +1030,10 @@ exports[`Dashboard > should render 1`] = `
                           95.27653252 ARK
                         </span>
                         <div
-                          class="relative mx-2 border-l border-t-0 border-solid align-middle hidden h-6 border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block"
+                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block hidden h-6"
                         />
                         <span
-                          class="whitespace-nowrap hidden text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block"
+                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block hidden"
                           data-testid="Amount"
                         >
                           45 BTC
@@ -1044,7 +1044,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex flex-row items-center gap-3"
                     >
                       <button
-                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 my-auto flex-1 px-8 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
                         data-testid="WalletHeader__send-button"
                         type="button"
                       >
@@ -1112,7 +1112,7 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="hidden w-full rounded-b-lg rounded-t-sm bg-white p-4 dark:bg-theme-dark-900 md:block"
+                  class="dark:bg-theme-dark-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block"
                 >
                   <div
                     class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
@@ -1130,13 +1130,13 @@ exports[`Dashboard > should render 1`] = `
                           Voting for
                         </p>
                         <div
-                          class="max-w-28 truncate xs:max-w-32 sm:max-w-40 md:max-w-48"
+                          class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm dark:text-theme-dark-50 md:text-base md:leading-5 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
@@ -1145,38 +1145,38 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-col gap-2 px-4 py-3 text-base font-semibold leading-5 md:flex-row md:px-0 md:py-0"
+                        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
                       >
                         <p
-                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
                         >
                           Rank
                         </p>
                         <p
-                          class="mb-2 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 md:mb-0 md:text-base md:leading-5"
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
                         >
                           #1
                         </p>
                         <p
-                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:hidden"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
                         >
                           Delegate Status
                         </p>
                         <div
-                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid dark:border-theme-success-800"
+                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dark:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
                         >
                           Active
                         </div>
                         <div
-                          class="relative mx-2 border-l border-t-0 border-solid align-middle ml-1 mr-3 hidden h-5 border-theme-secondary-300 p-0 dark:border-s-theme-dark-700 md:flex"
+                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
                         />
                       </div>
                     </div>
                     <div
-                      class="md:max-md:self-end w-full md:w-auto"
+                      class="w-full md:w-auto md:max-md:self-end"
                     >
                       <button
-                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-4 hidden w-full space-x-2 text-theme-primary-600 disabled:bg-transparent dark:text-theme-dark-navy-400 dark:disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px]"
+                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
                         data-testid="WalletVote__button"
                         type="button"
                       >
@@ -1219,7 +1219,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </button>
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full text-theme-primary-600 disabled:bg-transparent dark:text-white dark:disabled:bg-transparent md:hidden"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
                         data-testid="WalletVote__button_mobile"
                         type="button"
                       >
@@ -1277,7 +1277,7 @@ exports[`Dashboard > should render 1`] = `
           data-testid="TabScroll"
         >
           <div
-            class="bg-theme-secondary-200 px-5 dark:bg-theme-dark-950"
+            class="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5"
           >
             <div
               class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
@@ -1287,7 +1287,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-transactions"
                   role="tab"
@@ -1311,7 +1311,7 @@ exports[`Dashboard > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 pt-2!"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
             class=""
@@ -1324,7 +1324,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-all"
                   role="tab"
@@ -1339,7 +1339,7 @@ exports[`Dashboard > should render 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-received"
                   role="tab"
@@ -1354,7 +1354,7 @@ exports[`Dashboard > should render 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded-xs px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-sent"
                   role="tab"
@@ -1370,7 +1370,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0 md:hidden"
+              class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
             >
               <div
                 class="flex-1"
@@ -1381,10 +1381,10 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="dropdown__toggle-Transactions--filter-dropdown"
                 >
                   <div
-                    class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xs border border-theme-secondary-300 p-3 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3"
+                    class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xs border p-3 sm:px-4 sm:py-3"
                   >
                     <span
-                      class="text-base font-semibold leading-tight"
+                      class="text-base leading-tight font-semibold"
                     >
                       All Transactions
                     </span>
@@ -1429,7 +1429,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
+                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1483,14 +1483,14 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="rounded-xl pb-2 outline outline-1 outline-transparent md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-transparent md:border-b-[5px] md:border-b-theme-secondary-200"
+              class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
               data-testid="TableWrapper"
             >
               <div
-                class="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4"
+                class="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4"
               >
                 <span
-                  class="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold"
                 >
                   Showing 10 results
                 </span>
@@ -1504,7 +1504,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
+                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1728,13 +1728,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         2dc48…5cb5f
@@ -1744,7 +1744,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -1774,7 +1774,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Transfer
@@ -2134,7 +2134,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -2182,13 +2182,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         2c0e9…d4364
@@ -2198,7 +2198,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -2228,7 +2228,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Registration
@@ -2335,14 +2335,14 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                       rel="noopener noreferrer"
                                     >
                                       <span
-                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                       >
                                         Contract
                                       </span>
@@ -2412,14 +2412,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -2487,14 +2487,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -2567,7 +2567,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -2615,13 +2615,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         11701…d2e22
@@ -2631,7 +2631,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -2661,7 +2661,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Username Registration
@@ -2768,14 +2768,14 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                       rel="noopener noreferrer"
                                     >
                                       <span
-                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                       >
                                         Contract
                                       </span>
@@ -2845,14 +2845,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -2920,14 +2920,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -3000,7 +3000,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -3048,13 +3048,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         1e686…c4b30
@@ -3064,7 +3064,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -3094,7 +3094,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Username Resignation
@@ -3201,14 +3201,14 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                       rel="noopener noreferrer"
                                     >
                                       <span
-                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                       >
                                         Contract
                                       </span>
@@ -3278,14 +3278,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -3353,14 +3353,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -3433,7 +3433,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -3481,13 +3481,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         e9ba7…01e2e
@@ -3497,7 +3497,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -3527,7 +3527,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Username Registration
@@ -3634,14 +3634,14 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                       rel="noopener noreferrer"
                                     >
                                       <span
-                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                       >
                                         Contract
                                       </span>
@@ -3711,14 +3711,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -3786,14 +3786,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -3866,7 +3866,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -3914,13 +3914,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         f40aa…68fb2
@@ -3930,7 +3930,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -3960,7 +3960,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Vote
@@ -4067,14 +4067,14 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                       rel="noopener noreferrer"
                                     >
                                       <span
-                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                       >
                                         Contract
                                       </span>
@@ -4144,14 +4144,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -4219,14 +4219,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -4299,7 +4299,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -4347,13 +4347,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         45117…f880e
@@ -4363,7 +4363,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -4393,7 +4393,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Vote
@@ -4500,14 +4500,14 @@ exports[`Dashboard > should render 1`] = `
                                     class="flex w-full items-center justify-between space-x-4"
                                   >
                                     <a
-                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                      class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="Link"
                                       href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                       rel="noopener noreferrer"
                                     >
                                       <span
-                                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                       >
                                         Contract
                                       </span>
@@ -4577,14 +4577,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -4652,14 +4652,14 @@ exports[`Dashboard > should render 1`] = `
                                 class="flex w-full items-center justify-between space-x-4"
                               >
                                 <a
-                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block whitespace-nowrap text-sm font-semibold"
+                                  class="relative cursor-pointer space-x-1 no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block text-sm font-semibold whitespace-nowrap"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/addresses/0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1"
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     Contract
                                   </span>
@@ -4732,7 +4732,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -4780,13 +4780,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         d1dc3…450c5
@@ -4796,7 +4796,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -4826,7 +4826,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Transfer
@@ -5186,7 +5186,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -5234,13 +5234,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         8f26a…5cacc
@@ -5250,7 +5250,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -5280,7 +5280,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Multipayment
@@ -5384,7 +5384,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <span
-                                    class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                    class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                                   >
                                     Multiple 
                                     <span
@@ -5415,7 +5415,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                               >
                                 Multiple 
                                 <span
@@ -5444,7 +5444,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                               >
                                 Multiple 
                                 <span
@@ -5481,7 +5481,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span
@@ -5529,13 +5529,13 @@ exports[`Dashboard > should render 1`] = `
                                   rel="noopener noreferrer"
                                 >
                                   <span
-                                    class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
+                                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
                                       class="text-sm"
                                     >
                                       <span
-                                        class="no-ligatures cursor-pointer text-theme-primary-600"
+                                        class="no-ligatures text-theme-primary-600 cursor-pointer"
                                         data-testid="TransactionRow__id"
                                       >
                                         11051…628f8
@@ -5545,7 +5545,7 @@ exports[`Dashboard > should render 1`] = `
                                 </a>
                               </div>
                               <span
-                                class="text-xs text-theme-secondary-700 xl:hidden"
+                                class="text-theme-secondary-700 text-xs xl:hidden"
                               >
                                 <span
                                   data-testid="TimeAgo"
@@ -5575,7 +5575,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:min-h-11 xl:pt-3 min-h-14 my-1 pt-2"
                           >
                             <div
-                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate whitespace-nowrap rounded-xs px-1 py-[3px] dark:border"
+                              class="inline-block font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] max-w-40 truncate rounded-xs px-1 py-[3px] whitespace-nowrap dark:border"
                               data-testid="TransactionRow__type"
                             >
                               Transfer
@@ -5939,7 +5939,7 @@ exports[`Dashboard > should render 1`] = `
                                 </div>
                               </div>
                               <span
-                                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                                class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
                                 data-testid="TransactionRow__exchange-currency"
                               >
                                 <span

@@ -54,7 +54,7 @@ exports[`Pagination > should handle first page click in lg 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -71,7 +71,7 @@ exports[`Pagination > should handle first page click in lg 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -209,7 +209,7 @@ exports[`Pagination > should handle first page click in md 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -226,7 +226,7 @@ exports[`Pagination > should handle first page click in md 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -364,7 +364,7 @@ exports[`Pagination > should handle first page click in sm 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -381,7 +381,7 @@ exports[`Pagination > should handle first page click in sm 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -519,7 +519,7 @@ exports[`Pagination > should handle first page click in xl 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -536,7 +536,7 @@ exports[`Pagination > should handle first page click in xl 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -627,7 +627,7 @@ exports[`Pagination > should handle first page click in xs 1`] = `
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -644,7 +644,7 @@ exports[`Pagination > should handle first page click in xs 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -893,7 +893,7 @@ exports[`Pagination > should handle last page click in lg 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -910,7 +910,7 @@ exports[`Pagination > should handle last page click in lg 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -1050,7 +1050,7 @@ exports[`Pagination > should handle last page click in md 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -1067,7 +1067,7 @@ exports[`Pagination > should handle last page click in md 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -1207,7 +1207,7 @@ exports[`Pagination > should handle last page click in sm 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -1224,7 +1224,7 @@ exports[`Pagination > should handle last page click in sm 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -1364,7 +1364,7 @@ exports[`Pagination > should handle last page click in xl 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -1381,7 +1381,7 @@ exports[`Pagination > should handle last page click in xl 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -1472,7 +1472,7 @@ exports[`Pagination > should handle last page click in xs 1`] = `
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -1489,7 +1489,7 @@ exports[`Pagination > should handle last page click in xs 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -1738,7 +1738,7 @@ exports[`Pagination > should handle next page click in lg 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -1755,7 +1755,7 @@ exports[`Pagination > should handle next page click in lg 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -1893,7 +1893,7 @@ exports[`Pagination > should handle next page click in md 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -1910,7 +1910,7 @@ exports[`Pagination > should handle next page click in md 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -2048,7 +2048,7 @@ exports[`Pagination > should handle next page click in sm 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -2065,7 +2065,7 @@ exports[`Pagination > should handle next page click in sm 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -2203,7 +2203,7 @@ exports[`Pagination > should handle next page click in xl 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -2220,7 +2220,7 @@ exports[`Pagination > should handle next page click in xl 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -2311,7 +2311,7 @@ exports[`Pagination > should handle next page click in xs 1`] = `
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -2328,7 +2328,7 @@ exports[`Pagination > should handle next page click in xs 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -2575,7 +2575,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -2593,7 +2593,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -2824,7 +2824,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -2842,7 +2842,7 @@ exports[`Pagination > should handle pagination search icon click properly in lg 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -3073,7 +3073,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -3091,7 +3091,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -3322,7 +3322,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -3340,7 +3340,7 @@ exports[`Pagination > should handle pagination search icon click properly in md 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -3571,7 +3571,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -3589,7 +3589,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -3820,7 +3820,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -3838,7 +3838,7 @@ exports[`Pagination > should handle pagination search icon click properly in sm 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -4069,7 +4069,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -4087,7 +4087,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -4318,7 +4318,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -4336,7 +4336,7 @@ exports[`Pagination > should handle pagination search icon click properly in xl 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -4520,7 +4520,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -4538,7 +4538,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -4831,7 +4831,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button groupinvisible"
@@ -4849,7 +4849,7 @@ exports[`Pagination > should handle pagination search icon click properly in xs 
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -5189,7 +5189,7 @@ exports[`Pagination > should handle previous page click in lg 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -5206,7 +5206,7 @@ exports[`Pagination > should handle previous page click in lg 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -5344,7 +5344,7 @@ exports[`Pagination > should handle previous page click in md 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -5361,7 +5361,7 @@ exports[`Pagination > should handle previous page click in md 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -5499,7 +5499,7 @@ exports[`Pagination > should handle previous page click in sm 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -5516,7 +5516,7 @@ exports[`Pagination > should handle previous page click in sm 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -5654,7 +5654,7 @@ exports[`Pagination > should handle previous page click in xl 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -5671,7 +5671,7 @@ exports[`Pagination > should handle previous page click in xl 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -5762,7 +5762,7 @@ exports[`Pagination > should handle previous page click in xs 1`] = `
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -5779,7 +5779,7 @@ exports[`Pagination > should handle previous page click in xs 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -6038,7 +6038,7 @@ exports[`Pagination > should render in lg 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -6055,7 +6055,7 @@ exports[`Pagination > should render in lg 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -6195,7 +6195,7 @@ exports[`Pagination > should render in md 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -6212,7 +6212,7 @@ exports[`Pagination > should render in md 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -6352,7 +6352,7 @@ exports[`Pagination > should render in sm 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -6369,7 +6369,7 @@ exports[`Pagination > should render in sm 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -6509,7 +6509,7 @@ exports[`Pagination > should render in xl 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -6526,7 +6526,7 @@ exports[`Pagination > should render in xl 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -6617,7 +6617,7 @@ exports[`Pagination > should render in xs 1`] = `
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -6634,7 +6634,7 @@ exports[`Pagination > should render in xs 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -6883,7 +6883,7 @@ exports[`Pagination > should render pagination search buttons in lg 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -6900,7 +6900,7 @@ exports[`Pagination > should render pagination search buttons in lg 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -7038,7 +7038,7 @@ exports[`Pagination > should render pagination search buttons in md 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -7055,7 +7055,7 @@ exports[`Pagination > should render pagination search buttons in md 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -7193,7 +7193,7 @@ exports[`Pagination > should render pagination search buttons in sm 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -7210,7 +7210,7 @@ exports[`Pagination > should render pagination search buttons in sm 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -7348,7 +7348,7 @@ exports[`Pagination > should render pagination search buttons in xl 1`] = `
       </div>
     </button>
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -7365,7 +7365,7 @@ exports[`Pagination > should render pagination search buttons in xl 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>
@@ -7456,7 +7456,7 @@ exports[`Pagination > should render pagination search buttons in xs 1`] = `
     data-testid="Pagination"
   >
     <div
-      class="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded-xs"
     >
       <button
         class="pagination-search-toggle-button group"
@@ -7473,7 +7473,7 @@ exports[`Pagination > should render pagination search buttons in xs 1`] = `
           </span>
         </span>
         <span
-          class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
+          class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
           data-testid="PaginationSearchButton__search"
         >
           <div>

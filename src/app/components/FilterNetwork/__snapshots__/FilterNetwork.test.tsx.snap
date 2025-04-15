@@ -23,11 +23,11 @@ exports[`FilterNetwork > should render public networks 1`] = `
       data-testid="NetworkOptions"
     >
       <li
-        class="inline-block cursor-pointer pb-4 pr-4"
+        class="inline-block cursor-pointer pr-4 pb-4"
         data-testid="NetworkOption__mainsail.mainnet"
       >
         <div
-          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
         >
           <div
             aria-label="Mainsail"
@@ -59,18 +59,18 @@ exports[`FilterNetwork > should render public networks 1`] = `
             </div>
           </div>
           <span
-            class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <span />
           </span>
         </div>
       </li>
       <li
-        class="inline-block cursor-pointer pb-4 pr-4"
+        class="inline-block cursor-pointer pr-4 pb-4"
         data-testid="NetworkOption__mainsail.devnet"
       >
         <div
-          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
         >
           <div
             aria-label="Mainsail Devnet"
@@ -102,7 +102,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
             </div>
           </div>
           <span
-            class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <span />
           </span>
@@ -130,7 +130,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Public Networks
       </div>
@@ -139,11 +139,11 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -175,7 +175,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -187,7 +187,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Development Networks
       </div>
@@ -196,11 +196,11 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -232,7 +232,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -253,7 +253,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Public Networks
       </div>
@@ -262,11 +262,11 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-primary-500 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-500 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -298,7 +298,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-transparent bg-theme-primary-500 text-theme-primary-100"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle bg-theme-primary-500 text-theme-primary-100 border-transparent"
             >
               <div>
                 <div
@@ -334,7 +334,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Development Networks
       </div>
@@ -343,11 +343,11 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -379,7 +379,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -400,21 +400,21 @@ exports[`FilterNetworks > should toggle view all 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Public Networks
       </div>
       <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
-          class="text-sm font-semibold text-theme-primary-700"
+          class="text-theme-primary-700 text-sm font-semibold"
         >
           All
         </div>
         <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-700 bg-theme-primary-700 text-white"
+          class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-700 bg-theme-primary-700 text-white"
         >
           <div
             class="transition-transform rotate-180"
@@ -450,11 +450,11 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -486,18 +486,18 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
           </div>
         </li>
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -529,7 +529,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -537,10 +537,10 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         </li>
       </ul>
       <label
-        class="mt-4 inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text"
+        class="text-theme-secondary-text mt-4 inline-flex cursor-pointer items-center space-x-3"
       >
         <input
-          class="custom-checkbox h-5! w-5! cursor-pointer rounded-xs! border-2! transition duration-150 ease-in-out focus:ring-theme-primary-400! focus:ring-offset-0! not-checked:border-theme-secondary-300 not-checked:bg-white! dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900! disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 dark:disabled:border-theme-dark-600 dark:disabled:bg-theme-dark-800 dark:disabled:checked:border-theme-dark-600 dark:disabled:checked:bg-theme-dark-800 dark:disabled:checked:text-theme-dark-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600 not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500"
+          class="custom-checkbox focus:ring-theme-primary-400! h-5! w-5! cursor-pointer rounded-xs! border-2! transition duration-150 ease-in-out focus:ring-offset-0! not-checked:border-theme-secondary-300 not-checked:bg-white! dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900! disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 dark:disabled:border-theme-dark-600 dark:disabled:bg-theme-dark-800 dark:disabled:checked:border-theme-dark-600 dark:disabled:checked:bg-theme-dark-800 dark:disabled:checked:text-theme-dark-600 disabled:cursor-not-allowed checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600 not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500"
           data-testid="FilterNetwork__select-all-checkbox"
           type="checkbox"
         />
@@ -553,21 +553,21 @@ exports[`FilterNetworks > should toggle view all 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Development Networks
       </div>
       <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
-          class="text-sm font-semibold text-theme-primary-700"
+          class="text-theme-primary-700 text-sm font-semibold"
         >
           All
         </div>
         <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
+          class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
         >
           <div
             class="transition-transform"
@@ -603,11 +603,11 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -639,7 +639,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -660,21 +660,21 @@ exports[`FilterNetworks > should toggle view all 2`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Public Networks
       </div>
       <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
-          class="text-sm font-semibold text-theme-primary-700"
+          class="text-theme-primary-700 text-sm font-semibold"
         >
           All
         </div>
         <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
+          class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
         >
           <div
             class="transition-transform"
@@ -710,11 +710,11 @@ exports[`FilterNetworks > should toggle view all 2`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -746,18 +746,18 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
           </div>
         </li>
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -789,7 +789,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -801,21 +801,21 @@ exports[`FilterNetworks > should toggle view all 2`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-semibold text-theme-secondary-700"
+        class="text-theme-secondary-700 mb-3 text-sm font-semibold"
       >
         Development Networks
       </div>
       <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
-          class="text-sm font-semibold text-theme-primary-700"
+          class="text-theme-primary-700 text-sm font-semibold"
         >
           All
         </div>
         <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
+          class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
         >
           <div
             class="transition-transform"
@@ -851,11 +851,11 @@ exports[`FilterNetworks > should toggle view all 2`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-4 pr-4"
+          class="inline-block cursor-pointer pr-4 pb-4"
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -887,7 +887,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               </div>
             </div>
             <span
-              class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             >
               <span />
             </span>
@@ -906,11 +906,11 @@ exports[`NetworkOptions > should render available networks options 1`] = `
     data-testid="NetworkOptions"
   >
     <li
-      class="inline-block cursor-pointer pb-4 pr-4"
+      class="inline-block cursor-pointer pr-4 pb-4"
       data-testid="NetworkOption__mainsail.mainnet"
     >
       <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
       >
         <div
           aria-label="Mainsail"
@@ -942,18 +942,18 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           </div>
         </div>
         <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <span />
         </span>
       </div>
     </li>
     <li
-      class="inline-block cursor-pointer pb-4 pr-4"
+      class="inline-block cursor-pointer pr-4 pb-4"
       data-testid="NetworkOption__mainsail.devnet"
     >
       <div
-        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 dark:border-theme-secondary-800 relative ring-theme-background duration-100"
       >
         <div
           aria-label="Mainsail Devnet"
@@ -985,7 +985,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           </div>
         </div>
         <span
-          class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <span />
         </span>
@@ -1007,16 +1007,16 @@ exports[`NetworkOptions > should render empty 1`] = `
 exports[`ToggleAllOption > should render 1`] = `
 <div>
   <div
-    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer ring-theme-background duration-100"
     data-testid="network__viewall"
   >
     <div
-      class="text-sm font-semibold text-theme-primary-700"
+      class="text-theme-primary-700 text-sm font-semibold"
     >
       All
     </div>
     <span
-      class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
+      class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] bg-theme-background flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
     >
       <div
         class="transition-transform"
@@ -1055,16 +1055,16 @@ exports[`ToggleAllOption > should render hidden 1`] = `<div />`;
 exports[`ToggleAllOption > should render selected 1`] = `
 <div>
   <div
-    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-primary-100 dark:border-theme-secondary-800 relative mr-5 cursor-pointer ring-theme-background duration-100"
     data-testid="network__viewall"
   >
     <div
-      class="text-sm font-semibold text-theme-primary-700"
+      class="text-theme-primary-700 text-sm font-semibold"
     >
       All
     </div>
     <span
-      class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-700 bg-theme-primary-700 text-white"
+      class="absolute right-0 bottom-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-700 bg-theme-primary-700 text-white"
     >
       <div
         class="transition-transform rotate-180"

@@ -10,7 +10,7 @@ exports[`IOsInstructions > should render ios instructions 1`] = `
       class="flex flex-col items-start"
     >
       <div
-        class="mb-4 font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text mb-4 font-semibold"
       >
         1. Press the share button
       </div>
@@ -225,7 +225,7 @@ exports[`IOsInstructions > should render ios instructions 1`] = `
         </defs>
       </svg>
       <div
-        class="mb-4 font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text mb-4 font-semibold"
       >
         2. Select "Add to Home Screen"
       </div>
@@ -377,7 +377,7 @@ exports[`IOsInstructions > should render ios instructions 1`] = `
         </defs>
       </svg>
       <div
-        class="mb-4 font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text mb-4 font-semibold"
       >
         3. Press the "Add" button
       </div>

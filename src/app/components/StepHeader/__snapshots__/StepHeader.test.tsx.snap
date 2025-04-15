@@ -9,7 +9,7 @@ exports[`StepHeader > should render 1`] = `
       class="flex flex-col"
     >
       <span
-        class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
+        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
       >
         title
       </span>
@@ -34,7 +34,7 @@ exports[`StepHeader > should render 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
+        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
       >
         <div
           class="space-y-2"
@@ -50,7 +50,7 @@ exports[`StepHeader > should render 1`] = `
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
             data-testid="header__subtitle"
           >
             subtitle
@@ -65,7 +65,7 @@ exports[`StepHeader > should render 1`] = `
 exports[`StepHeader > should render simple header without a provider 1`] = `
 <DocumentFragment>
   <div
-    class="flex items-end justify-between bg-theme-background"
+    class="bg-theme-background flex items-end justify-between"
   >
     <div
       class="space-y-2"
@@ -81,7 +81,7 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
         </h1>
       </div>
       <div
-        class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+        class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
         data-testid="header__subtitle"
       >
         subtitle
@@ -100,7 +100,7 @@ exports[`StepHeader > should render with extra 1`] = `
       class="flex flex-col"
     >
       <span
-        class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
+        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
       >
         title
       </span>
@@ -125,7 +125,7 @@ exports[`StepHeader > should render with extra 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
+        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
       >
         <div
           class="space-y-2"
@@ -141,7 +141,7 @@ exports[`StepHeader > should render with extra 1`] = `
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
             data-testid="header__subtitle"
           >
             subtitle
