@@ -114,12 +114,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
 	}
 
-	public override async delegateRegistration(
-		input: Services.ValidatorRegistrationInput,
-	): Promise<Contracts.SignedTransactionData> {
-		return this.validatorRegistration(input);
-	}
-
 	/**
 	 * @inheritDoc
 	 */
@@ -246,12 +240,6 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.sign(input.signatory.signingKey());
 
 		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
-	}
-
-	public override async delegateResignation(
-		input: Services.DelegateResignationInput,
-	): Promise<Contracts.SignedTransactionData> {
-		return this.validatorResignation(input);
 	}
 
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
