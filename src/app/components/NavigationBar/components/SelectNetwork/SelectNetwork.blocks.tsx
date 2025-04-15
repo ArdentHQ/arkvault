@@ -11,7 +11,7 @@ export enum NetworkOption {
 
 export const MainnetOption = () => (
 	<>
-		<span className="rounded-sm border-2 border-theme-primary-300 bg-theme-primary-50 p-[3px] text-theme-primary-600 dark:border-theme-primary-500 dark:bg-theme-dark-900">
+		<span className="rounded-xs border-2 border-theme-primary-300 bg-theme-primary-50 p-[3px] text-theme-primary-600 dark:border-theme-primary-500 dark:bg-theme-dark-900">
 			<Icon name="Mainnet" width={14} height={14} />
 		</span>
 
@@ -23,7 +23,7 @@ export const MainnetOption = () => (
 
 export const TestnetOption = () => (
 	<>
-		<span className="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
+		<span className="rounded-xs border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text">
 			<Icon name="Testnet" width={14} height={14} />
 		</span>
 

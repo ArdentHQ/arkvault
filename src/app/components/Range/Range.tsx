@@ -37,12 +37,12 @@ export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvali
 						data-testid="Range__track"
 						onMouseDown={track.onMouseDown}
 						onTouchStart={track.onTouchStart}
-						className="flex h-px w-full rounded"
+						className="flex h-px w-full rounded-xs"
 						style={track.style}
 					>
 						<div
 							data-testid="Range__track__filled"
-							className="h-1 w-full self-center rounded border-0 p-0"
+							className="h-1 w-full self-center rounded-xs border-0 p-0"
 							style={{
 								background: getTrackBackground({
 									colors: [color, "transparent"],
@@ -62,7 +62,7 @@ export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvali
 						data-testid="Range__thumb"
 						{...thumb}
 						className={twMerge(
-							"m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-none active:bg-theme-primary-600",
+							"m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-hidden active:bg-theme-primary-600",
 						)}
 						style={{ ...thumb.style, borderColor: color }}
 					/>

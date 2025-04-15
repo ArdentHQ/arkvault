@@ -98,7 +98,7 @@ export const SidePanel = ({
 												) : (
 													<>{header}</>
 												)}
-												<div className="h-8 w-8 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
+												<div className="h-8 w-8 rounded-xs bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
 													<Button
 														data-testid="SidePanel__close-button"
 														variant="transparent"

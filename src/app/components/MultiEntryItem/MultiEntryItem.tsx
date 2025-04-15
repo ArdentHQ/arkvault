@@ -25,7 +25,7 @@ export const MultiEntryItem = ({
 		data-testid={dataTestId}
 		className={twMerge(
 			cn(
-				"mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900",
+				"mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-dark-700 dark:bg-theme-dark-900",
 				{
 					"md:rounded-none md:border-x-0 md:border-b-0 md:border-dashed md:bg-transparent md:pt-3 md:dark:bg-transparent":
 						size === "md",

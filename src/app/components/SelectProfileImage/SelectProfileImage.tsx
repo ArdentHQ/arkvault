@@ -56,7 +56,7 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 
 						<button
 							type="button"
-							className="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+							className="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
 							onClick={handleOpenFile}
 							data-testid="SelectProfileImage__upload-button"
 						>
@@ -87,7 +87,7 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 
 		return (
 			<div className="h-[92px] w-[92px] rounded-lg border border-theme-secondary-300 p-1.5 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-dark-700">
-				<div className="h-full overflow-hidden rounded">
+				<div className="h-full overflow-hidden rounded-xs">
 					<UploadButtonWrapper>
 						<Button
 							variant="secondary"

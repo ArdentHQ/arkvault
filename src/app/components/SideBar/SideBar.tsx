@@ -41,7 +41,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 					options={options}
 					onSelect={({ value }) => handleActiveItem(String(value))}
 					toggleContent={(isOpen) => (
-						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300">
+						<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xs border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300">
 							<span className="flex-1 font-semibold leading-tight">{selectedLabel}</span>
 
 							<Icon

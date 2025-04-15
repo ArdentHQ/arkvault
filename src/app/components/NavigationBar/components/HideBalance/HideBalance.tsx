@@ -25,7 +25,7 @@ export const HideBalance = ({ profile, className }: { profile: Contracts.IProfil
 				<Button
 					variant="transparent"
 					onClick={() => setHideBalance(!hideBalance)}
-					className="group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+					className="group flex flex-row items-center gap-2 rounded-xs px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
 					data-testid="HideBalance-button"
 				>
 					{hideBalance ? (

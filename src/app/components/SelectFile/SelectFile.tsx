@@ -97,7 +97,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 
 	const renderError = () => (
 		<>
-			<div className="absolute right-4 top-4 z-10 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400">
+			<div className="absolute right-4 top-4 z-10 rounded-xs bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400">
 				<Button variant="transparent" size="icon" onClick={() => setDropError(undefined)} className="h-8 w-8">
 					<Icon name="Cross" size="sm" />
 				</Button>
@@ -126,7 +126,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 					onClick={handleOpenFile}
 					title={t("PROFILE.IMPORT.SELECT_FILE_STEP.UPLOAD_TITLE")}
 					data-testid="SelectFile__browse-files"
-					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
+					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-hidden"
 					data-ring-focus-margin="-m-1"
 				>
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.BROWSE_FILES")}

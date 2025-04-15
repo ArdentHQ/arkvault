@@ -61,7 +61,7 @@ const Pagination = ({
 				</Button>
 			</SmAndAbove>
 
-			<div className="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800">
+			<div className="flex rounded-xs bg-theme-primary-100 dark:bg-theme-secondary-800">
 				<PaginationSearch
 					onClick={() => setButtonsDisabled(true)}
 					onSelectPage={handleSelectPage}

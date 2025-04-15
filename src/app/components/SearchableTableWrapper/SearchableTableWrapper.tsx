@@ -27,7 +27,7 @@ export const SearchableTableWrapper = ({
 				<div className="flex flex-col">
 					<div
 						data-testid="SearchableTableWrapper__search-input"
-						className="relative flex items-center overflow-hidden rounded border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
+						className="relative flex items-center overflow-hidden rounded-xs border border-b border-theme-secondary-300 dark:border-theme-secondary-800 md:rounded-none md:border-x-0 md:border-t-0"
 					>
 						<div className="pointer-events-none absolute left-0 items-center pl-6">
 							<Icon name="MagnifyingGlassAlt" className="text-theme-secondary-500" />
