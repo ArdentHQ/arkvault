@@ -61,14 +61,14 @@ describe("SelectRecipient", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
 
-	it("should focus & blur the address input when is expanded", async () => {
+	it("should focus & blur-xs the address input when is expanded", async () => {
 		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		render(<SelectRecipient profile={profile} />);
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
 		const focusSpy = vi.spyOn(recipientInputField, "focus");
-		const blurSpy = vi.spyOn(recipientInputField, "blur");
+		const blurSpy = vi.spyOn(recipientInputField, "blur-xs");
 
 		// 1. Focus the select input which opens the drodpown
 		await userEvent.click(recipientInputField);
@@ -86,14 +86,14 @@ describe("SelectRecipient", () => {
 		blurSpy.mockRestore();
 	});
 
-	it("should not focus & blur the address input when is not expanded", async () => {
+	it("should not focus & blur-xs the address input when is not expanded", async () => {
 		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		render(<SelectRecipient profile={profile} />);
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
 		const focusSpy = vi.spyOn(recipientInputField, "focus");
-		const blurSpy = vi.spyOn(recipientInputField, "blur");
+		const blurSpy = vi.spyOn(recipientInputField, "blur-xs");
 
 		await userEvent.click(selectRecipient());
 

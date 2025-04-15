@@ -216,7 +216,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 											<div
 												data-testid="SelectRecipient__select-recipient"
 												className={cn("flex items-center", {
-													"cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white":
+													"cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white":
 														!disabled,
 												})}
 												onClick={openRecipients}
