@@ -7,7 +7,6 @@ import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailModal";
-import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -23,9 +22,7 @@ export const TransactionSuccessful = ({ transaction, senderWallet }: Transaction
 		wallet: senderWallet,
 	});
 
-	const pending = isAwaitingMusigSignatures(transaction)
-		? t("TRANSACTION.SUCCESS.CREATED")
-		: t("TRANSACTION.PENDING.TITLE");
+	const pending = t("TRANSACTION.PENDING.TITLE");
 	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : pending;
 
 	return (

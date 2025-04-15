@@ -5,7 +5,6 @@ import { Button } from "@/app/components/Button";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
 import { TimeAgo } from "@/app/components/TimeAgo";
@@ -87,10 +86,7 @@ export const SignedTransactionRow = ({
 }: SignedTransactionRowProperties) => {
 	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
-	const { canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature, status } = useMultiSignatureStatus({
-		transaction,
-		wallet,
-	});
+	let canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature, status = false;
 
 	const canBeDeleted = useMemo(() => {
 		const publicKey = transaction.wallet().publicKey();
