@@ -107,7 +107,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			role="tab"
 			type="button"
 			className={twMerge(
-				"rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg",
+				"rounded-xs px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg",
 				properties.className,
 			)}
 			ref={reference}
@@ -132,7 +132,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			{properties.count !== undefined && (
 				<span
 					data-testid={`tabs__tab-button-${properties.tabId}-count`}
-					className="ml-2 rounded bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
+					className="ml-2 rounded-xs bg-theme-primary-100 px-1.5 py-0.5 text-sm font-semibold dark:bg-theme-secondary-900"
 				>
 					{properties.count}
 				</span>
