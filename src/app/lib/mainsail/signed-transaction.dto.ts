@@ -38,7 +38,7 @@ export class SignedTransactionData
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return BigNumber.make(this.signedData.value);
+		return formatUnits(this.signedData.value, "ark");
 	}
 
 	public override fee(): BigNumber {
