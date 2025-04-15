@@ -34,7 +34,7 @@ export const TransactionRowMobile = memo(
 		const timeStamp = transaction.timestamp();
 
 		return (
-			<TableRow onClick={onClick} className={cn("group !border-b-0", className)} {...properties}>
+			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
