@@ -243,7 +243,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	public toObject(): KeyValuePair {
 		return {
 			amount: this.amount(),
-			asset: this.asset(),
 			confirmations: this.confirmations(),
 			fee: this.fee(),
 			id: this.id(),
