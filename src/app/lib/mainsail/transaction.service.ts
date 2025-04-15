@@ -76,16 +76,17 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await TransferBuilder.new()
+		const builder = TransferBuilder.new()
 			.value(parseUnits(input.data.amount, "ark").valueOf())
 			.recipientAddress(input.data.to)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
-			.network(this.#configCrypto.crypto.network.chainId)
-			.sign(input.signatory.signingKey());
+			.network(this.#configCrypto.crypto.network.chainId);
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	public override async validatorRegistration(
@@ -103,15 +104,16 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await ValidatorRegistrationBuilder.new()
+		const builder = await ValidatorRegistrationBuilder.new()
 			.validatorPublicKey(`0x${input.data.validatorPublicKey}`)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId)
-			.sign(input.signatory.signingKey());
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	public override async delegateRegistration(
@@ -132,27 +134,29 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const nonce = await this.#generateNonce(input);
 
 		if (unvote) {
-			const { transaction } = await UnvoteBuilder.new()
+			const builder = await UnvoteBuilder.new()
 				.nonce(nonce)
 				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 				.gasLimit(input.gasLimit)
 				.network(this.#configCrypto.crypto.network.chainId)
-				.sign(input.signatory.signingKey());
+
+			await this.#sign(input, builder);
 
 			if (!vote) {
-				return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+				return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 			}
 		}
 
-		const { transaction } = await VoteBuilder.new()
+		const builder = await VoteBuilder.new()
 			.vote(vote.id)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
-			.network(this.#configCrypto.crypto.network.chainId)
-			.sign(input.signatory.signingKey());
+			.network(this.#configCrypto.crypto.network.chainId);
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	/**
@@ -181,9 +185,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 			builder.pay(payment.to, parseUnits(payment.amount, "ark").toNumber());
 		}
 
-		const { transaction } = await builder.sign(input.signatory.signingKey());
+		await this.#sign(input, builder);
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	public override async usernameRegistration(
@@ -201,15 +205,16 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await UsernameRegistrationBuilder.new()
+		const builder = await UsernameRegistrationBuilder.new()
 			.username(input.data.username)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId)
-			.sign(input.signatory.signingKey());
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	public override async usernameResignation(
@@ -220,14 +225,16 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await UsernameResignationBuilder.new()
+		const builder = await UsernameResignationBuilder.new()
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId)
 			.sign(input.signatory.signingKey());
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	public override async validatorResignation(
@@ -238,14 +245,16 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const nonce = await this.#generateNonce(input);
 
-		const { transaction } = await ValidatorResignationBuilder.new()
+		const builder = await ValidatorResignationBuilder.new()
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
 			.gasLimit(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId)
 			.sign(input.signatory.signingKey());
 
-		return new SignedTransactionData().configure(transaction.data, transaction.serialize().toString("hex"));
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(builder.transaction.data, builder.transaction.serialize().toString("hex"));
 	}
 
 	public override async delegateResignation(
@@ -284,36 +293,22 @@ export class TransactionService extends Services.AbstractTransactionService {
 		return wallet.nonce().toFixed(0);
 	}
 
-	// @TODO: Implement.
-	// eslint-disable-next-line no-unused-private-class-members
-	#signWithLedger(): SignedTransactionData {
-		let signedTransactionBuilder;
+	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
+		if (input.signatory.actsWithLedger()) {
+			return this.#signWithLedger(input, builder.transaction)
+		}
 
-		//const senderPublicKey = await this.#ledgerService.getPublicKey(input.signatory.signingKey());
-		//const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
-		//const senderAddress = (await this.#addressService.fromPublicKey(extendedPublicKey)).address;
-		//
-		//const serialized = await this.#app.resolve(Utils).toBytes(transaction.data);
-		//const signature = await this.#ledgerService.sign(input.signatory.signingKey(), serialized.toString("hex"));
-		//
-		//transaction.data = {
-		//	...transaction.data,
-		//	...signature,
-		//	senderAddress,
-		//	senderPublicKey,
-		//	v: Number.parseInt(signature.v) + 27, // @TODO: remove it on mainsail evm.16
-		//};
-		//
-		//// Reassign public key to match the signer, as `build` changes it.
-		//const signedTransaction = await transaction.build(transaction.data);
-		//signedTransaction.data.senderPublicKey = senderPublicKey;
-		//signedTransaction.data.senderAddress = senderAddress;
-		//
-		//return new SignedTransactionData().configure(signedTransactionBuilder.transaction.data.id, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.data, signedTransactionBuilder.transaction.serialize().toString("hex"))
+		await builder.sign(input.signatory.signingKey());
+	}
 
-		return new SignedTransactionData().configure(
-			signedTransactionBuilder.transaction.data,
-			signedTransactionBuilder.transaction.serialize().toString("hex"),
-		);
+	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
+		const signature = await this.#ledgerService.sign(input.signatory.signingKey(), transaction.serialize().toString("hex"));
+
+		transaction.data = {
+			...transaction.data,
+			...signature,
+			id: transaction.getId(),
+			v: Number.parseInt(signature.v) + 27
+		}
 	}
 }
