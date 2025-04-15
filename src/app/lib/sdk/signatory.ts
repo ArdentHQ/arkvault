@@ -8,10 +8,9 @@ import { ConfirmationWIFSignatory } from "./confirmation-wif.signatory";
 import { ForbiddenMethodCallException } from "./exceptions";
 import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
-import { MultiSignatureSignatory } from "./multi-signature.signatory";
 import { PrivateKeySignatory } from "./private-key.signatory";
 import { SecretSignatory } from "./secret.signatory";
-import { IdentityOptions, MultiSignatureAsset } from "./services";
+import { IdentityOptions, } from "./services";
 import { WIFSignatory } from "./wif.signatory";
 
 type SignatoryType =
@@ -20,25 +19,18 @@ type SignatoryType =
 	| ConfirmationWIFSignatory
 	| LedgerSignatory
 	| MnemonicSignatory
-	| MultiSignatureSignatory
 	| PrivateKeySignatory
 	| SecretSignatory
 	| WIFSignatory;
 
 export class Signatory {
 	readonly #signatory: SignatoryType;
-	readonly #multiSignature: MultiSignatureAsset | undefined;
 
-	public constructor(signatory: SignatoryType, multiSignature?: MultiSignatureAsset) {
+	public constructor(signatory: SignatoryType) {
 		this.#signatory = signatory;
-		this.#multiSignature = multiSignature;
 	}
 
 	public signingKey(): string {
-		if (this.#signatory instanceof MultiSignatureSignatory) {
-			throw new ForbiddenMethodCallException(this.constructor.name, this.signingKey.name);
-		}
-
 		return this.#signatory.signingKey();
 	}
 
@@ -70,10 +62,6 @@ export class Signatory {
 		}
 
 		if (this.#signatory instanceof PrivateKeySignatory) {
-			return this.#signatory.address();
-		}
-
-		if (this.#signatory instanceof MultiSignatureSignatory) {
 			return this.#signatory.address();
 		}
 
@@ -118,14 +106,6 @@ export class Signatory {
 		throw new ForbiddenMethodCallException(this.constructor.name, this.path.name);
 	}
 
-	public asset(): MultiSignatureAsset {
-		if (this.#signatory instanceof MultiSignatureSignatory) {
-			return this.#signatory.asset();
-		}
-
-		throw new ForbiddenMethodCallException(this.constructor.name, this.asset.name);
-	}
-
 	public options(): IdentityOptions | undefined {
 		if (this.#signatory instanceof AbstractSignatory) {
 			return this.#signatory.options();
@@ -139,15 +119,7 @@ export class Signatory {
 			return this.#signatory.options();
 		}
 
-		throw new ForbiddenMethodCallException(this.constructor.name, this.asset.name);
-	}
-
-	public multiSignature(): MultiSignatureAsset | undefined {
-		return this.#multiSignature;
-	}
-
-	public hasMultiSignature(): boolean {
-		return this.#multiSignature !== undefined;
+		throw new ForbiddenMethodCallException(this.constructor.name, "");
 	}
 
 	public actsWithMnemonic(): boolean {
@@ -168,10 +140,6 @@ export class Signatory {
 
 	public actsWithPrivateKey(): boolean {
 		return this.#signatory instanceof PrivateKeySignatory;
-	}
-
-	public actsWithMultiSignature(): boolean {
-		return this.#signatory instanceof MultiSignatureSignatory;
 	}
 
 	public actsWithLedger(): boolean {

@@ -41,13 +41,9 @@ export interface SignedTransactionData {
 	isVoteCombination(): boolean;
 	isVote(): boolean;
 	isUnvote(): boolean;
-	isMultiSignatureRegistration(): boolean;
 	isMultiPayment(): boolean;
 
 	methodHash(): string;
-
-	// Indicates if the transaction has been signed with a multi-signature.
-	usesMultiSignature(): boolean;
 
 	// Access & serialization
 	get<T = string>(key: string): T;

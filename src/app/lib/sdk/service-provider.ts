@@ -19,7 +19,6 @@ import {
 	AbstractLedgerService,
 	AbstractLinkService,
 	AbstractMessageService,
-	AbstractMultiSignatureService,
 	AbstractPrivateKeyService,
 	AbstractPublicKeyService,
 	AbstractSignatoryService,
@@ -105,13 +104,6 @@ export class AbstractServiceProvider implements IServiceProvider {
 
 		if (container.missing(BindingType.MessageService)) {
 			container.singleton(BindingType.MessageService, services.MessageService || AbstractMessageService);
-		}
-
-		if (container.missing(BindingType.MultiSignatureService)) {
-			container.singleton(
-				BindingType.MultiSignatureService,
-				services.MultiSignatureService || AbstractMultiSignatureService,
-			);
 		}
 
 		if (container.missing(BindingType.PrivateKeyService)) {

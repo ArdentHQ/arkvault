@@ -17,12 +17,9 @@ export type TransactionType =
 	| "delegateRegistration"
 	| "validatorRegistration"
 	| "delegateResignation"
-	| "ipfs"
 	| "multiPayment"
-	| "multiSignature"
 	| "secondSignature"
 	| "transfer"
-	| "unlockToken"
 	| "vote";
 
 export interface NetworkHost {
@@ -53,7 +50,6 @@ export interface NetworkManifestTransactions {
 	memo?: boolean;
 	utxo?: boolean;
 	multiPaymentRecipients?: number;
-	multiSignatureType?: "standard" | "advanced";
 	lockedBalance?: boolean;
 }
 
@@ -187,7 +183,6 @@ export type AddressMethod =
 	| "mnemonic.bip44"
 	| "mnemonic.bip49"
 	| "mnemonic.bip84"
-	| "multiSignature"
 	| "privateKey"
 	| "publicKey"
 	| "secret"
@@ -219,7 +214,6 @@ export type PublicKeyMethod =
 	| "mnemonic.bip44"
 	| "mnemonic.bip49"
 	| "mnemonic.bip84"
-	| "multiSignature"
 	| "secret"
 	| "wif";
 export type PublicKeyMethods = PublicKeyMethod[];
@@ -242,14 +236,6 @@ export type TransactionMethod =
 	| "usernameResignation.ledgerS"
 	| "usernameResignation.ledgerX"
 	| "usernameResignation.musig"
-	| "delegateRegistration"
-	| "delegateRegistration.ledgerS"
-	| "delegateRegistration.ledgerX"
-	| "delegateRegistration.musig"
-	| "delegateResignation"
-	| "delegateResignation.ledgerS"
-	| "delegateResignation.ledgerX"
-	| "delegateResignation.musig"
 	| "validatorRegistration"
 	| "validatorRegistration.ledgerS"
 	| "validatorRegistration.ledgerX"
@@ -259,18 +245,10 @@ export type TransactionMethod =
 	| "validatorResignation.ledgerX"
 	| "validatorResignation.musig"
 	| "estimateExpiration"
-	| "ipfs.ledgerS"
-	| "ipfs.ledgerX"
-	| "ipfs.musig"
-	| "ipfs"
 	| "multiPayment.ledgerS"
 	| "multiPayment.ledgerX"
 	| "multiPayment.musig"
 	| "multiPayment"
-	| "multiSignature.ledgerS"
-	| "multiSignature.ledgerX"
-	| "multiSignature.musig"
-	| "multiSignature"
 	| "secondSignature.ledgerS"
 	| "secondSignature.ledgerX"
 	| "secondSignature.musig"
@@ -279,10 +257,6 @@ export type TransactionMethod =
 	| "transfer.ledgerX"
 	| "transfer.musig"
 	| "transfer"
-	| "unlockToken.ledgerS"
-	| "unlockToken.ledgerX"
-	| "unlockToken.musig"
-	| "unlockToken"
 	| "vote.ledgerS"
 	| "vote.ledgerX"
 	| "vote.musig"

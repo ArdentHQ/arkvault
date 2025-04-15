@@ -21,8 +21,6 @@ export * from "./link.contract";
 export * from "./link.service";
 export * from "./message.contract";
 export * from "./message.service";
-export * from "./multi-signature.contract";
-export * from "./multi-signature.service";
 export * from "./private-key.contract";
 export * from "./private-key.service";
 export * from "./prober.service";

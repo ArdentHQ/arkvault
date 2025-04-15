@@ -8,7 +8,7 @@ import { IContainer } from "./container.contracts";
 import { NotImplemented } from "./exceptions";
 import { NetworkHostSelector } from "./network.models";
 import { BindingType } from "./service-provider.contract";
-import { IdentityOptions, MultisignatureAddressInput } from "./shared.contract";
+import { IdentityOptions, } from "./shared.contract";
 
 export class AbstractAddressService implements AddressService {
 	protected readonly configRepository: ConfigRepository;
@@ -20,18 +20,11 @@ export class AbstractAddressService implements AddressService {
 	}
 
 	public async fromMnemonic(mnemonic: string, options?: IdentityOptions): Promise<AddressDataTransferObject> {
-		throw new NotImplemented(this.constructor.name, this.fromMultiSignature.name);
-	}
-
-	public async fromMultiSignature(
-		input: MultisignatureAddressInput,
-		options?: IdentityOptions,
-	): Promise<AddressDataTransferObject> {
-		throw new NotImplemented(this.constructor.name, this.fromMultiSignature.name);
+		throw new NotImplemented(this.constructor.name, this.fromMnemonic.name);
 	}
 
 	public async fromPublicKey(publicKey: string, options?: IdentityOptions): Promise<AddressDataTransferObject> {
-		throw new NotImplemented(this.constructor.name, this.fromMultiSignature.name);
+		throw new NotImplemented(this.constructor.name, this.fromPublicKey.name);
 	}
 
 	public async fromPrivateKey(privateKey: string, options?: IdentityOptions): Promise<AddressDataTransferObject> {
@@ -47,6 +40,6 @@ export class AbstractAddressService implements AddressService {
 	}
 
 	public async validate(address: string): Promise<boolean> {
-		throw new NotImplemented(this.constructor.name, this.fromMultiSignature.name);
+		throw new NotImplemented(this.constructor.name, this.validate.name);
 	}
 }

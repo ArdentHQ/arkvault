@@ -4,7 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { BigNumberService } from "./big-number.service";
 import { IContainer } from "./container.contracts";
-import { KeyValuePair, WalletBalance, WalletMultiSignature } from "./contracts";
+import { KeyValuePair, WalletBalance, } from "./contracts";
 import { NotImplemented } from "./exceptions";
 import { BindingType } from "./service-provider.contract";
 
@@ -65,11 +65,6 @@ export class AbstractWalletData {
 		return undefined;
 	}
 
-	// Musig
-	public multiSignature(): WalletMultiSignature {
-		throw new NotImplemented(this.constructor.name, this.multiSignature.name);
-	}
-
 	// Flags
 	public isDelegate(): boolean {
 		return false;
@@ -87,10 +82,6 @@ export class AbstractWalletData {
 		return false;
 	}
 
-	public isMultiSignature(): boolean {
-		return false;
-	}
-
 	public isSecondSignature(): boolean {
 		return false;
 	}
@@ -100,7 +91,6 @@ export class AbstractWalletData {
 			address: this.address(),
 			balance: this.balance(),
 			isDelegate: this.isDelegate(),
-			isMultiSignature: this.isMultiSignature(),
 			isResignedDelegate: this.isResignedDelegate(),
 			isResignedValidator: this.isResignedValidator(),
 			isSecondSignature: this.isSecondSignature(),

@@ -20,7 +20,6 @@ export const BindingType = {
 	LinkService: Symbol.for("Coin<LinkService>"),
 	Manifest: Symbol.for("Coin<Manifest>"),
 	MessageService: Symbol.for("Coin<MessageService>"),
-	MultiSignatureService: Symbol.for("Coin<MultiSignatureService>"),
 	Network: Symbol.for("Coin<Network>"),
 	NetworkHostSelector: Symbol.for("Coin<NetworkHostSelector>"),
 	NetworkRepository: Symbol.for("Coin<NetworkRepository>"),

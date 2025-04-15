@@ -17,7 +17,6 @@ import {
 	LedgerService,
 	LinkService,
 	MessageService,
-	MultiSignatureService,
 	PrivateKeyService,
 	PublicKeyService,
 	SignatoryService,
@@ -84,7 +83,6 @@ export class Coin {
 		await this.#container.unbindAsync(BindingType.LedgerService);
 		await this.#container.unbindAsync(BindingType.LinkService);
 		await this.#container.unbindAsync(BindingType.MessageService);
-		await this.#container.unbindAsync(BindingType.MultiSignatureService);
 		await this.#container.unbindAsync(BindingType.PrivateKeyService);
 		await this.#container.unbindAsync(BindingType.ProberService);
 		await this.#container.unbindAsync(BindingType.PublicKeyService);
@@ -160,10 +158,6 @@ export class Coin {
 
 	public message(): MessageService {
 		return this.#container.get(BindingType.MessageService);
-	}
-
-	public multiSignature(): MultiSignatureService {
-		return this.#container.get(BindingType.MultiSignatureService);
 	}
 
 	public privateKey(): PrivateKeyService {

@@ -18,7 +18,6 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 
 	readonly #types = [
 		{ method: "isMultiPayment", type: "multiPayment" },
-		{ method: "isMultiSignatureRegistration", type: "multiSignature" },
 		{ method: "isSecondSignature", type: "secondSignature" },
 		{ method: "isTransfer", type: "transfer" },
 		{ method: "isUsernameRegistration", type: "usernameRegistration" },
@@ -126,10 +125,6 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		return false;
 	}
 
-	public isMultiSignatureRegistration(): boolean {
-		return false;
-	}
-
 	public isIpfs(): boolean {
 		return false;
 	}
@@ -144,10 +139,6 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 
 	public methodHash(): string {
 		return "transfer";
-	}
-
-	public usesMultiSignature(): boolean {
-		return false;
 	}
 
 	public get<T = string>(key: string): T {

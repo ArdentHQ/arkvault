@@ -18,8 +18,6 @@ export interface TransactionFees {
 	usernameRegistration: TransactionFee;
 	usernameResignation: TransactionFee;
 	vote: TransactionFee;
-	multiSignature: TransactionFee;
-	ipfs: TransactionFee;
 	multiPayment: TransactionFee;
 	validatorResignation: TransactionFee;
 }

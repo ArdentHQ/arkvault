@@ -335,16 +335,6 @@ export class Network {
 	}
 
 	/**
-	 * Returns the type of the multi-signature.
-	 *
-	 * @return {*}  {string}
-	 * @memberof Network
-	 */
-	public multiSignatureType(): string {
-		return get(this.#network, "transactions.multiSignatureType", "standard");
-	}
-
-	/**
 	 * Returns the number of words for newly generated BIP39 phrases.
 	 *
 	 * @return {*}  {number}

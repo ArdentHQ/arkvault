@@ -1,4 +1,3 @@
-import { MultiSignatureAsset } from "./multi-signature.contract";
 import { IdentityOptions } from "./shared.contract";
 import { Signatory } from "./signatories";
 
@@ -12,8 +11,6 @@ export interface SignatoryService {
 	confirmationWIF(mnemonic: string, confirmation: string): Promise<Signatory>;
 
 	privateKey(privateKey: string, options?: IdentityOptions): Promise<Signatory>;
-
-	multiSignature(asset: MultiSignatureAsset, options?: IdentityOptions): Promise<Signatory>;
 
 	ledger(path: string): Promise<Signatory>;
 

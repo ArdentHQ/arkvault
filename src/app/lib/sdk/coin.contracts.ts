@@ -13,7 +13,6 @@ import {
 	LedgerTransportFactory,
 	LinkService,
 	MessageService,
-	MultiSignatureService,
 	PrivateKeyService,
 	PublicKeyService,
 	SignatoryService,
@@ -48,7 +47,6 @@ export interface CoinServices {
 	LedgerService?: LedgerService;
 	LinkService?: LinkService;
 	MessageService?: MessageService;
-	MultiSignatureService?: MultiSignatureService;
 	PrivateKeyService?: PrivateKeyService;
 	PublicKeyService?: PublicKeyService;
 	SignatoryService?: SignatoryService;
