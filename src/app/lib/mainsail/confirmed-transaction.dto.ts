@@ -1,4 +1,4 @@
-import { Contracts, DTO, Exceptions, IoC } from "@/app/lib/sdk";
+import { Contracts, DTO, IoC } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
@@ -69,10 +69,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return gasPrice.times(this.data.gasLimit);
 	}
 
-	public override asset(): Record<string, unknown> {
-		return this.data.asset || {};
-	}
-
 	public override isReturn(): boolean {
 		if (this.isTransfer()) {
 			return this.isSent() && this.isReceived();
@@ -109,10 +105,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return TransactionTypeService.isUsernameResignation(this.data);
 	}
 
-	public override isDelegateRegistration(): boolean {
-		return this.isValidatorRegistration();
-	}
-
 	public override isValidatorRegistration(): boolean {
 		return TransactionTypeService.isValidatorRegistration(this.data);
 	}
@@ -137,16 +129,8 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return TransactionTypeService.isMultiPayment(this.data);
 	}
 
-	public override isDelegateResignation(): boolean {
-		return this.isValidatorResignation();
-	}
-
 	public override isValidatorResignation(): boolean {
 		return TransactionTypeService.isValidatorResignation(this.data);
-	}
-
-	public override isMagistrate(): boolean {
-		return TransactionTypeService.isMagistrate(this.data);
 	}
 
 	// Username registration
@@ -157,11 +141,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 	public override validatorPublicKey(): string {
 		const key = decodeFunctionData(this.data.data).args[0] as string;
 		return key.slice(2); // removes 0x part
-	}
-
-	// Transfer
-	public override memo(): string | undefined {
-		return this.data.vendorField;
 	}
 
 	// Vote
@@ -208,26 +187,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		// Confirmed transactions have data prefixed with `0x`
 		// that is why we are using first 10 chars to extract method.
 		return this.data.data.slice(0, 10);
-	}
-
-	// IPFS
-	public override hash(): string {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.hash.name);
-	}
-
-	// HTLC Claim / Refund
-	public override lockTransactionId(): string {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.lockTransactionId.name);
-	}
-
-	// HTLC Claim
-	public override unlockSecret(): string {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.unlockSecret.name);
-	}
-
-	// HTLC Lock
-	public override secretHash(): string {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.secretHash.name);
 	}
 
 	public override expirationType(): number {

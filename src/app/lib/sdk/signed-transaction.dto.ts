@@ -17,13 +17,10 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 	protected serialized!: string;
 
 	readonly #types = [
-		{ method: "isIpfs", type: "ipfs" },
-		{ method: "isMagistrate", type: "magistrate" },
 		{ method: "isMultiPayment", type: "multiPayment" },
 		{ method: "isMultiSignatureRegistration", type: "multiSignature" },
 		{ method: "isSecondSignature", type: "secondSignature" },
 		{ method: "isTransfer", type: "transfer" },
-		{ method: "isUnlockToken", type: "unlockToken" },
 		{ method: "isUsernameRegistration", type: "usernameRegistration" },
 		{ method: "isUsernameResignation", type: "usernameResignation" },
 		{ method: "isUnvote", type: "unvote" },
@@ -31,10 +28,6 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		{ method: "isValidatorResignation", type: "validatorResignation" },
 		{ method: "isVote", type: "vote" },
 		{ method: "isVoteCombination", type: "voteCombination" },
-
-		// `delegate` methods should be after `validator` methods
-		{ method: "isDelegateRegistration", type: "delegateRegistration" },
-		{ method: "isDelegateResignation", type: "delegateResignation" },
 	];
 
 	public configure(identifier: string, signedData: RawTransactionData, serialized: string) {
@@ -93,10 +86,6 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		return BigNumber.ZERO;
 	}
 
-	public memo(): string | undefined {
-		return undefined;
-	}
-
 	public nonce(): BigNumber {
 		throw new NotImplemented(this.constructor.name, this.nonce.name);
 	}
@@ -118,10 +107,6 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 	}
 
 	public isUsernameResignation(): boolean {
-		return false;
-	}
-
-	public isDelegateRegistration(): boolean {
 		return false;
 	}
 
@@ -153,31 +138,7 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		return false;
 	}
 
-	public isDelegateResignation(): boolean {
-		return false;
-	}
-
 	public isValidatorResignation(): boolean {
-		return false;
-	}
-
-	public isHtlcLock(): boolean {
-		return false;
-	}
-
-	public isHtlcClaim(): boolean {
-		return false;
-	}
-
-	public isHtlcRefund(): boolean {
-		return false;
-	}
-
-	public isMagistrate(): boolean {
-		return false;
-	}
-
-	public isUnlockToken(): boolean {
 		return false;
 	}
 
@@ -230,17 +191,12 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		throw new NotImplemented(this.constructor.name, this.unvotes.name);
 	}
 
-	// @TODO: remove those after introducing proper signed tx DTOs (ARK/LSK specific)
 	public username(): string {
-		return this.signedData.asset.delegate.username;
+		throw new NotImplemented(this.constructor.name, this.username.name);
 	}
 
 	public validatorPublicKey(): string {
 		throw new NotImplemented(this.constructor.name, this.validatorPublicKey.name);
-	}
-
-	public hash(): string {
-		return this.signedData.asset.ipfs;
 	}
 
 	// Multi-Payment
@@ -286,9 +242,5 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 				return value;
 			}),
 		);
-	}
-
-	public async sanitizeSignatures(): Promise<void> {
-		return undefined;
 	}
 }

@@ -28,14 +28,12 @@ export interface SignedTransactionData {
 	recipient(): string;
 	amount(): BigNumber;
 	fee(): BigNumber;
-	memo(): string | undefined;
 	nonce(): BigNumber;
 	timestamp(): DateTime;
 
 	// Types
 	isTransfer(): boolean;
 	isSecondSignature(): boolean;
-	isDelegateRegistration(): boolean;
 	isValidatorRegistration(): boolean;
 	isUsernameRegistration(): boolean;
 	isUsernameResignation(): boolean;
@@ -44,14 +42,7 @@ export interface SignedTransactionData {
 	isVote(): boolean;
 	isUnvote(): boolean;
 	isMultiSignatureRegistration(): boolean;
-	isIpfs(): boolean;
 	isMultiPayment(): boolean;
-	isDelegateResignation(): boolean;
-	isHtlcLock(): boolean;
-	isHtlcClaim(): boolean;
-	isHtlcRefund(): boolean;
-	isMagistrate(): boolean;
-	isUnlockToken(): boolean;
 
 	methodHash(): string;
 
@@ -72,9 +63,7 @@ export interface SignedTransactionData {
 	// Multi-Payment
 	payments(): MultiPaymentItem[];
 
-	// @TODO: remove those after introducing proper signed tx DTOs
 	username(): string;
 	validatorPublicKey(): string;
-	hash(): string;
 	recipients(): MultiPaymentRecipient[];
 }

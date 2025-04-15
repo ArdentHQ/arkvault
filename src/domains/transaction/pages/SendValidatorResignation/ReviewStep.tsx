@@ -78,7 +78,7 @@ export const ReviewStep = ({
 					<FormField name="fee">
 						<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
 						<FeeField
-							type="delegateResignation"
+							type="validatorResignation"
 							data={undefined}
 							network={senderWallet.network()}
 							profile={profile}
