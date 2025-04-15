@@ -8,7 +8,9 @@ import react from "@vitejs/plugin-react";
 import svgrPlugin from "vite-plugin-svgr";
 import { visualizer } from "rollup-plugin-visualizer";
 
-export default defineConfig(() => {
+export default defineConfig(async () => {
+	const tailwindcss = (await import("@tailwindcss/vite")).default;
+
 	return {
 		resolve: {
 			alias: {
@@ -59,16 +61,17 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-						visualizer({
-							open: true,
-							brotliSize: true,
-							gzipSize: true,
-							template: "treemap",
-						}),
+					visualizer({
+						open: true,
+						brotliSize: true,
+						gzipSize: true,
+						template: "treemap",
+					}),
 				],
 			},
 		},
 		plugins: [
+			tailwindcss(),
 			react(),
 			svgrPlugin(),
 			PkgConfig(),
