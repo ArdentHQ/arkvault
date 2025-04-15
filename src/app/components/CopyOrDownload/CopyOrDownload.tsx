@@ -28,9 +28,9 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 				<Clipboard data={copyData} data-testid="CopyOrDownload__copy" variant="icon">
 					<div
 						className={cn("flex items-center space-x-2 rounded-xs px-2 py-1 leading-5 font-semibold", {
-							"text-theme-secondary-500 dark:text-theme-secondary-800 cursor-not-allowed": disabled,
 							"text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white":
 								!disabled,
+							"text-theme-secondary-500 dark:text-theme-secondary-800 cursor-not-allowed": disabled,
 						})}
 					>
 						<Icon name="Copy" />
@@ -44,9 +44,9 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 					type="button"
 					data-testid="CopyOrDownload__download"
 					className={cn("flex items-center space-x-2 rounded-xs px-2 py-1 leading-5 font-semibold", {
-						"text-theme-secondary-500 dark:text-theme-secondary-800 cursor-not-allowed": disabled,
 						"text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white":
 							!disabled,
+						"text-theme-secondary-500 dark:text-theme-secondary-800 cursor-not-allowed": disabled,
 					})}
 					onClick={() => onClickDownload()}
 					disabled={disabled}

@@ -75,8 +75,8 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 			</div>
 			<div
 				className={cn("flex w-11 items-center justify-center", {
-					"bg-theme-primary-600 dark:bg-theme-primary-600 rounded-r-lg": selected,
 					"bg-theme-primary-100 dark:bg-theme-background rounded-r-xl": !selected,
+					"bg-theme-primary-600 dark:bg-theme-primary-600 rounded-r-lg": selected,
 				})}
 			>
 				<div>
