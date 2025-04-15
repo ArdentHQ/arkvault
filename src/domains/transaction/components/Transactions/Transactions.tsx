@@ -196,7 +196,7 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border border-theme-secondary-300 p-3 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3">
+									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xs border border-theme-secondary-300 p-3 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 sm:px-4 sm:py-3">
 										<span className="text-base font-semibold leading-tight">
 											{selectedFilterLabel}
 										</span>
@@ -222,7 +222,7 @@ export const Transactions = memo(function Transactions({
 				</>
 			)}
 
-			<TableWrapper className={cn({ "!rounded-b-none border-none": showMore })}>
+			<TableWrapper className={cn({ "rounded-b-none! border-none": showMore })}>
 				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					{!isLoadingTransactions && (
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">

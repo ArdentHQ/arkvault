@@ -25,7 +25,7 @@ export const NotificationTransactionSkeletonRow = () => {
 			</TableCell>
 
 			<TableCell innerClassName="justify-end pr-8 static">
-				<span className="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800">
+				<span className="flex h-7 items-center space-x-1 rounded-xs border border-theme-secondary-300 px-2 dark:border-theme-secondary-800">
 					<Skeleton height={16} width={amountWidth} />
 					<Skeleton height={16} width={35} />
 				</span>
