@@ -3,8 +3,3 @@ export interface KeyPair {
 	privateKey: string;
 	compressed: boolean;
 }
-
-export interface MultiSignatureAsset {
-	min: number;
-	publicKeys: string[];
-}

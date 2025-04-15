@@ -104,10 +104,6 @@ export class SignedTransactionData
 		return TransactionTypeService.isUnvote(this.signedData);
 	}
 
-	public override isMultiSignatureRegistration(): boolean {
-		return TransactionTypeService.isMultiSignatureRegistration(this.signedData);
-	}
-
 	// Multi-Payment
 	public override payments(): MultiPaymentItem[] {
 		const payments: MultiPaymentItem[] = [];
@@ -147,10 +143,6 @@ export class SignedTransactionData
 		const methodName = this.signedData.data.slice(0, 8);
 
 		return `0x${methodName}`;
-	}
-
-	public override usesMultiSignature(): boolean {
-		return !!this.signedData.multiSignature;
 	}
 
 	public override toBroadcast() {

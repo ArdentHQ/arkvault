@@ -6,7 +6,6 @@ import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto"
 
 import { Contracts, Identifiers } from "@mainsail/contracts";
 import { BindingType } from "./coin.contract.js";
-import { MultisignatureAddressInput } from "@/app/lib/sdk/shared.contract";
 import { AddressDataTransferObject } from "@/app/lib/sdk/address.contract.js";
 
 export class AddressService {
@@ -32,11 +31,6 @@ export class AddressService {
 			address: Address.fromPassphrase(mnemonic),
 			type: "bip39",
 		};
-	}
-
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	public fromMultiSignature(input: MultisignatureAddressInput): AddressDataTransferObject {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
 	}
 
 	public fromPublicKey(publicKey: string): Services.AddressDataTransferObject {

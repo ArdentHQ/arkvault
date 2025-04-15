@@ -40,12 +40,6 @@ export class AddressNetworkError extends CryptoError {
 	}
 }
 
-export class InvalidMultiSignatureAssetError extends CryptoError {
-	public constructor() {
-		super(`The multi signature asset is invalid.`);
-	}
-}
-
 export class InvalidBase58ChecksumError extends CryptoError {
 	public constructor() {
 		super("Invalid checksum for base58 string.");

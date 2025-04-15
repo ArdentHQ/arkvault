@@ -303,7 +303,6 @@ export class ClientService extends Services.AbstractClientService {
 			delegateRegistration: TransactionTypes.RegisterValidator,
 			delegateResignation: TransactionTypes.ResignValidator,
 			multiPayment: TransactionTypes.MultiPayment,
-			multiSignature: undefined,
 			transfer: TransactionTypes.Transfer,
 			usernameRegistration: TransactionTypes.RegisterUsername,
 			usernameResignation: TransactionTypes.ResignUsername,

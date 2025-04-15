@@ -34,7 +34,6 @@ export class FeeService extends Services.AbstractFeeService {
 			validatorResignation: fees,
 			ipfs: fees,
 			multiPayment: fees,
-			multiSignature: fees,
 			secondSignature: fees,
 			transfer: fees,
 			usernameRegistration: fees,

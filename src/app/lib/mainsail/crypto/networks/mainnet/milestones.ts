@@ -18,7 +18,6 @@ export const milestones = [
 				htlcRefund: 0,
 				ipfs: 500_000_000,
 				multiPayment: 10_000_000,
-				multiSignature: 500_000_000,
 				secondSignature: 500_000_000,
 				transfer: 10_000_000,
 				usernameRegistration: 2_500_000_000,

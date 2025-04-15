@@ -175,15 +175,3 @@ export class InvalidMilestoneConfigurationError extends CryptoError {
 		super(message);
 	}
 }
-
-export class InvalidMultiSignatureAssetError extends CryptoError {
-	public constructor() {
-		super(`The multi signature asset is invalid.`);
-	}
-}
-
-export class DuplicateParticipantInMultiSignatureError extends CryptoError {
-	public constructor() {
-		super(`Invalid multi signature, because duplicate participant found.`);
-	}
-}
