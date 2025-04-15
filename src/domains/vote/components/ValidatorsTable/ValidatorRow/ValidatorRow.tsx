@@ -257,7 +257,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 				<div
 					data-testid="ValidatorStatus__active"
 					className={twMerge(
-						"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
+						"inline-block min-w-[58px] rounded-xs bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
 						className,
 					)}
 				>
@@ -272,7 +272,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 			<div
 				data-testid="ValidatorStatus__standby"
 				className={twMerge(
-					"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
+					"inline-block min-w-[58px] rounded-xs bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200",
 					className,
 				)}
 			>
@@ -319,7 +319,7 @@ export const ValidatorRow = ({
 	return (
 		<TableRow
 			key={validator.address()}
-			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+			className="relative last:border-b-4! last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
 		>
 			<TableCell
 				variant="start"
@@ -358,7 +358,7 @@ export const ValidatorRow = ({
 			<TableCell
 				className="hidden sm:table-cell"
 				innerClassName={cn(
-					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0",
+					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0!",
 					rowColor,
 				)}
 			>
