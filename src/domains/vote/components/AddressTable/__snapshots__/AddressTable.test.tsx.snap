@@ -202,7 +202,7 @@ exports[`AddressTable > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
             data-testid="TableRow"
           >
             <td
@@ -235,7 +235,7 @@ exports[`AddressTable > should render 1`] = `
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
-                      class="ring-focus relative focus:outline-none"
+                      class="ring-focus relative focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -300,14 +300,14 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet-vote"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
                       <span
                         class="no-ligatures"
@@ -352,7 +352,7 @@ exports[`AddressTable > should render 1`] = `
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
               >
                 <div
-                  class="font-semibold text-theme-secondary-400"
+                  class="text-theme-secondary-400 font-semibold"
                 >
                   <span
                     class="text-theme-secondary-text"
@@ -371,7 +371,7 @@ exports[`AddressTable > should render 1`] = `
               >
                 <div>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                     data-testid="AddressRow__select-0"
                     type="button"
                   >
@@ -594,7 +594,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
           role="rowgroup"
         >
           <tr
-            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
             data-testid="TableRow"
           >
             <td
@@ -627,7 +627,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
-                      class="ring-focus relative focus:outline-none"
+                      class="ring-focus relative focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -692,14 +692,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet-vote"
                 >
                   <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
                       <span
                         class="no-ligatures"
@@ -744,7 +744,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
               >
                 <div
-                  class="font-semibold text-theme-secondary-400"
+                  class="text-theme-secondary-400 font-semibold"
                 >
                   <span
                     class="text-theme-secondary-text"
@@ -763,7 +763,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               >
                 <div>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                     data-testid="AddressRow__select-0"
                     type="button"
                   >
@@ -987,23 +987,23 @@ exports[`AddressTable > should render with empty results 1`] = `
         />
         <tfoot>
           <tr
-            class="border-solid border-theme-secondary-200 dark:border-theme-secondary-800 md:border-b-4"
+            class="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
             data-testid="EmptyResults"
           >
             <td
-              class="pb-4 pt-[11px]"
+              class="pt-[11px] pb-4"
               colspan="5"
             >
               <div
                 class="flex flex-col items-center justify-center"
               >
                 <h3
-                  class="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold"
                 >
                   No Results
                 </h3>
                 <p
-                  class="text-sm text-theme-secondary-700 dark:text-theme-secondary-600"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm"
                 >
                   No results found. Refine your search and try again.
                 </p>
@@ -1219,7 +1219,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
           role="rowgroup"
         >
           <tr
-            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
             data-testid="TableRow"
           >
             <td
@@ -1252,7 +1252,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
-                      class="ring-focus relative focus:outline-none"
+                      class="ring-focus relative focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1324,7 +1324,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
               >
                 <div
-                  class="font-semibold text-theme-secondary-400"
+                  class="text-theme-secondary-400 font-semibold"
                 >
                   <span
                     class="text-theme-secondary-text"
@@ -1343,7 +1343,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
               >
                 <div>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                     data-testid="AddressRow__select-0"
                     type="button"
                   >

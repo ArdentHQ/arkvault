@@ -6,7 +6,7 @@ exports[`Section > should render 1`] = `
     class="w-full py-4 first:pt-8 last:pb-8"
   >
     <div
-      class="mx-auto px-6 lg:container md:px-10"
+      class="mx-auto px-6 md:px-10 lg:container"
     />
   </div>
 </DocumentFragment>
@@ -15,10 +15,10 @@ exports[`Section > should render 1`] = `
 exports[`Section > should render with border 1`] = `
 <DocumentFragment>
   <div
-    class="pb-8! pt-8! border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+    class="border-b pb-8! pt-8! w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
   >
     <div
-      class="mx-auto px-6 lg:container md:px-10"
+      class="mx-auto px-6 md:px-10 lg:container"
     />
   </div>
 </DocumentFragment>
@@ -30,7 +30,7 @@ exports[`Section > should render with custom background class name 1`] = `
     class="py-8! w-full py-4 first:pt-8 last:pb-8 bg-theme-secondary-background"
   >
     <div
-      class="mx-auto px-6 lg:container md:px-10"
+      class="mx-auto px-6 md:px-10 lg:container"
     />
   </div>
 </DocumentFragment>

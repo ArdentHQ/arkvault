@@ -5,7 +5,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -38,7 +38,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -103,14 +103,14 @@ exports[`AddressRow > should emit action on select button 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -166,7 +166,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -179,7 +179,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -203,7 +203,7 @@ exports[`AddressRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -236,7 +236,7 @@ exports[`AddressRow > should render 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -301,14 +301,14 @@ exports[`AddressRow > should render 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -364,7 +364,7 @@ exports[`AddressRow > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -377,7 +377,7 @@ exports[`AddressRow > should render 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -401,7 +401,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -434,7 +434,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -499,14 +499,14 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -562,7 +562,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -575,7 +575,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -599,7 +599,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -632,7 +632,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -697,14 +697,14 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -760,7 +760,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -773,7 +773,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 disabled=""
                 type="button"
@@ -798,7 +798,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -831,7 +831,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -903,7 +903,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="font-semibold text-theme-secondary-400"
+              class="text-theme-secondary-400 font-semibold"
             >
               <span
                 class="text-theme-secondary-text"
@@ -922,7 +922,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -946,7 +946,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -979,7 +979,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1044,23 +1044,23 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <div
-                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 relative h-8! w-8! ring-theme-background duration-100"
               >
                 <span
-                  class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"
+                  class="text-theme-primary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   +4
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -1105,7 +1105,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="font-semibold text-theme-secondary-400"
+              class="text-theme-secondary-400 font-semibold"
             >
               <span
                 class="text-theme-secondary-text"
@@ -1124,7 +1124,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1148,7 +1148,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -1181,7 +1181,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1246,23 +1246,23 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <div
-                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 relative h-8! w-8! ring-theme-background duration-100"
               >
                 <span
-                  class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"
+                  class="text-theme-primary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   +5
                 </span>
               </div>
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -1307,7 +1307,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="font-semibold text-theme-secondary-400"
+              class="text-theme-secondary-400 font-semibold"
             >
               <span
                 class="text-theme-secondary-text"
@@ -1326,7 +1326,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1350,7 +1350,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -1383,7 +1383,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1448,14 +1448,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -1511,7 +1511,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -1524,7 +1524,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1539,7 +1539,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -1561,7 +1561,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   0x659A76be283644AEc2003aa8ba26485047fd1BFB
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1646,7 +1646,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -1671,7 +1671,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -1704,7 +1704,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1769,14 +1769,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://explorer-evm-test.mainsailhq.com/addresses/0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -1832,7 +1832,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -1845,7 +1845,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1860,7 +1860,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
       </tr>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -1882,7 +1882,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   0x7F9d7FdA68521c09Bd2749a36514e514abB0866F
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1967,7 +1967,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -1992,7 +1992,7 @@ exports[`AddressRow > should render with active validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -2025,7 +2025,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2090,14 +2090,14 @@ exports[`AddressRow > should render with active validator 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -2153,7 +2153,7 @@ exports[`AddressRow > should render with active validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -2166,7 +2166,7 @@ exports[`AddressRow > should render with active validator 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2190,7 +2190,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -2223,7 +2223,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2288,14 +2288,14 @@ exports[`AddressRow > should render with resigned validator 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -2353,7 +2353,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Resigned
@@ -2366,7 +2366,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2390,7 +2390,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
   <table>
     <tbody>
       <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid"
         data-testid="TableRow"
       >
         <td
@@ -2423,7 +2423,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2488,14 +2488,14 @@ exports[`AddressRow > should render with standby validator 1`] = `
               data-testid="AddressRow__wallet-vote"
             >
               <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
+                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 w-24 truncate md:w-auto"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
                 rel="noopener noreferrer"
               >
                 <span
-                  class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                 >
                   <span
                     class="no-ligatures"
@@ -2551,7 +2551,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+              class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Standby
@@ -2564,7 +2564,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
