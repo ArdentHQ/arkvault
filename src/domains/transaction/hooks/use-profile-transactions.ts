@@ -337,12 +337,24 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return transactions.length === 0 && !isLoadingTransactions;
 	}, [isLoadingTransactions, transactions.length]);
 
-	const { start, stop } = useSynchronizer([
-		{
-			callback: checkNewTransactions,
-			interval: 30_000,
-		},
-	]);
+	const addresses = wallets
+		.map((wallet) => wallet.address())
+		.toSorted((a, b) => a.localeCompare(b))
+		.join("-");
+
+	const transactionTypes = selectedTransactionTypes?.join("-");
+
+	const jobs = useMemo(
+		() => [
+			{
+				callback: checkNewTransactions,
+				interval: 15_000,
+			},
+		],
+		[addresses, activeMode, transactionTypes, activeTransactionType],
+	);
+
+	const { start, stop } = useSynchronizer(jobs);
 
 	useEffect(() => {
 		start();
