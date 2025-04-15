@@ -13,6 +13,7 @@ import { useLedgerModelStatus } from "@/app/hooks";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useMultiSignatureRegistration, useMultiSignatureStatus } from "@/domains/transaction/hooks";
+import { func } from "joi";
 
 interface MultiSignatureDetailProperties {
 	isOpen: boolean;
@@ -46,12 +47,11 @@ export const MultiSignatureDetail = ({
 
 	const [activeStep, setActiveStep] = useState<MultiSignatureDetailStep>(MultiSignatureDetailStep.SummaryStep);
 
-	const { addSignature, broadcast } = useMultiSignatureRegistration();
-	const { canBeBroadcasted, canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature } =
-		useMultiSignatureStatus({
-			transaction,
-			wallet,
-		});
+	// eslint-disable-next-line unicorn/consistent-function-scoping
+	let addSignature, broadcast = function() {
+		// suppress
+	}
+	let canBeBroadcasted, canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature = false;
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
