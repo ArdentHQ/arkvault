@@ -227,12 +227,12 @@ exports[`InputDate > should render 1`] = `
                     aria-disabled="true"
                     aria-label="Not available Thursday, July 2nd, 2020"
                     aria-selected="false"
-                    class="react-datepicker__day react-datepicker__day--004"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--disabled"
                     role="option"
                     tabindex="-1"
                     title=""
                   >
-                    4
+                    2
                   </div>
                   <div
                     aria-disabled="false"
