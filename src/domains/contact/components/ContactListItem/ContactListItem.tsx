@@ -58,7 +58,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 		<TableRow
 			key={`${address.address()}-${index}`}
 			border={isLast}
-			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+			className="relative last:border-b-4! last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800"
 			data-testid="ContactListItem"
 		>
 			<TableCell variant="start" innerClassName="space-x-4 whitespace-nowrap">
@@ -99,7 +99,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 					{index === 0 && (
 						<Divider
 							type="vertical"
-							className="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+							className="height-[17px] m-0! border-theme-secondary-300 dark:border-theme-secondary-800"
 						/>
 					)}
 
