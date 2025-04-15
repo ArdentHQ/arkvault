@@ -117,7 +117,7 @@ describe("Table", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should not render rounded borders if noRoundedBorders is set", () => {
+	it("should not render rounded-xs borders if noRoundedBorders is set", () => {
 		render(
 			<Table
 				columns={[
@@ -133,7 +133,7 @@ describe("Table", () => {
 		expect(screen.getByTestId("table__th--0")).not.toHaveClass("first:rounded-tl-xl");
 	});
 
-	it("should render rounded borders if noRoundedBorders is not set", () => {
+	it("should render rounded-xs borders if noRoundedBorders is not set", () => {
 		render(
 			<Table
 				columns={[

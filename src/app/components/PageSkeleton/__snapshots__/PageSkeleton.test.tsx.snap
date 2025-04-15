@@ -23,7 +23,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -66,7 +66,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
           class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
         >
           <div
-            class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
+            class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-(--breakpoint-xl)"
           >
             <div
               class="flex flex-col gap-3 lg:flex-row"
@@ -97,7 +97,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -124,7 +124,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -144,7 +144,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -171,7 +171,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Easy Access to Your Digital Assets"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                               />
@@ -191,7 +191,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -218,7 +218,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Integrated Exchanges"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                               />
@@ -238,7 +238,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -265,7 +265,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -285,7 +285,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -312,7 +312,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Easy Access to Your Digital Assets"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                               />
@@ -332,7 +332,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -359,7 +359,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Integrated Exchanges"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                               />
@@ -379,7 +379,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
                                 class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
@@ -406,7 +406,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 !hidden h-[180px] md:!block lg:!hidden"
+                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />

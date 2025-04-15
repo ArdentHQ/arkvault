@@ -27,7 +27,7 @@ exports[`SelectFile > should render with json file format 1`] = `
            
         </span>
         <button
-          class="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
+          class="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-hidden"
           data-ring-focus-margin="-m-1"
           data-testid="SelectFile__browse-files"
           title="Click here to upload"
@@ -133,7 +133,7 @@ exports[`SelectFile > should render with wwe file format 1`] = `
            
         </span>
         <button
-          class="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
+          class="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-hidden"
           data-ring-focus-margin="-m-1"
           data-testid="SelectFile__browse-files"
           title="Click here to upload"

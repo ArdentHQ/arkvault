@@ -7,7 +7,7 @@ exports[`SearchBar > should render 1`] = `
     data-testid="SearchBar"
   >
     <div
-      class="flex items-center rounded bg-theme-background px-10 py-6 shadow-xl"
+      class="flex items-center rounded-xs bg-theme-background px-10 py-6 shadow-xl"
     >
       <div
         class="mr-8 w-4 text-theme-secondary-300"
@@ -42,14 +42,14 @@ exports[`SearchBar > should render 1`] = `
         class="mr-4 flex-1 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"
       >
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="bg-transparent! p-0! focus:shadow-none focus:outline-hidden focus:ring-transparent! [&.shadow-none]:shadow-none no-ligatures w-full border-none text-sm! placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:text-base!"
               data-testid="Input"
               placeholder="What would you like to search for?"
               type="text"
@@ -59,7 +59,7 @@ exports[`SearchBar > should render 1`] = `
         </div>
       </div>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-1"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-1"
         data-testid="SearchBar__button"
         type="button"
       >

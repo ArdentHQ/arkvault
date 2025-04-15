@@ -12,7 +12,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -65,10 +65,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
           data-testid="Modal__inner"
         >
           <div
-            class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
+            class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded-xs bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
               data-testid="Modal__close-button"
               type="button"
             >
@@ -144,7 +144,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                     >
                       <button
-                        class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                        class="ring-focus relative focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -186,7 +186,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         </span>
                       </button>
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
+                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                         data-testid="explorer-link"
                         type="button"
                       >
@@ -263,13 +263,13 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                         >
                           <div
-                            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+                            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                           >
                             <div
                               class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
-                                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 min-w-24"
+                                class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 min-w-24"
                               >
                                 From
                               </div>
@@ -290,7 +290,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   </span>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-none"
+                                  class="ring-focus relative focus:outline-hidden"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -334,7 +334,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               class="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
-                                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 min-w-24"
+                                class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 min-w-24"
                               >
                                 To
                               </div>
@@ -369,7 +369,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     </span>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-none"
+                                    class="ring-focus relative focus:outline-hidden"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -456,7 +456,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
                           >
                             <div
-                              class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+                              class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                             >
                               <div
                                 class="space-y-3 sm:space-y-0"
@@ -471,7 +471,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     Method
                                   </div>
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                   >
                                     Transfer
                                   </div>
@@ -521,7 +521,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
                         >
                           <div
-                            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+                            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -536,7 +536,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Amount
                                 </div>
                                 <div
-                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
+                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div
@@ -552,10 +552,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
+                                class="hidden h-8 w-full items-center sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
                               >
                                 <div
-                                  class="h-full w-full [.condensed_&]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -579,10 +579,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
+                                class="hidden h-8 w-full items-center sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
                               >
                                 <div
-                                  class="h-full w-full [.condensed_&]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -649,7 +649,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
                         >
                           <div
-                            class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+                            class="w-full break-words p-3 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -670,10 +670,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
+                                class="hidden h-8 w-full items-center sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
                               >
                                 <div
-                                  class="h-full w-full [.condensed_&]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -690,7 +690,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Block
                                 </div>
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/blocks/7b6f4c321e3f8a4553dd52b9ddd34581c76a2883702f0a2d3f5021504f3e44bb"
@@ -729,10 +729,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </a>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
+                                class="hidden h-8 w-full items-center sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
                               >
                                 <div
-                                  class="h-full w-full [.condensed_&]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -886,7 +886,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -943,7 +943,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -1000,7 +1000,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -1057,7 +1057,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -1114,7 +1114,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >

@@ -11,7 +11,7 @@ exports[`SideBar > should render 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xs border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -112,7 +112,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xs border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -213,7 +213,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xs border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
@@ -314,7 +314,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
+        class="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xs border border-transparent bg-white px-4 py-3 dark:border dark:border-theme-dark-700 dark:bg-theme-dark-900 md:border-theme-secondary-300"
       >
         <span
           class="flex-1 font-semibold leading-tight"
