@@ -68,7 +68,6 @@ export interface MultiPaymentInput extends TransactionInput {
 
 export type ValidatorResignationInput = TransactionInput;
 
-
 export type TransactionInputs = Record<string, any> & {
 	signatory: Signatory;
 };

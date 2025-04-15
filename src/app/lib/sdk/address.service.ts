@@ -8,7 +8,7 @@ import { IContainer } from "./container.contracts";
 import { NotImplemented } from "./exceptions";
 import { NetworkHostSelector } from "./network.models";
 import { BindingType } from "./service-provider.contract";
-import { IdentityOptions, } from "./shared.contract";
+import { IdentityOptions } from "./shared.contract";
 
 export class AbstractAddressService implements AddressService {
 	protected readonly configRepository: ConfigRepository;
