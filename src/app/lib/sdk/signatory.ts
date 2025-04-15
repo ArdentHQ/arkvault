@@ -10,7 +10,7 @@ import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
 import { PrivateKeySignatory } from "./private-key.signatory";
 import { SecretSignatory } from "./secret.signatory";
-import { IdentityOptions, } from "./services";
+import { IdentityOptions } from "./services";
 import { WIFSignatory } from "./wif.signatory";
 
 type SignatoryType =

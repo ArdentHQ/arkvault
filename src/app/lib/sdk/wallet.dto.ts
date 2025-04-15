@@ -4,7 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { BigNumberService } from "./big-number.service";
 import { IContainer } from "./container.contracts";
-import { KeyValuePair, WalletBalance, } from "./contracts";
+import { KeyValuePair, WalletBalance } from "./contracts";
 import { NotImplemented } from "./exceptions";
 import { BindingType } from "./service-provider.contract";
 
