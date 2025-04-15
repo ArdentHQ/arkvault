@@ -50,7 +50,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
+					"inline-block min-w-[58px] rounded-xs bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
 					className,
 				)}
 			>
@@ -64,7 +64,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"inline-block min-w-[58px] rounded bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
+					"inline-block min-w-[58px] rounded-xs bg-theme-warning-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-warning-900 dark:border dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text",
 					className,
 				)}
 			>
@@ -77,7 +77,7 @@ export const WalletStatus = ({
 		<div
 			data-testid={dataTestId}
 			className={twMerge(
-				"inline-block min-w-[58px] rounded bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500",
+				"inline-block min-w-[58px] rounded-xs bg-theme-success-100 px-1 py-[3px] text-center text-xs font-semibold text-theme-success-700 dark:border dark:border-theme-success-800 dark:bg-transparent dark:text-theme-success-500",
 				className,
 			)}
 		>
@@ -152,7 +152,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		return (
 			<Circle
 				size="lg"
-				className="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
+				className="relative h-8! w-8! border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
 			>
 				{rest}
 			</Circle>
@@ -202,7 +202,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		!isLedgerWalletCompatible(wallet);
 
 	return (
-		<TableRow className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
+		<TableRow className="relative last:border-b-4! last:border-solid last:border-theme-secondary-200 dark:last:border-theme-secondary-800">
 			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="cursor-pointer group space-x-3">
 				<div className="w-40 flex-1">
 					<Address
