@@ -1,10 +1,7 @@
 import deepmerge from "deepmerge";
 
-import { InvalidMilestoneConfigurationError } from "@/app/lib/mainsail/crypto/errors";
 import { IMilestone } from "@/app/lib/mainsail/crypto/interfaces/index";
 import { NetworkConfig } from "@/app/lib/mainsail/crypto/interfaces/networks";
-import * as networks from "@/app/lib/mainsail/crypto/networks/index";
-import { NetworkName } from "@/app/lib/mainsail/crypto/types";
 import { assocPath, path } from "rambda";
 
 export interface MilestoneSearchResult {
@@ -19,10 +16,6 @@ export class ConfigManager {
 	private milestone: IMilestone | undefined;
 	private milestones: Record<string, any> | undefined;
 
-	public constructor() {
-		this.setConfig(networks.devnet as unknown as NetworkConfig);
-	}
-
 	public setConfig(config: NetworkConfig): void {
 		this.config = {
 			milestones: config.milestones,
@@ -31,14 +24,6 @@ export class ConfigManager {
 
 		this.validateMilestones();
 		this.buildConstants();
-	}
-
-	public setFromPreset(network: NetworkName): void {
-		this.setConfig(this.getPreset(network));
-	}
-
-	public getPreset(network: NetworkName): NetworkConfig {
-		return networks[network.toLowerCase()] as any;
 	}
 
 	public all(): NetworkConfig | undefined {
@@ -176,7 +161,7 @@ export class ConfigManager {
 			}
 
 			if ((current.height - previous.height) % previous.activeValidators !== 0) {
-				throw new InvalidMilestoneConfigurationError(
+				throw new Error(
 					`Bad milestone at height: ${current.height}. The number of delegates can only be changed at the beginning of a new round.`,
 				);
 			}

@@ -2,7 +2,6 @@ import { Hash, secp256k1, WIF } from "@/app/lib/crypto";
 
 import { Network } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import { KeyPair } from "./contracts.js";
-import { NetworkVersionError } from "./errors.js";
 import { getWIF } from "./helpers.js";
 
 export class Keys {
@@ -35,7 +34,7 @@ export class Keys {
 		const { version, compressed, privateKey } = WIF.decode(wif);
 
 		if (version !== getWIF(network)) {
-			throw new NetworkVersionError(getWIF(network), version);
+			throw new Error(`Expected version to be ${getWIF(network)}, but got ${version}.`);
 		}
 
 		return {
