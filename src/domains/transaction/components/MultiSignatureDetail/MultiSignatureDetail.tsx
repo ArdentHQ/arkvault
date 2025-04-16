@@ -46,15 +46,9 @@ export const MultiSignatureDetail = ({
 	const [activeStep, setActiveStep] = useState<MultiSignatureDetailStep>(MultiSignatureDetailStep.SummaryStep);
 
 	// eslint-disable-next-line unicorn/consistent-function-scoping
-	let addSignature = function() {
+	let addSignature, broadcast = function() {
 		// suppress
 	}
-
-	function broadcast({txId, wallet} :{txId: string, wallet: Contracts.IReadWriteWallet}) {
-		console.log(txId, wallet);
-		return;
-	}
-
 	let canBeBroadcasted, canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature = false;
 
 	// Reset ledger authentication steps after reconnecting supported ledger
