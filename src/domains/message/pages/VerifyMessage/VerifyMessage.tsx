@@ -106,7 +106,7 @@ export const VerifyMessage = () => {
 
 	const handleBack = () => {
 		if (activeWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		return history.push(ProfilePaths.Welcome);
