@@ -5,13 +5,6 @@ import { Route } from "react-router-dom";
 import { env, getDefaultMainsailWalletId, getMainsailProfileId, render } from "@/utils/testing-library";
 import { Balance } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
-vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", () => ({
-	useWalletTransactions: () => ({
-		hasUnsignedPendingTransaction: true,
-		syncPending: () => {},
-	}),
-}));
-
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
 
