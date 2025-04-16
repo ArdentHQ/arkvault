@@ -1,7 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 import { IoC, Services } from "@ardenthq/sdk";
-import { BIP39 } from "@/app/lib/crypto";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
 
 import { BindingType } from "./coin.contract";
@@ -21,16 +20,12 @@ export class KeyPairService extends Services.AbstractKeyPairService {
 		mnemonic: string,
 		options?: Services.IdentityOptions,
 	): Promise<Services.KeyPairDataTransferObject> {
-		abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
-
 		const { publicKey, privateKey } = BaseKeys.fromPassphrase(mnemonic, true);
 
 		return { privateKey, publicKey };
 	}
 
 	public override async fromSecret(secret: string): Promise<Services.KeyPairDataTransferObject> {
-		abort_if(BIP39.compatible(secret), "The given value is BIP39 compliant. Please use [fromMnemonic] instead.");
-
 		const { publicKey, privateKey } = BaseKeys.fromPassphrase(secret, true);
 
 		return { privateKey, publicKey };
