@@ -824,7 +824,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                               </h1>
                             </div>
                             <div
-                              class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                              class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                               data-testid="header__subtitle"
                             >
                               Provide a message below and sign with your mnemonic passphrase.
@@ -849,7 +849,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         type="button"
                       >
                         <span
-                          class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-4"
+                          class="absolute inset-y-0 flex items-center border border-transparent right-13 left-4"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -879,7 +879,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                             />
                           </div>
                           <div
-                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                             data-testid="Input__addon-end"
                           >
                             <div
@@ -953,7 +953,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           />
                         </div>
                         <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
@@ -1003,7 +1003,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                             />
                           </div>
                           <div
-                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                             data-testid="Input__addon-end"
                           >
                             <div
@@ -1916,7 +1916,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                               </h1>
                             </div>
                             <div
-                              class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                              class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                               data-testid="header__subtitle"
                             >
                               Provide a message below and sign with your mnemonic passphrase.
@@ -1941,7 +1941,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         type="button"
                       >
                         <span
-                          class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-4"
+                          class="absolute inset-y-0 flex items-center border border-transparent right-13 left-4"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1971,7 +1971,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                             />
                           </div>
                           <div
-                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                             data-testid="Input__addon-end"
                           >
                             <div
@@ -2045,7 +2045,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           />
                         </div>
                         <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
@@ -2095,7 +2095,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                             />
                           </div>
                           <div
-                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                             data-testid="Input__addon-end"
                           >
                             <div
