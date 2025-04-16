@@ -167,11 +167,7 @@ export const TransactionRowAddressing = ({
 	const { getWalletAlias } = useWalletAlias();
 	const { isDarkMode } = useTheme();
 
-	const isMusigTransfer = [
-		!!transaction.usesMultiSignature?.(),
-		!transaction.isConfirmed(),
-		!transaction.isMultiSignatureRegistration(),
-	].every(Boolean);
+	const isMusigTransfer = false;
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 	const isContract = isContractTransaction(transaction);

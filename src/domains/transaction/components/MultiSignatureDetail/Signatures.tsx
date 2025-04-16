@@ -21,27 +21,7 @@ const ParticipantStatus = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
-	const { isAwaitingOurFinalSignature } = useMultiSignatureStatus({ transaction, wallet });
-
-	const isAwaitingSignature = useMemo(() => {
-		try {
-			if (
-				transaction.isMultiSignatureRegistration() &&
-				!wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
-				!wallet.transaction().isAwaitingOtherSignatures(transaction.id())
-			) {
-				return false;
-			}
-
-			if (transaction.isMultiSignatureRegistration() && isAwaitingOurFinalSignature) {
-				return false;
-			}
-
-			return wallet.transaction().isAwaitingSignatureByPublicKey(transaction.id(), publicKey);
-		} catch {
-			return false;
-		}
-	}, [wallet, transaction, publicKey]);
+	const isAwaitingSignature = false;
 
 	const status = isAwaitingSignature ? t("COMMON.AWAITING_SIGNATURE") : t("COMMON.SIGNED");
 

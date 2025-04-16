@@ -1,4 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { useMemo } from "react";
 
 interface Properties {
 	wallet: Contracts.IReadWriteWallet;
@@ -19,6 +20,17 @@ export interface MultiSignatureStatus {
 	className: string;
 }
 
+const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
+	try {
+		return (
+			wallet.transaction().canBeBroadcasted(transaction.id()) &&
+			!wallet.transaction().isAwaitingConfirmation(transaction.id())
+		);
+	} catch {
+		return false;
+	}
+};
+
 const transactionExists = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
 	try {
 		return !!wallet.transaction().transaction(transaction.id());
@@ -35,12 +47,26 @@ export const isAwaitingMusigSignatures = (
 };
 
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
-	console.log(wallet, transaction);
+	const canBeSigned = useMemo(() => {
+		try {
+			return wallet.transaction().canBeSigned(transaction.id());
+		} catch {
+			return false;
+		}
+	}, [wallet, transaction]);
+
+	const status = {
+		className: "",
+		icon: "",
+		label: "",
+		value: "isBroadcasted",
+	};
+
 	return {
-		canBeBroadcasted: false,
-		canBeSigned: false,
-		isAwaitingFinalSignature: false,
-		isAwaitingOurFinalSignature: false,
-		status: "isAwaitingOurSignature",
+		canBeBroadcasted: canBeBroadcasted(wallet, transaction),
+		canBeSigned,
+		isAwaitingFinalSignature: status.value === "isAwaitingFinalSignature",
+		isAwaitingOurFinalSignature: status.value === "isAwaitingOurFinalSignature",
+		status,
 	};
 };

@@ -9,11 +9,8 @@ import { isCustomNetwork } from "@/utils/network-utils";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
-	try {
-		return wallet.isMultiSignature();
-	} catch {
-		return false;
-	}
+	console.log(wallet);
+	return false;
 };
 
 const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
@@ -69,7 +66,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// }
 
 	const walletsWithValidatorActions = wallets.filter(
-		(w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w),
+		(w) => w.balance() > 0 && isRestoredAndSynced(w),
 	);
 
 	if (walletsWithValidatorActions.length > 0) {
@@ -153,7 +150,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 	// 	return additionalOptions;
 	// }
 
-	if (wallets.some((w) => !isMultiSignature(w) && w.network().allows(Enums.FeatureFlag.MessageSign))) {
+	if (wallets.some((w) => w.network().allows(Enums.FeatureFlag.MessageSign))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),
 			value: "sign-message",

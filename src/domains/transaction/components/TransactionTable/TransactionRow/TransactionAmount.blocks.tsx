@@ -12,7 +12,7 @@ type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.Extend
 const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionData): boolean => {
 	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
 
-	const isMusig = [usesMultiSignature, !transaction.isConfirmed(), !transaction.isMultiSignatureRegistration()].every(
+	const isMusig = [usesMultiSignature, !transaction.isConfirmed()].every(
 		Boolean,
 	);
 

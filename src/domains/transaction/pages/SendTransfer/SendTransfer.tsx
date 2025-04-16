@@ -185,10 +185,10 @@ export const SendTransfer = () => {
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
-			await handleSubmit(() => submit(true))();
-			return;
-		}
+		// if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
+		// 	await handleSubmit(() => submit(true))();
+		// 	return;
+		// }
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
 			if (!isLedgerTransportSupported()) {

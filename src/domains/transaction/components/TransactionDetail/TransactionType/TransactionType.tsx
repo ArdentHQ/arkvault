@@ -67,7 +67,7 @@ export const TransactionType = ({
 						</>
 					)}
 
-					{transaction.isMultiSignatureRegistration() && (
+					{false && (
 						<>
 							{transaction.wallet() && (
 								<>

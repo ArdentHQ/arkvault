@@ -58,9 +58,7 @@ export const ConfirmRemovePendingTransaction = ({
 	}
 
 	const typeLabel = getLabel(transaction.type());
-	const typeSuffix = transaction.isMultiSignatureRegistration()
-		? t("TRANSACTION.REGISTRATION")
-		: t("TRANSACTION.TRANSACTION");
+	const typeSuffix = t("TRANSACTION.TRANSACTION");
 
 	const isButtonDisabled = () => {
 		if ((!wallet.isLedger() && !isDirty) || isSubmitting) {
