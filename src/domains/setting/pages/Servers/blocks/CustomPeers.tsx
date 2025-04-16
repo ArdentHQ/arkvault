@@ -186,7 +186,7 @@ const CustomPeersPeer: React.VFC<{
 	// TODO: break it down into smaller components.
 }> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
-	const { name, serverType, address, height, enabled } = normalizedNetwork;
+	const { name, serverType, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled } = normalizedNetwork;
 
 	const { t } = useTranslation();
 
@@ -298,7 +298,7 @@ const CustomPeersPeer: React.VFC<{
 							bodyClassName="overflow-auto"
 						>
 							<TruncatedWithTooltip
-								text={address}
+								text={publicApiEndpoint}
 								className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
 							/>
 						</MobileTableElementRow>
@@ -365,7 +365,7 @@ const CustomPeersPeer: React.VFC<{
 	return (
 		<PeerRow
 			name={name}
-			address={address}
+			address={publicApiEndpoint}
 			checked={enabled}
 			height={height}
 			serverStatus={serverStatus}

@@ -31,43 +31,45 @@ const ServerFormModal: React.VFC<{
 
 	const form = useForm<CustomNetwork>({
 		defaultValues: {
-			address: networkToUpdate?.address ?? "",
+			evmApiEndpoint: networkToUpdate?.evmApiEndpoint ?? "",
 			name: networkToUpdate?.name ?? "",
 			network: networkToUpdate?.network.id() ?? "",
-			serverType: networkToUpdate?.serverType ?? undefined,
+			publicApiEndpoint: networkToUpdate?.publicApiEndpoint ?? "",
+			transactionApiEndpoint: networkToUpdate?.transactionApiEndpoint ?? "",
 		},
 		mode: "onChange",
 	});
 
 	const { formState, setValue, register, watch } = form;
 	const { isValid } = formState;
-	const { address, network } = watch();
+	const { publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, network } = watch();
 
-	const addressIsValid = useMemo(() => {
-		const { errors } = formState;
-		return errors.address === undefined;
-	}, [formState]);
+	const { errors } = formState;
 
-	const { fetchingDetails, networkMismatch, serverType, serverHeight, fetchingError } = useHandleServers({
-		address,
-		addressIsValid,
+	const publicApiEndpointIsValid = errors.publicApiEndpoint === undefined;
+
+	const { fetchingDetails, networkMismatch, serverHeight, fetchingError } = useHandleServers({
+		addressIsValid: publicApiEndpointIsValid,
+		evmApiEndpoint,
 		network: networks.find((item) => item.id() === network),
 		profile,
+		publicApiEndpoint,
+		transactionApiEndpoint,
 	});
 
 	useEffect(() => {
-		if (!network || !serverType || nameWasManuallySet) {
+		if (!network || nameWasManuallySet) {
 			return;
 		}
 
 		const getName = (counter: number) =>
-			`${networkDisplayName(networkObject)} ${serverType === "musig" ? "Musig" : "Peer"} #${counter}`;
+			`${networkDisplayName(networkObject)} "Peer" #${counter}`;
 
 		const networkObject = networkById(network)!;
 
 		const filteredNetworks = customNetworks.filter(
 			(customNetwork) =>
-				customNetwork.network.id() === networkObject.id() && customNetwork.serverType === serverType,
+				customNetwork.network.id() === networkObject.id()
 		);
 
 		let counter = filteredNetworks.length;
@@ -84,55 +86,10 @@ const ServerFormModal: React.VFC<{
 			shouldDirty: true,
 			shouldValidate: true,
 		});
-	}, [network, serverType, customNetworks, nameWasManuallySet, address]);
-
-	const renderServerType = useCallback(() => {
-		if (fetchingDetails) {
-			return (
-				<div data-testid="Servertype-fetching" className="flex items-center space-x-2">
-					<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Clock" />
-
-					<span className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-						{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_DETAILS")}
-					</span>
-				</div>
-			);
-		}
-
-		if (!serverType || networkMismatch) {
-			return (
-				<div data-testid="Servertype-unknown" className="flex items-center space-x-2">
-					<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Forbidden" />
-
-					<span className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-						{t("COMMON.NOT_AVAILABLE")}
-					</span>
-				</div>
-			);
-		}
-
-		return (
-			<div data-testid="Servertype-type" className="flex items-center space-x-2">
-				<Icon
-					className="text-theme-secondary-600 dark:text-theme-secondary-700"
-					name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
-				/>
-
-				<span className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{serverType === "musig"
-						? t("SETTINGS.SERVERS.ADD_NEW_SERVER.MULTISIG_SERVER")
-						: t("SETTINGS.SERVERS.ADD_NEW_SERVER.PEER_SERVER")}
-				</span>
-			</div>
-		);
-	}, [fetchingDetails, serverType]);
+	}, [network, customNetworks, nameWasManuallySet]);
 
 	const formIsValid = useMemo(() => {
 		if (fetchingDetails) {
-			return false;
-		}
-
-		if (!serverType) {
 			return false;
 		}
 
@@ -141,27 +98,29 @@ const ServerFormModal: React.VFC<{
 		}
 
 		return isValid;
-	}, [isValid, serverType, isValid, fetchingDetails, networkMismatch]);
+	}, [isValid, isValid, fetchingDetails, networkMismatch]);
 
 	const handleSubmit = (values: CustomNetwork) => {
 		if (networkToUpdate) {
 			return onUpdate({
-				address: values.address,
-				enabled: !!networkToUpdate?.enabled,
+				enabled: !!networkToUpdate.enabled,
+				evmApiEndpoint: values.evmApiEndpoint,
 				height: serverHeight,
 				name: values.name,
 				network: networkById(values.network)!,
-				serverType: serverType!,
+				publicApiEndpoint: values.publicApiEndpoint,
+				transactionApiEndpoint: values.transactionApiEndpoint,
 			});
 		}
 
 		onCreate({
-			address: values.address,
 			enabled: false,
+			evmApiEndpoint: values.evmApiEndpoint,
 			height: serverHeight,
 			name: values.name,
 			network: networkById(values.network)!,
-			serverType: serverType!,
+			publicApiEndpoint: values.publicApiEndpoint,
+			transactionApiEndpoint: values.transactionApiEndpoint,
 		});
 	};
 
@@ -201,14 +160,7 @@ const ServerFormModal: React.VFC<{
 						/>
 					</div>
 				</FormField>
-				<FormField name="address">
-					<FormLabel label={t("COMMON.ADDRESS")} />
-					<InputDefault
-						data-testid="ServerFormModal--address"
-						placeholder={t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_PLACEHOLDER")}
-						ref={register(server.address(customNetworks, networkToUpdate))}
-					/>
-				</FormField>
+
 				<FormField name="name">
 					<FormLabel label={t("COMMON.NAME")} />
 					<InputDefault
@@ -217,22 +169,29 @@ const ServerFormModal: React.VFC<{
 						onChange={() => setNameWasManuallySet(true)}
 					/>
 				</FormField>
-				<FormField name="type">
-					<FormLabel label={t("COMMON.TYPE")} />
 
-					{renderServerType()}
+				<FormField name="publicApiEndpoint">
+					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.PUBLIC_API_ENDPOINT")} />
+					<InputDefault
+						data-testid="ServerFormModal--publicApiEndpoint"
+						ref={register(server.address(customNetworks, networkToUpdate))}
+					/>
+				</FormField>
 
-					{fetchingError && !networkMismatch && (
-						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
-							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_ERROR")}
-						</Alert>
-					)}
+				<FormField name="transactionApiEndpoint">
+					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.TRANSACTION_API_ENDPOINT")} />
+					<InputDefault
+						data-testid="ServerFormModal--transactionApiEndpoint"
+						ref={register(server.address(customNetworks, networkToUpdate))}
+					/>
+				</FormField>
 
-					{networkMismatch && (
-						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
-							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_MISMATCH_ERROR")}
-						</Alert>
-					)}
+				<FormField name="transactionApiEndpoint">
+					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.EVM_API_ENDPOINT")} />
+					<InputDefault
+						data-testid="ServerFormModal--evmApiEndpoint"
+						ref={register(server.address(customNetworks, networkToUpdate))}
+					/>
 				</FormField>
 
 				<FormButtons>

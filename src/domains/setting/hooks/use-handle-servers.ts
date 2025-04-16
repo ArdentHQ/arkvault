@@ -1,124 +1,107 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { HttpClient } from "@/app/services/HttpClient";
-import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import {
 	addressIsValid as checkIfAddressIsValid,
 	getBaseUrl,
-	isPeer,
-	isMusig,
 	urlBelongsToNetwork,
 	getServerHeight,
 } from "@/utils/peers";
+import { filterArray } from "@/app/lib/helpers/filter-array";
+
+enum Endpoints {
+	"PublicApi" = "PublicApi",
+	"TransactionApi" = "TransactionApi",
+	"EvmApi" = "EvmApi",
+}
 
 const useHandleServers = ({
 	profile,
-	address,
+	transactionApiEndpoint,
+	publicApiEndpoint,
+	evmApiEndpoint,
 	network,
 	addressIsValid,
 }: {
 	profile: Contracts.IProfile;
-	address: string;
+	publicApiEndpoint: string;
+	transactionApiEndpoint: string;
+	evmApiEndpoint: string;
 	network?: Networks.Network;
 	addressIsValid: boolean;
 }) => {
 	const [networkMismatch, setNetworkMismatch] = useState(false);
 	const [fetchingDetails, setFetchingDetails] = useState(false);
-	const [fetchingError, setFetchingError] = useState(false);
-	const [serverType, setServerType] = useState<NetworkHostType | undefined>(undefined);
+	// const [fetchingErrors, setFetchingErrors] = useState<Record<Endpoints, boolean>>(() => ({
+	// 	[Endpoints.PublicApi]: false,
+	// 	[Endpoints.TransactionApi]: false,
+	// 	[Endpoints.EvmApi]: false,
+	// }));
+	const [fetchingErrors, setFetchingErrors] = useState(false);
 	const [serverHeight, setServerHeight] = useState<number | undefined>(undefined);
-	const baseUrl = checkIfAddressIsValid(address) ? getBaseUrl(address) : undefined;
 
-	const validateAddress = useCallback(async () => {
-		const controller = new AbortController();
+	// const setFetchingError = (endpoint: Endpoints, value: boolean) => {
+	// 	setFetchingErrors({...fetchingErrors, [endpoint]: value})
+	// }
 
-		const { signal } = controller;
-
-		const client = new HttpClient(0).withOptions({ signal });
-
-		let serverType: "full" | "musig" | undefined;
-
-		try {
-			// baseUrl cannot be undefined since this method is only called when
-			// the address is valid
-			const response = await client.get(baseUrl!);
-
-			const body = JSON.parse(response.body());
-
-			if (isPeer(body)) {
-				serverType = "full";
-			}
-
-			if (isMusig(body)) {
-				serverType = "musig";
-			}
-		} catch {
-			serverType = undefined;
-		}
-
-		if (serverType === "full") {
-			if (await urlBelongsToNetwork(profile, address, network!)) {
-				setServerHeight(await getServerHeight(address));
-			} else {
-				setNetworkMismatch(true);
-			}
+	const validatePublicApi = useCallback(async () => {
+		if (await urlBelongsToNetwork(profile, publicApiEndpoint, network!)) {
+			setServerHeight(await getServerHeight(publicApiEndpoint));
 		} else {
-			setServerHeight(undefined);
+			setNetworkMismatch(true);
 		}
+	}, [network, profile, publicApiEndpoint]);
 
-		setServerType(serverType);
-
-		if (serverType === undefined) {
-			setFetchingError(true);
-		}
-
-		setFetchingDetails(false);
-
-		return controller;
-	}, [baseUrl, address, network, profile]);
-
-	const shouldFetchAddressType = () => baseUrl !== undefined && !!address && !!network && addressIsValid;
+	// const validateTransactionApi = useCallback(async (controller: AbortController) => {
+	// 	console.log("validateTransactionApi", controller);
+	// 	const { signal } = controller;
+	//
+	// 	const client = new HttpClient(0).withOptions({ signal });
+	//
+	// 	try {
+	// 		const response = await client.get(`${transactionApiEndpoint}/configuration`);
+	//
+	// 		const body = JSON.parse(response.body());
+	//
+	// 		if (!body.height) {
+	// 			setNetworkMismatch(true);
+	// 		}
+	// 	} catch {
+	// 		setNetworkMismatch(true);
+	// 	}
+	// }, [transactionApiEndpoint]);
 
 	useEffect(() => {
-		let timeout: ReturnType<typeof setTimeout> | undefined;
-
-		let controller: AbortController | undefined;
-
-		setFetchingError(false);
-
-		setServerType(undefined);
+		console.log("Effect is running", publicApiEndpoint)
+		// setFetchingError(Endpoints.PublicApi, false);
+		// setFetchingErrors(false)
+		setFetchingErrors(false);
 
 		setServerHeight(undefined);
 
 		setNetworkMismatch(false);
 
-		if (!shouldFetchAddressType()) {
+		const baseUrl = checkIfAddressIsValid(publicApiEndpoint) ? publicApiEndpoint : undefined;
+
+		const isValid = baseUrl !== undefined && !!publicApiEndpoint && !!network && addressIsValid;
+
+		if (!isValid) {
 			setFetchingDetails(false);
 			return;
 		}
 
 		setFetchingDetails(true);
 
-		timeout = setTimeout(async () => {
-			timeout = undefined;
+		async function validate() {
+			await validatePublicApi();
+			setFetchingDetails(false);
+		}
 
-			controller = await validateAddress();
-		}, 1000);
+		void validate();
+	}, [publicApiEndpoint, network, ]);
 
-		return () => {
-			if (timeout) {
-				clearTimeout(timeout);
-				timeout = undefined;
-			}
-
-			if (controller) {
-				controller.abort();
-			}
-		};
-	}, [address, network]);
-
-	return { fetchingDetails, fetchingError, networkMismatch, serverHeight, serverType };
+	return { fetchingDetails, fetchingError: false, networkMismatch, serverHeight, serverType: undefined };
 };
 
 export { useHandleServers };
