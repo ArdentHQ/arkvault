@@ -9,14 +9,6 @@ import { httpClient } from "@/app/services";
 
 type SignFunction = (input: any) => Promise<string>;
 
-const prepareMultiSignature = async (
-	input: Services.TransactionInputs,
-	wallet: ProfileContracts.IReadWriteWallet,
-): Promise<Services.TransactionInputs> => ({
-	...input,
-	signatory: await wallet.signatory().multiSignature(wallet.multiSignature().all() as Services.MultiSignatureAsset),
-});
-
 const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileContracts.IReadWriteWallet) => {
 	await accessLedgerApp({ coin: wallet.coin() });
 

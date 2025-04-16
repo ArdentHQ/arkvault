@@ -176,7 +176,7 @@ export const SendTransfer = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async () => {
+	const handleNext = () => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();

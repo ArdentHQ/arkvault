@@ -67,6 +67,7 @@ export const TransactionType = ({
 						</>
 					)}
 
+					{/* eslint-disable-next-line sonarjs/no-redundant-boolean,no-constant-binary-expression */}
 					{false && (
 						<>
 							{transaction.wallet() && (

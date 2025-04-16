@@ -31,14 +31,6 @@ const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.E
 	}
 };
 
-const transactionExists = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
-	try {
-		return !!wallet.transaction().transaction(transaction.id());
-	} catch {
-		return false;
-	}
-};
-
 export const isAwaitingMusigSignatures = (
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
 ) => {

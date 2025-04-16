@@ -1,9 +1,8 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useMemo } from "react";
+import React, from "react";
 import { useTranslation } from "react-i18next";
 
 import { Tooltip } from "@/app/components/Tooltip";
-import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
@@ -20,6 +19,7 @@ const ParticipantStatus = ({
 	publicKey: string;
 	wallet: Contracts.IReadWriteWallet;
 }) => {
+	console.log(transaction, publicKey, wallet);
 	const { t } = useTranslation();
 	const isAwaitingSignature = false;
 
