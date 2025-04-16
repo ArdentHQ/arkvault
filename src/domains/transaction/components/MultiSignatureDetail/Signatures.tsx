@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React from "react";
+import React, from "react";
 import { useTranslation } from "react-i18next";
 
 import { Tooltip } from "@/app/components/Tooltip";
