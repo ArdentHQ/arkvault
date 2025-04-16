@@ -78,10 +78,6 @@ export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
 	 * @returns {boolean}
 	 */
 	isMultisignature(): boolean {
-		try {
-			return wallet.isMultiSignature();
-		} catch {
-			return false;
-		}
+		return false;
 	},
 });

@@ -18,12 +18,6 @@ export class PublicKeyService {
 
 	// @TODO: Implement
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	public fromMultiSignature(min: number, publicKeys: string[]): Promise<Services.PublicKeyDataTransferObject> {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.fromMultiSignature.name);
-	}
-
-	// @TODO: Implement
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	public fromWIF(wif: string): Promise<Services.PublicKeyDataTransferObject> {
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromWIF.name);
 	}

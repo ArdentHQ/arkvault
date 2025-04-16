@@ -81,8 +81,6 @@ export interface ConfirmedTransactionData {
 
 	isUnvote(): boolean;
 
-	isMultiSignatureRegistration(): boolean;
-
 	isMultiPayment(): boolean;
 
 	isValidatorResignation(): boolean;

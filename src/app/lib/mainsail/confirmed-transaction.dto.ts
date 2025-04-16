@@ -121,10 +121,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return TransactionTypeService.isUnvote(this.data);
 	}
 
-	public override isMultiSignatureRegistration(): boolean {
-		return TransactionTypeService.isMultiSignatureRegistration(this.data);
-	}
-
 	public override isMultiPayment(): boolean {
 		return TransactionTypeService.isMultiPayment(this.data);
 	}
@@ -156,15 +152,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 	// Second-Signature Registration
 	public override secondPublicKey(): string {
 		return this.data.asset.signature.publicKey;
-	}
-
-	// Multi-Signature Registration
-	public override publicKeys(): string[] {
-		return this.data.asset.multiSignature.publicKeys;
-	}
-
-	public override min(): number {
-		return this.data.asset.multiSignature.min;
 	}
 
 	// Multi-Payment

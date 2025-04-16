@@ -30,10 +30,6 @@ const network: Networks.NetworkManifest = {
 			type: "tx",
 		},
 		{
-			host: "https://musig-demo.mainsailhq.com",
-			type: "musig",
-		},
-		{
 			host: "https://explorer-evm-test.mainsailhq.com",
 			type: "explorer",
 		},

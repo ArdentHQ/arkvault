@@ -107,7 +107,7 @@ export const TransactionDetailContent = ({
 					</div>
 				</DetailPadded>
 
-				{[!isAwaitingSignatures, transaction.isMultiSignatureRegistration()].every(Boolean) && (
+				{[!isAwaitingSignatures, false].every(Boolean) && (
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">

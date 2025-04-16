@@ -36,8 +36,6 @@ export interface ITransactionAsset {
 		username: string;
 	};
 	votes?: string[];
-	multiSignatureLegacy?: IMultiSignatureLegacyAsset;
-	multiSignature?: IMultiSignatureAsset;
 	payments?: IMultiPaymentItem[];
 }
 
@@ -110,17 +108,6 @@ export interface IMultiPaymentItem {
 	recipientId: string;
 }
 
-export interface IMultiSignatureLegacyAsset {
-	min: number;
-	lifetime: number;
-	keysgroup: string[];
-}
-
-export interface IMultiSignatureAsset {
-	min: number;
-	publicKeys: string[];
-}
-
 export interface IDeserializeOptions {
 	acceptLegacyVersion?: boolean;
 	disableVersionCheck?: boolean;
@@ -134,5 +121,4 @@ export interface ISerializeOptions {
 	acceptLegacyVersion?: boolean;
 	disableVersionCheck?: boolean;
 	excludeSignature?: boolean;
-	excludeMultiSignature?: boolean;
 }

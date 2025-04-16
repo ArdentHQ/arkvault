@@ -52,14 +52,6 @@ export class WalletData extends DTO.AbstractWalletData implements Contracts.Wall
 		return BigNumber.make(balance);
 	}
 
-	public override multiSignature(): Contracts.WalletMultiSignature {
-		if (!this.isMultiSignature()) {
-			throw new Error("This wallet does not have a multi-signature registered.");
-		}
-
-		return this.#getProperty(["multiSignature", "attributes.multiSignature"]) as Contracts.WalletMultiSignature;
-	}
-
 	public override isDelegate(): boolean {
 		return this.isValidator();
 	}
@@ -78,10 +70,6 @@ export class WalletData extends DTO.AbstractWalletData implements Contracts.Wall
 
 	public override isResignedValidator(): boolean {
 		return !!this.#getProperty(["attributes.validatorResigned"]);
-	}
-
-	public override isMultiSignature(): boolean {
-		return !!this.#getProperty(["multiSignature", "attributes.multiSignature"]);
 	}
 
 	public override isSecondSignature(): boolean {

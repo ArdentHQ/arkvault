@@ -4,7 +4,6 @@
 
 import { AddressService } from "./address.contract";
 import { IContainer } from "./container.contracts";
-import { MultiSignatureAsset } from "./multi-signature.contract";
 import { PrivateKeyService } from "./private-key.contract";
 import { PublicKeyService } from "./public-key.contract";
 import { BindingType } from "./service-provider.contract";
@@ -15,7 +14,6 @@ import {
 	ConfirmationWIFSignatory,
 	LedgerSignatory,
 	MnemonicSignatory,
-	MultiSignatureSignatory,
 	PrivateKeySignatory,
 	SecretSignatory,
 	Signatory,
@@ -43,7 +41,6 @@ export class AbstractSignatoryService implements SignatoryService {
 				publicKey: (await this.#publicKeyService.fromMnemonic(mnemonic, options)).publicKey,
 				signingKey: mnemonic,
 			}),
-			options?.multiSignature,
 		);
 	}
 
@@ -60,7 +57,6 @@ export class AbstractSignatoryService implements SignatoryService {
 				publicKey: (await this.#publicKeyService.fromMnemonic(signingKey, options)).publicKey,
 				signingKey,
 			}),
-			options?.multiSignature,
 		);
 	}
 
@@ -73,7 +69,6 @@ export class AbstractSignatoryService implements SignatoryService {
 				publicKey: (await this.#publicKeyService.fromWIF(primary)).publicKey,
 				signingKey: primary,
 			}),
-			options?.multiSignature,
 		);
 	}
 
@@ -90,7 +85,6 @@ export class AbstractSignatoryService implements SignatoryService {
 				publicKey: (await this.#publicKeyService.fromWIF(signingKey)).publicKey,
 				signingKey,
 			}),
-			options?.multiSignature,
 		);
 	}
 
@@ -101,24 +95,11 @@ export class AbstractSignatoryService implements SignatoryService {
 				options,
 				signingKey: privateKey,
 			}),
-			options?.multiSignature,
-		);
-	}
-
-	public async multiSignature(asset: MultiSignatureAsset, options?: IdentityOptions): Promise<Signatory> {
-		return new Signatory(
-			new MultiSignatureSignatory(
-				asset,
-				(
-					await this.#addressService.fromMultiSignature({ min: asset.min, publicKeys: asset.publicKeys })
-				).address,
-			),
-			options?.multiSignature ?? asset,
 		);
 	}
 
 	public async ledger(path: string, options?: IdentityOptions): Promise<Signatory> {
-		return new Signatory(new LedgerSignatory({ options, signingKey: path }), options?.multiSignature);
+		return new Signatory(new LedgerSignatory({ options, signingKey: path }));
 	}
 
 	public async secret(secret: string, options?: IdentityOptions): Promise<Signatory> {
@@ -130,7 +111,6 @@ export class AbstractSignatoryService implements SignatoryService {
 				publicKey: (await this.#publicKeyService.fromSecret(secret)).publicKey,
 				signingKey: secret,
 			}),
-			options?.multiSignature,
 		);
 	}
 
@@ -147,7 +127,6 @@ export class AbstractSignatoryService implements SignatoryService {
 				publicKey: (await this.#publicKeyService.fromSecret(signingKey)).publicKey,
 				signingKey,
 			}),
-			options?.multiSignature,
 		);
 	}
 

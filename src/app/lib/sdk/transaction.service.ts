@@ -5,14 +5,9 @@
 import { BigNumber, NumberLike } from "@/app/lib/helpers";
 import {
 	TransactionService as Contract,
-	DelegateRegistrationInput,
-	DelegateResignationInput,
-	IpfsInput,
 	MultiPaymentInput,
-	MultiSignatureInput,
 	SecondSignatureInput,
 	TransferInput,
-	UnlockTokenInput,
 	UsernameRegistrationInput,
 	UsernameResignationInput,
 	ValidatorRegistrationInput,
@@ -64,12 +59,6 @@ export class AbstractTransactionService implements Contract {
 		throw new NotImplemented(this.constructor.name, this.usernameResignation.name);
 	}
 
-	public async delegateRegistration(
-		input: DelegateRegistrationInput | ValidatorRegistrationInput,
-	): Promise<SignedTransactionData> {
-		throw new NotImplemented(this.constructor.name, this.delegateRegistration.name);
-	}
-
 	public async validatorRegistration(input: ValidatorRegistrationInput): Promise<SignedTransactionData> {
 		throw new NotImplemented(this.constructor.name, this.validatorRegistration.name);
 	}
@@ -78,28 +67,12 @@ export class AbstractTransactionService implements Contract {
 		throw new NotImplemented(this.constructor.name, this.vote.name);
 	}
 
-	public async multiSignature(input: MultiSignatureInput): Promise<SignedTransactionData> {
-		throw new NotImplemented(this.constructor.name, this.multiSignature.name);
-	}
-
-	public async ipfs(input: IpfsInput): Promise<SignedTransactionData> {
-		throw new NotImplemented(this.constructor.name, this.ipfs.name);
-	}
-
 	public async multiPayment(input: MultiPaymentInput): Promise<SignedTransactionData> {
 		throw new NotImplemented(this.constructor.name, this.multiPayment.name);
 	}
 
-	public async delegateResignation(input: DelegateResignationInput): Promise<SignedTransactionData> {
-		throw new NotImplemented(this.constructor.name, this.delegateResignation.name);
-	}
-
 	public async validatorResignation(input: ValidatorResignationInput): Promise<SignedTransactionData> {
 		throw new NotImplemented(this.constructor.name, this.validatorResignation.name);
-	}
-
-	public async unlockToken(input: UnlockTokenInput): Promise<SignedTransactionData> {
-		throw new NotImplemented(this.constructor.name, this.unlockToken.name);
 	}
 
 	public async estimateExpiration(value?: string): Promise<string | undefined> {

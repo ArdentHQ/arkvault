@@ -28,7 +28,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 
 	readonly #types = [
 		{ type: "multiPayment", method: "isMultiPayment" },
-		{ type: "multiSignature", method: "isMultiSignatureRegistration" },
 		{ type: "secondSignature", method: "isSecondSignature" },
 		{ type: "transfer", method: "isTransfer" },
 		{ type: "usernameRegistration", method: "isUsernameRegistration" },
@@ -177,10 +176,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	}
 
 	public isUnvote(): boolean {
-		return false;
-	}
-
-	public isMultiSignatureRegistration(): boolean {
 		return false;
 	}
 

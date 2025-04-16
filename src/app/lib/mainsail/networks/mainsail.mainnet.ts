@@ -26,10 +26,6 @@ const network: Networks.NetworkManifest = {
 			type: "full",
 		},
 		{
-			host: "https://musig-demo.mainsailhq.com",
-			type: "musig",
-		},
-		{
 			host: "https://live.arkscan.io",
 			type: "explorer",
 		},
