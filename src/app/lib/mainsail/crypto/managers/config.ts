@@ -1,6 +1,5 @@
 import deepmerge from "deepmerge";
 
-import { InvalidMilestoneConfigurationError } from "@/app/lib/mainsail/crypto/errors";
 import { IMilestone } from "@/app/lib/mainsail/crypto/interfaces/index";
 import { NetworkConfig } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import * as networks from "@/app/lib/mainsail/crypto/networks/index";
@@ -176,7 +175,7 @@ export class ConfigManager {
 			}
 
 			if ((current.height - previous.height) % previous.activeValidators !== 0) {
-				throw new InvalidMilestoneConfigurationError(
+				throw new Error(
 					`Bad milestone at height: ${current.height}. The number of delegates can only be changed at the beginning of a new round.`,
 				);
 			}
