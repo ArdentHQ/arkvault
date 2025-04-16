@@ -13,7 +13,7 @@ export const PageSkeleton = () => {
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
 				<Section
 					className="-mt-5 flex flex-1 md:mt-0 xl:px-10"
-					innerClassName="w-full lg:max-w-(--breakpoint-xl)"
+					innerClassName="w-full lg:max-w-screen-xl"
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
