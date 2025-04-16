@@ -338,7 +338,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			...transaction.data,
 			...signature,
 			id: transaction.getId(),
-			v: Number.parseInt(signature.v) + 27,
+			v: Number.parseInt(signature.v),
 		};
 	}
 }
