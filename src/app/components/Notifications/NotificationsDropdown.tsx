@@ -32,7 +32,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 								data-testid="NavigationBar__buttons--notifications"
 								className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
 							>
-								<Icon name="Bell" size="lg" className="p-1" />
+								<Icon name="Bell" size="lg" className="m-0 p-1" />
 								{hasUnread && <Dot />}
 							</Button>
 						</Tooltip>
