@@ -3,7 +3,7 @@
 exports[`Modal > should closed by the Esc key 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -78,7 +78,7 @@ exports[`Modal > should not render if not open 1`] = `<DocumentFragment />`;
 exports[`Modal > should render a 3x large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -151,7 +151,7 @@ exports[`Modal > should render a 3x large one 1`] = `
 exports[`Modal > should render a 4x large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -224,7 +224,7 @@ exports[`Modal > should render a 4x large one 1`] = `
 exports[`Modal > should render a 5x large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -297,7 +297,7 @@ exports[`Modal > should render a 5x large one 1`] = `
 exports[`Modal > should render a large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -370,7 +370,7 @@ exports[`Modal > should render a large one 1`] = `
 exports[`Modal > should render a medium one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -443,7 +443,7 @@ exports[`Modal > should render a medium one 1`] = `
 exports[`Modal > should render a modal with banner 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -526,7 +526,7 @@ exports[`Modal > should render a modal with banner 1`] = `
 exports[`Modal > should render a modal with content 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -601,7 +601,7 @@ exports[`Modal > should render a modal with content 1`] = `
 exports[`Modal > should render a modal with description 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -680,7 +680,7 @@ exports[`Modal > should render a modal with description 1`] = `
 exports[`Modal > should render a modal with overlay 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -755,7 +755,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
 exports[`Modal > should render a modal with overlay 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -830,7 +830,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
 exports[`Modal > should render a small one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -903,7 +903,7 @@ exports[`Modal > should render a small one 1`] = `
 exports[`Modal > should render a xlarge one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -976,7 +976,7 @@ exports[`Modal > should render a xlarge one 1`] = `
 exports[`Modal > should render with scrollbar if it exceeds window height 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1051,7 +1051,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
 exports[`Modal > should render without close button 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1085,7 +1085,7 @@ exports[`Modal > should render without close button 1`] = `
 exports[`Modal > should render without offset for buttons 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
