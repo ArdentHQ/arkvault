@@ -12,6 +12,8 @@ import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { useLedgerModelStatus } from "@/app/hooks";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { useMultiSignatureRegistration, useMultiSignatureStatus } from "@/domains/transaction/hooks";
+import { func } from "joi";
 
 interface MultiSignatureDetailProperties {
 	isOpen: boolean;
