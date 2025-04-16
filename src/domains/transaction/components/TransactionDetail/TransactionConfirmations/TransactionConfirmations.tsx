@@ -5,6 +5,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { DTO } from "@ardenthq/sdk";
+import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
 export const TransactionConfirmations = ({
 	isConfirmed,
@@ -16,10 +17,7 @@ export const TransactionConfirmations = ({
 	transaction: DTO.RawTransactionData;
 }) => {
 	const { t } = useTranslation();
-	const status = {
-		label: "isBroadcasted",
-		value: "isBroadcasted",
-	}
+	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
 	if (confirmations && confirmations > 1 && !transaction.isSuccess()) {
 		return (
