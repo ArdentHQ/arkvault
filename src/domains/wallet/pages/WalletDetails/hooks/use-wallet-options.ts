@@ -13,7 +13,9 @@ const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
 
 const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Contracts.IProfile) => {
 	const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
-	const allowsMusig = false;
+	const allowsMusig =
+		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerS) ||
+		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerX);
 
 	if (!isRestoredAndSynced(wallet)) {
 		return false;
@@ -139,7 +141,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 	// 	return additionalOptions;
 	// }
 
-	if (wallets.some((w) => w.network().allows(Enums.FeatureFlag.MessageSign))) {
+	if (wallets.some((w) => && w.network().allows(Enums.FeatureFlag.MessageSign))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),
 			value: "sign-message",

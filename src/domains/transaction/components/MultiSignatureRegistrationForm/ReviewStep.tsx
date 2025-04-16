@@ -13,6 +13,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { FormField } from "@/app/components/Form";
 import { DetailLabel } from "@/app/components/DetailWrapper";
+import { useMusigRegistrationStubTransaction } from "@/domains/transaction/hooks/use-stub-transaction";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 export const ReviewStep = ({
@@ -30,7 +31,12 @@ export const ReviewStep = ({
 		unregister("mnemonic");
 	}, [unregister]);
 
-	const musigRegistrationStubTransaction = null;
+	const { musigRegistrationStubTransaction } = useMusigRegistrationStubTransaction({
+		fee,
+		min,
+		publicKeys: participants.map((participant) => participant.publicKey),
+		wallet,
+	});
 
 	return (
 		<section data-testid="MultiSignature__review-step">

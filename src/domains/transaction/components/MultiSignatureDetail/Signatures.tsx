@@ -1,8 +1,9 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Tooltip } from "@/app/components/Tooltip";
+import { Icon } from "@/app/components/Icon";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { AddressCopy, AddressLabel } from "@/app/components/Address";
@@ -19,7 +20,6 @@ const ParticipantStatus = ({
 }) => {
 	const { t } = useTranslation();
 	const status = t("COMMON.SIGNED");
-	console.log(transaction, publicKey, wallet);
 
 	return (
 		<div data-testid="Signatures__participant-status" className="relative">
