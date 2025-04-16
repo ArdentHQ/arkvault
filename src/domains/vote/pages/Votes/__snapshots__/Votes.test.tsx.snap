@@ -318,7 +318,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -379,7 +379,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1686,7 +1686,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1740,7 +1740,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -2512,7 +2512,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -2566,7 +2566,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -3339,7 +3339,7 @@ exports[`Votes > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -3400,7 +3400,7 @@ exports[`Votes > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -11311,7 +11311,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -11372,7 +11372,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -19283,7 +19283,7 @@ exports[`Votes > should select a validator 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -19344,7 +19344,7 @@ exports[`Votes > should select a validator 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -27516,7 +27516,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -27577,7 +27577,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"

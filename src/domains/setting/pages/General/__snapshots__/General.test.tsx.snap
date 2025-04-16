@@ -316,7 +316,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -377,7 +377,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -2841,7 +2841,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -2902,7 +2902,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -5410,7 +5410,7 @@ exports[`General Settings > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -5471,7 +5471,7 @@ exports[`General Settings > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -7935,7 +7935,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -7996,7 +7996,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -10460,7 +10460,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -10521,7 +10521,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -12984,7 +12984,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -13045,7 +13045,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"

@@ -284,7 +284,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -345,7 +345,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -1004,7 +1004,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -1065,7 +1065,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -1675,7 +1675,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -1736,7 +1736,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -2346,7 +2346,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -2407,7 +2407,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -3017,7 +3017,7 @@ exports[`NavigationBar > should render in md 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -3078,7 +3078,7 @@ exports[`NavigationBar > should render in md 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -3688,7 +3688,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -3749,7 +3749,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -4359,7 +4359,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -4420,7 +4420,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -5030,7 +5030,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -5091,7 +5091,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -5701,7 +5701,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -5762,7 +5762,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                     class="flex items-center space-x-2"
                   >
                     <div
-                      class="p-1"
+                      class="m-0 p-1"
                     >
                       <div
                         style="height: 20px; width: 20px;"

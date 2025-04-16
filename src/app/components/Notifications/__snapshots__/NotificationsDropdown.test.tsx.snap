@@ -20,7 +20,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -894,7 +894,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -951,7 +951,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1008,7 +1008,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1065,7 +1065,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1122,7 +1122,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"

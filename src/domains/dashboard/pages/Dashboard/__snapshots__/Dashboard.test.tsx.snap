@@ -311,7 +311,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -372,7 +372,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"

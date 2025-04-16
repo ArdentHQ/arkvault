@@ -314,7 +314,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -375,7 +375,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1310,7 +1310,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1371,7 +1371,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
