@@ -44,6 +44,8 @@ export interface SignedTransactionData {
 	isMultiPayment(): boolean;
 
 	methodHash(): string;
+	usesMultiSignature(): boolean;
+	isMultiSignatureRegistration(): boolean;
 
 	// Access & serialization
 	get<T = string>(key: string): T;

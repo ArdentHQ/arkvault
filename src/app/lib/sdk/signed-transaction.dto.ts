@@ -157,6 +157,14 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		throw new NotImplemented(this.constructor.name, this.toBroadcast.name);
 	}
 
+	public usesMultiSignature(): boolean {
+		return false;
+	}
+
+	public isMultiSignatureRegistration(): boolean {
+		return false;
+	}
+
 	public toSignedData(): any {
 		return this.normalizeTransactionData(this.signedData);
 	}
