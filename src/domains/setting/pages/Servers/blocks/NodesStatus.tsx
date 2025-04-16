@@ -77,43 +77,45 @@ const NodeStatusNode: React.VFC<{
 
 			<div className="grow font-semibold">{renderDisplayName()}</div>
 
-			<div className="cursor-pointer">
-				{isOnline === true && (
-					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.HEALTHY")}>
-						<div data-testid="NodeStatus--statusok">
-							<Icon
-								name="StatusOk"
-								className="text-theme-success-600 dark:text-theme-success-500"
-								size="lg"
-							/>
+			<div className="flex flex-row items-center gap-1">
+				<div className="cursor-pointer">
+					{isOnline === true && (
+						<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.HEALTHY")}>
+							<div data-testid="NodeStatus--statusok">
+								<Icon
+									name="StatusOk"
+									className="text-theme-success-600 dark:text-theme-success-500"
+									size="lg"
+								/>
+							</div>
+						</Tooltip>
+					)}
+					{isOnline === false && (
+						<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
+							<div data-testid="NodeStatus--statuserror">
+								<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
+							</div>
+						</Tooltip>
+					)}
+					{isOnline === undefined && (
+						<div data-testid="NodeStatus--statusloading">
+							<Spinner size="sm" />
 						</div>
-					</Tooltip>
-				)}
-				{isOnline === false && (
-					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
-						<div data-testid="NodeStatus--statuserror">
-							<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
-						</div>
-					</Tooltip>
-				)}
-				{isOnline === undefined && (
-					<div data-testid="NodeStatus--statusloading">
-						<Spinner size="sm" />
-					</div>
-				)}
-			</div>
+					)}
+				</div>
 
-			<Divider type="vertical" />
+				<Divider type="vertical" />
 
-			<div className="flex items-center">
-				<button
-					type="button"
-					onClick={checkNetworkStatus}
-					disabled={isOnline === undefined}
-					className="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
-				>
-					<Icon name="ArrowRotateLeft" size="md" />
-				</button>
+				<div className="flex items-center">
+					<button
+						type="button"
+						onClick={checkNetworkStatus}
+						disabled={isOnline === undefined}
+						className="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
+					>
+						<Icon name="ArrowRotateLeft" size="md" />
+					</button>
+				</div>
 			</div>
 		</div>
 	);
