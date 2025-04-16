@@ -41,12 +41,12 @@ export const WalletEncryptionBanner = ({
 				<Tooltip
 					className="-ml-3 mb-1"
 					content={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.NOT_AVAILABLE")}
-					disabled={importOption && !importOption?.canBeEncrypted}
+					disabled={importOption && importOption.canBeEncrypted}
 				>
 					<span data-testid="WalletEncryptionBanner__encryption">
 						<Toggle
 							data-testid="WalletEncryptionBanner__encryption-toggle"
-							disabled={importOption && !importOption?.canBeEncrypted}
+							disabled={importOption && !importOption.canBeEncrypted}
 							checked={toggleChecked}
 							onChange={toggleOnChange}
 						/>

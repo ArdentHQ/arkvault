@@ -306,8 +306,8 @@ export const ImportDetailStep = ({
 
 	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
-	const useEncryption = watch("useEncryption") as boolean;
-	const acceptResponsibility = watch("acceptResponsibility") as boolean;
+	const useEncryption = Boolean(watch("useEncryption"));
+	const acceptResponsibility = Boolean(watch("acceptResponsibility"));
 
 	useEffect(() => {
 		clearErrors(["validation", "confirmEncryptionPassword"]);
