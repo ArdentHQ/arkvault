@@ -30,8 +30,8 @@ export class FeeService extends Services.AbstractFeeService {
 		const dynamicFees: Fees = node.data.evmCall;
 		const fees = this.#transform(dynamicFees);
 		return {
-			delegateRegistration: fees,
-			delegateResignation: fees,
+			validatorRegistration: fees,
+			validatorResignation: fees,
 			ipfs: fees,
 			multiPayment: fees,
 			multiSignature: fees,

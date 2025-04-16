@@ -91,10 +91,7 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const type =
-		registrationType === "validatorRegistration"
-			? "delegateRegistration"
-			: (registrationType as keyof typeof GasLimit);
+	const type = registrationType as keyof typeof GasLimit;
 
 	useToggleFeeFields({
 		activeTab,

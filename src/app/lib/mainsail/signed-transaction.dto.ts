@@ -1,4 +1,4 @@
-import { Contracts, DTO, Exceptions } from "@/app/lib/sdk";
+import { Contracts, DTO } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
@@ -51,10 +51,6 @@ export class SignedTransactionData
 		return gasPrice.times(this.signedData.gasLimit);
 	}
 
-	public override memo(): string | undefined {
-		return this.signedData.vendorField;
-	}
-
 	public override timestamp(): DateTime {
 		if (this.signedData.timestamp) {
 			return DateTime.make(this.signedData.timestamp);
@@ -93,10 +89,6 @@ export class SignedTransactionData
 
 	public override isUsernameResignation(): boolean {
 		return TransactionTypeService.isUsernameResignation(this.signedData);
-	}
-
-	public override isDelegateRegistration(): boolean {
-		return this.isValidatorRegistration();
 	}
 
 	public override isValidatorRegistration(): boolean {
@@ -144,36 +136,12 @@ export class SignedTransactionData
 		return key.slice(2); // removes 0x part
 	}
 
-	public override isIpfs(): boolean {
-		return false;
-	}
-
 	public override isMultiPayment(): boolean {
 		return TransactionTypeService.isMultiPayment(this.signedData);
 	}
 
-	public override isDelegateResignation(): boolean {
-		return this.isValidatorResignation();
-	}
-
 	public override isValidatorResignation(): boolean {
 		return TransactionTypeService.isValidatorResignation(this.signedData);
-	}
-
-	public override isHtlcLock(): boolean {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.isHtlcLock.name);
-	}
-
-	public override isHtlcClaim(): boolean {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.isHtlcClaim.name);
-	}
-
-	public override isHtlcRefund(): boolean {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.isHtlcRefund.name);
-	}
-
-	public override isMagistrate(): boolean {
-		return TransactionTypeService.isMagistrate(this.signedData);
 	}
 
 	public override methodHash(): string {

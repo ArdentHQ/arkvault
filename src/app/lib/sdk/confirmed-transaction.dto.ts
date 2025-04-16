@@ -27,27 +27,17 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	readonly #meta: Record<string, TransactionDataMeta> = {};
 
 	readonly #types = [
-		{ type: "htlcClaim", method: "isHtlcClaim" },
-		{ type: "htlcLock", method: "isHtlcLock" },
-		{ type: "htlcRefund", method: "isHtlcRefund" },
-		{ type: "ipfs", method: "isIpfs" },
-		{ type: "magistrate", method: "isMagistrate" },
 		{ type: "multiPayment", method: "isMultiPayment" },
 		{ type: "multiSignature", method: "isMultiSignatureRegistration" },
 		{ type: "secondSignature", method: "isSecondSignature" },
 		{ type: "transfer", method: "isTransfer" },
 		{ type: "usernameRegistration", method: "isUsernameRegistration" },
-		{ type: "unlockToken", method: "isUnlockToken" },
 		{ type: "usernameResignation", method: "isUsernameResignation" },
 		{ type: "unvote", method: "isUnvote" },
 		{ type: "validatorRegistration", method: "isValidatorRegistration" },
 		{ type: "validatorResignation", method: "isValidatorResignation" },
 		{ type: "vote", method: "isVote" },
 		{ type: "voteCombination", method: "isVoteCombination" },
-
-		// `delegate` methods should be after `validator` methods
-		{ type: "delegateRegistration", method: "isDelegateRegistration" },
-		{ type: "delegateResignation", method: "isDelegateResignation" },
 	];
 
 	protected decimals?: number;
@@ -130,16 +120,8 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		throw new NotImplemented(this.constructor.name, this.fee.name);
 	}
 
-	public memo(): string | undefined {
-		return undefined;
-	}
-
 	public nonce(): BigNumber {
 		throw new NotImplemented(this.constructor.name, this.nonce.name);
-	}
-
-	public asset(): Record<string, unknown> {
-		return {};
 	}
 
 	public inputs(): UnspentTransactionData[] {
@@ -182,10 +164,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		return false;
 	}
 
-	public isDelegateRegistration(): boolean {
-		return false;
-	}
-
 	public isValidatorRegistration(): boolean {
 		return false;
 	}
@@ -206,39 +184,11 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		return false;
 	}
 
-	public isIpfs(): boolean {
-		return false;
-	}
-
 	public isMultiPayment(): boolean {
 		return false;
 	}
 
-	public isDelegateResignation(): boolean {
-		return false;
-	}
-
 	public isValidatorResignation(): boolean {
-		return false;
-	}
-
-	public isHtlcLock(): boolean {
-		return false;
-	}
-
-	public isHtlcClaim(): boolean {
-		return false;
-	}
-
-	public isHtlcRefund(): boolean {
-		return false;
-	}
-
-	public isMagistrate(): boolean {
-		return false;
-	}
-
-	public isUnlockToken(): boolean {
 		return false;
 	}
 
@@ -247,7 +197,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		throw new NotImplemented(this.constructor.name, this.secondPublicKey.name);
 	}
 
-	// Delegate Registration
 	public username(): string {
 		throw new NotImplemented(this.constructor.name, this.username.name);
 	}
@@ -274,11 +223,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		throw new NotImplemented(this.constructor.name, this.min.name);
 	}
 
-	// IPFS
-	public hash(): string {
-		throw new NotImplemented(this.constructor.name, this.hash.name);
-	}
-
 	// Multi-Payment
 	public payments(): { recipientId: string; amount: BigNumber }[] {
 		throw new NotImplemented(this.constructor.name, this.payments.name);
@@ -286,21 +230,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 
 	public methodHash(): string {
 		return "transfer";
-	}
-
-	// HTLC Claim / Refund
-	public lockTransactionId(): string {
-		throw new NotImplemented(this.constructor.name, this.lockTransactionId.name);
-	}
-
-	// HTLC Claim
-	public unlockSecret(): string {
-		throw new NotImplemented(this.constructor.name, this.unlockSecret.name);
-	}
-
-	// HTLC Lock
-	public secretHash(): string {
-		throw new NotImplemented(this.constructor.name, this.secretHash.name);
 	}
 
 	public expirationType(): number {
@@ -314,7 +243,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	public toObject(): KeyValuePair {
 		return {
 			amount: this.amount(),
-			asset: this.asset(),
 			confirmations: this.confirmations(),
 			fee: this.fee(),
 			id: this.id(),

@@ -83,7 +83,7 @@ export const ReviewStep = ({
 						<FormField name="fee">
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 							<FeeField
-								type="delegateRegistration"
+								type="validatorRegistration"
 								data={feeTransactionData}
 								network={wallet.network()}
 								profile={profile}

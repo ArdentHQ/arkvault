@@ -51,11 +51,7 @@ export interface ConfirmedTransactionData {
 
 	fee(): BigNumber;
 
-	memo(): string | undefined;
-
 	nonce(): BigNumber;
-
-	asset(): Record<string, unknown>;
 
 	inputs(): UnspentTransactionData[];
 
@@ -77,8 +73,6 @@ export interface ConfirmedTransactionData {
 
 	isUsernameResignation(): boolean;
 
-	isDelegateRegistration(): boolean;
-
 	isValidatorRegistration(): boolean;
 
 	isVoteCombination(): boolean;
@@ -89,28 +83,13 @@ export interface ConfirmedTransactionData {
 
 	isMultiSignatureRegistration(): boolean;
 
-	isIpfs(): boolean;
-
 	isMultiPayment(): boolean;
 
-	isDelegateResignation(): boolean;
-
 	isValidatorResignation(): boolean;
-
-	isHtlcLock(): boolean;
-
-	isHtlcClaim(): boolean;
-
-	isHtlcRefund(): boolean;
-
-	isMagistrate(): boolean;
-
-	isUnlockToken(): boolean;
 
 	// Second-Signature Registration
 	secondPublicKey(): string;
 
-	// Delegate Registration
 	username(): string;
 
 	validatorPublicKey(): string;
@@ -125,22 +104,10 @@ export interface ConfirmedTransactionData {
 
 	min(): number;
 
-	// IPFS
-	hash(): string;
-
 	// Multi-Payment
 	payments(): MultiPaymentItem[];
 
 	methodHash(): string;
-
-	// HTLC Claim / Refund
-	lockTransactionId(): string;
-
-	// HTLC Claim
-	unlockSecret(): string;
-
-	// HTLC Lock
-	secretHash(): string;
 
 	expirationType(): number;
 

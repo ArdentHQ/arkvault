@@ -11,8 +11,8 @@ interface Properties {
 		| "transfer"
 		| "multiPayment"
 		| "vote"
-		| "delegateRegistration"
-		| "delegateResignation"
+		| "validatorRegistration"
+		| "validatorResignation"
 		| "multiSignature"
 		| "usernameRegistration"
 		| "usernameResignation";
@@ -22,13 +22,13 @@ interface Properties {
 }
 
 export const GasLimit: Record<Properties["type"], number> = {
-	delegateRegistration: 500_000,
-	delegateResignation: 150_000,
 	multiPayment: 21_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
 	usernameRegistration: 200_000,
 	usernameResignation: 200_000,
+	validatorRegistration: 500_000,
+	validatorResignation: 150_000,
 	vote: 200_000,
 };
 
