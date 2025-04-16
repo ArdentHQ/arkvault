@@ -338,7 +338,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			...transaction.data,
 			...signature,
 			id: transaction.getId(),
-			v: Number.parseInt(signature.v),
+			v: Number.parseInt(signature.v) + 27, // TODO: remove +27 when updating mainsail packages https://app.clickup.com/t/86dwhby95
 		};
 	}
 }
