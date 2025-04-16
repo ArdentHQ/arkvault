@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 
 import { Contracts, IoC, Services } from "@ardenthq/sdk";
-import { BIP44, HDKey } from "@ardenthq/sdk-cryptography";
+import { BIP44, HDKey } from "@/app/lib/crypto";
 import { Exceptions } from "@mainsail/contracts";
 
 import { createRange } from "./ledger.service.helpers.js";
