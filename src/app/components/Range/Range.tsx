@@ -37,12 +37,12 @@ export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvali
 						data-testid="Range__track"
 						onMouseDown={track.onMouseDown}
 						onTouchStart={track.onTouchStart}
-						className="flex h-px w-full rounded-xs"
+						className="flex h-px w-full rounded"
 						style={track.style}
 					>
 						<div
 							data-testid="Range__track__filled"
-							className="h-1 w-full self-center rounded-xs border-0 p-0"
+							className="h-1 w-full self-center rounded border-0 p-0"
 							style={{
 								background: getTrackBackground({
 									colors: [color, "transparent"],

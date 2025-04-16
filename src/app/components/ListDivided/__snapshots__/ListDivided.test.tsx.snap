@@ -53,14 +53,14 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
           class="mt-2 flex flex-row"
         >
           <div
-            class="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded-xs border-2 border-dashed"
+            class="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed"
           />
           <div
-            class="bg-theme-secondary-500 relative h-24 w-24 rounded-xs"
+            class="bg-theme-secondary-500 relative h-24 w-24 rounded"
           >
             <img
               alt="random avatar"
-              class="rounded-xs object-cover"
+              class="rounded object-cover"
               src="https://randomuser.me/api/portraits/men/3.jpg"
             />
           </div>
@@ -114,14 +114,14 @@ exports[`ListDivided > should render an list divided with lastBorder = true 1`] 
           class="mt-2 flex flex-row"
         >
           <div
-            class="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded-xs border-2 border-dashed"
+            class="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed"
           />
           <div
-            class="bg-theme-secondary-500 relative h-24 w-24 rounded-xs"
+            class="bg-theme-secondary-500 relative h-24 w-24 rounded"
           >
             <img
               alt="random avatar"
-              class="rounded-xs object-cover"
+              class="rounded object-cover"
               src="https://randomuser.me/api/portraits/men/3.jpg"
             />
           </div>

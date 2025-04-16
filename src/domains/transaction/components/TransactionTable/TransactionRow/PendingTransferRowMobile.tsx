@@ -59,7 +59,7 @@ export const PendingTransferRowMobile = ({
 					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[auto_auto_80px] sm:pb-2">
 						<MobileSection title={t("COMMON.TRANSFER")}>
 							<div className="flex flex-row items-center gap-2">
-								<Label color="danger-bg" size="xs" noBorder className="rounded-xs px-[11px] py-[3px]">
+								<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-[3px]">
 									{t("COMMON.TO")}
 								</Label>
 								<span className="text-sm">

@@ -96,7 +96,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 			<div className="space-y-6 sm:space-y-8">
 				<div className="flex flex-col space-y-4 sm:space-y-5">
 					<div className="flex items-center space-x-3">
-						<span className="flex h-6 w-6 items-center justify-center rounded-xs bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
+						<span className="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 							1
 						</span>
 						<h3 className="m-0 text-lg font-bold">
@@ -153,7 +153,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 				<div className="flex flex-col space-y-4 sm:space-y-5">
 					<div className="flex items-center space-x-3">
-						<span className="flex h-6 w-6 items-center justify-center rounded-xs bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
+						<span className="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 							2
 						</span>
 						<h3 className="m-0 text-lg font-bold">

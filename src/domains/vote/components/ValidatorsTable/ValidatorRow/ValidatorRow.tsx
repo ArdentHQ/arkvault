@@ -257,7 +257,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 				<div
 					data-testid="ValidatorStatus__active"
 					className={twMerge(
-						"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+						"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 						className,
 					)}
 				>
@@ -272,7 +272,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 			<div
 				data-testid="ValidatorStatus__standby"
 				className={twMerge(
-					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 					className,
 				)}
 			>

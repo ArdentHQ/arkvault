@@ -19,7 +19,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -78,7 +78,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -6048,7 +6048,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -6088,7 +6088,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -6147,7 +6147,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -12117,7 +12117,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -12157,7 +12157,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -12216,7 +12216,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -19372,7 +19372,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -19412,7 +19412,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -19471,7 +19471,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -26627,7 +26627,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -26667,7 +26667,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -26726,7 +26726,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -26956,7 +26956,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27023,7 +27023,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -27078,7 +27078,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27145,7 +27145,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -27200,7 +27200,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27267,7 +27267,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -27444,7 +27444,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -27483,7 +27483,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -27542,7 +27542,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -27772,7 +27772,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27839,7 +27839,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -27894,7 +27894,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -27961,7 +27961,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -28016,7 +28016,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -28083,7 +28083,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -28260,7 +28260,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -28299,7 +28299,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -28358,7 +28358,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -28588,7 +28588,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -28655,7 +28655,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -28710,7 +28710,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -28777,7 +28777,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -28832,7 +28832,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -28899,7 +28899,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -29076,7 +29076,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -29115,7 +29115,7 @@ exports[`ValidatorsTable > should render 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -29174,7 +29174,7 @@ exports[`ValidatorsTable > should render 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -29404,7 +29404,7 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -29471,7 +29471,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -29526,7 +29526,7 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -29593,7 +29593,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -29648,7 +29648,7 @@ exports[`ValidatorsTable > should render 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -29715,7 +29715,7 @@ exports[`ValidatorsTable > should render 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -29892,7 +29892,7 @@ exports[`ValidatorsTable > should render 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -29932,7 +29932,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -29991,7 +29991,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -30274,7 +30274,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -30345,7 +30345,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -30387,7 +30387,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -30442,7 +30442,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -30513,7 +30513,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -30555,7 +30555,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -30610,7 +30610,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -30681,7 +30681,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -30723,7 +30723,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -30920,7 +30920,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -30960,7 +30960,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -31019,7 +31019,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -31249,7 +31249,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -31316,7 +31316,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -31371,7 +31371,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -31438,7 +31438,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -31493,7 +31493,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -31560,7 +31560,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -31737,7 +31737,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -31776,7 +31776,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -31835,7 +31835,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -32065,7 +32065,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -32132,7 +32132,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -32187,7 +32187,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -32254,7 +32254,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -32309,7 +32309,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -32379,7 +32379,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                               class="w-full sm:w-auto"
                             >
                               <button
-                                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black"
+                                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black"
                                 data-testid="DelegateRow__toggle-2"
                                 disabled=""
                                 type="button"
@@ -32558,7 +32558,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -32597,7 +32597,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -32656,7 +32656,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -32886,7 +32886,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -32953,7 +32953,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -33008,7 +33008,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -33075,7 +33075,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -33130,7 +33130,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -33197,7 +33197,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -33374,7 +33374,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -33413,7 +33413,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -33472,7 +33472,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -33849,7 +33849,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -33892,7 +33892,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -33951,7 +33951,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -34181,7 +34181,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -34248,7 +34248,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -34303,7 +34303,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -34370,7 +34370,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -34425,7 +34425,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -34492,7 +34492,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -34669,7 +34669,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -34709,7 +34709,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -34768,7 +34768,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -35051,7 +35051,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -35122,7 +35122,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -35163,7 +35163,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -35218,7 +35218,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -35289,7 +35289,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -35331,7 +35331,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -35386,7 +35386,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -35457,7 +35457,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -35499,7 +35499,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -35696,7 +35696,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -35736,7 +35736,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -35795,7 +35795,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -36025,7 +36025,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -36092,7 +36092,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -36147,7 +36147,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -36214,7 +36214,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -36269,7 +36269,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -36336,7 +36336,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -36513,7 +36513,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -36553,7 +36553,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -36612,7 +36612,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -36842,7 +36842,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -36909,7 +36909,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -36964,7 +36964,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -37031,7 +37031,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -37086,7 +37086,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -37156,7 +37156,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                               class="w-full sm:w-auto"
                             >
                               <button
-                                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black"
+                                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black"
                                 data-testid="DelegateRow__toggle-2"
                                 disabled=""
                                 type="button"
@@ -37335,7 +37335,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -37374,7 +37374,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -37433,7 +37433,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -37663,7 +37663,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -37730,7 +37730,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -37785,7 +37785,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -37852,7 +37852,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -37907,7 +37907,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -37974,7 +37974,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -38151,7 +38151,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -38191,7 +38191,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -38250,7 +38250,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -38533,7 +38533,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -38604,7 +38604,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -38645,7 +38645,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -38700,7 +38700,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -38771,7 +38771,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -38813,7 +38813,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -38868,7 +38868,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -38939,7 +38939,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                               class="relative"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -38981,7 +38981,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -39178,7 +39178,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -39218,7 +39218,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -39277,7 +39277,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -39507,7 +39507,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -39574,7 +39574,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -39629,7 +39629,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -39696,7 +39696,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -39751,7 +39751,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -39818,7 +39818,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -39995,7 +39995,7 @@ exports[`ValidatorsTable > should select multiple delegates to unvote/vote 1`] =
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   type="button"
                 >
@@ -40034,7 +40034,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -40093,7 +40093,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -40323,7 +40323,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -40390,7 +40390,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -40445,7 +40445,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -40512,7 +40512,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -40567,7 +40567,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -40634,7 +40634,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -40811,7 +40811,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"
@@ -40851,7 +40851,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
             class="flex flex-col"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded-xs border border-b md:rounded-none md:border-x-0 md:border-t-0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
@@ -40910,7 +40910,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                 </div>
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 pl-12"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -41140,7 +41140,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -41207,7 +41207,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-0"
                               type="button"
                             >
@@ -41262,7 +41262,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -41329,7 +41329,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-1"
                               type="button"
                             >
@@ -41384,7 +41384,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                           class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
                         >
                           <div
-                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                            class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
                             data-testid="ValidatorStatus__standby"
                           >
                             Standby
@@ -41451,7 +41451,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                             class="-mr-0.5 leading-[17px]"
                           >
                             <button
-                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
+                              class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                               data-testid="DelegateRow__toggle-2"
                               type="button"
                             >
@@ -41628,7 +41628,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
-                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                  class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                   data-testid="DelegateTable__continue-button"
                   disabled=""
                   type="button"

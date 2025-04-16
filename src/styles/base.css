@@ -173,7 +173,7 @@ main {
 
 .select-options-list .select-list-option-head,
 .select-options-list .select-list-option {
-	@apply relative rounded-xs border-0 px-5 text-theme-secondary-700 dark:text-theme-dark-200;
+	@apply relative rounded border-0 px-5 text-theme-secondary-700 dark:text-theme-dark-200;
 }
 
 .select-options-list .select-list-option-head__label {

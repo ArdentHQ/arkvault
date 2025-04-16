@@ -75,7 +75,7 @@ const TransactionTypeOptions = () => {
 						isSelected={() => active}
 						setSelectedValue={() => form.setValue("transactionType", value)}
 						value={value}
-						className="rounded-xs"
+						className="rounded"
 						variant="modern"
 					>
 						<div className="px-2">{label}</div>

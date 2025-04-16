@@ -15,11 +15,11 @@ describe("ListDivided", () => {
 		const item = {
 			content: (
 				<div className="mt-2 flex flex-row">
-					<div className="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded-xs border-2 border-dashed" />
-					<div className="bg-theme-secondary-500 relative h-24 w-24 rounded-xs">
+					<div className="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed" />
+					<div className="bg-theme-secondary-500 relative h-24 w-24 rounded">
 						<img
 							src="https://randomuser.me/api/portraits/men/3.jpg"
-							className="rounded-xs object-cover"
+							className="rounded object-cover"
 							alt="random avatar"
 						/>
 					</div>

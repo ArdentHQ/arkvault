@@ -32,9 +32,9 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const renderAvatarSection = useCallback(
 		(isOpen: boolean) => (
-			<button className="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded-xs bg-transparent p-0 px-1 py-0.5">
+			<button className="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5">
 				<div
-					className="relative cursor-pointer items-center justify-center rounded-xs align-middle"
+					className="relative cursor-pointer items-center justify-center rounded align-middle"
 					data-testid="UserMenu"
 				>
 					<Avatar size="avatarMobile" highlight={isOpen}>
@@ -51,7 +51,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 						) : (
 							<img
 								alt="Profile Avatar"
-								className="h-6 w-6 rounded-xs bg-cover bg-center bg-no-repeat object-cover"
+								className="h-6 w-6 rounded bg-cover bg-center bg-no-repeat object-cover"
 								src={avatarImage}
 							/>
 						)}

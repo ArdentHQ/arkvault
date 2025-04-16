@@ -21,7 +21,7 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 		variant="transparent"
 		disabled={disabled}
 		className={cn(
-			"text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded-xs py-0 text-sm leading-[17px] hover:underline",
+			"text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline",
 			compactClassName,
 		)}
 		onClick={onClick}

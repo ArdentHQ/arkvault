@@ -20,7 +20,7 @@ export const SearchBar = ({ placeholder, className, children, onSearch }: Search
 
 	return (
 		<div data-testid="SearchBar" className={cn("bg-theme-secondary-100 px-10 pt-8 pb-8", className)}>
-			<div className="bg-theme-background flex items-center rounded-xs px-10 py-6 shadow-xl">
+			<div className="bg-theme-background flex items-center rounded px-10 py-6 shadow-xl">
 				{children || <Icon name="MagnifyingGlass" className="text-theme-secondary-300 mr-8 w-4" />}
 
 				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mr-4 flex-1 border-l pl-4">

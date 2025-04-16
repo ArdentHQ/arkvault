@@ -96,7 +96,7 @@ export const ViewingMode = ({
 					setSelectedValue={() => onChange?.(value as ViewingModeType)}
 					value={value}
 					variant="modern"
-					className="h-11 rounded-xs"
+					className="h-11 rounded"
 				>
 					<div className="flex items-center px-2">
 						<Icon size="lg" name={icon} />

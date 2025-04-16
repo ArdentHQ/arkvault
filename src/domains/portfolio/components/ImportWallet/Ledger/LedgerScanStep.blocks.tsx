@@ -50,7 +50,7 @@ export const LedgerMobileItem = ({
 		return (
 			<div className="relative">
 				<div
-					className="w-full overflow-hidden rounded-xs border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
+					className="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
 					data-testid="LedgerMobileItem__skeleton"
 				>
 					<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
@@ -111,7 +111,7 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 	<div>
 		<div
 			className={twMerge(
-				"absolute inset-0 -m-px rounded-xs border border-theme-secondary-300 bg-white opacity-75 dark:border-theme-secondary-800 dark:bg-theme-background",
+				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-white opacity-75 dark:border-theme-secondary-800 dark:bg-theme-background",
 				className,
 			)}
 		/>

@@ -134,7 +134,7 @@ export const PortfolioHeader = ({
 					>
 						<div
 							className={cn("flex h-fit flex-row items-center gap-1", {
-								"rounded-xs ring-3 ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
+								"rounded ring-3 ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
 									showHint,
 							})}
 						>
@@ -187,7 +187,7 @@ export const PortfolioHeader = ({
 				</div>
 
 				<div className="flex flex-col gap-0.5">
-					<div className="flex w-full flex-col gap-3 rounded-xs bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg">
+					<div className="flex w-full flex-col gap-3 rounded bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg">
 						<div className="flex w-full flex-row items-center justify-between">
 							{selectedWallets.length === 1 && (
 								<div className="flex flex-row items-center gap-1.5">

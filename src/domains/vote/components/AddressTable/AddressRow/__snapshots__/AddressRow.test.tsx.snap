@@ -166,7 +166,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -179,7 +179,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -364,7 +364,7 @@ exports[`AddressRow > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -377,7 +377,7 @@ exports[`AddressRow > should render 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -562,7 +562,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -575,7 +575,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -760,7 +760,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -773,7 +773,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 disabled=""
                 type="button"
@@ -922,7 +922,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1124,7 +1124,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1326,7 +1326,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1511,7 +1511,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -1524,7 +1524,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1646,7 +1646,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -1832,7 +1832,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -1845,7 +1845,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1967,7 +1967,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -2153,7 +2153,7 @@ exports[`AddressRow > should render with active validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Active
@@ -2166,7 +2166,7 @@ exports[`AddressRow > should render with active validator 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2353,7 +2353,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Resigned
@@ -2366,7 +2366,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2551,7 +2551,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
-              class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+              class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="AddressRow__wallet-status"
             >
               Standby
@@ -2564,7 +2564,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 text-sm hover:underline"
                 data-testid="AddressRow__select-0"
                 type="button"
               >

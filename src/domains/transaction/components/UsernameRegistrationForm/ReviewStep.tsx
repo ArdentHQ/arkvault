@@ -52,7 +52,7 @@ export const ReviewStep = ({
 					<div className="space-y-3 sm:space-y-0">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-[87px]">{t("COMMON.CATEGORY")}</DetailTitle>
-							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 flex items-center rounded-xs px-1 py-[3px] dark:border dark:bg-transparent">
+							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
 								<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-[12px] leading-[15px] font-semibold">
 									{t("TRANSACTION.TRANSACTION_TYPES.USERNAME_REGISTRATION")}
 								</span>

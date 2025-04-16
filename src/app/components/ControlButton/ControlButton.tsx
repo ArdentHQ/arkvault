@@ -14,11 +14,11 @@ const ControlButtonStyled = ({
 			cn({
 				"hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white":
 					disabled || noBorder,
-				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:data-focus-visible-added:rounded-xs":
+				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:data-focus-visible-added:rounded":
 					!noBorder && !disabled,
 				"hover:text-theme-primary-400": !disabled,
 				"mx-0.5 px-2.5": !noBorder,
-				"rounded-xs px-2 py-1.5": noBorder,
+				"rounded px-2 py-1.5": noBorder,
 			}),
 			properties.className,
 		)}

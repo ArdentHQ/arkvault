@@ -48,7 +48,7 @@ export const MobileTableElement = ({
 }: MobileTableElementProperties) => (
 	<div
 		className={twMerge(
-			classNames("flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded-xs border", {
+			classNames("flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border", {
 				"border-theme-danger-400": variant === MobileTableElementVariant.danger,
 				"border-theme-primary-300 dark:border-theme-dark-navy-400":
 					variant === MobileTableElementVariant.primary,

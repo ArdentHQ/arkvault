@@ -7,7 +7,7 @@ exports[`SearchBar > should render 1`] = `
     data-testid="SearchBar"
   >
     <div
-      class="bg-theme-background flex items-center rounded-xs px-10 py-6 shadow-xl"
+      class="bg-theme-background flex items-center rounded px-10 py-6 shadow-xl"
     >
       <div
         class="text-theme-secondary-300 mr-8 w-4"
@@ -42,7 +42,7 @@ exports[`SearchBar > should render 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 mr-4 flex-1 border-l pl-4"
       >
         <div
-          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14"
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
@@ -59,7 +59,7 @@ exports[`SearchBar > should render 1`] = `
         </div>
       </div>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-1"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-1"
         data-testid="SearchBar__button"
         type="button"
       >

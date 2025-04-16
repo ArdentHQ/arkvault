@@ -15,10 +15,10 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded-xs transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -142,7 +142,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
             </div>
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-4 w-full"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-4 w-full"
                 data-testid="ReceiveFunds__toggle"
                 type="button"
               >
@@ -167,7 +167,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
               class="mt-4"
             >
               <button
-                class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 flex w-full space-x-2"
+                class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 flex w-full space-x-2"
                 data-testid="ReceiveFunds__download-qr"
                 type="button"
               >
@@ -225,10 +225,10 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded-xs transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -341,7 +341,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
             </div>
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-4 w-full"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 mt-4 w-full"
                 data-testid="ReceiveFunds__toggle"
                 type="button"
               >
@@ -366,7 +366,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
               class="mt-4"
             >
               <button
-                class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 flex w-full space-x-2"
+                class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 flex w-full space-x-2"
                 data-testid="ReceiveFunds__download-qr"
                 type="button"
               >

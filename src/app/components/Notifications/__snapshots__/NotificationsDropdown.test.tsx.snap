@@ -12,7 +12,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -65,10 +65,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
           data-testid="Modal__inner"
         >
           <div
-            class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded-xs transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+            class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
               data-testid="Modal__close-button"
               type="button"
             >
@@ -144,7 +144,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                     >
                       <button
-                        class="ring-focus relative focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                        class="ring-focus relative focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                         data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
@@ -186,7 +186,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         </span>
                       </button>
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 border-theme-secondary-300 dark:border-theme-secondary-800 dark:hover:border-theme-primary-500 h-8 w-8 border bg-transparent p-2 hover:border-transparent dark:bg-transparent"
+                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 border-theme-secondary-300 dark:border-theme-secondary-800 dark:hover:border-theme-primary-500 h-8 w-8 border bg-transparent p-2 hover:border-transparent dark:bg-transparent"
                         data-testid="explorer-link"
                         type="button"
                       >
@@ -471,7 +471,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     Method
                                   </div>
                                   <div
-                                    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded-xs text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
+                                    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                   >
                                     Transfer
                                   </div>
@@ -536,7 +536,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Amount
                                 </div>
                                 <div
-                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded-xs dark:border"
+                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div
@@ -886,7 +886,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -943,7 +943,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -1000,7 +1000,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -1057,7 +1057,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >
@@ -1114,7 +1114,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
           data-testid="NavigationBar__buttons--notifications"
           type="button"
         >

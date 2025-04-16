@@ -60,13 +60,13 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="items-start xl:min-h-11 my-1 pt-3 min-h-14 xl:min-h-11">
-				<Label color="secondary" size="xs" noBorder className="rounded-xs px-1 dark:border">
+				<Label color="secondary" size="xs" noBorder className="rounded px-1 dark:border">
 					{getLabel(transaction.type())}
 				</Label>
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-11 my-1 pt-3 min-h-14 xl:min-h-11">
-				<Label color="danger-bg" size="xs" noBorder className="rounded-xs px-[11px] py-1">
+				<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-1">
 					{t("COMMON.TO")}
 				</Label>
 				<span className="text-sm">

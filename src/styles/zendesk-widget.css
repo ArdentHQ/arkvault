@@ -101,5 +101,5 @@
 	line-height: 1px !important;
 	background-color: var(--theme-color-secondary-800) !important;
 	color: var(--theme-color-secondary-200) !important;
-	@apply rounded-xs p-4;
+	@apply rounded p-4;
 }

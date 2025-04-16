@@ -203,7 +203,7 @@ export const Contacts: FC = () => {
 				<ContactsHeader />
 
 				<Section className="py-0">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded-xs border sm:hidden">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center rounded border sm:hidden">
 						<Button
 							className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 h-12 w-full"
 							data-testid="contacts__add-contact-btn-mobile"

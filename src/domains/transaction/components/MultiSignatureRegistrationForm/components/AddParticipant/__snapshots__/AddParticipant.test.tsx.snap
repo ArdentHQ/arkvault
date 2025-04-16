@@ -28,7 +28,7 @@ exports[`Add Participant > should fail to find 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -111,7 +111,7 @@ exports[`Add Participant > should fail to find 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -184,7 +184,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           class="pl-3"
                         >
                           <div
-                            class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
                             <div>
@@ -236,7 +236,7 @@ exports[`Add Participant > should fail to find 1`] = `
         </div>
       </fieldset>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
         type="button"
       >
         <div
@@ -247,7 +247,7 @@ exports[`Add Participant > should fail to find 1`] = `
       </button>
       <div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -268,7 +268,7 @@ exports[`Add Participant > should fail to find 1`] = `
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     disabled=""
                     type="button"
@@ -342,7 +342,7 @@ exports[`Add Participant > should fail to find 1`] = `
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 disabled=""
                 type="button"
@@ -416,7 +416,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -504,7 +504,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6…
                     </div>
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="flex items-center"
@@ -597,7 +597,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           class="pl-3"
                         >
                           <div
-                            class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
                             <div>
@@ -649,7 +649,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
         </div>
       </fieldset>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
         type="button"
       >
         <div
@@ -660,7 +660,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
       </button>
       <div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -681,7 +681,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     disabled=""
                     type="button"
@@ -744,7 +744,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 disabled=""
                 type="button"
@@ -818,7 +818,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -901,7 +901,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -974,7 +974,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           class="pl-3"
                         >
                           <div
-                            class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
                             <div>
@@ -1026,7 +1026,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
         type="button"
       >
         <div
@@ -1037,7 +1037,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
       </button>
       <div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -1058,7 +1058,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     disabled=""
                     type="button"
@@ -1132,7 +1132,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 disabled=""
                 type="button"
@@ -1206,7 +1206,7 @@ exports[`Add Participant > should handle exception on find and show address not 
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1289,7 +1289,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1362,7 +1362,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                           class="pl-3"
                         >
                           <div
-                            class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
                             <div>
@@ -1414,7 +1414,7 @@ exports[`Add Participant > should handle exception on find and show address not 
         </div>
       </fieldset>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 my-4 w-full"
         type="button"
       >
         <div
@@ -1425,7 +1425,7 @@ exports[`Add Participant > should handle exception on find and show address not 
       </button>
       <div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -1446,7 +1446,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     disabled=""
                     type="button"
@@ -1520,7 +1520,7 @@ exports[`Add Participant > should handle exception on find and show address not 
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 disabled=""
                 type="button"
@@ -1594,7 +1594,7 @@ exports[`Add Participant > should render custom participants 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1627,7 +1627,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1655,7 +1655,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                           class=""
                         >
                           <div
-                            class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
                             <div>
@@ -1707,7 +1707,7 @@ exports[`Add Participant > should render custom participants 1`] = `
         </div>
       </fieldset>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
         disabled=""
         type="button"
       >
@@ -1719,7 +1719,7 @@ exports[`Add Participant > should render custom participants 1`] = `
       </button>
       <div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -1740,7 +1740,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     type="button"
                   >
@@ -1802,7 +1802,7 @@ exports[`Add Participant > should render custom participants 1`] = `
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 type="button"
               >
@@ -1875,7 +1875,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1908,7 +1908,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded-xs px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1936,7 +1936,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                           class=""
                         >
                           <div
-                            class="flex items-center cursor-pointer rounded-xs bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                            class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                             data-testid="SelectRecipient__select-recipient"
                           >
                             <div>
@@ -1988,7 +1988,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
         disabled=""
         type="button"
       >
@@ -2000,7 +2000,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
       </button>
       <div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -2021,7 +2021,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     disabled=""
                     type="button"
@@ -2095,7 +2095,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 disabled=""
                 type="button"
@@ -2136,7 +2136,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
           </div>
         </div>
         <div
-          class="mb-3 overflow-hidden rounded-xs border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+          class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
           data-testid="AddParticipantItem"
         >
           <div
@@ -2157,7 +2157,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                   class="sm:hidden"
                 >
                   <button
-                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                     data-testid="AddParticipantItem--mobile-deleteButton"
                     type="button"
                   >
@@ -2230,7 +2230,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               class="hidden sm:block"
             >
               <button
-                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-3.5"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-3.5"
                 data-testid="AddParticipantItem--deleteButton"
                 type="button"
               >

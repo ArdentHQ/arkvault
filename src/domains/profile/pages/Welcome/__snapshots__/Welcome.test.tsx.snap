@@ -548,11 +548,11 @@ exports[`Welcome > should change route to create profile 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -659,7 +659,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -1283,11 +1283,11 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -1378,11 +1378,11 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -1489,7 +1489,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -2113,11 +2113,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -2208,11 +2208,11 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -2319,7 +2319,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -2943,11 +2943,11 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -3038,11 +3038,11 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -3149,7 +3149,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -3773,11 +3773,11 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -3868,11 +3868,11 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -3979,7 +3979,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4603,11 +4603,11 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -4698,11 +4698,11 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -4809,7 +4809,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -5433,11 +5433,11 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -5544,7 +5544,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -6168,11 +6168,11 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Foo Bar"
@@ -6263,11 +6263,11 @@ exports[`Welcome > should render with profiles 1`] = `
                               class="flex min-w-0 items-center"
                             >
                               <div
-                                class="relative inline-flex h-10 w-10 items-center justify-center rounded-xs align-middle transition-all duration-100 shrink-0"
+                                class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-xs"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                                 >
                                   <img
                                     alt="Jane Doe"
@@ -6374,7 +6374,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </div>
                     </div>
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -6983,7 +6983,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       data-testid="ProfileList"
                     />
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="CreateProfile"
                       type="button"
                     >

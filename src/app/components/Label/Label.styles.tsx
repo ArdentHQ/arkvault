@@ -64,7 +64,7 @@ const getSize = (size?: Size) => {
 
 const getBorder = (noBorder?: boolean) => {
 	if (!noBorder) {
-		return `px-1 border-2 rounded-xs`;
+		return `px-1 border-2 rounded`;
 	}
 };
 

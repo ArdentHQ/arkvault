@@ -82,8 +82,8 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 					"bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden",
 					{
 						"h-11 w-11 rounded-xl": variant === "logo-only" && !isXs,
-						"h-6 w-6 rounded-xs": variant === "default",
-						"h-8 w-8 rounded-xs": variant === "logo-only" && isXs,
+						"h-6 w-6 rounded": variant === "default",
+						"h-8 w-8 rounded": variant === "logo-only" && isXs,
 					},
 				)}
 				onClick={() => (onClick ? onClick() : defaultHandler())}
@@ -254,7 +254,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded-xs bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+							className="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
 						>
 							{menuItem.title}
 						</NavLink>
@@ -270,7 +270,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
-							className="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded-xs focus:ring-2 focus:outline-hidden"
+							className="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
 						>
 							<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
 						</button>

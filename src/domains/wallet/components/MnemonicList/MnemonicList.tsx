@@ -17,9 +17,9 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 				<li
 					data-testid="MnemonicList__item"
 					key={index}
-					className="relative flex items-center rounded-xs border border-theme-secondary-400 p-[3px] dark:border-theme-dark-500"
+					className="relative flex items-center rounded border border-theme-secondary-400 p-[3px] dark:border-theme-dark-500"
 				>
-					<div className="mr-2 w-8 rounded-xs bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+					<div className="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
 					</div>
 					<div className="sm:text-md text-sm">{word}</div>
@@ -46,9 +46,9 @@ export const MnemonicListSkeleton: React.VFC = () => {
 				<li
 					data-testid="MnemonicList__item_skeleton"
 					key={index}
-					className="dark:border-theme-dark-00 relative flex items-center rounded-xs border border-theme-secondary-400 p-[3px]"
+					className="dark:border-theme-dark-00 relative flex items-center rounded border border-theme-secondary-400 p-[3px]"
 				>
-					<div className="mr-2 w-8 rounded-xs bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
+					<div className="mr-2 w-8 rounded bg-theme-secondary-200 p-2 text-center text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
 					</div>
 					<div>

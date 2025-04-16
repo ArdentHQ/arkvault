@@ -424,7 +424,7 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="my-2 flex flex-col overflow-hidden rounded-xs bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+				<div className="my-2 flex flex-col overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
 					<div className="flex w-full items-center space-x-2 bg-theme-info-100 px-4 py-2 dark:bg-theme-info-600 sm:w-auto sm:space-x-0 sm:py-4.5">
 						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
 						<span className="text-theme-info-700 text-sm leading-[17px] font-semibold sm:hidden dark:text-white">

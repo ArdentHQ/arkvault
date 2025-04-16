@@ -53,7 +53,7 @@ export const InputWrapperStyled = ({
 	<div
 		{...props}
 		className={twMerge(
-			"text-theme-text flex w-full appearance-none items-center space-x-2 rounded-xs px-4 transition-colors duration-200",
+			"text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200",
 			cn({
 				border: !noBorder,
 				"border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500": invalid && !disabled,

@@ -97,7 +97,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 
 	const renderError = () => (
 		<>
-			<div className="bg-theme-primary-100 hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 absolute top-4 right-4 z-10 rounded-xs transition-all duration-100 ease-linear">
+			<div className="bg-theme-primary-100 hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 absolute top-4 right-4 z-10 rounded transition-all duration-100 ease-linear">
 				<Button variant="transparent" size="icon" onClick={() => setDropError(undefined)} className="h-8 w-8">
 					<Icon name="Cross" size="sm" />
 				</Button>

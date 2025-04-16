@@ -50,7 +50,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 					className,
 				)}
 			>
@@ -64,7 +64,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 					className,
 				)}
 			>
@@ -77,7 +77,7 @@ export const WalletStatus = ({
 		<div
 			data-testid={dataTestId}
 			className={twMerge(
-				"bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded-xs px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+				"bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
 				className,
 			)}
 		>
