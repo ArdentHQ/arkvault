@@ -16,7 +16,7 @@ export interface LedgerService {
 
 	getExtendedPublicKey(path: string): Promise<string>;
 
-	signTransaction(path: string, payload: Buffer): Promise<string>;
+	sign(path: string, payload: Buffer): Promise<{ r: string; s: string; v: string }>;
 
 	signMessage(path: string, payload: string): Promise<string>;
 
