@@ -1,4 +1,3 @@
-import { PBKDF2 } from "@/app/lib/crypto";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -7,7 +6,6 @@ import { AuthenticationStep } from "./AuthenticationStep";
 import {
 	env,
 	getDefaultProfileId,
-	getDefaultWalletMnemonic,
 	MNEMONICS,
 	renderWithForm,
 	screen,
@@ -334,7 +332,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		mockNanoXTransport();
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		vi.spyOn(wallet.signingKey(), "get").mockReturnValue(PBKDF2.encrypt(getDefaultWalletMnemonic(), "password"));
 
 		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, { withProviders: true });
 
