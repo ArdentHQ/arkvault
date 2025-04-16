@@ -185,7 +185,7 @@ export const SendTransfer = () => {
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === SendTransferStep.AuthenticationStep) {
+		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
 			await handleSubmit(() => submit(true))();
 			return;
 		}

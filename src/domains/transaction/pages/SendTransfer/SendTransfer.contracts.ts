@@ -32,6 +32,7 @@ export interface SendTransferForm {
 }
 
 export interface BuildTransferDataProperties {
+	isMultiSignature?: boolean;
 	coin: Coins.Coin;
 	recipients?: RecipientItem[];
 	memo?: string;

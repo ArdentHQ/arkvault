@@ -167,11 +167,17 @@ export const TransactionRowAddressing = ({
 	const { getWalletAlias } = useWalletAlias();
 	const { isDarkMode } = useTheme();
 
-	const isNegative = [transaction.isSent()].some(Boolean);
+	const isMusigTransfer = [
+		!!transaction.usesMultiSignature?.(),
+		!transaction.isConfirmed(),
+		!transaction.isMultiSignatureRegistration(),
+	].every(Boolean);
+
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 	const isContract = isContractTransaction(transaction);
 
 	let direction: Direction = isNegative ? "sent" : "received";
-	if (transaction.isReturn() || (transaction.sender() === transaction.recipient())) {
+	if (transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient())) {
 		direction = "return";
 	}
 

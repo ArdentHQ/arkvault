@@ -27,6 +27,7 @@ export interface Transaction {
 	isSent: boolean;
 	isUnvote?: boolean;
 	isSignaturePending?: boolean;
+	isMultiSignature?: boolean;
 }
 
 export type TransactionStatus = "confirmed" | "pending" | "actionRequired";

@@ -54,6 +54,10 @@ export const useTransactionBuilder = () => {
 
 		let data = input;
 
+		if (wallet.isMultiSignature()) {
+			data = await prepareMultiSignature(data, wallet);
+		}
+
 		if (wallet.isLedger()) {
 			data = await withAbortPromise(options?.abortSignal, abortConnectionRetry)(prepareLedger(data, wallet));
 		}

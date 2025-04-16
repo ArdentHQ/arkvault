@@ -21,6 +21,8 @@ import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transa
 import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
+import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
+import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -105,6 +107,32 @@ export const TransactionDetailContent = ({
 					</div>
 				</DetailPadded>
 
+				{[!isAwaitingSignatures, transaction.isMultiSignatureRegistration()].every(Boolean) && (
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
+						<div className="mt-2">
+							<TransactionMusigParticipants
+								publicKeys={transactionPublicKeys(transaction).publicKeys}
+								useExplorerLinks
+								profile={profile}
+								network={transaction.wallet().network()}
+							/>
+						</div>
+					</DetailPadded>
+				)}
+
+				{[isAwaitingSignatures].every(Boolean) && (
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.SIGNATURES")}</DetailLabel>
+						<div className="mt-2">
+							<Signatures
+								publicKeys={transactionPublicKeys(transaction).publicKeys}
+								profile={profile}
+								transaction={transaction}
+							/>
+						</div>
+					</DetailPadded>
+				)}
 			</div>
 		</DetailsCondensed>
 	);

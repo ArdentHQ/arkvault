@@ -66,6 +66,36 @@ export const TransactionType = ({
 							</div>
 						</>
 					)}
+
+					{transaction.isMultiSignatureRegistration() && (
+						<>
+							{transaction.wallet() && (
+								<>
+									<DetailDivider />
+
+									<div className="flex w-full justify-between sm:justify-start">
+										<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
+										<div className="max-sm:text-sm font-semibold leading-5">
+											<MusigGeneratedAddress
+												publicKeys={publicKeys}
+												min={min}
+												wallet={transaction.wallet()}
+											/>
+										</div>
+									</div>
+								</>
+							)}
+
+							<DetailDivider />
+
+							<div className="flex w-full items-center justify-between sm:justify-start">
+								<DetailLabelText>{t("TRANSACTION.SIGNATURES")}</DetailLabelText>
+								<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
+									{min} {t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", { length: publicKeys.length })}
+								</div>
+							</div>
+						</>
+					)}
 				</div>
 			</DetailWrapper>
 		</div>

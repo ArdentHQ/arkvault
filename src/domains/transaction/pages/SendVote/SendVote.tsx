@@ -212,7 +212,7 @@ export const SendVote = () => {
 		assertWallet(senderWallet);
 
 		// Skip authorization step
-		if (newIndex === Step.AuthenticationStep) {
+		if (newIndex === Step.AuthenticationStep && senderWallet.isMultiSignature()) {
 			void handleSubmit(submitForm)();
 			return;
 		}

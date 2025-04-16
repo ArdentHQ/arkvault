@@ -72,4 +72,16 @@ export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
 			!wallet.isResignedValidator()
 		);
 	},
+
+	/**
+	 * Determines whether the wallet is a multisignature wallet.
+	 * @returns {boolean}
+	 */
+	isMultisignature(): boolean {
+		try {
+			return wallet.isMultiSignature();
+		} catch {
+			return false;
+		}
+	},
 });
