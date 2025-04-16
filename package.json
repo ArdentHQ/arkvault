@@ -47,7 +47,6 @@
 		"@ardenthq/sdk": "2.0.0-alpha.69",
 		"@ardenthq/sdk-intl": "2.0.0-alpha.69",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.69",
-		"@ardenthq/sdk-cryptography": "2.0.0-alpha.69",
 		"@arkecosystem/typescript-crypto": "0.0.4",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
 		"@floating-ui/react": "^0.26.25",
