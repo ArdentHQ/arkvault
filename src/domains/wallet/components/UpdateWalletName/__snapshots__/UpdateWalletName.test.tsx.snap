@@ -248,7 +248,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <span
@@ -441,7 +441,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <span
@@ -634,7 +634,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <span
@@ -827,7 +827,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <span
@@ -1020,7 +1020,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <span
@@ -1213,7 +1213,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                       />
                     </div>
                     <div
-                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                       data-testid="Input__addon-end"
                     >
                       <span

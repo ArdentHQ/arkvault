@@ -235,7 +235,7 @@ exports[`AddressTable > should render 1`] = `
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
-                      class="ring-focus relative focus:outline-hidden"
+                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -627,7 +627,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
-                      class="ring-focus relative focus:outline-hidden"
+                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1252,7 +1252,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                     </span>
                     <button
-                      class="ring-focus relative focus:outline-hidden"
+                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"

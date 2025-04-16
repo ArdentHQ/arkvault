@@ -777,7 +777,7 @@ exports[`General Settings > should disable submit button when profile is not res
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -1350,7 +1350,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -1489,7 +1489,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -1632,7 +1632,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -1771,7 +1771,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -1910,7 +1910,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -2081,7 +2081,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           </span>
                                         </div>
                                         <div
-                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                           data-testid="Input__addon-end"
                                         >
                                           <div
@@ -2204,7 +2204,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   <button
                                     aria-checked="true"
                                     aria-label="light"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -2249,7 +2249,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   <button
                                     aria-checked="false"
                                     aria-label="dark"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -3302,7 +3302,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -3920,7 +3920,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -4059,7 +4059,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -4202,7 +4202,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -4341,7 +4341,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -4480,7 +4480,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -4651,7 +4651,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           </span>
                                         </div>
                                         <div
-                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                           data-testid="Input__addon-end"
                                         >
                                           <div
@@ -4774,7 +4774,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   <button
                                     aria-checked="true"
                                     aria-label="light"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -4819,7 +4819,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   <button
                                     aria-checked="false"
                                     aria-label="dark"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -5871,7 +5871,7 @@ exports[`General Settings > should render 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -6444,7 +6444,7 @@ exports[`General Settings > should render 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -6583,7 +6583,7 @@ exports[`General Settings > should render 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -6726,7 +6726,7 @@ exports[`General Settings > should render 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -6865,7 +6865,7 @@ exports[`General Settings > should render 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -7004,7 +7004,7 @@ exports[`General Settings > should render 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -7175,7 +7175,7 @@ exports[`General Settings > should render 1`] = `
                                           </span>
                                         </div>
                                         <div
-                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                           data-testid="Input__addon-end"
                                         >
                                           <div
@@ -7298,7 +7298,7 @@ exports[`General Settings > should render 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="light"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -7343,7 +7343,7 @@ exports[`General Settings > should render 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="dark"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -8396,7 +8396,7 @@ exports[`General Settings > should update profile 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -8969,7 +8969,7 @@ exports[`General Settings > should update profile 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -9108,7 +9108,7 @@ exports[`General Settings > should update profile 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -9251,7 +9251,7 @@ exports[`General Settings > should update profile 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -9390,7 +9390,7 @@ exports[`General Settings > should update profile 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -9529,7 +9529,7 @@ exports[`General Settings > should update profile 1`] = `
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -9700,7 +9700,7 @@ exports[`General Settings > should update profile 1`] = `
                                           </span>
                                         </div>
                                         <div
-                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                           data-testid="Input__addon-end"
                                         >
                                           <div
@@ -9823,7 +9823,7 @@ exports[`General Settings > should update profile 1`] = `
                                   <button
                                     aria-checked="true"
                                     aria-label="light"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -9868,7 +9868,7 @@ exports[`General Settings > should update profile 1`] = `
                                   <button
                                     aria-checked="false"
                                     aria-label="dark"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -10921,7 +10921,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -11494,7 +11494,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -11633,7 +11633,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -11776,7 +11776,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -11915,7 +11915,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -12054,7 +12054,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -12225,7 +12225,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </span>
                                         </div>
                                         <div
-                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                           data-testid="Input__addon-end"
                                         >
                                           <div
@@ -12348,7 +12348,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   <button
                                     aria-checked="true"
                                     aria-label="light"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -12393,7 +12393,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   <button
                                     aria-checked="false"
                                     aria-label="dark"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -13445,7 +13445,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -13981,7 +13981,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 />
                               </div>
                               <div
-                                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                                 data-testid="Input__addon-end"
                               >
                                 <span
@@ -14114,7 +14114,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -14253,7 +14253,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -14396,7 +14396,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -14535,7 +14535,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -14674,7 +14674,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         </span>
                                       </div>
                                       <div
-                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                         data-testid="Input__addon-end"
                                       >
                                         <div
@@ -14845,7 +14845,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           </span>
                                         </div>
                                         <div
-                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                                           data-testid="Input__addon-end"
                                         >
                                           <div
@@ -14968,7 +14968,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   <button
                                     aria-checked="true"
                                     aria-label="light"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"
@@ -15013,7 +15013,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   <button
                                     aria-checked="false"
                                     aria-label="dark"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer h-11 rounded"
                                     data-testid="ButtonGroupOption"
                                     role="radio"
                                     type="button"

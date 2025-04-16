@@ -9,7 +9,7 @@ exports[`SelectAddress > should render disabled 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -35,7 +35,7 @@ exports[`SelectAddress > should render disabled 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
@@ -92,7 +92,7 @@ exports[`SelectAddress > should render empty 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -117,7 +117,7 @@ exports[`SelectAddress > should render empty 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
@@ -174,7 +174,7 @@ exports[`SelectAddress > should render invalid 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14 right-24"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14 right-24"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -200,14 +200,14 @@ exports[`SelectAddress > should render invalid 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
         data-testid="Input__addon-end"
       >
         <span
           data-testid="Input__error"
         >
           <div
-            class="text-theme-danger-500"
+            class="text-theme-danger-500 pr-3"
           >
             <div
               style="height: 20px; width: 20px;"
@@ -301,7 +301,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -344,7 +344,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
@@ -401,7 +401,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
+      class="absolute inset-y-0 flex items-center border border-transparent right-4 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

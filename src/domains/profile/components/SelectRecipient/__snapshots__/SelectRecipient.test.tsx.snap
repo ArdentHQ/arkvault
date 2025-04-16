@@ -70,7 +70,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                   />
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                   data-testid="Input__addon-end"
                 >
                   <div
@@ -199,7 +199,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                   />
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                   data-testid="Input__addon-end"
                 >
                   <div
@@ -288,7 +288,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
             />
           </div>
           <div
-            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
             data-testid="Input__addon-end"
           >
             <span
@@ -379,14 +379,14 @@ exports[`SelectRecipient > should render invalid 1`] = `
                   />
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                   data-testid="Input__addon-end"
                 >
                   <span
                     data-testid="Input__error"
                   >
                     <div
-                      class="text-theme-danger-500"
+                      class="text-theme-danger-500 pr-3"
                     >
                       <div
                         style="height: 20px; width: 20px;"
@@ -563,7 +563,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                   />
                 </div>
                 <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                   data-testid="Input__addon-end"
                 >
                   <div

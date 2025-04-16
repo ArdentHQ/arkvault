@@ -891,7 +891,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex items-center gap-2"
                       >
                         <button
-                          class="ring-focus relative focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="ring-focus relative focus:outline-hidden cursor-pointer space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -930,7 +930,7 @@ exports[`Dashboard > should render 1`] = `
                           </span>
                         </button>
                         <button
-                          class="ring-focus relative focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="ring-focus relative focus:outline-hidden cursor-pointer space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -1824,7 +1824,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -1901,7 +1901,7 @@ exports[`Dashboard > should render 1`] = `
                                       </div>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -1985,7 +1985,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2067,7 +2067,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2278,7 +2278,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2348,7 +2348,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -2425,7 +2425,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2500,7 +2500,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2711,7 +2711,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -2781,7 +2781,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -2858,7 +2858,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -2933,7 +2933,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3144,7 +3144,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -3214,7 +3214,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -3291,7 +3291,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3366,7 +3366,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3577,7 +3577,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -3647,7 +3647,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -3724,7 +3724,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -3799,7 +3799,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4010,7 +4010,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4080,7 +4080,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -4157,7 +4157,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4232,7 +4232,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4443,7 +4443,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4513,7 +4513,7 @@ exports[`Dashboard > should render 1`] = `
                                       </span>
                                     </a>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -4590,7 +4590,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4665,7 +4665,7 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </a>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -4876,7 +4876,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -4953,7 +4953,7 @@ exports[`Dashboard > should render 1`] = `
                                       </div>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -5037,7 +5037,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5119,7 +5119,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5330,7 +5330,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -5627,7 +5627,7 @@ exports[`Dashboard > should render 1`] = `
                                     </div>
                                   </div>
                                   <button
-                                    class="ring-focus relative focus:outline-hidden"
+                                    class="ring-focus relative focus:outline-hidden cursor-pointer"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="clipboard-icon__wrapper"
                                     type="button"
@@ -5704,7 +5704,7 @@ exports[`Dashboard > should render 1`] = `
                                       </div>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden"
+                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -5788,7 +5788,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
@@ -5872,7 +5872,7 @@ exports[`Dashboard > should render 1`] = `
                                   </div>
                                 </div>
                                 <button
-                                  class="ring-focus relative focus:outline-hidden"
+                                  class="ring-focus relative focus:outline-hidden cursor-pointer"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
