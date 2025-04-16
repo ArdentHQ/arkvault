@@ -6,7 +6,7 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { Amount } from "@/app/components/Amount";

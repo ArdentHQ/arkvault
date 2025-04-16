@@ -1,5 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 
 export interface MultiPaymentRecipient {
 	address: string;

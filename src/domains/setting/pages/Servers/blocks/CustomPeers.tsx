@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
-import { Numeral } from "@ardenthq/sdk-intl";
+import { Numeral } from "@/app/lib/intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Button } from "@/app/components/Button";

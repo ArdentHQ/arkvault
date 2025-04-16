@@ -1,7 +1,7 @@
 import { Contracts, DTO, IoC } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";

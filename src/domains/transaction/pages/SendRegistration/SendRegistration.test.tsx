@@ -16,7 +16,7 @@ import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";

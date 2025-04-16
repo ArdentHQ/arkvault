@@ -7,7 +7,7 @@ import { kebabCase, upperFirst } from "@/app/lib/helpers";
 import { useMemo, useState } from "react";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { TransactionExporter } from "@/domains/transaction/components/TransactionExportModal/utils/transaction-exporter.factory";
 import { useTranslation } from "react-i18next";
 

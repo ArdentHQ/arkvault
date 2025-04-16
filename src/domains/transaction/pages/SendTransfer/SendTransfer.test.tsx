@@ -25,7 +25,7 @@ import { StepsProvider, minVersionList } from "@/app/contexts";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { FormStep } from "./FormStep";
 import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";

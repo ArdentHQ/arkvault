@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { strict as assert } from "assert";
 
 import { MultiPaymentItem, MultiPaymentRecipient } from "./confirmed-transaction.dto.contract";
