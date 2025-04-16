@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SignButton } from "./SignedTransactionRow";
 import { TableRow } from "@/app/components/Table";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Divider } from "@/app/components/Divider";
@@ -31,8 +32,10 @@ export const SignedTransactionRowMobile = ({
 }: SignedTransactionRowMobileProperties) => {
 	const { t } = useTranslation();
 	const timeStamp = transaction.timestamp();
-	console.log(wallet);
-	let canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature = false;
+	const { canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature } = useMultiSignatureStatus({
+		transaction,
+		wallet,
+	});
 
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();

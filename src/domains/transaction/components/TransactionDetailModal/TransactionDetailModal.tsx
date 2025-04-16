@@ -52,7 +52,7 @@ export const TransactionDetailContent = ({
 		"min-w-32": transaction.isVoteCombination(),
 	});
 
-	const isAwaitingSignatures = false;
+	const isAwaitingSignatures = isAwaitingMusigSignatures(transaction);
 
 	return (
 		<DetailsCondensed>
