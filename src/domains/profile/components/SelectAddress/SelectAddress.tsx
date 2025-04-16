@@ -129,7 +129,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				>
 					<span
 						className={cn(
-							"absolute inset-y-0 left-14 flex items-center border border-transparent",
+							"absolute inset-y-0 flex items-center border border-transparent",
 							showUserIcon ? "right-13" : "right-4",
 							showWalletAvatar ? "left-14" : "left-4",
 							{
