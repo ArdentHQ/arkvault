@@ -196,7 +196,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						<div
 							data-testid="Input__addon-end"
 							className={cn(
-								"divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x",
+								"divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x",
 								{
 									"absolute right-0 bottom-full mb-2": isTextArea,
 									"text-theme-danger-500": isInvalidValue,
@@ -210,7 +210,9 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 									<span data-errortext={errorMessageValue} data-testid="Input__error">
 										<Icon
 											name="CircleExclamationMark"
-											className="text-theme-danger-500"
+											className={cn("text-theme-danger-500", {
+												"pr-3": addons?.end,
+											})}
 											size="lg"
 										/>
 									</span>
@@ -222,7 +224,9 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 									data-testid="Input__valid"
 									name="CircleCheckMark"
 									size="lg"
-									className="text-theme-primary-600 pointer-events-none focus:outline-hidden"
+									className={cn("text-theme-primary-600 pointer-events-none focus:outline-hidden", {
+										"pr-3": addons?.end,
+									})}
 								/>
 							)}
 
