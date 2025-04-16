@@ -1,5 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 
 import { MultiPaymentItem, MultiPaymentRecipient } from "./confirmed-transaction.dto.contract";
 

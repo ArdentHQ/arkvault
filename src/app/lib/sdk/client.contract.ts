@@ -1,5 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 
 import { ConfirmedTransactionDataCollection, UsernameDataCollection, WalletDataCollection } from "./collections";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto.contract";

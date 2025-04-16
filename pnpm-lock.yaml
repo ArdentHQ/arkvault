@@ -14,9 +14,6 @@ importers:
       '@ardenthq/sdk':
         specifier: 2.0.0-alpha.69
         version: 2.0.0-alpha.69
-      '@ardenthq/sdk-intl':
-        specifier: 2.0.0-alpha.69
-        version: 2.0.0-alpha.69
       '@ardenthq/sdk-profiles':
         specifier: 2.0.0-alpha.69
         version: 2.0.0-alpha.69
@@ -128,6 +125,9 @@ importers:
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1

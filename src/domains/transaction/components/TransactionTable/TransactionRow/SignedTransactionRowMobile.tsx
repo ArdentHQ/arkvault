@@ -13,7 +13,7 @@ import { assertString } from "@/utils/assertions";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 

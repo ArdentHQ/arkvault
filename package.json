@@ -45,7 +45,6 @@
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@ardenthq/sdk": "2.0.0-alpha.69",
-		"@ardenthq/sdk-intl": "2.0.0-alpha.69",
 		"@ardenthq/sdk-profiles": "2.0.0-alpha.69",
 		"@arkecosystem/typescript-crypto": "0.0.4",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
@@ -83,6 +82,7 @@
 		"classnames": "^2.5.1",
 		"create-xpub": "^2.1.0",
 		"crypto-js": "^4.2.0",
+		"dayjs": "^1.11.13",
 		"deepmerge": "^4.3.1",
 		"dot-prop": "^6.0.1",
 		"downshift": "6.1.12",
@@ -212,7 +212,6 @@
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
 				"@ardenthq/sdk",
-				"@ardenthq/sdk-intl",
 				"@ardenthq/sdk-profiles",
 				"@tippyjs/react",
 				"assert",

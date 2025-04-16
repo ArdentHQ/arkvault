@@ -9,7 +9,7 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { Label } from "@/app/components/Label";

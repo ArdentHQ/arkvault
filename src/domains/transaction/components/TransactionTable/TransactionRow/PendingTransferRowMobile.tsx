@@ -8,7 +8,7 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Divider } from "@/app/components/Divider";
 
 export const PendingTransferRowMobile = ({

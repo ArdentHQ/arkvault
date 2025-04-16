@@ -1,4 +1,4 @@
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { useCallback } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";
@@ -21,6 +21,7 @@ export const useExchangeRate = ({ ticker, exchangeTicker }: Input): Output => {
 				return 0;
 			}
 
+			// @ts-expect-error
 			return env.exchangeRates().exchange(ticker, exchangeTicker, DateTime.make(), value);
 		},
 		[env, exchangeTicker, ticker],

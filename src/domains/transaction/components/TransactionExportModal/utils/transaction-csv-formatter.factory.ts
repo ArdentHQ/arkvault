@@ -1,5 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { CURRENCIES } from "@ardenthq/sdk-intl";
+import { CURRENCIES } from "@/app/lib/intl";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { buildTranslations } from "@/app/i18n/helpers";
 
