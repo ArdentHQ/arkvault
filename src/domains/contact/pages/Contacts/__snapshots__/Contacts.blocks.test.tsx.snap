@@ -132,7 +132,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
               </h1>
                
               <div
-                class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                 data-testid="header__subtitle"
               >
                 Manage your frequent Contacts.

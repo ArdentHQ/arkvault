@@ -50,7 +50,7 @@ exports[`StepHeader > should render 1`] = `
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
             data-testid="header__subtitle"
           >
             subtitle
@@ -81,7 +81,7 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
         </h1>
       </div>
       <div
-        class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+        class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
         data-testid="header__subtitle"
       >
         subtitle
@@ -141,7 +141,7 @@ exports[`StepHeader > should render with extra 1`] = `
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
             data-testid="header__subtitle"
           >
             subtitle

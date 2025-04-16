@@ -77,7 +77,7 @@ exports[`TextArea > should render as invalid 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x absolute right-0 bottom-full mb-2 text-theme-danger-500"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x absolute right-0 bottom-full mb-2 text-theme-danger-500"
         data-testid="Input__addon-end"
       >
         <span

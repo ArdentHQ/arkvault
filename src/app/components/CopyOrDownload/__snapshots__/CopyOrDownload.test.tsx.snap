@@ -19,7 +19,7 @@ exports[`CopyOrDownload > should render 1`] = `
       class="flex items-center justify-center space-x-1 sm:justify-start"
     >
       <button
-        class="ring-focus relative focus:outline-hidden"
+        class="ring-focus relative focus:outline-hidden cursor-pointer"
         data-ring-focus-margin="-m-1"
         data-testid="clipboard-icon__wrapper"
         type="button"

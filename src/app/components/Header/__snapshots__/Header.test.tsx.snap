@@ -42,7 +42,7 @@ exports[`Header > should render an header with a subtitle 1`] = `
         </h1>
       </div>
       <div
-        class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+        class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
         data-testid="header__subtitle"
       >
         Subtitle test
@@ -71,7 +71,7 @@ exports[`Header > should render an header with extra 1`] = `
         </h1>
       </div>
       <div
-        class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+        class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
         data-testid="header__subtitle"
       >
         Subtitle test
@@ -137,7 +137,7 @@ exports[`PageHeader > should render responsive (md) 1`] = `
               </h1>
                
               <div
-                class="text-theme-secondary-text flex items-center text-sm leading-5 md:text-base"
+                class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
                 data-testid="header__subtitle"
               >
                 Subtitle test

@@ -58,7 +58,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -175,7 +175,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -258,7 +258,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
         data-testid="Input__addon-end"
       >
         <span
@@ -342,14 +342,14 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
               data-testid="Input__addon-end"
             >
               <span
                 data-testid="Input__error"
               >
                 <div
-                  class="text-theme-danger-500"
+                  class="text-theme-danger-500 pr-3"
                 >
                   <div
                     style="height: 20px; width: 20px;"
@@ -469,7 +469,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
         data-testid="Input__addon-end"
       >
         <span
@@ -553,14 +553,14 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-danger-500"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
               data-testid="Input__addon-end"
             >
               <span
                 data-testid="Input__error"
               >
                 <div
-                  class="text-theme-danger-500"
+                  class="text-theme-danger-500 pr-3"
                 >
                   <div
                     style="height: 20px; width: 20px;"
@@ -713,7 +713,7 @@ exports[`SelectDropdown > should render option base 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -898,7 +898,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1083,7 +1083,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1199,7 +1199,7 @@ exports[`SelectDropdown > should render option base with default value when free
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1331,7 +1331,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1447,7 +1447,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1632,7 +1632,7 @@ exports[`SelectDropdown > should render option group 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1816,7 +1816,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2000,7 +2000,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2116,7 +2116,7 @@ exports[`SelectDropdown > should render option group with default value when fre
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2248,7 +2248,7 @@ exports[`SelectDropdown > should render option group with initial default value 
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2364,7 +2364,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2549,7 +2549,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2665,7 +2665,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2781,7 +2781,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2897,7 +2897,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center space-x-3 divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
