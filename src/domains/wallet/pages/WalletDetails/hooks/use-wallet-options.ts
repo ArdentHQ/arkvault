@@ -65,9 +65,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// 	return registrationOptions;
 	// }
 
-	const walletsWithValidatorActions = wallets.filter(
-		(w) => w.balance() > 0 && isRestoredAndSynced(w),
-	);
+	const walletsWithValidatorActions = wallets.filter((w) => w.balance() > 0 && isRestoredAndSynced(w));
 
 	if (walletsWithValidatorActions.length > 0) {
 		if (
