@@ -5,7 +5,6 @@ import { ClientService } from "./client.service";
 import { ServiceProvider } from "./coin.provider";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { FeeService } from "./fee.service";
-import { KeyPairService } from "./key-pair.service";
 import { KnownWalletService } from "./known-wallet.service";
 import { LedgerService } from "./ledger.service";
 import { manifest } from "./manifest";
@@ -34,7 +33,6 @@ export const Mainsail: Coins.CoinBundle = bundle({
 		AddressService,
 		ClientService,
 		FeeService,
-		KeyPairService,
 		KnownWalletService,
 		LedgerService,
 		MessageService,

@@ -14,7 +14,7 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#addressService = new AddressService(container);
+		this.#addressService = new AddressService();
 	}
 
 	public override id(): string {

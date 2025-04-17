@@ -1,25 +1,7 @@
-import { Application } from "@mainsail/kernel";
-import { IoC, Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/sdk";
 import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
 
-import { Contracts, Identifiers } from "@mainsail/contracts";
-import { BindingType } from "./coin.contract.js";
-
 export class AddressService {
-	readonly #app: Application;
-
-	// @TODO: Remove constructor and IoC related calls once @mainsail packages will be deprecated.
-	// Temporarily keeping it as removing `getTagged` throws an exception on page load, related to IoC container initialization:
-	// "Uncaught TypeError: Reflect.hasOwnMetadata is not a function".
-	public constructor(container: IoC.IContainer) {
-		this.#app = container.get(BindingType.Application);
-
-		this.#app.getTagged<Contracts.Crypto.AddressFactory>(
-			Identifiers.Cryptography.Identity.Address.Factory,
-			"type",
-			"wallet",
-		);
-	}
 
 	public fromMnemonic(mnemonic: string): Services.AddressDataTransferObject {
 		return {
