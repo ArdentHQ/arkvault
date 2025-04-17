@@ -2,7 +2,6 @@ import { Services } from "@/app/lib/sdk";
 import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
 
 export class AddressService {
-
 	public fromMnemonic(mnemonic: string): Services.AddressDataTransferObject {
 		return {
 			address: Address.fromPassphrase(mnemonic),
