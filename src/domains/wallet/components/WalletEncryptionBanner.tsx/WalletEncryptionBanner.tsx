@@ -23,9 +23,9 @@ export const WalletEncryptionBanner = ({
 
 	return (
 		<div
-			className={cn("flex w-full flex-col overflow-hidden rounded-xl border", {
+			className={cn("flex w-full flex-col rounded-xl border", {
 				"border-theme-secondary-300 dark:border-theme-dark-700": !toggleChecked,
-				"border-theme-warning-300 dark:border-theme-warning-700": toggleChecked,
+				"overflow-hidden border-theme-warning-300 dark:border-theme-warning-700": toggleChecked,
 			})}
 		>
 			<div className="flex flex-row justify-between px-6 py-4">
