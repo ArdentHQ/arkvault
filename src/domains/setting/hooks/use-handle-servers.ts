@@ -33,17 +33,9 @@ const useHandleServers = ({
 }) => {
 	const [networkMismatch, setNetworkMismatch] = useState(false);
 	const [fetchingDetails, setFetchingDetails] = useState(false);
-	// const [fetchingErrors, setFetchingErrors] = useState<Record<Endpoints, boolean>>(() => ({
-	// 	[Endpoints.PublicApi]: false,
-	// 	[Endpoints.TransactionApi]: false,
-	// 	[Endpoints.EvmApi]: false,
-	// }));
-	const [fetchingErrors, setFetchingErrors] = useState(false);
+	const [fetchingError, setFetchingError] = useState(false);
 	const [serverHeight, setServerHeight] = useState<number | undefined>(undefined);
 
-	// const setFetchingError = (endpoint: Endpoints, value: boolean) => {
-	// 	setFetchingErrors({...fetchingErrors, [endpoint]: value})
-	// }
 
 	const validatePublicApi = useCallback(async () => {
 		if (await urlBelongsToNetwork(profile, publicApiEndpoint, network!)) {
@@ -73,10 +65,8 @@ const useHandleServers = ({
 	// }, [transactionApiEndpoint]);
 
 	useEffect(() => {
-		console.log("Effect is running", publicApiEndpoint)
-		// setFetchingError(Endpoints.PublicApi, false);
-		// setFetchingErrors(false)
-		setFetchingErrors(false);
+		console.log("useEffect in progress");
+		setFetchingError(false);
 
 		setServerHeight(undefined);
 
@@ -99,9 +89,9 @@ const useHandleServers = ({
 		}
 
 		void validate();
-	}, [publicApiEndpoint, network, ]);
+	}, [publicApiEndpoint, network, addressIsValid]);
 
-	return { fetchingDetails, fetchingError: false, networkMismatch, serverHeight, serverType: undefined };
+	return { fetchingDetails, fetchingError, networkMismatch, serverHeight, };
 };
 
 export { useHandleServers };
