@@ -6,6 +6,7 @@ import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Link } from "@/app/components/Link";
 import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
+import { DateTime } from "@/app/lib/intl/datetime";
 
 export const TransactionDetails = ({
 	transaction: initialTransaction,
@@ -41,7 +42,7 @@ export const TransactionDetails = ({
 		void refreshTransaction();
 	}, [isConfirmed, transaction, transactionWallet]);
 
-	const timestamp = transaction.timestamp();
+	const timestamp = DateTime.make(transaction.timestamp(), "en", Intl.DateTimeFormat().resolvedOptions().timeZone).format(format);
 
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
@@ -54,7 +55,7 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
 					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-						{timestamp.format(format)}
+						{timestamp}
 					</div>
 				</div>
 
