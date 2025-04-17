@@ -16,14 +16,14 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 	const syncStatus = useCallback(async () => {
 		setServerStatus(undefined);
 
-		const isOnline = await pingServerAddress(network.address, network.serverType);
+		const isOnline = await pingServerAddress(network.publicApiEndpoint, "full");
 
 		setServerStatus(isOnline);
 
-		if (isOnline && network.serverType === "full") {
+		if (isOnline) {
 			updateNetwork(network, {
 				...network,
-				height: await getServerHeight(network.address),
+				height: await getServerHeight(network.publicApiEndpoint),
 			});
 		}
 
@@ -34,7 +34,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 			updatedServerStatus[network.network.id()] = {};
 		}
 
-		updatedServerStatus[network.network.id()][network.address] = isOnline;
+		updatedServerStatus[network.network.id()][network.publicApiEndpoint] = isOnline;
 
 		setConfiguration(profile.id(), {
 			serverStatus: updatedServerStatus,

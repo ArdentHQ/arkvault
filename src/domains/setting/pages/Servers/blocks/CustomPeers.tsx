@@ -27,7 +27,6 @@ interface PeerRowProperties {
 	checked: boolean;
 	height: number | undefined;
 	serverStatus?: boolean;
-	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
 	onSelectOption: ({ value }: DropdownOption) => void;
 	dropdownOptions: DropdownOption[];
@@ -39,7 +38,6 @@ const PeerRow = ({
 	checked,
 	height,
 	serverStatus,
-	serverType,
 	onToggle,
 	onSelectOption,
 	dropdownOptions,
@@ -95,12 +93,12 @@ const PeerRow = ({
 
 			<TableCell innerClassName={rowColor}>
 				<div className="flex h-11 items-center">
-					<Tooltip content={serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}>
+					<Tooltip content={t("COMMON.PEER")}>
 						<div className="flex cursor-pointer justify-center">
 							<Icon
 								className="text-theme-secondary-700"
 								size="lg"
-								name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
+								name="ServerPeer"
 							/>
 						</div>
 					</Tooltip>
@@ -186,7 +184,7 @@ const CustomPeersPeer: React.VFC<{
 	// TODO: break it down into smaller components.
 }> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
-	const { name, serverType, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled } = normalizedNetwork;
+	const { name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled } = normalizedNetwork;
 
 	const { t } = useTranslation();
 
@@ -314,9 +312,9 @@ const CustomPeersPeer: React.VFC<{
 								<Icon
 									className="text-theme-secondary-700"
 									size="lg"
-									name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
+									name="ServerPeer"
 								/>
-								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
+								<div>{t("COMMON.PEER")}</div>
 							</div>
 						</MobileTableElementRow>
 
@@ -369,7 +367,6 @@ const CustomPeersPeer: React.VFC<{
 			checked={enabled}
 			height={height}
 			serverStatus={serverStatus}
-			serverType={serverType}
 			onToggle={onToggle}
 			onSelectOption={handleSelectOption}
 			dropdownOptions={dropdownOptions}

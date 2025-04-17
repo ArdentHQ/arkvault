@@ -106,7 +106,7 @@ export const ServersSettings = () => {
 				i18nKey="SETTINGS.SERVERS.ADD_NEW_SERVER.SUCCESS_MESSAGE"
 				values={{
 					networkName: networkDisplayName(network.network),
-					networkType: network.serverType === "musig" ? "multisig server" : "network peer",
+					networkType: "network peer",
 					serverName: network.name,
 				}}
 				components={{ strong: <strong /> }}

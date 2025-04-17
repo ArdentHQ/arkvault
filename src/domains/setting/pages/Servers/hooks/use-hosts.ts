@@ -2,13 +2,13 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: NormalizedNetwork) => {
-	const { network, name, address, serverType } = normalizedNetwork;
+	const { network, name, publicApiEndpoint } = normalizedNetwork;
 	const networkId = network.id();
 	const parts = networkId.split(".");
 	const hosts = profile.hosts().all()[parts[0]][parts[1]] || [];
 
 	const index = hosts.findIndex(
-		(item) => item.name === name && item.host.host === address && item.host.type === serverType,
+		(item) => item.name === name && item.host.host === publicApiEndpoint
 	);
 
 	return [networkId, index];
@@ -16,14 +16,14 @@ const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: Normal
 
 const addNetwork = (
 	profile: Contracts.IProfile,
-	{ network, name, serverType, address, enabled, height }: NormalizedNetwork,
+	{ network, name, publicApiEndpoint, enabled, height }: NormalizedNetwork,
 ) => {
 	profile.hosts().push({
 		host: {
 			enabled: enabled,
 			height: height,
-			host: address,
-			type: serverType,
+			host: publicApiEndpoint,
+			type: "full",
 		},
 		name: name,
 		network: network.id(),
