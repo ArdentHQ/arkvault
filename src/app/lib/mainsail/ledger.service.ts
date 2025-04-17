@@ -6,11 +6,11 @@ import { Contracts, IoC, Services } from "@ardenthq/sdk";
 // which affects ledger wallet import & tx signing.
 // See discussion https://github.com/ArdentHQ/arkvault/pull/1166#discussion_r2046407360
 import { BIP44, HDKey } from "@/app/lib/crypto";
-import { Exceptions } from "@mainsail/contracts";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
+import { Exceptions } from "@/app/lib/sdk";
 
 export class LedgerService extends Services.AbstractLedgerService {
 	readonly #addressService!: AddressService;
@@ -50,7 +50,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#addressService = new AddressService(container);
+		this.#addressService = new AddressService();
 		this.#dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
 	}
 

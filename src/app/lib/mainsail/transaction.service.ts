@@ -39,7 +39,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		super(container);
 
 		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
-		this.#addressService = new AddressService(container);
+		this.#addressService = new AddressService();
 
 		this.#configCrypto = {
 			crypto: container.get(BindingType.Crypto),
