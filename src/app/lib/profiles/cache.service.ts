@@ -1,5 +1,5 @@
 import { Hash } from "@ardenthq/sdk-cryptography";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import NodeCache from "node-cache";
 
 import { ICache } from "./contracts.js";

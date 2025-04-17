@@ -1,4 +1,4 @@
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 
 type CacheStore = Record<string, { expires_at: DateTime; value: unknown }>;
 

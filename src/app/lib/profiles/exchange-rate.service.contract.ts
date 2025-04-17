@@ -1,5 +1,5 @@
-import { NumberLike } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { NumberLike } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 
 import { IProfile } from "./contracts.js";
 

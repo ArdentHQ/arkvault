@@ -1,8 +1,8 @@
 /* istanbul ignore file */
 
 import { Contracts, DTO } from "@ardenthq/sdk";
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 
 import { MultiPaymentItem } from "@ardenthq/sdk/source/confirmed-transaction.dto.contract.js";
 import { container } from "./container.js";

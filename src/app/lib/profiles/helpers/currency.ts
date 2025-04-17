@@ -1,5 +1,5 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { CURRENCIES, Money, Numeral } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@/app/lib/helpers";
+import { CURRENCIES, Money, Numeral } from "@/app/lib/intl";
 
 interface CurrencyFormatOptions {
 	locale?: string;

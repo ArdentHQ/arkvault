@@ -1,4 +1,4 @@
-import { get, has, set, unset } from "@ardenthq/sdk-helpers";
+import { get, has, set, unset } from "@/app/lib/helpers";
 
 export class AttributeBag<T> {
 	/**

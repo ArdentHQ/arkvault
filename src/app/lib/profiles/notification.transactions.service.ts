@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import { sortByDesc } from "@ardenthq/sdk-helpers";
+import { sortByDesc } from "@/app/lib/helpers";
 
 import { INotificationTypes, IProfile, IProfileTransactionNotificationService, ProfileSetting } from "./contracts.js";
 import { INotification, INotificationRepository } from "./notification.repository.contract.js";

@@ -1,6 +1,6 @@
 import { Coins, Contracts, Exceptions, Networks, Services } from "@ardenthq/sdk";
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";

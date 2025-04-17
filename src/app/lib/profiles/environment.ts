@@ -1,5 +1,5 @@
 import { Coins, Networks } from "@ardenthq/sdk";
-import { sortBy } from "@ardenthq/sdk-helpers";
+import { sortBy } from "@/app/lib/helpers";
 import Joi from "joi";
 
 import { container } from "./container.js";

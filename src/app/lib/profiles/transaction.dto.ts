@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import { Coins, Contracts } from "@ardenthq/sdk";
-import { DateTime } from "@ardenthq/sdk-intl";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@/app/lib/intl";
+import { BigNumber } from "@/app/lib/helpers";
 
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
 import { container } from "./container.js";

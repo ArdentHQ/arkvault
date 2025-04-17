@@ -1,6 +1,6 @@
 import { Coins } from "@ardenthq/sdk";
 import { UUID } from "@ardenthq/sdk-cryptography";
-import { BigNumber } from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@/app/lib/helpers";
 import { describe } from "@ardenthq/sdk-test";
 
 import { identity } from "../test/fixtures/identity";

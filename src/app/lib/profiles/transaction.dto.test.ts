@@ -1,5 +1,5 @@
-import { BigNumber } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 import { describe } from "@ardenthq/sdk-test";
 
 import { identity } from "../test/fixtures/identity";
