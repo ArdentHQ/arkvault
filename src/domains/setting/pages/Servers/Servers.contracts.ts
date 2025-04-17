@@ -29,7 +29,6 @@ interface CustomNetwork {
 	transactionApiEndpoint: string;
 	name: string;
 	network?: string;
-	serverType?: NetworkHostType;
 }
 interface UserCustomNetwork {
 	address: string;

@@ -1,18 +1,18 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Networks } from "@ardenthq/sdk";
 import { useForm } from "react-hook-form";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { CustomNetwork, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useHandleServers } from "@/domains/setting/hooks/use-handle-servers";
 import { Button } from "@/app/components/Button";
-import { Alert } from "@/app/components/Alert";
 import { useActiveProfile, useNetworkOptions, useValidation } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { Alert } from "@/app/components/Alert";
+import { Icon } from "@/app/components/Icon";
 
 const ServerFormModal: React.VFC<{
 	onClose: () => void;
@@ -40,16 +40,13 @@ const ServerFormModal: React.VFC<{
 		mode: "onChange",
 	});
 
-	const { formState, setValue, register, watch } = form;
-	const { isValid } = formState;
-	const { publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, network } = watch();
+	const { formState, setValue, register, watch, getValues, trigger } = form;
+	const { isValid, errors } = formState;
 
-	const { errors } = formState;
+	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch()
 
-	const publicApiEndpointIsValid = errors.publicApiEndpoint === undefined;
-
-	const { fetchingDetails, networkMismatch, serverHeight, fetchingError } = useHandleServers({
-		addressIsValid: publicApiEndpointIsValid,
+	const { fetchingDetails, networkMismatch, serverHeight, isInvalidEvmApi, isInvalidTransactionApi } = useHandleServers({
+		errors,
 		evmApiEndpoint,
 		network: networks.find((item) => item.id() === network),
 		profile,
@@ -57,15 +54,15 @@ const ServerFormModal: React.VFC<{
 		transactionApiEndpoint,
 	});
 
-	useEffect(() => {
+	function updateServerName() {
 		if (!network || nameWasManuallySet) {
 			return;
 		}
 
+		const networkObject = networkById(network)!;
+
 		const getName = (counter: number) =>
 			`${networkDisplayName(networkObject)} "Peer" #${counter}`;
-
-		const networkObject = networkById(network)!;
 
 		const filteredNetworks = customNetworks.filter(
 			(customNetwork) =>
@@ -86,19 +83,27 @@ const ServerFormModal: React.VFC<{
 			shouldDirty: true,
 			shouldValidate: true,
 		});
-	}, [network, customNetworks, nameWasManuallySet]);
+	}
+
+	useEffect(() => {
+		if (network) {
+			updateServerName();
+			void trigger('network');
+		}
+	}, [network, nameWasManuallySet]);
 
 	const formIsValid = useMemo(() => {
 		if (fetchingDetails) {
 			return false;
 		}
 
-		if (networkMismatch) {
+		if (networkMismatch || isInvalidEvmApi || isInvalidTransactionApi) {
 			return false;
 		}
 
 		return isValid;
-	}, [isValid, isValid, fetchingDetails, networkMismatch]);
+	}, [fetchingDetails, networkMismatch, isInvalidEvmApi, isInvalidTransactionApi, isValid]);
+	console.log(formIsValid, formState, getValues())
 
 	const handleSubmit = (values: CustomNetwork) => {
 		if (networkToUpdate) {
@@ -152,10 +157,11 @@ const ServerFormModal: React.VFC<{
 							selectedNetwork={networks.find((networkOption) => networkOption.id() === network)}
 							placeholder={t("COMMON.INPUT_NETWORK.PLACEHOLDER")}
 							onChange={(selectedNetwork) => {
-								setValue("network", selectedNetwork?.id(), {
-									shouldDirty: true,
-									shouldValidate: true,
-								});
+								if (selectedNetwork) {
+									setValue("network", selectedNetwork.id(), {
+										shouldDirty: true,
+									});
+								}
 							}}
 						/>
 					</div>
@@ -173,6 +179,7 @@ const ServerFormModal: React.VFC<{
 				<FormField name="publicApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.PUBLIC_API_ENDPOINT")} />
 					<InputDefault
+						name="publicApiEndpoint"
 						data-testid="ServerFormModal--publicApiEndpoint"
 						ref={register(server.address(customNetworks, networkToUpdate))}
 					/>
@@ -182,16 +189,42 @@ const ServerFormModal: React.VFC<{
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.TRANSACTION_API_ENDPOINT")} />
 					<InputDefault
 						data-testid="ServerFormModal--transactionApiEndpoint"
+						name="transactionApiEndpoint"
 						ref={register(server.address(customNetworks, networkToUpdate))}
 					/>
 				</FormField>
 
-				<FormField name="transactionApiEndpoint">
+				<FormField name="evmApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.EVM_API_ENDPOINT")} />
 					<InputDefault
+						name="evmApiEndpoint"
 						data-testid="ServerFormModal--evmApiEndpoint"
 						ref={register(server.address(customNetworks, networkToUpdate))}
 					/>
+				</FormField>
+
+				<FormField name="result">
+					{fetchingDetails && (
+						<div data-testid="Servertype-fetching" className="flex items-center space-x-2">
+							<Icon className="text-theme-secondary-300 dark:text-theme-secondary-800" name="Clock" />
+
+							<span className="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+								{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_DETAILS")}
+							</span>
+						</div>
+					)}
+
+					{(isInvalidTransactionApi || isInvalidEvmApi) && !networkMismatch && (
+						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
+							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_ERROR")}
+						</Alert>
+					)}
+
+					{networkMismatch && (
+						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
+							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_MISMATCH_ERROR")}
+						</Alert>
+					)}
 				</FormField>
 
 				<FormButtons>
