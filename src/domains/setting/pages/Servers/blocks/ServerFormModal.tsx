@@ -103,7 +103,6 @@ const ServerFormModal: React.VFC<{
 
 		return isValid;
 	}, [fetchingDetails, networkMismatch, isInvalidEvmApi, isInvalidTransactionApi, isValid]);
-	console.log(formIsValid, formState, getValues())
 
 	const handleSubmit = (values: CustomNetwork) => {
 		if (networkToUpdate) {

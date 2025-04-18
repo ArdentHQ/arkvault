@@ -2,13 +2,16 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: NormalizedNetwork) => {
-	const { network, name, publicApiEndpoint } = normalizedNetwork;
+	const { network, name, publicApiEndpoint, evmApiEndpoint, transactionApiEndpoint } = normalizedNetwork;
 	const networkId = network.id();
 	const parts = networkId.split(".");
 	const hosts = profile.hosts().all()[parts[0]][parts[1]] || [];
 
 	const index = hosts.findIndex(
-		(item) => item.name === name && item.host.host === publicApiEndpoint
+		(item) => item.name === name
+			&& item.publicHost.host === publicApiEndpoint
+			&& item.evmHost.host === evmApiEndpoint
+			&& item.transactionHost.host === transactionApiEndpoint
 	);
 
 	return [networkId, index];
@@ -16,17 +19,27 @@ const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: Normal
 
 const addNetwork = (
 	profile: Contracts.IProfile,
-	{ network, name, publicApiEndpoint, enabled, height }: NormalizedNetwork,
+	{ network, name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, enabled, height }: NormalizedNetwork,
 ) => {
 	profile.hosts().push({
-		host: {
-			enabled: enabled,
-			height: height,
-			host: publicApiEndpoint,
-			type: "full",
+		enabled,
+		evmHost: {
+			host: evmApiEndpoint,
+			type: "evm",
 		},
 		name: name,
 		network: network.id(),
+		publicHost: {
+			height,
+			host: publicApiEndpoint,
+			type: "full",
+		},
+		height: height,
+		transactionHost: {
+			host: transactionApiEndpoint,
+			type: "tx",
+		},
+		type: "full"
 	});
 };
 
