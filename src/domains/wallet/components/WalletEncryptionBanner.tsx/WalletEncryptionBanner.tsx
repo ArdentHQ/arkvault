@@ -23,9 +23,9 @@ export const WalletEncryptionBanner = ({
 
 	return (
 		<div
-			className={cn("flex w-full flex-col overflow-hidden rounded-xl border", {
+			className={cn("flex w-full flex-col rounded-xl border", {
 				"border-theme-secondary-300 dark:border-theme-dark-700": !toggleChecked,
-				"border-theme-warning-300 dark:border-theme-warning-700": toggleChecked,
+				"overflow-hidden border-theme-warning-300 dark:border-theme-warning-700": toggleChecked,
 			})}
 		>
 			<div className="flex flex-row justify-between px-6 py-4">
@@ -41,12 +41,12 @@ export const WalletEncryptionBanner = ({
 				<Tooltip
 					className="-ml-3 mb-1"
 					content={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.NOT_AVAILABLE")}
-					disabled={importOption && !importOption?.canBeEncrypted}
+					disabled={importOption && importOption.canBeEncrypted}
 				>
 					<span data-testid="WalletEncryptionBanner__encryption">
 						<Toggle
 							data-testid="WalletEncryptionBanner__encryption-toggle"
-							disabled={importOption && !importOption?.canBeEncrypted}
+							disabled={importOption && !importOption.canBeEncrypted}
 							checked={toggleChecked}
 							onChange={toggleOnChange}
 						/>
