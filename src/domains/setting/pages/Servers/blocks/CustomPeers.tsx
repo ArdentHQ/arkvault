@@ -23,7 +23,9 @@ import { TruncatedWithTooltip } from "@/app/components/TruncatedWithTooltip";
 
 interface PeerRowProperties {
 	name: string;
-	address: string;
+	publicApiEndpoint: string;
+	evmApiEndpoint: string;
+	transactionApiEndpoint: string;
 	checked: boolean;
 	height: number | undefined;
 	serverStatus?: boolean;
@@ -34,7 +36,9 @@ interface PeerRowProperties {
 
 const PeerRow = ({
 	name,
-	address,
+	publicApiEndpoint,
+	transactionApiEndpoint,
+	evmApiEndpoint,
 	checked,
 	height,
 	serverStatus,
@@ -68,7 +72,7 @@ const PeerRow = ({
 
 						<TruncatedWithTooltip
 							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden"
-							text={address}
+							text={publicApiEndpoint}
 						/>
 					</div>
 				</div>
@@ -76,9 +80,15 @@ const PeerRow = ({
 
 			<TableCell className="hidden md-lg:table-cell" innerClassName={rowColor}>
 				<TruncatedWithTooltip
-					text={address}
+					text={publicApiEndpoint}
 					className="cursor-pointer text-sm font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-72 lg:max-w-44 xl:max-w-72"
 				/>
+				{/*<div>*/}
+				{/*	<span className="text-blue-600 font-medium">Tx:</span> 194.168.4.67:8002*/}
+				{/*</div>*/}
+				{/*<div>*/}
+				{/*	<span className="text-blue-600 font-medium">EVM:</span> 194.168.4.67:8003*/}
+				{/*</div>*/}
 			</TableCell>
 
 			<TableCell innerClassName={rowColor}>
@@ -88,20 +98,6 @@ const PeerRow = ({
 					) : (
 						<span className="text-sm font-semibold">{formattedHeight}</span>
 					)}
-				</div>
-			</TableCell>
-
-			<TableCell innerClassName={rowColor}>
-				<div className="flex h-11 items-center">
-					<Tooltip content={t("COMMON.PEER")}>
-						<div className="flex cursor-pointer justify-center">
-							<Icon
-								className="text-theme-secondary-700"
-								size="lg"
-								name="ServerPeer"
-							/>
-						</div>
-					</Tooltip>
 				</div>
 			</TableCell>
 
@@ -360,18 +356,24 @@ const CustomPeersPeer: React.VFC<{
 		);
 	}
 
-	return (
-		<PeerRow
-			name={name}
-			address={publicApiEndpoint}
-			checked={enabled}
-			height={height}
-			serverStatus={serverStatus}
-			onToggle={onToggle}
-			onSelectOption={handleSelectOption}
-			dropdownOptions={dropdownOptions}
-		/>
-	);
+	const render = () => {
+		return Array.from({length: 3}, (_, index) => (
+			<PeerRow
+				name={name}
+				publicApiEndpoint={publicApiEndpoint}
+				evmApiEndpoint={evmApiEndpoint}
+				transactionApiEndpoint={transactionApiEndpoint}
+				checked={index === 0}
+				height={height}
+				serverStatus={serverStatus}
+				onToggle={onToggle}
+				onSelectOption={handleSelectOption}
+				dropdownOptions={dropdownOptions}
+			/>
+		))
+	}
+
+	return render();
 };
 
 const CustomPeersTableFooter = ({
@@ -434,12 +436,6 @@ const CustomPeers: React.VFC<{
 		},
 		{
 			Header: t("COMMON.HEIGHT"),
-			disableSortBy: true,
-			headerClassName: "no-border",
-			minimumWidth: true,
-		},
-		{
-			Header: t("COMMON.TYPE"),
 			disableSortBy: true,
 			headerClassName: "no-border",
 			minimumWidth: true,
