@@ -28,10 +28,9 @@ export class ProfileSerialiser implements IProfileSerialiser {
 			id: this.#profile.id(),
 			networks: this.#profile.networks().all(),
 			notifications: this.#profile.notifications().all(),
-			plugins: this.#profile.plugins().all(),
+			pendingMusigWallets: this.#profile.pendingMusigWallets().toObject(),
 			settings: this.#profile.settings().all(),
 			wallets: this.#profile.wallets().toObject(options),
-			pendingMusigWallets: this.#profile.pendingMusigWallets().toObject(),
 		};
 	}
 }

@@ -65,6 +65,9 @@ importers:
       assert:
         specifier: ^2.1.0
         version: 2.1.0
+      bcryptjs:
+        specifier: ^3.0.2
+        version: 3.0.2
       big.js:
         specifier: ^6.2.2
         version: 6.2.2
@@ -86,6 +89,9 @@ importers:
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
+      dinero.js:
+        specifier: ^1.9.1
+        version: 1.9.1
       dot-prop:
         specifier: ^6.0.1
         version: 6.0.1
@@ -119,12 +125,18 @@ importers:
       locale-currency:
         specifier: ^0.0.2
         version: 0.0.2
+      localforage:
+        specifier: ^1.10.0
+        version: 1.10.0
       multiformats:
         specifier: ^13.1.3
         version: 13.2.0
       node-dotify:
         specifier: ^1.1.0
         version: 1.1.0
+      p-queue:
+        specifier: ^8.1.0
+        version: 8.1.0
       p-retry:
         specifier: ^6.2.0
         version: 6.2.0
@@ -209,6 +221,9 @@ importers:
       rollup-plugin-polyfill-node:
         specifier: ^0.13.0
         version: 0.13.0(rollup@4.19.0)
+      seedrandom:
+        specifier: ^3.0.5
+        version: 3.0.5
       semver:
         specifier: ^7.6.2
         version: 7.6.3
@@ -227,6 +242,9 @@ importers:
       tippy.js:
         specifier: ^6.3.7
         version: 6.3.7
+      type-fest:
+        specifier: ^4.40.0
+        version: 4.40.0
       usehooks-ts:
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
@@ -3021,6 +3039,10 @@ packages:
 
   bcryptjs@2.4.3:
     resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
+
+  bcryptjs@3.0.2:
+    resolution: {integrity: sha512-k38b3XOZKv60C4E2hVsXTolJWfkGRMbILBIe2IBITXciy5bOsTKot5kDrf3ZfufQtQOUN5mXceUEpU1rTl9Uog==}
+    hasBin: true
 
   bent@7.3.12:
     resolution: {integrity: sha512-T3yrKnVGB63zRuoco/7Ybl7BwwGZR0lceoVG5XmQyMIH9s19SV5m+a8qam4if0zQuAmOQTyPTPmsQBdAorGK3w==}
@@ -5839,6 +5861,10 @@ packages:
     resolution: {integrity: sha512-vRpMXmIkYF2/1hLBKisKeVYJZ8S2tZ0zEAmIJgdVKP2nq0nh4qCdf8bgw+ZgKrkh71AOCaqzwbJJk1WtdcF3VA==}
     engines: {node: '>=12'}
 
+  p-queue@8.1.0:
+    resolution: {integrity: sha512-mxLDbbGIBEXTJL0zEx8JIylaj3xQ7Z/7eEVjcF9fJX4DBiH9oqe+oahYnlKKxm0Ci9TlWTyhSHgygxMxjIB2jw==}
+    engines: {node: '>=18'}
+
   p-retry@5.1.2:
     resolution: {integrity: sha512-couX95waDu98NfNZV+i/iLt+fdVxmI7CbrrdC2uDWfPdUAApyxT4wmDlyOtR5KtTDmkDO0zDScDjDou9YHhd9g==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -5850,6 +5876,10 @@ packages:
   p-timeout@5.1.0:
     resolution: {integrity: sha512-auFDyzzzGZZZdHz3BtET9VEz0SE/uMEAx7uWfGPucfzEwwe/xH0iVeZibQmANYE/hp9T2+UUZT5m+BKyrDp3Ew==}
     engines: {node: '>=12'}
+
+  p-timeout@6.1.4:
+    resolution: {integrity: sha512-MyIV3ZA/PmyBN/ud8vV9XzwTrNtR4jFrObymZYnZqMmW0zA8Z17vnT0rBgFE/TlohB+YCHqXMgZzb3Csp49vqg==}
+    engines: {node: '>=14.16'}
 
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
@@ -7340,8 +7370,8 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
 
-  type-fest@4.23.0:
-    resolution: {integrity: sha512-ZiBujro2ohr5+Z/hZWHESLz3g08BBdrdLMieYFULJO+tWc437sn8kQsWLJoZErY8alNhxre9K4p3GURAG11n+w==}
+  type-fest@4.40.0:
+    resolution: {integrity: sha512-ABHZ2/tS2JkvH1PEjxFDTUWC8dB5OsIGZP4IFLhR293GqT5Y5qB1WwL2kMPYhQW9DVgVD8Hd7I8gjwPIf5GFkw==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.0:
@@ -9106,7 +9136,7 @@ snapshots:
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       tmp: 0.2.3
-      type-fest: 4.23.0
+      type-fest: 4.40.0
       util-arity: 1.1.0
       xmlbuilder: 15.1.1
       yaml: 2.3.1
@@ -11046,6 +11076,8 @@ snapshots:
   base64-js@1.5.1: {}
 
   bcryptjs@2.4.3: {}
+
+  bcryptjs@3.0.2: {}
 
   bent@7.3.12:
     dependencies:
@@ -14121,7 +14153,7 @@ snapshots:
       outvariant: 1.4.3
       path-to-regexp: 6.2.1
       strict-event-emitter: 0.5.1
-      type-fest: 4.23.0
+      type-fest: 4.40.0
       yargs: 17.7.2
     optionalDependencies:
       typescript: 5.5.4
@@ -14392,6 +14424,11 @@ snapshots:
       eventemitter3: 5.0.1
       p-timeout: 5.1.0
 
+  p-queue@8.1.0:
+    dependencies:
+      eventemitter3: 5.0.1
+      p-timeout: 6.1.4
+
   p-retry@5.1.2:
     dependencies:
       '@types/retry': 0.12.1
@@ -14404,6 +14441,8 @@ snapshots:
       retry: 0.13.1
 
   p-timeout@5.1.0: {}
+
+  p-timeout@6.1.4: {}
 
   p-try@2.2.0: {}
 
@@ -16087,7 +16126,7 @@ snapshots:
 
   type-fest@2.19.0: {}
 
-  type-fest@4.23.0: {}
+  type-fest@4.40.0: {}
 
   typed-array-buffer@1.0.0:
     dependencies:

@@ -1,4 +1,4 @@
-import { BIP38 } from "@ardenthq/sdk-cryptography";
+import { BIP38 } from "@/app/lib/crypto";
 import { Identifiers } from "./container.models";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
 import { bootContainer } from "../test/mocking";

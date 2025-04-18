@@ -1,4 +1,4 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@/app/lib/crypto";
 import { describe } from "@ardenthq/sdk-test";
 
 import { identity } from "../test/fixtures/identity";

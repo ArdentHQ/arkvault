@@ -1,4 +1,4 @@
-import { BIP38, PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { BIP38, PBKDF2 } from "@/app/lib/crypto";
 
 import { Profile } from "./profile";
 import { WalletData } from "./contracts";

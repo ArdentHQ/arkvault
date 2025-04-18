@@ -1,4 +1,4 @@
-import { Base64, PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { Base64, PBKDF2 } from "@/app/lib/crypto";
 
 import { IProfile, IProfileData, IProfileEncrypter } from "./contracts.js";
 

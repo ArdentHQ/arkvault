@@ -20,8 +20,6 @@ export * from "./multi-signature.contract.js";
 export * from "./notification.repository.contract.js";
 export * from "./password.contract.js";
 export * from "./pending-musig-wallet.repository.contract.js";
-export * from "./plugin.repository.contract.js";
-export * from "./plugin-registry.contract.js";
 export * from "./portfolio.contract.js";
 export * from "./profile.contract.js";
 export * from "./profile.dumper.contract.js";

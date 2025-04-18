@@ -1,5 +1,5 @@
 import { Coins } from "@ardenthq/sdk";
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@/app/lib/crypto";
 import { BigNumber } from "@/app/lib/helpers";
 import { describe } from "@ardenthq/sdk-test";
 

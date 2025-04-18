@@ -1,6 +1,5 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
-
-import { Contact } from "./contact.js";
+import { UUID } from "@/app/lib/crypto";
+import { Contact } from "./contact";
 import {
 	IContact,
 	IContactAddress,

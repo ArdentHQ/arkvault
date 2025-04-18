@@ -1,4 +1,4 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@/app/lib/crypto";
 import { Except } from "type-fest";
 
 import { INotification, INotificationRepository, IProfile } from "./contracts.js";

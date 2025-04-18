@@ -14,7 +14,6 @@ import {
 	IDataRepository,
 	IExchangeTransactionRepository,
 	IPasswordManager,
-	IPluginRepository,
 	IPortfolio,
 	IProfile,
 	IProfileInput,
@@ -43,7 +42,6 @@ import { ProfileNotificationService } from "./notification.service.js";
 import { PasswordManager } from "./password.js";
 import { IPendingMusigWalletRepository } from "./pending-musig-wallet.repository.contract.js";
 import { PendingMusigWalletRepository } from "./pending-musig-wallet.repository.js";
-import { PluginRepository } from "./plugin.repository.js";
 import { Portfolio } from "./portfolio.js";
 import { ProfileInitialiser } from "./profile.initialiser.js";
 import { ProfileStatus } from "./profile.status.js";
@@ -118,14 +116,6 @@ export class Profile implements IProfile {
 	 * @memberof Profile
 	 */
 	readonly #notificationsService: IProfileNotificationService;
-
-	/**
-	 * The plugin repository.
-	 *
-	 * @type {IPluginRepository}
-	 * @memberof Profile
-	 */
-	readonly #pluginRepository: IPluginRepository;
 
 	/**
 	 * The setting repository.
@@ -241,7 +231,6 @@ export class Profile implements IProfile {
 		this.#networkRepository = new NetworkRepository(this);
 		this.#exchangeTransactionRepository = new ExchangeTransactionRepository(this);
 		this.#notificationsService = new ProfileNotificationService(this);
-		this.#pluginRepository = new PluginRepository();
 		this.#settingRepository = new SettingRepository(this, Object.values(ProfileSetting));
 		this.#appearanceService = new AppearanceService(this);
 		this.#walletFactory = new WalletFactory(this);
@@ -367,10 +356,6 @@ export class Profile implements IProfile {
 		return this.#notificationsService;
 	}
 
-	/** {@inheritDoc IProfile.plugins} */
-	public plugins(): IPluginRepository {
-		return this.#pluginRepository;
-	}
 
 	/** {@inheritDoc IProfile.settings} */
 	public settings(): ISettingRepository {

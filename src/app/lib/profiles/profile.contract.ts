@@ -10,7 +10,6 @@ import {
 	IDataRepository,
 	IExchangeTransactionRepository,
 	IPasswordManager,
-	IPluginRepository,
 	IPortfolio,
 	IProfileAppearance,
 	IProfileNotificationService,
@@ -42,7 +41,6 @@ export interface IProfileData {
 	hosts: Record<string, any>;
 	networks: Record<string, any>;
 	notifications: Record<string, any>;
-	plugins: Record<string, any>;
 	settings: Record<string, any>;
 	wallets: Record<string, IWalletData>;
 	pendingMusigWallets: Record<string, IWalletData>;
@@ -212,14 +210,6 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	notifications(): IProfileNotificationService;
-
-	/**
-	 * Get the plugin repository instance.
-	 *
-	 * @return {IPluginRepository}
-	 * @memberof IProfile
-	 */
-	plugins(): IPluginRepository;
 
 	/**
 	 * Get the setting repository instance.

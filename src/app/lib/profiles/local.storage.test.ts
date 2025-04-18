@@ -1,4 +1,4 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@/app/lib/crypto";
 import { describe } from "@ardenthq/sdk-test";
 import localForage from "localforage";
 import memoryDriver from "localforage-driver-memory";

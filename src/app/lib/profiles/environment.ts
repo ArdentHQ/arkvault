@@ -10,7 +10,6 @@ import {
 	IExchangeRateService,
 	IFeeService,
 	IKnownWalletService,
-	IPluginRegistry,
 	IProfile,
 	IProfileRepository,
 	IUsernamesService,
@@ -166,15 +165,6 @@ export class Environment {
 	 */
 	public usernames(): IUsernamesService {
 		return container.get(Identifiers.UsernamesService);
-	}
-	/**
-	 * Access the plugin registry.
-	 *
-	 * @returns {IPluginRegistry}
-	 * @memberof Environment
-	 */
-	public plugins(): IPluginRegistry {
-		return container.get(Identifiers.PluginRegistry);
 	}
 
 	/**

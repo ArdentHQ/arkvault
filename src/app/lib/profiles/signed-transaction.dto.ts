@@ -2,13 +2,12 @@
 
 import { Contracts, DTO } from "@ardenthq/sdk";
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@/app/lib/intl";
 
-import { MultiPaymentItem } from "@ardenthq/sdk/source/confirmed-transaction.dto.contract.js";
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
+import { DateTime } from "@/app/lib/intl";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: Contracts.SignedTransactionData;

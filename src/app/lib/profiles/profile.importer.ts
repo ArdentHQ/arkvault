@@ -1,5 +1,5 @@
 import { Coins } from "@ardenthq/sdk";
-import { Base64 } from "@ardenthq/sdk-cryptography";
+import { Base64 } from "@/app/lib/crypto";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
@@ -39,8 +39,6 @@ export class ProfileImporter implements IProfileImporter {
 		this.#profile.networks().fill(data.networks);
 
 		this.#profile.exchangeTransactions().fill(data.exchangeTransactions);
-
-		this.#profile.plugins().fill(data.plugins);
 
 		this.#profile.settings().fill(data.settings);
 

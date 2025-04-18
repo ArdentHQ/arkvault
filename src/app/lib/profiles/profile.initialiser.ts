@@ -14,7 +14,6 @@ export class ProfileInitialiser implements IProfileInitialiser {
 		this.#profile.data().flush();
 		this.#profile.exchangeTransactions().flush();
 		this.#profile.notifications().flush();
-		this.#profile.plugins().flush();
 		this.#profile.settings().flush();
 		this.#profile.wallets().flush();
 

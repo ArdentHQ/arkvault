@@ -1,4 +1,4 @@
-import { Base64 } from "@ardenthq/sdk-cryptography";
+import { Base64 } from "@/app/lib/crypto";
 
 import { IProfile, IProfileExporter, IProfileExportOptions } from "./contracts.js";
 import { ProfileEncrypter } from "./profile.encrypter";

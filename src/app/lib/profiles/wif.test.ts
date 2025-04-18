@@ -1,4 +1,4 @@
-import { PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { PBKDF2 } from "@/app/lib/crypto";
 import { describe } from "@ardenthq/sdk-test";
 
 import { identity } from "../test/fixtures/identity";

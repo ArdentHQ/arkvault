@@ -8,7 +8,6 @@ import { ExchangeRateService } from "./exchange-rate.service.js";
 import { StorageFactory } from "./factory.storage.js";
 import { FeeService } from "./fee.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
-import { PluginRegistry } from "./plugin-registry.service.js";
 import { IProfile } from "./profile.contract.js";
 import { ProfileSetting } from "./profile.enum.contract.js";
 import { ProfileRepository } from "./profile.repository.js";
@@ -69,7 +68,6 @@ export class DriverFactory {
 		container.singleton(Identifiers.ExchangeRateService, ExchangeRateService);
 		container.singleton(Identifiers.FeeService, FeeService);
 		container.singleton(Identifiers.KnownWalletService, KnownWalletService);
-		container.singleton(Identifiers.PluginRegistry, PluginRegistry);
 		container.singleton(Identifiers.ProfileRepository, ProfileRepository);
 		container.singleton(Identifiers.WalletService, WalletService);
 		container.singleton(Identifiers.UsernamesService, UsernamesService);

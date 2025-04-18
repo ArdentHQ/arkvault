@@ -1,6 +1,6 @@
 import { ContactAddressRepository } from "./contact-address.repository";
 import { Profile } from "./profile";
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@/app/lib/crypto";
 import { bootContainer } from "../test/mocking";
 import { describeWithContext } from "@ardenthq/sdk-test";
 import { identity } from "../../mainsail/test/fixtures/identity";

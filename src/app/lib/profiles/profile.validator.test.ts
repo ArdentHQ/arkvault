@@ -1,4 +1,4 @@
-import { Base64 } from "@ardenthq/sdk-cryptography";
+import { Base64 } from "@/app/lib/crypto";
 import { describe } from "@ardenthq/sdk-test";
 
 import { bootContainer } from "../test/mocking";
