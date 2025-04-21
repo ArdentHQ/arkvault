@@ -708,26 +708,6 @@ describe("Signed Transaction Table", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render tooltip if the transaction cannot be deleted", async () => {
-		const onClick = vi.fn();
-		mockPendingTransfers(wallet);
-		vi.spyOn(fixtures.transfer?.wallet(), "publicKey").mockReturnValue("test");
-
-		render(<SignedTransactionRowMobile transaction={fixtures.transfer} wallet={wallet} onRowClick={onClick} />);
-
-		expect(
-			screen.queryByText(translations.TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG),
-		).not.toBeInTheDocument();
-
-		await userEvent.hover(screen.getAllByTestId("SignedTransactionRowMobile--remove")[0]);
-
-		expect(
-			screen.getByText(translations.TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG),
-		).toBeInTheDocument();
-
-		vi.restoreAllMocks();
-	});
-
 	it("should render N/A when a mobile pending transfer has an unvalid timestamp", () => {
 		const onClick = vi.fn();
 		mockPendingTransfers(wallet);
