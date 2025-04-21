@@ -1,7 +1,6 @@
 import React from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useTranslation } from "react-i18next";
-import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 import { Modal } from "@/app/components/Modal";
 import {
@@ -16,13 +15,10 @@ import { TransactionId } from "@/domains/transaction/components/TransactionDetai
 import { DetailLabel, DetailPadded, DetailsCondensed } from "@/app/components/DetailWrapper";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
-import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
-import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
-import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -53,8 +49,6 @@ export const TransactionDetailContent = ({
 		"min-w-24": !transaction.isVoteCombination(),
 		"min-w-32": transaction.isVoteCombination(),
 	});
-
-	const isAwaitingSignatures = isAwaitingMusigSignatures(transaction);
 
 	return (
 		<DetailsCondensed>
@@ -106,33 +100,6 @@ export const TransactionDetailContent = ({
 						/>
 					</div>
 				</DetailPadded>
-
-				{[!isAwaitingSignatures, false].every(Boolean) && (
-					<DetailPadded>
-						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
-						<div className="mt-2">
-							<TransactionMusigParticipants
-								publicKeys={transactionPublicKeys(transaction).publicKeys}
-								useExplorerLinks
-								profile={profile}
-								network={transaction.wallet().network()}
-							/>
-						</div>
-					</DetailPadded>
-				)}
-
-				{[isAwaitingSignatures].every(Boolean) && (
-					<DetailPadded>
-						<DetailLabel>{t("TRANSACTION.SIGNATURES")}</DetailLabel>
-						<div className="mt-2">
-							<Signatures
-								publicKeys={transactionPublicKeys(transaction).publicKeys}
-								profile={profile}
-								transaction={transaction}
-							/>
-						</div>
-					</DetailPadded>
-				)}
 			</div>
 		</DetailsCondensed>
 	);

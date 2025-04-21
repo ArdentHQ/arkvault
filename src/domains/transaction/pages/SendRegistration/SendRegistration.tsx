@@ -19,7 +19,6 @@ import {
 	signValidatorRegistration,
 } from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
 import { useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
