@@ -55,9 +55,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 			try {
 				const transaction = await createStubTransaction({
 					coin,
-					getData: () => {
-						return data;
-					},
+					getData: () => data,
 					stub: type === "multiSignature",
 					type,
 				});

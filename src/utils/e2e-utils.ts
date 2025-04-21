@@ -149,9 +149,9 @@ const searchAddressesMocks = () => {
 				mockRequest(
 					(request: any) =>
 						request.url ===
-						`https://ark-test.arkvault.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
+							`https://ark-test.arkvault.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
 						request.url ===
-						`https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
+							`https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
 					`coins/ark/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),

@@ -78,13 +78,13 @@ export const SignedTransactionRowMobile = ({
 								type="vertical"
 								className="m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
 							/>
-								<div>
-									<TableRemoveButton
-										onClick={handleRemove}
-										className="m-0 p-0"
-										data-testid="SignedTransactionRowMobile--remove"
-									/>
-								</div>
+							<div>
+								<TableRemoveButton
+									onClick={handleRemove}
+									className="m-0 p-0"
+									data-testid="SignedTransactionRowMobile--remove"
+								/>
+							</div>
 						</div>
 					</div>
 
