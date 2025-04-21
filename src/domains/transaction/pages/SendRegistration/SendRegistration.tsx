@@ -19,7 +19,6 @@ import {
 	signValidatorRegistration,
 } from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
@@ -43,7 +42,6 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
@@ -118,7 +116,6 @@ export const SendRegistration = () => {
 	useLayoutEffect(() => {
 		const registrations = {
 			default: () => setRegistrationForm(ValidatorRegistrationForm),
-			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
 			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 		};
 
@@ -166,22 +163,6 @@ export const SendRegistration = () => {
 				wif,
 			});
 
-			if (registrationType === "multiSignature") {
-				const transaction = await sendMultiSignature({
-					env,
-					fee,
-					minParticipants,
-					participants,
-					signatory,
-					wallet: activeWallet,
-				});
-
-				await env.persist();
-				setTransaction(transaction);
-				setActiveTab(stepCount);
-				return;
-			}
-
 			if (registrationType === "validatorRegistration") {
 				const transaction = await signValidatorRegistration({
 					env,
@@ -212,9 +193,6 @@ export const SendRegistration = () => {
 	};
 
 	const handleBack = () => {
-		// Abort any existing listener
-		abortReference.current.abort();
-
 		if (activeTab === 1) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
@@ -223,8 +201,6 @@ export const SendRegistration = () => {
 	};
 
 	const handleNext = () => {
-		abortReference.current = new AbortController();
-
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 
