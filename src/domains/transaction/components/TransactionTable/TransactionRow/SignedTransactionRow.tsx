@@ -83,7 +83,6 @@ export const SignedTransactionRow = ({
 	wallet,
 	onRemovePendingTransaction,
 }: SignedTransactionRowProperties) => {
-	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
 	const { canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature, status } = useMultiSignatureStatus({
 		transaction,

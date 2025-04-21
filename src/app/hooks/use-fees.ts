@@ -4,7 +4,6 @@ import { useCallback } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { TransactionFees } from "@/types";
-import { assertString } from "@/utils/assertions";
 
 interface CreateStubTransactionProperties {
 	coin: Coins.Coin;
