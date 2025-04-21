@@ -34,7 +34,6 @@ const addNetwork = (
 			host: publicApiEndpoint,
 			type: "full",
 		},
-		height: height,
 		transactionHost: {
 			host: transactionApiEndpoint,
 			type: "tx",

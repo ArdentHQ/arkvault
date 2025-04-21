@@ -19,7 +19,7 @@ export const customNetworks = (env: Environment, profile: Contracts.IProfile) =>
 				transactionApiEndpoint: server.transactionHost.host,
 				evmApiEndpoint: server.evmHost.host,
 				enabled: server.enabled,
-				height: server.height,
+				height: server.publicHost.height,
 				name: server.name,
 				network: network,
 			}));

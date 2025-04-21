@@ -10,6 +10,39 @@ import {
 import { DeepMap, FieldError } from "react-hook-form";
 import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
+export async function pingTransactionApi(endpoint: string, controller: AbortController): Promise<boolean> {
+	const { signal } = controller;
+	const client = new HttpClient(0).withOptions({ signal });
+
+	const response = await client.get(`${endpoint}/configuration`);
+
+	const body = JSON.parse(response.body());
+
+	return !!body.data.height;
+}
+
+export async function pingEvmApi(endpoint: string, controller: AbortController): Promise<boolean> {
+	const { signal } = controller;
+	const client = new HttpClient(0).withOptions({ signal });
+
+	const response = await client.post(endpoint, {
+		id: 1,
+		jsonrpc: "2.0",
+		method: "eth_call",
+		params: [
+			{
+				data: "0x0000000000000000000000000000000000000000000000000000000000000000",
+				to: "0x0000000000000000000000000000000000000000",
+			},
+			"latest",
+		],
+	});
+
+	const body = JSON.parse(response.body());
+
+	return body.result === "0x";
+}
+
 const useHandleServers = ({
 	profile,
 	transactionApiEndpoint,
@@ -64,21 +97,12 @@ const useHandleServers = ({
 			return;
 		}
 
-		const { signal } = controller;
-
-		const client = new HttpClient(0).withOptions({ signal });
-
 		setFetchingDetails(true);
 		setIsInvalidTransactionApi(false);
 
 		try {
-			const response = await client.get(`${transactionApiEndpoint}/configuration`);
-
-			const body = JSON.parse(response.body());
-
-			if (!body.data.height) {
-				setIsInvalidTransactionApi(true);
-			}
+			const status = await pingTransactionApi(transactionApiEndpoint, controller);
+			setIsInvalidTransactionApi(!status);
 		} catch {
 			setIsInvalidTransactionApi(true);
 		}
@@ -92,32 +116,12 @@ const useHandleServers = ({
 			return;
 		}
 
-		const { signal } = controller;
-
-		const client = new HttpClient(0).withOptions({ signal });
-
 		setFetchingDetails(true);
 		setIsInvalidEvmApi(false);
 
 		try {
-			const response = await client.post(evmApiEndpoint, {
-				id: 1,
-				jsonrpc: "2.0",
-				method: "eth_call",
-				params: [
-					{
-						data: "0x0000000000000000000000000000000000000000000000000000000000000000",
-						to: "0x0000000000000000000000000000000000000000",
-					},
-					"latest",
-				],
-			});
-
-			const body = JSON.parse(response.body());
-
-			if(!body.result) {
-				setIsInvalidEvmApi(true)
-			}
+			const status = await pingEvmApi(evmApiEndpoint, controller);
+			setIsInvalidEvmApi(!status);
 		} catch {
 			setIsInvalidEvmApi(true);
 		}
