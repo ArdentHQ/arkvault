@@ -50,6 +50,8 @@ const useHandleServers = ({
 	evmApiEndpoint,
 	network,
 	errors,
+	setError,
+	clearErrors,
 }: {
 	profile: Contracts.IProfile;
 	publicApiEndpoint: string;
@@ -57,11 +59,10 @@ const useHandleServers = ({
 	evmApiEndpoint: string;
 	network?: Networks.Network;
 	errors: DeepMap<CustomNetwork, FieldError>;
+	setError: (name: keyof CustomNetwork, error: FieldError) => void;
+	clearErrors: (name: keyof CustomNetwork|(keyof CustomNetwork)[]|undefined) => void;
 }) => {
-	const [networkMismatch, setNetworkMismatch] = useState(false);
 	const [fetchingDetails, setFetchingDetails] = useState(false);
-	const [isInvalidTransactionApi, setIsInvalidTransactionApi] = useState(false);
-	const [isInvalidEvmApi, setIsInvalidEvmApi] = useState(false);
 
 	const [serverHeight, setServerHeight] = useState<number | undefined>(undefined);
 
@@ -76,7 +77,7 @@ const useHandleServers = ({
 	async function validatePublicApi() {
 		setServerHeight(undefined);
 
-		setNetworkMismatch(false);
+		clearErrors("publicApiEndpoint");
 
 		if (!isValid(publicApiEndpoint, "publicApiEndpoint")) {
 			return;
@@ -87,7 +88,7 @@ const useHandleServers = ({
 		if (await urlBelongsToNetwork(profile, publicApiEndpoint, network!)) {
 			setServerHeight(await getServerHeight(publicApiEndpoint));
 		} else {
-			setNetworkMismatch(true);
+			setError("publicApiEndpoint", { message: "Network mismatch", type: "invalidUrl"})
 		}
 		setFetchingDetails(false);
 	}
@@ -98,13 +99,18 @@ const useHandleServers = ({
 		}
 
 		setFetchingDetails(true);
-		setIsInvalidTransactionApi(false);
+		clearErrors("transactionApiEndpoint");
 
 		try {
 			const status = await pingTransactionApi(transactionApiEndpoint, controller);
-			setIsInvalidTransactionApi(!status);
+			if(!status) {
+				setError(
+					"transactionApiEndpoint",
+					{ message: "Transaction API Endpoint is not valid", type: "invalidUrl" },
+				);
+			}
 		} catch {
-			setIsInvalidTransactionApi(true);
+			setError("transactionApiEndpoint", { message: "Invalid URL", type: "invalidUrl" });
 		}
 
 		setFetchingDetails(false);
@@ -112,18 +118,22 @@ const useHandleServers = ({
 
 	async function validateEvmApi(controller: AbortController) {
 		if (!isValid(evmApiEndpoint, "evmApiEndpoint")) {
-			setIsInvalidEvmApi(false);
 			return;
 		}
 
 		setFetchingDetails(true);
-		setIsInvalidEvmApi(false);
+		clearErrors("evmApiEndpoint");
 
 		try {
 			const status = await pingEvmApi(evmApiEndpoint, controller);
-			setIsInvalidEvmApi(!status);
+			if(!status) {
+				setError(
+					"evmApiEndpoint",
+					{ message: "EVM API Endpoint is not valid", type: "invalidUrl" },
+				);
+			}
 		} catch {
-			setIsInvalidEvmApi(true);
+			setError("evmApiEndpoint", { message: "Invalid URL", type: "invalidUrl" });
 		}
 
 		setFetchingDetails(false);
@@ -152,7 +162,7 @@ const useHandleServers = ({
 		void validateEvmApi(controllers.current.evmApi);
 	}, [networkId, evmApiEndpoint]);
 
-	return { fetchingDetails, networkMismatch, isInvalidEvmApi, serverHeight, isInvalidTransactionApi};
+	return { fetchingDetails, serverHeight };
 };
 
 export { useHandleServers };

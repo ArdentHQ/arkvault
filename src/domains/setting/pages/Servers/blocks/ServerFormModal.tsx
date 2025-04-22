@@ -40,17 +40,19 @@ const ServerFormModal: React.VFC<{
 		mode: "onChange",
 	});
 
-	const { formState, setValue, register, watch, getValues, trigger } = form;
+	const { formState, setValue, register, watch, trigger, setError, clearErrors } = form;
 	const { isValid, errors } = formState;
 
 	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch()
 
-	const { fetchingDetails, networkMismatch, serverHeight, isInvalidEvmApi, isInvalidTransactionApi } = useHandleServers({
+	const { fetchingDetails, serverHeight } = useHandleServers({
+		clearErrors,
 		errors,
 		evmApiEndpoint,
 		network: networks.find((item) => item.id() === network),
 		profile,
 		publicApiEndpoint,
+		setError,
 		transactionApiEndpoint,
 	});
 
@@ -97,12 +99,8 @@ const ServerFormModal: React.VFC<{
 			return false;
 		}
 
-		if (networkMismatch || isInvalidEvmApi || isInvalidTransactionApi) {
-			return false;
-		}
-
 		return isValid;
-	}, [fetchingDetails, networkMismatch, isInvalidEvmApi, isInvalidTransactionApi, isValid]);
+	}, [fetchingDetails, isValid]);
 
 	const handleSubmit = (values: CustomNetwork) => {
 		if (networkToUpdate) {
@@ -213,15 +211,9 @@ const ServerFormModal: React.VFC<{
 						</div>
 					)}
 
-					{(isInvalidTransactionApi || isInvalidEvmApi) && !networkMismatch && (
+					{[errors.transactionApiEndpoint?.type, errors.publicApiEndpoint?.type, errors.evmApiEndpoint?.type].includes("invalidUrl") && (
 						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
 							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_ERROR")}
-						</Alert>
-					)}
-
-					{networkMismatch && (
-						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
-							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_MISMATCH_ERROR")}
 						</Alert>
 					)}
 				</FormField>
