@@ -13,7 +13,7 @@ export class Base64 {
 	}
 
 	public static decode(value: string): string {
-		return base64.decode(value).toString()
+		return base64.decode(value).toString();
 	}
 
 	public static validate(value: string): boolean {

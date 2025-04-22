@@ -8,6 +8,8 @@ import { Migrator } from "./migrator.js";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
 
+const isRegistered = (coin: string) => !!container.get<Coins.CoinBundle>(Identifiers.Coins)[coin.toUpperCase()];
+
 export class ProfileImporter implements IProfileImporter {
 	readonly #profile: IProfile;
 	readonly #validator: IProfileValidator;
@@ -92,8 +94,6 @@ export class ProfileImporter implements IProfileImporter {
 	 * @memberof ProfileImporter
 	 */
 	#gatherCoins(data: IProfileData): void {
-		const isRegistered = (coin: string) => !!container.get<Coins.CoinBundle>(Identifiers.Coins)[coin.toUpperCase()];
-
 		for (const wallet of Object.values(data.wallets)) {
 			if (isRegistered(wallet.data[WalletData.Coin])) {
 				this.#profile.coins().set(wallet.data[WalletData.Coin], wallet.data[WalletData.Network]);

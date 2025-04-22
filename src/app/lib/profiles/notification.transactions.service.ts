@@ -93,7 +93,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				cursor: 1,
 				identifiers: this.#getIdentifiers(),
 				limit: this.#defaultLimit,
-				...(queryInput && queryInput),
+				...queryInput,
 			});
 
 		for (const transaction of this.#filterUnseen(transactions.items())) {

@@ -230,9 +230,7 @@ export class TransactionService implements ITransactionService {
 
 	/** {@inheritDoc ITransactionService.isAwaitingConfirmation} */
 	public isAwaitingConfirmation(id: string): boolean {
-		this.#assertHasValidIdentifier(id);
-
-		return this.#broadcasted[id] !== undefined;
+		return this.hasBeenBroadcasted(id);
 	}
 
 	/** {@inheritDoc ITransactionService.isAwaitingOurSignature} */
@@ -364,6 +362,7 @@ export class TransactionService implements ITransactionService {
 
 	/** {@inheritDoc ITransactionService.fromPublicKey} */
 	public dump(): void {
+		// eslint-disable-next-line unicorn/consistent-function-scoping
 		const dumpStorage = (storage: object, storageKey: string) => {
 			const result: Record<string, object> = {};
 
@@ -383,6 +382,7 @@ export class TransactionService implements ITransactionService {
 
 	/** {@inheritDoc ITransactionService.fromPublicKey} */
 	public restore(): void {
+		// eslint-disable-next-line unicorn/consistent-function-scoping
 		const restoreStorage = (storage: object, storageKey: string) => {
 			const transactions: object = this.#wallet.data().get(storageKey) || {};
 
@@ -461,10 +461,7 @@ export class TransactionService implements ITransactionService {
 	}
 
 	async #syncPendingMultiSignatures(): Promise<void> {
-		const transactions = await this.#wallet
-			.coin()
-			.multiSignature()
-			.allWithPendingState(this.#getPublicKey());
+		const transactions = await this.#wallet.coin().multiSignature().allWithPendingState(this.#getPublicKey());
 
 		this.#pending = {};
 
@@ -479,10 +476,7 @@ export class TransactionService implements ITransactionService {
 	}
 
 	async #syncReadyMultiSignatures(): Promise<void> {
-		const transactions = await this.#wallet
-			.coin()
-			.multiSignature()
-			.allWithReadyState(this.#getPublicKey());
+		const transactions = await this.#wallet.coin().multiSignature().allWithReadyState(this.#getPublicKey());
 
 		this.#signed = {};
 

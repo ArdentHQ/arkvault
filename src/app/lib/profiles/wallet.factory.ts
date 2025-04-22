@@ -39,8 +39,8 @@ export class WalletFactory implements IWalletFactory {
 		const wallet = await this.fromMnemonicWithBIP39({ coin, mnemonic, network });
 
 		if (withPublicKey) {
-			const value = (await wallet.coin().publicKey().fromMnemonic(mnemonic)).publicKey;
-			wallet.data().set(WalletData.PublicKey, value);
+			const value = await wallet.coin().publicKey().fromMnemonic(mnemonic);
+			wallet.data().set(WalletData.PublicKey, value.publicKey);
 		}
 
 		return { mnemonic, wallet };
@@ -228,8 +228,8 @@ export class WalletFactory implements IWalletFactory {
 
 			await wallet.mutator().address(await wallet.coin().address().fromPrivateKey(privateKey));
 
-			const unencryptedWif = (await wallet.coin().wif().fromPrivateKey(privateKey)).wif;
-			const { publicKey } = await wallet.coin().publicKey().fromWIF(unencryptedWif);
+			const unencryptedWifData = await wallet.coin().wif().fromPrivateKey(privateKey);
+			const { publicKey } = await wallet.coin().publicKey().fromWIF(unencryptedWifData.wif);
 			wallet.data().set(WalletData.PublicKey, publicKey);
 		} else {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIF);
@@ -265,15 +265,12 @@ export class WalletFactory implements IWalletFactory {
 				throw new Error("Please specify the levels and try again.");
 			}
 
-			wallet.data().set(
-				WalletData.Address,
-				(
-					await wallet
-						.coin()
-						.address()
-						.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels })
-				).address,
-			);
+			const walletData = await wallet
+				.coin()
+				.address()
+				.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels });
+
+			wallet.data().set(WalletData.Address, walletData.address);
 
 			wallet.data().set(
 				WalletData.PublicKey,

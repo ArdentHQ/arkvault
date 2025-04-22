@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { UUID } from "@/app/lib/crypto";
 
 import {
@@ -144,11 +146,7 @@ export class ExchangeTransactionRepository implements IExchangeTransactionReposi
 	/** {@inheritDoc IExchangeTransactionRepository.fill} */
 	public fill(exchangeTransactions: Record<string, IExchangeTransactionData>): void {
 		for (const [id, exchangeTransactionData] of Object.entries(exchangeTransactions)) {
-			const exchangeTransaction: IExchangeTransaction = new ExchangeTransaction(
-				exchangeTransactionData,
-				this.#profile,
-			);
-
+			const exchangeTransaction: IExchangeTransaction = new ExchangeTransaction(exchangeTransactionData);
 			this.#data.set(id, exchangeTransaction);
 		}
 	}

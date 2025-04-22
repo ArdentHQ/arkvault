@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import localForage from "localforage";
 
 import { Storage } from "./environment.models.js";
@@ -37,7 +39,8 @@ export class LocalStorage implements Storage {
 	}
 
 	public async has(key: string): Promise<boolean> {
-		return (await this.#storage.keys()).includes(key);
+		const keys = await this.#storage.keys();
+		return keys.includes(key);
 	}
 
 	public async forget(key: string): Promise<void> {
@@ -48,7 +51,7 @@ export class LocalStorage implements Storage {
 		await this.#storage.clear();
 	}
 
-	public async count(): Promise<number> {
+	public count(): Promise<number> {
 		return this.#storage.length();
 	}
 

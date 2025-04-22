@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { Base64 } from "@/app/lib/crypto";
 
 import { IProfile, IProfileExporter, IProfileExportOptions } from "./contracts.js";

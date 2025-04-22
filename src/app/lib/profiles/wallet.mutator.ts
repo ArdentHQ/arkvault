@@ -13,7 +13,7 @@ export class WalletMutator implements IWalletMutator {
 
 	/** {@inheritDoc IWalletMutator.coin} */
 	public async coin(coin: string, network: string, options: { sync: boolean }): Promise<void> {
-		const { sync = true } = options ?? { sync: true }
+		const { sync = true } = options ?? { sync: true };
 
 		try {
 			// Ensure that we set the coin & network IDs
@@ -94,7 +94,7 @@ export class WalletMutator implements IWalletMutator {
 
 			this.avatar(this.#wallet.address());
 			resolve();
-		})
+		});
 	}
 
 	/** {@inheritDoc IWalletMutator.avatar} */
@@ -148,10 +148,10 @@ export class WalletMutator implements IWalletMutator {
 			let address: string;
 
 			if (BIP39.validate(wif)) {
-				const data = await this.#wallet.coin().address().fromMnemonic(wif)
-				address = data.address
+				const data = await this.#wallet.coin().address().fromMnemonic(wif);
+				address = data.address;
 			} else {
-				const data = await this.#wallet.coin().address().fromSecret(wif)
+				const data = await this.#wallet.coin().address().fromSecret(wif);
 				address = data.address;
 			}
 

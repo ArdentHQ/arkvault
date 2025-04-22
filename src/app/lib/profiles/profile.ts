@@ -356,7 +356,6 @@ export class Profile implements IProfile {
 		return this.#notificationsService;
 	}
 
-
 	/** {@inheritDoc IProfile.settings} */
 	public settings(): ISettingRepository {
 		return this.#settingRepository;

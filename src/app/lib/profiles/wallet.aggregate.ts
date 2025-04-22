@@ -1,6 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
-
-import { IProfile, IReadWriteWallet, IWalletAggregate } from "./contracts.js";
+import { IProfile, IWalletAggregate } from "./contracts.js";
 
 type NetworkType = "live" | "test";
 
@@ -18,56 +17,51 @@ export class WalletAggregate implements IWalletAggregate {
 
 	/** {@inheritDoc IWalletAggregate.balancesByNetworkType} */
 	public balancesByNetworkType(): Record<NetworkType, BigNumber> {
-		return this.#profile
-			.wallets()
-			.values()
-			.reduce(
-				(totals: Record<NetworkType, BigNumber>, wallet: IReadWriteWallet) => {
-					const networkType: NetworkType = wallet.network().isLive() ? "live" : "test";
+		const totals: Record<NetworkType, BigNumber> = {
+			live: BigNumber.ZERO,
+			test: BigNumber.ZERO,
+		};
 
-					return {
-						...totals,
-						[networkType]: totals[networkType].plus(wallet.balance()),
-					};
-				},
-				{
-					live: BigNumber.ZERO,
-					test: BigNumber.ZERO,
-				},
-			);
+		// works directly on the iterator
+		for (const wallet of this.#profile.wallets().values()) {
+			const networkType: NetworkType = wallet.network().isLive() ? "live" : "test";
+			totals[networkType] = totals[networkType].plus(wallet.balance());
+		}
+
+		return totals;
 	}
 
 	/** {@inheritDoc IWalletAggregate.convertedBalance} */
 	public convertedBalance(): number {
-		return this.#profile
-			.wallets()
-			.valuesWithCoin()
-			.reduce(
-				(total: BigNumber, wallet: IReadWriteWallet) => total.plus(wallet.convertedBalance()),
-				BigNumber.ZERO,
-			)
-			.toNumber();
+		let total = BigNumber.ZERO;
+
+		// same here—no .reduce, just loop
+		for (const wallet of this.#profile.wallets().valuesWithCoin()) {
+			total = total.plus(wallet.convertedBalance());
+		}
+
+		return total.toNumber();
 	}
 
 	/** {@inheritDoc IWalletAggregate.balancePerCoin} */
-	public balancePerCoin(networkType: NetworkType = "live"): Record<string, { total: number; percentage: number }> {
-		const result = {};
-
-		const totalByProfile: number = this.balance(networkType);
-		const walletsByCoin: Record<string, Record<string, IReadWriteWallet>> = this.#profile.wallets().allByCoin();
+	public balancePerCoin(networkType: NetworkType = "live"): Record<string, { total: string; percentage: string }> {
+		const result: Record<string, { total: string; percentage: string }> = {};
+		const totalByProfile = this.balance(networkType);
+		const walletsByCoin = this.#profile.wallets().allByCoin();
 
 		for (const [coin, wallets] of Object.entries(walletsByCoin)) {
 			const matchingWallets = Object.values(wallets).filter(
-				(wallet: IReadWriteWallet) => wallet.network().isLive() === (networkType === "live"),
+				(w) => w.network().isLive() === (networkType === "live"),
 			);
 
 			if (matchingWallets.length > 0) {
-				const totalByCoin: BigNumber = matchingWallets.reduce(
-					(total: BigNumber, wallet: IReadWriteWallet) => total.plus(wallet.balance()),
-					BigNumber.ZERO,
-				);
+				let totalByCoin = BigNumber.ZERO;
+				for (const w of matchingWallets) {
+					totalByCoin = totalByCoin.plus(w.balance());
+				}
 
 				result[coin] = {
+					// exactly as before
 					percentage:
 						totalByProfile === 0 ? "0.00" : totalByCoin.divide(totalByProfile).times(100).toFixed(2),
 					total: totalByCoin.toString(),

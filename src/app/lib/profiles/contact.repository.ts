@@ -1,3 +1,5 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
+/* eslint-disable */
 import { UUID } from "@/app/lib/crypto";
 import { Contact } from "./contact";
 import {

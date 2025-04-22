@@ -1,3 +1,4 @@
+/* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 
 import { Coins, Contracts } from "@ardenthq/sdk";

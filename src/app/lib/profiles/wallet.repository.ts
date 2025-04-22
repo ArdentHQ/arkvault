@@ -133,7 +133,7 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.push} */
 	public push(wallet: IReadWriteWallet, options: { force: boolean }): IReadWriteWallet {
-		const { force = false } = options
+		const { force = false } = options;
 
 		if (!force && this.findByAddressWithNetwork(wallet.address(), wallet.networkId())) {
 			throw new Error(`The wallet [${wallet.address()}] with network [${wallet.networkId()}] already exists.`);
@@ -197,7 +197,7 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.toObject} */
 	public toObject(options: IWalletExportOptions): Record<string, IWalletData> {
-		const { addNetworkInformation = true, excludeEmptyWallets = false, excludeLedgerWallets = false } = options
+		const { addNetworkInformation = true, excludeEmptyWallets = false, excludeLedgerWallets = false } = options;
 
 		if (!addNetworkInformation) {
 			throw new Error("This is not implemented yet");
@@ -289,9 +289,7 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.restore} */
 	public async restore(options?: { networkId?: string; ttl?: number }): Promise<void> {
 		const syncWallets = (wallets: object): Promise<IReadWriteWallet[]> =>
-			pqueue(
-				Object.values(wallets).map((wallet) => () => this.#restoreWallet(wallet, { ttl: options?.ttl })),
-			);
+			pqueue(Object.values(wallets).map((wallet) => () => this.#restoreWallet(wallet, { ttl: options?.ttl })));
 
 		const earlyWallets: Record<string, object> = {};
 		const laterWallets: Record<string, object> = {};

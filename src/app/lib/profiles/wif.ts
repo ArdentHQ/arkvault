@@ -22,7 +22,7 @@ export class WalletImportFormat implements IWalletImportFormat {
 			}
 
 			resolve(PBKDF2.decrypt(encryptedKey, password));
-		})
+		});
 	}
 
 	/** {@inheritDoc IWalletImportFormat.set} */
@@ -31,7 +31,7 @@ export class WalletImportFormat implements IWalletImportFormat {
 			this.#wallet.data().set(this.#key, PBKDF2.encrypt(value, password));
 			this.#wallet.profile().status().markAsDirty();
 			resolve();
-		})
+		});
 	}
 
 	/** {@inheritDoc IWalletImportFormat.exists} */

@@ -3,7 +3,6 @@ import {
 	ExchangeTransactionStatus,
 	IExchangeTransaction,
 	IExchangeTransactionData,
-	IProfile,
 } from "./contracts.js";
 
 export class ExchangeTransaction implements IExchangeTransaction {
@@ -15,16 +14,15 @@ export class ExchangeTransaction implements IExchangeTransaction {
 	#output: ExchangeTransactionDetail;
 	#status: ExchangeTransactionStatus;
 
-	public constructor(
-		{
-			id,
-			orderId,
-			input,
-			output,
-			provider,
-			createdAt = Date.now(),
-			status = ExchangeTransactionStatus.New,
-		}: IExchangeTransactionData) {
+	public constructor({
+		id,
+		orderId,
+		input,
+		output,
+		provider,
+		createdAt = Date.now(),
+		status = ExchangeTransactionStatus.New,
+	}: IExchangeTransactionData) {
 		this.#id = id;
 		this.#orderId = orderId;
 		this.#provider = provider;

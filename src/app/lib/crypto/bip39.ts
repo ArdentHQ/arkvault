@@ -1,9 +1,4 @@
-import {
-	generateMnemonic,
-	validateMnemonic,
-	mnemonicToSeedSync,
-	mnemonicToEntropy,
-} from "@scure/bip39";
+import { generateMnemonic, validateMnemonic, mnemonicToSeedSync, mnemonicToEntropy } from "@scure/bip39";
 import { wordlist as czech } from "@scure/bip39/wordlists/czech";
 import { wordlist as english } from "@scure/bip39/wordlists/english";
 import { wordlist as french } from "@scure/bip39/wordlists/french";
