@@ -3,7 +3,7 @@ import { Paginator } from "./paginator";
 
 export class ConfirmedTransactionDataCollection extends Paginator<ConfirmedTransactionData> {
 	public findById(id: string): ConfirmedTransactionData | undefined {
-		return this.#find("id", id);
+		return this.#find("hash", id);
 	}
 
 	public findByType(type: string): ConfirmedTransactionData | undefined {
@@ -15,11 +15,11 @@ export class ConfirmedTransactionDataCollection extends Paginator<ConfirmedTrans
 	}
 
 	public findBySender(sender: string): ConfirmedTransactionData | undefined {
-		return this.#find("sender", sender);
+		return this.#find("from", sender);
 	}
 
 	public findByRecipient(recipient: string): ConfirmedTransactionData | undefined {
-		return this.#find("recipient", recipient);
+		return this.#find("to", recipient);
 	}
 
 	#find(key: string, value: string): ConfirmedTransactionData | undefined {
