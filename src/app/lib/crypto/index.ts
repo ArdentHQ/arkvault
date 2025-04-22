@@ -6,3 +6,6 @@ export * from "./wif";
 export * from "./secp256k1";
 export * from "./bcrypt";
 export * from "./base64";
+export * from "./pbkdf2";
+export * from "./bip39";
+export * from "./bip38";

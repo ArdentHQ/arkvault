@@ -41,6 +41,9 @@ importers:
       '@mainsail/evm-contracts':
         specifier: 0.0.1-evm.14
         version: 0.0.1-evm.14
+      '@noble/ciphers':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@noble/hashes':
         specifier: ^1.7.1
         version: 1.7.1
@@ -71,6 +74,9 @@ importers:
       big.js:
         specifier: ^6.2.2
         version: 6.2.2
+      bigi:
+        specifier: ^1.4.2
+        version: 1.4.2
       browser-fs-access:
         specifier: ^0.35.0
         version: 0.35.0
@@ -1992,6 +1998,10 @@ packages:
   '@mswjs/interceptors@0.29.1':
     resolution: {integrity: sha512-3rDakgJZ77+RiQUuSK69t1F0m8BQKA8Vh5DCS5V0DWvNY67zob2JhhQrhCO0AKLGINTRSFd1tBaHcJTkhefoSw==}
     engines: {node: '>=18'}
+
+  '@noble/ciphers@1.2.1':
+    resolution: {integrity: sha512-rONPWMC7PeExE077uLE4oqWrZ1IvAfz3oH9LibVAcVCopJiA9R62uavnbEzdkVmJYI6M6Zgkbeb07+tWjlq2XA==}
+    engines: {node: ^14.21.3 || >=16}
 
   '@noble/curves@1.2.0':
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
@@ -9961,6 +9971,8 @@ snapshots:
       is-node-process: 1.2.0
       outvariant: 1.4.3
       strict-event-emitter: 0.5.1
+
+  '@noble/ciphers@1.2.1': {}
 
   '@noble/curves@1.2.0':
     dependencies:

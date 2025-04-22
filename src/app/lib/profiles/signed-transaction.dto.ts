@@ -237,17 +237,15 @@ export class ExtendedSignedTransactionData {
 		return this.#data.hash();
 	}
 
-	// @ts-ignore
 	public payments(): { recipientId: string; amount: number }[] {
-		return this.#data.payments().map((payment) => {
-			return {
-				amount: payment.amount.toHuman(),
-				recipientId: payment.recipientId,
-			};
-		});
+		return this.#data.payments().map((payment) => ({
+			amount: payment.amount.toHuman(),
+			recipientId: payment.recipientId,
+		}));
 	}
 
 	public recipients(): ExtendedTransactionRecipient[] {
+		// @ts-expect-error
 		return this.#data.recipients().map((payment: { address: string; amount: BigNumber }) => ({
 			address: payment.address,
 			amount: payment.amount.toHuman(),
