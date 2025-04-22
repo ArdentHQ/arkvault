@@ -12,33 +12,32 @@ import { Address } from "@arkecosystem/typescript-crypto";
 
 export class SignedTransactionData
 	extends DTO.AbstractSignedTransactionData
-	implements Contracts.SignedTransactionData
-{
+	implements Contracts.SignedTransactionData {
 	public override configure(signedData: RawTransactionData, serialized: string) {
-		this.identifier = signedData.id;
+		this.identifier = signedData.hash;
 		this.signedData = signedData;
 		this.serialized = serialized;
 
-		if (!this.signedData.senderAddress) {
-			this.signedData.senderAddress = Address.fromPublicKey(signedData.senderPublicKey);
+		if (!this.signedData.from) {
+			this.signedData.from = Address.fromPublicKey(signedData.senderPublicKey);
 		}
 
 		return this;
 	}
 
-	public override sender(): string {
-		return this.signedData.senderAddress;
+	public override from(): string {
+		return this.signedData.from;
 	}
 
 	public override nonce(): BigNumber {
 		return this.signedData.nonce;
 	}
 
-	public override recipient(): string {
-		return this.signedData.recipientAddress;
+	public override to(): string {
+		return this.signedData.to;
 	}
 
-	public override amount(): BigNumber {
+	public override value(): BigNumber {
 		if (this.isMultiPayment()) {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
