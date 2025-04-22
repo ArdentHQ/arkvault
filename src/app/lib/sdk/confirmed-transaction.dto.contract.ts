@@ -19,7 +19,7 @@ export interface UnspentTransactionData {
 
 	timestamp(): string;
 
-	amount(): BigNumber;
+	value(): BigNumber;
 
 	address(): string;
 }
