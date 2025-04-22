@@ -2,14 +2,14 @@ import { Contracts } from "@ardenthq/sdk";
 
 import { IReadWriteWallet, IWalletData, WalletData, WalletFlag } from "./contracts.js";
 
-type SerializedBalance = {
+interface SerializedBalance {
 	available: string;
 	fees: string;
 	locked?: string;
 	lockedVotes?: string;
 	lockedUnvotes?: string;
 	tokens?: Record<string, string>;
-};
+}
 
 export class WalletSerialiser {
 	readonly #wallet: IReadWriteWallet;

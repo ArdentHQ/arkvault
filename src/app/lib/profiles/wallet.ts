@@ -162,6 +162,7 @@ export class Wallet implements IReadWriteWallet {
 		const value: Contracts.WalletBalance | undefined = this.data().get(WalletData.Balance);
 
 		if (value && value[type]) {
+			//@ts-expect-error
 			return +BigNumber.make(value[type] as BigNumber, this.#decimals()).toHuman();
 		}
 
@@ -682,7 +683,9 @@ export class Wallet implements IReadWriteWallet {
 
 		/* istanbul ignore next */
 		this.data().set(WalletData.Balance, {
+			//@ts-expect-error
 			available: BigNumber.make(balance?.available || 0, this.#decimals()),
+			//@ts-expect-error
 			fees: BigNumber.make(balance?.fees || 0, this.#decimals()),
 		});
 

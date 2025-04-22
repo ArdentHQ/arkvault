@@ -7,7 +7,6 @@ import {
 } from "./contracts.js";
 
 export class ExchangeTransaction implements IExchangeTransaction {
-	readonly #profile: IProfile;
 	readonly #id: string;
 	readonly #orderId: string;
 	readonly #provider: string;
@@ -25,10 +24,7 @@ export class ExchangeTransaction implements IExchangeTransaction {
 			provider,
 			createdAt = Date.now(),
 			status = ExchangeTransactionStatus.New,
-		}: IExchangeTransactionData,
-		profile: IProfile,
-	) {
-		this.#profile = profile;
+		}: IExchangeTransactionData) {
 		this.#id = id;
 		this.#orderId = orderId;
 		this.#provider = provider;

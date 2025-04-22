@@ -11,15 +11,15 @@ export class UsernamesService implements IUsernamesService {
 		const clientService = profile.coins().get(coin, network).client();
 		const collection = await clientService.usernames(addresses);
 
-		if (!this.#registry[network]) {
-			this.#registry[network] = collection;
-		} else {
+		if (this.#registry[network]) {
 			const existingCollection = this.#registry[network];
 			const mergedItems = [...existingCollection.items(), ...collection.items()];
 			const uniqueItems = mergedItems.filter(
 				(item, index, self) => index === self.findIndex((t) => t.address() === item.address()),
 			);
 			this.#registry[network] = new Collections.UsernameDataCollection(uniqueItems);
+		} else {
+			this.#registry[network] = collection;
 		}
 	}
 

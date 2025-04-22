@@ -55,10 +55,12 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public nonce(): BigNumber {
+		//@ts-expect-error
 		return this.#data.nonce();
 	}
 
 	public timestamp(): DateTime {
+		//@ts-expect-error
 		return this.#data.timestamp();
 	}
 

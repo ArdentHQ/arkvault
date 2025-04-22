@@ -20,9 +20,9 @@ export class PendingMusigWalletRepository implements IPendingMusigWalletReposito
 
 		this.#wallets.push(
 			await this.#profile.walletFactory().fromAddress({
+				address,
 				coin,
 				network,
-				address,
 			}),
 		);
 	}

@@ -292,7 +292,7 @@ export class WalletRepository implements IWalletRepository {
 	public async restore(options?: { networkId?: string; ttl?: number }): Promise<void> {
 		const syncWallets = (wallets: object): Promise<IReadWriteWallet[]> =>
 			pqueue(
-				[...Object.values(wallets)].map((wallet) => () => this.#restoreWallet(wallet, { ttl: options?.ttl })),
+				Object.values(wallets).map((wallet) => () => this.#restoreWallet(wallet, { ttl: options?.ttl })),
 			);
 
 		const earlyWallets: Record<string, object> = {};

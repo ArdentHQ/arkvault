@@ -33,12 +33,12 @@ export class CoinService implements ICoinService {
 			result[coin] = [];
 
 			for (const [network, children] of Object.entries(networks)) {
-				if (children !== undefined) {
+				if (children === undefined) {
+					result[coin].push(network);
+				} else {
 					for (const child of Object.keys(children)) {
 						result[coin].push(`${network}.${child}`);
 					}
-				} else {
-					result[coin].push(network);
 				}
 			}
 		}

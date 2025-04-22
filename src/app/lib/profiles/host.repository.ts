@@ -42,10 +42,10 @@ export class HostRepository implements IHostRepository {
 
 	/** {@inheritDoc HostRepository.forget} */
 	public forget(network: string, index?: number): void {
-		if (index !== undefined) {
-			this.#data.forgetIndex(network, index);
-		} else {
+		if (index === undefined) {
 			this.#data.forget(network);
+		} else {
+			this.#data.forgetIndex(network, index);
 		}
 
 		this.#profile.status().markAsDirty();

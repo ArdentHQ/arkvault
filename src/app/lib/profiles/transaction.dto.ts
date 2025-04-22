@@ -36,11 +36,15 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.type();
 	}
 
+	//@ts-expect-error
 	public timestamp(): DateTime | undefined {
+		//@ts-expect-error
 		return this.#data.timestamp();
 	}
 
+	//@ts-expect-error
 	public confirmations(): BigNumber {
+		//@ts-expect-error
 		return this.#data.confirmations();
 	}
 
@@ -81,7 +85,9 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.memo?.();
 	}
 
+	//@ts-expect-error
 	public nonce(): BigNumber {
+		//@ts-expect-error
 		return this.#data.nonce();
 	}
 

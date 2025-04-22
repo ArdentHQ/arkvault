@@ -52,7 +52,7 @@ export class Environment {
 		}).validate({ data, profiles }, { allowUnknown: true, stripUnknown: true });
 
 		if (error) {
-			throw new Error(`Terminating due to corrupted state: ${error}`);
+			throw new Error(`Terminating due to corrupted state: ${String(error)}`);
 		}
 
 		this.#storage = value;
