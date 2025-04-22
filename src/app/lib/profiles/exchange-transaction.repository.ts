@@ -47,7 +47,7 @@ export class ExchangeTransactionRepository implements IExchangeTransactionReposi
 
 		const id: string = UUID.random();
 
-		const result: IExchangeTransaction = new ExchangeTransaction({ id, ...data }, this.#profile);
+		const result: IExchangeTransaction = new ExchangeTransaction({ id, ...data });
 
 		this.#data.set(id, result);
 
