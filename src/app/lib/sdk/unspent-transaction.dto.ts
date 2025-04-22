@@ -13,16 +13,16 @@ export class UnspentTransactionData implements Contract {
 		this.#data = data;
 	}
 
-	public id(): string {
-		return this.#data.id;
+	public hash(): string {
+		return this.#data.hash;
 	}
 
-	public timestamp(): DateTime {
+	public timestamp(): string {
 		return this.#data.timestamp;
 	}
 
-	public amount(): BigNumber {
-		return this.#data.amount;
+	public value(): BigNumber {
+		return this.#data.value;
 	}
 
 	public address(): string {
