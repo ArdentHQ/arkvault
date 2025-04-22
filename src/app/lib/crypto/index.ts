@@ -5,3 +5,4 @@ export * from "./hdkey";
 export * from "./wif";
 export * from "./secp256k1";
 export * from "./bcrypt";
+export * from "./base64";
