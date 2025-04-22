@@ -12,7 +12,9 @@ export class WalletMutator implements IWalletMutator {
 	}
 
 	/** {@inheritDoc IWalletMutator.coin} */
-	public async coin(coin: string, network: string, options: { sync: boolean } = { sync: true }): Promise<void> {
+	public async coin(coin: string, network: string, options: { sync: boolean }): Promise<void> {
+		const { sync = true } = options ?? { sync: true }
+
 		try {
 			// Ensure that we set the coin & network IDs
 			this.#wallet.data().set(WalletData.Coin, coin);
@@ -30,7 +32,7 @@ export class WalletMutator implements IWalletMutator {
 			if (instance.hasBeenSynchronized()) {
 				this.#wallet.markAsFullyRestored();
 			} else {
-				if (options.sync) {
+				if (sync) {
 					await instance.__construct();
 
 					this.#wallet.markAsFullyRestored();
@@ -79,17 +81,20 @@ export class WalletMutator implements IWalletMutator {
 
 	/** {@inheritDoc IWalletMutator.address} */
 	public async address({ address, path, type }: Partial<Services.AddressDataTransferObject>): Promise<void> {
-		if (type) {
-			this.#wallet.data().set(WalletData.DerivationType, type);
-		}
+		return new Promise((resolve) => {
+			if (type) {
+				this.#wallet.data().set(WalletData.DerivationType, type);
+			}
 
-		if (path) {
-			this.#wallet.data().set(WalletData.DerivationPath, path);
-		}
+			if (path) {
+				this.#wallet.data().set(WalletData.DerivationPath, path);
+			}
 
-		this.#wallet.data().set(WalletData.Address, address);
+			this.#wallet.data().set(WalletData.Address, address);
 
-		this.avatar(this.#wallet.address());
+			this.avatar(this.#wallet.address());
+			resolve();
+		})
 	}
 
 	/** {@inheritDoc IWalletMutator.avatar} */
@@ -143,9 +148,11 @@ export class WalletMutator implements IWalletMutator {
 			let address: string;
 
 			if (BIP39.validate(wif)) {
-				address = (await this.#wallet.coin().address().fromMnemonic(wif)).address;
+				const data = await this.#wallet.coin().address().fromMnemonic(wif)
+				address = data.address
 			} else {
-				address = (await this.#wallet.coin().address().fromSecret(wif)).address;
+				const data = await this.#wallet.coin().address().fromSecret(wif)
+				address = data.address;
 			}
 
 			return this.#wallet.address() === address;

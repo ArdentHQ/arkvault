@@ -132,8 +132,10 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.push} */
-	public push(wallet: IReadWriteWallet, options: { force: boolean } = { force: false }): IReadWriteWallet {
-		if (!options.force && this.findByAddressWithNetwork(wallet.address(), wallet.networkId())) {
+	public push(wallet: IReadWriteWallet, options: { force: boolean }): IReadWriteWallet {
+		const { force = false } = options
+
+		if (!force && this.findByAddressWithNetwork(wallet.address(), wallet.networkId())) {
 			throw new Error(`The wallet [${wallet.address()}] with network [${wallet.networkId()}] already exists.`);
 		}
 
@@ -194,25 +196,21 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.toObject} */
-	public toObject(
-		options: IWalletExportOptions = {
-			addNetworkInformation: true,
-			excludeEmptyWallets: false,
-			excludeLedgerWallets: false,
-		},
-	): Record<string, IWalletData> {
-		if (!options.addNetworkInformation) {
+	public toObject(options: IWalletExportOptions): Record<string, IWalletData> {
+		const { addNetworkInformation = true, excludeEmptyWallets = false, excludeLedgerWallets = false } = options
+
+		if (!addNetworkInformation) {
 			throw new Error("This is not implemented yet");
 		}
 
 		const result: Record<string, IWalletData> = {};
 
 		for (const [id, wallet] of Object.entries(this.#data.all())) {
-			if (options.excludeLedgerWallets && wallet.isLedger()) {
+			if (excludeLedgerWallets && wallet.isLedger()) {
 				continue;
 			}
 
-			if (options.excludeEmptyWallets && wallet.balance() === 0) {
+			if (excludeEmptyWallets && wallet.balance() === 0) {
 				continue;
 			}
 
@@ -301,7 +299,7 @@ export class WalletRepository implements IWalletRepository {
 		for (const [id, wallet] of Object.entries(this.#dataRaw)) {
 			const nid: string = wallet.data[WalletData.Network];
 
-			if (options?.networkId && nid !== options?.networkId) {
+			if (options?.networkId && nid !== options.networkId) {
 				continue;
 			}
 

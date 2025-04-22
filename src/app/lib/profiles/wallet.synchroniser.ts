@@ -20,7 +20,7 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 		const currentWallet = this.#wallet.getAttributes().get<Contracts.WalletData>("wallet");
 		const currentPublicKey = this.#wallet.data().get<string>(WalletData.PublicKey);
 
-		const walletIdentifier: Services.WalletIdentifier = await WalletIdentifierFactory.make(this.#wallet);
+		const walletIdentifier: Services.WalletIdentifier = WalletIdentifierFactory.make(this.#wallet);
 
 		try {
 			const wallet: Contracts.WalletData = await this.#wallet
@@ -59,13 +59,13 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 		const participants: Record<string, any> = {};
 
 		for (const publicKey of this.#wallet.multiSignature().publicKeys()) {
-			participants[publicKey] = (
-				await this.#wallet.client().wallet({
-					method: this.#wallet.data().get(WalletData.ImportMethod),
-					type: "publicKey",
-					value: publicKey,
-				})
-			).toObject();
+			const response = await this.#wallet.client().wallet({
+				method: this.#wallet.data().get(WalletData.ImportMethod),
+				type: "publicKey",
+				value: publicKey,
+			});
+
+			participants[publicKey] = response.toObject();
 		}
 
 		this.#wallet.data().set(WalletData.MultiSignatureParticipants, participants);

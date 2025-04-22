@@ -3,7 +3,7 @@ import { Services } from "@ardenthq/sdk";
 import { IReadWriteWallet } from "./wallet.contract.js";
 
 export class WalletIdentifierFactory {
-	public static async make(wallet: IReadWriteWallet): Promise<Services.WalletIdentifier> {
+	public static make(wallet: IReadWriteWallet): Services.WalletIdentifier {
 		if (wallet.actsWithAddress()) {
 			return this.#address(wallet);
 		}
