@@ -1,4 +1,4 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { TableState } from "react-table";
 

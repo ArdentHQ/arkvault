@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 

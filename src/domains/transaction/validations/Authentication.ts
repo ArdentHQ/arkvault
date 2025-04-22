@@ -2,7 +2,7 @@ import { Coins } from "@ardenthq/sdk";
 import * as bip39 from "@scure/bip39";
 import { wordlist } from "@scure/bip39/wordlists/english";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 

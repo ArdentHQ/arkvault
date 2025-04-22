@@ -1,4 +1,4 @@
-import { Environment } from "@ardenthq/sdk-profiles";
+import { Environment } from "@/app/lib/profiles";
 import { Mainsail } from "@/app/lib/mainsail";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";

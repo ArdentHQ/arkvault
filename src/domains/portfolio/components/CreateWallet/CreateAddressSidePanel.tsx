@@ -19,7 +19,7 @@ import { useForm } from "react-hook-form";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { StepIndicator } from "@/app/components/StepIndicator";

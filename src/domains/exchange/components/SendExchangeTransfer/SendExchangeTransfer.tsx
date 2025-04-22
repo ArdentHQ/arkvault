@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";

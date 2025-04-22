@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import * as bip39 from "@scure/bip39";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { authentication } from "./Authentication";
 import { env, MNEMONICS } from "@/utils/testing-library";

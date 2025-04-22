@@ -59,7 +59,6 @@ export default defineConfig(() => {
 							"react-visibility-sensor",
 						],
 						sdk: ["@ardenthq/sdk"],
-						"sdk-profiles": ["@ardenthq/sdk-profiles"],
 					},
 				},
 				plugins: [

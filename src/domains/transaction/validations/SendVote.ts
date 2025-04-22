@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 export const sendVote = (t: any) => ({
 	network: () => ({

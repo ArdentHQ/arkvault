@@ -4,7 +4,7 @@ import { Column } from "react-table";
 import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Numeral } from "@/app/lib/intl";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";

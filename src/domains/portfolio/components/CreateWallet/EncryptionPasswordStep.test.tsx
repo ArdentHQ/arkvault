@@ -1,5 +1,5 @@
 import * as bip39 from "@scure/bip39";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";

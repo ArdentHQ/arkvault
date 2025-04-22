@@ -1,4 +1,4 @@
-import { Environment, StorageData } from "@ardenthq/sdk-profiles";
+import { Environment, StorageData } from "@/app/lib/profiles";
 import { base64 } from "@scure/base";
 import { utf8ToBytes } from "@noble/hashes/utils";
 

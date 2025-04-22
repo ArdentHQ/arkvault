@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 import { AddressRow } from "./AddressRow";
 import { expect } from "vitest";

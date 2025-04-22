@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { WalletsControls } from "./WalletsControls";

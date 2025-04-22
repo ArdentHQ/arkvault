@@ -15,7 +15,6 @@ if (!sdkPath) {
 }
 
 packageJson.dependencies["@ardenthq/sdk"] = join(sdkPath, "packages/sdk");
-packageJson.dependencies["@ardenthq/sdk-profiles"] = join(sdkPath, "packages/profiles");
 
 fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, "\t"));
 

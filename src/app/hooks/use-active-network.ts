@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { assertNetwork } from "@/utils/assertions";

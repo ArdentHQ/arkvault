@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";

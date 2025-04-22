@@ -3,7 +3,7 @@ import { act as actHook, renderHook } from "@testing-library/react";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { LedgerProvider } from "@/app/contexts";
 import React from "react";
 import { Services } from "@ardenthq/sdk";

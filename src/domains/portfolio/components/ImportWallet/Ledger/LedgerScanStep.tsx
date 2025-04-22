@@ -1,5 +1,5 @@
 import { Networks, Contracts } from "@ardenthq/sdk";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";

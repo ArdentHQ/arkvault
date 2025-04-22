@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";

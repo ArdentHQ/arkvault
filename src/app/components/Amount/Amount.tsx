@@ -1,5 +1,5 @@
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
-import { Contracts, Helpers } from "@ardenthq/sdk-profiles";
+import { Contracts, Helpers } from "@/app/lib/profiles";
 import cn from "classnames";
 import React from "react";
 
