@@ -12,7 +12,8 @@ import { Address } from "@arkecosystem/typescript-crypto";
 
 export class SignedTransactionData
 	extends DTO.AbstractSignedTransactionData
-	implements Contracts.SignedTransactionData {
+	implements Contracts.SignedTransactionData
+{
 	public override configure(signedData: RawTransactionData, serialized: string) {
 		this.identifier = signedData.hash;
 		this.signedData = signedData;
