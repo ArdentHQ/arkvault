@@ -1,4 +1,4 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 

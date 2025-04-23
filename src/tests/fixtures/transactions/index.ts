@@ -1,5 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 
 const wallet = {
 	address: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",

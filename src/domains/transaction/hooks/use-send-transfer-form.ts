@@ -1,5 +1,5 @@
 import { Networks, Services } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
@@ -99,7 +99,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			const data = await buildTransferData({
 				coin: wallet.coin(),
-				isMultiSignature: signatory.actsWithMultiSignature() || signatory.hasMultiSignature(),
+				isMultiSignature: false,
 				memo,
 				recipients,
 			});

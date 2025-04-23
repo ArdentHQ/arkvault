@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";

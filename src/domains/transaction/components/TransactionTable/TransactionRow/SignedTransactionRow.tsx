@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { MouseEvent, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
@@ -9,7 +9,7 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { Label } from "@/app/components/Label";

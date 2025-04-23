@@ -1,10 +1,11 @@
-import { Contracts, DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
+import { SortBy } from "@/app/components/Table";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];

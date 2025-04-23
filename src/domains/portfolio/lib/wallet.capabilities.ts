@@ -1,7 +1,7 @@
+import { Contracts } from "@/app/lib/profiles";
 import { Enums } from "@ardenthq/sdk";
-import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 
-export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
+export const WalletCapabilities = (wallet: Contracts.IReadWriteWallet) => ({
 	/**
 	 * Determines whether the wallet can send any transaction.
 	 * @returns {boolean}
@@ -78,10 +78,6 @@ export const WalletCapabilities = (wallet: IReadWriteWallet) => ({
 	 * @returns {boolean}
 	 */
 	isMultisignature(): boolean {
-		try {
-			return wallet.isMultiSignature();
-		} catch {
-			return false;
-		}
+		return false;
 	},
 });

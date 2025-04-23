@@ -10,7 +10,7 @@ import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { Services } from "@ardenthq/sdk";
 import { delay } from "@/utils/delay";

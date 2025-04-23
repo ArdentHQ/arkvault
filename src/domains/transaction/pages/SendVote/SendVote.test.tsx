@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
@@ -20,7 +20,7 @@ import {
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";

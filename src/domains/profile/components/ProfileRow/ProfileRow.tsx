@@ -3,7 +3,7 @@ import { ProfileAvatar } from "@/domains/profile/components/ProfileAvatar";
 import { Icon } from "@/app/components/Icon";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Skeleton } from "@/app/components/Skeleton";
 
 interface ProfileRowProperties {

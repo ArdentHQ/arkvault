@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { Contracts, Environment, Helpers } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment, Helpers } from "@/app/lib/profiles";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ReadableFile } from "@/app/hooks/use-files";

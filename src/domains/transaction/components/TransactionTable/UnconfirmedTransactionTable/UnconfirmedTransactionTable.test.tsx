@@ -1,8 +1,8 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { env, getDefaultProfileId, renderResponsive } from "@/utils/testing-library";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { UnconfirmedTransactionTable } from "./UnconfirmedTransactionTable";
 

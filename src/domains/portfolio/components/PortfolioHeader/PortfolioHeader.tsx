@@ -4,7 +4,7 @@ import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Dropdown } from "@/app/components/Dropdown";
 import { t } from "i18next";

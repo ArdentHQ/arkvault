@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
 

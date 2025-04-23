@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { HttpClient } from "@/app/services/HttpClient";
 import { Networks } from "@ardenthq/sdk";
-import { Numeral } from "@ardenthq/sdk-intl";
+import { Numeral } from "@/app/lib/intl";
 
 export const useBlockHeight = ({
 	blockId,

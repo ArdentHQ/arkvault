@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { TableRow } from "@/app/components/Table";
@@ -8,7 +8,7 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Divider } from "@/app/components/Divider";
 
 export const PendingTransferRowMobile = ({

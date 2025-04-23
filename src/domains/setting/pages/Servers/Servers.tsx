@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useForm } from "react-hook-form";
 import { useTranslation, Trans } from "react-i18next";
 import { Prompt } from "react-router-dom";

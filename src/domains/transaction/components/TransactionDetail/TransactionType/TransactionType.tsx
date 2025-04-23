@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
@@ -67,7 +67,8 @@ export const TransactionType = ({
 						</>
 					)}
 
-					{transaction.isMultiSignatureRegistration() && (
+					{/* eslint-disable-next-line sonarjs/no-redundant-boolean,no-constant-binary-expression */}
+					{false && (
 						<>
 							{transaction.wallet() && (
 								<>

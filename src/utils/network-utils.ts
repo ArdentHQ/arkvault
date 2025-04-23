@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 import { uniq } from "@/app/lib/helpers";
 

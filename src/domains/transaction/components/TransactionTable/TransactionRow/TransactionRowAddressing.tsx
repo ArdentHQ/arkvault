@@ -1,7 +1,7 @@
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useTheme, useWalletAlias } from "@/app/hooks";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@ardenthq/sdk";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
@@ -170,11 +170,7 @@ export const TransactionRowAddressing = ({
 	const { getWalletAlias } = useWalletAlias();
 	const { isDarkMode } = useTheme();
 
-	const isMusigTransfer = [
-		!!transaction.usesMultiSignature?.(),
-		!transaction.isConfirmed(),
-		!transaction.isMultiSignatureRegistration(),
-	].every(Boolean);
+	const isMusigTransfer = false;
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 	const isContract = isContractTransaction(transaction);

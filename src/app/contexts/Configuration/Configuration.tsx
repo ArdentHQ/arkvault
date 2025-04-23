@@ -1,5 +1,5 @@
 import React from "react";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 
 interface ConfigurationContextType {
 	configuration: Record<string, Record<string, any>>;

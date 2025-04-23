@@ -1,5 +1,5 @@
 import { DTO } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 
 export const useMusigRegistrationStubTransaction = ({

@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 import { useTranslation } from "react-i18next";
 

@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { useMusigGeneratedWallet } from "@/domains/transaction/hooks/use-musig-generated-wallet";
@@ -15,7 +15,8 @@ export const MusigGeneratedAddress = ({
 	wallet: Contracts.IReadWriteWallet;
 	useExploreLink?: boolean;
 }) => {
-	const { generatedWallet } = useMusigGeneratedWallet({ min, publicKeys, wallet });
+	const { generatedWallet: genWallet } = useMusigGeneratedWallet({ min, publicKeys, wallet });
+	const generatedWallet = genWallet as Contracts.IReadWriteWallet | undefined;
 
 	if (!generatedWallet) {
 		return <></>;

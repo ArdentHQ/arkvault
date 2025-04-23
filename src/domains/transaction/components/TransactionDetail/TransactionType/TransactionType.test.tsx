@@ -1,5 +1,5 @@
 import React from "react";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 
 import { TransactionType } from "./TransactionType";
 import { translations } from "@/domains/transaction/i18n";

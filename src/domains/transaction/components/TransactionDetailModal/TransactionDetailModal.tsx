@@ -19,7 +19,7 @@ import { VoteTransactionType } from "@/domains/transaction/components/VoteTransa
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import cn from "classnames";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@ardenthq/sdk";
 import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
 import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
@@ -113,7 +113,7 @@ export const TransactionDetailContent = ({
 					</div>
 				</DetailPadded>
 
-				{[!isAwaitingSignatures, transaction.isMultiSignatureRegistration()].every(Boolean) && (
+				{[!isAwaitingSignatures, false].every(Boolean) && (
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">

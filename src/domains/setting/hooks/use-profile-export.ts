@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 
 interface ProfileExportOptions {
 	excludeEmptyWallets: boolean;

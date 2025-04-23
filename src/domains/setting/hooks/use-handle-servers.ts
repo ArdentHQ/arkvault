@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { HttpClient } from "@/app/services/HttpClient";
 import { addressIsValid as checkIfAddressIsValid, urlBelongsToNetwork, getServerHeight } from "@/utils/peers";
 import { DeepMap, FieldError } from "react-hook-form";

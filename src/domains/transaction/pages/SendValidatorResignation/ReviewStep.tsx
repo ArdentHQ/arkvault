@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -78,7 +78,7 @@ export const ReviewStep = ({
 					<FormField name="fee">
 						<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
 						<FeeField
-							type="delegateResignation"
+							type="validatorResignation"
 							data={undefined}
 							network={senderWallet.network()}
 							profile={profile}

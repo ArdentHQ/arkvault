@@ -1,9 +1,8 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useMemo } from "react";
+import { Contracts, DTO } from "@/app/lib/profiles";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Tooltip } from "@/app/components/Tooltip";
-import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
@@ -20,28 +19,9 @@ const ParticipantStatus = ({
 	publicKey: string;
 	wallet: Contracts.IReadWriteWallet;
 }) => {
+	console.log(transaction, publicKey, wallet);
 	const { t } = useTranslation();
-	const { isAwaitingOurFinalSignature } = useMultiSignatureStatus({ transaction, wallet });
-
-	const isAwaitingSignature = useMemo(() => {
-		try {
-			if (
-				transaction.isMultiSignatureRegistration() &&
-				!wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
-				!wallet.transaction().isAwaitingOtherSignatures(transaction.id())
-			) {
-				return false;
-			}
-
-			if (transaction.isMultiSignatureRegistration() && isAwaitingOurFinalSignature) {
-				return false;
-			}
-
-			return wallet.transaction().isAwaitingSignatureByPublicKey(transaction.id(), publicKey);
-		} catch {
-			return false;
-		}
-	}, [wallet, transaction, publicKey]);
+	const isAwaitingSignature = false;
 
 	const status = isAwaitingSignature ? t("COMMON.AWAITING_SIGNATURE") : t("COMMON.SIGNED");
 

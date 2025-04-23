@@ -30,8 +30,8 @@ export const getTransferType = ({ recipients }: { recipients: RecipientItem[] })
 
 export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 	[
-		transaction.isDelegateRegistration(),
-		transaction.isDelegateResignation(),
+		transaction.isValidatorRegistration(),
+		transaction.isValidatorResignation(),
 		transaction.isVote(),
 		transaction.isUnvote(),
 		transaction.isUsernameRegistration(),

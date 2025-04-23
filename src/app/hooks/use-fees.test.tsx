@@ -1,6 +1,6 @@
 import { env, getMainsailProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
 
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 import { EnvironmentProvider } from "@/app/contexts";
 import React from "react";

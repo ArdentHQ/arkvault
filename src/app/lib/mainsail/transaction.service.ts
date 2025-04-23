@@ -1,0 +1,332 @@
+import { path } from "rambda";
+import { Contracts, IoC, Services } from "@/app/lib/sdk";
+import {
+	MultipaymentBuilder,
+	UnvoteBuilder,
+	UsernameRegistrationBuilder,
+	UsernameResignationBuilder,
+	TransferBuilder,
+	ValidatorRegistrationBuilder,
+	ValidatorResignationBuilder,
+	VoteBuilder,
+} from "@arkecosystem/typescript-crypto";
+
+import { BindingType } from "./coin.contract.js";
+import { applyCryptoConfiguration } from "./config.js";
+import { Interfaces } from "./crypto/index.js";
+import { parseUnits } from "./helpers/parse-units.js";
+import { AddressService } from "./address.service.js";
+import { SignedTransactionData } from "./signed-transaction.dto";
+
+interface ValidatedTransferInput extends Services.TransferInput {
+	gasPrice: number;
+	gasLimit: number;
+}
+
+type TransactionsInputs =
+	| Services.TransferInput
+	| Services.VoteInput
+	| Services.ValidatorRegistrationInput
+	| Services.ValidatorResignationInput;
+
+export class TransactionService extends Services.AbstractTransactionService {
+	readonly #ledgerService!: Services.LedgerService;
+	readonly #addressService!: AddressService;
+
+	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
+
+	public constructor(container: IoC.IContainer) {
+		super(container);
+
+		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
+		this.#addressService = new AddressService();
+
+		this.#configCrypto = {
+			crypto: container.get(BindingType.Crypto),
+			height: container.get(BindingType.Height),
+		};
+	}
+
+	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
+		if (!input.gasPrice) {
+			throw new Error(
+				`[TransactionService#transfer] Expected gasPrice to be defined but received ${typeof input.gasPrice}`,
+			);
+		}
+
+		if (!input.gasLimit) {
+			throw new Error(
+				`[TransactionService#transfer] Expected gasLimit to be defined but received ${typeof input.gasLimit}`,
+			);
+		}
+	}
+
+	#assertAmount(input: Services.TransferInput): asserts input is ValidatedTransferInput {
+		if (!input.data.amount) {
+			throw new Error(
+				`[TransactionService#transfer] Expected amount to be defined but received ${typeof input.data.amount}`,
+			);
+		}
+	}
+
+	public override async transfer(input: Services.TransferInput): Promise<SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+		this.#assertAmount(input);
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = TransferBuilder.new()
+			.value(parseUnits(input.data.amount, "ark").valueOf())
+			.recipientAddress(input.data.to)
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId);
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public override async validatorRegistration(
+		input: Services.ValidatorRegistrationInput,
+	): Promise<Contracts.SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		if (!input.data.validatorPublicKey) {
+			throw new Error(
+				`[TransactionService#validatorRegistration] Expected validatorPublicKey to be defined but received ${typeof input
+					.data.validatorPublicKey}`,
+			);
+		}
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await ValidatorRegistrationBuilder.new()
+			.validatorPublicKey(`0x${input.data.validatorPublicKey}`)
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId);
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public override async vote(input: Services.VoteInput): Promise<Contracts.SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		const vote: { id: string } | undefined = path(["data", "votes", 0], input);
+		const unvote: { id: string } | undefined = path(["data", "unvotes", 0], input);
+		const nonce = await this.#generateNonce(input);
+
+		if (unvote) {
+			const builder = await UnvoteBuilder.new()
+				.nonce(nonce)
+				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+				.gasLimit(input.gasLimit)
+				.network(this.#configCrypto.crypto.network.chainId);
+
+			await this.#sign(input, builder);
+
+			if (!vote) {
+				return new SignedTransactionData().configure(
+					builder.transaction.data,
+					builder.transaction.serialize().toString("hex"),
+				);
+			}
+		}
+
+		const builder = await VoteBuilder.new()
+			.vote(vote.id)
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId);
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public override async multiPayment(input: Services.MultiPaymentInput): Promise<Contracts.SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		if (!input.data.payments) {
+			throw new Error(
+				`[TransactionService#multiPayment] Expected payments to be defined but received ${typeof input.data
+					.payments}`,
+			);
+		}
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = MultipaymentBuilder.new()
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId);
+
+		for (const payment of input.data.payments) {
+			builder.pay(payment.to, parseUnits(payment.amount, "ark").toNumber());
+		}
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public override async usernameRegistration(
+		input: Services.UsernameRegistrationInput,
+	): Promise<Contracts.SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		if (!input.data.username) {
+			throw new Error(
+				`[TransactionService#validatorRegistration] Expected username to be defined but received ${typeof input
+					.data.username}`,
+			);
+		}
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await UsernameRegistrationBuilder.new()
+			.username(input.data.username)
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId);
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public override async usernameResignation(
+		input: Services.UsernameResignationInput,
+	): Promise<Contracts.SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await UsernameResignationBuilder.new()
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public override async validatorResignation(
+		input: Services.ValidatorResignationInput,
+	): Promise<Contracts.SignedTransactionData> {
+		applyCryptoConfiguration(this.#configCrypto);
+		this.#assertGasFee(input);
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await ValidatorResignationBuilder.new()
+			.nonce(nonce)
+			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
+			.gasLimit(input.gasLimit)
+			.network(this.#configCrypto.crypto.network.chainId)
+			.sign(input.signatory.signingKey());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
+		let address: string | undefined;
+
+		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
+			address = this.#addressService.fromMnemonic(input.signatory.signingKey()).address;
+		}
+
+		if (input.signatory.actsWithSecret() || input.signatory.actsWithConfirmationSecret()) {
+			address = this.#addressService.fromSecret(input.signatory.signingKey()).address;
+		}
+
+		if (input.signatory.actsWithLedger()) {
+			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
+			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
+		}
+
+		return { address };
+	}
+
+	async #generateNonce(input: Services.TransactionInputs): Promise<string> {
+		if (input.nonce) {
+			return input.nonce;
+		}
+
+		const { address } = await this.#signerData(input);
+		const wallet = await this.clientService.wallet({ type: "address", value: address! });
+
+		return wallet.nonce().toFixed(0);
+	}
+
+	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
+		const { address } = await this.#signerData(input);
+		builder.transaction.data.senderAddress = address;
+
+		if (input.signatory.actsWithLedger()) {
+			return this.#signWithLedger(input, builder.transaction);
+		}
+
+		await builder.sign(input.signatory.signingKey());
+	}
+
+	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
+		const signature = await this.#ledgerService.sign(
+			input.signatory.signingKey(),
+			transaction.serialize().toString("hex"),
+		);
+
+		transaction.data = {
+			...transaction.data,
+			...signature,
+			id: transaction.getId(),
+			v: Number.parseInt(signature.v) + 27, // TODO: remove +27 when updating mainsail packages https://app.clickup.com/t/86dwhby95
+		};
+	}
+}

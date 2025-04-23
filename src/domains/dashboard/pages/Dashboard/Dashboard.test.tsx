@@ -13,7 +13,7 @@ import {
 } from "@/utils/testing-library";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Dashboard } from "./Dashboard";
 import React from "react";
 import { Route } from "react-router-dom";

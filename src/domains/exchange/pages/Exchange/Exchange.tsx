@@ -2,7 +2,7 @@ import { Page, Section } from "@/app/components/Layout";
 import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DeleteExchangeTransaction } from "@/domains/exchange/components/DeleteExchangeTransaction";
 import { ExchangeGrid } from "@/domains/exchange/components/ExchangeGrid";
 import { ExchangeNavigationBar } from "@/domains/exchange/components/ExchangeNavigationBar";
