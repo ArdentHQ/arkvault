@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";

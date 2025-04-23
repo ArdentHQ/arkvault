@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";

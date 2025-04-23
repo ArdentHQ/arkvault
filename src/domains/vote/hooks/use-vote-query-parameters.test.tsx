@@ -1,7 +1,7 @@
 import { createHashHistory } from "history";
 import React from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useValidatorsFromURL } from "./use-vote-query-parameters";
 
 import {

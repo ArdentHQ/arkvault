@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { useMusigGeneratedWallet } from "@/domains/transaction/hooks/use-musig-generated-wallet";

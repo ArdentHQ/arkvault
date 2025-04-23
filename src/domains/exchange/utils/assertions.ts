@@ -1,5 +1,5 @@
 import { AssertionError } from "assert";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { CurrencyData } from "@/domains/exchange/exchange.contracts";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";

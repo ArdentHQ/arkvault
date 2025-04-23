@@ -1,7 +1,7 @@
 import React from "react";
 import { Dropdown } from "@/app/components/Dropdown";
 import { selectNetworkOptions, SelectNetworkToggleButton } from "./SelectNetwork.blocks";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const SelectNetwork = ({ profile }: { profile: Contracts.IProfile }) => {

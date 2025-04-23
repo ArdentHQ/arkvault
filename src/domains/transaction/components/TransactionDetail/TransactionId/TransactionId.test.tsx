@@ -1,5 +1,5 @@
 import React from "react";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { screen, renderResponsive, render } from "@/utils/testing-library";
 import * as useLink from "@/app/hooks/use-link";
 import { TransactionId } from "./TransactionId";

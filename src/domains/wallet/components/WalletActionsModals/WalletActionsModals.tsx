@@ -6,7 +6,7 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 	wallets,

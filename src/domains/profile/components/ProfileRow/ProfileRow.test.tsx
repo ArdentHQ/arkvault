@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { ProfileRow, ProfileRowSkeleton, ProfilesSliderSkeleton } from "./ProfileRow";

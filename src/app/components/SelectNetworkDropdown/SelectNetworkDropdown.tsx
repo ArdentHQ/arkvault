@@ -1,6 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
 import { Select, OptionProperties } from "@/app/components/SelectDropdown";
 import { networksAsOptions } from "@/utils/network-utils";

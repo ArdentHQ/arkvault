@@ -21,7 +21,6 @@ export const useExchangeRate = ({ ticker, exchangeTicker }: Input): Output => {
 				return 0;
 			}
 
-			// @ts-expect-error
 			return env.exchangeRates().exchange(ticker, exchangeTicker, DateTime.make(), value);
 		},
 		[env, exchangeTicker, ticker],

@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { RecipientProperties } from "./SearchRecipient.contracts";
 import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";

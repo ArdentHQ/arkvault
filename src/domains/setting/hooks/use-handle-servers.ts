@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import {

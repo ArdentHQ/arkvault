@@ -14,7 +14,10 @@ importers:
       '@ardenthq/sdk':
         specifier: 2.0.0-alpha.69
         version: 2.0.0-alpha.69
-      '@ardenthq/sdk-profiles':
+      '@ardenthq/sdk-cryptography':
+        specifier: 2.0.0-alpha.69
+        version: 2.0.0-alpha.69
+      '@ardenthq/sdk-markets':
         specifier: 2.0.0-alpha.69
         version: 2.0.0-alpha.69
       '@arkecosystem/typescript-crypto':
@@ -41,18 +44,6 @@ importers:
       '@mainsail/evm-contracts':
         specifier: 0.0.1-evm.14
         version: 0.0.1-evm.14
-      '@noble/hashes':
-        specifier: ^1.7.1
-        version: 1.7.1
-      '@noble/secp256k1':
-        specifier: ^2.2.3
-        version: 2.2.3
-      '@scure/base':
-        specifier: ^1.2.4
-        version: 1.2.4
-      '@scure/bip39':
-        specifier: ^1.5.4
-        version: 1.5.4
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.4)
@@ -86,6 +77,9 @@ importers:
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
+      dinero.js:
+        specifier: ^1.9.1
+        version: 1.9.1
       dot-prop:
         specifier: ^6.0.1
         version: 6.0.1
@@ -119,12 +113,18 @@ importers:
       locale-currency:
         specifier: ^0.0.2
         version: 0.0.2
+      localforage:
+        specifier: ^1.10.0
+        version: 1.10.0
       multiformats:
         specifier: ^13.1.3
         version: 13.2.0
       node-dotify:
         specifier: ^1.1.0
         version: 1.1.0
+      p-queue:
+        specifier: ^8.1.0
+        version: 8.1.0
       p-retry:
         specifier: ^6.2.0
         version: 6.2.0
@@ -209,6 +209,9 @@ importers:
       rollup-plugin-polyfill-node:
         specifier: ^0.13.0
         version: 0.13.0(rollup@4.19.0)
+      seedrandom:
+        specifier: ^3.0.5
+        version: 3.0.5
       semver:
         specifier: ^7.6.2
         version: 7.6.3
@@ -227,12 +230,12 @@ importers:
       tippy.js:
         specifier: ^6.3.7
         version: 6.3.7
+      type-fest:
+        specifier: ^4.40.0
+        version: 4.40.0
       usehooks-ts:
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
-      uuid:
-        specifier: ^11.1.0
-        version: 11.1.0
       viem:
         specifier: ^2.23.7
         version: 2.23.7(typescript@5.5.4)
@@ -489,10 +492,6 @@ packages:
 
   '@ardenthq/sdk-markets@2.0.0-alpha.69':
     resolution: {integrity: sha512-djEdqeVYgxJcSrZk5bt1GF8V5pwgBOL0j5/xi2iHpfSwOc5zGcLuvUefF3XXmX8HeccUb6fsUmST8USfBnKE7Q==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-profiles@2.0.0-alpha.69':
-    resolution: {integrity: sha512-y97aK17GwvFnA3KlI+ZEBAuaDryxXCWc/FN7xmOSAGIPRTV6PZIjyUdsODC3B+wA5iv1xrGbCXYgHV0rwlTAbA==}
     engines: {node: '>=16.0.0'}
 
   '@ardenthq/sdk@2.0.0-alpha.69':
@@ -1994,8 +1993,8 @@ packages:
     resolution: {integrity: sha512-B8XBPsn4vT/KJAGqDzbwztd+6Yte3P4V7iafm24bxgDe/mlRuK6xmWPuCNrKt2vDafZ8MfJLlchDG/vYafQEjQ==}
     engines: {node: ^14.21.3 || >=16}
 
-  '@noble/secp256k1@1.7.1':
-    resolution: {integrity: sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw==}
+  '@noble/secp256k1@1.7.2':
+    resolution: {integrity: sha512-/qzwYl5eFLH8OWIecQWM31qld2g1NfjgylK+TNhqtaUKP37Nm+Y+z30Fjhw0Ct8p9yCQEm2N3W/AckdIb3SMcQ==}
 
   '@noble/secp256k1@2.2.3':
     resolution: {integrity: sha512-l7r5oEQym9Us7EAigzg30/PQAvynhMt2uoYtT3t26eGDVm9Yii5mZ5jWSWmZ/oSIR2Et0xfc6DXrG0bZ787V3w==}
@@ -2547,9 +2546,6 @@ packages:
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
-
-  '@types/retry@0.12.1':
-    resolution: {integrity: sha512-xoDlM2S4ortawSWORYqsdU+2rxdh4LRW9ytc3zmT37RIKQh6IHyKwwtKhKis9ah8ol07DCkZxPt8BBvPjC6v4g==}
 
   '@types/retry@0.12.2':
     resolution: {integrity: sha512-XISRgDJ2Tc5q4TRqvgJtzsRkFYNJzZrhTdtMoGVBttwzzQJkPnS3WWTFc7kuDRoPtPakl+T+OfdEUjYJj7Jbow==}
@@ -3309,10 +3305,6 @@ packages:
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
-
-  clone@2.1.2:
-    resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
-    engines: {node: '>=0.8'}
 
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
@@ -5631,10 +5623,6 @@ packages:
   node-addon-api@5.1.0:
     resolution: {integrity: sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==}
 
-  node-cache@5.1.2:
-    resolution: {integrity: sha512-t1QzWwnk4sjLWaQAS8CHgOJ+RAfmHpxFWmc36IWTiWHQfs0w5JDMBS1b1ZxQteo0vVVuWJvIUKHDkkeK7vIGCg==}
-    engines: {node: '>= 8.0.0'}
-
   node-dotify@1.1.0:
     resolution: {integrity: sha512-kab1TLrjq7zQ3xmvao8Hk3x8miI0fBpLmerwPdoAZWhL3PdV6K3mDiGy4U6TpYc3kURmCCxIY7lSTjsixsP5cg==}
     engines: {node: '>=0.10.0'}
@@ -5835,21 +5823,17 @@ packages:
     resolution: {integrity: sha512-d3qXVTF/s+W+CdJ5A29wywV2n8CQQYahlgz2bFiA+4eVNJbHJodPZ+/gXwPGh0bOqA+j8S+6+ckmvLGPk1QpxQ==}
     engines: {node: '>=8'}
 
-  p-queue@7.4.1:
-    resolution: {integrity: sha512-vRpMXmIkYF2/1hLBKisKeVYJZ8S2tZ0zEAmIJgdVKP2nq0nh4qCdf8bgw+ZgKrkh71AOCaqzwbJJk1WtdcF3VA==}
-    engines: {node: '>=12'}
-
-  p-retry@5.1.2:
-    resolution: {integrity: sha512-couX95waDu98NfNZV+i/iLt+fdVxmI7CbrrdC2uDWfPdUAApyxT4wmDlyOtR5KtTDmkDO0zDScDjDou9YHhd9g==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+  p-queue@8.1.0:
+    resolution: {integrity: sha512-mxLDbbGIBEXTJL0zEx8JIylaj3xQ7Z/7eEVjcF9fJX4DBiH9oqe+oahYnlKKxm0Ci9TlWTyhSHgygxMxjIB2jw==}
+    engines: {node: '>=18'}
 
   p-retry@6.2.0:
     resolution: {integrity: sha512-JA6nkq6hKyWLLasXQXUrO4z8BUZGUt/LjlJxx8Gb2+2ntodU/SS63YZ8b0LUTbQ8ZB9iwOfhEPhg4ykKnn2KsA==}
     engines: {node: '>=16.17'}
 
-  p-timeout@5.1.0:
-    resolution: {integrity: sha512-auFDyzzzGZZZdHz3BtET9VEz0SE/uMEAx7uWfGPucfzEwwe/xH0iVeZibQmANYE/hp9T2+UUZT5m+BKyrDp3Ew==}
-    engines: {node: '>=12'}
+  p-timeout@6.1.4:
+    resolution: {integrity: sha512-MyIV3ZA/PmyBN/ud8vV9XzwTrNtR4jFrObymZYnZqMmW0zA8Z17vnT0rBgFE/TlohB+YCHqXMgZzb3Csp49vqg==}
+    engines: {node: '>=14.16'}
 
   p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
@@ -7340,8 +7324,8 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
 
-  type-fest@4.23.0:
-    resolution: {integrity: sha512-ZiBujro2ohr5+Z/hZWHESLz3g08BBdrdLMieYFULJO+tWc437sn8kQsWLJoZErY8alNhxre9K4p3GURAG11n+w==}
+  type-fest@4.40.0:
+    resolution: {integrity: sha512-ABHZ2/tS2JkvH1PEjxFDTUWC8dB5OsIGZP4IFLhR293GqT5Y5qB1WwL2kMPYhQW9DVgVD8Hd7I8gjwPIf5GFkw==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.0:
@@ -7544,10 +7528,6 @@ packages:
   utility-types@3.11.0:
     resolution: {integrity: sha512-6Z7Ma2aVEWisaL6TvBCy7P8rm2LQoPv6dJ7ecIaIixHcwfbJ0x7mWdbcwlIM5IGQxPZSFYeqRCqlOOeKoJYMkw==}
     engines: {node: '>= 4'}
-
-  uuid@11.1.0:
-    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
-    hasBin: true
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
@@ -8014,7 +7994,7 @@ snapshots:
   '@ardenthq/sdk-cryptography@2.0.0-alpha.69':
     dependencies:
       '@noble/hashes': 0.5.9
-      '@noble/secp256k1': 1.7.1
+      '@noble/secp256k1': 1.7.2
       bcryptjs: 2.4.3
       bigi: 1.4.2
       bn.js: 5.2.1
@@ -8052,22 +8032,6 @@ snapshots:
     dependencies:
       '@ardenthq/sdk': 2.0.0-alpha.69
       '@ardenthq/sdk-intl': 2.0.0-alpha.69
-
-  '@ardenthq/sdk-profiles@2.0.0-alpha.69':
-    dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.69
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.69
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.69
-      '@ardenthq/sdk-intl': 2.0.0-alpha.69
-      '@ardenthq/sdk-markets': 2.0.0-alpha.69
-      joi: 17.13.3
-      localforage: 1.10.0
-      node-cache: 5.1.2
-      p-queue: 7.4.1
-      p-retry: 5.1.2
-      seedrandom: 3.0.5
-      semver: 7.7.1
-      type-fest: 2.19.0
 
   '@ardenthq/sdk@2.0.0-alpha.69':
     dependencies:
@@ -9106,7 +9070,7 @@ snapshots:
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       tmp: 0.2.3
-      type-fest: 4.23.0
+      type-fest: 4.40.0
       util-arity: 1.1.0
       xmlbuilder: 15.1.1
       yaml: 2.3.1
@@ -9946,7 +9910,7 @@ snapshots:
 
   '@noble/hashes@1.7.1': {}
 
-  '@noble/secp256k1@1.7.1': {}
+  '@noble/secp256k1@1.7.2': {}
 
   '@noble/secp256k1@2.2.3': {}
 
@@ -10449,8 +10413,6 @@ snapshots:
       csstype: 3.1.2
 
   '@types/resolve@1.20.2': {}
-
-  '@types/retry@0.12.1': {}
 
   '@types/retry@0.12.2': {}
 
@@ -11385,8 +11347,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
-
-  clone@2.1.2: {}
 
   clsx@2.1.1: {}
 
@@ -14121,7 +14081,7 @@ snapshots:
       outvariant: 1.4.3
       path-to-regexp: 6.2.1
       strict-event-emitter: 0.5.1
-      type-fest: 4.23.0
+      type-fest: 4.40.0
       yargs: 17.7.2
     optionalDependencies:
       typescript: 5.5.4
@@ -14157,10 +14117,6 @@ snapshots:
   node-addon-api@2.0.2: {}
 
   node-addon-api@5.1.0: {}
-
-  node-cache@5.1.2:
-    dependencies:
-      clone: 2.1.2
 
   node-dotify@1.1.0:
     dependencies:
@@ -14387,15 +14343,10 @@ snapshots:
     dependencies:
       aggregate-error: 3.1.0
 
-  p-queue@7.4.1:
+  p-queue@8.1.0:
     dependencies:
       eventemitter3: 5.0.1
-      p-timeout: 5.1.0
-
-  p-retry@5.1.2:
-    dependencies:
-      '@types/retry': 0.12.1
-      retry: 0.13.1
+      p-timeout: 6.1.4
 
   p-retry@6.2.0:
     dependencies:
@@ -14403,7 +14354,7 @@ snapshots:
       is-network-error: 1.1.0
       retry: 0.13.1
 
-  p-timeout@5.1.0: {}
+  p-timeout@6.1.4: {}
 
   p-try@2.2.0: {}
 
@@ -16087,7 +16038,7 @@ snapshots:
 
   type-fest@2.19.0: {}
 
-  type-fest@4.23.0: {}
+  type-fest@4.40.0: {}
 
   typed-array-buffer@1.0.0:
     dependencies:
@@ -16313,8 +16264,6 @@ snapshots:
       which-typed-array: 1.1.11
 
   utility-types@3.11.0: {}
-
-  uuid@11.1.0: {}
 
   uuid@8.3.2: {}
 

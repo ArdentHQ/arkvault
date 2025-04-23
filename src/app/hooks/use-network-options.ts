@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 import { useNetworks } from "./use-networks";
 import { networksAsOptions } from "@/utils/network-utils";

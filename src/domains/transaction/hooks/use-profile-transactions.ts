@@ -1,4 +1,4 @@
-import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, Contracts as ProfileContracts, DTO } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";

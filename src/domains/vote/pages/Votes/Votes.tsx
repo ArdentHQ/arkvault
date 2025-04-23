@@ -5,7 +5,7 @@ import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/a
 
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import { Alert } from "@/app/components/Alert";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";

@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

@@ -20,7 +20,7 @@ import { httpClient, toasts } from "@/app/services";
 import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 
 import { ConfirmationStep } from "./ConfirmationStep";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";

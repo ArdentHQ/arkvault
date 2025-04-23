@@ -1,5 +1,5 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
-import { Contracts, DTO, Helpers } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO, Helpers } from "@/app/lib/profiles";
 
 import React from "react";
 import { Tooltip } from "@/app/components/Tooltip";

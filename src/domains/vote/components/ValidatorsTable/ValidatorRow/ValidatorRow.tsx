@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { TableCell, TableRow } from "@/app/components/Table";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ValidatorRowSkeleton } from "./ValidatorRowSkeleton";
 import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { ValidatorVoteButton } from "./ValidatorVoteButton";

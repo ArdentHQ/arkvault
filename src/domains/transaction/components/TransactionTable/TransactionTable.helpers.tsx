@@ -1,5 +1,5 @@
 import { Column } from "react-table";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";

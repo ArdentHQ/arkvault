@@ -1,12 +1,12 @@
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
 import { BigNumber } from "@/app/lib/helpers";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
 import { I18nextProvider } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";

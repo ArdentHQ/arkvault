@@ -3,7 +3,7 @@ import React from "react";
 
 import { AmountLabel } from "./AmountLabel";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 
 let profile: Contracts.IProfile;

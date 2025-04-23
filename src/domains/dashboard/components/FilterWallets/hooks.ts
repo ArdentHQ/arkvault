@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
 
 import { FilterWalletsHookProperties } from "./FilterWallets.contracts";

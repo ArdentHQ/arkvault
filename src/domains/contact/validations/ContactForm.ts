@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
 import { lowerCaseEquals } from "@/utils/equals";
 
