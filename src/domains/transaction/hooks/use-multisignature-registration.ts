@@ -71,7 +71,7 @@ const sendMultiSignature = async ({
 		}),
 	);
 
-	await wallet.transaction().broadcast(transaction.id());
+	await wallet.transaction().broadcast(transaction.hash());
 
 	try {
 		const { address } = await wallet
