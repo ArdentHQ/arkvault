@@ -26,6 +26,7 @@ export class HostRepository implements IHostRepository {
 			this.#data.set(network, []);
 		}
 
+		host.id = name;
 		host.custom = true;
 
 		this.#data.get<HostSet>(network)?.push({ host, name });

@@ -1,30 +1,46 @@
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { groupCustomHosts } from "@/app/lib/sdk/helpers";
+import { Host, HostMap, } from "@/app/lib/profiles/host.repository.contract";
 
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));
 
 export const customNetworks = (env: Environment, profile: Contracts.IProfile) => {
-	const networks = profile.hosts().all();
+	const networks = profile.hosts().all() as Record<string, HostMap>;
 
-	return Object.keys(networks).flatMap((coin) => {
+	const serverList: NormalizedNetwork[] = [];
+
+	Object.keys(networks).flatMap((coin) => {
 		const networkServers = networks[coin];
 
-		return Object.keys(networkServers).flatMap((server) => {
-			const servers = networkServers[server];
-			const network = env.availableNetworks().find((network) => network.id() === `${coin}.${server}`);
+		console.log({networkServers});
+		for (const key in networkServers) {
+			const groupedServers = groupCustomHosts(networkServers[key]);
 
-			return servers.map((server) => ({
-				enabled: server.enabled,
-				evmApiEndpoint: server.evmHost.host,
-				height: server.publicHost.height,
-				name: server.name,
-				network: network,
-				publicApiEndpoint: server.publicHost.host,
-				transactionApiEndpoint: server.transactionHost.host,
-			}));
-		});
+			for (const name in groupedServers) {
+				const servers = groupedServers[name];
+
+				const publicHost = servers.find(({host}) => host.type === "full")?.host as Host;
+				const txHost = servers.find(({host}) => host.type === "tx")?.host as Host;
+				const evmHost = servers.find(({host}) => host.type === "evm")?.host as Host;
+
+				const network = env.availableNetworks().find((network) => network.id() === `${coin}.${key}`);
+
+				serverList.push({
+					enabled: !!publicHost.enabled,
+					evmApiEndpoint: evmHost.host,
+					height: publicHost.height,
+					name,
+					network: network!,
+					publicApiEndpoint: publicHost.host,
+					transactionApiEndpoint: txHost.host,
+				});
+			}
+		}
 	});
+
+	return serverList;
 };
 
 export const hasAvailableMusigServer = ({ profile }: { profile?: Contracts.IProfile; network: Networks.Network }) => {
