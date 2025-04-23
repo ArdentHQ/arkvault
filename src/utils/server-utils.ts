@@ -15,13 +15,13 @@ export const customNetworks = (env: Environment, profile: Contracts.IProfile) =>
 			const network = env.availableNetworks().find((network) => network.id() === `${coin}.${server}`);
 
 			return servers.map((server) => ({
-				publicApiEndpoint: server.publicHost.host,
-				transactionApiEndpoint: server.transactionHost.host,
-				evmApiEndpoint: server.evmHost.host,
 				enabled: server.enabled,
+				evmApiEndpoint: server.evmHost.host,
 				height: server.publicHost.height,
 				name: server.name,
 				network: network,
+				publicApiEndpoint: server.publicHost.host,
+				transactionApiEndpoint: server.transactionHost.host,
 			}));
 		});
 	});

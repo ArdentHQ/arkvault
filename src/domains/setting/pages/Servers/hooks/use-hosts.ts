@@ -8,10 +8,11 @@ const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: Normal
 	const hosts = profile.hosts().all()[parts[0]][parts[1]] || [];
 
 	const index = hosts.findIndex(
-		(item) => item.name === name
-			&& item.publicHost.host === publicApiEndpoint
-			&& item.evmHost.host === evmApiEndpoint
-			&& item.transactionHost.host === transactionApiEndpoint
+		(item) =>
+			item.name === name &&
+			item.publicHost.host === publicApiEndpoint &&
+			item.evmHost.host === evmApiEndpoint &&
+			item.transactionHost.host === transactionApiEndpoint,
 	);
 
 	return [networkId, index];
@@ -38,7 +39,7 @@ const addNetwork = (
 			host: transactionApiEndpoint,
 			type: "tx",
 		},
-		type: "full"
+		type: "full",
 	});
 };
 

@@ -36,10 +36,10 @@ interface PeerRowProperties {
 	onSelectOption: ({ value }: DropdownOption) => void;
 	dropdownOptions: DropdownOption[];
 	hosts: {
-		publicApi: HostDetails,
-		txApi: HostDetails,
-		evmApi: HostDetails,
-	}
+		publicApi: HostDetails;
+		txApi: HostDetails;
+		evmApi: HostDetails;
+	};
 }
 
 const PeerRow = ({
@@ -74,55 +74,55 @@ const PeerRow = ({
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
 			<TableCell variant="start" innerClassName={tdClasses}>
-				<div className="relative flex w-full flex-col h-20 md-lg:overflow-hidden">
+				<div className="relative flex h-20 w-full flex-col md-lg:overflow-hidden">
 					<div className="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full">
 						<TruncatedWithTooltip
-							className="cursor-pointer truncate text-sm leading-[17px] font-semibold text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
+							className="cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
 							text={name}
 						/>
-						<div className="text-theme-secondary-500 dark:text-theme-dark-500 mt-[2px] text-xs font-semibold leading-[15px]">
+						<div className="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dark:text-theme-dark-500">
 							{networkName}
 						</div>
 					</div>
 				</div>
 			</TableCell>
 
-			 <TableCell innerClassName={tdClasses}>
-				 <div className="h-20 space-y-3">
-					 <div className="flex items-center space-x-5">
-						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">
-							 {t("SETTINGS.SERVERS.API")}:
-						 </div>
-						 <TruncatedWithTooltip
-							 text={publicApi.url}
-							 className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
-						 />
-					 </div>
+			<TableCell innerClassName={tdClasses}>
+				<div className="h-20 space-y-3">
+					<div className="flex items-center space-x-5">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("SETTINGS.SERVERS.API")}:
+						</div>
+						<TruncatedWithTooltip
+							text={publicApi.url}
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+						/>
+					</div>
 
-					 <div className="flex items-center space-x-5">
-						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">
-							 {t("SETTINGS.SERVERS.TX")}:
-						 </div>
-						 <TruncatedWithTooltip
-							 text={txApi.url}
-							 className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
-						 />
-					 </div>
+					<div className="flex items-center space-x-5">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("SETTINGS.SERVERS.TX")}:
+						</div>
+						<TruncatedWithTooltip
+							text={txApi.url}
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+						/>
+					</div>
 
-					 <div className="flex items-center space-x-5">
-						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">
-							 {t("SETTINGS.SERVERS.EVM")}:
-						 </div>
-						 <TruncatedWithTooltip
-							 text={evmApi.url}
-							 className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
-						 />
-					 </div>
-				 </div>
+					<div className="flex items-center space-x-5">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("SETTINGS.SERVERS.EVM")}:
+						</div>
+						<TruncatedWithTooltip
+							text={evmApi.url}
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+						/>
+					</div>
+				</div>
 			</TableCell>
 
 			<TableCell innerClassName={tdClasses} variant="middle">
-				<div className="flex h-20 items-center w-full flex-col space-y-2.5">
+				<div className="flex h-20 w-full flex-col items-center space-y-2.5">
 					<CustomPeerStatusIcon status={publicApi.status} />
 					<CustomPeerStatusIcon status={txApi.status} />
 					<CustomPeerStatusIcon status={evmApi.status} />
@@ -141,7 +141,7 @@ const PeerRow = ({
 
 			<TableCell variant="end" innerClassName={cn(tdClasses, "pr-0")}>
 				<div className="flex h-20 items-start">
-					<div className="flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 mt-px">
+					<div className="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 						<Toggle
 							data-testid="CustomPeers-toggle"
 							defaultChecked={checked}
@@ -156,7 +156,7 @@ const PeerRow = ({
 							<Button
 								variant="transparent"
 								size="icon"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 -mt-3 -mr-3"
+								className="-mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
 							>
 								<Icon name="EllipsisVerticalFilled" size="md" />
 							</Button>
@@ -213,7 +213,8 @@ const CustomPeersPeer: React.VFC<{
 	// TODO: break it down into smaller components.
 }> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
-	const { name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled, network } = normalizedNetwork;
+	const { name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled, network } =
+		normalizedNetwork;
 
 	const { t } = useTranslation();
 
@@ -306,15 +307,15 @@ const CustomPeersPeer: React.VFC<{
 								</div>
 							</div>
 						}
-						bodyClassName={cn("overflow-auto sm:grid-cols-[2.5fr_1fr_0.5fr]", { "hidden sm:grid": !isExpanded })}
+						bodyClassName={cn("overflow-auto sm:grid-cols-[2.5fr_1fr_0.5fr]", {
+							"hidden sm:grid": !isExpanded,
+						})}
 					>
-						<MobileTableElementRow
-							title={t("COMMON.ENDPOINTS")}
-						>
+						<MobileTableElementRow title={t("COMMON.ENDPOINTS")}>
 							<div className="space-y-3">
 								<div className="flex items-center space-x-5">
-									<div className="flex items-center space-x-5 min-w-0 flex-1">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 sm:flex-shrink-0 text-sm leading-[17px]">
+									<div className="flex min-w-0 flex-1 items-center space-x-5">
+										<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:flex-shrink-0">
 											{t("SETTINGS.SERVERS.API")}:
 										</div>
 										<TruncatedWithTooltip
@@ -326,8 +327,8 @@ const CustomPeersPeer: React.VFC<{
 								</div>
 
 								<div className="flex items-center space-x-5">
-									<div className="flex items-center space-x-5 min-w-0 flex-1">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 flex-shrink-0 text-sm leading-[17px]">
+									<div className="flex min-w-0 flex-1 items-center space-x-5">
+										<div className="w-9 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
 											{t("SETTINGS.SERVERS.TX")}:
 										</div>
 										<TruncatedWithTooltip
@@ -339,8 +340,8 @@ const CustomPeersPeer: React.VFC<{
 								</div>
 
 								<div className="flex items-center space-x-5">
-									<div className="flex items-center space-x-5 min-w-0 flex-1">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 flex-shrink-0 text-sm leading-[17px]">
+									<div className="flex min-w-0 flex-1 items-center space-x-5">
+										<div className="w-9 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
 											{t("SETTINGS.SERVERS.EVM")}:
 										</div>
 										<TruncatedWithTooltip
@@ -388,29 +389,30 @@ const CustomPeersPeer: React.VFC<{
 		);
 	}
 
-	return (<PeerRow
-				name={name}
-				hosts={{
-					evmApi: {
-						status: evmApiStatus,
-						url: evmApiEndpoint,
-					},
-					publicApi: {
-						status: publicApiStatus,
-						url: publicApiEndpoint,
-					},
-					txApi: {
-						status: txApiStatus,
-						url: transactionApiEndpoint,
-					}
-				}}
-				networkName={networkDisplayName(network) as string}
-				checked={enabled}
-				height={height}
-				onToggle={onToggle}
-				onSelectOption={handleSelectOption}
-				dropdownOptions={dropdownOptions}
-			/>
+	return (
+		<PeerRow
+			name={name}
+			hosts={{
+				evmApi: {
+					status: evmApiStatus,
+					url: evmApiEndpoint,
+				},
+				publicApi: {
+					status: publicApiStatus,
+					url: publicApiEndpoint,
+				},
+				txApi: {
+					status: txApiStatus,
+					url: transactionApiEndpoint,
+				},
+			}}
+			networkName={networkDisplayName(network)}
+			checked={enabled}
+			height={height}
+			onToggle={onToggle}
+			onSelectOption={handleSelectOption}
+			dropdownOptions={dropdownOptions}
+		/>
 	);
 };
 
@@ -463,7 +465,7 @@ const CustomPeers: React.VFC<{
 
 	const columns: Column[] = [
 		{
-			Header: t("COMMON.NAME") + ' / ' + t("COMMON.NETWORK"),
+			Header: t("COMMON.NAME") + " / " + t("COMMON.NETWORK"),
 			cellWidth: "md:w-28 md-lg:w-36 lg:w-56 xl:w-64",
 			disableSortBy: true,
 			headerClassName: "no-border w-1/3",

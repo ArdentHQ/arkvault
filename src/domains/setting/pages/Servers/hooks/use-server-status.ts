@@ -29,7 +29,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 		setConfiguration(profile.id(), {
 			[key]: updatedServerStatus,
 		});
-	}
+	};
 
 	const syncPublicApiStatus = useCallback(async () => {
 		setPublicApiStatus(undefined);
@@ -69,13 +69,13 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 	}, [profile, network]);
 
 	return {
-		publicApiStatus,
-		txApiStatus,
 		evmApiStatus,
+		publicApiStatus,
 		syncStatus: () => {
 			void syncPublicApiStatus();
 			void syncTxApiStatus();
 			void syncEvmApiStatus();
 		},
+		txApiStatus,
 	};
 };

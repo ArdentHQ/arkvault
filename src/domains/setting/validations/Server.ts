@@ -20,7 +20,12 @@ export const server = (t: TFunction) => ({
 				return t("COMMON.VALIDATION.HOST_FORMAT");
 			}
 
-			if (customNetworks.some((network) => network.publicApiEndpoint === address && networkToUpdate?.publicApiEndpoint !== address)) {
+			if (
+				customNetworks.some(
+					(network) =>
+						network.publicApiEndpoint === address && networkToUpdate?.publicApiEndpoint !== address,
+				)
+			) {
 				return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.ADDRESS") });
 			}
 
