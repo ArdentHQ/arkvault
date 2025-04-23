@@ -132,8 +132,8 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.push} */
-	public push(wallet: IReadWriteWallet, options: { force: boolean }): IReadWriteWallet {
-		const { force = false } = options;
+	public push(wallet: IReadWriteWallet, options?: { force: boolean }): IReadWriteWallet {
+		const { force = false } = options ?? {};
 
 		if (!force && this.findByAddressWithNetwork(wallet.address(), wallet.networkId())) {
 			throw new Error(`The wallet [${wallet.address()}] with network [${wallet.networkId()}] already exists.`);
