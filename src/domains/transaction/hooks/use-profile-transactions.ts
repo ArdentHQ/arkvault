@@ -5,7 +5,6 @@ import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
-import { SortBy } from "@/app/components/Table";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
