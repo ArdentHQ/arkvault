@@ -46,7 +46,7 @@ const transactionToCsv = (
 	const row: any[] = [];
 
 	if (settings.includeTransactionId) {
-		row.push(transaction.id());
+		row.push(transaction.hash());
 	}
 
 	if (settings.includeDate) {
