@@ -25,9 +25,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		this.#data = data;
 	}
 
-	//@ts-expect-error
 	public hash(): string {
-		//@ts-expect-error
 		return this.#data.hash();
 	}
 
@@ -39,9 +37,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.type();
 	}
 
-	//@ts-expect-error
 	public timestamp(): DateTime | undefined {
-		//@ts-expect-error
 		return this.#data.timestamp();
 	}
 
@@ -51,13 +47,11 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.confirmations();
 	}
 
-	//@ts-expect-error
 	public from(): string {
 		//@ts-expect-error
 		return this.#data.from();
 	}
 
-	//@ts-expect-error
 	public to(): string {
 		//@ts-expect-error
 		return this.#data.to();

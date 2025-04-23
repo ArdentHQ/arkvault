@@ -30,13 +30,11 @@ export class ExtendedSignedTransactionData {
 		return this.#data.type();
 	}
 
-	//@ts-expect-error
 	public from(): string {
 		//@ts-expect-error
 		return this.#data.from();
 	}
 
-	//@ts-expect-error
 	public to(): string {
 		//@ts-expect-error
 		return this.#data.to();
@@ -44,7 +42,6 @@ export class ExtendedSignedTransactionData {
 
 	//@ts-expect-error
 	public value(): number {
-		//@ts-expect-error
 		return this.#data.value().toHuman();
 	}
 
