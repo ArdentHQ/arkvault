@@ -99,10 +99,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		for (const transaction of this.#filterUnseen(transactions.items())) {
 			this.#notifications.push({
 				meta: {
-					recipients: [
-						transaction.to(),
-						...transaction.recipients().map((recipient) => recipient.address),
-					],
+					recipients: [transaction.to(), ...transaction.recipients().map((recipient) => recipient.address)],
 					timestamp: transaction.timestamp()?.toUNIX(),
 					transactionId: transaction.hash(),
 				},
