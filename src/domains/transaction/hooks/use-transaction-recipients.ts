@@ -1,5 +1,5 @@
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 

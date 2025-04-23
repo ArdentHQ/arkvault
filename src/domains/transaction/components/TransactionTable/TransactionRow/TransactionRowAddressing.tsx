@@ -1,7 +1,7 @@
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useTheme, useWalletAlias } from "@/app/hooks";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@ardenthq/sdk";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
@@ -85,6 +85,9 @@ const ContractAddressing = ({
 	t: any;
 }) => {
 	const { isDarkMode } = useTheme();
+	const address = isContractDeployment(transaction)
+		? transaction.data().data.receipt.deployedContractAddress
+		: transaction.recipient();
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
@@ -92,7 +95,7 @@ const ContractAddressing = ({
 
 			<div className="flex w-full items-center justify-between space-x-4">
 				<Link
-					to={transaction.wallet().coin().link().wallet(transaction.to())}
+					to={transaction.wallet().coin().link().wallet(address)}
 					isExternal
 					showExternalIcon={false}
 					className="whitespace-nowrap text-sm font-semibold"
@@ -102,7 +105,7 @@ const ContractAddressing = ({
 
 				<Clipboard
 					variant="icon"
-					data={transaction.from()}
+					data={address}
 					tooltip={t("COMMON.COPY_ADDRESS")}
 					tooltipDarkTheme={isDarkMode}
 				>

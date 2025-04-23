@@ -7,7 +7,7 @@ import { Label } from "@/app/components/Label";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
 import { twMerge } from "tailwind-merge";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 interface AmountLabelHintProperties {
 	className: string;

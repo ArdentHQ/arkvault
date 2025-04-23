@@ -2,7 +2,7 @@ import React from "react";
 import { screen, renderResponsive, render, env, getDefaultProfileId } from "@/utils/testing-library";
 import { TransactionDetails } from "./TransactionDetails";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 describe("TransactionDetails", () => {
 	let wallet: Contracts.IReadWriteWallet;

@@ -1,6 +1,6 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import React from "react";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 

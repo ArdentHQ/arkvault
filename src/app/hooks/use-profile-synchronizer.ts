@@ -10,7 +10,7 @@ import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { Services } from "@ardenthq/sdk";
 import { delay } from "@/utils/delay";
@@ -60,7 +60,10 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 						...(reset && { isProfileInitialSync: true }),
 					});
 					const activeNetwork = getActiveNetwork(profile);
+
 					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
+					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
+
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
 						.wallets()
 						.values()

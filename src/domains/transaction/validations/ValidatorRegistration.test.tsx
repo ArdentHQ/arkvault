@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { validatorRegistration } from "./ValidatorRegistration";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";

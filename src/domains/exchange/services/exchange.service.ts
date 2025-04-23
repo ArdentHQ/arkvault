@@ -6,7 +6,7 @@ import {
 	OrderStatusResponse,
 } from "@/domains/exchange/exchange.contracts";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { HttpClient } from "@/app/services/HttpClient";
 import { upperFirst } from "@/app/lib/helpers";
 

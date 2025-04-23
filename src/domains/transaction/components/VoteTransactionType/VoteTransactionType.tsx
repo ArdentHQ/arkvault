@@ -1,6 +1,6 @@
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { Label } from "@/app/components/Label";

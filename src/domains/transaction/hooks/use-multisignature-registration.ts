@@ -1,5 +1,5 @@
 import { Services, Signatories } from "@ardenthq/sdk";
-import { Environment, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { Environment, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useRef } from "react";
 
 import { useLedgerContext } from "@/app/contexts";

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Storage } from "@ardenthq/sdk-profiles";
+import { Storage } from "@/app/lib/profiles";
 
 export class StubStorage implements Storage {
 	private storage: any;

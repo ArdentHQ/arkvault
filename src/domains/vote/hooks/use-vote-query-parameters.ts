@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 
 import { useQueryParameters } from "@/app/hooks";

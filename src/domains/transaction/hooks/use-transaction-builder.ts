@@ -1,4 +1,4 @@
-import { DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 
 import { Services } from "@ardenthq/sdk";
 import { upperFirst } from "@/app/lib/helpers";
