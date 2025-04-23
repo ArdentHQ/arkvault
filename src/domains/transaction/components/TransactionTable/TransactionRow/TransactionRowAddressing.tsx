@@ -92,7 +92,7 @@ const ContractAddressing = ({
 
 			<div className="flex w-full items-center justify-between space-x-4">
 				<Link
-					to={transaction.wallet().coin().link().wallet(transaction.recipient())}
+					to={transaction.wallet().coin().link().wallet(transaction.to())}
 					isExternal
 					showExternalIcon={false}
 					className="whitespace-nowrap text-sm font-semibold"
@@ -102,7 +102,7 @@ const ContractAddressing = ({
 
 				<Clipboard
 					variant="icon"
-					data={transaction.sender()}
+					data={transaction.from()}
 					tooltip={t("COMMON.COPY_ADDRESS")}
 					tooltipDarkTheme={isDarkMode}
 				>
@@ -146,7 +146,7 @@ const MultiPaymentAddressing = ({
 						</span>
 					</>
 				)}
-				{direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
+				{direction === "received" && <FormattedAddress address={transaction.from()} alias={alias} />}
 			</span>
 		</div>
 	);
@@ -173,15 +173,15 @@ export const TransactionRowAddressing = ({
 	const isContract = isContractTransaction(transaction);
 
 	let direction: Direction = isNegative ? "sent" : "received";
-	if (transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient())) {
+	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
 		direction = "return";
 	}
 
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const network = transaction.wallet().network();
-	const recipientAddress = transaction.recipient();
-	const senderAddress = transaction.sender();
+	const recipientAddress = transaction.to();
+	const senderAddress = transaction.from();
 
 	const recipientAlias = useMemo(() => {
 		const found = recipients.find((r) => r.address === recipientAddress);
