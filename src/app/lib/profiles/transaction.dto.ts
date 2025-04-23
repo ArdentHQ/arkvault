@@ -39,7 +39,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public timestamp(): DateTime | undefined {
-		return DateTime.fromUnix(Number(this.#data.timestamp()) / 1000);
+		return DateTime.fromUnix(Number(this.#data.timestamp() as any as string) / 1000);
 	}
 
 	//@ts-expect-error

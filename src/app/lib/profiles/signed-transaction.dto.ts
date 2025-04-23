@@ -63,7 +63,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public timestamp(): DateTime {
-		return DateTime.fromUnix(Number(this.#data.timestamp()) / 1000);
+		return DateTime.fromUnix(Number(this.#data.timestamp() as any as string) / 1000);
 	}
 
 	public isReturn(): boolean {
