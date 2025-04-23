@@ -14,19 +14,12 @@ export interface ExtendedTransactionRecipient {
 	amount: number;
 }
 
-export type ExtendedConfirmedTransactionDataType = Contracts.ConfirmedTransactionData & {
-	blockHash(): string | undefined;
-	from(): string;
-	to(): string;
-	value(): BigNumber;
-};
-
-export class ExtendedConfirmedTransactionData implements ExtendedConfirmedTransactionDataType {
+export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
 	readonly #coin: Coins.Coin;
-	readonly #data: ExtendedConfirmedTransactionDataType;
+	readonly #data: Contracts.ConfirmedTransactionData;
 
-	public constructor(wallet: IReadWriteWallet, data: ExtendedConfirmedTransactionDataType) {
+	public constructor(wallet: IReadWriteWallet, data: Contracts.ConfirmedTransactionData) {
 		this.#wallet = wallet;
 		this.#coin = wallet.coin();
 		this.#data = data;
