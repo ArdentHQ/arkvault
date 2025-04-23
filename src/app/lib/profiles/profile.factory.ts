@@ -1,4 +1,4 @@
-import { UUID } from "@/app/lib/crypto";
+import { UUID } from "@ardenthq/sdk-cryptography";
 
 import { IProfile, IProfileFactory } from "./contracts.js";
 import { Profile } from "./profile.js";

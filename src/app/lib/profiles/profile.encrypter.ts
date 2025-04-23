@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Base64, PBKDF2 } from "@/app/lib/crypto";
+import { Base64, PBKDF2 } from "@ardenthq/sdk-cryptography";
 
 import { IProfile, IProfileData, IProfileEncrypter } from "./contracts.js";
 

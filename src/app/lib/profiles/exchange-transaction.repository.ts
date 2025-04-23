@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { UUID } from "@/app/lib/crypto";
+import { UUID } from "@ardenthq/sdk-cryptography";
 
 import {
 	ExchangeTransactionDetail,

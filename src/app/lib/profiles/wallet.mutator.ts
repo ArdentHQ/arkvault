@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import { BIP39 } from "@/app/lib/crypto";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
 
 import { IReadWriteWallet, IWalletMutator, WalletData, WalletImportMethod, WalletSetting } from "./contracts.js";
 import { Avatar } from "./helpers/avatar.js";

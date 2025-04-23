@@ -1,4 +1,4 @@
-import { PBKDF2 } from "@/app/lib/crypto";
+import { PBKDF2 } from "@ardenthq/sdk-cryptography";
 
 import { IReadWriteWallet, IWalletImportFormat } from "./contracts.js";
 
