@@ -16,7 +16,7 @@ export class TransactionService implements ITransactionService {
 	readonly #wallet: IReadWriteWallet;
 
 	/**
-	 * The transactions that have been signed but not necessarily broadcasted.
+	 * The transactions that have been signped but not necessarily broadcasted.
 	 *
 	 * @memberof TransactionService
 	 */
@@ -73,7 +73,7 @@ export class TransactionService implements ITransactionService {
 			.addSignature(transaction as any, signatory);
 
 		try {
-			if (id !== transactionWithSignature.id()) {
+			if (id !== transactionWithSignature.hash()) {
 				await this.#wallet.coin().multiSignature().forgetById(id);
 			}
 		} catch {
@@ -314,7 +314,7 @@ export class TransactionService implements ITransactionService {
 			result = await this.#wallet.coin().multiSignature().broadcast(transaction.data().toSignedData());
 		}
 
-		if (result.accepted.includes(transaction.id())) {
+		if (result.accepted.includes(transaction.hash())) {
 			this.#broadcasted[id] = this.#signed[id];
 		}
 
@@ -333,7 +333,7 @@ export class TransactionService implements ITransactionService {
 			const transactionLocal: ExtendedSignedTransactionData = this.transaction(id);
 			const transaction: Contracts.ConfirmedTransactionData = await this.#wallet
 				.client()
-				.transaction(transactionLocal.id());
+				.transaction(transactionLocal.hash());
 
 			if (transaction.isConfirmed()) {
 				delete this.#signed[id];
@@ -419,12 +419,12 @@ export class TransactionService implements ITransactionService {
 		// broadcasting and fetching them multiple times until all participants have signed
 		// the transaction. Once the transaction is fully signed we can mark it as finished.
 		if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
-			this.#pending[transaction.id()] = transaction;
+			this.#pending[transaction.hash()] = transaction;
 		} else {
-			this.#signed[transaction.id()] = transaction;
+			this.#signed[transaction.hash()] = transaction;
 		}
 
-		return transaction.id();
+		return transaction.hash();
 	}
 
 	/**
