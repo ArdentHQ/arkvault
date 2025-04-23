@@ -45,7 +45,7 @@
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@ardenthq/sdk": "2.0.0-alpha.69",
-		"@ardenthq/sdk-cryptography": "^2.2.1",
+		"@ardenthq/sdk-cryptography": "2.0.0-alpha.59",
 		"@ardenthq/sdk-markets": "^2.2.1",
 		"@arkecosystem/typescript-crypto": "0.0.4",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
@@ -120,7 +120,6 @@
 		"tippy.js": "^6.3.7",
 		"type-fest": "^4.40.0",
 		"usehooks-ts": "^3.1.0",
-		"uuid": "^11.1.0",
 		"viem": "^2.23.7",
 		"yup": "^1.4.0"
 	},

@@ -1,4 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
+import { PBKDF2 } from "@ardenthq/sdk-cryptography";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactRouterDomMock from "react-router-dom";
@@ -332,7 +333,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		mockNanoXTransport();
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-
+		vi.spyOn(wallet.signingKey(), "get").mockReturnValue(PBKDF2.encrypt(getDefaultWalletMnemonic(), "password"));
 		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, { withProviders: true });
 
 		await expect(screen.findByTestId("AuthenticationStep__encryption-password")).resolves.toBeVisible();

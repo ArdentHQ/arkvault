@@ -17,7 +17,7 @@ export const bootEnvironmentWithProfileFixtures = async ({
 
 	for (const id of ids) {
 		//@ts-ignore
-		const password: string = TestingPasswords.profiles[id]?.password;
+		const password: string = TestingPasswords?.profiles[id]?.password;
 
 		const profileData = { id, ...fixtureProfiles[id] };
 		let data = Base64.encode(JSON.stringify(profileData));

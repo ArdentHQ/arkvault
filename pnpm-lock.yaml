@@ -15,8 +15,8 @@ importers:
         specifier: 2.0.0-alpha.69
         version: 2.0.0-alpha.69
       '@ardenthq/sdk-cryptography':
-        specifier: ^2.2.1
-        version: 2.2.1
+        specifier: 2.0.0-alpha.59
+        version: 2.0.0-alpha.59
       '@ardenthq/sdk-markets':
         specifier: ^2.2.1
         version: 2.2.1
@@ -44,12 +44,6 @@ importers:
       '@mainsail/evm-contracts':
         specifier: 0.0.1-evm.14
         version: 0.0.1-evm.14
-      '@noble/hashes':
-        specifier: ^1.7.1
-        version: 1.7.1
-      '@scure/base':
-        specifier: ^1.2.4
-        version: 1.2.4
       '@scure/bip39':
         specifier: ^1.5.4
         version: 1.5.4
@@ -245,9 +239,6 @@ importers:
       usehooks-ts:
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
-      uuid:
-        specifier: ^11.1.0
-        version: 11.1.0
       viem:
         specifier: ^2.23.7
         version: 2.23.7(typescript@5.5.4)
@@ -490,8 +481,8 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@ardenthq/sdk-cryptography@2.2.1':
-    resolution: {integrity: sha512-nV3q2byfvf0clrpLwzHggwiR9SayoHEontHrAhY0MTG9a+FFkhPFJmY7fE/EHMSUfGvtl2ZFkEORn4wYsPhlrA==}
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.59':
+    resolution: {integrity: sha512-id9fccdO7SnFfbxEkJb3VRB4NDT45v35tHgRR/SWu4gdZLhMOfknraoRs90acWguWdVQwoKlMRE8ZBHRC9uMUw==}
     engines: {node: '>=16.0.0'}
 
   '@ardenthq/sdk-helpers@2.0.0-alpha.69':
@@ -7553,10 +7544,6 @@ packages:
     resolution: {integrity: sha512-6Z7Ma2aVEWisaL6TvBCy7P8rm2LQoPv6dJ7ecIaIixHcwfbJ0x7mWdbcwlIM5IGQxPZSFYeqRCqlOOeKoJYMkw==}
     engines: {node: '>= 4'}
 
-  uuid@11.1.0:
-    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
-    hasBin: true
-
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
@@ -8019,7 +8006,7 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@ardenthq/sdk-cryptography@2.2.1':
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.59':
     dependencies:
       '@noble/hashes': 0.5.9
       '@noble/secp256k1': 1.7.2
@@ -16328,8 +16315,6 @@ snapshots:
       which-typed-array: 1.1.11
 
   utility-types@3.11.0: {}
-
-  uuid@11.1.0: {}
 
   uuid@8.3.2: {}
 

@@ -5,6 +5,7 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
@@ -19,7 +20,6 @@ import { Button } from "@/app/components/Button";
 import cn from "classnames";
 import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
-import { BIP44 } from "@ardenthq/sdk-cryptography";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,

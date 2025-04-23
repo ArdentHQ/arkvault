@@ -1,6 +1,7 @@
 import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { Coins } from "@ardenthq/sdk";
 import { Contracts } from "@/app/lib/profiles";
+
 import { debounceAsync } from "@/utils/debounce";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";

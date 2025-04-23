@@ -59,6 +59,7 @@ export default defineConfig(() => {
 							"react-visibility-sensor",
 						],
 						sdk: ["@ardenthq/sdk"],
+						"sdk-cryptography": ["@ardenthq/sdk-cryptography"],
 					},
 				},
 				plugins: [
