@@ -9,6 +9,7 @@ import {
 } from "@/utils/peers";
 import { DeepMap, FieldError } from "react-hook-form";
 import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { useTranslation } from "react-i18next";
 
 export async function pingTransactionApi(endpoint: string, controller: AbortController): Promise<boolean> {
 	const { signal } = controller;
@@ -62,6 +63,8 @@ const useHandleServers = ({
 	setError: (name: keyof CustomNetwork, error: FieldError) => void;
 	clearErrors: (name: keyof CustomNetwork|(keyof CustomNetwork)[]|undefined) => void;
 }) => {
+	const { t } = useTranslation();
+
 	const [fetchingDetails, setFetchingDetails] = useState(false);
 
 	const [serverHeight, setServerHeight] = useState<number | undefined>(undefined);
@@ -88,7 +91,10 @@ const useHandleServers = ({
 		if (await urlBelongsToNetwork(profile, publicApiEndpoint, network!)) {
 			setServerHeight(await getServerHeight(publicApiEndpoint));
 		} else {
-			setError("publicApiEndpoint", { message: "Network mismatch", type: "invalidUrl"})
+			setError("publicApiEndpoint", {
+				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_MISMATCH_ERROR"),
+				type: "invalidUrl"
+			});
 		}
 		setFetchingDetails(false);
 	}
@@ -104,13 +110,16 @@ const useHandleServers = ({
 		try {
 			const status = await pingTransactionApi(transactionApiEndpoint, controller);
 			if(!status) {
-				setError(
-					"transactionApiEndpoint",
-					{ message: "Transaction API Endpoint is not valid", type: "invalidUrl" },
-				);
+				setError("transactionApiEndpoint", {
+					message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+					type: "invalidUrl"
+				});
 			}
 		} catch {
-			setError("transactionApiEndpoint", { message: "Invalid URL", type: "invalidUrl" });
+			setError("transactionApiEndpoint", {
+				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+				type: "invalidUrl"
+			});
 		}
 
 		setFetchingDetails(false);
@@ -127,13 +136,16 @@ const useHandleServers = ({
 		try {
 			const status = await pingEvmApi(evmApiEndpoint, controller);
 			if(!status) {
-				setError(
-					"evmApiEndpoint",
-					{ message: "EVM API Endpoint is not valid", type: "invalidUrl" },
-				);
+				setError("evmApiEndpoint", {
+					message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+					type: "invalidUrl"
+				});
 			}
 		} catch {
-			setError("evmApiEndpoint", { message: "Invalid URL", type: "invalidUrl" });
+			setError("evmApiEndpoint", {
+				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+				type: "invalidUrl"
+			});
 		}
 
 		setFetchingDetails(false);

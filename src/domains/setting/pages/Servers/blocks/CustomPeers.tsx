@@ -90,7 +90,9 @@ const PeerRow = ({
 			 <TableCell innerClassName={tdClasses}>
 				 <div className="h-20 space-y-3">
 					 <div className="flex items-center space-x-5">
-						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">API:</div>
+						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">
+							 {t("SETTINGS.SERVERS.API")}:
+						 </div>
 						 <TruncatedWithTooltip
 							 text={publicApi.url}
 							 className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
@@ -98,7 +100,9 @@ const PeerRow = ({
 					 </div>
 
 					 <div className="flex items-center space-x-5">
-						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">Tx:</div>
+						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">
+							 {t("SETTINGS.SERVERS.TX")}:
+						 </div>
 						 <TruncatedWithTooltip
 							 text={txApi.url}
 							 className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
@@ -106,7 +110,9 @@ const PeerRow = ({
 					 </div>
 
 					 <div className="flex items-center space-x-5">
-						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">EVM:</div>
+						 <div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 text-sm leading-[17px]">
+							 {t("SETTINGS.SERVERS.EVM")}:
+						 </div>
 						 <TruncatedWithTooltip
 							 text={evmApi.url}
 							 className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
@@ -308,7 +314,9 @@ const CustomPeersPeer: React.VFC<{
 							<div className="space-y-3">
 								<div className="flex items-center space-x-5">
 									<div className="flex items-center space-x-5 min-w-0 flex-1">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 sm:flex-shrink-0 text-sm leading-[17px]">API:</div>
+										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 sm:flex-shrink-0 text-sm leading-[17px]">
+											{t("SETTINGS.SERVERS.API")}:
+										</div>
 										<TruncatedWithTooltip
 											text={publicApiEndpoint}
 											className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
@@ -319,7 +327,9 @@ const CustomPeersPeer: React.VFC<{
 
 								<div className="flex items-center space-x-5">
 									<div className="flex items-center space-x-5 min-w-0 flex-1">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 flex-shrink-0 text-sm leading-[17px]">Tx:</div>
+										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 flex-shrink-0 text-sm leading-[17px]">
+											{t("SETTINGS.SERVERS.TX")}:
+										</div>
 										<TruncatedWithTooltip
 											text={transactionApiEndpoint}
 											className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
@@ -330,7 +340,9 @@ const CustomPeersPeer: React.VFC<{
 
 								<div className="flex items-center space-x-5">
 									<div className="flex items-center space-x-5 min-w-0 flex-1">
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 flex-shrink-0 text-sm leading-[17px]">EVM:</div>
+										<div className="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold w-9 flex-shrink-0 text-sm leading-[17px]">
+											{t("SETTINGS.SERVERS.EVM")}:
+										</div>
 										<TruncatedWithTooltip
 											text={evmApiEndpoint}
 											className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
@@ -376,8 +388,7 @@ const CustomPeersPeer: React.VFC<{
 		);
 	}
 
-	const render = () => Array.from({length: 3}, (_, index) => (
-			<PeerRow
+	return (<PeerRow
 				name={name}
 				hosts={{
 					evmApi: {
@@ -393,16 +404,14 @@ const CustomPeersPeer: React.VFC<{
 						url: transactionApiEndpoint,
 					}
 				}}
-				networkName={networkDisplayName(normalizedNetwork.network) as string}
-				checked={normalizedNetwork.enabled}
+				networkName={networkDisplayName(network) as string}
+				checked={enabled}
 				height={height}
 				onToggle={onToggle}
 				onSelectOption={handleSelectOption}
 				dropdownOptions={dropdownOptions}
 			/>
-		))
-
-	return render();
+	);
 };
 
 const CustomPeersTableFooter = ({
