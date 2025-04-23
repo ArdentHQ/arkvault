@@ -27,7 +27,7 @@ export const useTransactionRecipients = ({
 		if (transaction.isTransfer()) {
 			return [
 				getWalletAlias({
-					address: transaction.recipient(),
+					address: transaction.to(),
 					network: activeNetwork,
 					profile,
 				}),
