@@ -8,13 +8,13 @@ interface Properties {
 
 export interface MultiSignatureStatus {
 	value:
-	| "isAwaitingOurSignature"
-	| "isAwaitingOtherSignatures"
-	| "isAwaitingConfirmation"
-	| "isMultiSignatureReady"
-	| "isAwaitingFinalSignature"
-	| "isAwaitingOurFinalSignature"
-	| "isBroadcasted";
+		| "isAwaitingOurSignature"
+		| "isAwaitingOtherSignatures"
+		| "isAwaitingConfirmation"
+		| "isMultiSignatureReady"
+		| "isAwaitingFinalSignature"
+		| "isAwaitingOurFinalSignature"
+		| "isBroadcasted";
 	label: string;
 	icon: string;
 	className: string;
