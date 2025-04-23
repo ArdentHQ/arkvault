@@ -9,16 +9,21 @@ import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { DateTime } from "@/app/lib/intl";
 
-export class ExtendedSignedTransactionData {
-	readonly #data: Contracts.SignedTransactionData;
+type ExtendedSignedTransactionDataType = Contracts.SignedTransactionData & {
+	from(): string;
+	to(): string;
+};
+
+export class ExtendedSignedTransactionData implements ExtendedSignedTransactionDataType {
+	readonly #data: ExtendedSignedTransactionDataType;
 	readonly #wallet: IReadWriteWallet;
 
-	public constructor(data: Contracts.SignedTransactionData, wallet: IReadWriteWallet) {
+	public constructor(data: ExtendedSignedTransactionDataType, wallet: IReadWriteWallet) {
 		this.#data = data;
 		this.#wallet = wallet;
 	}
 
-	public data(): Contracts.SignedTransactionData {
+	public data(): ExtendedSignedTransactionDataType {
 		return this.#data;
 	}
 
