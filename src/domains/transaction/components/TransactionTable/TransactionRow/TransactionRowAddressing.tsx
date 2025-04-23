@@ -87,7 +87,7 @@ const ContractAddressing = ({
 	const { isDarkMode } = useTheme();
 	const address = isContractDeployment(transaction)
 		? transaction.data().data.receipt.deployedContractAddress
-		: transaction.recipient();
+		: transaction.to();
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
