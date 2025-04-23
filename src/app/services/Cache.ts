@@ -2,7 +2,7 @@ import { DateTime } from "@/app/lib/intl";
 
 interface CacheItem {
 	value: any;
-	expires_at: DateTime;
+	expires_at: number;
 }
 
 export class Cache {
@@ -28,7 +28,12 @@ export class Cache {
 			result = await value();
 		}
 
-		this.store[key] = { expires_at: DateTime.make().addSeconds(ttl ?? this.ttl), value: result };
+		this.store[key] = {
+			expires_at: DateTime.make()
+				.addSeconds(ttl ?? this.ttl)
+				.toUNIX(),
+			value: result,
+		};
 
 		return result;
 	}

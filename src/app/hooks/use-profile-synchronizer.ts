@@ -60,7 +60,10 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 						...(reset && { isProfileInitialSync: true }),
 					});
 					const activeNetwork = getActiveNetwork(profile);
+
 					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
+					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
+
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
 						.wallets()
 						.values()

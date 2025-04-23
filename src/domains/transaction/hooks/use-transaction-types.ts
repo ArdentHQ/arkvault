@@ -11,12 +11,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 	const { t } = useTranslation();
 
 	const transactionTypes: Record<string, { label: string }> = {
-		delegateRegistration: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
-		},
-		delegateResignation: {
-			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
-		},
 		htlcClaim: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_CLAIM"),
 		},
@@ -44,6 +38,12 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		usernameResignation: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.USERNAME_RESIGNATION"),
 		},
+		validatorRegistration: {
+			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
+		},
+		validatorResignation: {
+			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
+		},
 		vote: {
 			label: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
 		},
@@ -58,7 +58,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				return transactionTypes[type].label;
 			}
 
-			return type;
+			return t("TRANSACTION.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT");
 		},
 		types: {
 			core: useMemo(() => {
