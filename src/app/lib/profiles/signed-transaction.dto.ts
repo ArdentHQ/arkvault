@@ -40,8 +40,8 @@ export class ExtendedSignedTransactionData {
 		return this.#data.to();
 	}
 
-	//@ts-expect-error
 	public value(): number {
+		//@ts-expect-error
 		return this.#data.value().toHuman();
 	}
 

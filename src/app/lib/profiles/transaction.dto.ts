@@ -30,6 +30,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public blockHash(): string | undefined {
+		//@ts-expect-error
 		return this.#data.blockHash();
 	}
 
@@ -38,6 +39,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public timestamp(): DateTime | undefined {
+		//@ts-expect-error
 		return this.#data.timestamp();
 	}
 
