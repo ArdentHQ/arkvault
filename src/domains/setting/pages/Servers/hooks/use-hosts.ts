@@ -22,6 +22,7 @@ const addNetwork = (
 	{ network, name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, enabled, height }: NormalizedNetwork,
 ) => {
 	profile.hosts().push({
+		// @ts-ignore
 		enabled,
 		evmHost: {
 			host: evmApiEndpoint,
