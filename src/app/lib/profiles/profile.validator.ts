@@ -85,19 +85,6 @@ export class ProfileValidator implements IProfileValidator {
 				}),
 			),
 
-			plugins: Joi.object()
-				.pattern(
-					Joi.string().uuid(),
-					Joi.object({
-						id: Joi.string().required(),
-						isEnabled: Joi.boolean().required(),
-						name: Joi.string().required(),
-						permissions: Joi.array().items(Joi.string()).required(),
-						urls: Joi.array().items(Joi.string()).required(),
-						version: Joi.string().required(),
-					}),
-				)
-				.required(),
 			// @TODO: assert specific values for enums
 			settings: Joi.object({
 				[ProfileSetting.AutomaticSignOutPeriod]: Joi.number().required(),

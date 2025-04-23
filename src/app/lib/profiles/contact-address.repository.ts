@@ -1,4 +1,4 @@
-import { UUID } from "@/app/lib/crypto/uuid";
+import { UUID } from "@ardenthq/sdk-cryptography";
 import { ContactAddress } from "./contact-address";
 import {
 	IContactAddress,

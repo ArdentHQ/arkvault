@@ -1,5 +1,3 @@
-/* eslint unicorn/no-abusive-eslint-disable: "off" */
-/* eslint-disable */
 import { Base64, PBKDF2 } from "@ardenthq/sdk-cryptography";
 
 import { IProfile, IProfileData, IProfileEncrypter } from "./contracts.js";
@@ -31,7 +29,7 @@ export class ProfileEncrypter implements IProfileEncrypter {
 		}
 
 		const { id, data } = JSON.parse(
-			PBKDF2.decrypt(Base64.decode(this.#profile.getAttributes().get<string>("data")), password),
+			await PBKDF2.decrypt(Base64.decode(this.#profile.getAttributes().get<string>("data")), password),
 		);
 
 		return { id, ...data };

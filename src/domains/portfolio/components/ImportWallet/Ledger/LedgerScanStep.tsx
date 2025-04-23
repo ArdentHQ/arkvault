@@ -19,8 +19,7 @@ import { Button } from "@/app/components/Button";
 import cn from "classnames";
 import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
-
-import { BIP44 } from "@/app/lib";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
