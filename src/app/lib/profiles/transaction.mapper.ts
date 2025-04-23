@@ -2,11 +2,11 @@ import { Collections, Contracts } from "@ardenthq/sdk";
 
 import { IReadWriteWallet } from "./contracts.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
-import { ExtendedConfirmedTransactionData, ExtendedConfirmedTransactionDataType } from "./transaction.dto.js";
+import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 
 export const transformTransactionData = (
 	wallet: IReadWriteWallet,
-	transaction: ExtendedConfirmedTransactionDataType,
+	transaction: Contracts.ConfirmedTransactionData,
 ): ExtendedConfirmedTransactionData => new ExtendedConfirmedTransactionData(wallet, transaction);
 
 export const transformConfirmedTransactionDataCollection = async (
@@ -18,7 +18,7 @@ export const transformConfirmedTransactionDataCollection = async (
 	return new ExtendedConfirmedTransactionDataCollection(
 		transactions
 			.items()
-			.map((transaction) => transformTransactionData(wallet, transaction as ExtendedConfirmedTransactionDataType)),
+			.map((transaction: Contracts.ConfirmedTransactionData) => transformTransactionData(wallet, transaction)),
 		transactions.getPagination(),
 	);
 };
