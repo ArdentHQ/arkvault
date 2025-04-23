@@ -55,7 +55,6 @@
 		"@ledgerhq/hw-transport-webhid": "^6.30.0",
 		"@ledgerhq/hw-transport-webusb": "^6.29.4",
 		"@mainsail/evm-contracts": "0.0.1-evm.14",
-		"@scure/bip39": "^1.5.4",
 		"@tailwindcss/forms": "^0.5.7",
 		"@tippyjs/react": "^4.2.6",
 		"ajv": "^8.17.1",

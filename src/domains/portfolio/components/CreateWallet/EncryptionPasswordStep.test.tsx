@@ -28,7 +28,7 @@ const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
 
 describe("EncryptionPasswordStep", () => {
-	beforeEach(async () => {
+	beforeEach(() => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
 			setSelectedAddresses: () => {},
