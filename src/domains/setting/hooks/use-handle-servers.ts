@@ -96,12 +96,13 @@ const useHandleServers = ({
 	}
 
 	async function validateTransactionApi(controller: AbortController) {
+		clearErrors("transactionApiEndpoint");
+
 		if (!isValid(transactionApiEndpoint, "transactionApiEndpoint")) {
 			return;
 		}
 
 		setFetchingDetails(true);
-		clearErrors("transactionApiEndpoint");
 
 		try {
 			const status = await pingTransactionApi(transactionApiEndpoint, controller);
@@ -122,12 +123,13 @@ const useHandleServers = ({
 	}
 
 	async function validateEvmApi(controller: AbortController) {
+		clearErrors("evmApiEndpoint");
+
 		if (!isValid(evmApiEndpoint, "evmApiEndpoint")) {
 			return;
 		}
 
 		setFetchingDetails(true);
-		clearErrors("evmApiEndpoint");
 
 		try {
 			const status = await pingEvmApi(evmApiEndpoint, controller);
