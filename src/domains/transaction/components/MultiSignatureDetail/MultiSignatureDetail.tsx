@@ -70,7 +70,7 @@ export const MultiSignatureDetail = ({
 
 	const broadcastMultiSignature = useCallback(async () => {
 		try {
-			const broadcastedTransaction = await broadcast({ transactionId: transaction.id(), wallet });
+			const broadcastedTransaction = await broadcast({ transactionId: transaction.hash(), wallet });
 			setActiveTransaction(broadcastedTransaction);
 
 			await updatePendingWallets();
@@ -106,7 +106,7 @@ export const MultiSignatureDetail = ({
 					wif,
 				});
 
-				await addSignature({ signatory, transactionId: transaction.id(), wallet });
+				await addSignature({ signatory, transactionId: transaction.hash(), wallet });
 				await wallet.transaction().sync();
 
 				const { publicKeys, min } = getMultiSignatureInfo(transaction);
@@ -114,7 +114,7 @@ export const MultiSignatureDetail = ({
 				const { address } = await wallet.coin().address().fromMultiSignature({ min, publicKeys });
 				profile.pendingMusigWallets().add(address, wallet.coinId(), wallet.networkId());
 
-				if (wallet.transaction().canBeBroadcasted(transaction.id())) {
+				if (wallet.transaction().canBeBroadcasted(transaction.hash())) {
 					return broadcastMultiSignature();
 				}
 
@@ -181,7 +181,7 @@ export const MultiSignatureDetail = ({
 					</TabPanel>
 
 					<Paginator
-						isCreator={wallet.address() === transaction.sender()}
+						isCreator={wallet.address() === transaction.from()}
 						activeStep={activeStep}
 						canBeSigned={canBeSigned}
 						canBeBroadcasted={isAwaitingOurFinalSignature || isAwaitingFinalSignature || canBeBroadcasted}
