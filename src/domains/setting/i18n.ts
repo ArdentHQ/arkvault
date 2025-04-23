@@ -155,7 +155,7 @@ export const translations = {
 			EVM_API_ENDPOINT: "EVM API Endpoint",
 			FETCHING_DETAILS: "Fetching details ...",
 			FETCHING_ERROR:
-				"We were unable to connect to the provided server or failed to find the expected information. Please check your input and try again.",
+				"We were unable to connect to the provided endpoint(s) or failed to find the expected information. Please check your input and try again.",
 			MULTISIG_SERVER: "Multisig Server",
 			NETWORK_MISMATCH_ERROR: "Failed to connect to host because it is on another network.",
 			NETWORK_PLACEHOLDER: "https://ip:port/api or https://domain",
@@ -202,6 +202,8 @@ export const translations = {
 		},
 		PEERS_STATUS_TOOLTIPS: {
 			HEALTHY: "Peer is healthy.",
+			RESPONSIVE: "Responsive",
+			UNRESPONSIVE: "Unresponsive",
 			WITH_ISSUES: "Peer is not resolving.",
 		},
 		SUBTITLE: "Manage custom network peers and multisignature servers for your Profile.",

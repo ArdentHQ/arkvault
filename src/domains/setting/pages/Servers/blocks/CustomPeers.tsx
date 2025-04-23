@@ -173,7 +173,7 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 			onClick={(event: React.MouseEvent) => event.stopPropagation()}
 		>
 			{status && (
-				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}>
+				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.RESPONSIVE")}>
 					<div data-testid="CustomPeersPeer--statusok">
 						<Icon name="StatusOk" className="text-theme-success-600" size="lg" />
 					</div>
@@ -181,7 +181,7 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 			)}
 
 			{status === false && (
-				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}>
+				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.UNRESPONSIVE")}>
 					<div data-testid="CustomPeersPeer--statuserror">
 						<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
 					</div>
@@ -376,22 +376,21 @@ const CustomPeersPeer: React.VFC<{
 		);
 	}
 
-	const render = () => {
-		return Array.from({length: 3}, (_, index) => (
+	const render = () => Array.from({length: 3}, (_, index) => (
 			<PeerRow
 				name={name}
 				hosts={{
+					evmApi: {
+						status: evmApiStatus,
+						url: evmApiEndpoint,
+					},
 					publicApi: {
-						url: publicApiEndpoint,
 						status: publicApiStatus,
+						url: publicApiEndpoint,
 					},
 					txApi: {
-						url: transactionApiEndpoint,
 						status: txApiStatus,
-					},
-					evmApi: {
-						url: evmApiEndpoint,
-						status: evmApiStatus,
+						url: transactionApiEndpoint,
 					}
 				}}
 				networkName={networkDisplayName(normalizedNetwork.network) as string}
@@ -402,7 +401,6 @@ const CustomPeersPeer: React.VFC<{
 				dropdownOptions={dropdownOptions}
 			/>
 		))
-	}
 
 	return render();
 };
