@@ -100,11 +100,11 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 			this.#notifications.push({
 				meta: {
 					recipients: [
-						transaction.recipient(),
+						transaction.to(),
 						...transaction.recipients().map((recipient) => recipient.address),
 					],
 					timestamp: transaction.timestamp()?.toUNIX(),
-					transactionId: transaction.id(),
+					transactionId: transaction.hash(),
 				},
 				read_at: undefined,
 				type: INotificationTypes.Transaction,
@@ -135,7 +135,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 	}
 
 	#isRecipient(transaction: ExtendedConfirmedTransactionData): boolean {
-		return [transaction.recipient(), ...transaction.recipients().map((recipient) => recipient.address)].some(
+		return [transaction.to(), ...transaction.recipients().map((recipient) => recipient.address)].some(
 			(address: string) =>
 				!!this.#profile.wallets().findByAddressWithNetwork(address, transaction.wallet().networkId()),
 		);
@@ -153,7 +153,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				continue;
 			}
 
-			if (this.has(transaction.id())) {
+			if (this.has(transaction.hash())) {
 				continue;
 			}
 
@@ -181,11 +181,11 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: Record<string, ExtendedConfirmedTransactionData> = {};
 
 		for (const transaction of transactions) {
-			if (!this.has(transaction.id())) {
+			if (!this.has(transaction.hash())) {
 				continue;
 			}
 
-			result[transaction.id()] = transaction;
+			result[transaction.hash()] = transaction;
 		}
 
 		this.#transactions = result;
