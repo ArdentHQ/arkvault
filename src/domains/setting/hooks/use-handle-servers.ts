@@ -2,11 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { HttpClient } from "@/app/services/HttpClient";
-import {
-	addressIsValid as checkIfAddressIsValid,
-	urlBelongsToNetwork,
-	getServerHeight,
-} from "@/utils/peers";
+import { addressIsValid as checkIfAddressIsValid, urlBelongsToNetwork, getServerHeight } from "@/utils/peers";
 import { DeepMap, FieldError } from "react-hook-form";
 import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useTranslation } from "react-i18next";
@@ -61,7 +57,7 @@ const useHandleServers = ({
 	network?: Networks.Network;
 	errors: DeepMap<CustomNetwork, FieldError>;
 	setError: (name: keyof CustomNetwork, error: FieldError) => void;
-	clearErrors: (name: keyof CustomNetwork|(keyof CustomNetwork)[]|undefined) => void;
+	clearErrors: (name: keyof CustomNetwork | (keyof CustomNetwork)[] | undefined) => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -93,7 +89,7 @@ const useHandleServers = ({
 		} else {
 			setError("publicApiEndpoint", {
 				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_MISMATCH_ERROR"),
-				type: "invalidUrl"
+				type: "invalidUrl",
 			});
 		}
 		setFetchingDetails(false);
@@ -109,16 +105,16 @@ const useHandleServers = ({
 
 		try {
 			const status = await pingTransactionApi(transactionApiEndpoint, controller);
-			if(!status) {
+			if (!status) {
 				setError("transactionApiEndpoint", {
 					message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
-					type: "invalidUrl"
+					type: "invalidUrl",
 				});
 			}
 		} catch {
 			setError("transactionApiEndpoint", {
 				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
-				type: "invalidUrl"
+				type: "invalidUrl",
 			});
 		}
 
@@ -135,23 +131,23 @@ const useHandleServers = ({
 
 		try {
 			const status = await pingEvmApi(evmApiEndpoint, controller);
-			if(!status) {
+			if (!status) {
 				setError("evmApiEndpoint", {
 					message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
-					type: "invalidUrl"
+					type: "invalidUrl",
 				});
 			}
 		} catch {
 			setError("evmApiEndpoint", {
 				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
-				type: "invalidUrl"
+				type: "invalidUrl",
 			});
 		}
 
 		setFetchingDetails(false);
 	}
 
-	const controllers = useRef<Record<"transactionApi"|"evmApi", AbortController|undefined>>({
+	const controllers = useRef<Record<"transactionApi" | "evmApi", AbortController | undefined>>({
 		evmApi: undefined,
 		transactionApi: undefined,
 	});

@@ -43,7 +43,7 @@ const ServerFormModal: React.VFC<{
 	const { formState, setValue, register, watch, trigger, setError, clearErrors } = form;
 	const { isValid, errors } = formState;
 
-	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch()
+	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch();
 
 	const { fetchingDetails, serverHeight } = useHandleServers({
 		clearErrors,
@@ -63,12 +63,10 @@ const ServerFormModal: React.VFC<{
 
 		const networkObject = networkById(network)!;
 
-		const getName = (counter: number) =>
-			`${networkDisplayName(networkObject)} "Peer" #${counter}`;
+		const getName = (counter: number) => `${networkDisplayName(networkObject)} "Peer" #${counter}`;
 
 		const filteredNetworks = customNetworks.filter(
-			(customNetwork) =>
-				customNetwork.network.id() === networkObject.id()
+			(customNetwork) => customNetwork.network.id() === networkObject.id(),
 		);
 
 		let counter = filteredNetworks.length;
@@ -90,7 +88,7 @@ const ServerFormModal: React.VFC<{
 	useEffect(() => {
 		if (network) {
 			updateServerName();
-			void trigger('network');
+			void trigger("network");
 		}
 	}, [network, nameWasManuallySet]);
 
@@ -211,7 +209,11 @@ const ServerFormModal: React.VFC<{
 						</div>
 					)}
 
-					{[errors.transactionApiEndpoint?.type, errors.publicApiEndpoint?.type, errors.evmApiEndpoint?.type].includes("invalidUrl") && (
+					{[
+						errors.transactionApiEndpoint?.type,
+						errors.publicApiEndpoint?.type,
+						errors.evmApiEndpoint?.type,
+					].includes("invalidUrl") && (
 						<Alert data-testid="ServerFormModal-alert" className="mt-3" variant="danger">
 							{t("SETTINGS.SERVERS.ADD_NEW_SERVER.FETCHING_ERROR")}
 						</Alert>
