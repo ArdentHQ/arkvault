@@ -1,4 +1,4 @@
-import { Services, Signatories } from "@ardenthq/sdk";
+import { Services, Signatories } from "@/app/lib/sdk";
 
 import { ExtendedSignedTransactionData } from "./signed-transaction.dto.js";
 
@@ -71,7 +71,7 @@ export interface ITransactionService {
 	 * @return {Promise<string>}
 	 * @memberof ITransactionService
 	 */
-	signDelegateRegistration(input: Services.DelegateRegistrationInput): Promise<string>;
+	signDelegateRegistration(input: Services.ValidatorResignationInput): Promise<string>;
 
 	/**
 	 * Sign a Validator Registration transaction.
@@ -110,24 +110,6 @@ export interface ITransactionService {
 	signVote(input: Services.VoteInput): Promise<string>;
 
 	/**
-	 * Sign a Multi-Signature Registration transaction.
-	 *
-	 * @param {Services.MultiSignatureInput} input
-	 * @return {Promise<string>}
-	 * @memberof ITransactionService
-	 */
-	signMultiSignature(input: Services.MultiSignatureInput): Promise<string>;
-
-	/**
-	 * Sign an IPFS transaction.
-	 *
-	 * @param {Services.IpfsInput} input
-	 * @return {Promise<string>}
-	 * @memberof ITransactionService
-	 */
-	signIpfs(input: Services.IpfsInput): Promise<string>;
-
-	/**
 	 * Sign a Multi-Payment transaction.
 	 *
 	 * @param {Services.MultiPaymentInput} input
@@ -145,7 +127,7 @@ export interface ITransactionService {
 	 * @return {Promise<string>}
 	 * @memberof ITransactionService
 	 */
-	signDelegateResignation(input: Services.DelegateResignationInput): Promise<string>;
+	signDelegateResignation(input: Services.ValidatorResignationInput): Promise<string>;
 
 	/**
 	 * Sign a Validator Resignation transaction.
@@ -155,15 +137,6 @@ export interface ITransactionService {
 	 * @memberof ITransactionService
 	 */
 	signValidatorResignation(input: Services.ValidatorResignationInput): Promise<string>;
-
-	/**
-	 * Sign an Unlock Token transaction.
-	 *
-	 * @param {Services.UnlockTokenInput} input
-	 * @return {Promise<string>}
-	 * @memberof ITransactionService
-	 */
-	signUnlockToken(input: Services.UnlockTokenInput): Promise<string>;
 
 	/**
 	 * Get the transaction for the given ID if it is exists with any valid state.

@@ -1,4 +1,4 @@
-import { Coins, Contracts, Http, Networks } from "@ardenthq/sdk";
+import { Coins, Contracts, Http, Networks } from "@/app/lib/sdk";
 
 export class Request {
 	readonly #configRepository: Coins.ConfigRepository;

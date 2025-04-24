@@ -47,6 +47,10 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		return this.identifier;
 	}
 
+	public memo(): string {
+		return this.signedData.memo;
+	}
+
 	public type(): string {
 		if (this.isVoteCombination()) {
 			return "voteCombination";

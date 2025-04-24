@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 
 import { IKnownWalletService, IProfile } from "./contracts.js";
 import { pqueue } from "./helpers/queue.js";

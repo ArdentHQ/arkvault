@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";

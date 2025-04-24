@@ -1,4 +1,4 @@
-import { Coins, Services } from "@ardenthq/sdk";
+import { Coins, Services } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, ITransactionIndex, WalletData } from "./contracts.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";

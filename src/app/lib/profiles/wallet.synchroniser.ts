@@ -1,4 +1,4 @@
-import { Coins, Contracts, Services } from "@ardenthq/sdk";
+import { Coins, Contracts, Services } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
@@ -48,27 +48,6 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			this.#wallet.getAttributes().set("wallet", currentWallet);
 			this.#wallet.data().set(WalletData.PublicKey, currentPublicKey);
 		}
-	}
-
-	/** {@inheritDoc IWalletSynchroniser.multiSignature} */
-	public async multiSignature(): Promise<void> {
-		if (!this.#wallet.isMultiSignature()) {
-			return;
-		}
-
-		const participants: Record<string, any> = {};
-
-		for (const publicKey of this.#wallet.multiSignature().publicKeys()) {
-			const response = await this.#wallet.client().wallet({
-				method: this.#wallet.data().get(WalletData.ImportMethod),
-				type: "publicKey",
-				value: publicKey,
-			});
-
-			participants[publicKey] = response.toObject();
-		}
-
-		this.#wallet.data().set(WalletData.MultiSignatureParticipants, participants);
 	}
 
 	/** {@inheritDoc IWalletSynchroniser.votes} */

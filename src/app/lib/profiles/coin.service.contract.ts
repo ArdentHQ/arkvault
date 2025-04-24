@@ -1,4 +1,4 @@
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 
 /**
  * Defines the implementation contract for the coin service.

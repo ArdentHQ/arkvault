@@ -4,17 +4,11 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import {
-	TransactionAddresses,
-	TransactionMusigParticipants,
-	TransactionType,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { FormField } from "@/app/components/Form";
 import { DetailLabel } from "@/app/components/DetailWrapper";
-import { useMusigRegistrationStubTransaction } from "@/domains/transaction/hooks/use-stub-transaction";
-import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 export const ReviewStep = ({
 	wallet,
@@ -25,18 +19,11 @@ export const ReviewStep = ({
 }) => {
 	const { t } = useTranslation();
 	const { unregister, watch } = useFormContext();
-	const { fee, participants, minParticipants: min } = watch();
+	const { fee } = watch();
 
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
-
-	const { musigRegistrationStubTransaction } = useMusigRegistrationStubTransaction({
-		fee,
-		min,
-		publicKeys: participants.map((participant) => participant.publicKey),
-		wallet,
-	});
 
 	return (
 		<section data-testid="MultiSignature__review-step">
@@ -58,21 +45,6 @@ export const ReviewStep = ({
 						labelClassName="min-w-24"
 					/>
 				</FormField>
-
-				{musigRegistrationStubTransaction && (
-					<>
-						<TransactionType transaction={musigRegistrationStubTransaction} />
-
-						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
-						<div className="mt-2">
-							<TransactionMusigParticipants
-								publicKeys={transactionPublicKeys(musigRegistrationStubTransaction).publicKeys}
-								profile={profile}
-								network={wallet.network()}
-							/>
-						</div>
-					</>
-				)}
 
 				<div data-testid="DetailWrapper">
 					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
