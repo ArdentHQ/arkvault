@@ -12,7 +12,6 @@ export const useBlockHeight = ({
 }): { blockHeight?: string; isLoading: boolean } => {
 	const [blockHeight, setBlockHeight] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
-	console.log({ blockHash });
 	useEffect(() => {
 		const client = new HttpClient(0);
 
