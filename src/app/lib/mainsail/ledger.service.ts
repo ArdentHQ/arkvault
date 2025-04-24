@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 
-import { Contracts, IoC, Services } from "@ardenthq/sdk";
+import { Contracts, IoC, Services } from "@/app/lib/sdk";
 // @TODO: Revisit.
 // The internal implementation of HDKey fails to generate public keys from extended ledger public keys
 // which affects ledger wallet import & tx signing.
 // See discussion https://github.com/ArdentHQ/arkvault/pull/1166#discussion_r2046407360
-import { BIP44, HDKey } from "@/app/lib/crypto";
+import { BIP44, HDKey } from "@ardenthq/sdk-cryptography";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";

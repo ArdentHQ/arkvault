@@ -1,4 +1,4 @@
-import { Hash, secp256k1, WIF } from "@/app/lib/crypto";
+import { Hash, secp256k1, WIF } from "@ardenthq/sdk-cryptography";
 
 import { Network } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import { KeyPair } from "./contracts.js";

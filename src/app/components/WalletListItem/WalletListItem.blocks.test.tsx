@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";

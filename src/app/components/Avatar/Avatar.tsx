@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import { Helpers } from "@ardenthq/sdk-profiles";
+import { Helpers } from "@/app/lib/profiles";
 import { Size } from "@/types";
 import { twMerge } from "tailwind-merge";
 

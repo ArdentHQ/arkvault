@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { EmptyVotes, Votes } from "./WalletVote.blocks";
@@ -7,10 +7,9 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { Tooltip } from "@/app/components/Tooltip";
-import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
 
 interface WalletVoteProperties {
-	wallet: IReadWriteWallet | undefined;
+	wallet: Contracts.IReadWriteWallet | undefined;
 	onButtonClick: () => void;
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;

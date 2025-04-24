@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";

@@ -1,5 +1,5 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Networks, Coins } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/profiles";
+import { Networks, Coins } from "@/app/lib/sdk";
 import { isValidUrl } from "./url-validation";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";

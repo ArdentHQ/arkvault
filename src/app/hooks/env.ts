@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
 

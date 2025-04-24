@@ -1,7 +1,7 @@
 import React from "react";
 import { useBalanceVisibility } from "./use-balance-visibility";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 
 let profile: Contracts.IProfile;

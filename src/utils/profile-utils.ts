@@ -1,5 +1,5 @@
 import { matchPath } from "react-router-dom";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 
 import { profileAllEnabledNetworkIds } from "./network-utils";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";

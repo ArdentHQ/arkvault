@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { accessLedgerDevice, accessLedgerApp, persistLedgerConnection } from "./connection";
 import { env, getMainsailProfileId, mockNanoXTransport } from "@/utils/testing-library";

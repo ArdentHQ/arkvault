@@ -3,12 +3,6 @@ import { useTransactionTypes } from "./use-transaction-types";
 import { env } from "@/utils/testing-library";
 
 describe("useTransactionTypes", () => {
-	it("should get type icon", () => {
-		const { result } = renderHook(() => useTransactionTypes());
-
-		expect(result.current.getIcon("transfer")).toBe("Transfer");
-	});
-
 	it("should get type label", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 
@@ -26,8 +20,10 @@ describe("useTransactionTypes", () => {
 		const { result } = renderHook(() => useTransactionTypes({ wallets: [profile.wallets().first()] }));
 
 		expect(result.current.types.core).toStrictEqual([
-			"delegateRegistration",
-			"delegateResignation",
+			"validatorRegistration",
+			"usernameRegistration",
+			"usernameResignation",
+			"validatorResignation",
 			"multiPayment",
 			"multiSignature",
 			"transfer",

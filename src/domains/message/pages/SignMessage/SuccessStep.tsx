@@ -1,5 +1,5 @@
-import { Services } from "@ardenthq/sdk";
-import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { Services } from "@/app/lib/sdk";
+import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 

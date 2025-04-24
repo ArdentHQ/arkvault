@@ -1,11 +1,11 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 
-import { AggregateQuery } from "@ardenthq/sdk-profiles/distribution/esm/transaction.aggregate.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { assertString } from "@/utils/assertions";
 import { convertToCsv } from "./transaction-to-csv-converter";
+import { AggregateQuery } from "@/app/lib/profiles/transaction.aggregate.contract";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";

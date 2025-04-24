@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -11,7 +11,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { Button } from "@/app/components/Button";
 import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import { Modal } from "@/app/components/Modal";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";

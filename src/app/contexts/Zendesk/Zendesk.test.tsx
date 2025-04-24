@@ -1,7 +1,7 @@
 import React from "react";
 
 import userEvent from "@testing-library/user-event";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ZendeskProvider, useZendesk } from "./Zendesk";
 import { render, screen, env, getMainsailProfileId, waitFor } from "@/utils/testing-library";
 

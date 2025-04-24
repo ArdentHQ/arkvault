@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ReadableFile } from "@/app/hooks/use-files";
 
 export enum ExportProgressStatus {

@@ -1,5 +1,5 @@
-import { Coins, Services } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Coins, Services } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";

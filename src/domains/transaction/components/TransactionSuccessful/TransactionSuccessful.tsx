@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -7,7 +7,6 @@ import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailModal";
-import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -23,10 +22,7 @@ export const TransactionSuccessful = ({ transaction, senderWallet }: Transaction
 		wallet: senderWallet,
 	});
 
-	const pending = isAwaitingMusigSignatures(transaction)
-		? t("TRANSACTION.SUCCESS.CREATED")
-		: t("TRANSACTION.PENDING.TITLE");
-	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : pending;
+	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.SUCCESS.CREATED");
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>

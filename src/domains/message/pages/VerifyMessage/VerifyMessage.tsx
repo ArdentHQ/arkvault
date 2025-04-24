@@ -1,4 +1,4 @@
-import { Coins, Services } from "@ardenthq/sdk";
+import { Coins, Services } from "@/app/lib/sdk";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
@@ -106,7 +106,7 @@ export const VerifyMessage = () => {
 
 	const handleBack = () => {
 		if (activeWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
 		return history.push(ProfilePaths.Welcome);

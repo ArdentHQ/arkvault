@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { useMemo } from "react";
 
 interface Properties {
@@ -29,13 +29,6 @@ const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.E
 	} catch {
 		return false;
 	}
-};
-
-export const isAwaitingMusigSignatures = (
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
-) => {
-	console.log(transaction);
-	return false;
 };
 
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {

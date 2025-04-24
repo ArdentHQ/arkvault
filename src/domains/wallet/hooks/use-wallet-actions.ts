@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { generatePath } from "react-router";

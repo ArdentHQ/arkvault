@@ -17,8 +17,9 @@ import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-tra
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import cn from "classnames";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { DTO } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/sdk";
+import { isContractDeployment } from "@/domains/transaction/utils";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -65,6 +66,11 @@ export const TransactionDetailContent = ({
 						network={transaction.wallet().network()}
 						recipients={recipients}
 						labelClassName={labelClassName}
+						interactedWith={
+							isContractDeployment(transaction)
+								? transaction.data().data.receipt.deployedContractAddress
+								: undefined
+						}
 					/>
 				</DetailPadded>
 
