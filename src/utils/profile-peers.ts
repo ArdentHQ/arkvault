@@ -1,7 +1,7 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 
 import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { customNetworks } from "@/utils/server-utils";
 import { groupBy } from "@/app/lib/helpers";
 import { pingServerAddress } from "@/utils/peers";

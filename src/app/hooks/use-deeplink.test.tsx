@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";

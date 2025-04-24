@@ -1,9 +1,9 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
 import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";

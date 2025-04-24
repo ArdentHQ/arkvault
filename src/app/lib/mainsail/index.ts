@@ -1,4 +1,4 @@
-import { bundle, Coins } from "@ardenthq/sdk";
+import { bundle, Coins } from "@/app/lib/sdk";
 
 import { AddressService } from "./address.service";
 import { ClientService } from "./client.service";

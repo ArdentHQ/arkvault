@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import React from "react";
 
 import { ImportOption, useImportOptions } from "@/domains/wallet/hooks/use-import-options";

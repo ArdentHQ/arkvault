@@ -58,8 +58,7 @@ export default defineConfig(() => {
 							"react-toastify",
 							"react-visibility-sensor",
 						],
-						sdk: ["@ardenthq/sdk"],
-						"sdk-profiles": ["@ardenthq/sdk-profiles"],
+						"sdk-cryptography": ["@ardenthq/sdk-cryptography"],
 					},
 				},
 				plugins: [

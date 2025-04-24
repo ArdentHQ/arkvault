@@ -2,7 +2,7 @@
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { sendTransfer } from "./SendTransfer";
 
 let profile: Contracts.IProfile;

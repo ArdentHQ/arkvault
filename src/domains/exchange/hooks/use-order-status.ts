@@ -1,10 +1,10 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 
 import { httpClient } from "@/app/services";
 import { OrderStatusResponse } from "@/domains/exchange/exchange.contracts";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
-import { UUID } from "@/app/lib/crypto/uuid";
+import { UUID } from "@ardenthq/sdk-cryptography";
 
 export const useOrderStatus = () => {
 	const checkOrderStatus = useCallback(async (exchangeTransactions: Contracts.IExchangeTransaction[]) => {

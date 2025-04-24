@@ -3,7 +3,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { useNetworkFromQueryParameters, useQueryParameters } from "./use-query-parameters";
 

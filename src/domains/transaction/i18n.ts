@@ -213,7 +213,6 @@ export const translations = {
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
-		PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG: "Only participants can remove pending transactions.",
 		PARTICIPANTS_COUNT: "Multisignature Participants ({{count}})",
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",
@@ -348,6 +347,7 @@ export const translations = {
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
+		CONTRACT_DEPLOYMENT: "Contract Deployment",
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",

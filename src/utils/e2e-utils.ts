@@ -38,7 +38,6 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 export const BASEURL = "https://ark-test.arkvault.io/api/";
 
 const PING_RESPONSE_PATH = "coins/ark/mainnet/ping";
-const PING_MUSIG_RESPONSE_PATH = "coins/ark/mainnet/ping-musig";
 
 const pingServerUrls = new Set([
 	"https://ark-live.arkvault.io/",
@@ -52,13 +51,6 @@ const pingServerUrls = new Set([
 	"https://qredit.dev",
 	"https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0",
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
-]);
-
-const pingMusigServerUrls = new Set([
-	"https://ark-live-musig.arkvault.io",
-	"https://ark-test-musig.arkvault.io",
-	"https://ark-live-musig.arkvault.io/",
-	"https://ark-test-musig.arkvault.io/",
 ]);
 
 const knownWallets: any[] = [];
@@ -106,37 +98,6 @@ const walletMocks = () => {
 	);
 
 	return [...devnetMocks, ...mainnetMocks];
-};
-
-const publicKeys = [
-	"03af2feb4fc97301e16d6a877d5b135417e8f284d40fac0f84c09ca37f82886c51",
-	"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
-	"02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9",
-	"029511e2507b6c70d617492308a4b34bb1bdaabb1c260a8c15c5805df8b6a64f11",
-	"03c4d1788718e39c5de7cb718ce380c66bbe2ac5a0645a6ff90f0569178ab7cd6d",
-	"03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff",
-];
-
-const publicKeysMainnet = ["035b3d223f75bde72d0599272ae37573e254b611896241e3688151c4228e04522c"];
-
-const multisignatureMocks = () => {
-	const mocks: any = [];
-
-	for (const state of ["ready", "pending"]) {
-		mocks.push(
-			...publicKeys.map(() => mockMuSigRequest("https://ark-test-musig.arkvault.io/", "list", { result: [] })),
-			...publicKeysMainnet.map((publicKey: string) =>
-				mockMuSigRequest("https://ark-live-musig.arkvault.io/", "list", { result: [] }, { publicKey, state }),
-			),
-			...publicKeysMainnet.map(() =>
-				mockMuSigRequest("https://ark-test-musig.arkvault.io/", "store", {
-					result: { id: "1dd96f630a23d002722b5d61c86b3815e879a31592ddb5d8a7d1ed36c0b7050d" },
-				}),
-			),
-		);
-	}
-
-	return mocks;
 };
 
 const searchAddressesMocks = () => {
@@ -214,10 +175,6 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 						return require(`../tests/fixtures/${PING_RESPONSE_PATH}.json`);
 					}
 
-					if (pingMusigServerUrls.has(request.url) && request.method === "GET") {
-						return require(`../tests/fixtures/${PING_MUSIG_RESPONSE_PATH}.json`);
-					}
-
 					if (typeof fixture === "string") {
 						return require(`../tests/fixtures/${fixture}.json`);
 					}
@@ -237,33 +194,6 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 				"access-control-allow-origin": "*",
 			},
 		);
-
-export const mockMuSigRequest = (host: string, method: string, fixture: object, params?: object) =>
-	mockRequest((req: RequestOptions) => {
-		if (req.method !== "post") {
-			return false;
-		}
-
-		if (req.url !== host) {
-			return false;
-		}
-
-		const body = JSON.parse(req.body.toString());
-
-		if (body.method !== method) {
-			return false;
-		}
-
-		if (params && body.params !== params) {
-			for (const [key, value] of Object.entries(params)) {
-				if (body.params[key] !== value) {
-					return false;
-				}
-			}
-		}
-
-		return true;
-	}, fixture);
 
 export const requestMocks = {
 	configuration: [
@@ -343,7 +273,6 @@ export const requestMocks = {
 		mockRequest(/light.png$/, () => imageFixture),
 		mockRequest("https://exchanges.arkvault.io/api", "exchange/exchanges"),
 	],
-	multisignature: [...multisignatureMocks()],
 	other: [
 		mockRequest(
 			"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
@@ -484,7 +413,6 @@ const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMoc
 	...preHooks,
 	...requestMocks.configuration,
 	...requestMocks.delegates,
-	...requestMocks.multisignature,
 	...requestMocks.transactions,
 	...requestMocks.wallets,
 	...requestMocks.other,

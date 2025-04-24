@@ -1,4 +1,4 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
 

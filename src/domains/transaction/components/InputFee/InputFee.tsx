@@ -9,7 +9,7 @@ import {
 import React, { memo } from "react";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
 import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import { Switch } from "@/app/components/Switch";

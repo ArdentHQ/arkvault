@@ -12,7 +12,7 @@ import {
 import { afterAll, vi } from "vitest";
 import { httpClient, toasts } from "@/app/services";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { EnvironmentProvider } from "@/app/contexts";
 import { ProfilePaths } from "@/router/paths";
 import React from "react";

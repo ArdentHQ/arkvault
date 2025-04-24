@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/sdk";
 import { isUnit } from "@/utils/test-helpers";
 import { LedgerTransportFactory } from "@/app/contexts/Ledger";
 

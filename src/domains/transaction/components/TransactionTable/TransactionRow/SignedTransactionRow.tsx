@@ -1,13 +1,11 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { MouseEvent, useMemo } from "react";
+import { Contracts, DTO } from "@/app/lib/profiles";
+import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
-import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
-import { assertString } from "@/utils/assertions";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@/app/lib/intl";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
@@ -85,21 +83,11 @@ export const SignedTransactionRow = ({
 	wallet,
 	onRemovePendingTransaction,
 }: SignedTransactionRowProperties) => {
-	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
 	const { canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature, status } = useMultiSignatureStatus({
 		transaction,
 		wallet,
 	});
-
-	const canBeDeleted = useMemo(() => {
-		const publicKey = transaction.wallet().publicKey();
-
-		assertString(publicKey);
-
-		const musigInfo = getMultiSignatureInfo(transaction);
-		return musigInfo.publicKeys.includes(publicKey);
-	}, [transaction]);
 
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();
@@ -189,17 +177,9 @@ export const SignedTransactionRow = ({
 						type="vertical"
 						className="m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
 					/>
-					<Tooltip
-						content={
-							canBeDeleted
-								? undefined
-								: t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG")
-						}
-					>
-						<div className="flex items-center">
-							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-1" />
-						</div>
-					</Tooltip>
+					<div className="flex items-center">
+						<TableRemoveButton onClick={handleRemove} className="m-0 p-1" />
+					</div>
 				</div>
 			</TableCell>
 		</TableRow>

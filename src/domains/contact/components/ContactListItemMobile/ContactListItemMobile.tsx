@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { Dropdown } from "@/app/components/Dropdown";

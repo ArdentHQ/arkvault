@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
@@ -24,7 +24,7 @@ import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
-import { Signatories } from "@ardenthq/sdk";
+import { Signatories } from "@/app/lib/sdk";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { createHashHistory } from "history";

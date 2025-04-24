@@ -1,6 +1,6 @@
-import { DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { upperFirst } from "@/app/lib/helpers";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
@@ -36,8 +36,6 @@ export const useTransactionBuilder = () => {
 	): Promise<{ uuid: string; transaction: DTO.ExtendedSignedTransactionData }> => {
 		// Ensures the cache is flushed so it always fetches the latest wallet nonce
 		httpClient.forgetWalletCache(env, wallet);
-
-		await wallet.transaction().sync();
 
 		const service = wallet.transaction();
 

@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { lowerCaseEquals } from "@/utils/equals";

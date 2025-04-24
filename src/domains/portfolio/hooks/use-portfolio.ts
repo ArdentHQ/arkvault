@@ -1,13 +1,11 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
-import { IReadWriteWallet } from "@ardenthq/sdk-profiles/distribution/esm/wallet.contract";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 
-function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
+function Balance({ wallets }: { wallets: Contracts.IReadWriteWallet[] }) {
 	return {
 		total(): BigNumber {
 			let balance = BigNumber.make(0);
@@ -28,7 +26,13 @@ function Balance({ wallets }: { wallets: IReadWriteWallet[] }) {
 	};
 }
 
-export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfile; activeNetwork: Networks.Network }) {
+export function SelectedAddresses({
+	profile,
+	activeNetwork,
+}: {
+	profile: Contracts.IProfile;
+	activeNetwork: Networks.Network;
+}) {
 	return {
 		/**
 		 * Returns all the selected profile selected addresses.
@@ -66,7 +70,7 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 		 *
 		 * @returns {IReadWriteWallet | undefined}
 		 */
-		defaultSelectedWallet(): IReadWriteWallet | undefined {
+		defaultSelectedWallet(): Contracts.IReadWriteWallet | undefined {
 			if (profile.wallets().count() === 1) {
 				return profile.wallets().first();
 			}
@@ -116,7 +120,7 @@ export function SelectedAddresses({ profile, activeNetwork }: { profile: IProfil
 		 *
 		 * @returns {IReadWriteWallet[]}
 		 */
-		toWallets(): IReadWriteWallet[] {
+		toWallets(): Contracts.IReadWriteWallet[] {
 			const selected = this.all();
 
 			return profile

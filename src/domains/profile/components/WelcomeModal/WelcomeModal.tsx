@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

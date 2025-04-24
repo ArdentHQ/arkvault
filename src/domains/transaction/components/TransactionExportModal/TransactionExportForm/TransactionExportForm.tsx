@@ -5,7 +5,7 @@ import { BasicSettings, CSVSettings, ColumnSettings } from ".";
 import { TransactionExportFormProperties } from "@/domains/transaction/components/TransactionExportModal";
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 export const TransactionExportForm = ({ wallets, onCancel, profile }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();

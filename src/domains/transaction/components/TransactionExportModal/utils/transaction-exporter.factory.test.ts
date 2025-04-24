@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { TransactionExporter } from "./transaction-exporter.factory";
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";

@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { useMemo } from "react";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {

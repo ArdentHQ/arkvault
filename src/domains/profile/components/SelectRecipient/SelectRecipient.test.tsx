@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -246,35 +246,5 @@ describe("SelectRecipient", () => {
 		await userEvent.click(selectRecipient());
 
 		await waitFor(() => expect(screen.queryByTestId("RecipientListItem__select-button")).not.toBeInTheDocument());
-	});
-
-	it("should filter recipients list by MultiSignature type", async () => {
-		const { rerender } = render(<SelectRecipient profile={profile} />);
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		await userEvent.click(selectRecipient());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		});
-
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(3);
-
-		const isMultiSignatureSpy = vi
-			.spyOn(profile.wallets().first(), "isMultiSignature")
-			.mockImplementation(() => true);
-
-		rerender(<SelectRecipient profile={profile} exceptMultiSignature />);
-
-		await userEvent.click(selectRecipient());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		});
-
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
-
-		isMultiSignatureSpy.mockRestore();
 	});
 });

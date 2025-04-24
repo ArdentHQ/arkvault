@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Coins, Networks } from "@ardenthq/sdk";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Coins, Networks } from "@/app/lib/sdk";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { Trans, useTranslation } from "react-i18next";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
