@@ -7,14 +7,13 @@ import { Host, HostMap } from "@/app/lib/profiles/host.repository.contract";
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));
 
 export const customNetworks = (env: Environment, profile: Contracts.IProfile) => {
-	const networks = profile.hosts().all() as Record<string, HostMap>;
+	const networks = profile.hosts().all();
 
 	const serverList: any[] = [];
 
 	Object.keys(networks).flatMap((coin) => {
 		const networkServers = networks[coin];
 
-		console.log({ networkServers });
 		for (const key in networkServers) {
 			const groupedServers = groupCustomHosts(networkServers[key]);
 
