@@ -151,7 +151,7 @@ export const translations = {
 	SERVERS: {
 		ADD_NEW_SERVER: {
 			DESCRIPTION:
-				"Add a custom network peer or multisignature server for the selected network by providing a valid address.",
+				"To add a custom peer, enter valid endpoints for the selected network.",
 			ENDPOINT_ERROR: "Either failed to connect to the endpoint or it doesn't contain the expected information.",
 			EVM_API_ENDPOINT: "EVM API Endpoint",
 			FETCHING_DETAILS: "Fetching details ...",

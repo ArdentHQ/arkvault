@@ -4,7 +4,7 @@ import { Networks } from "@/app/lib/sdk";
 import { useForm } from "react-hook-form";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
-import { InputDefault } from "@/app/components/Input";
+import { Input, InputDefault } from "@/app/components/Input";
 import { CustomNetwork, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useHandleServers } from "@/domains/setting/hooks/use-handle-servers";
 import { Button } from "@/app/components/Button";
@@ -41,7 +41,7 @@ const ServerFormModal: React.VFC<{
 	});
 
 	const { formState, setValue, register, watch, trigger, setError, clearErrors } = form;
-	const { isValid, errors } = formState;
+	const { isValid, errors, dirtyFields } = formState;
 
 	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch();
 
@@ -124,6 +124,22 @@ const ServerFormModal: React.VFC<{
 		});
 	};
 
+	const endpointInputAddon = (type: string) => {
+		if(!errors[type] && dirtyFields[type]) {
+			return {
+				end: {
+					content: (
+						<Icon
+							name="CircleCheckMark"
+							size="lg"
+							className="text-theme-success-600 dark:text-theme-success-500"
+						/>
+					),
+				},
+			}
+		}
+	}
+
 	return (
 		<Modal
 			data-testid="ServerFormModal"
@@ -173,28 +189,31 @@ const ServerFormModal: React.VFC<{
 
 				<FormField name="publicApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.PUBLIC_API_ENDPOINT")} />
-					<InputDefault
+					<Input
 						name="publicApiEndpoint"
 						data-testid="ServerFormModal--publicApiEndpoint"
 						ref={register(server.address(customNetworks, "publicApiEndpoint", networkToUpdate))}
+						addons={endpointInputAddon('publicApiEndpoint')}
 					/>
 				</FormField>
 
 				<FormField name="transactionApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.TRANSACTION_API_ENDPOINT")} />
-					<InputDefault
+					<Input
 						data-testid="ServerFormModal--transactionApiEndpoint"
 						name="transactionApiEndpoint"
 						ref={register(server.address(customNetworks, "transactionApiEndpoint", networkToUpdate))}
+						addons={endpointInputAddon('transactionApiEndpoint')}
 					/>
 				</FormField>
 
 				<FormField name="evmApiEndpoint">
 					<FormLabel label={t("SETTINGS.SERVERS.ADD_NEW_SERVER.EVM_API_ENDPOINT")} />
-					<InputDefault
+					<Input
 						name="evmApiEndpoint"
 						data-testid="ServerFormModal--evmApiEndpoint"
 						ref={register(server.address(customNetworks, "evmApiEndpoint", networkToUpdate))}
+						addons={endpointInputAddon('evmApiEndpoint')}
 					/>
 				</FormField>
 
