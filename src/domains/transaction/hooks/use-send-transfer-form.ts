@@ -123,8 +123,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			handleBroadcastError(response);
 
-			await wallet.transaction().sync();
-
 			await persist();
 
 			return transaction;

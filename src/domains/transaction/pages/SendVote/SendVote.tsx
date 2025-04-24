@@ -325,8 +325,6 @@ export const SendVote = () => {
 
 					handleBroadcastError(voteResponse);
 
-					await activeWallet.transaction().sync();
-
 					await persist();
 
 					setTransaction(transaction);
@@ -356,8 +354,6 @@ export const SendVote = () => {
 
 					handleBroadcastError(unvoteResponse);
 
-					await activeWallet.transaction().sync();
-
 					await persist();
 
 					await confirmSendVote(activeWallet, "unvote");
@@ -380,8 +376,6 @@ export const SendVote = () => {
 					const voteResponse = await activeWallet.transaction().broadcast(voteResult.uuid);
 
 					handleBroadcastError(voteResponse);
-
-					await activeWallet.transaction().sync();
 
 					await persist();
 
@@ -418,8 +412,6 @@ export const SendVote = () => {
 				const response = await activeWallet.transaction().broadcast(uuid);
 
 				handleBroadcastError(response);
-
-				await activeWallet.transaction().sync();
 
 				await persist();
 

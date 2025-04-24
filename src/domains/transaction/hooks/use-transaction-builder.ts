@@ -37,8 +37,6 @@ export const useTransactionBuilder = () => {
 		// Ensures the cache is flushed so it always fetches the latest wallet nonce
 		httpClient.forgetWalletCache(env, wallet);
 
-		await wallet.transaction().sync();
-
 		const service = wallet.transaction();
 
 		// @ts-ignore
