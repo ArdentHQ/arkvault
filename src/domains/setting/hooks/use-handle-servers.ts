@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { HttpClient } from "@/app/services/HttpClient";
 import { addressIsValid as checkIfAddressIsValid, urlBelongsToNetwork, getServerHeight } from "@/utils/peers";
