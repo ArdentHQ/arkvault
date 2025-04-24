@@ -76,11 +76,11 @@ const useHandleServers = ({
 	async function validatePublicApi() {
 		setServerHeight(undefined);
 
-		clearErrors("publicApiEndpoint");
-
 		if (!isValid(publicApiEndpoint, "publicApiEndpoint")) {
 			return;
 		}
+
+		clearErrors("publicApiEndpoint");
 
 		setFetchingDetails(true);
 
@@ -96,11 +96,11 @@ const useHandleServers = ({
 	}
 
 	async function validateTransactionApi(controller: AbortController) {
-		clearErrors("transactionApiEndpoint");
-
 		if (!isValid(transactionApiEndpoint, "transactionApiEndpoint")) {
 			return;
 		}
+
+		clearErrors("transactionApiEndpoint");
 
 		setFetchingDetails(true);
 
@@ -123,11 +123,11 @@ const useHandleServers = ({
 	}
 
 	async function validateEvmApi(controller: AbortController) {
-		clearErrors("evmApiEndpoint");
-
 		if (!isValid(evmApiEndpoint, "evmApiEndpoint")) {
 			return;
 		}
+
+		clearErrors("transactionApiEndpoint");
 
 		setFetchingDetails(true);
 

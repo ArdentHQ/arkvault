@@ -176,7 +176,7 @@ const ServerFormModal: React.VFC<{
 					<InputDefault
 						name="publicApiEndpoint"
 						data-testid="ServerFormModal--publicApiEndpoint"
-						ref={register(server.address(customNetworks, networkToUpdate))}
+						ref={register(server.address(customNetworks, "publicApiEndpoint", networkToUpdate))}
 					/>
 				</FormField>
 
@@ -185,7 +185,7 @@ const ServerFormModal: React.VFC<{
 					<InputDefault
 						data-testid="ServerFormModal--transactionApiEndpoint"
 						name="transactionApiEndpoint"
-						ref={register(server.address(customNetworks, networkToUpdate))}
+						ref={register(server.address(customNetworks, "transactionApiEndpoint", networkToUpdate))}
 					/>
 				</FormField>
 
@@ -194,7 +194,7 @@ const ServerFormModal: React.VFC<{
 					<InputDefault
 						name="evmApiEndpoint"
 						data-testid="ServerFormModal--evmApiEndpoint"
-						ref={register(server.address(customNetworks, networkToUpdate))}
+						ref={register(server.address(customNetworks, "evmApiEndpoint", networkToUpdate))}
 					/>
 				</FormField>
 

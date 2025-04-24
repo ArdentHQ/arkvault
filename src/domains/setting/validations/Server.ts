@@ -3,7 +3,7 @@ import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contr
 import { addressIsValid, isValidIp, hasPath, endsWithSlash } from "@/utils/peers";
 
 export const server = (t: TFunction) => ({
-	address: (customNetworks: NormalizedNetwork[], networkToUpdate?: NormalizedNetwork) => ({
+	address: (customNetworks: NormalizedNetwork[], type: "publicApiEndpoint"|"transactionApiEndpoint"|"evmApiEndpoint", networkToUpdate?: NormalizedNetwork, ) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.ADDRESS"),
 		}).toString(),
@@ -22,8 +22,13 @@ export const server = (t: TFunction) => ({
 
 			if (
 				customNetworks.some(
-					(network) =>
-						network.publicApiEndpoint === address && networkToUpdate?.publicApiEndpoint !== address,
+					(network) => {
+						if (networkToUpdate) {
+							return network[type] === address && networkToUpdate[type] !== address;
+						}
+
+						return network[type] === address;
+					}
 				)
 			) {
 				return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.ADDRESS") });
