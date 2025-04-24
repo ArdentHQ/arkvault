@@ -1,6 +1,6 @@
-import { NetworkHost } from "@/app/lib/sdk/network.models";
+import { Networks } from "@/app/lib/sdk";
 
-export type Host = NetworkHost;
+export type Host = Networks.NetworkHost;
 export type HostSet = { name: string; host: Host }[];
 export type HostMap = Record<string, HostSet>;
 
