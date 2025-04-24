@@ -71,7 +71,7 @@ export class CryptoCompare implements PriceTracker {
 			tsyms: Object.keys(CURRENCIES).join(","),
 		});
 
-		return new MarketTransformer(body.RAW && body.RAW[token] ? body.RAW[token] : {}).transform({});
+		return new MarketTransformer(body.RAW && body.RAW[token] ? body.RAW[token] : {}).transform();
 	}
 
 	/** {@inheritDoc PriceTracker.historicalPrice} */
