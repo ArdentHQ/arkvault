@@ -1,6 +1,6 @@
-import { Networks } from "@ardenthq/sdk";
+import { NetworkHost } from "@/app/lib/sdk/network.models";
 
-export type Host = Networks.NetworkHost;
+export type Host = NetworkHost;
 export type HostSet = { name: string; host: Host }[];
 export type HostMap = Record<string, HostSet>;
 
