@@ -1,4 +1,4 @@
-import { Coins, Http, Networks, Services } from "@ardenthq/sdk";
+import { Coins, Http, Networks, Services } from "@/app/lib/sdk";
 
 import { IProfile } from "./profile.contract.js";
 

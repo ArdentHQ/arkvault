@@ -1,4 +1,4 @@
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";

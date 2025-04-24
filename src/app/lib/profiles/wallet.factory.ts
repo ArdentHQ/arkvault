@@ -1,4 +1,4 @@
-import { Enums } from "@ardenthq/sdk";
+import { Enums } from "@/app/lib/sdk";
 import { BIP38, BIP39, UUID } from "@ardenthq/sdk-cryptography";
 
 import {

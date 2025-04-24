@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
 

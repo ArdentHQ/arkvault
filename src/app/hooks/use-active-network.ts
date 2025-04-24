@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";

@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 
 import { AppearanceService } from "./appearance.service.js";
 import { Authenticator } from "./authenticator.js";
@@ -40,8 +40,6 @@ import { NetworkRepository } from "./network.repository.js";
 import { IProfileNotificationService } from "./notification.repository.contract.js";
 import { ProfileNotificationService } from "./notification.service.js";
 import { PasswordManager } from "./password.js";
-import { IPendingMusigWalletRepository } from "./pending-musig-wallet.repository.contract.js";
-import { PendingMusigWalletRepository } from "./pending-musig-wallet.repository.js";
 import { Portfolio } from "./portfolio.js";
 import { ProfileInitialiser } from "./profile.initialiser.js";
 import { ProfileStatus } from "./profile.status.js";
@@ -142,14 +140,6 @@ export class Profile implements IProfile {
 	readonly #walletFactory: IWalletFactory;
 
 	/**
-	 * The pending musig wallet repository.
-	 *
-	 * @type {IPendingMusigWalletRepository}
-	 * @memberof Profile
-	 */
-	readonly #pendingMusigWallets: IPendingMusigWalletRepository;
-
-	/**
 	 * The wallet repository.
 	 *
 	 * @type {IWalletRepository}
@@ -235,7 +225,6 @@ export class Profile implements IProfile {
 		this.#appearanceService = new AppearanceService(this);
 		this.#walletFactory = new WalletFactory(this);
 		this.#walletRepository = new WalletRepository(this);
-		this.#pendingMusigWallets = new PendingMusigWalletRepository(this);
 		this.#countAggregate = new CountAggregate(this);
 		this.#registrationAggregate = new RegistrationAggregate(this);
 		this.#transactionAggregate = new TransactionAggregate(this);
@@ -364,11 +353,6 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.wallets} */
 	public wallets(): IWalletRepository {
 		return this.#walletRepository;
-	}
-
-	/** {@inheritDoc IProfile.pendingMusigWallets} */
-	public pendingMusigWallets(): IPendingMusigWalletRepository {
-		return this.#pendingMusigWallets;
 	}
 
 	/** {@inheritDoc IProfile.walletFactory} */

@@ -1,4 +1,4 @@
-import { Coins, Contracts } from "@ardenthq/sdk";
+import { Coins, Contracts } from "@/app/lib/sdk";
 
 import { IDataRepository, IDelegateService, IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 import { DataRepository } from "./data.repository";

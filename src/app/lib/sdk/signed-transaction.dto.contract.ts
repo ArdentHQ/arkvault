@@ -30,6 +30,7 @@ export interface SignedTransactionData {
 	fee(): BigNumber;
 	nonce(): BigNumber;
 	timestamp(): DateTime;
+	memo(): string;
 
 	// Types
 	isTransfer(): boolean;

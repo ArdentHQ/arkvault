@@ -1,4 +1,4 @@
-import { DTO, Services } from "@ardenthq/sdk";
+import { DTO, Services } from "@/app/lib/sdk";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const isNoDeviceError = (error: any) => {

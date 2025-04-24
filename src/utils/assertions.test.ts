@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/no-null */
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 import { Profile, Wallet } from "@/app/lib/profiles";
 
 import {

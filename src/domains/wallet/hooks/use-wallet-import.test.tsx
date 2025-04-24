@@ -1,5 +1,5 @@
 import React from "react";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts, Wallet } from "@/app/lib/profiles";
 import { act, renderHook } from "@testing-library/react";
 

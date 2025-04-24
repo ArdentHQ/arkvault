@@ -1,4 +1,4 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { useCallback } from "react";
 import { LedgerDevice } from "./connection.state";
