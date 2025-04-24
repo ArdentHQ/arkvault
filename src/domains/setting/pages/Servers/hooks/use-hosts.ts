@@ -16,7 +16,7 @@ const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: Normal
 
 	const index = hosts.findIndex((item) => item.name === name && item.host.host === host);
 
-	return [networkId, index];
+	return [networkId, index] as [string, number];
 };
 
 const addNetwork = (
