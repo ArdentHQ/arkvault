@@ -8,7 +8,6 @@ import {
 	IDataRepository,
 	IExchangeRateService,
 	IKnownWalletService,
-	IMultiSignature,
 	IProfile,
 	IReadWriteWallet,
 	IReadWriteWalletAttributes,
@@ -31,7 +30,6 @@ import {
 import { DataRepository } from "./data.repository";
 import { AttributeBag } from "./helpers/attribute-bag.js";
 import { KnownWalletService } from "./known-wallet.service.js";
-import { MultiSignature } from "./multi-signature.js";
 import { WalletSerialiser } from "./serialiser.js";
 import { SettingRepository } from "./setting.repository";
 import { SignatoryFactory } from "./signatory.factory.js";
@@ -61,7 +59,6 @@ export class Wallet implements IReadWriteWallet {
 	readonly #transactionIndex: ITransactionIndex;
 	readonly #signingKey: IWalletImportFormat;
 	readonly #confirmKey: IWalletImportFormat;
-	readonly #multiSignature: IMultiSignature;
 	readonly #signatoryFactory: ISignatoryFactory;
 
 	public constructor(id: string, initialState: any, profile: IProfile) {
@@ -82,7 +79,6 @@ export class Wallet implements IReadWriteWallet {
 		this.#transactionIndex = new TransactionIndex(this);
 		this.#signingKey = new WalletImportFormat(this, WalletData.EncryptedSigningKey);
 		this.#confirmKey = new WalletImportFormat(this, WalletData.EncryptedConfirmKey);
-		this.#multiSignature = new MultiSignature(this);
 		this.#signatoryFactory = new SignatoryFactory(this);
 
 		this.#restore();
@@ -162,7 +158,6 @@ export class Wallet implements IReadWriteWallet {
 		const value: Contracts.WalletBalance | undefined = this.data().get(WalletData.Balance);
 
 		if (value && value[type]) {
-			//@ts-expect-error
 			return +BigNumber.make(value[type] as BigNumber, this.#decimals()).toHuman();
 		}
 
@@ -353,15 +348,6 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.LedgerModel) === WalletLedgerModel.NanoS;
 	}
 
-	/** {@inheritDoc IReadWriteWallet.isMultiSignature} */
-	public isMultiSignature(): boolean {
-		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
-			throw new Error(ERR_NOT_SYNCED);
-		}
-
-		return this.#attributes.get<Contracts.WalletData>("wallet").isMultiSignature();
-	}
-
 	/** {@inheritDoc IReadWriteWallet.isSecondSignature} */
 	public isSecondSignature(): boolean {
 		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
@@ -513,11 +499,6 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.confirmKey} */
 	public confirmKey(): IWalletImportFormat {
 		return this.#confirmKey;
-	}
-
-	/** {@inheritDoc IReadWriteWallet.multiSignature} */
-	public multiSignature(): IMultiSignature {
-		return this.#multiSignature;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.explorerLink} */
@@ -683,9 +664,7 @@ export class Wallet implements IReadWriteWallet {
 
 		/* istanbul ignore next */
 		this.data().set(WalletData.Balance, {
-			//@ts-expect-error
 			available: BigNumber.make(balance?.available || 0, this.#decimals()),
-			//@ts-expect-error
 			fees: BigNumber.make(balance?.fees || 0, this.#decimals()),
 		});
 

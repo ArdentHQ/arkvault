@@ -6,7 +6,6 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
-import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { assertString } from "@/utils/assertions";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@/app/lib/intl";
@@ -97,8 +96,7 @@ export const SignedTransactionRow = ({
 
 		assertString(publicKey);
 
-		const musigInfo = getMultiSignatureInfo(transaction);
-		return musigInfo.publicKeys.includes(publicKey);
+		return true;
 	}, [transaction]);
 
 	const handleRemove = (event?: MouseEvent) => {

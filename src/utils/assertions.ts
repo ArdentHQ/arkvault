@@ -10,7 +10,7 @@ export function assertProfile(profile?: Contracts.IProfile): asserts profile is 
 	}
 }
 
-export function assertWallet(wallet?: Contracts.IReadWriteWallet): asserts wallet is Wallet {
+export function assertWallet(wallet?: Contracts.IReadWriteWallet): asserts wallet is Contracts.IReadWriteWallet {
 	if (!(wallet instanceof Wallet)) {
 		throw new AssertionError({
 			message: `Expected 'wallet' to be Contracts.IReadWriteWallet, but received ${wallet}`,

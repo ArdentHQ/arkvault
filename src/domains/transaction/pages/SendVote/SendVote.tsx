@@ -211,12 +211,6 @@ export const SendVote = () => {
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		assertWallet(senderWallet);
 
-		// Skip authorization step
-		if (newIndex === Step.AuthenticationStep && senderWallet.isMultiSignature()) {
-			void handleSubmit(submitForm)();
-			return;
-		}
-
 		if (newIndex === Step.AuthenticationStep && senderWallet.isLedger()) {
 			if (!isLedgerTransportSupported()) {
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));

@@ -37,15 +37,11 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.type();
 	}
 
-	//@ts-expect-error
 	public timestamp(): DateTime | undefined {
-		//@ts-expect-error
 		return this.#data.timestamp();
 	}
 
-	//@ts-expect-error
 	public confirmations(): BigNumber {
-		//@ts-expect-error
 		return this.#data.confirmations();
 	}
 
@@ -86,14 +82,8 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.memo?.();
 	}
 
-	//@ts-expect-error
 	public nonce(): BigNumber {
-		//@ts-expect-error
 		return this.#data.nonce();
-	}
-
-	public asset(): Record<string, unknown> {
-		return this.#data.asset();
 	}
 
 	public isConfirmed(): boolean {
@@ -137,7 +127,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public isDelegateRegistration(): boolean {
-		return this.#data.isDelegateRegistration();
+		return this.isValidatorResignation();
 	}
 
 	public isValidatorRegistration(): boolean {
@@ -156,40 +146,16 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.isUnvote();
 	}
 
-	public isMultiSignatureRegistration(): boolean {
-		return this.#data.isMultiSignatureRegistration();
-	}
-
-	public isIpfs(): boolean {
-		return this.#data.isIpfs();
-	}
-
 	public isMultiPayment(): boolean {
 		return this.#data.isMultiPayment();
 	}
 
 	public isDelegateResignation(): boolean {
-		return this.#data.isDelegateResignation();
+		return this.isValidatorResignation();
 	}
 
 	public isValidatorResignation(): boolean {
 		return this.#data.isValidatorResignation();
-	}
-
-	public isHtlcLock(): boolean {
-		return this.#data.isHtlcLock();
-	}
-
-	public isHtlcClaim(): boolean {
-		return this.#data.isHtlcClaim();
-	}
-
-	public isHtlcRefund(): boolean {
-		return this.#data.isHtlcRefund();
-	}
-
-	public isMagistrate(): boolean {
-		return this.#data.isMagistrate();
 	}
 
 	public username(): string {
@@ -199,19 +165,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public validatorPublicKey(): string {
 		return this.data<Contracts.ConfirmedTransactionData>().validatorPublicKey();
 	}
-
-	public lockTransactionId(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().lockTransactionId();
-	}
-
-	public unlockSecret(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().unlockSecret();
-	}
-
-	public secretHash(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().secretHash();
-	}
-
 	public expirationType(): number {
 		return this.data<Contracts.ConfirmedTransactionData>().expirationType();
 	}
@@ -221,7 +174,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public hash(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().hash();
+		return "";
 	}
 
 	// @ts-ignore

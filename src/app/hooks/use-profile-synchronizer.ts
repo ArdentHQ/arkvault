@@ -111,11 +111,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			interval: Intervals.Long,
 		};
 
-		const syncPendingMusigWallets = {
-			callback: () => profile.pendingMusigWallets().sync(),
-			interval: Intervals.VeryShort,
-		};
-
 		const syncServerStatus = {
 			callback: async () => {
 				setConfiguration(profileId, { serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
@@ -130,7 +125,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncKnownWallets,
 				syncDelegates,
 				syncProfileWallets,
-				syncPendingMusigWallets,
 				syncServerStatus,
 			],
 			syncExchangeRates: syncExchangeRates.callback,

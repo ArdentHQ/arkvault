@@ -10,7 +10,6 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
 import { assertString } from "@/utils/assertions";
-import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@/app/lib/intl";
@@ -49,8 +48,7 @@ export const SignedTransactionRowMobile = ({
 
 		assertString(publicKey);
 
-		const musigInfo = getMultiSignatureInfo(transaction);
-		return musigInfo.publicKeys.includes(publicKey);
+		return true;
 	}, [transaction]);
 
 	return (

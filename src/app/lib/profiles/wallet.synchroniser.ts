@@ -50,27 +50,6 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 		}
 	}
 
-	/** {@inheritDoc IWalletSynchroniser.multiSignature} */
-	public async multiSignature(): Promise<void> {
-		if (!this.#wallet.isMultiSignature()) {
-			return;
-		}
-
-		const participants: Record<string, any> = {};
-
-		for (const publicKey of this.#wallet.multiSignature().publicKeys()) {
-			const response = await this.#wallet.client().wallet({
-				method: this.#wallet.data().get(WalletData.ImportMethod),
-				type: "publicKey",
-				value: publicKey,
-			});
-
-			participants[publicKey] = response.toObject();
-		}
-
-		this.#wallet.data().set(WalletData.MultiSignatureParticipants, participants);
-	}
-
 	/** {@inheritDoc IWalletSynchroniser.votes} */
 	public async votes(): Promise<void> {
 		const { available, votes, used } = await this.#wallet.client().votes(this.#wallet.address());
