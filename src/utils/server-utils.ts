@@ -9,7 +9,7 @@ export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b
 export const customNetworks = (env: Environment, profile: Contracts.IProfile) => {
 	const networks = profile.hosts().all() as Record<string, HostMap>;
 
-	const serverList: NormalizedNetwork[] = [];
+	const serverList: any[] = [];
 
 	Object.keys(networks).flatMap((coin) => {
 		const networkServers = networks[coin];
