@@ -173,10 +173,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.data<Contracts.ConfirmedTransactionData>().expirationValue();
 	}
 
-	public hash(): string {
-		return "";
-	}
-
 	// @ts-ignore
 	public payments(): { recipientId: string; amount: number }[] {
 		return this.data<Contracts.ConfirmedTransactionData>()

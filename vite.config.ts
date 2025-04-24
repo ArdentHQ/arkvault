@@ -29,6 +29,15 @@ export default defineConfig(() => {
 				ZENDESK_WIDGET_KEY: process.env.ZENDESK_WIDGET_KEY,
 			},
 		},
+		server: {
+			proxy: {
+				"/api": {
+					target: "http://localhost:4003/api",
+					changeOrigin: true,
+					secure: false,
+				},
+			},
+		},
 		build: {
 			target: "esnext",
 			rollupOptions: {
