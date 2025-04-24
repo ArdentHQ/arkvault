@@ -125,7 +125,7 @@ const ServerFormModal: React.VFC<{
 	};
 
 	const endpointInputAddon = (type: string) => {
-		if(!errors[type] && dirtyFields[type]) {
+		if (!errors[type] && dirtyFields[type]) {
 			return {
 				end: {
 					content: (
@@ -136,9 +136,9 @@ const ServerFormModal: React.VFC<{
 						/>
 					),
 				},
-			}
+			};
 		}
-	}
+	};
 
 	return (
 		<Modal
@@ -193,7 +193,7 @@ const ServerFormModal: React.VFC<{
 						name="publicApiEndpoint"
 						data-testid="ServerFormModal--publicApiEndpoint"
 						ref={register(server.address(customNetworks, "publicApiEndpoint", networkToUpdate))}
-						addons={endpointInputAddon('publicApiEndpoint')}
+						addons={endpointInputAddon("publicApiEndpoint")}
 					/>
 				</FormField>
 
@@ -203,7 +203,7 @@ const ServerFormModal: React.VFC<{
 						data-testid="ServerFormModal--transactionApiEndpoint"
 						name="transactionApiEndpoint"
 						ref={register(server.address(customNetworks, "transactionApiEndpoint", networkToUpdate))}
-						addons={endpointInputAddon('transactionApiEndpoint')}
+						addons={endpointInputAddon("transactionApiEndpoint")}
 					/>
 				</FormField>
 
@@ -213,7 +213,7 @@ const ServerFormModal: React.VFC<{
 						name="evmApiEndpoint"
 						data-testid="ServerFormModal--evmApiEndpoint"
 						ref={register(server.address(customNetworks, "evmApiEndpoint", networkToUpdate))}
-						addons={endpointInputAddon('evmApiEndpoint')}
+						addons={endpointInputAddon("evmApiEndpoint")}
 					/>
 				</FormField>
 
