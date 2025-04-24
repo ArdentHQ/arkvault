@@ -2,7 +2,7 @@ import { Contracts, Environment } from "@/app/lib/profiles";
 import { Networks } from "@ardenthq/sdk";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { groupCustomHosts } from "@/app/lib/sdk/helpers";
-import { Host, HostMap } from "@/app/lib/profiles/host.repository.contract";
+import { Host } from "@/app/lib/profiles/host.repository.contract";
 
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));
 
