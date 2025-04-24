@@ -44,7 +44,6 @@
 	},
 	"dependencies": {
 		"@ardenthq/arkvault-url": "^1.2.0",
-		"@ardenthq/sdk": "2.0.0-alpha.69",
 		"@ardenthq/sdk-cryptography": "2.0.0-alpha.69",
 		"@ardenthq/sdk-markets": "2.0.0-alpha.69",
 		"@arkecosystem/typescript-crypto": "0.0.4",
@@ -197,7 +196,6 @@
 				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
-				"@ardenthq/sdk",
 				"@tippyjs/react",
 				"assert",
 				"browser-fs-access",

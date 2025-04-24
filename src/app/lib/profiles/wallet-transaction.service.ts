@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { Contracts, Services, Signatories } from "@ardenthq/sdk";
+import { Contracts, Services, Signatories } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, ITransactionService, WalletData } from "./contracts.js";
 import { pqueueSettled } from "./helpers/queue.js";

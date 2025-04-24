@@ -1,4 +1,4 @@
-import { Coins, IoC } from "@ardenthq/sdk";
+import { Coins, IoC } from "@/app/lib/sdk";
 
 import { BindingType } from "./coin.contract.js";
 import { Managers } from "./crypto/index.js";

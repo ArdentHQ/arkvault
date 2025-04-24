@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/sdk";
 
 import { IMultiSignature, IReadOnlyWallet, IReadWriteWallet, WalletData } from "./contracts.js";
 import { ReadOnlyWallet } from "./read-only-wallet.js";

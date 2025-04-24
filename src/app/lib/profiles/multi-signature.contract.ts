@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/sdk";
 
 import { IReadOnlyWallet } from "./contracts.js";
 

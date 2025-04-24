@@ -1,5 +1,5 @@
 import { Message } from "@arkecosystem/typescript-crypto";
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 
 export class MessageService {
 	public async sign(input: Services.MessageInput): Promise<Services.SignedMessage> {

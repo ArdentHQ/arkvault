@@ -1,4 +1,4 @@
-import { Coins, Contracts, Networks, Services } from "@ardenthq/sdk";
+import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import {

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";

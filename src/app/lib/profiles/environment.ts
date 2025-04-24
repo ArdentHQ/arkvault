@@ -1,4 +1,4 @@
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 import { sortBy } from "@/app/lib/helpers";
 import Joi from "joi";
 

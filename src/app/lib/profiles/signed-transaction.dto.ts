@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { Contracts, DTO } from "@ardenthq/sdk";
+import { Contracts, DTO } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { container } from "./container.js";

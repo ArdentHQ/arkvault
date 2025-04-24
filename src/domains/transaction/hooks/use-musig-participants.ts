@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 
 import { constructWalletsFromPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 

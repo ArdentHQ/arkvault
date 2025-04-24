@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 
 import { AppearanceService } from "./appearance.service.js";
 import { Authenticator } from "./authenticator.js";

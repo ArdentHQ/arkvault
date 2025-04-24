@@ -1,4 +1,4 @@
-import { Collections, Contracts } from "@ardenthq/sdk";
+import { Collections, Contracts } from "@/app/lib/sdk";
 
 import { IReadWriteWallet } from "./contracts.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";

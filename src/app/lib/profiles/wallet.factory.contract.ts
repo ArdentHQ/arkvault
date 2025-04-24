@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 
 import { IReadWriteWallet } from "./contracts.js";
 

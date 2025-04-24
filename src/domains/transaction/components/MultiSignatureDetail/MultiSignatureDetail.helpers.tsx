@@ -1,5 +1,5 @@
 import { DTO as DTOProfiles, Contracts } from "@/app/lib/profiles";
-import { DTO, Networks } from "@ardenthq/sdk";
+import { DTO, Networks } from "@/app/lib/sdk";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

@@ -1,7 +1,7 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 
-import { Coins, Contracts } from "@ardenthq/sdk";
+import { Coins, Contracts } from "@/app/lib/sdk";
 import { DateTime } from "@/app/lib/intl";
 import { BigNumber } from "@/app/lib/helpers";
 

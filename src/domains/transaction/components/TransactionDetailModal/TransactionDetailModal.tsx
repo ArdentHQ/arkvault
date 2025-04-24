@@ -20,7 +20,7 @@ import { TransactionMusigParticipants } from "@/domains/transaction/components/T
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import cn from "classnames";
 import { Contracts } from "@/app/lib/profiles";
-import { DTO } from "@ardenthq/sdk";
+import { DTO } from "@/app/lib/sdk";
 import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
 import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 import { isContractDeployment } from "@/domains/transaction/utils";

@@ -1,4 +1,4 @@
-import { Services, Signatories } from "@ardenthq/sdk";
+import { Services, Signatories } from "@/app/lib/sdk";
 
 import { ExtendedSignedTransactionData } from "./signed-transaction.dto.js";
 

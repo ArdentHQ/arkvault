@@ -1,5 +1,5 @@
 import { AssertionError } from "assert";
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 import { Contracts, DTO, Profile, Wallet } from "@/app/lib/profiles";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {

@@ -1,4 +1,4 @@
-import { DTO } from "@ardenthq/sdk";
+import { DTO } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 

@@ -1,4 +1,4 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { Base64 } from "@ardenthq/sdk-cryptography";
 
 import { container } from "./container.js";

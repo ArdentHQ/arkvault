@@ -2,7 +2,7 @@ import React from "react";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { useTranslation } from "react-i18next";
 
 import { AddressCopy, AddressLabel, AddressLink } from "@/app/components/Address";

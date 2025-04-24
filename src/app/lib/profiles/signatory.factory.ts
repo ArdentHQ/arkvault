@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Services, Signatories } from "@ardenthq/sdk";
+import { Services, Signatories } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, WalletData } from "./contracts.js";
 import { ISignatoryFactory, SignatoryInput } from "./signatory.factory.contract.js";

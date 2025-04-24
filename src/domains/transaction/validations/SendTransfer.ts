@@ -1,4 +1,4 @@
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 

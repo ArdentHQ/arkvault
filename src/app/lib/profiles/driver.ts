@@ -1,4 +1,4 @@
-import { Coins, Helpers, IoC, Networks } from "@ardenthq/sdk";
+import { Coins, Helpers, IoC, Networks } from "@/app/lib/sdk";
 
 import { Identifiers } from "./container.models.js";
 import { DataRepository } from "./data.repository.js";

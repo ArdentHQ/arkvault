@@ -1,4 +1,4 @@
-import { Contracts, Services } from "@ardenthq/sdk";
+import { Contracts, Services } from "@/app/lib/sdk";
 
 import { pqueueSettled } from "./helpers/queue.js";
 

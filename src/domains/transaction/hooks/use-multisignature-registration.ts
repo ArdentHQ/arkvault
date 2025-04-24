@@ -1,4 +1,4 @@
-import { Services, Signatories } from "@ardenthq/sdk";
+import { Services, Signatories } from "@/app/lib/sdk";
 import { Environment, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useRef } from "react";
 

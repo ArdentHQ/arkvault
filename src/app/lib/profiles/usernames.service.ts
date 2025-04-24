@@ -1,4 +1,4 @@
-import { Collections, DTO } from "@ardenthq/sdk";
+import { Collections, DTO } from "@/app/lib/sdk";
 
 import { IProfile, IUsernamesService } from "./contracts.js";
 

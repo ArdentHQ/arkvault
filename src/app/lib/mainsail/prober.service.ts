@@ -1,4 +1,4 @@
-import { Coins, Http, IoC, Services } from "@ardenthq/sdk";
+import { Coins, Http, IoC, Services } from "@/app/lib/sdk";
 
 export class ProberService extends Services.AbstractProberService {
 	readonly #configRepository: Coins.ConfigRepository;
