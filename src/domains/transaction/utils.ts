@@ -42,7 +42,7 @@ export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
  * Contract deployment is appearing as transfer without recipient.
  */
 export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
-	[!isContractTransaction(transaction), !transaction.recipient()].every(Boolean);
+	[!isContractTransaction(transaction), !transaction.to()].every(Boolean);
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

@@ -11,7 +11,7 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	}
 
 	if (transaction.isTransfer()) {
-		return transaction.recipient();
+		return transaction.to();
 	}
 
 	if (transaction.isVote() || transaction.isUnvote()) {
@@ -22,16 +22,16 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 };
 
 const transferAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
-	if (transaction.sender() === transaction.recipient()) {
+	if (transaction.from() === transaction.to()) {
 		return 0;
 	}
 
-	return transaction.amount();
+	return transaction.value();
 };
 
 const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
-	if (transaction.sender() === transaction.wallet().address()) {
-		let totalSent = BigNumber.make(transaction.amount());
+	if (transaction.from() === transaction.wallet().address()) {
+		let totalSent = BigNumber.make(transaction.value());
 
 		for (const recipient of transaction.recipients()) {
 			if (recipient.address === transaction.wallet().address()) {
@@ -105,7 +105,7 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 		fee: () => fee,
 		rate: () => rate,
 		recipient: () => recipient(transaction),
-		sender: () => transaction.sender(),
+		sender: () => transaction.from(),
 		timestamp: () => transaction.timestamp()?.toUNIX(),
 		total: () => truncate(total, currency),
 	};

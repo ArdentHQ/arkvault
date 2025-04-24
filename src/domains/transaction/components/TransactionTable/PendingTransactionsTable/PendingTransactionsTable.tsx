@@ -77,7 +77,7 @@ export const PendingTransactions = ({
 	);
 
 	const handleRemove = async (transaction: DTO.ExtendedSignedTransactionData) => {
-		await wallet.coin().multiSignature().forgetById(transaction.id());
+		await wallet.coin().multiSignature().forgetById(transaction.hash());
 		setPendingRemovalTransaction(undefined);
 		onRemove?.(transaction);
 	};

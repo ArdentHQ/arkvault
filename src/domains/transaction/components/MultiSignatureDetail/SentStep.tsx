@@ -21,7 +21,7 @@ export const SentStep = ({
 
 	const title = isBroadcast ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.TRANSACTION_SIGNED");
 
-	if (wallet.transaction().isAwaitingConfirmation(transaction.id())) {
+	if (wallet.transaction().isAwaitingConfirmation(transaction.hash())) {
 		return <TransactionSuccessful transaction={transaction} senderWallet={wallet} />;
 	}
 

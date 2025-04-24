@@ -163,8 +163,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			const addresses = response
 				.items()
 				.flatMap((transaction) => [
-					transaction.sender(),
-					transaction.recipient(),
+					transaction.from(),
+					transaction.to(),
 					...transaction.recipients().map(({ address }) => address),
 				])
 				.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
@@ -315,7 +315,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const latestTransaction = items[0];
 
 		const foundNew =
-			latestTransaction && !transactions.some((transaction) => latestTransaction.id() === transaction.id());
+			latestTransaction && !transactions.some((transaction) => latestTransaction.hash() === transaction.hash());
 
 		if (!foundNew) {
 			return;

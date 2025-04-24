@@ -17,14 +17,14 @@ interface TransactionExporterFetchProperties {
 const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
 	transactions.filter((transaction) => {
 		if (transaction.isTransfer()) {
-			return transaction.sender() !== transaction.recipient();
+			return transaction.from() !== transaction.to();
 		}
 
 		if (transaction.isMultiPayment()) {
-			let amount = BigNumber.make(transaction.amount());
+			let amount = BigNumber.make(transaction.value());
 
 			for (const recipient of transaction.recipients()) {
-				if (transaction.sender() === recipient.address) {
+				if (transaction.from() === recipient.address) {
 					amount = amount.minus(recipient.amount);
 				}
 			}

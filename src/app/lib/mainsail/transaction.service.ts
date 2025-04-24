@@ -307,7 +307,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
 		const { address } = await this.#signerData(input);
-		builder.transaction.data.senderAddress = address;
+		builder.transaction.data.from = address;
 
 		if (input.signatory.actsWithLedger()) {
 			return this.#signWithLedger(input, builder.transaction);

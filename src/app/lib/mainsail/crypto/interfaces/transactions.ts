@@ -50,7 +50,7 @@ export interface ITransactionData {
 	senderPublicKey: string | undefined;
 
 	fee: BigNumber;
-	amount: BigNumber;
+	value: BigNumber;
 
 	expiration?: number;
 	recipientId?: string;
@@ -58,12 +58,12 @@ export interface ITransactionData {
 	asset?: ITransactionAsset;
 	vendorField?: string;
 
-	id?: string;
+	hash?: string;
 	signature?: string;
 	signSignature?: string;
 	signatures?: string[];
 
-	blockId?: string;
+	blockHash?: string;
 	blockHeight?: number;
 	sequence?: number;
 }
@@ -80,7 +80,7 @@ export interface ITransactionJson {
 	senderPublicKey: string;
 
 	fee: string;
-	amount: string;
+	value: string;
 
 	expiration?: number;
 	recipientId?: string;
@@ -88,12 +88,12 @@ export interface ITransactionJson {
 	asset?: ITransactionAsset;
 	vendorField?: string | undefined;
 
-	id?: string;
+	hash?: string;
 	signature?: string;
 	signSignature?: string;
 	signatures?: string[];
 
-	blockId?: string;
+	blockHash?: string;
 	sequence?: number;
 }
 
@@ -104,7 +104,7 @@ export interface ISchemaValidationResult<T = any> {
 }
 
 export interface IMultiPaymentItem {
-	amount: BigNumber;
+	value: BigNumber;
 	recipientId: string;
 }
 

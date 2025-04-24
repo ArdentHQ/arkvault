@@ -44,7 +44,7 @@ export const TransactionDetails = ({
 	const timestamp = transaction.timestamp();
 
 	const { blockHeight } = useBlockHeight({
-		blockId: transaction.blockId(),
+		blockId: transaction.blockHash(),
 		network: transactionWallet.network(),
 	});
 
@@ -62,17 +62,17 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
-					{transaction.blockId() && (
+					{transaction.blockHash() && (
 						<Link
 							isExternal
-							to={transactionWallet.coin().link().block(transaction.blockId())}
+							to={transactionWallet.coin().link().block(transaction.blockHash())}
 							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
 						>
 							{blockHeight}
 						</Link>
 					)}
 
-					{!transaction.blockId() && (
+					{!transaction.blockHash() && (
 						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>

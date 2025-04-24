@@ -27,12 +27,12 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 
 			try {
 				const votesList = transaction.votes().map((address: string) => ({
-					amount: transaction.amount(),
+					amount: transaction.value(),
 					wallet: env.delegates().findByAddress(network.coin(), network.id(), address),
 				}));
 
 				const unvotesList = transaction.unvotes().map((address: string) => ({
-					amount: transaction.amount(),
+					amount: transaction.value(),
 					wallet: env.delegates().findByAddress(network.coin(), network.id(), address),
 				}));
 

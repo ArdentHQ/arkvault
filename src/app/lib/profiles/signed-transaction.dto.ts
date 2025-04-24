@@ -22,28 +22,31 @@ export class ExtendedSignedTransactionData {
 		return this.#data;
 	}
 
-	public id(): string {
-		return this.#data.id();
+	public hash(): string {
+		return this.#data.hash();
 	}
 
 	public type(): string {
 		return this.#data.type();
 	}
 
-	public sender(): string {
-		return this.#data.sender();
+	public from(): string {
+		//@ts-expect-error
+		return this.#data.from();
 	}
 
-	public recipient(): string {
-		return this.#data.recipient();
+	public to(): string {
+		//@ts-expect-error
+		return this.#data.to();
 	}
 
-	public amount(): number {
-		return this.#data.amount().toHuman();
+	public value(): number {
+		//@ts-expect-error
+		return this.#data.value().toHuman();
 	}
 
 	public convertedAmount(): number {
-		return this.#convertAmount(this.amount());
+		return this.#convertAmount(this.value());
 	}
 
 	public fee(): number {
@@ -60,8 +63,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public timestamp(): DateTime {
-		//@ts-expect-error
-		return this.#data.timestamp();
+		return DateTime.fromUnix(Number(this.#data.timestamp() as any as string) / 1000);
 	}
 
 	public isReturn(): boolean {
@@ -73,7 +75,7 @@ export class ExtendedSignedTransactionData {
 			let isReturn = true;
 
 			for (const recipient of this.recipients().values()) {
-				if (recipient.address !== this.sender()) {
+				if (recipient.address !== this.from()) {
 					isReturn = false;
 					break;
 				}
@@ -86,11 +88,11 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public isSent(): boolean {
-		return [this.#wallet.address(), this.#wallet.publicKey()].includes(this.sender());
+		return [this.#wallet.address(), this.#wallet.publicKey()].includes(this.from());
 	}
 
 	public isReceived(): boolean {
-		return [this.#wallet.address(), this.#wallet.publicKey()].includes(this.recipient());
+		return [this.#wallet.address(), this.#wallet.publicKey()].includes(this.to());
 	}
 
 	public isTransfer(): boolean {
@@ -171,17 +173,17 @@ export class ExtendedSignedTransactionData {
 
 	public total(): number {
 		if (this.isReturn()) {
-			return this.amount() - this.fee();
+			return this.value() - this.fee();
 		}
 
 		// We want to return amount + fee for the transactions using multi-signature
 		// because the total should be calculated from the sender perspective.
 		// This is specific for signed - unconfirmed transactions only.
 		if (this.isSent() || this.usesMultiSignature()) {
-			return this.amount() + this.fee();
+			return this.value() + this.fee();
 		}
 
-		let total = this.amount();
+		let total = this.value();
 
 		if (this.isMultiPayment()) {
 			for (const recipient of this.recipients()) {
@@ -235,10 +237,6 @@ export class ExtendedSignedTransactionData {
 		return this.#data.validatorPublicKey();
 	}
 
-	public hash(): string {
-		return this.#data.hash();
-	}
-
 	public payments(): { recipientId: string; amount: number }[] {
 		return this.#data.payments().map((payment) => ({
 			amount: payment.amount.toHuman(),
@@ -255,7 +253,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public explorerLink(): string {
-		return this.#wallet.coin().link().transaction(this.id());
+		return this.#wallet.coin().link().transaction(this.hash());
 	}
 
 	public explorerLinkForBlock(): string | undefined {

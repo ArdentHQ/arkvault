@@ -23,8 +23,8 @@ export interface MultiSignatureStatus {
 const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
 	try {
 		return (
-			wallet.transaction().canBeBroadcasted(transaction.id()) &&
-			!wallet.transaction().isAwaitingConfirmation(transaction.id())
+			wallet.transaction().canBeBroadcasted(transaction.hash()) &&
+			!wallet.transaction().isAwaitingConfirmation(transaction.hash())
 		);
 	} catch {
 		return false;
@@ -41,7 +41,7 @@ export const isAwaitingMusigSignatures = (
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const canBeSigned = useMemo(() => {
 		try {
-			return wallet.transaction().canBeSigned(transaction.id());
+			return wallet.transaction().canBeSigned(transaction.hash());
 		} catch {
 			return false;
 		}
