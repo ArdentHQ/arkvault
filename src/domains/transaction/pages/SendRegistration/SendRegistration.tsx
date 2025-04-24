@@ -21,7 +21,7 @@ import {
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
