@@ -8,13 +8,11 @@ const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: Normal
 	const parts = networkId.split(".");
 	const hosts = profile.hosts().all()[parts[0]][parts[1]] ?? [];
 
-	const typeMap: Record<NetworkHostType, string> = {
+	const host = {
 		"evm": evmApiEndpoint,
 		"full": publicApiEndpoint,
 		"tx": transactionApiEndpoint,
-	}
-
-	const host = typeMap[type];
+	}[type];
 
 	const index = hosts.findIndex(
 		(item) =>
