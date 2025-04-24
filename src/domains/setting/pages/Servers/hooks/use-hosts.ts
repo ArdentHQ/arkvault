@@ -1,12 +1,20 @@
 import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { NetworkHostType } from "@/app/lib/sdk/network.models";
+import { HostSet } from "@/app/lib/profiles/host.repository.contract";
 
 const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: NormalizedNetwork, type: NetworkHostType) => {
 	const { network, name, publicApiEndpoint, evmApiEndpoint, transactionApiEndpoint } = normalizedNetwork;
 	const networkId = network.id();
 	const parts = networkId.split(".");
-	const hosts = profile.hosts().all()[parts[0]][parts[1]] ?? [];
+
+	const profileHosts = profile.hosts().all();
+
+	let hosts: HostSet = [];
+
+	if (Object.values(profileHosts).length > 0) {
+		hosts = profileHosts[parts[0]][parts[1]] ?? [];
+	}
 
 	const host = {
 		evm: evmApiEndpoint,
