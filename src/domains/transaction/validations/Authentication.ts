@@ -1,5 +1,5 @@
 import { BIP39 } from "@ardenthq/sdk-cryptography";
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";

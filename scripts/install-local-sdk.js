@@ -14,8 +14,6 @@ if (!sdkPath) {
 	return;
 }
 
-packageJson.dependencies["@ardenthq/sdk"] = join(sdkPath, "packages/sdk");
-
 fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, "\t"));
 
 exec("pnpm install", () => {

@@ -8,7 +8,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";

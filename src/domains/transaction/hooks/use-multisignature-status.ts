@@ -31,13 +31,6 @@ const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.E
 	}
 };
 
-export const isAwaitingMusigSignatures = (
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
-) => {
-	console.log(transaction);
-	return false;
-};
-
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const canBeSigned = useMemo(() => {
 		try {

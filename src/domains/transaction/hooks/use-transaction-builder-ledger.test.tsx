@@ -6,7 +6,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerProvider } from "@/app/contexts";
 import React from "react";
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useTransactionBuilder } from "./use-transaction-builder";
 

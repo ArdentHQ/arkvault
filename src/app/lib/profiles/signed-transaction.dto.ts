@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { Contracts, DTO } from "@ardenthq/sdk";
+import { Contracts, DTO } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { container } from "./container.js";
@@ -58,7 +58,6 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public nonce(): BigNumber {
-		//@ts-expect-error
 		return this.#data.nonce();
 	}
 
@@ -104,7 +103,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public isDelegateRegistration(): boolean {
-		return this.#data.isDelegateRegistration();
+		return this.#data.isValidatorRegistration();
 	}
 
 	public isValidatorRegistration(): boolean {
@@ -135,36 +134,16 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isMultiSignatureRegistration();
 	}
 
-	public isIpfs(): boolean {
-		return this.#data.isIpfs();
-	}
-
 	public isMultiPayment(): boolean {
 		return this.#data.isMultiPayment();
 	}
 
 	public isDelegateResignation(): boolean {
-		return this.#data.isDelegateResignation();
+		return this.isValidatorRegistration();
 	}
 
 	public isValidatorResignation(): boolean {
 		return this.#data.isValidatorResignation();
-	}
-
-	public isHtlcLock(): boolean {
-		return this.#data.isHtlcLock();
-	}
-
-	public isHtlcClaim(): boolean {
-		return this.#data.isHtlcClaim();
-	}
-
-	public isHtlcRefund(): boolean {
-		return this.#data.isHtlcRefund();
-	}
-
-	public isMagistrate(): boolean {
-		return this.#data.isMagistrate();
 	}
 
 	public usesMultiSignature(): boolean {
@@ -245,7 +224,6 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public recipients(): ExtendedTransactionRecipient[] {
-		// @ts-expect-error
 		return this.#data.recipients().map((payment: { address: string; amount: BigNumber }) => ({
 			address: payment.address,
 			amount: payment.amount.toHuman(),

@@ -1,7 +1,7 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 
-import { Coins, Contracts } from "@ardenthq/sdk";
+import { Coins, Contracts } from "@/app/lib/sdk";
 import { DateTime } from "@/app/lib/intl";
 import { BigNumber } from "@/app/lib/helpers";
 
@@ -30,7 +30,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public blockHash(): string | undefined {
-		//@ts-expect-error
 		return this.#data.blockHash();
 	}
 
@@ -38,24 +37,19 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.type();
 	}
 
-	//@ts-expect-error
 	public timestamp(): DateTime | undefined {
 		return DateTime.fromUnix(Number(this.#data.timestamp() as any as string) / 1000);
 	}
 
-	//@ts-expect-error
 	public confirmations(): BigNumber {
-		//@ts-expect-error
 		return this.#data.confirmations();
 	}
 
 	public from(): string {
-		//@ts-expect-error
 		return this.#data.from();
 	}
 
 	public to(): string {
-		//@ts-expect-error
 		return this.#data.to();
 	}
 
@@ -67,7 +61,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	// @ts-ignore
 	public value(): number {
-		//@ts-expect-error
 		return this.#data.value().toHuman();
 	}
 
@@ -89,14 +82,8 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.memo?.();
 	}
 
-	//@ts-expect-error
 	public nonce(): BigNumber {
-		//@ts-expect-error
 		return this.#data.nonce();
-	}
-
-	public asset(): Record<string, unknown> {
-		return this.#data.asset();
 	}
 
 	public isConfirmed(): boolean {
@@ -140,7 +127,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public isDelegateRegistration(): boolean {
-		return this.#data.isDelegateRegistration();
+		return this.isValidatorResignation();
 	}
 
 	public isValidatorRegistration(): boolean {
@@ -159,40 +146,16 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.isUnvote();
 	}
 
-	public isMultiSignatureRegistration(): boolean {
-		return this.#data.isMultiSignatureRegistration();
-	}
-
-	public isIpfs(): boolean {
-		return this.#data.isIpfs();
-	}
-
 	public isMultiPayment(): boolean {
 		return this.#data.isMultiPayment();
 	}
 
 	public isDelegateResignation(): boolean {
-		return this.#data.isDelegateResignation();
+		return this.isValidatorResignation();
 	}
 
 	public isValidatorResignation(): boolean {
 		return this.#data.isValidatorResignation();
-	}
-
-	public isHtlcLock(): boolean {
-		return this.#data.isHtlcLock();
-	}
-
-	public isHtlcClaim(): boolean {
-		return this.#data.isHtlcClaim();
-	}
-
-	public isHtlcRefund(): boolean {
-		return this.#data.isHtlcRefund();
-	}
-
-	public isMagistrate(): boolean {
-		return this.#data.isMagistrate();
 	}
 
 	public username(): string {
@@ -202,25 +165,16 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public validatorPublicKey(): string {
 		return this.data<Contracts.ConfirmedTransactionData>().validatorPublicKey();
 	}
-
-	public lockTransactionId(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().lockTransactionId();
-	}
-
-	public unlockSecret(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().unlockSecret();
-	}
-
-	public secretHash(): string {
-		return this.data<Contracts.ConfirmedTransactionData>().secretHash();
-	}
-
 	public expirationType(): number {
 		return this.data<Contracts.ConfirmedTransactionData>().expirationType();
 	}
 
 	public expirationValue(): number {
 		return this.data<Contracts.ConfirmedTransactionData>().expirationValue();
+	}
+
+	public hash(): string {
+		return "";
 	}
 
 	// @ts-ignore

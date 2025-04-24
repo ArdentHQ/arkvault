@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 
 import { explorer, featureFlags, importMethods, transactions } from "./shared.js";
 

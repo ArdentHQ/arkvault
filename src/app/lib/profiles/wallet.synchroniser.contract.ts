@@ -24,14 +24,6 @@ export interface IWalletSynchroniser {
 	identity(options?: { ttl?: number }): Promise<void>;
 
 	/**
-	 * Synchronise the multi signature.
-	 *
-	 * @return {Promise<void>}
-	 * @memberof IReadWriteWallet
-	 */
-	multiSignature(): Promise<void>;
-
-	/**
 	 * Synchronise the votes.
 	 *
 	 * @return {Promise<void>}

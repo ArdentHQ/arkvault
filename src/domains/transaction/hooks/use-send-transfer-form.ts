@@ -1,4 +1,4 @@
-import { Networks, Services } from "@ardenthq/sdk";
+import { Networks, Services } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -122,8 +122,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const response = await wallet.transaction().broadcast(uuid);
 
 			handleBroadcastError(response);
-
-			await wallet.transaction().sync();
 
 			await persist();
 

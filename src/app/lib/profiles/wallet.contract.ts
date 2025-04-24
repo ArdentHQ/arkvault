@@ -1,9 +1,8 @@
-import { Coins, Contracts, Networks, Services } from "@ardenthq/sdk";
+import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import {
 	IDataRepository,
-	IMultiSignature,
 	IProfile,
 	ISettingRepository,
 	ISignatoryFactory,
@@ -354,14 +353,6 @@ export interface IReadWriteWallet {
 	isLedgerNanoX(): boolean;
 
 	/**
-	 * Determine if the wallet uses a multi signature.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	isMultiSignature(): boolean;
-
-	/**
 	 * Determine if the wallet uses a second signature.
 	 *
 	 * @return {boolean}
@@ -683,14 +674,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	confirmKey(): IWalletImportFormat;
-
-	/**
-	 * Get the wallet multi signature instance.
-	 *
-	 * @return {IMultiSignature}
-	 * @memberof IReadWriteWallet
-	 */
-	multiSignature(): IMultiSignature;
 
 	/**
 	 * Determine if the wallet can vote.

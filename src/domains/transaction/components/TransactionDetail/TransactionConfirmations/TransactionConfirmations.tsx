@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
-import { DTO } from "@ardenthq/sdk";
+import { DTO } from "@/app/lib/sdk";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
 export const TransactionConfirmations = ({
