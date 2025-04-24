@@ -30,11 +30,11 @@ const network: Networks.NetworkManifest = {
 			type: "tx",
 		},
 		{
-			host: "http://0.0.0.0:4008/api",
+			host: "https://explorer-evm-test.mainsailhq.com",
 			type: "explorer",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			host: "http://0.0.0.0:4008/api",
 			type: "evm",
 		},
 	],
