@@ -13,15 +13,15 @@ export const randomHost = (hosts: NetworkHost[], type: NetworkHostType): Network
 export const groupCustomHosts = (hosts: HostSet): HostMap => {
 	const customHosts: HostMap = {};
 
-	for (const {host, name} of hosts) {
+	for (const { host, name } of hosts) {
 		if (customHosts[name] === undefined) {
 			customHosts[name] = [];
 		}
-		customHosts[name].push({host, name});
+		customHosts[name].push({ host, name });
 	}
 
 	return customHosts;
-}
+};
 
 // DRY helpers for coin implementations
 export const filterHostsFromConfig = (config: ConfigRepository, type: NetworkHostType): NetworkHost[] =>
