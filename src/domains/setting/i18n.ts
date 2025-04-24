@@ -212,7 +212,7 @@ export const translations = {
 		SUBTITLE: "Manage custom network peers and multisignature servers for your Profile.",
 		SUCCESS: "Your server settings have been successfully updated.",
 		TITLE: "Peers & Multisig Servers",
-		TX: "TX",
+		TX: "Tx",
 	},
 
 	TITLE: "Settings",
