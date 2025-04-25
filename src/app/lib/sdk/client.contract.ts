@@ -35,8 +35,8 @@ export interface ClientService {
 	wallet(id: WalletIdentifier, options?: object): Promise<WalletData>;
 	wallets(query: ClientWalletsInput): Promise<WalletDataCollection>;
 
-	delegate(id: string): Promise<WalletData>;
-	delegates(query?: ClientWalletsInput): Promise<WalletDataCollection>;
+	validator(id: string): Promise<WalletData>;
+	validators(query?: ClientWalletsInput): Promise<WalletDataCollection>;
 
 	votes(id: string): Promise<VoteReport>;
 	// TODO: return struct like VoteReport
