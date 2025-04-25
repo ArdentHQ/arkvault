@@ -127,7 +127,7 @@ const useHandleServers = ({
 			return;
 		}
 
-		clearErrors("transactionApiEndpoint");
+		clearErrors("evmApiEndpoint");
 
 		setFetchingDetails(true);
 
