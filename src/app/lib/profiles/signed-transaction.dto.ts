@@ -31,17 +31,14 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public from(): string {
-		//@ts-expect-error
 		return this.#data.from();
 	}
 
 	public to(): string {
-		//@ts-expect-error
 		return this.#data.to();
 	}
 
 	public value(): number {
-		//@ts-expect-error
 		return this.#data.value().toHuman();
 	}
 

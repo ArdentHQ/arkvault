@@ -148,7 +148,7 @@ export class ClientService extends Services.AbstractClientService {
 
 		if (Array.isArray(data.invalid)) {
 			for (const rejected of data.invalid) {
-				result.rejected.push(transactions[rejected]?.id());
+				result.rejected.push(transactions[rejected]?.hash());
 			}
 		}
 
