@@ -6,6 +6,7 @@ import dayOfYear from "dayjs/plugin/dayOfYear.js";
 import localizedFormat from "dayjs/plugin/localizedFormat.js";
 import quarterOfYear from "dayjs/plugin/quarterOfYear.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
+import timezone from "dayjs/plugin/timezone.js";
 import toObject from "dayjs/plugin/toObject.js";
 import utc from "dayjs/plugin/utc.js";
 import weekOfYear from "dayjs/plugin/weekOfYear.js";
@@ -14,6 +15,7 @@ dayjs.extend(advancedFormat);
 dayjs.extend(dayOfYear);
 dayjs.extend(localizedFormat);
 dayjs.extend(quarterOfYear);
+dayjs.extend(timezone);
 dayjs.extend(toObject);
 dayjs.extend(utc);
 dayjs.extend(weekOfYear);
@@ -45,15 +47,25 @@ export class DateTime {
 	readonly #locale: string | undefined;
 
 	/**
+	 * The timezone that should be used for formatting.
+	 *
+	 * @type {(string | undefined)}
+	 * @memberof DateTime
+	 */
+	readonly #timezone: string | undefined;
+
+	/**
 	 * Creates an instance of DateTime.
 	 *
 	 * @param {DateTimeLike} [value]
 	 * @param {*} [locale]
+	 * @param {string} [timezone]
 	 * @memberof DateTime
 	 */
-	private constructor(value?: DateTimeLike, locale?: any) {
+	private constructor(value?: DateTimeLike, locale?: any, timezone?: string) {
 		this.#instance = this.#toUTC(value);
 		this.#locale = locale;
+		this.#timezone = timezone;
 
 		if (!locale) {
 			locale = "en";
@@ -74,11 +86,12 @@ export class DateTime {
 	 * @static
 	 * @param {DateTimeLike} [value]
 	 * @param {string} [locale]
+	 * @param {string} [timezone]
 	 * @returns {DateTime}
 	 * @memberof DateTime
 	 */
-	public static make(value?: DateTimeLike, locale?: string): DateTime {
-		return new DateTime(value, locale);
+	public static make(value?: DateTimeLike, locale?: string, timezone?: string): DateTime {
+		return new DateTime(value, locale, timezone);
 	}
 
 	/**
@@ -87,11 +100,12 @@ export class DateTime {
 	 * @static
 	 * @param {number} value
 	 * @param {string} [locale]
+	 * @param {string} [timezone]
 	 * @returns {DateTime}
 	 * @memberof DateTime
 	 */
-	public static fromUnix(value: number, locale?: string): DateTime {
-		return new DateTime(dayjs.unix(value), locale);
+	public static fromUnix(value: number, locale?: string, timezone?: string): DateTime {
+		return new DateTime(dayjs.unix(value), locale, timezone);
 	}
 
 	/**
@@ -102,7 +116,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setLocale(locale: string): DateTime {
-		return DateTime.make(this.valueOf(), locale);
+		return DateTime.make(this.valueOf(), locale, this.#timezone);
 	}
 
 	/**
@@ -246,7 +260,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setMillisecond(value: number): DateTime {
-		return DateTime.make(this.#instance.millisecond(value), this.#locale);
+		return DateTime.make(this.#instance.millisecond(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -257,7 +271,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setSecond(value: number): DateTime {
-		return DateTime.make(this.#instance.second(value), this.#locale);
+		return DateTime.make(this.#instance.second(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -268,7 +282,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setMinute(value: number): DateTime {
-		return DateTime.make(this.#instance.minute(value), this.#locale);
+		return DateTime.make(this.#instance.minute(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -279,7 +293,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setHour(value: number): DateTime {
-		return DateTime.make(this.#instance.hour(value), this.#locale);
+		return DateTime.make(this.#instance.hour(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -290,7 +304,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setDayOfMonth(value: number): DateTime {
-		return DateTime.make(this.#instance.date(value), this.#locale);
+		return DateTime.make(this.#instance.date(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -301,7 +315,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setDay(value: number): DateTime {
-		return DateTime.make(this.#instance.dayOfYear(value), this.#locale);
+		return DateTime.make(this.#instance.dayOfYear(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -312,7 +326,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setWeek(value: number): DateTime {
-		return DateTime.make(this.#instance.week(value), this.#locale);
+		return DateTime.make(this.#instance.week(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -323,7 +337,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setMonth(value: number): DateTime {
-		return DateTime.make(this.#instance.month(value), this.#locale);
+		return DateTime.make(this.#instance.month(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -334,7 +348,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setQuarter(value: number): DateTime {
-		return DateTime.make(this.#instance.quarter(value), this.#locale);
+		return DateTime.make(this.#instance.quarter(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -345,7 +359,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public setYear(value: number): DateTime {
-		return DateTime.make(this.#instance.year(value), this.#locale);
+		return DateTime.make(this.#instance.year(value), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -366,7 +380,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addMilliseconds(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "millisecond"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "millisecond"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -387,7 +401,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addSeconds(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "second"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "second"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -408,7 +422,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addMinutes(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "minute"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "minute"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -429,7 +443,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addHours(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "hour"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "hour"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -450,7 +464,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addDays(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "day"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "day"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -471,7 +485,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addWeeks(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "week"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "week"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -492,7 +506,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addMonths(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "month"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "month"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -513,7 +527,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addQuarters(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "quarter"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "quarter"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -534,7 +548,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public addYears(value: number): DateTime {
-		return DateTime.make(this.#instance.add(value, "year"), this.#locale);
+		return DateTime.make(this.#instance.add(value, "year"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -555,7 +569,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subMilliseconds(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "millisecond"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "millisecond"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -576,7 +590,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subSeconds(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "second"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "second"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -597,7 +611,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subMinutes(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "minute"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "minute"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -618,7 +632,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subHours(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "hour"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "hour"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -639,7 +653,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subDays(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "day"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "day"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -660,7 +674,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subWeeks(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "week"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "week"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -681,7 +695,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subMonths(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "month"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "month"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -702,7 +716,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subQuarters(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "quarter"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "quarter"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -723,7 +737,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public subYears(value: number): DateTime {
-		return DateTime.make(this.#instance.subtract(value, "year"), this.#locale);
+		return DateTime.make(this.#instance.subtract(value, "year"), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -833,7 +847,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public format(value: string): string {
-		return this.#instance.format(value);
+		return this.#timezone ? this.#instance.tz(this.#timezone).format(value) : this.#instance.format(value);
 	}
 
 	/**
@@ -844,7 +858,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public startOf(unit: QUnitType): DateTime {
-		return DateTime.make(this.#instance.startOf(unit), this.#locale);
+		return DateTime.make(this.#instance.startOf(unit), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -855,7 +869,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public endOf(unit: QUnitType): DateTime {
-		return DateTime.make(this.#instance.endOf(unit), this.#locale);
+		return DateTime.make(this.#instance.endOf(unit), this.#locale, this.#timezone);
 	}
 
 	/**
@@ -924,7 +938,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toISOString(): string {
-		return this.#instance.toISOString();
+		return this.#timezone ? this.#instance.tz(this.#timezone).toISOString() : this.#instance.toISOString();
 	}
 
 	/**
@@ -954,7 +968,7 @@ export class DateTime {
 	 * @memberof DateTime
 	 */
 	public toDate(): Date {
-		return this.#instance.toDate();
+		return this.#timezone ? this.#instance.tz(this.#timezone).toDate() : this.#instance.toDate();
 	}
 
 	/**
@@ -987,7 +1001,7 @@ export class DateTime {
 	 */
 	#toUTC(value?: DateTimeLike): dayjs.Dayjs {
 		if (value instanceof DateTime) {
-			return dayjs.utc(value.valueOf());
+			return this.#timezone ? dayjs.tz(value.valueOf(), this.#timezone) : dayjs.utc(value.valueOf());
 		}
 
 		return dayjs.utc(value);

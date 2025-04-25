@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 export interface AddressTableProperties {
 	wallets: Contracts.IReadWriteWallet[];
 	onSelect?: (address: string) => void;

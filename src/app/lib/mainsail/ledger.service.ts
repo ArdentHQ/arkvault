@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 
-import { Contracts, IoC, Services } from "@ardenthq/sdk";
+import { Contracts, IoC, Services } from "@/app/lib/sdk";
 // @TODO: Revisit.
 // The internal implementation of HDKey fails to generate public keys from extended ledger public keys
 // which affects ledger wallet import & tx signing.

@@ -1,4 +1,4 @@
-import { Signatories } from "@ardenthq/sdk";
+import { Signatories } from "@/app/lib/sdk";
 
 export interface SignatoryInput {
 	encryptionPassword?: string;

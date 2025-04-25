@@ -1,6 +1,6 @@
 import { NumberLike } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import { MarketService } from "@ardenthq/sdk-markets";
+import { MarketService } from "@/app/lib/markets";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";

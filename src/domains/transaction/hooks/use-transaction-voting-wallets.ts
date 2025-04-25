@@ -1,5 +1,5 @@
 import { useEnvironmentContext } from "@/app/contexts";
-import { Networks, DTO } from "@ardenthq/sdk";
+import { Networks, DTO } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 

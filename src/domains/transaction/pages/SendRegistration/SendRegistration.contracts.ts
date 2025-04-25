@@ -1,4 +1,4 @@
-import { Signatories } from "@ardenthq/sdk";
+import { Signatories } from "@/app/lib/sdk";
 import { Contracts, DTO, Environment } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
 import { useForm } from "react-hook-form";

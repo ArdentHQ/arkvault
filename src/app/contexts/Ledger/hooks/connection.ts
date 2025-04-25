@@ -1,4 +1,4 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { Options } from "p-retry";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";

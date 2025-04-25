@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 
 import { IProfile, IReadWriteWallet, ITransactionAggregate } from "./contracts.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";

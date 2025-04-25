@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import cn from "classnames";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Numeral } from "@/app/lib/intl";
 import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";

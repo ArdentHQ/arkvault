@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { act as actHook, renderHook } from "@testing-library/react";
 import React from "react";

@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
-import { Collections, Contracts, DTO, IoC, Services } from "@ardenthq/sdk";
+import { Collections, Contracts, DTO, IoC, Services } from "@/app/lib/sdk";
 import { DateTime } from "@/app/lib/intl";
 import { UsernamesAbi } from "@mainsail/evm-contracts";
 import dotify from "node-dotify";

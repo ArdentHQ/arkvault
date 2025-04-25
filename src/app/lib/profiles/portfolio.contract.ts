@@ -1,4 +1,4 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 
 /**
  * Defines the structure that represents a portfolio entry.

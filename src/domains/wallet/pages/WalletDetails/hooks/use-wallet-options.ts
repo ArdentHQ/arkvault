@@ -1,4 +1,4 @@
-import { Enums } from "@ardenthq/sdk";
+import { Enums } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";

@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 

@@ -1,7 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 import { Networks } from "@ardenthq/sdk";
-import { ClientMethod } from "@ardenthq/sdk/distribution/esm/network.models";
 
 export const transactions: Networks.NetworkManifestTransactions = {
 	expirationType: "height",

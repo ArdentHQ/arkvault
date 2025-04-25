@@ -48,7 +48,7 @@ export class SignedTransactionData
 
 	public override fee(): BigNumber {
 		const gasPrice = formatUnits(this.signedData.gasPrice, "ark");
-		return gasPrice.times(this.signedData.gasLimit);
+		return gasPrice.times(this.signedData.gas);
 	}
 
 	public override timestamp(): DateTime {
