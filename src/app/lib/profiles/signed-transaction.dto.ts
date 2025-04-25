@@ -1,13 +1,13 @@
 /* istanbul ignore file */
 
 import { Contracts, DTO } from "@/app/lib/sdk";
-import { BigNumber } from "@/app/lib/helpers";
-
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
-import { ExtendedTransactionRecipient } from "./transaction.dto.js";
+
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
+import { ExtendedTransactionRecipient } from "./transaction.dto.js";
+import { Identifiers } from "./container.models.js";
+import { container } from "./container.js";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: Contracts.SignedTransactionData;

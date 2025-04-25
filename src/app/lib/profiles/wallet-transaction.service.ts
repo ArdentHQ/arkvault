@@ -1,8 +1,8 @@
 /* istanbul ignore file */
 
 import { Contracts, Exceptions, Services } from "@/app/lib/sdk";
-
 import { IReadWriteWallet, ITransactionService, WalletData } from "./contracts.js";
+
 import { ExtendedSignedTransactionData } from "./signed-transaction.dto.js";
 import { SignedTransactionDataDictionary } from "./wallet-transaction.service.contract.js";
 
@@ -15,7 +15,7 @@ export class TransactionService implements ITransactionService {
 	readonly #wallet: IReadWriteWallet;
 
 	/**
-	 * The transactions that have been signed but not necessarily broadcasted.
+	 * The transactions that have been signped but not necessarily broadcasted.
 	 *
 	 * @memberof TransactionService
 	 */
