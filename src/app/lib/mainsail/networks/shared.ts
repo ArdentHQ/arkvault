@@ -1,6 +1,7 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 import { Networks } from "@ardenthq/sdk";
+import { ClientMethod } from "@ardenthq/sdk/distribution/esm/network.models";
 
 export const transactions: Networks.NetworkManifestTransactions = {
 	expirationType: "height",
@@ -49,8 +50,10 @@ export const featureFlags: Networks.NetworkManifestFeatureFlags = {
 		"transactions",
 		"wallet",
 		"wallets",
-		"delegate",
-		"delegates",
+		//@ts-expect-error
+		"validator",
+		//@ts-expect-error
+		"validators",
 		"votes",
 		"voters",
 		"broadcast",

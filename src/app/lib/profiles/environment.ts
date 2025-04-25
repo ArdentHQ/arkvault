@@ -6,7 +6,7 @@ import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
-	IDelegateService,
+	IValidatorService,
 	IExchangeRateService,
 	IFeeService,
 	IKnownWalletService,
@@ -120,11 +120,11 @@ export class Environment {
 	/**
 	 *
 	 *
-	 * @returns {DelegateService}
+	 * @returns {ValidatorService}
 	 * @memberof Environment
 	 */
-	public delegates(): IDelegateService {
-		return container.get(Identifiers.DelegateService);
+	public validators(): IValidatorService {
+		return container.get(Identifiers.ValidatorService);
 	}
 
 	/**

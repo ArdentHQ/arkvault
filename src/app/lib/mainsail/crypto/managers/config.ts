@@ -148,13 +148,13 @@ export class ConfigManager {
 			throw new Error("Config not found.");
 		}
 
-		const delegateMilestones = this.config.milestones
+		const validatorMilestones = this.config.milestones
 			.sort((a, b) => a.height - b.height)
 			.filter((milestone) => milestone.activeValidators);
 
-		for (let index = 1; index < delegateMilestones.length; index++) {
-			const previous = delegateMilestones[index - 1];
-			const current = delegateMilestones[index];
+		for (let index = 1; index < validatorMilestones.length; index++) {
+			const previous = validatorMilestones[index - 1];
+			const current = validatorMilestones[index];
 
 			if (previous.activeValidators === current.activeValidators) {
 				continue;
@@ -162,7 +162,7 @@ export class ConfigManager {
 
 			if ((current.height - previous.height) % previous.activeValidators !== 0) {
 				throw new Error(
-					`Bad milestone at height: ${current.height}. The number of delegates can only be changed at the beginning of a new round.`,
+					`Bad milestone at height: ${current.height}. The number of validators can only be changed at the beginning of a new round.`,
 				);
 			}
 		}
