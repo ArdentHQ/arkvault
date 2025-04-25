@@ -20,20 +20,20 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			setIsLoading(true);
 
 			try {
-				env.delegates().all(network.coin(), network.id());
+				env.validators().all(network.coin(), network.id());
 			} catch {
-				await env.delegates().sync(profile, network.coin(), network.id());
+				await env.validators().sync(profile, network.coin(), network.id());
 			}
 
 			try {
 				const votesList = transaction.votes().map((address: string) => ({
 					amount: transaction.value(),
-					wallet: env.delegates().findByAddress(network.coin(), network.id(), address),
+					wallet: env.validators().findByAddress(network.coin(), network.id(), address),
 				}));
 
 				const unvotesList = transaction.unvotes().map((address: string) => ({
 					amount: transaction.value(),
-					wallet: env.delegates().findByAddress(network.coin(), network.id(), address),
+					wallet: env.validators().findByAddress(network.coin(), network.id(), address),
 				}));
 
 				setVotes(votesList);
