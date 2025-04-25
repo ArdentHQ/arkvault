@@ -234,7 +234,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					</TableCell>
 
 					<TableCell innerClassName="text-sm justify-center">
-						<WalletStatus wallet={votes[0]?.wallet} activeValidators={wallet.network().delegateCount()} />
+						<WalletStatus wallet={votes[0]?.wallet} activeValidators={wallet.network().validatorCount()} />
 					</TableCell>
 				</>
 			) : (

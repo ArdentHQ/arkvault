@@ -127,7 +127,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								dataTestId={`AddressRowMobile__wallet-status-${index}`}
 								className="sm:hidden"
 								wallet={votes[0]?.wallet}
-								activeValidators={wallet.network().delegateCount()}
+								activeValidators={wallet.network().validatorCount()}
 							/>
 
 							{votes[0]?.wallet && (
@@ -164,7 +164,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 					>
 						<WalletStatus
 							wallet={votes[0]?.wallet}
-							activeValidators={wallet.network().delegateCount()}
+							activeValidators={wallet.network().validatorCount()}
 							fallback={
 								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
 									{t("COMMON.NOT_AVAILABLE")}
