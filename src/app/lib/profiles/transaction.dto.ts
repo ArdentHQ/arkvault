@@ -2,12 +2,12 @@
 /* eslint-disable */
 
 import { Coins, Contracts } from "@/app/lib/sdk";
-import { DateTime } from "@/app/lib/intl";
-import { BigNumber } from "@/app/lib/helpers";
-
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
-import { container } from "./container.js";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 import { Identifiers } from "./container.models.js";
+import { container } from "./container.js";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
