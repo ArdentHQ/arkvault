@@ -2,7 +2,7 @@ import { Networks } from "@/app/lib/sdk";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";
-import { formatUnits } from "@/app/lib/mainsail";
+import { configManager, formatUnits } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 export const common = (t: TFunction) => ({
@@ -26,9 +26,8 @@ export const common = (t: TFunction) => ({
 				}
 
 				const minimumGasLimit = Math.max(
-					// configManager.getMilestone()["gas"]["minimumGasLimit"],
+					configManager.getMilestone()["gas"]["minimumGasLimit"],
 					21_000,
-					defaultGasLimit,
 				);
 
 				if (gasLimit < minimumGasLimit) {
@@ -37,8 +36,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				// const maximumGasLimit = configManager.getMilestone()["gas"]["maximumGasLimit"];
-				const maximumGasLimit = 2_000_000;
+				const maximumGasLimit = configManager.getMilestone()["gas"]["maximumGasLimit"];
 
 				if (gasLimit > maximumGasLimit) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_HIGH", {
@@ -94,8 +92,7 @@ export const common = (t: TFunction) => ({
 
 				const minimumGasPrice = Math.max(
 					formatUnits(
-						// BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"] ?? ).toString(),
-						BigNumber.make(5_000_000_000).toString(),
+						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"]).toString(),
 						"gwei",
 					).toNumber(),
 					minGasPrice,
@@ -108,8 +105,7 @@ export const common = (t: TFunction) => ({
 				}
 
 				const maximumGasPrice = formatUnits(
-					// BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"] ?? 10000000000000).toString(),
-					BigNumber.make(10_000_000_000_000).toString(),
+					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
 					"gwei",
 				);
 
