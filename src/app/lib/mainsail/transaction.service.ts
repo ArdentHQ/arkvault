@@ -188,7 +188,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		for (const payment of input.data.payments) {
-			builder.pay(payment.to, parseUnits(payment.amount, "ark").toNumber());
+			builder.pay(payment.to, parseUnits(payment.amount, "ark").toString());
 		}
 
 		await this.#sign(input, builder);
