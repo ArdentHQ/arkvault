@@ -14,6 +14,9 @@ importers:
       '@ardenthq/sdk-cryptography':
         specifier: 2.0.0-alpha.69
         version: 2.0.0-alpha.69
+      '@arkecosystem/typescript-client':
+        specifier: ^0.0.2
+        version: 0.0.2
       '@arkecosystem/typescript-crypto':
         specifier: 0.0.4
         version: 0.0.4
@@ -475,6 +478,10 @@ packages:
   '@ardenthq/sdk-cryptography@2.0.0-alpha.69':
     resolution: {integrity: sha512-MNP9qkoaW2JLQMtctcsfk/mDG28bW9AS+bIJ/N9MmelaAHRYuQl2jrNf7U6Ai7LDh4Q75GYP6KtzlTQrpnRmLw==}
     engines: {node: '>=16.0.0'}
+
+  '@arkecosystem/typescript-client@0.0.2':
+    resolution: {integrity: sha512-ETO2PG/lnFvvdms2qQPViFDLguMvzJ7G9bkj7H7ZsMIM3quPK0F80fl44A3vaF3X0P/wWwa4rHMe1VnpcwqRQA==}
+    engines: {node: '>=20.12.2'}
 
   '@arkecosystem/typescript-crypto@0.0.4':
     resolution: {integrity: sha512-7wYB6Hg4OTG3QGCDLBHrRCqKoKDaouYqEhAZRzYe+dC8HstdiZRF3QmVRBw5rNeemCHXhl1bC/1U5dXtkIoctA==}
@@ -7924,6 +7931,8 @@ snapshots:
       secp256k1: 4.0.4
       typeforce: 1.18.0
       uuid: 8.3.2
+
+  '@arkecosystem/typescript-client@0.0.2': {}
 
   '@arkecosystem/typescript-crypto@0.0.4':
     dependencies:

@@ -1,15 +1,16 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
-import { Collections, Contracts, DTO, IoC, Services } from "@/app/lib/sdk";
+import { Collections, Contracts, DTO, IoC, Networks, Services } from "@/app/lib/sdk";
 import { DateTime } from "@/app/lib/intl";
 import { UsernamesAbi } from "@mainsail/evm-contracts";
 import dotify from "node-dotify";
 
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
-import { Request } from "./request";
-
 import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
+import { ArkClient } from "@arkecosystem/typescript-client";
+
+type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
 const wellKnownContracts = {
 	consensus: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
@@ -18,40 +19,43 @@ const wellKnownContracts = {
 };
 
 export class ClientService extends Services.AbstractClientService {
-	readonly #request: Request;
+	readonly #client: ArkClient;
 
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#request = new Request(
-			container.get(IoC.BindingType.ConfigRepository),
-			container.get(IoC.BindingType.HttpClient),
-			container.get(IoC.BindingType.NetworkHostSelector),
-		);
+		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
+		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
+
+		this.#client = new ArkClient(host.host);
 	}
 
 	public override async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
-		const body = await this.#request.get(`transactions/${id}`);
-
+		const body = await this.#client.transactions().get(id);
 		return this.dataTransferObjectService.transaction(body.data);
 	}
 
 	public override async transactions(
 		query: Services.ClientTransactionsInput,
 	): Promise<Collections.ConfirmedTransactionDataCollection> {
-		const response = await this.#request.get("transactions", this.#createSearchParams(query));
+		const { searchParams } = this.#createSearchParams(query);
+		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
 
+		const response = await this.#client.transactions().all(page, limit, parameters);
 		return this.dataTransferObjectService.transactions(response.data, this.#createMetaPagination(response));
 	}
 
-	public override async wallet(id: Services.WalletIdentifier, options?: object): Promise<Contracts.WalletData> {
-		const body = await this.#request.get(`wallets/${id.value}`, undefined, "full", options);
+	public override async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
+		const body = await this.#client.wallets().get(id.value);
 
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
 	public override async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
-		const response = await this.#request.get("wallets", this.#createSearchParams(query));
+		const { searchParams } = this.#createSearchParams(query);
+		const { limit = 10, page = 1 } = searchParams ?? { limit: 10, page: 1 };
+
+		const response = await this.#client.wallets().all(page, limit);
 
 		return new Collections.WalletDataCollection(
 			response.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
@@ -60,13 +64,16 @@ export class ClientService extends Services.AbstractClientService {
 	}
 
 	public override async delegate(id: string): Promise<Contracts.WalletData> {
-		const body = await this.#request.get(`delegates/${id}`);
-
+		const body = await this.#client.validators().get(id);
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
 	public override async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
-		const body = await this.#request.get("delegates", this.#createSearchParams(query || {}));
+		const { searchParams } = this.#createSearchParams(query ?? {});
+		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
+
+		// const body = await this.#request.get("delegates", this.#createSearchParams(query || {}));
+		const body = await this.#client.validators().all(page, limit, parameters);
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
@@ -75,7 +82,8 @@ export class ClientService extends Services.AbstractClientService {
 	}
 
 	public override async votes(id: string): Promise<Services.VoteReport> {
-		const { data } = await this.#request.get(`wallets/${id}`);
+		const { data } = await this.#client.votes().get(id);
+		console.log({ data });
 
 		const vote = data.vote || data.attributes?.vote;
 		const hasVoted = vote !== undefined;
@@ -94,23 +102,9 @@ export class ClientService extends Services.AbstractClientService {
 		};
 	}
 
-	public override async voters(
-		id: string,
-		query?: Contracts.KeyValuePair,
-	): Promise<Collections.WalletDataCollection> {
-		const body = await this.#request.get(`delegates/${id}/voters`, this.#createSearchParams(query || {}));
-
-		return new Collections.WalletDataCollection(
-			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
-			this.#createMetaPagination(body),
-		);
-	}
-
 	public override async broadcast(
 		transactions: Contracts.SignedTransactionData[],
 	): Promise<Services.BroadcastResponse> {
-		let response: Contracts.KeyValuePair;
-
 		const transactionToBroadcast: any[] = [];
 
 		for (const transaction of transactions) {
@@ -118,18 +112,14 @@ export class ClientService extends Services.AbstractClientService {
 			transactionToBroadcast.push(data);
 		}
 
+		let response: Contracts.KeyValuePair;
+
 		try {
-			response = await this.#request.post(
-				"transactions",
-				{
-					body: {
-						transactions: transactionToBroadcast,
-					},
-				},
-				"tx",
-			);
+			response = this.#client.transactions().create(transactionToBroadcast);
+			console.log({ response });
 		} catch (error) {
 			response = error.response.json();
+			console.log({ error: response });
 		}
 
 		const { data, errors } = response;
@@ -169,25 +159,7 @@ export class ClientService extends Services.AbstractClientService {
 
 	public override async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
 		try {
-			const response = await this.#request.post(
-				"",
-				{
-					body: {
-						id: 1,
-						jsonrpc: "2.0",
-						method: "eth_call",
-						params: [
-							{
-								data: callData.data,
-								from: callData.from,
-								to: callData.to,
-							},
-							callData.block || "latest",
-						],
-					},
-				},
-				"evm",
-			);
+			const response = await this.#client.evm().ethCall([callData]);
 
 			return {
 				id: response.id,
@@ -261,9 +233,12 @@ export class ClientService extends Services.AbstractClientService {
 		};
 	}
 
-	#createSearchParams(body: Services.ClientTransactionsInput): { body: object | null; searchParams: object | null } {
+	#createSearchParams(body: Services.ClientTransactionsInput): {
+		body: object | null;
+		searchParams: searchParams | null;
+	} {
 		if (Object.keys(body).length <= 0) {
-			return { body: null, searchParams: null };
+			return { body: null, searchParams: { limit: 10, page: 1 } };
 		}
 
 		const result: any = {
