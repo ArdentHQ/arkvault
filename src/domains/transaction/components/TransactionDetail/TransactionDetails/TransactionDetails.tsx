@@ -44,7 +44,7 @@ export const TransactionDetails = ({
 	const timestamp = transaction.timestamp();
 
 	const { blockHeight } = useBlockHeight({
-		blockId: transaction.blockHash(),
+		blockHash: transaction.blockHash(),
 		network: transactionWallet.network(),
 	});
 
