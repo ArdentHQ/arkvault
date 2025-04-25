@@ -36,15 +36,15 @@ export const useValidatorsFromURL = ({
 			setIsLoading(true);
 
 			try {
-				env.delegates().all(network.coin(), network.id());
+				env.validators().all(network.coin(), network.id());
 			} catch {
-				await env.delegates().sync(profile, network.coin(), network.id());
+				await env.validators().sync(profile, network.coin(), network.id());
 			}
 
 			if (unvoteValidators.length > 0 && unvotes.length === 0) {
 				const unvotesList: Contracts.VoteRegistryItem[] = unvoteValidators?.map((unvote) => ({
 					amount: unvote.amount,
-					wallet: env.delegates().findByAddress(network.coin(), network.id(), unvote.validatorAddress),
+					wallet: env.validators().findByAddress(network.coin(), network.id(), unvote.validatorAddress),
 				}));
 
 				setUnvotes(unvotesList);
@@ -53,7 +53,7 @@ export const useValidatorsFromURL = ({
 			if (voteValidators.length > 0 && votes.length === 0) {
 				const votesList: Contracts.VoteRegistryItem[] = voteValidators?.map((vote) => ({
 					amount: vote.amount,
-					wallet: env.delegates().findByAddress(network.coin(), network.id(), vote.validatorAddress),
+					wallet: env.validators().findByAddress(network.coin(), network.id(), vote.validatorAddress),
 				}));
 
 				setVotes(votesList);
