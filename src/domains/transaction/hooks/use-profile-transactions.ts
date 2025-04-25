@@ -55,8 +55,8 @@ interface TransactionAggregateQueryParameters {
 	limit: number;
 	types?: string[];
 	orderBy?: string;
-	senderId?: string;
-	recipientId?: string;
+	from?: string;
+	to?: string;
 }
 
 const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
@@ -260,11 +260,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			if (mode === "sent") {
-				queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",");
+				queryParameters.from = wallets.map((wallet) => wallet.address()).join(",");
 			}
 
 			if (mode === "received") {
-				queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",");
+				queryParameters.to = wallets.map((wallet) => wallet.address()).join(",");
 			}
 
 			// @ts-ignore
