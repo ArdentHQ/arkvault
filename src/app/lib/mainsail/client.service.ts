@@ -59,14 +59,16 @@ export class ClientService extends Services.AbstractClientService {
 		);
 	}
 
-	public override async delegate(id: string): Promise<Contracts.WalletData> {
-		const body = await this.#request.get(`delegates/${id}`);
+	//@ts-expect-error
+	public override async validator(id: string): Promise<Contracts.WalletData> {
+		const body = await this.#request.get(`validators/${id}`);
 
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
-	public override async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
-		const body = await this.#request.get("delegates", this.#createSearchParams(query || {}));
+	//@ts-expect-error
+	public override async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
+		const body = await this.#request.get("validators", this.#createSearchParams(query || {}));
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
@@ -85,11 +87,11 @@ export class ClientService extends Services.AbstractClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
@@ -98,7 +100,7 @@ export class ClientService extends Services.AbstractClientService {
 		id: string,
 		query?: Contracts.KeyValuePair,
 	): Promise<Collections.WalletDataCollection> {
-		const body = await this.#request.get(`delegates/${id}/voters`, this.#createSearchParams(query || {}));
+		const body = await this.#request.get(`validators/${id}/voters`, this.#createSearchParams(query || {}));
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
@@ -142,13 +144,13 @@ export class ClientService extends Services.AbstractClientService {
 
 		if (Array.isArray(data.accept)) {
 			for (const acceptedIndex of data.accept) {
-				result.accepted.push(transactions[acceptedIndex]?.id());
+				result.accepted.push(transactions[acceptedIndex]?.hash());
 			}
 		}
 
 		if (Array.isArray(data.invalid)) {
 			for (const rejected of data.invalid) {
-				result.rejected.push(transactions[rejected]?.id());
+				result.rejected.push(transactions[rejected]?.hash());
 			}
 		}
 
