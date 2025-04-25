@@ -1,8 +1,8 @@
 /* istanbul ignore file */
 
 import { Contracts, Exceptions, Services } from "@/app/lib/sdk";
-
 import { IReadWriteWallet, ITransactionService, WalletData } from "./contracts.js";
+
 import { ExtendedSignedTransactionData } from "./signed-transaction.dto.js";
 import { SignedTransactionDataDictionary } from "./wallet-transaction.service.contract.js";
 

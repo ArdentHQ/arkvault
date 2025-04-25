@@ -1,13 +1,13 @@
 /* istanbul ignore file */
 
 import { Contracts, DTO } from "@/app/lib/sdk";
-import { BigNumber } from "@/app/lib/helpers";
-
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
-import { ExtendedTransactionRecipient } from "./transaction.dto.js";
+
+import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
+import { ExtendedTransactionRecipient } from "./transaction.dto.js";
+import { Identifiers } from "./container.models.js";
+import { container } from "./container.js";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: Contracts.SignedTransactionData;
@@ -31,17 +31,14 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public from(): string {
-		//@ts-expect-error
 		return this.#data.from();
 	}
 
 	public to(): string {
-		//@ts-expect-error
 		return this.#data.to();
 	}
 
 	public value(): number {
-		//@ts-expect-error
 		return this.#data.value().toHuman();
 	}
 
@@ -62,7 +59,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public timestamp(): DateTime {
-		return DateTime.fromUnix(Number(this.#data.timestamp() as any as string) / 1000);
+		return this.#data.timestamp();
 	}
 
 	public isReturn(): boolean {
@@ -242,7 +239,7 @@ export class ExtendedSignedTransactionData {
 		return this.#data.memo();
 	}
 
-	public blockId(): string | undefined {
+	public blockHash(): string | undefined {
 		return undefined;
 	}
 

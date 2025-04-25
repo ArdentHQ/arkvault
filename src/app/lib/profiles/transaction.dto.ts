@@ -2,12 +2,12 @@
 /* eslint-disable */
 
 import { Coins, Contracts } from "@/app/lib/sdk";
-import { DateTime } from "@/app/lib/intl";
-import { BigNumber } from "@/app/lib/helpers";
-
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
-import { container } from "./container.js";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 import { Identifiers } from "./container.models.js";
+import { container } from "./container.js";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -38,7 +38,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public timestamp(): DateTime | undefined {
-		return DateTime.fromUnix(Number(this.#data.timestamp() as any as string) / 1000);
+		return this.#data.timestamp();
 	}
 
 	public confirmations(): BigNumber {
@@ -171,10 +171,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public expirationValue(): number {
 		return this.data<Contracts.ConfirmedTransactionData>().expirationValue();
-	}
-
-	public hash(): string {
-		return "";
 	}
 
 	// @ts-ignore
