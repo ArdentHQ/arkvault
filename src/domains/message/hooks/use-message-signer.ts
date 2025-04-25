@@ -1,4 +1,4 @@
-import { Services, Signatories } from "@ardenthq/sdk";
+import { Services, Signatories } from "@/app/lib/sdk";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {

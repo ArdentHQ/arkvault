@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { IoC, Services } from "@ardenthq/sdk";
+import { IoC, Services } from "@/app/lib/sdk";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
 
 import { BindingType } from "./coin.contract";

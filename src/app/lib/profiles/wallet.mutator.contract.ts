@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 
 /**
  * Defines the implementation contract for the wallet mutator.

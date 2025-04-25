@@ -1,4 +1,4 @@
-import { Coins, IoC, Services } from "@ardenthq/sdk";
+import { Coins, IoC, Services } from "@/app/lib/sdk";
 
 export class KnownWalletService extends Services.AbstractKnownWalletService {
 	#source: string | undefined;

@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";

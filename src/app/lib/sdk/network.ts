@@ -194,6 +194,10 @@ export class Network {
 	 * @param feature
 	 */
 	public allows(feature: string): boolean {
+		if (!feature) {
+			return false;
+		}
+
 		const [root, ...child] = feature.split(".");
 
 		const features: string[] = get(this.#network.featureFlags, root);

@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -211,12 +211,6 @@ export const SendVote = () => {
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		assertWallet(senderWallet);
 
-		// Skip authorization step
-		if (newIndex === Step.AuthenticationStep && senderWallet.isMultiSignature()) {
-			void handleSubmit(submitForm)();
-			return;
-		}
-
 		if (newIndex === Step.AuthenticationStep && senderWallet.isLedger()) {
 			if (!isLedgerTransportSupported()) {
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
@@ -331,8 +325,6 @@ export const SendVote = () => {
 
 					handleBroadcastError(voteResponse);
 
-					await activeWallet.transaction().sync();
-
 					await persist();
 
 					setTransaction(transaction);
@@ -362,8 +354,6 @@ export const SendVote = () => {
 
 					handleBroadcastError(unvoteResponse);
 
-					await activeWallet.transaction().sync();
-
 					await persist();
 
 					await confirmSendVote(activeWallet, "unvote");
@@ -386,8 +376,6 @@ export const SendVote = () => {
 					const voteResponse = await activeWallet.transaction().broadcast(voteResult.uuid);
 
 					handleBroadcastError(voteResponse);
-
-					await activeWallet.transaction().sync();
 
 					await persist();
 
@@ -424,8 +412,6 @@ export const SendVote = () => {
 				const response = await activeWallet.transaction().broadcast(uuid);
 
 				handleBroadcastError(response);
-
-				await activeWallet.transaction().sync();
 
 				await persist();
 

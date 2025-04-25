@@ -1,4 +1,4 @@
-import { Coins, Networks } from "@ardenthq/sdk";
+import { Coins, Networks } from "@/app/lib/sdk";
 import { Mainsail } from "@/app/lib/mainsail";
 
 const createNetwork = (coin: Coins.CoinBundle, network: string) =>

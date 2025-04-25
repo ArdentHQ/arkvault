@@ -1,9 +1,8 @@
 /* istanbul ignore file */
 
-import { Contracts, Services, Signatories } from "@ardenthq/sdk";
-
+import { Contracts, Exceptions, Services } from "@/app/lib/sdk";
 import { IReadWriteWallet, ITransactionService, WalletData } from "./contracts.js";
-import { pqueueSettled } from "./helpers/queue.js";
+
 import { ExtendedSignedTransactionData } from "./signed-transaction.dto.js";
 import { SignedTransactionDataDictionary } from "./wallet-transaction.service.contract.js";
 
@@ -50,38 +49,13 @@ export class TransactionService implements ITransactionService {
 	}
 
 	/** {@inheritDoc ITransactionService.sync} */
-	public async sync(): Promise<void> {
-		await pqueueSettled([() => this.#syncPendingMultiSignatures(), () => this.#syncReadyMultiSignatures()]);
+	public sync(): Promise<void> {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.sync.name);
 	}
 
 	/** {@inheritDoc ITransactionService.addSignature} */
-	public async addSignature(id: string, signatory: Signatories.Signatory): Promise<Services.BroadcastResponse> {
-		this.#assertHasValidIdentifier(id);
-
-		let transaction: Services.MultiSignatureTransaction;
-
-		try {
-			transaction = await this.#wallet.coin().multiSignature().findById(id);
-		} catch {
-			// If we end up here we are adding the first signature, locally.
-			transaction = this.transaction(id).data().data();
-		}
-
-		const transactionWithSignature = await this.#wallet
-			.coin()
-			.multiSignature()
-			.addSignature(transaction as any, signatory);
-
-		try {
-			if (id !== transactionWithSignature.hash()) {
-				await this.#wallet.coin().multiSignature().forgetById(id);
-			}
-		} catch {
-			//
-		}
-
-		const signedTransaction = this.#createExtendedSignedTransactionData(transactionWithSignature);
-		return this.#wallet.coin().multiSignature().broadcast(signedTransaction.data().toSignedData());
+	public addSignature(): Promise<Services.BroadcastResponse> {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.addSignature.name);
 	}
 
 	/** {@inheritDoc ITransactionService.signTransfer} */
@@ -105,7 +79,7 @@ export class TransactionService implements ITransactionService {
 	}
 
 	/** {@inheritDoc ITransactionService.signDelegateRegistration} */
-	public async signDelegateRegistration(input: Services.DelegateRegistrationInput): Promise<string> {
+	public async signDelegateRegistration(input: Services.ValidatorRegistrationInput): Promise<string> {
 		return this.#signTransaction("delegateRegistration", input);
 	}
 
@@ -119,34 +93,19 @@ export class TransactionService implements ITransactionService {
 		return this.#signTransaction("vote", input);
 	}
 
-	/** {@inheritDoc ITransactionService.signMultiSignature} */
-	public async signMultiSignature(input: Services.MultiSignatureInput): Promise<string> {
-		return this.#signTransaction("multiSignature", input);
-	}
-
-	/** {@inheritDoc ITransactionService.signIpfs} */
-	public async signIpfs(input: Services.IpfsInput): Promise<string> {
-		return this.#signTransaction("ipfs", input);
-	}
-
 	/** {@inheritDoc ITransactionService.signMultiPayment} */
 	public async signMultiPayment(input: Services.MultiPaymentInput): Promise<string> {
 		return this.#signTransaction("multiPayment", input);
 	}
 
 	/** {@inheritDoc ITransactionService.signDelegateResignation} */
-	public async signDelegateResignation(input: Services.DelegateResignationInput): Promise<string> {
+	public async signDelegateResignation(input: Services.ValidatorResignationInput): Promise<string> {
 		return this.#signTransaction("delegateResignation", input);
 	}
 
 	/** {@inheritDoc ITransactionService.signValidatorResignation} */
 	public async signValidatorResignation(input: Services.ValidatorResignationInput): Promise<string> {
 		return this.#signTransaction("validatorResignation", input);
-	}
-
-	/** {@inheritDoc ITransactionService.signUnlockToken} */
-	public async signUnlockToken(input: Services.UnlockTokenInput): Promise<string> {
-		return this.#signTransaction("unlockToken", input);
 	}
 
 	/** {@inheritDoc ITransactionService.transaction} */
@@ -235,49 +194,28 @@ export class TransactionService implements ITransactionService {
 
 	/** {@inheritDoc ITransactionService.isAwaitingOurSignature} */
 	public isAwaitingOurSignature(id: string): boolean {
-		return this.isAwaitingSignatureByPublicKey(id, this.#wallet.publicKey() as string);
+		return this.isAwaitingSignatureByPublicKey(id);
 	}
 
 	/** {@inheritDoc ITransactionService.isAwaitingOtherSignatures} */
 	public isAwaitingOtherSignatures(id: string): boolean {
 		this.#assertHasValidIdentifier(id);
 
-		// It's coin's responsibility to distinguish min required signatures
-		// based on registration & transaction type.
-		const remainingSignatureCount = this.#wallet
-			.coin()
-			.multiSignature()
-			.remainingSignatureCount(this.transaction(id).data());
-
-		if (this.isAwaitingOurSignature(id)) {
-			return remainingSignatureCount > 1;
-		}
-
-		return remainingSignatureCount > 0;
+		return false;
 	}
 
 	/** {@inheritDoc ITransactionService.isAwaitingSignatureByPublicKey} */
-	public isAwaitingSignatureByPublicKey(id: string, publicKey: string): boolean {
-		this.#assertHasValidIdentifier(id);
-
-		return this.#wallet.coin().multiSignature().needsWalletSignature(this.transaction(id).data(), publicKey);
+	public isAwaitingSignatureByPublicKey(id: string): boolean {
+		return this.isAwaitingOtherSignatures(id);
 	}
 
 	/** {@inheritDoc ITransactionService.isAwaitingFinalSignature} */
-	public isAwaitingFinalSignature(id: string): boolean {
-		return this.#wallet.coin().multiSignature().needsFinalSignature(this.transaction(id).data());
+	public isAwaitingFinalSignature(): boolean {
+		return false;
 	}
 
 	/** {@inheritDoc ITransactionService.canBeSigned} */
-	public canBeSigned(id: string): boolean {
-		if (this.isAwaitingSignatureByPublicKey(id, this.#getPublicKey())) {
-			return true;
-		}
-
-		if (this.isAwaitingFinalSignature(id) && !this.isAwaitingOtherSignatures(id)) {
-			return this.transaction(id).data().get("senderPublicKey") === this.#getPublicKey();
-		}
-
+	public canBeSigned(): boolean {
 		return false;
 	}
 
@@ -286,10 +224,6 @@ export class TransactionService implements ITransactionService {
 		this.#assertHasValidIdentifier(id);
 
 		if (!this.#signed[id]) {
-			return false;
-		}
-
-		if (this.#signed[id].usesMultiSignature() && this.isAwaitingFinalSignature(id)) {
 			return false;
 		}
 
@@ -310,8 +244,6 @@ export class TransactionService implements ITransactionService {
 
 		if (this.canBeBroadcasted(id)) {
 			result = await this.#wallet.client().broadcast([transaction.data()]);
-		} else if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
-			result = await this.#wallet.coin().multiSignature().broadcast(transaction.data().toSignedData());
 		}
 
 		if (result.accepted.includes(transaction.hash())) {
@@ -339,14 +271,6 @@ export class TransactionService implements ITransactionService {
 				delete this.#signed[id];
 				delete this.#broadcasted[id];
 				delete this.#pending[id];
-
-				if (transactionLocal.isMultiSignatureRegistration() || transactionLocal.usesMultiSignature()) {
-					try {
-						await this.#wallet.coin().multiSignature().forgetById(id);
-					} catch {
-						//
-					}
-				}
 
 				// We store the transaction here to be able to access it after it
 				// has been confirmed. This list won't be persisted which means
@@ -437,57 +361,6 @@ export class TransactionService implements ITransactionService {
 	#assertHasValidIdentifier(id: string): void {
 		if (id === undefined) {
 			throw new Error("Encountered a malformed ID. This looks like a bug.");
-		}
-	}
-
-	/**
-	 * Get the public key of the current wallet.
-	 *
-	 * @private
-	 * @param {string} id
-	 * @memberof TransactionService
-	 */
-	#getPublicKey(): string {
-		const publicKey: string | undefined = this.#wallet.publicKey();
-
-		/* istanbul ignore next */
-		if (publicKey === undefined) {
-			throw new Error(
-				"This wallet is lacking a public key. Please sync the wallet before interacting with transactions.",
-			);
-		}
-
-		return publicKey;
-	}
-
-	async #syncPendingMultiSignatures(): Promise<void> {
-		const transactions = await this.#wallet.coin().multiSignature().allWithPendingState(this.#getPublicKey());
-
-		this.#pending = {};
-
-		for (const transaction of transactions) {
-			const signedTransactionData = this.#wallet
-				.coin()
-				.dataTransferObject()
-				.signedTransaction(transaction.id, transaction);
-			await signedTransactionData.sanitizeSignatures();
-			this.#pending[transaction.id] = this.#createExtendedSignedTransactionData(signedTransactionData);
-		}
-	}
-
-	async #syncReadyMultiSignatures(): Promise<void> {
-		const transactions = await this.#wallet.coin().multiSignature().allWithReadyState(this.#getPublicKey());
-
-		this.#signed = {};
-
-		for (const transaction of transactions) {
-			const signedTransactionData = this.#wallet
-				.coin()
-				.dataTransferObject()
-				.signedTransaction(transaction.id, transaction);
-			await signedTransactionData.sanitizeSignatures();
-
-			this.#signed[transaction.id] = this.#createExtendedSignedTransactionData(signedTransactionData);
 		}
 	}
 

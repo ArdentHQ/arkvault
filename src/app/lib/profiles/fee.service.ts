@@ -1,4 +1,4 @@
-import { Coins, Services } from "@ardenthq/sdk";
+import { Coins, Services } from "@/app/lib/sdk";
 
 import { IFeeService, IProfile } from "./contracts.js";
 import { DataRepository } from "./data.repository.js";

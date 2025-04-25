@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 
 export type Network = Networks.NetworkManifest;
 export type NetworkMap = Record<string, Network>;

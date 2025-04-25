@@ -1,4 +1,4 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { sortBy, sortByDesc } from "@/app/lib/helpers";
 import retry from "p-retry";
 

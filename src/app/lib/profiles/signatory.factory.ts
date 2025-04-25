@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Services, Signatories } from "@ardenthq/sdk";
+import { Signatories } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, WalletData } from "./contracts.js";
 import { ISignatoryFactory, SignatoryInput } from "./signatory.factory.contract.js";
@@ -53,12 +53,6 @@ export class SignatoryFactory implements ISignatoryFactory {
 			}
 
 			return this.#wallet.signatory().mnemonic(await this.#wallet.signingKey().get(encryptionPassword));
-		}
-
-		if (this.#wallet.isMultiSignature()) {
-			return this.#wallet
-				.signatory()
-				.multiSignature(this.#wallet.multiSignature().all() as Services.MultiSignatureAsset);
 		}
 
 		if (this.#wallet.isLedger()) {

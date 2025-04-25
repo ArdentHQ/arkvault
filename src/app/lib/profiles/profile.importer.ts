@@ -1,4 +1,4 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { Base64 } from "@ardenthq/sdk-cryptography";
 
 import { container } from "./container.js";
@@ -47,8 +47,6 @@ export class ProfileImporter implements IProfileImporter {
 		this.#profile.coins().register();
 
 		await this.#profile.wallets().fill(data.wallets);
-
-		await this.#profile.pendingMusigWallets().fill(data.pendingMusigWallets);
 
 		this.#profile.contacts().fill(data.contacts);
 

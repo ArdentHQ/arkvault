@@ -1,14 +1,13 @@
-import { Coins, Services } from "@ardenthq/sdk";
+import { Coins, Services } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { TransactionFees } from "@/types";
-import { assertString } from "@/utils/assertions";
 
 interface CreateStubTransactionProperties {
 	coin: Coins.Coin;
-	getData: (wallet: Contracts.IReadWriteWallet) => Record<string, any>;
+	getData: () => Record<string, any>;
 	stub: boolean;
 	type: string;
 }
@@ -29,33 +28,6 @@ interface CalculateProperties {
 export const useFees = (profile: Contracts.IProfile) => {
 	const { env } = useEnvironmentContext();
 
-	const getMuSigData = (senderWallet: Contracts.IReadWriteWallet, data: Record<string, any>) => {
-		const participants = data?.participants ?? [];
-		const minParticipants = data?.minParticipants ?? 2;
-
-		const publicKey = senderWallet.publicKey();
-		assertString(publicKey);
-
-		const publicKeys = participants.map((participant: any) => participant.publicKey);
-
-		// Some coins like ARK, throw error if signatory's public key is not included in musig participants public keys.
-		publicKeys.splice(1, 1, publicKey);
-
-		return {
-			// LSK
-			mandatoryKeys: publicKeys,
-
-			// TODO: handle fields in sdk
-			// ARK
-			min: +minParticipants,
-
-			numberOfSignatures: +minParticipants,
-			optionalKeys: [],
-			publicKeys,
-			senderPublicKey: publicKey,
-		};
-	};
-
 	const getWallet = useCallback(
 		async (coin: string, network: string) => profile.walletFactory().generate({ coin, network }),
 		[profile],
@@ -70,7 +42,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 				: await wallet.signatory().mnemonic(mnemonic);
 
 			return (coin.transaction() as any)[type]({
-				data: getData(wallet),
+				data: getData(),
 				nonce: "1",
 				signatory,
 			});
@@ -83,13 +55,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 			try {
 				const transaction = await createStubTransaction({
 					coin,
-					getData: (senderWallet) => {
-						if (type === "multiSignature") {
-							return getMuSigData(senderWallet, data);
-						}
-
-						return data;
-					},
+					getData: () => data,
 					stub: type === "multiSignature",
 					type,
 				});

@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 
 export type Host = Networks.NetworkHost;
 export type HostSet = { name: string; host: Host }[];
