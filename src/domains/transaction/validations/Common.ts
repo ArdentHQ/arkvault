@@ -25,10 +25,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const minimumGasLimit = Math.max(
-					configManager.getMilestone()["gas"]["minimumGasLimit"],
-					21_000,
-				);
+				const minimumGasLimit = Math.max(configManager.getMilestone()["gas"]["minimumGasLimit"], 21_000);
 
 				if (gasLimit < minimumGasLimit) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
