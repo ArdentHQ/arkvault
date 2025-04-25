@@ -2,11 +2,11 @@ import { Contracts, Services } from "@ardenthq/sdk";
 
 import { pqueueSettled } from "./helpers/queue.js";
 
-export interface IDelegateSyncer {
+export interface IValidatorSyncer {
 	sync(): Promise<Contracts.WalletData[]>;
 }
 
-export class ParallelDelegateSyncer implements IDelegateSyncer {
+export class ParallelValidatorSyncer implements IValidatorSyncer {
 	readonly #clientService: Services.ClientService;
 
 	public constructor(clientService: Services.ClientService) {
@@ -45,7 +45,7 @@ export class ParallelDelegateSyncer implements IDelegateSyncer {
 	}
 }
 
-export class SerialDelegateSyncer implements IDelegateSyncer {
+export class SerialValidatorSyncer implements IValidatorSyncer {
 	readonly #client: Services.ClientService;
 
 	public constructor(client: Services.ClientService) {
