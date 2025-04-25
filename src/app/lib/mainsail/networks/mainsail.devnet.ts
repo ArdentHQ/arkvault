@@ -16,7 +16,6 @@ const network: Networks.NetworkManifest = {
 	explorer,
 	featureFlags,
 	governance: {
-		//@ts-expect-error
 		validatorCount: 53,
 		votesPerTransaction: 1,
 		votesPerWallet: 1,

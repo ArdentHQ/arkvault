@@ -59,14 +59,12 @@ export class ClientService extends Services.AbstractClientService {
 		);
 	}
 
-	//@ts-expect-error
 	public override async validator(id: string): Promise<Contracts.WalletData> {
 		const body = await this.#request.get(`validators/${id}`);
 
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
-	//@ts-expect-error
 	public override async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
 		const body = await this.#request.get("validators", this.#createSearchParams(query || {}));
 
@@ -87,11 +85,11 @@ export class ClientService extends Services.AbstractClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
