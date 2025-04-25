@@ -135,15 +135,15 @@ export class Network {
 	/**
 	 * Get the number of delegates that forge blocks.
 	 */
-	public delegateCount(): number {
-		return get(this.#network, "governance.delegateCount", 0);
+	public validatorCount(): number {
+		return get(this.#network, "governance.validatorCount", 0);
 	}
 
 	/**
-	 * Get the property by which delegates are identified for voting.
+	 * Get the property by which validators are identified for voting.
 	 */
-	public delegateIdentifier(): string {
-		return get(this.#network, "governance.delegateIdentifier", "publicKey");
+	public validatorIdentifier(): string {
+		return get(this.#network, "governance.validatorIdentifier", "publicKey");
 	}
 
 	/**

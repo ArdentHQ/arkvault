@@ -90,11 +90,9 @@ export class AbstractWalletData {
 		return {
 			address: this.address(),
 			balance: this.balance(),
-			isDelegate: this.isDelegate(),
-			isResignedDelegate: this.isResignedDelegate(),
+			isValidator: this.isValidator(),
 			isResignedValidator: this.isResignedValidator(),
 			isSecondSignature: this.isSecondSignature(),
-			isValidator: this.isValidator(),
 			nonce: this.nonce(),
 			publicKey: this.publicKey(),
 			rank: this.rank(),
