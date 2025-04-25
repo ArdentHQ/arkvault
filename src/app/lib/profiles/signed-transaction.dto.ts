@@ -242,7 +242,7 @@ export class ExtendedSignedTransactionData {
 		return this.#data.memo();
 	}
 
-	public blockId(): string | undefined {
+	public blockHash(): string | undefined {
 		return undefined;
 	}
 

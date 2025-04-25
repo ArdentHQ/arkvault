@@ -78,10 +78,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const builder = TransferBuilder.new()
 			.value(parseUnits(input.data.amount, "ark").valueOf())
-			.recipientAddress(input.data.to)
+			.to(input.data.to)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);

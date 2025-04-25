@@ -24,21 +24,21 @@ export class ServiceProvider extends IoC.AbstractServiceProvider {
 		]);
 
 		const dataCrypto = crypto.data;
-		const { height } = status.data;
+		const { blockNumber } = status.data;
 
 		if (dataCrypto.network.client.token !== this.configRepository.get(Coins.ConfigKey.CurrencyTicker)) {
 			throw new Error(`Failed to connect to ${request.latestHost()?.host} because it is on another network.`);
 		}
 
 		Managers.configManager.setConfig(dataCrypto);
-		Managers.configManager.setHeight(height);
+		Managers.configManager.setHeight(blockNumber);
 
 		if (container.missing(BindingType.Crypto)) {
 			container.constant(BindingType.Crypto, dataCrypto);
 		}
 
 		if (container.missing(BindingType.Height)) {
-			container.constant(BindingType.Height, height);
+			container.constant(BindingType.Height, blockNumber);
 		}
 	}
 }
