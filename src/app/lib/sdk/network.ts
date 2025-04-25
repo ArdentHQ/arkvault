@@ -115,7 +115,7 @@ export class Network {
 	 * Get the expiration method type.
 	 */
 	public expirationType(): ExpirationType {
-		return this.#network.transactions.expirationType;
+		return this.#network.validators.expirationType;
 	}
 
 	/**
@@ -295,7 +295,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public feeType(): FeeType {
-		return this.#network.transactions.fees.type;
+		return this.#network.validators.fees.type;
 	}
 
 	/**
@@ -305,7 +305,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesMemo(): boolean {
-		return get(this.#network, "transactions.memo", false);
+		return get(this.#network, "validators.memo", false);
 	}
 
 	/**
@@ -315,7 +315,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesUTXO(): boolean {
-		return get(this.#network, "transactions.utxo", false);
+		return get(this.#network, "validators.utxo", false);
 	}
 
 	/**
@@ -325,7 +325,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesLockedBalance(): boolean {
-		return get(this.#network, "transactions.lockedBalance", false);
+		return get(this.#network, "validators.lockedBalance", false);
 	}
 
 	/**
@@ -335,7 +335,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public multiPaymentRecipients(): number {
-		return get(this.#network, "transactions.multiPaymentRecipients", 0);
+		return get(this.#network, "validators.multiPaymentRecipients", 0);
 	}
 
 	/**
