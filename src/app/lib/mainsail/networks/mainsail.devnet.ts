@@ -16,17 +16,18 @@ const network: Networks.NetworkManifest = {
 	explorer,
 	featureFlags,
 	governance: {
-		delegateCount: 53,
+		//@ts-expect-error
+		validatorCount: 53,
 		votesPerTransaction: 1,
 		votesPerWallet: 1,
 	},
 	hosts: [
 		{
-			host: "https://dwallets-evm.mainsailhq.com/api",
+			host: "http://localhost:4003/api",
 			type: "full",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			host: "http://localhost:4007/api",
 			type: "tx",
 		},
 		{
@@ -34,7 +35,7 @@ const network: Networks.NetworkManifest = {
 			type: "explorer",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			host: "http://localhost:4008/api",
 			type: "evm",
 		},
 	],
