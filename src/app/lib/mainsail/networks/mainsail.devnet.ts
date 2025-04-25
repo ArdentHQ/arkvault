@@ -50,6 +50,7 @@ const network: Networks.NetworkManifest = {
 		wif: 186,
 	},
 	name: "Devnet",
+	//@ts-expect-error
 	transactions: {
 		...transactions,
 		fees: {
