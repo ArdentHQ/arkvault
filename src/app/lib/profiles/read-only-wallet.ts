@@ -7,8 +7,8 @@ interface ROWallet {
 	username?: string;
 	rank?: number;
 	explorerLink: string;
-	isDelegate: boolean;
-	isResignedDelegate: boolean;
+	isValidator: boolean;
+	isResignedValidator: boolean;
 	governanceIdentifier: string;
 }
 
@@ -49,14 +49,14 @@ export class ReadOnlyWallet implements IReadOnlyWallet {
 		return this.#wallet.explorerLink;
 	}
 
-	/** {@inheritDoc IReadOnlyWallet.isDelegate} */
-	public isDelegate(): boolean {
-		return this.#wallet.isDelegate;
+	/** {@inheritDoc IReadOnlyWallet.isValidator} */
+	public isValidator(): boolean {
+		return this.#wallet.isValidator;
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.isResignedDelegate} */
-	public isResignedDelegate(): boolean {
-		return this.#wallet.isResignedDelegate;
+	public isResignedValidator(): boolean {
+		return this.#wallet.isResignedValidator;
 	}
 
 	/** {@inheritDoc IReadOnlyWallet.governanceIdentifier} */
