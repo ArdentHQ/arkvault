@@ -71,21 +71,21 @@ const defaultNetworks = {
 	},
 };
 
-const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
-	const delegateName = searchParameters.get("delegate");
-	const delegatePublicKey = searchParameters.get("publicKey");
+const validatorFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
+	const validatorName = searchParameters.get("validator");
+	const validatorPublicKey = searchParameters.get("publicKey");
 
-	if (delegateName) {
+	if (validatorName) {
 		try {
-			return env.delegates().findByUsername(network.coin(), network.id(), delegateName);
+			return env.validators().findByUsername(network.coin(), network.id(), validatorName);
 		} catch {
 			//
 		}
 	}
 
-	if (delegatePublicKey) {
+	if (validatorPublicKey) {
 		try {
-			return env.delegates().findByPublicKey(network.coin(), network.id(), delegatePublicKey);
+			return env.validators().findByPublicKey(network.coin(), network.id(), validatorPublicKey);
 		} catch {
 			//
 		}
@@ -125,23 +125,23 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 	const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
 	await coin.__construct();
 
-	await env.delegates().sync(profile, network.coin(), network.id());
+	await env.validators().sync(profile, network.coin(), network.id());
 
-	const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters: parameters });
+	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
 
-	const delegatePublicKey =
+	const validatorPublicKey =
 		publicKey &&
 		truncate(publicKey, {
 			length: 20,
 			omissionPosition: "middle",
 		});
 
-	if (!delegate) {
-		return { error: { type: SearchParametersError.ValidatorNotFound, value: delegateName || delegatePublicKey } };
+	if (!validator) {
+		return { error: { type: SearchParametersError.ValidatorNotFound, value: delegateName || validatorPublicKey } };
 	}
 
-	if (delegate.isResignedDelegate()) {
-		return { error: { type: SearchParametersError.ValidatorResigned, value: delegateName || delegatePublicKey } };
+	if (validator.isResignedValidator()) {
+		return { error: { type: SearchParametersError.ValidatorResigned, value: delegateName || validatorPublicKey } };
 	}
 };
 
@@ -232,9 +232,9 @@ export const useSearchParametersValidation = () => {
 				const network = findNetworkFromSearchParameters(profile, searchParameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters });
+				const validator = validatorFromSearchParameters({ env, network, profile, searchParameters });
 
-				searchParameters.set("vote", delegate?.address() as string);
+				searchParameters.set("vote", validator?.address() as string);
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
