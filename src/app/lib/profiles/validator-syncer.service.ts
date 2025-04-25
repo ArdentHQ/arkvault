@@ -15,7 +15,7 @@ export class ParallelValidatorSyncer implements IValidatorSyncer {
 
 	async sync(): Promise<Contracts.WalletData[]> {
 		const result: Contracts.WalletData[] = [];
-		const lastResponse = await this.#clientService.delegates();
+		const lastResponse = await this.#clientService.validators();
 		for (const item of lastResponse.items()) {
 			result.push(item);
 		}
@@ -27,7 +27,7 @@ export class ParallelValidatorSyncer implements IValidatorSyncer {
 			const promises: (() => Promise<void>)[] = [];
 
 			const sendRequest = async (index: number) => {
-				const response = await this.#clientService.delegates({ cursor: index });
+				const response = await this.#clientService.validators({ cursor: index });
 
 				for (const item of response.items()) {
 					result.push(item);
@@ -58,7 +58,7 @@ export class SerialValidatorSyncer implements IValidatorSyncer {
 
 		let lastResponse;
 		do {
-			lastResponse = await this.#client.delegates(options);
+			lastResponse = await this.#client.validators(options);
 			for (const item of lastResponse.items()) {
 				result.push(item);
 			}

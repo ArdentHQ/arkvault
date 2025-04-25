@@ -57,7 +57,7 @@ export class ValidatorService implements IValidatorService {
 			result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
 				explorerLink: instance.link().wallet(validator.address()),
-				governanceIdentifier: instance.network().delegateIdentifier(),
+				governanceIdentifier: instance.network().validatorIdentifier(),
 			})),
 		);
 	}
