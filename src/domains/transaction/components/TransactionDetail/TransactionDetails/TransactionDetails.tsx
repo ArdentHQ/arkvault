@@ -35,7 +35,7 @@ export const TransactionDetails = ({
 		}
 
 		const refreshTransaction = async () => {
-			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.id());
+			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.hash());
 			setTransaction(confirmedTransaction);
 		};
 
