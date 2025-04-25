@@ -107,7 +107,7 @@ export const Votes: FC = () => {
 	useEffect(() => {
 		const syncVotes = async () => {
 			if (selectedWallet) {
-				await env.delegates().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
+				await env.validators().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
 				await selectedWallet.synchroniser().votes();
 			}
 		};
@@ -199,7 +199,7 @@ export const Votes: FC = () => {
 										i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
 										values={{
 											name: currentVotes
-												.find(({ wallet }) => wallet!.isResignedDelegate())
+												.find(({ wallet }) => wallet!.isResignedValidator())
 												?.wallet!.username(),
 										}}
 										components={{ bold: <strong /> }}

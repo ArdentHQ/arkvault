@@ -31,7 +31,7 @@ export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusPropert
 
 	// @ts-ignore
 	const activeCount = votes.filter(({ wallet }) => wallet?.rank() <= activeDelegates).length;
-	const resignedCount = votes.filter(({ wallet }) => wallet?.isResignedDelegate()).length;
+	const resignedCount = votes.filter(({ wallet }) => wallet?.isResignedValidator()).length;
 	const standbyCount = votes.length - activeCount - resignedCount;
 
 	if (activeCount === votes.length) {
