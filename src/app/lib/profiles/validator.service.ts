@@ -11,7 +11,7 @@ export class ValidatorService implements IValidatorService {
 
 	/** {@inheritDoc IValidatorService.all} */
 	public all(coin: string, network: string): IReadOnlyWallet[] {
-		const result: any[] | undefined = this.#dataRepository.get(`${coin}.${network}.delegates`);
+		const result: any[] | undefined = this.#dataRepository.get(`${coin}.${network}.validators`);
 
 		if (result === undefined) {
 			throw new Error(
@@ -19,22 +19,22 @@ export class ValidatorService implements IValidatorService {
 			);
 		}
 
-		return result.map((delegate) => this.#mapDelegate(delegate));
+		return result.map((validator) => this.#mapValidator(validator));
 	}
 
 	/** {@inheritDoc IValidatorService.findByAddress} */
 	public findByAddress(coin: string, network: string, address: string): IReadOnlyWallet {
-		return this.#findDelegateByAttribute(coin, network, "address", address);
+		return this.#findValidatorByAttribute(coin, network, "address", address);
 	}
 
 	/** {@inheritDoc IValidatorService.findByPublicKey} */
 	public findByPublicKey(coin: string, network: string, publicKey: string): IReadOnlyWallet {
-		return this.#findDelegateByAttribute(coin, network, "publicKey", publicKey);
+		return this.#findValidatorByAttribute(coin, network, "publicKey", publicKey);
 	}
 
 	/** {@inheritDoc IValidatorService.findByUsername} */
 	public findByUsername(coin: string, network: string, username: string): IReadOnlyWallet {
-		return this.#findDelegateByAttribute(coin, network, "username", username);
+		return this.#findValidatorByAttribute(coin, network, "username", username);
 	}
 
 	/** {@inheritDoc IValidatorService.sync} */
@@ -112,26 +112,26 @@ export class ValidatorService implements IValidatorService {
 		}
 	}
 
-	#findDelegateByAttribute(coin: string, network: string, key: string, value: string): IReadOnlyWallet {
-		const result = this.all(coin, network).find((delegate) => delegate[key]() === value);
+	#findValidatorByAttribute(coin: string, network: string, key: string, value: string): IReadOnlyWallet {
+		const result = this.all(coin, network).find((validator) => validator[key]() === value);
 
 		if (result === undefined) {
-			throw new Error(`No delegate for ${key} with value ${value} could be found.`);
+			throw new Error(`No validator for ${key} with value ${value} could be found.`);
 		}
 
 		return result;
 	}
 
-	#mapDelegate(delegate: Record<string, any>): IReadOnlyWallet {
+	#mapValidator(validator: Record<string, any>): IReadOnlyWallet {
 		return new ReadOnlyWallet({
-			address: delegate.address,
-			explorerLink: delegate.explorerLink,
-			governanceIdentifier: delegate.governanceIdentifier,
-			isResignedValidator: delegate.isResignedValidator,
-			isValidator: delegate.isValidator,
-			publicKey: delegate.publicKey,
-			rank: delegate.rank as unknown as number,
-			username: delegate.username,
+			address: validator.address,
+			explorerLink: validator.explorerLink,
+			governanceIdentifier: validator.governanceIdentifier,
+			isResignedValidator: validator.isResignedValidator,
+			isValidator: validator.isValidator,
+			publicKey: validator.publicKey,
+			rank: validator.rank as unknown as number,
+			username: validator.username,
 		});
 	}
 }
