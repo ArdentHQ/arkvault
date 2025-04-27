@@ -50,22 +50,18 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	useEffect(() => {
 		const recalculateFee = async () => {
 			setIsLoadingFee(true);
-	
+
 			const transactionFees = await calculate({
 				coin: network.coin(),
 				data,
 				network: network.id(),
 				type,
 			});
-	
+
 			/* istanbul ignore else -- @preserve */
 			const isMultiPayment = type === "multiPayment";
-			const recipientsCount = isMultiPayment && Array.isArray(data?.payments)
-				? data.payments.length
-				: 1;
-			const defaultGasLimit = isMultiPayment
-				? GasLimit.multiPayment * recipientsCount
-				: GasLimit[type];
+			const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
+			const defaultGasLimit = isMultiPayment ? GasLimit.multiPayment * recipientsCount : GasLimit[type];
 
 			if (getValues("gasPrice") === undefined) {
 				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
@@ -75,10 +71,9 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
 			setIsLoadingFee(false);
 		};
-	
+
 		void recalculateFee();
 	}, [calculate, data, getValues, network.id(), setValue, type]);
-	
 
 	return (
 		<InputFee
