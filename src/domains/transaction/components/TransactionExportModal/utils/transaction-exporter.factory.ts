@@ -37,8 +37,6 @@ const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]
 
 interface ExtendedAggregateQuery extends AggregateQuery {
 	timestamp: Services.RangeCriteria | undefined;
-	senderId?: string;
-	recipientId?: string;
 }
 
 export const TransactionExporter = ({
@@ -79,7 +77,7 @@ export const TransactionExporter = ({
 
 		const queryParameters: ExtendedAggregateQuery = {
 			limit,
-			orderBy: "timestamp:desc,sequence:desc",
+			orderBy: "timestamp:desc,transactionIndex:desc",
 			timestamp: dateRange,
 		};
 
@@ -91,11 +89,11 @@ export const TransactionExporter = ({
 		}
 
 		if (type === "sent") {
-			queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",");
+			queryParameters.from = wallets.map((wallet) => wallet.address()).join(",");
 		}
 
 		if (type === "received") {
-			queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",");
+			queryParameters.to = wallets.map((wallet) => wallet.address()).join(",");
 		}
 
 		const page = await profile.transactionAggregate()[type](queryParameters);

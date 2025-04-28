@@ -274,12 +274,12 @@ export class ClientService extends Services.AbstractClientService {
 		const mappings: Record<string, string> = {
 			address: "address",
 			cursor: "page",
+			from: "from",
 			limit: "limit",
 			memo: "vendorField",
 			orderBy: "orderBy",
-			recipientId: "recipientId",
-			senderId: "senderId",
 			senderPublicKey: "senderPublicKey",
+			to: "to",
 		};
 
 		for (const [alias, original] of Object.entries(mappings)) {
