@@ -22,11 +22,11 @@ const network: Networks.NetworkManifest = {
 	},
 	hosts: [
 		{
-			host: "https://dwallets-evm.mainsailhq.com/api",
+			host: "http://dwallets-evm.mainsailhq.com/api",
 			type: "full",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			host: "https://dwallets-evm.mainsailhq.com/api",
 			type: "tx",
 		},
 		{
@@ -34,7 +34,7 @@ const network: Networks.NetworkManifest = {
 			type: "explorer",
 		},
 		{
-			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			host: "https://dwallets-evm.mainsailhq.com/api",
 			type: "evm",
 		},
 	],
@@ -50,7 +50,6 @@ const network: Networks.NetworkManifest = {
 		wif: 186,
 	},
 	name: "Devnet",
-	//@ts-expect-error
 	transactions: {
 		...transactions,
 		fees: {

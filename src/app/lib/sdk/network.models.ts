@@ -142,7 +142,7 @@ export interface NetworkManifest {
 		votesAmountMinimum?: number;
 		votesAmountMaximum?: number;
 	};
-	validators: NetworkManifestTransactions;
+	transactions: NetworkManifestTransactions;
 	importMethods: NetworkManifestImportMethods;
 	knownWallets?: string;
 	featureFlags: NetworkManifestFeatureFlags;
