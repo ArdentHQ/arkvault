@@ -59,9 +59,6 @@ export const PortfolioHeader = ({
 		selectedWallet,
 	} = usePortfolio({ profile });
 
-	const {addressViewPreference} = useAddressesPanel({profile});
-	const [viewingMode, setViewingMode] = useState<AddressViewType>(addressViewPreference);
-
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
 
@@ -159,7 +156,6 @@ export const PortfolioHeader = ({
 										availableWallets={allWallets.length}
 										wallets={selectedWallets}
 										profile={profile}
-										mode={viewingMode}
 									/>
 									{allWallets.length > 1 && (
 										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
@@ -389,8 +385,7 @@ export const PortfolioHeader = ({
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
 				defaultSelectedWallet={selectedWallet}
-				onClose={(addresses, viewingMode: AddressViewType) => {
-					setViewingMode(viewingMode);
+				onClose={(addresses) => {
 					setSelectedAddresses(addresses);
 				}}
 				open={showAddressesPanel}

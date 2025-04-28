@@ -4,27 +4,34 @@ import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
+import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
 export const ViewingAddressInfo = ({
 	profile,
 	wallets,
 	availableWallets,
-	mode,
 }: {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	availableWallets: number;
-	mode: AddressViewType;
 }) => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
-	const firstWallet = wallets.at(0);
+	const { activeNetwork } = useActiveNetwork({profile})
+	const {addressViewPreference, singleSelectedAddress} = useAddressesPanel({profile});
 
-	if (mode === AddressViewSelection.single && firstWallet) {
+	const hasSelectedAddress = singleSelectedAddress.length > 0;
+
+	if (addressViewPreference === AddressViewSelection.single && hasSelectedAddress) {
+		const activeWallet = profile
+			.wallets()
+			.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
+			.find((wallet) => wallet.address() === singleSelectedAddress[0]);
+
 		const { alias } = getWalletAlias({
-			address: firstWallet.address(),
-			network: firstWallet.network(),
+			address: activeWallet.address(),
+			network: activeWallet.network(),
 			profile,
 		});
 

@@ -19,7 +19,7 @@ export enum AddressViewSelection {
 }
 
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { persist } = useEnvironmentContext();
+	const { persist, state, } = useEnvironmentContext();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {
@@ -79,7 +79,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 		setAddressViewPreferenceState(settings.addressViewPreference || AddressViewSelection.single);
 		setSingleSelectedAddressState(settings.singleSelectedAddress || []);
 		setMultiSelectedAddressesState(settings.multiSelectedAddresses || []);
-	}, [profile.id(), activeNetwork.id()]);
+	}, [profile.id(), activeNetwork.id(), state]);
 
 	const setAddressViewPreference = async (preference: AddressViewType): Promise<void> => {
 		setAddressViewPreferenceState(preference);

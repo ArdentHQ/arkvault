@@ -4,6 +4,7 @@ import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { Networks } from "@/app/lib/sdk";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
+import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
 function Balance({ wallets }: { wallets: Contracts.IReadWriteWallet[] }) {
 	return {
@@ -89,6 +90,27 @@ export function SelectedAddresses({
 		hasSelected(): boolean {
 			return this.all().length > 0;
 		},
+
+		mode() {
+			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
+				selectedMode: AddressViewSelection.single,
+			}) as unknown as DashboardConfiguration;
+
+			if (!config.selectedMode) {
+				return AddressViewSelection.single;
+			}
+
+			return config.selectedMode;
+		},
+
+		setMode(newMode: AddressViewType) {
+			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
+				selectedMode: AddressViewSelection.single,
+			}) as unknown as DashboardConfiguration;
+
+			config.selectedMode = newMode;
+		},
+
 		/**
 		 * Sets a new address and persists the change.
 		 *
@@ -164,6 +186,11 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 				addresses.set([profile.wallets().first().address()], network);
 			}
 
+			await persist();
+		},
+		mode: addresses.mode(),
+		setMode: async (mode: AddressViewType) => {
+			addresses.setMode(mode)
 			await persist();
 		},
 	};
