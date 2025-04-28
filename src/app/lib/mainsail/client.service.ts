@@ -165,6 +165,7 @@ export class ClientService extends Services.AbstractClientService {
 
 	public override async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
 		try {
+			// @ts-ignore
 			const response = await this.#client.evm().ethCall(callData);
 
 			return {
