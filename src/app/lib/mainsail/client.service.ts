@@ -73,7 +73,7 @@ export class ClientService extends Services.AbstractClientService {
 	}
 
 	public override async delegate(id: string): Promise<Contracts.WalletData> {
-		const body = await this.#client.validators().get(id);
+		const body = await this.#client.delegates().get(id);
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
@@ -82,7 +82,7 @@ export class ClientService extends Services.AbstractClientService {
 		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
 
 		// const body = await this.#request.get("delegates", this.#createSearchParams(query || {}));
-		const body = await this.#client.validators().all(page, limit, parameters);
+		const body = await this.#client.delegates().all(page, limit, parameters);
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
@@ -91,7 +91,7 @@ export class ClientService extends Services.AbstractClientService {
 	}
 
 	public override async votes(id: string): Promise<Services.VoteReport> {
-		const { data } = await this.#client.votes().get(id);
+		const { data } = await this.#client.wallets().get(id);
 
 		const vote = data.vote || data.attributes?.vote;
 		const hasVoted = vote !== undefined;
