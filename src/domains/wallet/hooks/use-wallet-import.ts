@@ -235,10 +235,10 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			const wallet = await importWallet({ encryptedWif, ledgerOptions, network, type, value });
 			wallets.push(wallet);
 
-			if (addressViewPreference === AddressViewSelection.single) {
-				await setSelectedAddresses([wallet.address()], wallet.network());
-			} else {
+			if (addressViewPreference === AddressViewSelection.multiple) {
 				await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
+			} else {
+				await setSelectedAddresses([wallet.address()], wallet.network());
 			}
 		}
 
