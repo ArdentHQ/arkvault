@@ -1,4 +1,4 @@
-import { WIF as Base } from "@ardenthq/sdk-cryptography";
+import { WIF as Base } from "@ardenthq/arkvault-crypto";
 import { Network } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import { KeyPair } from "./contracts";
 import { getWIF } from "./helpers";

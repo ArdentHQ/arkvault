@@ -1,4 +1,4 @@
-import { Bcrypt } from "@ardenthq/sdk-cryptography";
+import { Bcrypt } from "@ardenthq/arkvault-crypto";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";

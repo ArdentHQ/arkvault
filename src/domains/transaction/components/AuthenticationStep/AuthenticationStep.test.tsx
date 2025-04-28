@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { PBKDF2 } from "@ardenthq/arkvault-crypto";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactRouterDomMock from "react-router-dom";
