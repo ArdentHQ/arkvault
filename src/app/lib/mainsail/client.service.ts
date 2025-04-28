@@ -81,7 +81,6 @@ export class ClientService extends Services.AbstractClientService {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
 
-		// const body = await this.#request.get("delegates", this.#createSearchParams(query || {}));
 		const body = await this.#client.delegates().all(page, limit, parameters);
 
 		return new Collections.WalletDataCollection(
