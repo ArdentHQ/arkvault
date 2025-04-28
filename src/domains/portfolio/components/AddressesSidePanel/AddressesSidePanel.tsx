@@ -35,7 +35,7 @@ export const AddressesSidePanel = ({
 	defaultSelectedWallet?: Contracts.IReadWriteWallet;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onClose: (addresses: string[]) => void;
+	onClose: (addresses: string[], viewingMode: AddressViewType) => void;
 	onDelete?: (addresses: string) => void;
 }): JSX.Element => {
 	const {
@@ -136,7 +136,7 @@ export const AddressesSidePanel = ({
 			await setSingleSelectedAddress([address]);
 
 			onOpenChange(false);
-			onClose([address]);
+			onClose([address], addressViewPreference);
 		} else {
 			if (selectedAddresses.includes(address)) {
 				const newSelection = selectedAddresses.filter((a) => a !== address);
@@ -289,7 +289,7 @@ export const AddressesSidePanel = ({
 				setSearchQuery("");
 
 				if (!open) {
-					onClose(selectedAddresses);
+					onClose(selectedAddresses, addressViewPreference);
 				}
 			}}
 			dataTestId="AddressesSidePanel"

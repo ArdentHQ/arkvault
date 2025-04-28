@@ -24,6 +24,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
+import { AddressViewType, useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
 
 export const PortfolioHeader = ({
 	profile,
@@ -57,6 +58,9 @@ export const PortfolioHeader = ({
 		removeSelectedAddresses,
 		selectedWallet,
 	} = usePortfolio({ profile });
+
+	const {addressViewPreference} = useAddressesPanel({profile});
+	const [viewingMode, setViewingMode] = useState<AddressViewType>(addressViewPreference);
 
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
@@ -155,6 +159,7 @@ export const PortfolioHeader = ({
 										availableWallets={allWallets.length}
 										wallets={selectedWallets}
 										profile={profile}
+										mode={viewingMode}
 									/>
 									{allWallets.length > 1 && (
 										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
@@ -384,7 +389,8 @@ export const PortfolioHeader = ({
 				wallets={allWallets}
 				defaultSelectedAddresses={selectedAddresses}
 				defaultSelectedWallet={selectedWallet}
-				onClose={(addresses) => {
+				onClose={(addresses, viewingMode: AddressViewType) => {
+					setViewingMode(viewingMode);
 					setSelectedAddresses(addresses);
 				}}
 				open={showAddressesPanel}
