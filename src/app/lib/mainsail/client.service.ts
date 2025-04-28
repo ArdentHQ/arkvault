@@ -181,7 +181,7 @@ export class ClientService extends Services.AbstractClientService {
 	public override async usernames(addresses: string[]): Promise<Collections.UsernameDataCollection> {
 		try {
 			let data;
-			console.log({ UsernamesAbi, addresses })
+			console.log({ UsernamesAbi, addresses });
 
 			try {
 				data = encodeFunctionData({
@@ -194,7 +194,7 @@ export class ClientService extends Services.AbstractClientService {
 				throw new Error(`Failed to encode function data: ${(encodeError as Error).message}`);
 			}
 
-			console.log({ data })
+			console.log({ data });
 			const response = await this.evmCall({
 				data: data,
 				to: wellKnownContracts.username,
@@ -202,13 +202,13 @@ export class ClientService extends Services.AbstractClientService {
 
 			let decoded;
 			try {
-				console.log({ response })
+				console.log({ response });
 				decoded = decodeFunctionResult({
 					abi: UsernamesAbi.abi,
 					data: response.result,
 					functionName: "getUsernames",
 				});
-				console.log({ decoded })
+				console.log({ decoded });
 			} catch (decodeError) {
 				throw new Error(`Failed to decode function result: ${(decodeError as Error).message}`);
 			}
