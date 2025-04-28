@@ -23,9 +23,6 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.25
         version: 0.26.25(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@konforti/react-truncate':
-        specifier: ^1.1.0
-        version: 1.1.0
       '@ledgerhq/hw-app-eth':
         specifier: ^6.42.8
         version: 6.42.8
@@ -1874,12 +1871,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
-
-  '@konforti/react-truncate@1.1.0':
-    resolution: {integrity: sha512-iStNcGg+CN14QATfQmvtKsSmAcerNyEGKYRNRQiXkgY/zyM4s0hNcsOZ0RJtr6SUSpN3/aJ/VtrKYjXj31Kf5w==}
-
-  '@konforti/truncate@1.0.1':
-    resolution: {integrity: sha512-m49CamTfkeb/yp6Edm5cCStV2C5JnGkCxPysnHQcXLpZk+bV5+4N3PIiZAQ1VCWMM4fjQ0p0pzvzIa3EhC7NHg==}
 
   '@ledgerhq/cryptoassets-evm-signatures@13.5.4':
     resolution: {integrity: sha512-adKCDodAoxVE0NI0lu4VPejYC9lTIIYqlfB8KB1PFgaWj1JsvIgD+OGPu3wTT+S4vjqwyKRBxALDsRgcUS9p0w==}
@@ -9621,12 +9612,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.15
-
-  '@konforti/react-truncate@1.1.0':
-    dependencies:
-      '@konforti/truncate': 1.0.1
-
-  '@konforti/truncate@1.0.1': {}
 
   '@ledgerhq/cryptoassets-evm-signatures@13.5.4':
     dependencies:
