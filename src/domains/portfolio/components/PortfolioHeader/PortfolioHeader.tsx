@@ -59,7 +59,7 @@ export const PortfolioHeader = ({
 		selectedWallet,
 	} = usePortfolio({ profile });
 
-	const {addressViewPreference} = useAddressesPanel({profile});
+	const { addressViewPreference } = useAddressesPanel({ profile });
 	const [viewingMode, setViewingMode] = useState<AddressViewType>(addressViewPreference);
 
 	const wallet = selectedWallets.at(0);
