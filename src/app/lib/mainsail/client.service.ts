@@ -19,15 +19,24 @@ const wellKnownContracts = {
 };
 
 export class ClientService extends Services.AbstractClientService {
-	readonly #client: ArkClient;
+	readonly #client!: ArkClient;
 
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
 		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
 
-		this.#client = new ArkClient(host.host);
+		const api = hostSelector(container.get(IoC.BindingType.ConfigRepository), 'full');
+		const evm = hostSelector(container.get(IoC.BindingType.ConfigRepository), 'evm');
+		const transactions = hostSelector(container.get(IoC.BindingType.ConfigRepository), 'tx');
+
+		if (evm) {
+			this.#client = new ArkClient({
+				api: api.host,
+				evm: evm.host,
+				transactions: transactions.host
+			});
+		}
 	}
 
 	public override async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
@@ -83,7 +92,6 @@ export class ClientService extends Services.AbstractClientService {
 
 	public override async votes(id: string): Promise<Services.VoteReport> {
 		const { data } = await this.#client.votes().get(id);
-		console.log({ data });
 
 		const vote = data.vote || data.attributes?.vote;
 		const hasVoted = vote !== undefined;
@@ -93,11 +101,11 @@ export class ClientService extends Services.AbstractClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
@@ -115,11 +123,9 @@ export class ClientService extends Services.AbstractClientService {
 		let response: Contracts.KeyValuePair;
 
 		try {
-			response = this.#client.transactions().create(transactionToBroadcast);
-			console.log({ response });
+			response = await this.#client.transactions().create(transactionToBroadcast);
 		} catch (error) {
 			response = error.response.json();
-			console.log({ error: response });
 		}
 
 		const { data, errors } = response;
