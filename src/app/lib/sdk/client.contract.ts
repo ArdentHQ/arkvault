@@ -65,8 +65,8 @@ export interface RangeCriteria {
 export interface ClientTransactionsInput extends ClientPagination {
 	// Addresses
 	identifiers?: WalletIdentifier[];
-	senderId?: string;
-	recipientId?: string;
+	from?: string;
+	to?: string;
 	// Public Keys
 	senderPublicKey?: string;
 	recipientPublicKey?: string;

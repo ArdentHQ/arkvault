@@ -15,7 +15,7 @@ export class TransactionService implements ITransactionService {
 	readonly #wallet: IReadWriteWallet;
 
 	/**
-	 * The transactions that have been signped but not necessarily broadcasted.
+	 * The transactions that have been signed but not necessarily broadcasted.
 	 *
 	 * @memberof TransactionService
 	 */

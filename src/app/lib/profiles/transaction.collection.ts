@@ -3,8 +3,8 @@ import { Collections } from "@/app/lib/sdk";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 
 export class ExtendedConfirmedTransactionDataCollection extends Collections.Paginator<ExtendedConfirmedTransactionData> {
-	public findById(id: string): ExtendedConfirmedTransactionData | undefined {
-		return this.#find("id", id);
+	public findById(hash: string): ExtendedConfirmedTransactionData | undefined {
+		return this.#find("hash", hash);
 	}
 
 	public findByType(type: string): ExtendedConfirmedTransactionData | undefined {
@@ -15,12 +15,12 @@ export class ExtendedConfirmedTransactionDataCollection extends Collections.Pagi
 		return this.#find("timestamp", timestamp);
 	}
 
-	public findBySender(sender: string): ExtendedConfirmedTransactionData | undefined {
-		return this.#find("sender", sender);
+	public findBySender(from: string): ExtendedConfirmedTransactionData | undefined {
+		return this.#find("from", from);
 	}
 
-	public findByRecipient(recipient: string): ExtendedConfirmedTransactionData | undefined {
-		return this.#find("recipient", recipient);
+	public findByRecipient(to: string): ExtendedConfirmedTransactionData | undefined {
+		return this.#find("to", to);
 	}
 
 	#find(key: string, value: string): ExtendedConfirmedTransactionData | undefined {
