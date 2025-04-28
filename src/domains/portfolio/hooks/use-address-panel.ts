@@ -24,7 +24,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {
 		const defaultSettings: AddressesPanelSettings = {
-			addressViewPreference: AddressViewSelection.multiple,
+			addressViewPreference: AddressViewSelection.single,
 			multiSelectedAddresses: [],
 			singleSelectedAddress: [],
 		};
@@ -47,7 +47,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 
 		if (!config.addressPanelSettings) {
 			config.addressPanelSettings = {
-				addressViewPreference: AddressViewSelection.multiple,
+				addressViewPreference: AddressViewSelection.single,
 				multiSelectedAddresses: [],
 				singleSelectedAddress: [],
 			};
@@ -64,7 +64,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 
 	const initialSettings = getAddressPanelSettings();
 	const [addressViewPreference, setAddressViewPreferenceState] = useState<AddressViewType>(
-		initialSettings.addressViewPreference || AddressViewSelection.multiple,
+		initialSettings.addressViewPreference || AddressViewSelection.single,
 	);
 	const [singleSelectedAddress, setSingleSelectedAddressState] = useState<string[]>(
 		initialSettings.singleSelectedAddress || [],
@@ -76,7 +76,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 	// Sync local state with profile settings
 	useEffect(() => {
 		const settings = getAddressPanelSettings();
-		setAddressViewPreferenceState(settings.addressViewPreference || AddressViewSelection.multiple);
+		setAddressViewPreferenceState(settings.addressViewPreference || AddressViewSelection.single);
 		setSingleSelectedAddressState(settings.singleSelectedAddress || []);
 		setMultiSelectedAddressesState(settings.multiSelectedAddresses || []);
 	}, [profile.id(), activeNetwork.id()]);
