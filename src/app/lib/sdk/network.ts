@@ -115,7 +115,7 @@ export class Network {
 	 * Get the expiration method type.
 	 */
 	public expirationType(): ExpirationType {
-		return this.#network.validators.expirationType;
+		return this.#network.transactions.expirationType;
 	}
 
 	/**
@@ -295,7 +295,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public feeType(): FeeType {
-		return this.#network.validators.fees.type;
+		return this.#network.transactions.fees.type;
 	}
 
 	/**
