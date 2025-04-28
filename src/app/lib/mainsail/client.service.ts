@@ -26,15 +26,15 @@ export class ClientService extends Services.AbstractClientService {
 
 		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
 
-		const api = hostSelector(container.get(IoC.BindingType.ConfigRepository), 'full');
-		const evm = hostSelector(container.get(IoC.BindingType.ConfigRepository), 'evm');
-		const transactions = hostSelector(container.get(IoC.BindingType.ConfigRepository), 'tx');
+		const api = hostSelector(container.get(IoC.BindingType.ConfigRepository), "full");
+		const evm = hostSelector(container.get(IoC.BindingType.ConfigRepository), "evm");
+		const transactions = hostSelector(container.get(IoC.BindingType.ConfigRepository), "tx");
 
 		if (evm) {
 			this.#client = new ArkClient({
 				api: api.host,
 				evm: evm.host,
-				transactions: transactions.host
+				transactions: transactions.host,
 			});
 		}
 	}
@@ -101,11 +101,11 @@ export class ClientService extends Services.AbstractClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}
