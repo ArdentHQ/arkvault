@@ -463,7 +463,7 @@ export class Wallet implements IReadWriteWallet {
 	public transactionTypes(): Networks.TransactionType[] {
 		const manifest: Networks.NetworkManifest = this.coin().manifest().get<object>("networks")[this.networkId()];
 
-		return manifest.validators.types;
+		return manifest.transactions.types;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.gate} */
