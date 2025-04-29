@@ -15,11 +15,11 @@ export interface MultiPaymentItem {
 export type TransactionDataMeta = string | number | boolean | undefined;
 
 export interface UnspentTransactionData {
-	id(): string;
+	hash(): string;
 
-	timestamp(): DateTime;
+	timestamp(): string;
 
-	amount(): BigNumber;
+	value(): BigNumber;
 
 	address(): string;
 }
@@ -29,9 +29,9 @@ export interface ConfirmedTransactionData {
 
 	withDecimals(decimals?: number | string): ConfirmedTransactionData;
 
-	id(): string;
+	hash(): string;
 
-	blockId(): string | undefined;
+	blockHash(): string | undefined;
 
 	type(): string;
 
@@ -39,15 +39,15 @@ export interface ConfirmedTransactionData {
 
 	confirmations(): BigNumber;
 
-	sender(): string;
+	from(): string;
 
 	senders(): MultiPaymentRecipient[];
 
-	recipient(): string;
+	to(): string;
 
 	recipients(): MultiPaymentRecipient[];
 
-	amount(): BigNumber;
+	value(): BigNumber;
 
 	fee(): BigNumber;
 

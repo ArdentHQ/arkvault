@@ -122,7 +122,7 @@ export class TransactionAggregate implements ITransactionAggregate {
 				const identifiers = query.identifiers;
 
 				if (identifiers === undefined) {
-					const identifier = query.senderId ?? query.recipientId;
+					const identifier = query.from ?? query.to;
 
 					if (typeof identifier === "string") {
 						return [wallet.address(), wallet.publicKey()].includes(identifier);

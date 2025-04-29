@@ -7,7 +7,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	const isNotificationUnread = (transaction: DTO.ExtendedConfirmedTransactionData) =>
 		Object.values(profile.notifications().all()).some((notification) => {
 			const isUnread = notification.read_at === undefined;
-			return notification.meta.transactionId === transaction.id() && isUnread;
+			return notification.meta.transactionId === transaction.hash() && isUnread;
 		});
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions } = useMemo(() => {

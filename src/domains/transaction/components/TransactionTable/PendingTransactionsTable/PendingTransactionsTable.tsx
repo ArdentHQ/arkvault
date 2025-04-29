@@ -1,16 +1,16 @@
-import { DTO } from "@/app/lib/profiles";
-import React, { useCallback, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-
 import { PendingTransaction, Properties } from "./PendingTransactionsTable.contracts";
-import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
-import { Table } from "@/app/components/Table";
+import React, { useCallback, useMemo } from "react";
+
+import { DTO } from "@/app/lib/profiles";
 import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
 import { PendingTransferRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRowMobile";
 import { SignedTransactionRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRow";
-import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-import { useBreakpoint } from "@/app/hooks";
+import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
+import { Table } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { useBreakpoint } from "@/app/hooks";
+import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
+import { useTranslation } from "react-i18next";
 
 export const PendingTransactions = ({
 	wallet,
