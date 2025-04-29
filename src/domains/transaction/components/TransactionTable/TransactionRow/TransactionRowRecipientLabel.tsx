@@ -162,7 +162,7 @@ export const TransactionRowRecipientLabel = ({
 	<BaseTransactionRowRecipientLabel
 		transaction={transaction}
 		type={transaction.type()}
-		recipient={transaction.recipient()}
+		recipient={transaction.to()}
 		walletName={walletName}
 		addressClass={addressClass}
 	/>

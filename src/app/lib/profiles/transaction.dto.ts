@@ -2,12 +2,12 @@
 /* eslint-disable */
 
 import { Coins, Contracts } from "@/app/lib/sdk";
-import { DateTime } from "@/app/lib/intl";
-import { BigNumber } from "@/app/lib/helpers";
-
 import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
-import { container } from "./container.js";
+
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
 import { Identifiers } from "./container.models.js";
+import { container } from "./container.js";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -25,12 +25,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		this.#data = data;
 	}
 
-	public id(): string {
-		return this.#data.id();
+	public hash(): string {
+		return this.#data.hash();
 	}
 
-	public blockId(): string | undefined {
-		return this.#data.blockId();
+	public blockHash(): string | undefined {
+		return this.#data.blockHash();
 	}
 
 	public type(): string {
@@ -45,12 +45,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.confirmations();
 	}
 
-	public sender(): string {
-		return this.#data.sender();
+	public from(): string {
+		return this.#data.from();
 	}
 
-	public recipient(): string {
-		return this.#data.recipient();
+	public to(): string {
+		return this.#data.to();
 	}
 
 	// @ts-ignore
@@ -60,12 +60,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	// @ts-ignore
-	public amount(): number {
-		return this.#data.amount().toHuman();
+	public value(): number {
+		return this.#data.value().toHuman();
 	}
 
 	public convertedAmount(): number {
-		return this.#convertAmount(this.amount());
+		return this.#convertAmount(this.value());
 	}
 
 	// @ts-ignore
@@ -173,10 +173,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.data<Contracts.ConfirmedTransactionData>().expirationValue();
 	}
 
-	public hash(): string {
-		return "";
-	}
-
 	// @ts-ignore
 	public payments(): { recipientId: string; amount: number }[] {
 		return this.data<Contracts.ConfirmedTransactionData>()
@@ -210,12 +206,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public explorerLink(): string {
-		return this.#coin.link().transaction(this.id());
+		return this.#coin.link().transaction(this.hash());
 	}
 
 	public explorerLinkForBlock(): string | undefined {
-		if (this.blockId()) {
-			return this.#coin.link().block(this.blockId()!);
+		if (this.blockHash()) {
+			return this.#coin.link().block(this.blockHash()!);
 		}
 
 		return undefined;
@@ -247,14 +243,14 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public total(): number {
 		if (this.isReturn()) {
-			return this.amount() - this.fee();
+			return this.value() - this.fee();
 		}
 
 		if (this.isSent()) {
-			return this.amount() + this.fee();
+			return this.value() + this.fee();
 		}
 
-		let total = this.amount();
+		let total = this.value();
 
 		if (this.isMultiPayment()) {
 			for (const recipient of this.recipients()) {

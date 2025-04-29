@@ -43,7 +43,7 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		this.identifier = attributes.identifier;
 	}
 
-	public id(): string {
+	public hash(): string {
 		return this.identifier;
 	}
 
@@ -73,16 +73,16 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 		return this.signedData;
 	}
 
-	public sender(): string {
-		throw new NotImplemented(this.constructor.name, this.sender.name);
+	public from(): string {
+		throw new NotImplemented(this.constructor.name, this.from.name);
 	}
 
-	public recipient(): string {
-		throw new NotImplemented(this.constructor.name, this.recipient.name);
+	public to(): string {
+		throw new NotImplemented(this.constructor.name, this.to.name);
 	}
 
-	public amount(): BigNumber {
-		throw new NotImplemented(this.constructor.name, this.amount.name);
+	public value(): BigNumber {
+		throw new NotImplemented(this.constructor.name, this.value.name);
 	}
 
 	public fee(): BigNumber {
@@ -175,13 +175,13 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 
 	public toObject(): SignedTransactionObject {
 		return {
-			amount: this.amount().toFixed(0),
+			value: this.value().toFixed(0),
 			broadcast: this.toBroadcast(),
 			data: this.data(),
 			fee: this.fee().toFixed(0),
-			id: this.id(),
-			recipient: this.recipient(),
-			sender: this.sender(),
+			hash: this.hash(),
+			to: this.to(),
+			from: this.from(),
 			timestamp: this.timestamp().toISOString(),
 		};
 	}
@@ -217,8 +217,8 @@ export class AbstractSignedTransactionData implements SignedTransactionData {
 
 		return [
 			{
-				address: this.recipient(),
-				amount: this.amount(),
+				address: this.to(),
+				amount: this.value(),
 			},
 		];
 	}

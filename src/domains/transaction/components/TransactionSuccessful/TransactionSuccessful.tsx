@@ -18,7 +18,7 @@ export const TransactionSuccessful = ({ transaction, senderWallet }: Transaction
 	const { t } = useTranslation();
 
 	const { isConfirmed, confirmations } = useConfirmedTransaction({
-		transactionId: transaction.id(),
+		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
 
