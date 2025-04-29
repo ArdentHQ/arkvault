@@ -33,27 +33,27 @@ export class TransactionIndex implements ITransactionIndex {
 	public async sent(
 		query: Services.ClientTransactionsInput = {},
 	): Promise<ExtendedConfirmedTransactionDataCollection> {
-		return this.#fetch({ senderId: this.#wallet.address(), ...query });
+		return this.#fetch({ from: this.#wallet.address(), ...query });
 	}
 
 	/** {@inheritDoc ITransactionIndex.received} */
 	public async received(
 		query: Services.ClientTransactionsInput = {},
 	): Promise<ExtendedConfirmedTransactionDataCollection> {
-		return this.#fetch({ recipientId: this.#wallet.address(), ...query });
+		return this.#fetch({ to: this.#wallet.address(), ...query });
 	}
 
 	/** {@inheritDoc ITransactionIndex.findById} */
-	public async findById(id: string): Promise<ExtendedConfirmedTransactionData> {
+	public async findById(hash: string): Promise<ExtendedConfirmedTransactionData> {
 		return transformTransactionData(
 			this.#wallet,
-			await this.#wallet.getAttributes().get<Coins.Coin>("coin").client().transaction(id),
+			await this.#wallet.getAttributes().get<Coins.Coin>("coin").client().transaction(hash),
 		);
 	}
 
 	/** {@inheritDoc ITransactionIndex.findByIds} */
-	public async findByIds(ids: string[]): Promise<ExtendedConfirmedTransactionData[]> {
-		return Promise.all(ids.map((id: string) => this.findById(id)));
+	public async findByIds(hashes: string[]): Promise<ExtendedConfirmedTransactionData[]> {
+		return Promise.all(hashes.map((hash: string) => this.findById(hash)));
 	}
 
 	async #fetch(query: Services.ClientTransactionsInput): Promise<ExtendedConfirmedTransactionDataCollection> {
