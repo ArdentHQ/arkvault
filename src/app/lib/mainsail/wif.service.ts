@@ -6,17 +6,18 @@ import { abort_if, abort_unless } from "@/app/lib/helpers";
 import { BindingType } from "./coin.contract";
 import { WIF as BaseWIF } from "./crypto/identities/wif";
 import { Interfaces } from "./crypto/index";
+import { configManager } from "./crypto/managers";
 
-export class WIFService extends Services.AbstractWIFService {
+export class WIFService {
 	readonly #config!: Interfaces.NetworkConfig;
 
 	public constructor(container: IoC.IContainer) {
-		super(container);
 
-		this.#config = container.get(BindingType.Crypto);
+		this.#config = configManager.get('network');
+		console.log({ config: this.#config })
 	}
 
-	public override async fromMnemonic(
+	public async fromMnemonic(
 		mnemonic: string,
 		options?: Services.IdentityOptions,
 	): Promise<Services.WIFDataTransferObject> {
@@ -25,13 +26,13 @@ export class WIFService extends Services.AbstractWIFService {
 		};
 	}
 
-	public override async fromSecret(secret: string): Promise<Services.WIFDataTransferObject> {
+	public async fromSecret(secret: string): Promise<Services.WIFDataTransferObject> {
 		return {
 			wif: BaseWIF.fromPassphrase(secret, this.#config.network),
 		};
 	}
 
-	public override async fromPrivateKey(privateKey: string): Promise<Services.WIFDataTransferObject> {
+	public async fromPrivateKey(privateKey: string): Promise<Services.WIFDataTransferObject> {
 		return {
 			// @ts-ignore - We don't care about having a public key for this
 			wif: BaseWIF.fromKeys({ compressed: true, privateKey }),

@@ -18,6 +18,8 @@ import {
 import { WalletFlag } from "./wallet.enum.js";
 import { IMnemonicDerivativeOptions, ISecretOptions } from "./wallet.factory.contract.js";
 import { Wallet } from "./wallet.js";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -39,7 +41,7 @@ export class WalletFactory implements IWalletFactory {
 		const wallet = await this.fromMnemonicWithBIP39({ coin, mnemonic, network });
 
 		if (withPublicKey) {
-			const value = await wallet.coin().publicKey().fromMnemonic(mnemonic);
+			const value = new PublicKeyService().fromMnemonic(mnemonic);
 			wallet.data().set(WalletData.PublicKey, value.publicKey);
 		}
 
@@ -126,9 +128,6 @@ export class WalletFactory implements IWalletFactory {
 		coin,
 		network,
 		publicKey,
-		bip44,
-		bip49,
-		bip84,
 	}: IPublicKeyOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.PublicKey);
@@ -137,17 +136,7 @@ export class WalletFactory implements IWalletFactory {
 
 		await wallet.mutator().coin(coin, network);
 
-		if (wallet.network().usesExtendedPublicKey()) {
-			if (!bip44 && !bip49 && !bip84) {
-				throw new Error("Please specify the levels and try again.");
-			}
-
-			await wallet
-				.mutator()
-				.address(await wallet.coin().address().fromPublicKey(publicKey, { bip44, bip49, bip84 }));
-		} else {
-			await wallet.mutator().address(await wallet.coin().address().fromPublicKey(publicKey));
-		}
+		await wallet.mutator().address(new AddressService().fromPublicKey(publicKey));
 
 		return wallet;
 	}
@@ -159,7 +148,7 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
 		await wallet.mutator().coin(coin, network);
-		await wallet.mutator().address(await wallet.coin().address().fromPrivateKey(privateKey));
+		await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
 
 		return wallet;
 	}
@@ -202,7 +191,7 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
 		await wallet.mutator().coin(coin, network);
-		await wallet.mutator().address(await wallet.coin().address().fromSecret(secret));
+		await wallet.mutator().address(new AddressService().fromSecret(secret));
 
 		if (password) {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.SECRET_WITH_ENCRYPTION);
