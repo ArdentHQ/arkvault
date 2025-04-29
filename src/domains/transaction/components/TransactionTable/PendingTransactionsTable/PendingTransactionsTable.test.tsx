@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -704,26 +704,6 @@ describe("Signed Transaction Table", () => {
 		);
 
 		expect(screen.getAllByText("N/A")).toHaveLength(2);
-
-		vi.restoreAllMocks();
-	});
-
-	it("should render tooltip if the transaction cannot be deleted", async () => {
-		const onClick = vi.fn();
-		mockPendingTransfers(wallet);
-		vi.spyOn(fixtures.transfer?.wallet(), "publicKey").mockReturnValue("test");
-
-		render(<SignedTransactionRowMobile transaction={fixtures.transfer} wallet={wallet} onRowClick={onClick} />);
-
-		expect(
-			screen.queryByText(translations.TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG),
-		).not.toBeInTheDocument();
-
-		await userEvent.hover(screen.getAllByTestId("SignedTransactionRowMobile--remove")[0]);
-
-		expect(
-			screen.getByText(translations.TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG),
-		).toBeInTheDocument();
 
 		vi.restoreAllMocks();
 	});

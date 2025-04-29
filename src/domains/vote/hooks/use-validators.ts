@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { useCallback, useMemo, useState } from "react";
 
 import { FilterOption } from "@/domains/vote/components/VotesFilter";

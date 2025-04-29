@@ -1,6 +1,6 @@
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import {
 	env,
 	getDefaultProfileId,

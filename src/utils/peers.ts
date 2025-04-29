@@ -1,5 +1,5 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Networks, Coins } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/profiles";
+import { Networks, Coins } from "@/app/lib/sdk";
 import { isValidUrl } from "./url-validation";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
@@ -92,7 +92,7 @@ const getServerHeight = async (address: string): Promise<number | undefined> => 
 	try {
 		const response = await client.get(`${baseUrl}/api/blockchain`);
 		const dataBody: any = JSON.parse(response.body());
-		return dataBody.data?.block?.height as number | undefined;
+		return dataBody.data?.block?.number as number | undefined;
 	} catch {
 		return;
 	}

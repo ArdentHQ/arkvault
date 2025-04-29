@@ -1,4 +1,4 @@
-import { ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { ReadOnlyWallet } from "@/app/lib/profiles";
 import React from "react";
 
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";

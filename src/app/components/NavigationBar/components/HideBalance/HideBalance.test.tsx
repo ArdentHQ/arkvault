@@ -3,7 +3,7 @@ import React from "react";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { HideBalance } from "./HideBalance";
 import userEvent from "@testing-library/user-event";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import * as balanceVisibilityHook from "@/app/hooks/use-balance-visibility";
 
 let profile: Contracts.IProfile;

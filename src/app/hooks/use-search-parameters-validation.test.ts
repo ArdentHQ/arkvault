@@ -1,4 +1,4 @@
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import { env, getMainsailProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 
 import { renderHook } from "@testing-library/react";

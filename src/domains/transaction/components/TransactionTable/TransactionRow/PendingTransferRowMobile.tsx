@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { TableRow } from "@/app/components/Table";
@@ -8,7 +8,7 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Divider } from "@/app/components/Divider";
 
 export const PendingTransferRowMobile = ({
@@ -31,7 +31,7 @@ export const PendingTransferRowMobile = ({
 						<div className="text-sm font-semibold">
 							<TruncateMiddle
 								className="cursor-pointer text-theme-primary-600"
-								text={transaction.id()}
+								text={transaction.hash()}
 								maxChars={14}
 								onClick={() => onRowClick?.(transaction)}
 								data-testid="PendingTransactionRow__transaction-id"
@@ -65,7 +65,7 @@ export const PendingTransferRowMobile = ({
 								<span className="text-sm">
 									<TruncateMiddle
 										className="cursor-pointer font-semibold text-theme-primary-600"
-										text={transaction.recipient() || ""}
+										text={transaction.to() || ""}
 										maxChars={14}
 										data-testid="PendingTransactionRowRecipientLabel"
 									/>
@@ -75,7 +75,7 @@ export const PendingTransferRowMobile = ({
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
 							<AmountLabel
-								value={transaction.amount() + transaction.fee()}
+								value={transaction.value() + transaction.fee()}
 								isNegative={transaction.isSent()}
 								ticker={wallet.currency()}
 								isCompact

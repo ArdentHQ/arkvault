@@ -1,8 +1,6 @@
-import { Coins } from "@ardenthq/sdk";
-import * as bip39 from "@scure/bip39";
-import { wordlist } from "@scure/bip39/wordlists/english";
-
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Coins } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 
@@ -13,7 +11,7 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 	try {
 		const wif = await wallet.signingKey().get(password);
 
-		if (bip39.validateMnemonic(wif, wordlist)) {
+		if (BIP39.validate(wif)) {
 			const { address } = await wallet.coin().address().fromMnemonic(wif);
 
 			return address;

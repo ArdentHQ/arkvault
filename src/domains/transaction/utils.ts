@@ -1,4 +1,4 @@
-import { DTO, Services } from "@ardenthq/sdk";
+import { DTO, Services } from "@/app/lib/sdk";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const isNoDeviceError = (error: any) => {
@@ -30,8 +30,8 @@ export const getTransferType = ({ recipients }: { recipients: RecipientItem[] })
 
 export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 	[
-		transaction.isDelegateRegistration(),
-		transaction.isDelegateResignation(),
+		transaction.isValidatorRegistration(),
+		transaction.isValidatorResignation(),
 		transaction.isVote(),
 		transaction.isUnvote(),
 		transaction.isUsernameRegistration(),
@@ -42,7 +42,7 @@ export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
  * Contract deployment is appearing as transfer without recipient.
  */
 export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
-	[!isContractTransaction(transaction), !transaction.recipient()].every(Boolean);
+	[!isContractTransaction(transaction), !transaction.to()].every(Boolean);
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

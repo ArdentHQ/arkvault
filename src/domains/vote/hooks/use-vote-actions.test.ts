@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import { useVoteActions } from "./use-vote-actions";
 import { env, getMainsailProfileId } from "@/utils/testing-library";

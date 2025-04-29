@@ -1,6 +1,6 @@
 import { AssertionError } from "assert";
-import { Coins, Networks } from "@ardenthq/sdk";
-import { Contracts, DTO, Profile, Wallet } from "@ardenthq/sdk-profiles";
+import { Coins, Networks } from "@/app/lib/sdk";
+import { Contracts, DTO, Profile, Wallet } from "@/app/lib/profiles";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {
@@ -10,7 +10,7 @@ export function assertProfile(profile?: Contracts.IProfile): asserts profile is 
 	}
 }
 
-export function assertWallet(wallet?: Contracts.IReadWriteWallet): asserts wallet is Wallet {
+export function assertWallet(wallet?: Contracts.IReadWriteWallet): asserts wallet is Contracts.IReadWriteWallet {
 	if (!(wallet instanceof Wallet)) {
 		throw new AssertionError({
 			message: `Expected 'wallet' to be Contracts.IReadWriteWallet, but received ${wallet}`,

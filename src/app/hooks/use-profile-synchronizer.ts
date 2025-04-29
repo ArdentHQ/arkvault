@@ -10,9 +10,9 @@ import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { delay } from "@/utils/delay";
 import { getActiveNetwork } from "./use-active-network";
 import { isEqual } from "@/app/lib/helpers";
@@ -111,11 +111,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			interval: Intervals.Long,
 		};
 
-		const syncPendingMusigWallets = {
-			callback: () => profile.pendingMusigWallets().sync(),
-			interval: Intervals.VeryShort,
-		};
-
 		const syncServerStatus = {
 			callback: async () => {
 				setConfiguration(profileId, { serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
@@ -130,7 +125,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncKnownWallets,
 				syncDelegates,
 				syncProfileWallets,
-				syncPendingMusigWallets,
 				syncServerStatus,
 			],
 			syncExchangeRates: syncExchangeRates.callback,

@@ -1,9 +1,9 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { LedgerScanStep, showLoadedLedgerWalletsMessage, LedgerTable } from "./LedgerScanStep";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";

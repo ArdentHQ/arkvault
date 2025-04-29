@@ -8,7 +8,7 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";

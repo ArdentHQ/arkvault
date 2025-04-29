@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Contracts, Environment } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/sdk";
 
 import { useQueryParameters } from "@/app/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";

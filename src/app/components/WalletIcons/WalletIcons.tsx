@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
 import React from "react";
 import { Size } from "@/types";
@@ -76,9 +76,6 @@ export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsP
 			)}
 			{!exclude?.includes("isLedger") && wallet.isLedger() && <WalletIcon type="Ledger" {...iconProperties} />}
 			{!exclude?.includes("isStarred") && wallet.isStarred() && <WalletIcon type="Starred" {...iconProperties} />}
-			{!exclude?.includes("isMultiSignature") && wallet.hasSyncedWithNetwork() && wallet.isMultiSignature() && (
-				<WalletIcon type="Multisignature" {...iconProperties} />
-			)}
 			{!exclude?.includes("isTestNetwork") && wallet.network().isTest() && (
 				<WalletIcon type="TestNetwork" {...iconProperties} />
 			)}

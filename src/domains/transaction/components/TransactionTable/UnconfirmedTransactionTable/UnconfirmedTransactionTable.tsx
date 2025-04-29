@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";

@@ -1,6 +1,6 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import React from "react";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
@@ -12,11 +12,9 @@ type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.Extend
 const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionData): boolean => {
 	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
 
-	const isMusig = [usesMultiSignature, !transaction.isConfirmed(), !transaction.isMultiSignatureRegistration()].every(
-		Boolean,
-	);
+	const isMusig = [usesMultiSignature, !transaction.isConfirmed()].every(Boolean);
 
-	return isMusig ? transaction.sender() === transaction.recipient() : false;
+	return isMusig ? transaction.from() === transaction.to() : false;
 };
 
 const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
@@ -32,7 +30,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	}
 
 	for (const recipient of transaction.recipients().values()) {
-		if (transaction.isSent() && transaction.sender() === recipient.address) {
+		if (transaction.isSent() && transaction.from() === recipient.address) {
 			returnedAmount += recipient.amount;
 		}
 	}
@@ -54,7 +52,7 @@ export const TransactionAmountLabel = ({
 
 	return (
 		<AmountLabel
-			value={transaction.amount()}
+			value={transaction.value()}
 			isNegative={transaction.isSent()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}

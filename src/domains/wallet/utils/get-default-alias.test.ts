@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { getDefaultAlias } from "./get-default-alias";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";

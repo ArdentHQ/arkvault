@@ -186,6 +186,7 @@ export default [
 			"sonarjs/no-use-of-empty-return-value": "error",
 			"sonarjs/no-nested-template-literals": "warn",
 			"sonarjs/prefer-single-boolean-return": "off",
+			"sonarjs/no-one-iteration-loop": "off",
 			"sort-keys-fix/sort-keys-fix": [
 				"error",
 				"asc",

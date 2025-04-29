@@ -1,7 +1,7 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { act, renderHook } from "@testing-library/react";
 import { http, HttpResponse } from "msw";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";

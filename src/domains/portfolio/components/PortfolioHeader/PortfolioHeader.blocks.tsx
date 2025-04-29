@@ -1,7 +1,7 @@
 import React from "react";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 

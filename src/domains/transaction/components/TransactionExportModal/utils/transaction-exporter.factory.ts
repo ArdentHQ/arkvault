@@ -1,11 +1,11 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 
-import { AggregateQuery } from "@ardenthq/sdk-profiles/distribution/esm/transaction.aggregate.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { assertString } from "@/utils/assertions";
 import { convertToCsv } from "./transaction-to-csv-converter";
+import { AggregateQuery } from "@/app/lib/profiles/transaction.aggregate.contract";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
@@ -17,14 +17,14 @@ interface TransactionExporterFetchProperties {
 const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
 	transactions.filter((transaction) => {
 		if (transaction.isTransfer()) {
-			return transaction.sender() !== transaction.recipient();
+			return transaction.from() !== transaction.to();
 		}
 
 		if (transaction.isMultiPayment()) {
-			let amount = BigNumber.make(transaction.amount());
+			let amount = BigNumber.make(transaction.value());
 
 			for (const recipient of transaction.recipients()) {
-				if (transaction.sender() === recipient.address) {
+				if (transaction.from() === recipient.address) {
 					amount = amount.minus(recipient.amount);
 				}
 			}
@@ -37,8 +37,6 @@ const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]
 
 interface ExtendedAggregateQuery extends AggregateQuery {
 	timestamp: Services.RangeCriteria | undefined;
-	senderId?: string;
-	recipientId?: string;
 }
 
 export const TransactionExporter = ({
@@ -79,7 +77,7 @@ export const TransactionExporter = ({
 
 		const queryParameters: ExtendedAggregateQuery = {
 			limit,
-			orderBy: "timestamp:desc,sequence:desc",
+			orderBy: "timestamp:desc,transactionIndex:desc",
 			timestamp: dateRange,
 		};
 
@@ -91,11 +89,11 @@ export const TransactionExporter = ({
 		}
 
 		if (type === "sent") {
-			queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",");
+			queryParameters.from = wallets.map((wallet) => wallet.address()).join(",");
 		}
 
 		if (type === "received") {
-			queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",");
+			queryParameters.to = wallets.map((wallet) => wallet.address()).join(",");
 		}
 
 		const page = await profile.transactionAggregate()[type](queryParameters);

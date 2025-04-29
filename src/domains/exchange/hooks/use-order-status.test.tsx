@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 
 import { useOrderStatus } from "./use-order-status";
