@@ -6,10 +6,10 @@ import { MultiPaymentItem, MultiPaymentRecipient } from "./confirmed-transaction
 export type RawTransactionData = any;
 
 export interface SignedTransactionObject {
-	id: string;
-	sender: string;
-	recipient: string;
-	amount: string;
+	hash: string;
+	from: string;
+	to: string;
+	value: string;
 	fee: string;
 	timestamp: string;
 	data: RawTransactionData;
@@ -22,11 +22,11 @@ export interface SignedTransactionData {
 	configure(identifier: string, signedData: RawTransactionData, serialized?: string, decimals?: number | string);
 
 	// All
-	id(): string;
+	hash(): string;
 	data(): RawTransactionData;
-	sender(): string;
-	recipient(): string;
-	amount(): BigNumber;
+	from(): string;
+	to(): string;
+	value(): BigNumber;
 	fee(): BigNumber;
 	nonce(): BigNumber;
 	timestamp(): DateTime;

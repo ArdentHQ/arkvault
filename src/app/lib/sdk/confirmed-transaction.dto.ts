@@ -61,11 +61,11 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		return this;
 	}
 
-	public id(): string {
-		throw new NotImplemented(this.constructor.name, this.id.name);
+	public hash(): string {
+		throw new NotImplemented(this.constructor.name, this.hash.name);
 	}
 
-	public blockId(): string | undefined {
+	public blockHash(): string | undefined {
 		return undefined;
 	}
 
@@ -95,24 +95,24 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 		return BigNumber.ZERO;
 	}
 
-	public sender(): string {
-		throw new NotImplemented(this.constructor.name, this.sender.name);
+	public from(): string {
+		throw new NotImplemented(this.constructor.name, this.from.name);
 	}
 
 	public senders(): MultiPaymentRecipient[] {
 		return [];
 	}
 
-	public recipient(): string {
-		throw new NotImplemented(this.constructor.name, this.recipient.name);
+	public to(): string {
+		throw new NotImplemented(this.constructor.name, this.to.name);
 	}
 
 	public recipients(): MultiPaymentRecipient[] {
 		return [];
 	}
 
-	public amount(): BigNumber {
-		throw new NotImplemented(this.constructor.name, this.amount.name);
+	public value(): BigNumber {
+		throw new NotImplemented(this.constructor.name, this.value.name);
 	}
 
 	public fee(): BigNumber {
@@ -237,12 +237,12 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 
 	public toObject(): KeyValuePair {
 		return {
-			amount: this.amount(),
+			value: this.value(),
 			confirmations: this.confirmations(),
 			fee: this.fee(),
-			id: this.id(),
-			recipient: this.recipient(),
-			sender: this.sender(),
+			hash: this.hash(),
+			to: this.to(),
+			from: this.from(),
 			timestamp: this.timestamp(),
 			type: this.type(),
 		};
@@ -251,7 +251,7 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	public toJSON(): KeyValuePair {
 		return {
 			...this.toObject(),
-			amount: this.amount().toString(),
+			value: this.value().toString(),
 			confirmations: this.confirmations().toString(),
 			fee: this.fee().toString(),
 			timestamp: this.timestamp()?.toISOString(),
@@ -261,7 +261,7 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	public toHuman(): KeyValuePair {
 		return {
 			...this.toObject(),
-			amount: this.amount().toHuman(),
+			value: this.value().toHuman(),
 			confirmations: this.confirmations().toString(),
 			fee: this.fee().toHuman(),
 			timestamp: this.timestamp()?.toISOString(),

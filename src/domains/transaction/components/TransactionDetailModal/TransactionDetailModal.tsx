@@ -62,7 +62,7 @@ export const TransactionDetailContent = ({
 					<TransactionAddresses
 						explorerLink={transaction.explorerLink()}
 						profile={profile}
-						senderAddress={transaction.sender()}
+						senderAddress={transaction.from()}
 						network={transaction.wallet().network()}
 						recipients={recipients}
 						labelClassName={labelClassName}

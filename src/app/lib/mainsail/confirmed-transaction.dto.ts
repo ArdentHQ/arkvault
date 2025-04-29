@@ -17,32 +17,32 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		this.#addressService = new AddressService();
 	}
 
-	public override id(): string {
-		return this.data.id;
+	public override hash(): string {
+		return this.data.hash;
 	}
 
 	public override nonce(): BigNumber {
 		return this.data.nonce;
 	}
 
-	public override blockId(): string | undefined {
-		return this.data.blockId;
+	public override blockHash(): string | undefined {
+		return this.data.blockHash;
 	}
 
 	public override timestamp(): DateTime | undefined {
-		return DateTime.fromUnix(this.data.timestamp / 1000);
+		return DateTime.fromUnix(Number(this.data.timestamp) / 1000);
 	}
 
 	public override confirmations(): BigNumber {
 		return BigNumber.make(this.data.confirmations);
 	}
 
-	public override sender(): string {
-		return this.data.senderAddress;
+	public override from(): string {
+		return this.data.from;
 	}
 
-	public override recipient(): string {
-		return this.data.recipient;
+	public override to(): string {
+		return this.data.to;
 	}
 
 	public override recipients(): Contracts.MultiPaymentRecipient[] {
@@ -56,17 +56,17 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		}));
 	}
 
-	public override amount(): BigNumber {
+	public override value(): BigNumber {
 		if (this.isMultiPayment()) {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return formatUnits(this.data.amount, "ark");
+		return formatUnits(this.data.value, "ark");
 	}
 
 	public override fee(): BigNumber {
 		const gasPrice = formatUnits(this.data.gasPrice, "ark");
-		return gasPrice.times(this.data.gasLimit);
+		return gasPrice.times(this.data.gas);
 	}
 
 	public override isReturn(): boolean {
@@ -75,18 +75,18 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		}
 
 		if (this.isMultiPayment()) {
-			return this.recipients().some(({ address }: Contracts.MultiPaymentRecipient) => address === this.sender());
+			return this.recipients().some(({ address }: Contracts.MultiPaymentRecipient) => address === this.from());
 		}
 
 		return false;
 	}
 
 	public override isSent(): boolean {
-		return [this.getMeta("address"), this.getMeta("publicKey")].includes(this.sender());
+		return [this.getMeta("address"), this.getMeta("publicKey")].includes(this.from());
 	}
 
 	public override isReceived(): boolean {
-		return [this.getMeta("address"), this.getMeta("publicKey")].includes(this.recipient());
+		return [this.getMeta("address"), this.getMeta("publicKey")].includes(this.to());
 	}
 
 	public override isTransfer(): boolean {
@@ -190,6 +190,6 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 	}
 
 	public override isSuccess(): boolean {
-		return this.data.receipt.success === true;
+		return this.data.receipt.status === 1;
 	}
 }
