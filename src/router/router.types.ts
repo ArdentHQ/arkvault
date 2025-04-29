@@ -1,6 +1,6 @@
 import { ComponentType, FC, LazyExoticComponent } from "react";
 import { RouteProps } from "react-router";
-import { Environment } from "@ardenthq/sdk-profiles";
+import { Environment } from "@/app/lib/profiles";
 import { History, Location } from "history";
 import { PreloadableComponent } from "@/utils/preload-lazy";
 

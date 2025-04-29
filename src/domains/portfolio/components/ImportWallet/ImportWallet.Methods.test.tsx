@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
+import { Contracts, Wallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";

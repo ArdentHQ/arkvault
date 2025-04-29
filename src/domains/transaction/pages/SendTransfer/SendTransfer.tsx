@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -176,7 +176,7 @@ export const SendTransfer = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async () => {
+	const handleNext = () => {
 		abortReference.current = new AbortController();
 
 		const { network, senderAddress } = getValues();
@@ -185,10 +185,10 @@ export const SendTransfer = () => {
 
 		const nextStep = activeTab + 1;
 
-		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
-			await handleSubmit(() => submit(true))();
-			return;
-		}
+		// if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isMultiSignature()) {
+		// 	await handleSubmit(() => submit(true))();
+		// 	return;
+		// }
 
 		if (nextStep === SendTransferStep.AuthenticationStep && senderWallet?.isLedger()) {
 			if (!isLedgerTransportSupported()) {

@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useTranslation } from "react-i18next";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/sdk";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";

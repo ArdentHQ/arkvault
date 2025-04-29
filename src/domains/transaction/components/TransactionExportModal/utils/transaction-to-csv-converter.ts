@@ -1,4 +1,4 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { CsvFormatter } from "./transaction-csv-formatter.factory";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { buildTranslations } from "@/app/i18n/helpers";
@@ -46,7 +46,7 @@ const transactionToCsv = (
 	const row: any[] = [];
 
 	if (settings.includeTransactionId) {
-		row.push(transaction.id());
+		row.push(transaction.hash());
 	}
 
 	if (settings.includeDate) {

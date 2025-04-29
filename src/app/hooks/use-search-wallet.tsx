@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useMemo, useState } from "react";
 
 import { useWalletAlias } from "./use-wallet-alias";

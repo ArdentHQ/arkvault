@@ -1,4 +1,4 @@
-import { Contracts, DTO, Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 
@@ -55,8 +55,8 @@ interface TransactionAggregateQueryParameters {
 	limit: number;
 	types?: string[];
 	orderBy?: string;
-	senderId?: string;
-	recipientId?: string;
+	from?: string;
+	to?: string;
 }
 
 const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
@@ -163,8 +163,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			const addresses = response
 				.items()
 				.flatMap((transaction) => [
-					transaction.sender(),
-					transaction.recipient(),
+					transaction.from(),
+					transaction.to(),
 					...transaction.recipients().map(({ address }) => address),
 				])
 				.filter(Boolean); // This is to filter out null values, for example a contract deployment recipient
@@ -260,11 +260,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 
 			if (mode === "sent") {
-				queryParameters.senderId = wallets.map((wallet) => wallet.address()).join(",");
+				queryParameters.from = wallets.map((wallet) => wallet.address()).join(",");
 			}
 
 			if (mode === "received") {
-				queryParameters.recipientId = wallets.map((wallet) => wallet.address()).join(",");
+				queryParameters.to = wallets.map((wallet) => wallet.address()).join(",");
 			}
 
 			// @ts-ignore
@@ -315,7 +315,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		const latestTransaction = items[0];
 
 		const foundNew =
-			latestTransaction && !transactions.some((transaction) => latestTransaction.id() === transaction.id());
+			latestTransaction && !transactions.some((transaction) => latestTransaction.hash() === transaction.hash());
 
 		if (!foundNew) {
 			return;

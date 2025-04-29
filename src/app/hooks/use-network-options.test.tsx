@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react";
 import React from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useNetworkOptions } from "./use-network-options";
 import { EnvironmentProvider } from "@/app/contexts";
 import {

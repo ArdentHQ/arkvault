@@ -24,7 +24,7 @@ export const NotificationTransactionItem = ({
 	const { alias } = useMemo(
 		() =>
 			getWalletAlias({
-				address: transaction.recipient(),
+				address: transaction.to(),
 				network: transaction.wallet().network(),
 				profile,
 			}),
@@ -64,7 +64,7 @@ export const NotificationTransactionItem = ({
 				<TableCell innerClassName="justify-end pr-6 static">
 					<div className="h-5">
 						<AmountLabel
-							value={transaction.amount()}
+							value={transaction.value()}
 							isNegative={transaction.isSent()}
 							ticker={transaction.wallet().currency()}
 						/>

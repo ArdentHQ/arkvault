@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { ReceiveFunds } from "./ReceiveFunds";

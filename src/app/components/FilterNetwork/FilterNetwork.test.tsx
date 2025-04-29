@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

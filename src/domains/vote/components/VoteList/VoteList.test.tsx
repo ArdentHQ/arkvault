@@ -1,4 +1,4 @@
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import React from "react";
 
 import { VoteList } from "./VoteList";

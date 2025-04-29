@@ -1,5 +1,5 @@
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import hash from "string-hash";
 import { useActiveProfile, useNetworks } from "@/app/hooks";

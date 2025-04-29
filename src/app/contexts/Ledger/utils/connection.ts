@@ -1,5 +1,5 @@
 import retry, { AbortError, Options } from "p-retry";
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
@@ -12,6 +12,8 @@ export const setupEthTransportInstance = (transport: LedgerTransport) => ({
 export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	try {
 		await coin.__construct();
+		// @TODO: move eth instance intenall in ledger service.
+		// @ts-ignore
 		await coin.ledger().connect((transport) => setupEthTransportInstance(transport));
 	} catch (error) {
 		// If the device is open, continue normally.

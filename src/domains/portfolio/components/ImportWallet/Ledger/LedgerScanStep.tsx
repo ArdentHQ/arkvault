@@ -1,10 +1,11 @@
-import { Networks, Contracts } from "@ardenthq/sdk";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { Networks, Contracts } from "@/app/lib/sdk";
+import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
@@ -19,8 +20,6 @@ import { Button } from "@/app/components/Button";
 import cn from "classnames";
 import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
-
-import { BIP44 } from "@/app/lib";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,

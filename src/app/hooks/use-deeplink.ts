@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";

@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useEffect } from "react";
 
 import { useWalletConfig } from "@/domains/wallet/hooks";

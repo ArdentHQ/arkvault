@@ -6,7 +6,7 @@ import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";

@@ -1,5 +1,5 @@
-import * as bip39 from "@scure/bip39";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -28,7 +28,7 @@ const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
 
 describe("EncryptionPasswordStep", () => {
-	beforeEach(async () => {
+	beforeEach(() => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
 			setSelectedAddresses: () => {},
@@ -39,24 +39,7 @@ describe("EncryptionPasswordStep", () => {
 			profile.wallets().forget(wallet.id());
 		}
 
-		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic: passphrase,
-			network: "mainsail.devnet",
-		});
-
-		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
-			async () =>
-				new Promise((resolve) => {
-					resolve({
-						mnemonic: passphrase,
-						wallet: walletMock,
-					});
-				}),
-		);
-
-		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
-
+		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);

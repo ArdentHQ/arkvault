@@ -1,5 +1,5 @@
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 
@@ -27,7 +27,7 @@ export const useTransactionRecipients = ({
 		if (transaction.isTransfer()) {
 			return [
 				getWalletAlias({
-					address: transaction.recipient(),
+					address: transaction.to(),
 					network: activeNetwork,
 					profile,
 				}),

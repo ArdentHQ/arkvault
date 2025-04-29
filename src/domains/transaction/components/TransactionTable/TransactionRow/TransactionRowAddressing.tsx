@@ -1,8 +1,8 @@
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useTheme, useWalletAlias } from "@/app/hooks";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { DTO } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/sdk";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
@@ -87,7 +87,7 @@ const ContractAddressing = ({
 	const { isDarkMode } = useTheme();
 	const address = isContractDeployment(transaction)
 		? transaction.data().data.receipt.deployedContractAddress
-		: transaction.recipient();
+		: transaction.to();
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
@@ -149,7 +149,7 @@ const MultiPaymentAddressing = ({
 						</span>
 					</>
 				)}
-				{direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
+				{direction === "received" && <FormattedAddress address={transaction.from()} alias={alias} />}
 			</span>
 		</div>
 	);
@@ -170,25 +170,21 @@ export const TransactionRowAddressing = ({
 	const { getWalletAlias } = useWalletAlias();
 	const { isDarkMode } = useTheme();
 
-	const isMusigTransfer = [
-		!!transaction.usesMultiSignature?.(),
-		!transaction.isConfirmed(),
-		!transaction.isMultiSignatureRegistration(),
-	].every(Boolean);
+	const isMusigTransfer = false;
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 	const isContract = isContractTransaction(transaction);
 
 	let direction: Direction = isNegative ? "sent" : "received";
-	if (transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient())) {
+	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
 		direction = "return";
 	}
 
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const network = transaction.wallet().network();
-	const recipientAddress = transaction.recipient();
-	const senderAddress = transaction.sender();
+	const recipientAddress = transaction.to();
+	const senderAddress = transaction.from();
 
 	const recipientAlias = useMemo(() => {
 		const found = recipients.find((r) => r.address === recipientAddress);

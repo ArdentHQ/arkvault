@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 

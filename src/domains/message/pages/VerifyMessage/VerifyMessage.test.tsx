@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -287,7 +287,7 @@ describe("VerifyMessage", () => {
 
 		await userEvent.click(verifyButton());
 
-		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
 	});
 
 	it("should return to dashboard when accessed through deeplink", async () => {

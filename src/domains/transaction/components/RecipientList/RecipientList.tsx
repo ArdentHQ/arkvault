@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback } from "react";
 
 import { RecipientListItem } from "./RecipientList.blocks";

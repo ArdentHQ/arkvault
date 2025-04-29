@@ -1,5 +1,5 @@
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { SearchableTableWrapperProperties } from "@/app/components/SearchableTableWrapper";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";

@@ -14,8 +14,8 @@ import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@/app/lib/profiles";
+import { DateTime } from "@/app/lib/intl";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
