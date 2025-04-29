@@ -338,10 +338,11 @@ export class Profile implements IProfile {
 
 	/** {@inheritDoc IProfile.activeNetwork} */
 	public activeNetwork(): Networks.Network {
-		const { activeNetworkId }: { activeNetworkId?: string } = (this.settings()
-			.get(Contracts.ProfileSetting.DashboardConfiguration)) ?? {
+		const { activeNetworkId }: { activeNetworkId?: string } = this.settings().get(
+			Contracts.ProfileSetting.DashboardConfiguration,
+		) ?? {
 			activeNetworkId: undefined,
-		}
+		};
 
 		const activeNetwork = this.availableNetworks().find((network) => {
 			if (activeNetworkId === network.id()) {
@@ -356,9 +357,9 @@ export class Profile implements IProfile {
 			throw new Error("Active network is missing");
 		}
 
-		console.log({ activeNetwork })
+		console.log({ activeNetwork });
 
-		return activeNetwork
+		return activeNetwork;
 	}
 
 	/** {@inheritDoc IProfile.exchangeTransactions} */
