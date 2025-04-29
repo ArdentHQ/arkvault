@@ -23,6 +23,7 @@ export type TransactionType =
 	| "vote";
 
 export interface NetworkHost {
+	id?: string;
 	type: NetworkHostType;
 	host: string;
 	custom?: boolean;
