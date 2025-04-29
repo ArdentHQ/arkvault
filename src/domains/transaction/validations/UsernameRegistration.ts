@@ -38,28 +38,27 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (
-		network: Networks.Network,
-		controller: MutableRefObject<AbortController | undefined>,
-	) => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.USERNAME") }),
-		validate: async (value: string): Promise<true | string> => {
-			const syncError = validateUsername(t, value);
-			if (syncError) {
-				return syncError;
-			}
+	username: (network: Networks.Network, controller: MutableRefObject<AbortController | undefined>) => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.USERNAME"),
+		}),
+		validate: {
+			unique: debounceAsync(async (value) => {
+				const error = validateUsername(t, value);
 
-			try {
-				await usernameExists(network, value, controller);
-				return true;
-			} catch (err: any) {
-				if (err.name === "UsernameExistsError") {
-					return t("COMMON.VALIDATION.EXISTS", {
-						field: t("COMMON.USERNAME"),
-					});
+				if (error) {
+					return error;
 				}
-				return true;
-			}
+
+				try {
+					await usernameExists(network, value, controller);
+				} catch (error) {
+					if (error.name === "UsernameExistsError") {
+						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
+					}
+					return true;
+				}
+			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),
 });
