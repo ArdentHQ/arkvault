@@ -5,8 +5,8 @@ import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collec
 export type AggregateQuery = {
 	identifiers?: Services.WalletIdentifier[];
 	types?: string[];
-	senderId?: string;
-	recipientId?: string;
+	from?: string;
+	to?: string;
 } & Services.ClientPagination;
 
 /**

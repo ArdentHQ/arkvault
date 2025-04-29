@@ -24,7 +24,7 @@ export const TransactionSummary = ({
 	return (
 		<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
 			<div className="space-y-3 sm:space-y-0">
-				{!BigNumber.make(transaction.amount()).isZero() && (
+				{!BigNumber.make(transaction.value()).isZero() && (
 					<>
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>

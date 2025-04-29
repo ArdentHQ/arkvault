@@ -15,19 +15,3 @@ export const filterHostsFromConfig = (config: ConfigRepository, type: NetworkHos
 
 export const randomNetworkHostFromConfig = (config: ConfigRepository, type: NetworkHostType = "full"): NetworkHost =>
 	randomHost(config.get<NetworkHost[]>("network.hosts"), type);
-
-export const pluckAddress = (query): string => {
-	if (query.senderId) {
-		return query.senderId;
-	}
-
-	if (query.recipientId) {
-		return query.recipientId;
-	}
-
-	if (Array.isArray(query.identifiers) && query.identifiers[0]) {
-		return query.identifiers[0].value;
-	}
-
-	throw new Error("Failed to pluck any address.");
-};

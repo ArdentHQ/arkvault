@@ -78,10 +78,10 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 		const builder = TransferBuilder.new()
 			.value(parseUnits(input.data.amount, "ark").valueOf())
-			.recipientAddress(input.data.to)
+			.to(input.data.to)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
@@ -111,7 +111,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.validatorPublicKey(`0x${input.data.validatorPublicKey}`)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
@@ -137,7 +137,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			const builder = await UnvoteBuilder.new()
 				.nonce(nonce)
 				.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-				.gasLimit(input.gasLimit)
+				.gas(input.gasLimit)
 				.network(this.#configCrypto.crypto.network.chainId);
 
 			await this.#sign(input, builder);
@@ -154,7 +154,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.vote(vote.id)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
@@ -184,11 +184,11 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const builder = MultipaymentBuilder.new()
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		for (const payment of input.data.payments) {
-			builder.pay(payment.to, parseUnits(payment.amount, "ark").toNumber());
+			builder.pay(payment.to, parseUnits(payment.amount, "ark").toString());
 		}
 
 		await this.#sign(input, builder);
@@ -218,7 +218,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 			.username(input.data.username)
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId);
 
 		await this.#sign(input, builder);
@@ -240,7 +240,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const builder = await UsernameResignationBuilder.new()
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId)
 			.sign(input.signatory.signingKey());
 
@@ -263,7 +263,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		const builder = await ValidatorResignationBuilder.new()
 			.nonce(nonce)
 			.gasPrice(parseUnits(input.gasPrice, "gwei").toNumber())
-			.gasLimit(input.gasLimit)
+			.gas(input.gasLimit)
 			.network(this.#configCrypto.crypto.network.chainId)
 			.sign(input.signatory.signingKey());
 
@@ -307,7 +307,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 
 	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
 		const { address } = await this.#signerData(input);
-		builder.transaction.data.senderAddress = address;
+		builder.transaction.data.from = address;
 
 		if (input.signatory.actsWithLedger()) {
 			return this.#signWithLedger(input, builder.transaction);
@@ -325,7 +325,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		transaction.data = {
 			...transaction.data,
 			...signature,
-			id: transaction.getId(),
+			id: transaction.getHash(),
 			v: Number.parseInt(signature.v) + 27, // TODO: remove +27 when updating mainsail packages https://app.clickup.com/t/86dwhby95
 		};
 	}
