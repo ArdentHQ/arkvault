@@ -24,7 +24,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
-import { ForceUnmount } from "@/app/components/SidePanel/ForceUnmount";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 
 export const PortfolioHeader = ({
 	profile,
@@ -380,7 +380,7 @@ export const PortfolioHeader = ({
 				</div>
 			</div>
 
-			<ForceUnmount>
+			<ResetWhenUnmounted>
 				<AddressesSidePanel
 					profile={profile}
 					wallets={allWallets}
@@ -395,7 +395,7 @@ export const PortfolioHeader = ({
 						void onDeleteAddress(address);
 					}}
 				/>
-			</ForceUnmount>
+			</ResetWhenUnmounted>
 
 			<WalletActionsModals
 				wallets={selectedWallets}

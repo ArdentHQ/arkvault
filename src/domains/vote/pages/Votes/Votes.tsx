@@ -21,7 +21,7 @@ import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
-import { ForceUnmount } from "@/app/components/SidePanel/ForceUnmount";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 
 export const Votes: FC = () => {
 	const { t } = useTranslation();
@@ -212,12 +212,12 @@ export const Votes: FC = () => {
 				/>
 			)}
 
-			<ForceUnmount>
+			<ResetWhenUnmounted>
 				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
-			</ForceUnmount>
-			<ForceUnmount>
+			</ResetWhenUnmounted>
+			<ResetWhenUnmounted>
 				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
-			</ForceUnmount>
+			</ResetWhenUnmounted>
 		</Page>
 	);
 };
