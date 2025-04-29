@@ -3,6 +3,7 @@ import { Coins } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 
@@ -12,12 +13,12 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 		const wif = await wallet.signingKey().get(password);
 
 		if (BIP39.validate(wif)) {
-			const { address } = await wallet.coin().address().fromMnemonic(wif);
+			const { address } = new AddressService().fromMnemonic(wif);
 
 			return address;
 		}
 
-		const { address } = await wallet.coin().address().fromSecret(wif);
+		const { address } = new AddressService().fromSecret(wif);
 
 		return address;
 	} catch {
@@ -48,9 +49,9 @@ export const authentication = (t: any) => {
 				field: t("COMMON.MNEMONIC"),
 			}),
 			validate: {
-				matchSenderAddress: async (mnemonic: string) => {
+				matchSenderAddress: (mnemonic: string) => {
 					try {
-						const { address } = await wallet.coin().address().fromMnemonic(mnemonic);
+						const { address } = new AddressService().fromMnemonic(mnemonic);
 
 						if (address === wallet.address()) {
 							return true;
@@ -67,8 +68,8 @@ export const authentication = (t: any) => {
 			required: t(requiredFieldMessage, {
 				field: t("COMMON.PRIVATE_KEY"),
 			}),
-			validate: async (privateKey: string) => {
-				const { address } = await wallet.coin().address().fromPrivateKey(privateKey);
+			validate: (privateKey: string) => {
+				const { address } = new AddressService().fromPrivateKey(privateKey);
 
 				if (address === wallet.address()) {
 					return true;
@@ -121,9 +122,9 @@ export const authentication = (t: any) => {
 			required: t(requiredFieldMessage, {
 				field: t("COMMON.SECRET"),
 			}),
-			validate: async (secret: string) => {
+			validate: (secret: string) => {
 				try {
-					const { address } = await wallet.coin().address().fromSecret(secret);
+					const { address } = new AddressService().fromSecret(secret);
 
 					if (address === wallet.address()) {
 						return true;
@@ -140,8 +141,8 @@ export const authentication = (t: any) => {
 				field: t("COMMON.WIF"),
 			}),
 			validate: {
-				matchSenderAddress: async (wif: string) => {
-					const { address } = await wallet.coin().address().fromWIF(wif);
+				matchSenderAddress: (wif: string) => {
+					const { address } = new AddressService().fromWIF(wif);
 
 					if (address === wallet.address()) {
 						return true;

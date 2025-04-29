@@ -1,3 +1,4 @@
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/sdk";
 import { debounceAsync } from "@/utils/debounce";
@@ -17,8 +18,8 @@ export const validatorRegistration = (t: any) => ({
 		}),
 
 		validate: {
-			pattern: async (publicKey: string) => {
-				const isValid = await wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey);
+			pattern: (publicKey: string) => {
+				const isValid = new PublicKeyService().verifyPublicKeyWithBLS(publicKey);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");

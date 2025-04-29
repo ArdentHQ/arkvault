@@ -8,6 +8,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputPassword } from "@/app/components/Input";
 import { assertWallet } from "@/utils/assertions";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 interface EncryptPasswordStepProperties {
 	importedWallet?: Contracts.IReadWriteWallet;
@@ -30,9 +31,9 @@ const SecondInputField = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
 						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 							field: t("COMMON.SECOND_MNEMONIC"),
 						}).toString(),
-						validate: async (value) => {
+						validate: (value) => {
 							try {
-								await wallet.coin().address().fromMnemonic(value);
+								new AddressService().fromMnemonic(value)
 								return true;
 							} catch {
 								return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC").toString();
@@ -54,9 +55,9 @@ const SecondInputField = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.SECOND_SECRET"),
 					}).toString(),
-					validate: async (value) => {
+					validate: (value) => {
 						try {
-							await wallet.coin().address().fromSecret(value);
+							new AddressService().fromSecret(value);
 						} catch {
 							return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET").toString();
 						}
@@ -71,7 +72,7 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 	const { t } = useTranslation();
 
 	const renderSecondInputField = () => {
-		if (importedWallet?.hasSyncedWithNetwork() && importedWallet?.isSecondSignature()) {
+		if (importedWallet?.hasSyncedWithNetwork() && importedWallet.isSecondSignature()) {
 			return <SecondInputField wallet={importedWallet} />;
 		}
 	};
