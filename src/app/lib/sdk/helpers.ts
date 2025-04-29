@@ -2,12 +2,26 @@ import { Array_ } from "@/app/lib/helpers";
 
 import { ConfigRepository } from "./coins";
 import { NetworkHost, NetworkHostType } from "./networks";
+import { HostSet, HostMap } from "@/app/lib/profiles/host.repository.contract";
 
 export const filterHosts = (hosts: NetworkHost[], type: NetworkHostType): NetworkHost[] =>
 	hosts.filter((host: NetworkHost) => host.type === type);
 
 export const randomHost = (hosts: NetworkHost[], type: NetworkHostType): NetworkHost =>
 	Array_.randomElement(filterHosts(hosts, type));
+
+export const groupCustomHosts = (hosts: HostSet): HostMap => {
+	const customHosts: HostMap = {};
+
+	for (const { host, name } of hosts) {
+		if (customHosts[name] === undefined) {
+			customHosts[name] = [];
+		}
+		customHosts[name].push({ host, name });
+	}
+
+	return customHosts;
+};
 
 // DRY helpers for coin implementations
 export const filterHostsFromConfig = (config: ConfigRepository, type: NetworkHostType): NetworkHost[] =>
