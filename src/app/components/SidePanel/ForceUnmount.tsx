@@ -1,6 +1,6 @@
 import React, { cloneElement, Fragment, ReactElement, useEffect, useState } from "react";
 
-export const ForceUnmount = ({ children }: {children: ReactElement}) => {
+export const ForceUnmount = ({ children }: { children: ReactElement }) => {
 	const [mounted, setMounted] = useState(true);
 	const [key, setKey] = useState(0);
 
@@ -8,9 +8,8 @@ export const ForceUnmount = ({ children }: {children: ReactElement}) => {
 		if (!mounted) {
 			setKey((key) => key + 1);
 		}
-
-	}, [mounted])
+	}, [mounted]);
 
 	console.log(mounted, key);
-	return <Fragment key={key}>{cloneElement(children, {onMountChange: setMounted})}</Fragment>
-}
+	return <Fragment key={key}>{cloneElement(children, { onMountChange: setMounted })}</Fragment>;
+};
