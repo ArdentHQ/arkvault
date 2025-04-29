@@ -11,8 +11,8 @@ export class HostRepository implements IHostRepository {
 	}
 
 	/** {@inheritDoc IHostRepository.all} */
-	public all(): HostMap {
-		return this.#data.all() as HostMap;
+	public all(): Record<string, HostMap> {
+		return this.#data.all() as Record<string, HostMap>;
 	}
 
 	/** {@inheritDoc HostRepository.get} */
@@ -26,6 +26,7 @@ export class HostRepository implements IHostRepository {
 			this.#data.set(network, []);
 		}
 
+		host.id = name;
 		host.custom = true;
 
 		this.#data.get<HostSet>(network)?.push({ host, name });
