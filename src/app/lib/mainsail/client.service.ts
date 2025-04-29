@@ -69,15 +69,15 @@ export class ClientService extends Services.AbstractClientService {
 			this.#createMetaPagination(response),
 		);
 	}
-  
+
 	public override async validator(id: string): Promise<Contracts.WalletData> {
-    const body = await this.#client.validators().get(id);
+		const body = await this.#client.validators().get(id);
 
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
 	public override async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
-    const { searchParams } = this.#createSearchParams(query ?? {});
+		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const body = await this.#client.validators().all(page, limit, parameters);
