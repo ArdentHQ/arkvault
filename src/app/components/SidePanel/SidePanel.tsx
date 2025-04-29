@@ -67,6 +67,8 @@ export const SidePanel = ({
 		},
 	});
 
+	console.log(isMounted)
+
 	return (
 		<>
 			<FloatingPortal>
