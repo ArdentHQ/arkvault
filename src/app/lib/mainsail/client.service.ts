@@ -30,13 +30,11 @@ export class ClientService extends Services.AbstractClientService {
 		const evm = hostSelector(container.get(IoC.BindingType.ConfigRepository), "evm");
 		const transactions = hostSelector(container.get(IoC.BindingType.ConfigRepository), "tx");
 
-		if (evm) {
-			this.#client = new ArkClient({
-				api: api.host,
-				evm: evm.host,
-				transactions: transactions.host,
-			});
-		}
+		this.#client = new ArkClient({
+			api: api.host,
+			evm: evm.host,
+			transactions: transactions.host,
+		});
 	}
 
 	public override async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
