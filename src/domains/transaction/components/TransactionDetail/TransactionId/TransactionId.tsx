@@ -32,13 +32,13 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 			</div>
 
 			<div className="grow font-semibold sm:px-4">
-				<AddressLabel>{transaction.id()}</AddressLabel>
+				<AddressLabel>{transaction.hash()}</AddressLabel>
 			</div>
 
 			<div className="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0">
 				<Clipboard
 					variant={isSmAndAbove ? "icon" : "button"}
-					data={transaction.id()}
+					data={transaction.hash()}
 					tooltip={t("COMMON.COPY_ID")}
 					tooltipDarkTheme={isDarkMode}
 					iconButtonClassName={twMerge(getStyles({ variant: "secondary" }), "space-x-0 p-2")}

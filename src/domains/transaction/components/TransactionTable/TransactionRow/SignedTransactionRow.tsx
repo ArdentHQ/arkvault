@@ -103,7 +103,7 @@ export const SignedTransactionRow = ({
 					<span className="text-sm">
 						<TruncateMiddle
 							className="cursor-pointer text-theme-primary-600"
-							text={transaction.id()}
+							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
 							data-testid="TransactionRow__transaction-id"

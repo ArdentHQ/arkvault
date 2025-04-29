@@ -14,7 +14,7 @@ const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionDat
 
 	const isMusig = [usesMultiSignature, !transaction.isConfirmed()].every(Boolean);
 
-	return isMusig ? transaction.sender() === transaction.recipient() : false;
+	return isMusig ? transaction.from() === transaction.to() : false;
 };
 
 const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
@@ -30,7 +30,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	}
 
 	for (const recipient of transaction.recipients().values()) {
-		if (transaction.isSent() && transaction.sender() === recipient.address) {
+		if (transaction.isSent() && transaction.from() === recipient.address) {
 			returnedAmount += recipient.amount;
 		}
 	}
@@ -52,7 +52,7 @@ export const TransactionAmountLabel = ({
 
 	return (
 		<AmountLabel
-			value={transaction.amount()}
+			value={transaction.value()}
 			isNegative={transaction.isSent()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
