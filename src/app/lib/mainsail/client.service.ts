@@ -46,7 +46,7 @@ export class ClientService extends Services.AbstractClientService {
 		query: Services.ClientTransactionsInput,
 	): Promise<Collections.ConfirmedTransactionDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
-		const { limit = 10, page = 1, ...parameters } = searchParams
+		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const response = await this.#client.transactions().all(page, limit, parameters);
 		return this.dataTransferObjectService.transactions(response.data, this.#createMetaPagination(response));
@@ -60,7 +60,7 @@ export class ClientService extends Services.AbstractClientService {
 
 	public override async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
-		const { limit = 10, page = 1 } = searchParams
+		const { limit = 10, page = 1 } = searchParams;
 
 		const response = await this.#client.wallets().all(page, limit);
 
@@ -77,7 +77,7 @@ export class ClientService extends Services.AbstractClientService {
 
 	public override async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query ?? {});
-		const { limit = 10, page = 1, ...parameters } = searchParams
+		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const body = await this.#client.validators().all(page, limit, parameters);
 
@@ -98,11 +98,11 @@ export class ClientService extends Services.AbstractClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}
@@ -248,7 +248,8 @@ export class ClientService extends Services.AbstractClientService {
 		const result: any = {
 			body,
 			searchParams: {
-				limit: 10, page: 1
+				limit: 10,
+				page: 1,
 			},
 		};
 
@@ -340,7 +341,7 @@ export class ClientService extends Services.AbstractClientService {
 			delete body.timestamp;
 		}
 
-		result.searchParams = dotify({ ...result.searchParams, ...result.body })
+		result.searchParams = dotify({ ...result.searchParams, ...result.body });
 		result.body = null;
 
 		return result;
