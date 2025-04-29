@@ -92,7 +92,7 @@ const getServerHeight = async (address: string): Promise<number | undefined> => 
 	try {
 		const response = await client.get(`${baseUrl}/api/blockchain`);
 		const dataBody: any = JSON.parse(response.body());
-		return dataBody.data?.block?.height as number | undefined;
+		return dataBody.data?.block?.number as number | undefined;
 	} catch {
 		return;
 	}
@@ -102,8 +102,7 @@ const isSameNetwork = (networkA: NormalizedNetwork, networkB: NormalizedNetwork)
 	networkA.network &&
 	networkB.network &&
 	networkA.network.id() === networkB.network.id() &&
-	networkA.address === networkB.address &&
-	networkA.serverType === networkB.serverType;
+	networkA.publicApiEndpoint === networkB.publicApiEndpoint;
 
 export {
 	addressIsValid,

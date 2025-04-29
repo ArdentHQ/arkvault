@@ -138,7 +138,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			const transaction = await submitForm(abortReference);
 
 			setTransaction(transaction);
-			onSuccess(transaction.id());
+			onSuccess(transaction.hash());
 		} catch (error) {
 			setErrorMessage(error?.message as string);
 		}

@@ -32,7 +32,7 @@ export const PendingTransferRow = ({
 					<span className="text-sm">
 						<TruncateMiddle
 							className="cursor-pointer text-theme-primary-600"
-							text={transaction.id()}
+							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
 							data-testid="PendingTransactionRow__transaction-id"
@@ -72,7 +72,7 @@ export const PendingTransferRow = ({
 				<span className="text-sm">
 					<TruncateMiddle
 						className="cursor-pointer font-semibold text-theme-primary-600"
-						text={transaction.recipient() || ""}
+						text={transaction.to() || ""}
 						maxChars={14}
 						data-testid="PendingTransactionRowRecipientLabel"
 					/>

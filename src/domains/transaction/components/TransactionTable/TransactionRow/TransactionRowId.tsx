@@ -17,7 +17,7 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 					<span className="text-sm">
 						<TruncateMiddle
 							className="cursor-pointer text-theme-primary-600"
-							text={transaction.id()}
+							text={transaction.hash()}
 							maxChars={isLgAndAbove ? 14 : 12}
 							data-testid="TransactionRow__id"
 						/>
@@ -26,11 +26,11 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 			)}
 			{!transaction.isSuccess() && (
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
-					<Tooltip content={transaction.id()}>
+					<Tooltip content={transaction.hash()}>
 						<span className="flex h-[21px] items-center space-x-2 rounded bg-theme-danger-50 px-1.5 py-[2px] text-sm dark:border dark:border-theme-danger-info-border dark:bg-transparent">
 							<TruncateMiddle
 								className="cursor-pointer border-b border-b-transparent leading-[17px] text-theme-danger-700 hover:border-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border"
-								text={transaction.id()}
+								text={transaction.hash()}
 								maxChars={isLgAndAbove ? 14 : 12}
 								data-testid="TransactionRow__id"
 							/>

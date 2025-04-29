@@ -4,15 +4,14 @@ import { Networks } from "@/app/lib/sdk";
 import { Numeral } from "@/app/lib/intl";
 
 export const useBlockHeight = ({
-	blockId,
+	blockHash,
 	network,
 }: {
-	blockId?: string;
+	blockHash?: string;
 	network: Networks.Network;
 }): { blockHeight?: string; isLoading: boolean } => {
 	const [blockHeight, setBlockHeight] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
-
 	useEffect(() => {
 		const client = new HttpClient(0);
 
@@ -24,10 +23,10 @@ export const useBlockHeight = ({
 				const {
 					hosts: [api],
 				} = network.toObject();
-				const response = await client.get(`${api.host}/blocks/${blockId}`);
+				const response = await client.get(`${api.host}/blocks/${blockHash}`);
 				const { data } = response.json();
 
-				setBlockHeight(Numeral.make("en").format(data.height));
+				setBlockHeight(Numeral.make("en").format(data.number));
 			} catch {
 				//
 			}
@@ -35,10 +34,10 @@ export const useBlockHeight = ({
 			setIsLoading(false);
 		};
 
-		if (blockId) {
+		if (blockHash) {
 			fetchBlockHeight();
 		}
-	}, [blockId, network]);
+	}, [blockHash, network]);
 
 	return {
 		blockHeight,
