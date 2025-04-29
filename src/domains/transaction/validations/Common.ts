@@ -25,10 +25,10 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const milestone = configManager.getMilestone();
-				const minMilestoneGasLimit = milestone?.gas?.minimumGasLimit ?? 0;
-
-				const minimumGasLimit = Math.max(minMilestoneGasLimit, defaultGasLimit);
+				const minimumGasLimit = Math.max(
+					configManager.getMilestone()["gas"]["minimumGasLimit"],
+					defaultGasLimit,
+				);
 
 				if (gasLimit < minimumGasLimit) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_LOW", {
@@ -36,11 +36,11 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const maxMilestoneGasLimit = milestone?.gas?.maximumGasLimit ?? 0;
+				const maximumGasLimit = configManager.getMilestone()["gas"]["maximumGasLimit"];
 
-				if (gasLimit > maxMilestoneGasLimit) {
+				if (gasLimit > maximumGasLimit) {
 					return t("COMMON.VALIDATION.GAS_LIMIT_IS_TOO_HIGH", {
-						maxGasLimit: maxMilestoneGasLimit,
+						maxGasLimit: maximumGasLimit,
 					});
 				}
 
@@ -90,12 +90,11 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const milestone = configManager.getMilestone();
-				const minMilestoneGasPrice = milestone?.gas?.minimumGasPrice ?? 0;
-				const maxMilestoneGasPrice = milestone?.gas?.maximumGasPrice ?? 0;
-
 				const minimumGasPrice = Math.max(
-					formatUnits(BigNumber.make(minMilestoneGasPrice).toString(), "gwei").toNumber(),
+					formatUnits(
+						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"]).toString(),
+						"gwei",
+					).toNumber(),
 					minGasPrice,
 				);
 
@@ -105,7 +104,10 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const maximumGasPrice = formatUnits(BigNumber.make(maxMilestoneGasPrice).toString(), "gwei");
+				const maximumGasPrice = formatUnits(
+					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
+					"gwei",
+				);
 
 				if (maximumGasPrice.isLessThan(gasPrice ?? 0)) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_HIGH", {
