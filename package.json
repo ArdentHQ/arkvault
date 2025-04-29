@@ -192,6 +192,7 @@
 	"vite": {
 		"optimizeDeps": {
 			"include": [
+				"@ardenthq/arkvault-crypto",
 				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
