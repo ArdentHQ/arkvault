@@ -22,11 +22,10 @@ export interface IWalletMutator {
 	 * Set the identity based on a mnemonic.
 	 *
 	 * @param {string} mnemonic
-	 * @param {Services.IdentityOptions} [options]
 	 * @return {Promise<void>}
 	 * @memberof IWalletMutator
 	 */
-	identity(mnemonic: string, options?: Services.IdentityOptions): Promise<void>;
+	identity(mnemonic: string): Promise<void>;
 
 	/**
 	 * Set the address and optionally synchronise the wallet.
