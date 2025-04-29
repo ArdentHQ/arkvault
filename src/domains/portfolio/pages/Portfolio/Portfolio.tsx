@@ -36,7 +36,9 @@ export const Portfolio = () => {
 				</Page>
 			)}
 
-			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+			<ForceUnmount>
+				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+			</ForceUnmount>
 			<ForceUnmount>
 				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
 			</ForceUnmount>
