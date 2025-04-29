@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 import { Networks } from "@/app/lib/sdk";
 
 import {
@@ -184,6 +184,14 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	networks(): INetworkRepository;
+
+	/**
+	 * Get all active network stored in profile.
+	 *
+	 * @return {Networks.Network}
+	 * @memberof IProfile
+	 */
+	activeNetwork(): Networks.Network;
 
 	/**
 	 * Get all available coin networks stored in profile.

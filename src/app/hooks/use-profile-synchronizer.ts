@@ -14,7 +14,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { Services } from "@/app/lib/sdk";
 import { delay } from "@/utils/delay";
-import { getActiveNetwork } from "./use-active-network";
 import { isEqual } from "@/app/lib/helpers";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { usePrevious } from "./use-previous";
@@ -59,7 +58,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 						profileIsSyncingWallets: true,
 						...(reset && { isProfileInitialSync: true }),
 					});
-					const activeNetwork = getActiveNetwork(profile);
+					const activeNetwork = profile.activeNetwork();
 
 					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
 					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
@@ -382,7 +381,7 @@ export const useProfileSynchronizer = ({
 				// are solved by syncing the coin initially.
 				const availableNetworks = profileAllEnabledNetworks(profile);
 				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
-				const activeNetwork = getActiveNetwork(profile);
+				const activeNetwork = profile.activeNetwork();
 
 				if (onlyHasOneNetwork) {
 					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());

@@ -85,14 +85,6 @@ export interface IReadWriteWallet {
 	id(): string;
 
 	/**
-	 * Get the coin instance.
-	 *
-	 * @return {Coins.Coin}
-	 * @memberof IReadWriteWallet
-	 */
-	coin(): Coins.Coin;
-
-	/**
 	 * Get the network data.
 	 *
 	 * @return {Networks.Network}

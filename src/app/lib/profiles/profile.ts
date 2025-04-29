@@ -49,6 +49,7 @@ import { TransactionAggregate } from "./transaction.aggregate.js";
 import { WalletAggregate } from "./wallet.aggregate.js";
 import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
+import { Contracts } from "./index.js";
 
 export class Profile implements IProfile {
 	/**
@@ -333,6 +334,31 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.availableNetworks} */
 	public availableNetworks(): Networks.Network[] {
 		return this.coins().availableNetworks();
+	}
+
+	/** {@inheritDoc IProfile.activeNetwork} */
+	public activeNetwork(): Networks.Network {
+		const { activeNetworkId }: { activeNetworkId?: string } = (this.settings()
+			.get(Contracts.ProfileSetting.DashboardConfiguration)) ?? {
+			activeNetworkId: undefined,
+		}
+
+		const activeNetwork = this.availableNetworks().find((network) => {
+			if (activeNetworkId === network.id()) {
+				return network;
+			}
+
+			// @TODO: Return mainnet as the default network once it will be available.
+			return network.isTest();
+		});
+
+		if (!activeNetwork) {
+			throw new Error("Active network is missing");
+		}
+
+		console.log({ activeNetwork })
+
+		return activeNetwork
 	}
 
 	/** {@inheritDoc IProfile.exchangeTransactions} */

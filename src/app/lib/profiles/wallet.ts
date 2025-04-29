@@ -94,14 +94,9 @@ export class Wallet implements IReadWriteWallet {
 		return this.#attributes.get("id");
 	}
 
-	/** {@inheritDoc IReadWriteWallet.coin} */
-	public coin(): Coins.Coin {
-		return this.#attributes.get<Coins.Coin>("coin");
-	}
-
 	/** {@inheritDoc IReadWriteWallet.network} */
 	public network(): Networks.Network {
-		return this.coin().network();
+		return this.profile().activeNetwork();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.currency} */
