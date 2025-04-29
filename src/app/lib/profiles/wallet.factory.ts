@@ -124,11 +124,7 @@ export class WalletFactory implements IWalletFactory {
 	}
 
 	/** {@inheritDoc IWalletFactory.fromPublicKey} */
-	public async fromPublicKey({
-		coin,
-		network,
-		publicKey,
-	}: IPublicKeyOptions): Promise<IReadWriteWallet> {
+	public async fromPublicKey({ coin, network, publicKey }: IPublicKeyOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.PublicKey);
 		wallet.data().set(WalletData.PublicKey, publicKey);

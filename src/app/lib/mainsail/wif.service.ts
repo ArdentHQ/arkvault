@@ -12,9 +12,8 @@ export class WIFService {
 	readonly #config!: Interfaces.NetworkConfig;
 
 	public constructor(container: IoC.IContainer) {
-
-		this.#config = configManager.get('network');
-		console.log({ config: this.#config })
+		this.#config = configManager.get("network");
+		console.log({ config: this.#config });
 	}
 
 	public async fromMnemonic(
