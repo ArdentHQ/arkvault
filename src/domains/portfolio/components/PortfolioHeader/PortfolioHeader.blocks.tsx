@@ -4,7 +4,7 @@ import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { AddressViewSelection, AddressViewType, } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
 export const ViewingAddressInfo = ({
 	profile,
@@ -15,7 +15,7 @@ export const ViewingAddressInfo = ({
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	availableWallets: number;
-	mode: AddressViewType,
+	mode: AddressViewType;
 }) => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
