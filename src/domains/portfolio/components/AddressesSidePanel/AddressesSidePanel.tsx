@@ -28,6 +28,7 @@ export const AddressesSidePanel = ({
 	onOpenChange,
 	onClose,
 	onDelete,
+	onMountChange,
 }: {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
@@ -37,6 +38,7 @@ export const AddressesSidePanel = ({
 	onOpenChange: (open: boolean) => void;
 	onClose: (addresses: string[]) => void;
 	onDelete?: (addresses: string) => void;
+	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const {
 		addressViewPreference,
@@ -293,6 +295,7 @@ export const AddressesSidePanel = ({
 				}
 			}}
 			dataTestId="AddressesSidePanel"
+			onMountChange={onMountChange}
 		>
 			<Tabs
 				className={cn("mb-3", { hidden: wallets.length === 1 })}

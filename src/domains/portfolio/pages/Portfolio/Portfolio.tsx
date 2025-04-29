@@ -7,6 +7,7 @@ import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+import { ForceUnmount } from "@/app/components/SidePanel/ForceUnmount";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
@@ -36,7 +37,9 @@ export const Portfolio = () => {
 			)}
 
 			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
-			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+			<ForceUnmount>
+				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+			</ForceUnmount>
 		</>
 	);
 };
