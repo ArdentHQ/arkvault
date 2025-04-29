@@ -123,6 +123,7 @@ export const translations = {
 	},
 	ENABLE: "Enable",
 	ENCRYPTED_WIF: "Encrypted WIF",
+	ENDPOINTS: "Endpoints",
 	EPOCH: "Epoch",
 	ERROR: "Error",
 	ERRORS: {

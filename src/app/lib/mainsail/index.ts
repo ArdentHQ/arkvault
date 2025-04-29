@@ -10,7 +10,6 @@ import { LedgerService } from "./ledger.service";
 import { manifest } from "./manifest";
 import { MessageService } from "./message.service";
 import { PrivateKeyService } from "./private-key.service";
-import { ProberService } from "./prober.service";
 import { PublicKeyService } from "./public-key.service";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { TransactionService } from "./transaction.service";
@@ -37,7 +36,6 @@ export const Mainsail: Coins.CoinBundle = bundle({
 		LedgerService,
 		MessageService,
 		PrivateKeyService,
-		ProberService,
 		PublicKeyService,
 		TransactionService,
 		WIFService,
