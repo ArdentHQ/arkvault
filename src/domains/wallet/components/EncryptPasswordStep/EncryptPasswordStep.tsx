@@ -33,7 +33,7 @@ const SecondInputField = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
 						}).toString(),
 						validate: (value) => {
 							try {
-								new AddressService().fromMnemonic(value)
+								new AddressService().fromMnemonic(value);
 								return true;
 							} catch {
 								return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC").toString();
