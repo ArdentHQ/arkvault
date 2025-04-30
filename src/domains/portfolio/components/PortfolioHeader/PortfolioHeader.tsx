@@ -25,7 +25,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { AddressViewType, } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
 export const PortfolioHeader = ({
 	profile,
