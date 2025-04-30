@@ -42,7 +42,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 
 	const columns = useValidatorsTableColumns({ isLoading, network: selectedWallet.network() });
 
-	const validatorsPerPage = useMemo(() => selectedWallet.network().delegateCount(), [selectedWallet]);
+	const validatorsPerPage = useMemo(() => selectedWallet.network().validatorCount(), [selectedWallet]);
 	const totalValidators = useMemo(() => validators.length, [validators.length]);
 	const hasMoreValidators = useMemo(() => totalValidators > validatorsPerPage, [totalValidators]);
 	const hasVotes = votes.length > 0;

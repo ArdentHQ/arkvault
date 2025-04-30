@@ -32,8 +32,8 @@ export interface ITransactionAsset {
 	signature?: {
 		publicKey: string;
 	};
-	delegate?: {
-		username: string;
+	validator?: {
+		publicKey: string;
 	};
 	votes?: string[];
 	payments?: IMultiPaymentItem[];

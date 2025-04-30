@@ -134,8 +134,8 @@ export interface NetworkManifest {
 		 * AVAX for example operates on multiple blockchains and requires fund transfers.
 		 */
 		method?: VotingMethod;
-		delegateIdentifier?: "address" | "publicKey";
-		delegateCount: number;
+		validatorIdentifier?: "address" | "publicKey";
+		validatorCount: number;
 		votesPerWallet: number;
 		votesPerTransaction: number;
 		// Only LSK at the moment
@@ -166,8 +166,8 @@ export type ClientMethod =
 	| "transactions"
 	| "wallet"
 	| "wallets"
-	| "delegate"
-	| "delegates"
+	| "validator"
+	| "validators"
 	| "votes"
 	| "voters"
 	| "configuration"

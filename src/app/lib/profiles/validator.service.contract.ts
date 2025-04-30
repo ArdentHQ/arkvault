@@ -6,9 +6,9 @@ import { IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
  * @export
  * @interface IDelegateService
  */
-export interface IDelegateService {
+export interface IValidatorService {
 	/**
-	 * Get all delegates for the given coin and network.
+	 * Get all validators for the given coin and network.
 	 *
 	 * @param {string} coin
 	 * @param {string} network
@@ -18,7 +18,7 @@ export interface IDelegateService {
 	all(coin: string, network: string): IReadOnlyWallet[];
 
 	/**
-	 * Find the delegate for the given coin, network and address.
+	 * Find the validator for the given coin, network and address.
 	 *
 	 * @param {string} coin
 	 * @param {string} network
@@ -29,7 +29,7 @@ export interface IDelegateService {
 	findByAddress(coin: string, network: string, address: string): IReadOnlyWallet;
 
 	/**
-	 * Find the delegate for the given coin, network and public key.
+	 * Find the validator for the given coin, network and public key.
 	 *
 	 * @param {string} coin
 	 * @param {string} network
@@ -40,33 +40,33 @@ export interface IDelegateService {
 	findByPublicKey(coin: string, network: string, publicKey: string): IReadOnlyWallet;
 
 	/**
-	 * Find the delegate for the given coin, network and username.
+	 * Find the validator for the given coin, network and username.
 	 *
 	 * @param {string} coin
 	 * @param {string} network
 	 * @param {string} username
 	 * @return {IReadOnlyWallet}
-	 * @memberof IDelegateService
+	 * @memberof IValidatorService
 	 */
 	findByUsername(coin: string, network: string, username: string): IReadOnlyWallet;
 
 	/**
-	 * Synchronise delegates for the given coin and network.
+	 * Synchronise validators for the given coin and network.
 	 *
 	 * @param {IProfile} profile
 	 * @param {string} coin
 	 * @param {string} network
 	 * @return {Promise<void>}
-	 * @memberof IDelegateService
+	 * @memberof IValidatorService
 	 */
 	sync(profile: IProfile, coin: string, network: string): Promise<void>;
 
 	/**
-	 * Synchronise delegates for all coins and networks.
+	 * Synchronise validators for all coins and networks.
 	 *
 	 * @param {IProfile} profile
 	 * @return {Promise<void>}
-	 * @memberof IDelegateService
+	 * @memberof IValidatorService
 	 */
 	syncAll(profile: IProfile): Promise<void>;
 
@@ -76,7 +76,7 @@ export interface IDelegateService {
 	 * @param {IReadWriteWallet} wallet
 	 * @param {string[]} publicKeys
 	 * @return {IReadOnlyWallet[]}
-	 * @memberof IDelegateService
+	 * @memberof IValidatorService
 	 */
 	map(wallet: IReadWriteWallet, publicKeys: string[]): IReadOnlyWallet[];
 
@@ -86,7 +86,7 @@ export interface IDelegateService {
 	 * @param {IReadWriteWallet} wallet
 	 * @param {string} identifier
 	 * @return {IReadOnlyWallet[]}
-	 * @memberof IDelegateService
+	 * @memberof IValidatorService
 	 */
 	mapByIdentifier(wallet: IReadWriteWallet, identifier: string): IReadOnlyWallet | undefined;
 }

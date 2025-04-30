@@ -8,10 +8,10 @@ import { IReadWriteWallet } from "./contracts.js";
  */
 export interface IRegistrationAggregate {
 	/**
-	 * Aggregate all wallets that are delegates and synchronised.
+	 * Aggregate all wallets that are validators and synchronised.
 	 *
 	 * @return {IReadWriteWallet[]}
 	 * @memberof IRegistrationAggregate
 	 */
-	delegates(): IReadWriteWallet[];
+	validators(): IReadWriteWallet[];
 }

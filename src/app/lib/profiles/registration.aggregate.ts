@@ -7,11 +7,11 @@ export class RegistrationAggregate implements RegistrationAggregate {
 		this.#profile = profile;
 	}
 
-	/** {@inheritDoc RegistrationAggregate.delegates} */
-	public delegates(): IReadWriteWallet[] {
+	/** {@inheritDoc RegistrationAggregate.validators} */
+	public validators(): IReadWriteWallet[] {
 		return this.#profile
 			.wallets()
 			.values()
-			.filter((wallet: IReadWriteWallet) => wallet.hasSyncedWithNetwork() && wallet.isDelegate());
+			.filter((wallet: IReadWriteWallet) => wallet.hasSyncedWithNetwork() && wallet.isValidator());
 	}
 }

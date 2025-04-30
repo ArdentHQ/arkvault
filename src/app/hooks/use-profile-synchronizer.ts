@@ -83,8 +83,8 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			interval: Intervals.VeryShort,
 		};
 
-		const syncDelegates = {
-			callback: () => env.delegates().syncAll(profile),
+		const syncValidators = {
+			callback: () => env.validators().syncAll(profile),
 			interval: Intervals.Long,
 		};
 
@@ -123,7 +123,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncExchangeRates,
 				syncNotifications,
 				syncKnownWallets,
-				syncDelegates,
+				syncValidators,
 				syncProfileWallets,
 				syncServerStatus,
 			],

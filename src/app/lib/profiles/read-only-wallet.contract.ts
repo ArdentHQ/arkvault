@@ -54,20 +54,20 @@ export interface IReadOnlyWallet {
 	explorerLink(): string;
 
 	/**
-	 * Determine if the wallet is a delegate.
+	 * Determine if the wallet is a validator.
 	 *
 	 * @returns {boolean}
 	 * @memberof IReadOnlyWallet
 	 */
-	isDelegate(): boolean;
+	isValidator(): boolean;
 
 	/**
-	 * Determine if the wallet is a resigned delegate.
+	 * Determine if the wallet is a resigned validator.
 	 *
 	 * @returns {boolean}
 	 * @memberof IReadOnlyWallet
 	 */
-	isResignedDelegate(): boolean;
+	isResignedValidator(): boolean;
 
 	/**
 	 * Returns the identifier used for voting.
