@@ -77,7 +77,7 @@ export const PortfolioHeader = ({
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
-		
+
 		if (hasFocus && hintHasShown === undefined && allWallets.length > 1 && mode === "single") {
 			id = setTimeout(() => {
 				setShowHint(true);
