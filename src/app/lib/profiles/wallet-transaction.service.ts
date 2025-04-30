@@ -336,7 +336,7 @@ export class TransactionService implements ITransactionService {
 	 */
 	async #signTransaction(type: string, input: any): Promise<string> {
 		const transaction: ExtendedSignedTransactionData = this.#createExtendedSignedTransactionData(
-			await this.#wallet.coin().transaction()[type](input),
+			await this.#wallet.network().transaction()[type](input),
 		);
 
 		// When we are working with Multi-Signatures we need to sign them in split through

@@ -1,6 +1,7 @@
 import { Collections, DTO } from "@/app/lib/sdk";
 
 import { IProfile, IUsernamesService } from "./contracts.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
 
 type UsernameRegistry = Record<string, Collections.UsernameDataCollection>;
 
@@ -8,7 +9,7 @@ export class UsernamesService implements IUsernamesService {
 	readonly #registry: UsernameRegistry = {};
 
 	public async syncUsernames(profile: IProfile, coin: string, network: string, addresses: string[]): Promise<void> {
-		const clientService = profile.coins().get(coin, network).client();
+		const clientService = new ClientService(profile.activeNetwork().config())
 		const collection = await clientService.usernames(addresses);
 
 		if (this.#registry[network]) {

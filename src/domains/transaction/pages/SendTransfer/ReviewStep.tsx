@@ -61,7 +61,6 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 	useEffect(() => {
 		const updateFeeTransactionData = async () => {
 			const transferData = await buildTransferData({
-				coin,
 				recipients,
 			});
 

@@ -271,7 +271,7 @@ export class WalletFactory implements IWalletFactory {
 			//
 			//wallet.data().set(WalletData.DerivationType, input.derivationType);
 		} else {
-			await wallet.mutator().identity(input.options.mnemonic, { [input.derivationType]: input.options.levels });
+			await wallet.mutator().identity(input.options.mnemonic);
 		}
 
 		return wallet;

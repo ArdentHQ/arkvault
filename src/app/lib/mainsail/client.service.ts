@@ -24,8 +24,10 @@ const wellKnownContracts = {
 export class ClientService {
 	readonly #client!: ArkClient;
 	protected readonly dataTransferObjectService: DataTransferObjectService;
+	readonly #config: ConfigRepository;
 
 	public constructor(config: ConfigRepository) {
+		this.#config = config;
 		this.dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
 
 		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
@@ -324,7 +326,7 @@ export class ClientService {
 
 		if (body.timestamp) {
 			const normalizeTimestamps = (timestamp: Services.RangeCriteria) => {
-				const epoch: string = this.configRepository.get<string>("network.constants.epoch");
+				const epoch: string = this.#config.get<string>("network.constants.epoch");
 
 				const normalized = { ...timestamp };
 

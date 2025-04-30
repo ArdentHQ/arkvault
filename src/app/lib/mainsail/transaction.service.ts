@@ -29,14 +29,13 @@ type TransactionsInputs =
 	| Services.ValidatorRegistrationInput
 	| Services.ValidatorResignationInput;
 
-export class TransactionService extends Services.AbstractTransactionService {
+export class TransactionService {
 	readonly #ledgerService!: Services.LedgerService;
 	readonly #addressService!: AddressService;
 
 	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
 	public constructor(container: IoC.IContainer) {
-		super(container);
 
 		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
 		this.#addressService = new AddressService();
@@ -69,7 +68,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 		}
 	}
 
-	public override async transfer(input: Services.TransferInput): Promise<SignedTransactionData> {
+	public async transfer(input: Services.TransferInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 		this.#assertAmount(input);
@@ -92,9 +91,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 		);
 	}
 
-	public override async validatorRegistration(
+	public async validatorRegistration(
 		input: Services.ValidatorRegistrationInput,
-	): Promise<Contracts.SignedTransactionData> {
+	): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -125,7 +124,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 	/**
 	 * @inheritDoc
 	 */
-	public override async vote(input: Services.VoteInput): Promise<Contracts.SignedTransactionData> {
+	public async vote(input: Services.VoteInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -168,7 +167,7 @@ export class TransactionService extends Services.AbstractTransactionService {
 	/**
 	 * @inheritDoc
 	 */
-	public override async multiPayment(input: Services.MultiPaymentInput): Promise<Contracts.SignedTransactionData> {
+	public async multiPayment(input: Services.MultiPaymentInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -199,9 +198,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 		);
 	}
 
-	public override async usernameRegistration(
+	public async usernameRegistration(
 		input: Services.UsernameRegistrationInput,
-	): Promise<Contracts.SignedTransactionData> {
+	): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -229,9 +228,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 		);
 	}
 
-	public override async usernameResignation(
+	public async usernameResignation(
 		input: Services.UsernameResignationInput,
-	): Promise<Contracts.SignedTransactionData> {
+	): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -252,9 +251,9 @@ export class TransactionService extends Services.AbstractTransactionService {
 		);
 	}
 
-	public override async validatorResignation(
+	public async validatorResignation(
 		input: Services.ValidatorResignationInput,
-	): Promise<Contracts.SignedTransactionData> {
+	): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 

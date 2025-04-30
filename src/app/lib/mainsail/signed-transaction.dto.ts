@@ -1,4 +1,3 @@
-import { Contracts, DTO } from "@/app/lib/sdk";
 import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
@@ -10,11 +9,12 @@ import { TransactionTypeService } from "./transaction-type.service";
 import { RawTransactionData } from "@/app/lib/sdk/signed-transaction.dto.contract";
 import { Address } from "@arkecosystem/typescript-crypto";
 
-export class SignedTransactionData
-	extends DTO.AbstractSignedTransactionData
-	implements Contracts.SignedTransactionData
-{
-	public override configure(signedData: RawTransactionData, serialized: string) {
+export class SignedTransactionData  {
+	protected identifier!: string;
+	protected signedData!: RawTransactionData;
+	protected serialized!: string;
+
+	public configure(signedData: RawTransactionData, serialized: string) {
 		this.identifier = signedData.hash;
 		this.signedData = signedData;
 		this.serialized = serialized;
@@ -26,19 +26,19 @@ export class SignedTransactionData
 		return this;
 	}
 
-	public override from(): string {
+	public from(): string {
 		return this.signedData.from;
 	}
 
-	public override nonce(): BigNumber {
+	public nonce(): BigNumber {
 		return this.signedData.nonce;
 	}
 
-	public override to(): string {
+	public to(): string {
 		return this.signedData.to;
 	}
 
-	public override value(): BigNumber {
+	public value(): BigNumber {
 		if (this.isMultiPayment()) {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
@@ -46,12 +46,12 @@ export class SignedTransactionData
 		return formatUnits(this.signedData.value, "ark");
 	}
 
-	public override fee(): BigNumber {
+	public fee(): BigNumber {
 		const gasPrice = formatUnits(this.signedData.gasPrice, "ark");
 		return gasPrice.times(this.signedData.gas);
 	}
 
-	public override timestamp(): DateTime {
+	public timestamp(): DateTime {
 		if (this.signedData.timestamp) {
 			return DateTime.make(this.signedData.timestamp);
 		}
@@ -60,7 +60,7 @@ export class SignedTransactionData
 	}
 
 	// Vote
-	public override votes(): string[] {
+	public votes(): string[] {
 		let data = this.signedData.data as string;
 
 		if (!data.startsWith("0x")) {
@@ -71,44 +71,44 @@ export class SignedTransactionData
 		return [voteAddress];
 	}
 
-	public override unvotes(): string[] {
+	public unvotes(): string[] {
 		return [];
 	}
 
-	public override isTransfer(): boolean {
+	public isTransfer(): boolean {
 		return TransactionTypeService.isTransfer(this.signedData);
 	}
 
-	public override isSecondSignature(): boolean {
+	public isSecondSignature(): boolean {
 		return false;
 	}
 
-	public override isUsernameRegistration(): boolean {
+	public isUsernameRegistration(): boolean {
 		return TransactionTypeService.isUsernameRegistration(this.signedData);
 	}
 
-	public override isUsernameResignation(): boolean {
+	public isUsernameResignation(): boolean {
 		return TransactionTypeService.isUsernameResignation(this.signedData);
 	}
 
-	public override isValidatorRegistration(): boolean {
+	public isValidatorRegistration(): boolean {
 		return TransactionTypeService.isValidatorRegistration(this.signedData);
 	}
 
-	public override isVoteCombination(): boolean {
+	public isVoteCombination(): boolean {
 		return TransactionTypeService.isVoteCombination(this.signedData);
 	}
 
-	public override isVote(): boolean {
+	public isVote(): boolean {
 		return TransactionTypeService.isVote(this.signedData);
 	}
 
-	public override isUnvote(): boolean {
+	public isUnvote(): boolean {
 		return TransactionTypeService.isUnvote(this.signedData);
 	}
 
 	// Multi-Payment
-	public override payments(): MultiPaymentItem[] {
+	public payments(): MultiPaymentItem[] {
 		const payments: MultiPaymentItem[] = [];
 
 		const [recipients, amounts] = decodeFunctionData(this.normalizedData() as Hex, AbiType.MultiPayment).args;
@@ -123,24 +123,24 @@ export class SignedTransactionData
 		return payments;
 	}
 
-	public override username(): string {
+	public username(): string {
 		return decodeFunctionData(this.normalizedData() as Hex, AbiType.Username).args[0] as string;
 	}
 
-	public override validatorPublicKey(): string {
+	public validatorPublicKey(): string {
 		const key = decodeFunctionData(this.normalizedData() as Hex).args[0] as string;
 		return key.slice(2); // removes 0x part
 	}
 
-	public override isMultiPayment(): boolean {
+	public isMultiPayment(): boolean {
 		return TransactionTypeService.isMultiPayment(this.signedData);
 	}
 
-	public override isValidatorResignation(): boolean {
+	public isValidatorResignation(): boolean {
 		return TransactionTypeService.isValidatorResignation(this.signedData);
 	}
 
-	public override methodHash(): string {
+	public methodHash(): string {
 		// Signed transactions do not have data prefixed with `0x`
 		// that is why we are using first 8 chars to extract method.
 		const methodName = this.signedData.data.slice(0, 8);
@@ -148,7 +148,7 @@ export class SignedTransactionData
 		return `0x${methodName}`;
 	}
 
-	public override toBroadcast() {
+	public toBroadcast() {
 		return this.serialized;
 	}
 

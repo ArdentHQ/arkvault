@@ -35,7 +35,7 @@ export const TransactionDetails = ({
 		}
 
 		const refreshTransaction = async () => {
-			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.hash());
+			const confirmedTransaction = await transactionWallet.client().transaction(transaction.hash());
 			setTransaction(confirmedTransaction);
 		};
 
@@ -68,7 +68,7 @@ export const TransactionDetails = ({
 					{transaction.blockHash() && (
 						<Link
 							isExternal
-							to={transactionWallet.coin().link().block(transaction.blockHash())}
+							to={transactionWallet.link().block(transaction.blockHash())}
 							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
 						>
 							{blockHeight}

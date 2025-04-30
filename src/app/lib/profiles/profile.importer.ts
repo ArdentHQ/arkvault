@@ -8,7 +8,15 @@ import { Migrator } from "./migrator.js";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
 
-const isRegistered = (coin: string) => !!container.get<Coins.CoinBundle>(Identifiers.Coins)[coin.toUpperCase()];
+const isRegistered = (coin: string) => {
+	console.log("isRegistered", coin)
+
+	if (!coin) {
+		return false
+	}
+
+	return !!container.get<Coins.CoinBundle>(Identifiers.Coins)[coin.toUpperCase()];
+}
 
 export class ProfileImporter implements IProfileImporter {
 	readonly #profile: IProfile;

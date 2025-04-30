@@ -10,6 +10,8 @@ import {
 	VotingMethod,
 } from "./network.models";
 import { ConfigRepository } from "./config";
+import { TransactionService } from "@/app/lib/mainsail/transaction.service";
+import { container } from "../profiles/container";
 
 export class Network {
 	/**
@@ -391,5 +393,9 @@ export class Network {
 
 	public config(): ConfigRepository {
 		return new ConfigRepository({ networks: { [this.#network.id]: this.#network } })
+	}
+
+	public transaction(): TransactionService {
+		return new TransactionService(container);
 	}
 }

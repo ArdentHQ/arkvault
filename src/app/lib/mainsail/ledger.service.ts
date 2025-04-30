@@ -14,7 +14,8 @@ import { Exceptions } from "@/app/lib/sdk";
 
 export class LedgerService extends Services.AbstractLedgerService {
 	readonly #addressService!: AddressService;
-	readonly #dataTransferObjectService: Services.DataTransferObjectService;
+	readonly #dataTransferObjectService!: Services.DataTransferObjectService;
+
 	#ledger!: Services.LedgerTransport;
 	#ethLedgerService!: any;
 	#transport!: any;
@@ -48,11 +49,11 @@ export class LedgerService extends Services.AbstractLedgerService {
 	}
 
 	public constructor(container?: IoC.IContainer) {
+		super(container);
+
 		if (!container) {
 			return;
 		}
-
-		super(container);
 
 		this.#addressService = new AddressService();
 		this.#dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
