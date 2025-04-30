@@ -2,11 +2,11 @@ import { Contracts, Services } from "@/app/lib/sdk";
 
 import { pqueueSettled } from "./helpers/queue.js";
 
-export interface IDelegateSyncer {
+export interface IValidatorSyncer {
 	sync(): Promise<Contracts.WalletData[]>;
 }
 
-export class ParallelDelegateSyncer implements IDelegateSyncer {
+export class ParallelValidatorSyncer implements IValidatorSyncer {
 	readonly #clientService: Services.ClientService;
 
 	public constructor(clientService: Services.ClientService) {
@@ -15,7 +15,7 @@ export class ParallelDelegateSyncer implements IDelegateSyncer {
 
 	async sync(): Promise<Contracts.WalletData[]> {
 		const result: Contracts.WalletData[] = [];
-		const lastResponse = await this.#clientService.delegates();
+		const lastResponse = await this.#clientService.validators();
 		for (const item of lastResponse.items()) {
 			result.push(item);
 		}
@@ -27,7 +27,7 @@ export class ParallelDelegateSyncer implements IDelegateSyncer {
 			const promises: (() => Promise<void>)[] = [];
 
 			const sendRequest = async (index: number) => {
-				const response = await this.#clientService.delegates({ cursor: index });
+				const response = await this.#clientService.validators({ cursor: index });
 
 				for (const item of response.items()) {
 					result.push(item);
@@ -45,7 +45,7 @@ export class ParallelDelegateSyncer implements IDelegateSyncer {
 	}
 }
 
-export class SerialDelegateSyncer implements IDelegateSyncer {
+export class SerialValidatorSyncer implements IValidatorSyncer {
 	readonly #client: Services.ClientService;
 
 	public constructor(client: Services.ClientService) {
@@ -58,7 +58,7 @@ export class SerialDelegateSyncer implements IDelegateSyncer {
 
 		let lastResponse;
 		do {
-			lastResponse = await this.#client.delegates(options);
+			lastResponse = await this.#client.validators(options);
 			for (const item of lastResponse.items()) {
 				result.push(item);
 			}

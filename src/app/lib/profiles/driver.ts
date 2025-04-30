@@ -2,7 +2,7 @@ import { Coins, Helpers, IoC, Networks } from "@/app/lib/sdk";
 
 import { Identifiers } from "./container.models.js";
 import { DataRepository } from "./data.repository.js";
-import { DelegateService } from "./delegate.service.js";
+import { ValidatorService } from "./validator.service.js";
 import { EnvironmentOptions, NetworkHostSelectorFactory } from "./environment.models.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { StorageFactory } from "./factory.storage.js";
@@ -64,7 +64,7 @@ export class DriverFactory {
 		container.constant(Identifiers.Coins, options.coins);
 
 		container.singleton(Identifiers.AppData, DataRepository);
-		container.singleton(Identifiers.DelegateService, DelegateService);
+		container.singleton(Identifiers.ValidatorService, ValidatorService);
 		container.singleton(Identifiers.ExchangeRateService, ExchangeRateService);
 		container.singleton(Identifiers.FeeService, FeeService);
 		container.singleton(Identifiers.KnownWalletService, KnownWalletService);

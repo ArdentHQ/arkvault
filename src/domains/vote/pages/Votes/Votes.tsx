@@ -21,6 +21,7 @@ import { useValidators } from "@/domains/vote/hooks/use-validators";
 import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 
 export const Votes: FC = () => {
 	const { t } = useTranslation();
@@ -107,7 +108,7 @@ export const Votes: FC = () => {
 	useEffect(() => {
 		const syncVotes = async () => {
 			if (selectedWallet) {
-				await env.delegates().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
+				await env.validators().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
 				await selectedWallet.synchroniser().votes();
 			}
 		};
@@ -199,7 +200,7 @@ export const Votes: FC = () => {
 										i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
 										values={{
 											name: currentVotes
-												.find(({ wallet }) => wallet!.isResignedDelegate())
+												.find(({ wallet }) => wallet!.isResignedValidator())
 												?.wallet!.username(),
 										}}
 										components={{ bold: <strong /> }}
@@ -211,8 +212,12 @@ export const Votes: FC = () => {
 				/>
 			)}
 
-			<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
-			<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+			<ResetWhenUnmounted>
+				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+			</ResetWhenUnmounted>
+			<ResetWhenUnmounted>
+				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+			</ResetWhenUnmounted>
 		</Page>
 	);
 };

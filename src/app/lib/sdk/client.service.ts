@@ -52,12 +52,12 @@ export class AbstractClientService implements ClientService {
 		throw new NotImplemented(this.constructor.name, this.wallets.name);
 	}
 
-	public async delegate(id: string): Promise<WalletData> {
-		throw new NotImplemented(this.constructor.name, this.delegate.name);
+	public async validator(id: string): Promise<WalletData> {
+		throw new NotImplemented(this.constructor.name, this.validator.name);
 	}
 
-	public async delegates(query?: KeyValuePair): Promise<WalletDataCollection> {
-		throw new NotImplemented(this.constructor.name, this.delegates.name);
+	public async validators(query?: KeyValuePair): Promise<WalletDataCollection> {
+		throw new NotImplemented(this.constructor.name, this.validators.name);
 	}
 
 	public async votes(id: string): Promise<VoteReport> {

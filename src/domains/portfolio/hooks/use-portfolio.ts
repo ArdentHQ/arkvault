@@ -4,6 +4,7 @@ import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { Networks } from "@/app/lib/sdk";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
+import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
 function Balance({ wallets }: { wallets: Contracts.IReadWriteWallet[] }) {
 	return {
@@ -89,6 +90,19 @@ export function SelectedAddresses({
 		hasSelected(): boolean {
 			return this.all().length > 0;
 		},
+
+		mode() {
+			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
+				selectedMode: AddressViewSelection.single,
+			}) as unknown as DashboardConfiguration;
+
+			if (!config.selectedMode) {
+				return AddressViewSelection.single;
+			}
+
+			return config.selectedMode;
+		},
+
 		/**
 		 * Sets a new address and persists the change.
 		 *
@@ -114,6 +128,14 @@ export function SelectedAddresses({
 			config.selectedAddressesByNetwork[nethash] = selectedAddresses;
 
 			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, config);
+		},
+
+		setMode(newMode: AddressViewType) {
+			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
+				selectedMode: AddressViewSelection.single,
+			}) as unknown as DashboardConfiguration;
+
+			config.selectedMode = newMode;
 		},
 		/**
 		 * Returns the selected addresses as wallets.
@@ -141,6 +163,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	return {
 		allWallets: profile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id()),
 		balance,
+		mode: addresses.mode(),
 		removeSelectedAddresses: async (selectedAddresses: string[], network: Networks.Network) => {
 			const selected = SelectedAddresses({ activeNetwork: network, profile });
 
@@ -157,6 +180,10 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 		selectedAddresses: addresses.all(),
 		selectedWallet: addresses.defaultSelectedWallet(),
 		selectedWallets: wallets,
+		setMode: async (mode: AddressViewType) => {
+			addresses.setMode(mode);
+			await persist();
+		},
 		setSelectedAddresses: async (selectedAddresses: string[], network?: Networks.Network) => {
 			addresses.set(selectedAddresses, network);
 

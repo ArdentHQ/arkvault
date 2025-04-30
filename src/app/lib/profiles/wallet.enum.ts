@@ -15,7 +15,7 @@ export enum WalletData {
 	EncryptedSigningKey = "ENCRYPTED_SIGNING_KEY",
 	EncryptedConfirmKey = "ENCRYPTED_CONFIRM_KEY",
 	BroadcastedTransactions = "BROADCASTED_TRANSACTIONS",
-	Delegates = "DELEGATES",
+	Validators = "VALIDATORS",
 	DerivationPath = "DERIVATION_PATH",
 	DerivationType = "DERIVATION_TYPE",
 	ExchangeCurrency = "EXCHANGE_CURRENCY",
