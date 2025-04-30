@@ -16,7 +16,7 @@ const network: Networks.NetworkManifest = {
 	explorer,
 	featureFlags,
 	governance: {
-		delegateCount: 53,
+		validatorCount: 53,
 		votesPerTransaction: 1,
 		votesPerWallet: 1,
 	},

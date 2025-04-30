@@ -77,7 +77,7 @@ export const useValidatorRow = ({
 	const isActive = useMemo(() => {
 		const rank = validator?.rank?.();
 		if (rank !== undefined) {
-			return rank <= selectedWallet.network().delegateCount();
+			return rank <= selectedWallet.network().validatorCount();
 		}
 		return false;
 	}, [validator, selectedWallet]);

@@ -1,10 +1,10 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, IoC, Services } from "@/app/lib/sdk";
+import { Contracts, IoC, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
-import { Request } from "./request";
+import { ArkClient } from "@arkecosystem/typescript-client";
 
 interface Fees {
 	min: string;
@@ -13,20 +13,19 @@ interface Fees {
 }
 
 export class FeeService extends Services.AbstractFeeService {
-	readonly #request: Request;
+	readonly #client: ArkClient;
 
 	public constructor(container: IoC.IContainer) {
 		super(container);
 
-		this.#request = new Request(
-			container.get(IoC.BindingType.ConfigRepository),
-			container.get(IoC.BindingType.HttpClient),
-			container.get(IoC.BindingType.NetworkHostSelector),
-		);
+		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
+		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
+
+		this.#client = new ArkClient(host.host);
 	}
 
 	public override async all(): Promise<Services.TransactionFees> {
-		const node = await this.#request.get("node/fees");
+		const node = await this.#client.node().fees();
 		const dynamicFees: Fees = node.data.evmCall;
 		const fees = this.#transform(dynamicFees);
 		return {
