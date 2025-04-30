@@ -20,7 +20,7 @@ export class AbstractExtendedPublicKeyService implements ExtendedPublicKeyServic
 		throw new NotImplemented(this.constructor.name, this.fromMnemonic.name);
 	}
 
-	public async verifyPublicKeyWithBLS(publicKey: string): Promise<boolean> {
+	public async verifyPublicKeyWithBLS(publicKey: string): boolean {
 		throw new NotImplemented(this.constructor.name, this.verifyPublicKeyWithBLS.name);
 	}
 }

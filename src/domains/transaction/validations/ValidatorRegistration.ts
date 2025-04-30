@@ -18,7 +18,7 @@ export const validatorRegistration = (t: any) => ({
 
 		validate: {
 			pattern: async (publicKey: string) => {
-				const isValid = await wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey);
+				const isValid = wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
