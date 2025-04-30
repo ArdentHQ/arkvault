@@ -19,7 +19,7 @@ export enum AddressViewSelection {
 }
 
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { persist, state, } = useEnvironmentContext();
+	const { persist, state } = useEnvironmentContext();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {

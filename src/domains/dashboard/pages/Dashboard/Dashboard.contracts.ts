@@ -1,7 +1,4 @@
-import {
-	AddressesPanelSettings,
-	AddressViewType,
-} from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressesPanelSettings, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
 export interface DashboardConfiguration {
 	hideBalance: boolean;
