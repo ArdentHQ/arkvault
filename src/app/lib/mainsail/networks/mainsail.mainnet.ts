@@ -22,12 +22,20 @@ const network: Networks.NetworkManifest = {
 	},
 	hosts: [
 		{
-			host: "https://ark-live.arkvault.io/api",
+			host: "https://dwallets-evm.mainsailhq.com/api",
 			type: "full",
 		},
 		{
-			host: "https://live.arkscan.io",
+			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			type: "tx",
+		},
+		{
+			host: "https://explorer-evm-test.mainsailhq.com",
 			type: "explorer",
+		},
+		{
+			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			type: "evm",
 		},
 	],
 	id: "mainsail.mainnet",
