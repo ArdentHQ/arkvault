@@ -73,12 +73,12 @@ export const PortfolioHeader = ({
 	const { persist } = useEnvironmentContext();
 
 	const [showHint, setShowHint] = useState<boolean>(false);
-	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("multiple-addresses-hint", undefined);
+	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
-
-		if (hasFocus && hintHasShown === undefined && selectedWallets.length > 1) {
+		
+		if (hasFocus && hintHasShown === undefined && allWallets.length > 1 && mode === "single") {
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -87,7 +87,7 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, selectedWallets.length]);
+	}, [hasFocus, hintHasShown, mode, allWallets.length]);
 
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
@@ -117,7 +117,7 @@ export const PortfolioHeader = ({
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
 								<div className="mb-2 block sm:mb-0 sm:inline">
-									<Trans i18nKey="WALLETS.MULTIPLE_ADDRESSES_HINT" />
+									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
 									size="xs"
