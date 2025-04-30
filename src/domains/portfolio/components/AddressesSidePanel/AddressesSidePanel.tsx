@@ -36,7 +36,7 @@ export const AddressesSidePanel = ({
 	defaultSelectedWallet?: Contracts.IReadWriteWallet;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onClose: (addresses: string[]) => void;
+	onClose: (addresses: string[], mode: AddressViewType) => void;
 	onDelete?: (addresses: string) => void;
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
@@ -138,7 +138,7 @@ export const AddressesSidePanel = ({
 			await setSingleSelectedAddress([address]);
 
 			onOpenChange(false);
-			onClose([address]);
+			onClose([address], activeMode);
 		} else {
 			if (selectedAddresses.includes(address)) {
 				const newSelection = selectedAddresses.filter((a) => a !== address);
@@ -195,7 +195,11 @@ export const AddressesSidePanel = ({
 	// Reset selected addresses when panel closes
 	useEffect(() => {
 		if (open) {
-			setSelectedAddresses(selectedAddressesFromPortfolio);
+			setSelectedAddresses(
+				activeMode === AddressViewSelection.single
+					? [selectedAddressesFromPortfolio[selectedAddressesFromPortfolio.length - 1]]
+					: selectedAddressesFromPortfolio,
+			);
 		} else {
 			setSelectedAddresses(
 				activeMode === AddressViewSelection.single ? singleSelectedAddress : multiSelectedAddresses,
@@ -291,7 +295,7 @@ export const AddressesSidePanel = ({
 				setSearchQuery("");
 
 				if (!open) {
-					onClose(selectedAddresses);
+					onClose(selectedAddresses, activeMode);
 				}
 			}}
 			dataTestId="AddressesSidePanel"
