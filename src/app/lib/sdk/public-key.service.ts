@@ -32,7 +32,7 @@ export class AbstractPublicKeyService implements PublicKeyService {
 		throw new NotImplemented(this.constructor.name, this.fromSecret.name);
 	}
 
-	public async verifyPublicKeyWithBLS(publicKey: string): boolean {
+	public verifyPublicKeyWithBLS(publicKey: string): boolean {
 		throw new NotImplemented(this.constructor.name, this.verifyPublicKeyWithBLS.name);
 	}
 }
