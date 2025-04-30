@@ -15,6 +15,7 @@ import { SignedTransactionData } from "./signed-transaction.dto";
 import { TransactionService } from "./transaction.service";
 import { WalletData } from "./wallet.dto";
 import { WIFService } from "./wif.service";
+import { LinkService } from "./link.service";
 
 export { configManager } from "./crypto/managers/config.js";
 export * from "./helpers/format-units";
@@ -34,6 +35,7 @@ export const Mainsail: Coins.CoinBundle = bundle({
 		FeeService,
 		KnownWalletService,
 		LedgerService,
+		LinkService,
 		MessageService,
 		PrivateKeyService,
 		PublicKeyService,

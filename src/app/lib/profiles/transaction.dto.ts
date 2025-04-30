@@ -16,12 +16,10 @@ export interface ExtendedTransactionRecipient {
 
 export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
-	readonly #coin: Coins.Coin;
 	readonly #data: Contracts.ConfirmedTransactionData;
 
 	public constructor(wallet: IReadWriteWallet, data: Contracts.ConfirmedTransactionData) {
 		this.#wallet = wallet;
-		this.#coin = wallet.coin();
 		this.#data = data;
 	}
 
@@ -206,12 +204,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public explorerLink(): string {
-		return this.#coin.link().transaction(this.hash());
+		return this.#wallet.link().transaction(this.hash());
 	}
 
 	public explorerLinkForBlock(): string | undefined {
 		if (this.blockHash()) {
-			return this.#coin.link().block(this.blockHash()!);
+			return this.#wallet.link().block(this.blockHash()!);
 		}
 
 		return undefined;
@@ -276,10 +274,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public wallet(): IReadWriteWallet {
 		return this.#wallet;
-	}
-
-	public coin(): Coins.Coin {
-		return this.#coin;
 	}
 
 	protected data<T>(): T {

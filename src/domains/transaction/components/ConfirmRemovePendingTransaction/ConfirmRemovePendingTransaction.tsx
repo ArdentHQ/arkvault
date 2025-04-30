@@ -35,7 +35,7 @@ export const ConfirmRemovePendingTransaction = ({
 				await connect(profile, transaction.wallet().coinId(), transaction.wallet().networkId());
 
 				const path = wallet.data().get<string>(Contracts.WalletData.DerivationPath);
-				const publicKey = await wallet.coin().ledger().getPublicKey(path!);
+				const publicKey = await wallet.ledger().getPublicKey(path!);
 
 				setHasLedgerPublicKey(publicKey === wallet.publicKey());
 			} catch {

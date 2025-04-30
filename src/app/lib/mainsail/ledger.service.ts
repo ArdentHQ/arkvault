@@ -47,7 +47,11 @@ export class LedgerService extends Services.AbstractLedgerService {
 		}
 	}
 
-	public constructor(container: IoC.IContainer) {
+	public constructor(container?: IoC.IContainer) {
+		if (!container) {
+			return;
+		}
+
 		super(container);
 
 		this.#addressService = new AddressService();

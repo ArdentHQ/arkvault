@@ -9,7 +9,6 @@ import {
 	IDataRepository,
 	IExchangeTransactionRepository,
 	IPasswordManager,
-	IPortfolio,
 	IProfileAppearance,
 	IProfileNotificationService,
 	IProfileStatus,
@@ -143,14 +142,6 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	coins(): ICoinService;
-
-	/**
-	 * Get the portfolio service instance.
-	 *
-	 * @return {IPortfolio}
-	 * @memberof IProfile
-	 */
-	portfolio(): IPortfolio;
 
 	/**
 	 * Get the contact repository instance.

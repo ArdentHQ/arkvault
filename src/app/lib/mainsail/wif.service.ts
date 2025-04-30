@@ -7,13 +7,14 @@ import { BindingType } from "./coin.contract";
 import { WIF as BaseWIF } from "./crypto/identities/wif";
 import { Interfaces } from "./crypto/index";
 import { configManager } from "./crypto/managers";
+import { ConfigRepository } from "../sdk/config";
+import { container } from "@/app/lib/profiles/container";
 
 export class WIFService {
 	readonly #config!: Interfaces.NetworkConfig;
 
-	public constructor(container: IoC.IContainer) {
-		this.#config = configManager.get("network");
-		console.log({ config: this.#config });
+	public constructor() {
+		this.#config = container.get(BindingType.Crypto);
 	}
 
 	public async fromMnemonic(

@@ -20,6 +20,7 @@ import { IMnemonicDerivativeOptions, ISecretOptions } from "./wallet.factory.con
 import { Wallet } from "./wallet.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { WIFService } from "@/app/lib/mainsail/wif.service";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -211,17 +212,18 @@ export class WalletFactory implements IWalletFactory {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIFWithEncryption);
 			wallet.data().set(WalletData.EncryptedSigningKey, BIP38.encrypt(privateKey, password, compressed));
 
-			await wallet.mutator().address(await wallet.coin().address().fromPrivateKey(privateKey));
+			await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
 
-			const unencryptedWifData = await wallet.coin().wif().fromPrivateKey(privateKey);
-			const { publicKey } = await wallet.coin().publicKey().fromWIF(unencryptedWifData.wif);
+			const unencryptedWifData = await new WIFService().fromPrivateKey(privateKey);
+			const { publicKey } = await new PublicKeyService().fromWIF(unencryptedWifData.wif);
 			wallet.data().set(WalletData.PublicKey, publicKey);
+
 		} else {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIF);
 
-			await wallet.mutator().address(await wallet.coin().address().fromWIF(wif));
+			await wallet.mutator().address(new AddressService().fromWIF(wif));
 
-			const { publicKey } = await wallet.coin().publicKey().fromWIF(wif);
+			const { publicKey } = await new PublicKeyService().fromWIF(wif);
 			wallet.data().set(WalletData.PublicKey, publicKey);
 		}
 
@@ -246,28 +248,28 @@ export class WalletFactory implements IWalletFactory {
 		}
 
 		if (wallet.network().usesExtendedPublicKey()) {
-			if (!input.options.levels) {
-				throw new Error("Please specify the levels and try again.");
-			}
-
-			const walletData = await wallet
-				.coin()
-				.address()
-				.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels });
-
-			wallet.data().set(WalletData.Address, walletData.address);
-
-			wallet.data().set(
-				WalletData.PublicKey,
-				await wallet
-					.coin()
-					.extendedPublicKey()
-					.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels }),
-			);
-
-			wallet.mutator().avatar(wallet.address());
-
-			wallet.data().set(WalletData.DerivationType, input.derivationType);
+			//if (!input.options.levels) {
+			//	throw new Error("Please specify the levels and try again.");
+			//}
+			//
+			//const walletData = await wallet
+			//	.coin()
+			//	.address()
+			//	.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels });
+			//
+			//wallet.data().set(WalletData.Address, walletData.address);
+			//
+			//wallet.data().set(
+			//	WalletData.PublicKey,
+			//	await wallet
+			//		.coin()
+			//		.extendedPublicKey()
+			//		.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels }),
+			//);
+			//
+			//wallet.mutator().avatar(wallet.address());
+			//
+			//wallet.data().set(WalletData.DerivationType, input.derivationType);
 		} else {
 			await wallet.mutator().identity(input.options.mnemonic, { [input.derivationType]: input.options.levels });
 		}

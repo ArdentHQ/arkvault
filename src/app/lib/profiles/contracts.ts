@@ -18,7 +18,6 @@ export * from "./known-wallet.service.contract.js";
 export * from "./migrator.contract.js";
 export * from "./notification.repository.contract.js";
 export * from "./password.contract.js";
-export * from "./portfolio.contract.js";
 export * from "./profile.contract.js";
 export * from "./profile.dumper.contract.js";
 export * from "./profile.encrypter.contract.js";

@@ -9,6 +9,7 @@ import {
 	NetworkManifestToken,
 	VotingMethod,
 } from "./network.models";
+import { ConfigRepository } from "./config";
 
 export class Network {
 	/**
@@ -386,5 +387,9 @@ export class Network {
 	 */
 	public allowsLedger(): boolean {
 		return get(this.#network, "featureFlags.Ledger", []).length > 0;
+	}
+
+	public config(): ConfigRepository {
+		return new ConfigRepository({ networks: { [this.#network.id]: this.#network } })
 	}
 }

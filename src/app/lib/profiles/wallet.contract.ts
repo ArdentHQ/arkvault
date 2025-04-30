@@ -15,6 +15,8 @@ import {
 	IWalletSynchroniser,
 } from "./contracts.js";
 import { AttributeBag } from "./helpers/attribute-bag.js";
+import { MessageService } from "../mainsail/message.service.js";
+import { ClientService } from "../mainsail/client.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -410,10 +412,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the client service instance.
 	 *
-	 * @return {Services.ClientService}
+	 * @return {ClientService}
 	 * @memberof IReadWriteWallet
 	 */
-	client(): Services.ClientService;
+	client(): ClientService;
 
 	/**
 	 * Get the data transfer object service instance.
@@ -490,10 +492,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the message service instance.
 	 *
-	 * @return {Services.MessageService}
+	 * @return {MessageService}
 	 * @memberof IReadWriteWallet
 	 */
-	message(): Services.MessageService;
+	message(): MessageService;
 
 	/**
 	 * Get the signatory service instance.

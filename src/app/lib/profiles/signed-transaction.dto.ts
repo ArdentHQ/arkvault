@@ -228,7 +228,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public explorerLink(): string {
-		return this.#wallet.coin().link().transaction(this.hash());
+		return this.#wallet.link().transaction(this.hash());
 	}
 
 	public explorerLinkForBlock(): string | undefined {

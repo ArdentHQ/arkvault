@@ -9,6 +9,9 @@ import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { ConfigRepository } from "@/app/lib/sdk/config";
+import { container } from "@/app/lib/profiles/container";
+import { DataTransferObjectService } from "@/app/lib/sdk/data-transfer-object.contract";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -18,33 +21,32 @@ const wellKnownContracts = {
 	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 };
 
-export class ClientService extends Services.AbstractClientService {
+export class ClientService {
 	readonly #client!: ArkClient;
+	protected readonly dataTransferObjectService: DataTransferObjectService;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
+	public constructor(config: ConfigRepository) {
+		this.dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
 
 		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
 
-		const api = hostSelector(container.get(IoC.BindingType.ConfigRepository), "full");
-		const evm = hostSelector(container.get(IoC.BindingType.ConfigRepository), "evm");
-		const transactions = hostSelector(container.get(IoC.BindingType.ConfigRepository), "tx");
+		const api = hostSelector(config, "full");
+		const evm = hostSelector(config, "evm");
+		const transactions = hostSelector(config, "tx");
 
-		if (evm) {
-			this.#client = new ArkClient({
-				api: api.host,
-				evm: evm.host,
-				transactions: transactions.host,
-			});
-		}
+		this.#client = new ArkClient({
+			api: api.host,
+			evm: evm.host,
+			transactions: transactions.host,
+		});
 	}
 
-	public override async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
+	public async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
 		const body = await this.#client.transactions().get(id);
 		return this.dataTransferObjectService.transaction(body.data);
 	}
 
-	public override async transactions(
+	public async transactions(
 		query: Services.ClientTransactionsInput,
 	): Promise<Collections.ConfirmedTransactionDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
@@ -54,13 +56,13 @@ export class ClientService extends Services.AbstractClientService {
 		return this.dataTransferObjectService.transactions(response.data, this.#createMetaPagination(response));
 	}
 
-	public override async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
+	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
 
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
-	public override async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
+	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1 } = searchParams ?? { limit: 10, page: 1 };
 
@@ -72,12 +74,12 @@ export class ClientService extends Services.AbstractClientService {
 		);
 	}
 
-	public override async delegate(id: string): Promise<Contracts.WalletData> {
+	public async delegate(id: string): Promise<Contracts.WalletData> {
 		const body = await this.#client.validators().get(id);
 		return this.dataTransferObjectService.wallet(body.data);
 	}
 
-	public override async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
+	public async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
 
@@ -89,7 +91,7 @@ export class ClientService extends Services.AbstractClientService {
 		);
 	}
 
-	public override async votes(id: string): Promise<Services.VoteReport> {
+	public async votes(id: string): Promise<Services.VoteReport> {
 		const { data } = await this.#client.wallets().get(id);
 
 		const vote = data.vote || data.attributes?.vote;
@@ -100,16 +102,16 @@ export class ClientService extends Services.AbstractClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
 
-	public override async broadcast(
+	public async broadcast(
 		transactions: Contracts.SignedTransactionData[],
 	): Promise<Services.BroadcastResponse> {
 		const transactionToBroadcast: any[] = [];
@@ -162,7 +164,7 @@ export class ClientService extends Services.AbstractClientService {
 		return result;
 	}
 
-	public override async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
+	public async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
 		try {
 			// @ts-ignore
 			const response = await this.#client.evm().ethCall(callData);
@@ -178,7 +180,7 @@ export class ClientService extends Services.AbstractClientService {
 		}
 	}
 
-	public override async usernames(addresses: string[]): Promise<Collections.UsernameDataCollection> {
+	public async usernames(addresses: string[]): Promise<Collections.UsernameDataCollection> {
 		try {
 			let data;
 

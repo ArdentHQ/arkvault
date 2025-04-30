@@ -40,8 +40,14 @@ import { WalletLedgerModel } from "./wallet.enum";
 import { WalletGate } from "./wallet.gate";
 import { WalletMutator } from "./wallet.mutator";
 import { WalletSynchroniser } from "./wallet.synchroniser";
-import { TransactionService } from "./wallet-transaction.service.js";
+import { TransactionService } from "./wallet-transaction.service";
 import { WalletImportFormat } from "./wif.js";
+import { LinkService } from "@/app/lib/mainsail/link.service";
+import { MessageService } from "@/app/lib/mainsail/message.service";
+import { Manifest } from "@/app/lib/sdk/manifest";
+import { Mainsail } from "@/app/lib/mainsail/index";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service";
+import { ClientService } from "@/app/lib/mainsail/client.service";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -333,6 +339,7 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.DerivationPath) !== undefined;
 	}
 
+
 	/** {@inheritDoc IReadWriteWallet.isLedgerNanoX} */
 	public isLedgerNanoX(): boolean {
 		return this.data().get(WalletData.LedgerModel) === WalletLedgerModel.NanoX;
@@ -371,7 +378,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.coinId} */
 	public coinId(): string {
-		return this.manifest().get<string>("name");
+		return this.manifest().get("name");
 	}
 
 	/** {@inheritDoc IReadWriteWallet.networkId} */
@@ -381,7 +388,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.manifest} */
 	public manifest(): Coins.Manifest {
-		return this.#attributes.get<Coins.Coin>("coin").manifest();
+		return new Manifest(Mainsail.manifest);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.config} */
@@ -390,8 +397,8 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.client} */
-	public client(): Services.ClientService {
-		return this.#attributes.get<Coins.Coin>("coin").client();
+	public client(): ClientService {
+		return new ClientService(this.network().config());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.dataTransferObject} */
@@ -430,18 +437,18 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
-	public ledger(): Services.LedgerService {
-		return this.#attributes.get<Coins.Coin>("coin").ledger();
+	public ledger(): LedgerService {
+		return new LedgerService(container);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.link} */
 	public link(): Services.LinkService {
-		return this.#attributes.get<Coins.Coin>("coin").link();
+		return new LinkService(this.network().config());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.message} */
-	public message(): Services.MessageService {
-		return this.#attributes.get<Coins.Coin>("coin").message();
+	public message(): MessageService {
+		return new MessageService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.signatory} */
@@ -456,7 +463,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.transactionTypes} */
 	public transactionTypes(): Networks.TransactionType[] {
-		const manifest: Networks.NetworkManifest = this.coin().manifest().get<object>("networks")[this.networkId()];
+		const manifest: Networks.NetworkManifest = this.manifest().get<object>("networks")[this.networkId()];
 
 		return manifest.transactions.types;
 	}
@@ -671,7 +678,7 @@ export class Wallet implements IReadWriteWallet {
 
 	#decimals(): number {
 		try {
-			const manifest: Networks.NetworkManifest = this.coin().manifest().get<object>("networks")[this.networkId()];
+			const manifest: Networks.NetworkManifest = this.manifest().get<object>("networks")[this.networkId()];
 			return manifest.currency.decimals ?? 18;
 		} catch {
 			return 18;

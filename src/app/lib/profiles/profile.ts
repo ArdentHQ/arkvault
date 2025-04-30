@@ -14,7 +14,6 @@ import {
 	IDataRepository,
 	IExchangeTransactionRepository,
 	IPasswordManager,
-	IPortfolio,
 	IProfile,
 	IProfileInput,
 	IProfileStatus,
@@ -40,7 +39,6 @@ import { NetworkRepository } from "./network.repository.js";
 import { IProfileNotificationService } from "./notification.repository.contract.js";
 import { ProfileNotificationService } from "./notification.service.js";
 import { PasswordManager } from "./password.js";
-import { Portfolio } from "./portfolio.js";
 import { ProfileInitialiser } from "./profile.initialiser.js";
 import { ProfileStatus } from "./profile.status.js";
 import { RegistrationAggregate } from "./registration.aggregate.js";
@@ -59,14 +57,6 @@ export class Profile implements IProfile {
 	 * @memberof Profile
 	 */
 	readonly #coinService: ICoinService;
-
-	/**
-	 * The portfolio service.
-	 *
-	 * @type {IPortfolio}
-	 * @memberof Profile
-	 */
-	readonly #portfolio: IPortfolio;
 
 	/**
 	 * The contact repository.
@@ -215,7 +205,6 @@ export class Profile implements IProfile {
 	public constructor(data: IProfileInput) {
 		this.#attributes = new AttributeBag<IProfileInput>(data);
 		this.#coinService = new CoinService(this, new DataRepository());
-		this.#portfolio = new Portfolio(this);
 		this.#contactRepository = new ContactRepository(this);
 		this.#dataRepository = new DataRepository();
 		this.#hostRepository = new HostRepository(this);
@@ -304,11 +293,6 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.coins} */
 	public coins(): ICoinService {
 		return this.#coinService;
-	}
-
-	/** {@inheritDoc IProfile.portfolio} */
-	public portfolio(): IPortfolio {
-		return this.#portfolio;
 	}
 
 	/** {@inheritDoc IProfile.contacts} */
