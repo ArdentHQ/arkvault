@@ -22,7 +22,7 @@ const network: Networks.NetworkManifest = {
 	},
 	hosts: [
 		{
-			host: "https://ark-live.arkvault.io/api",
+			host: "https://dwallets-evm.mainsailhq.com/api",
 			type: "full",
 		},
 		{
