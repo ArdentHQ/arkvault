@@ -9,7 +9,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.ref }}-snapshots
