@@ -43,13 +43,12 @@
 		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
 	},
 	"dependencies": {
+		"@ardenthq/arkvault-crypto": "^0.0.5",
 		"@ardenthq/arkvault-url": "^1.2.0",
-		"@ardenthq/sdk-cryptography": "2.0.0-alpha.69",
 		"@arkecosystem/typescript-client": "^0.0.3",
 		"@arkecosystem/typescript-crypto": "0.0.5",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
 		"@floating-ui/react": "^0.26.25",
-		"@konforti/react-truncate": "^1.1.0",
 		"@ledgerhq/hw-app-eth": "^6.42.8",
 		"@ledgerhq/hw-transport-webhid": "^6.30.0",
 		"@ledgerhq/hw-transport-webusb": "^6.29.4",
@@ -193,6 +192,7 @@
 	"vite": {
 		"optimizeDeps": {
 			"include": [
+				"@ardenthq/arkvault-crypto",
 				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",

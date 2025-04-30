@@ -58,7 +58,7 @@ export default defineConfig(() => {
 							"react-toastify",
 							"react-visibility-sensor",
 						],
-						"sdk-cryptography": ["@ardenthq/sdk-cryptography"],
+						"arkvault-crypto": ["@ardenthq/arkvault-crypto"],
 					},
 				},
 				plugins: [
