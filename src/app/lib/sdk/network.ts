@@ -138,15 +138,15 @@ export class Network {
 	/**
 	 * Get the number of delegates that forge blocks.
 	 */
-	public delegateCount(): number {
-		return get(this.#network, "governance.delegateCount", 0);
+	public validatorCount(): number {
+		return get(this.#network, "governance.validatorCount", 0);
 	}
 
 	/**
-	 * Get the property by which delegates are identified for voting.
+	 * Get the property by which validators are identified for voting.
 	 */
-	public delegateIdentifier(): string {
-		return get(this.#network, "governance.delegateIdentifier", "publicKey");
+	public validatorIdentifier(): string {
+		return get(this.#network, "governance.validatorIdentifier", "publicKey");
 	}
 
 	/**
@@ -308,7 +308,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesMemo(): boolean {
-		return get(this.#network, "transactions.memo", false);
+		return get(this.#network, "validators.memo", false);
 	}
 
 	/**
@@ -318,7 +318,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesUTXO(): boolean {
-		return get(this.#network, "transactions.utxo", false);
+		return get(this.#network, "validators.utxo", false);
 	}
 
 	/**
@@ -328,7 +328,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesLockedBalance(): boolean {
-		return get(this.#network, "transactions.lockedBalance", false);
+		return get(this.#network, "validators.lockedBalance", false);
 	}
 
 	/**
@@ -338,7 +338,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public multiPaymentRecipients(): number {
-		return get(this.#network, "transactions.multiPaymentRecipients", 0);
+		return get(this.#network, "validators.multiPaymentRecipients", 0);
 	}
 
 	/**

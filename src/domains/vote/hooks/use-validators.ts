@@ -27,10 +27,10 @@ export const useValidators = ({
 	const fetchValidators = useCallback(
 		async (wallet) => {
 			setIsLoadingValidators(true);
-			await env.delegates().sync(profile, wallet.coinId(), wallet.networkId());
-			const delegates = env.delegates().all(wallet.coinId(), wallet.networkId());
+			await env.validators().sync(profile, wallet.coinId(), wallet.networkId());
+			const validators = env.validators().all(wallet.coinId(), wallet.networkId());
 
-			setValidators(delegates);
+			setValidators(validators);
 			setIsLoadingValidators(false);
 		},
 		[env, profile],
@@ -38,13 +38,13 @@ export const useValidators = ({
 
 	const filteredValidatorsVotes = useMemo(() => {
 		if (voteFilter === "all") {
-			return validators.filter((validator) => !validator.isResignedDelegate());
+			return validators.filter((validator) => !validator.isResignedValidator());
 		}
 
 		const voteWallets: Contracts.IReadOnlyWallet[] = [];
 
 		for (const { wallet } of currentVotes) {
-			if (wallet && !wallet.isResignedDelegate()) {
+			if (wallet && !wallet.isResignedValidator()) {
 				voteWallets.push(wallet);
 			}
 		}
@@ -85,7 +85,7 @@ export const useValidators = ({
 	);
 
 	const resignedValidatorVotes = useMemo(
-		() => currentVotes.filter(({ wallet }) => wallet?.isResignedDelegate()),
+		() => currentVotes.filter(({ wallet }) => wallet?.isResignedValidator()),
 		[currentVotes],
 	);
 

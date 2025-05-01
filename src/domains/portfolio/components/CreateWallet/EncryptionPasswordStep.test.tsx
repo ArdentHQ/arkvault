@@ -1,4 +1,4 @@
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";

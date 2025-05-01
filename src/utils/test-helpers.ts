@@ -1,5 +1,5 @@
 import { Environment, StorageData } from "@/app/lib/profiles";
-import { Base64 } from "@ardenthq/sdk-cryptography";
+import { Base64 } from "@ardenthq/arkvault-crypto";
 
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";

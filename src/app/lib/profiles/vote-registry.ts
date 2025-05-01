@@ -1,6 +1,6 @@
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
-import { IDelegateService, IReadWriteWallet, IVoteRegistry, WalletData } from "./contracts.js";
+import { IReadWriteWallet, IValidatorService, IVoteRegistry, WalletData } from "./contracts.js";
 import { VoteRegistryItem } from "./vote-registry.contract.js";
 
 export class VoteRegistry implements IVoteRegistry {
@@ -24,7 +24,7 @@ export class VoteRegistry implements IVoteRegistry {
 
 		return votes.map(({ amount, id }) => ({
 			amount,
-			wallet: container.get<IDelegateService>(Identifiers.DelegateService).mapByIdentifier(this.#wallet, id),
+			wallet: container.get<IValidatorService>(Identifiers.ValidatorService).mapByIdentifier(this.#wallet, id),
 		}));
 	}
 

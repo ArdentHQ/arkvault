@@ -1,4 +1,4 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@ardenthq/arkvault-crypto";
 import { ContactAddress } from "./contact-address";
 import {
 	IContactAddress,

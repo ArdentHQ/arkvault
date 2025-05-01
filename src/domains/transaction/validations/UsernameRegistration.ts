@@ -11,6 +11,13 @@ class UsernameExistsError extends Error {
 }
 
 const validateUsername = (t: any, value: string): string | undefined => {
+	if (value.length > 20) {
+		return t("COMMON.VALIDATION.MAX_LENGTH", {
+			field: t("COMMON.USERNAME"),
+			maxLength: 20,
+		});
+	}
+
 	if (value.startsWith("_")) {
 		return t("COMMON.VALIDATION.LEADING_UNDERSCORE");
 	}
@@ -20,13 +27,11 @@ const validateUsername = (t: any, value: string): string | undefined => {
 	}
 
 	const multipleUnderscoresRegex = /.*_{2,}.*/;
-
 	if (multipleUnderscoresRegex.test(value)) {
 		return t("COMMON.VALIDATION.MULTIPLE_UNDERSCORES");
 	}
 
 	const allowedChars = /^[\d_a-z]+$/;
-
 	if (!allowedChars.test(value)) {
 		return t("COMMON.VALIDATION.USERNAME_ALLOWED_CHARS");
 	}
@@ -34,13 +39,6 @@ const validateUsername = (t: any, value: string): string | undefined => {
 
 export const usernameRegistration = (t: any) => ({
 	username: (network: Networks.Network, controller: MutableRefObject<AbortController | undefined>) => ({
-		maxLength: {
-			message: t("COMMON.VALIDATION.MAX_LENGTH", {
-				field: t("COMMON.USERNAME"),
-				maxLength: 20,
-			}),
-			value: 20,
-		},
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -58,7 +56,6 @@ export const usernameRegistration = (t: any) => ({
 					if (error.name === "UsernameExistsError") {
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 					}
-
 					return true;
 				}
 			}, 300) as () => Promise<ValidateResult>,

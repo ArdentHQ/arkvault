@@ -102,8 +102,7 @@ const isSameNetwork = (networkA: NormalizedNetwork, networkB: NormalizedNetwork)
 	networkA.network &&
 	networkB.network &&
 	networkA.network.id() === networkB.network.id() &&
-	networkA.address === networkB.address &&
-	networkA.serverType === networkB.serverType;
+	networkA.publicApiEndpoint === networkB.publicApiEndpoint;
 
 export {
 	addressIsValid,

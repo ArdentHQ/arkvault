@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -23,6 +23,7 @@ interface SidePanelProps {
 	dataTestId?: string;
 	className?: string;
 	scrollRef?: React.RefObject<HTMLDivElement>;
+	onMountChange?: (mounted: boolean) => void;
 }
 
 export const SidePanel = ({
@@ -33,6 +34,7 @@ export const SidePanel = ({
 	dataTestId,
 	className,
 	scrollRef,
+	onMountChange,
 }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
@@ -66,6 +68,10 @@ export const SidePanel = ({
 			transitionTimingFunction: "ease-out",
 		},
 	});
+
+	useEffect(() => {
+		onMountChange?.(isMounted);
+	}, [isMounted]);
 
 	return (
 		<>

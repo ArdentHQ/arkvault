@@ -1,5 +1,5 @@
 import { Enums } from "@/app/lib/sdk";
-import { BIP38, BIP39, UUID } from "@ardenthq/sdk-cryptography";
+import { BIP38, BIP39, UUID } from "@ardenthq/arkvault-crypto";
 
 import {
 	IAddressOptions,

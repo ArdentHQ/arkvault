@@ -16,18 +16,26 @@ const network: Networks.NetworkManifest = {
 	explorer,
 	featureFlags,
 	governance: {
-		delegateCount: 53,
+		validatorCount: 53,
 		votesPerTransaction: 1,
 		votesPerWallet: 1,
 	},
 	hosts: [
 		{
-			host: "https://ark-live.arkvault.io/api",
+			host: "https://dwallets-evm.mainsailhq.com/api",
 			type: "full",
 		},
 		{
-			host: "https://live.arkscan.io",
+			host: "https://dwallets-evm.mainsailhq.com/tx/api",
+			type: "tx",
+		},
+		{
+			host: "https://explorer-evm-test.mainsailhq.com",
 			type: "explorer",
+		},
+		{
+			host: "https://dwallets-evm.mainsailhq.com/evm/api",
+			type: "evm",
 		},
 	],
 	id: "mainsail.mainnet",

@@ -1,29 +1,63 @@
 import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { NetworkHostType } from "@/app/lib/sdk/network.models";
+import { HostSet } from "@/app/lib/profiles/host.repository.contract";
 
-const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: NormalizedNetwork) => {
-	const { network, name, address, serverType } = normalizedNetwork;
+const findNetworkIndex = (profile: Contracts.IProfile, normalizedNetwork: NormalizedNetwork, type: NetworkHostType) => {
+	const { network, name, publicApiEndpoint, evmApiEndpoint, transactionApiEndpoint } = normalizedNetwork;
 	const networkId = network.id();
 	const parts = networkId.split(".");
-	const hosts = profile.hosts().all()[parts[0]][parts[1]] || [];
 
-	const index = hosts.findIndex(
-		(item) => item.name === name && item.host.host === address && item.host.type === serverType,
-	);
+	const profileHosts = profile.hosts().all();
 
-	return [networkId, index];
+	let hosts: HostSet = [];
+
+	if (Object.values(profileHosts).length > 0) {
+		hosts = profileHosts[parts[0]][parts[1]] ?? [];
+	}
+
+	const host = {
+		evm: evmApiEndpoint,
+		full: publicApiEndpoint,
+		tx: transactionApiEndpoint,
+	}[type];
+
+	const index = hosts.findIndex((item) => item.name === name && item.host.host === host);
+
+	return [networkId, index] as [string, number];
 };
 
 const addNetwork = (
 	profile: Contracts.IProfile,
-	{ network, name, serverType, address, enabled, height }: NormalizedNetwork,
+	{ network, name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, enabled, height }: NormalizedNetwork,
 ) => {
 	profile.hosts().push({
 		host: {
 			enabled: enabled,
 			height: height,
-			host: address,
-			type: serverType,
+			host: publicApiEndpoint,
+			type: "full",
+		},
+		name: name,
+		network: network.id(),
+	});
+
+	profile.hosts().push({
+		host: {
+			enabled: enabled,
+			host: transactionApiEndpoint,
+			type: "tx",
+		},
+		name: name,
+		network: network.id(),
+	});
+
+	profile.hosts().push({
+		host: {
+			enabled: enabled,
+			height: height,
+			host: evmApiEndpoint,
+			type: "evm",
 		},
 		name: name,
 		network: network.id(),
@@ -31,8 +65,14 @@ const addNetwork = (
 };
 
 const removeNetwork = (profile: Contracts.IProfile, network: NormalizedNetwork) => {
-	const [networkId, index] = findNetworkIndex(profile, network);
-	profile.hosts().forget(networkId, index);
+	const [networkId, publicHostIndex] = findNetworkIndex(profile, network, "full");
+	profile.hosts().forget(networkId, publicHostIndex);
+
+	const [_, txHostIndex] = findNetworkIndex(profile, network, "tx");
+	profile.hosts().forget(networkId, txHostIndex);
+
+	const [_n, evmHostIndex] = findNetworkIndex(profile, network, "evm");
+	profile.hosts().forget(networkId, evmHostIndex);
 };
 
 export const useHosts = ({ profile }: { profile: Contracts.IProfile }) => ({

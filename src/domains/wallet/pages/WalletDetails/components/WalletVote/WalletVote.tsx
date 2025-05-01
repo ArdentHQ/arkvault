@@ -23,7 +23,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		return <WalletVoteSkeleton />;
 	}
 
-	const activeDelegates = wallet.network().delegateCount();
+	const activeValidators = wallet.network().validatorCount();
 
 	const renderVotes = () => {
 		if (wallets.length > 1) {
@@ -40,7 +40,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			return <EmptyVotes />;
 		}
 
-		return <Votes votes={votes} activeDelegates={activeDelegates} />;
+		return <Votes votes={votes} activeValidators={activeValidators} />;
 	};
 
 	return (

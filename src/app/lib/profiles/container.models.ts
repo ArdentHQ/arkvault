@@ -3,7 +3,6 @@ export const Identifiers = {
 	Coins: Symbol.for("Coins"),
 	ContactRepository: Symbol.for("ContactRepository"),
 	DataRepository: Symbol.for("DataRepository"),
-	DelegateService: Symbol.for("DelegateService"),
 	ExchangeRateService: Symbol.for("ExchangeRateService"),
 	FeeService: Symbol.for("FeeService"),
 	HttpClient: Symbol.for("HttpClient"),
@@ -17,6 +16,7 @@ export const Identifiers = {
 	SettingRepository: Symbol.for("SettingRepository"),
 	Storage: Symbol.for("Storage"),
 	UsernamesService: Symbol.for("UsernamesService"),
+	ValidatorService: Symbol.for("ValidatorService"),
 	WalletRepository: Symbol.for("WalletRepository"),
 	WalletService: Symbol.for("WalletService"),
 };
