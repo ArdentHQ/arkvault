@@ -68,11 +68,6 @@ export class WalletRepository implements IWalletRepository {
 		return this.#data.values();
 	}
 
-	/** {@inheritDoc IWalletRepository.valuesWithCoin} */
-	public valuesWithCoin(): IReadWriteWallet[] {
-		return this.values().filter((wallet: IReadWriteWallet) => !wallet.isMissingCoin());
-	}
-
 	/** {@inheritDoc IWalletRepository.findById} */
 	public findById(id: string): IReadWriteWallet {
 		const wallet: IReadWriteWallet | undefined = this.#data.get(id);
@@ -266,7 +261,6 @@ export class WalletRepository implements IWalletRepository {
 
 			// If a client does not provide a coin instance we will not know how to restore.
 			if (specification === undefined) {
-				wallet.markAsMissingCoin();
 				wallet.markAsMissingNetwork();
 			}
 

@@ -530,13 +530,6 @@ export interface IReadWriteWallet {
 	hasBeenPartiallyRestored(): boolean;
 
 	/**
-	 * Mark the wallet as missing its coin.
-	 *
-	 * @memberof IReadWriteWallet
-	 */
-	markAsMissingCoin(): void;
-
-	/**
 	 * Determine if the wallet is missing its coin.
 	 *
 	 * @return {boolean}
@@ -558,22 +551,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isMissingNetwork(): boolean;
-
-	/**
-	 * Connect the coin to the network.
-	 *
-	 * @return {Promise<void>}
-	 * @memberof IReadWriteWallet
-	 */
-	connect(): Promise<void>;
-
-	/**
-	 * Determine if the wallet has yet configured a coin.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	hasCoin(): boolean;
 
 	/**
 	 * Get the underlying attributes.

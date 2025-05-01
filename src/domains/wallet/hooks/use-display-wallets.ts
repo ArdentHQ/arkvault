@@ -48,7 +48,7 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 			sortWallets(
 				profile
 					.wallets()
-					.valuesWithCoin()
+					.values()
 					.filter((wallet) =>
 						profileAvailableNetworks.some((network) => wallet.network().id() === network.id()),
 					),

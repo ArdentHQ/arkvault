@@ -48,10 +48,11 @@ import { Manifest } from "@/app/lib/sdk/manifest";
 import { Mainsail } from "@/app/lib/mainsail/index";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 import { ClientService } from "@/app/lib/mainsail/client.service";
-import { AddressService } from "@/app/lib/mainsail/address.service.js";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
-import { PrivateKeyService } from "../mainsail/private-key.service.js";
-import { WIFService } from "../mainsail/wif.service.js";
+import { PrivateKeyService } from "@/app/lib/mainsail/private-key.service";
+import { WIFService } from "@/app/lib/mainsail/wif.service";
+import { SignatoryService } from "../mainsail/signatory.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -200,20 +201,6 @@ export class Wallet implements IReadWriteWallet {
 		}
 
 		return this.#attributes.get<string>("avatar");
-	}
-
-	///** {@inheritDoc IReadWriteWallet.connect} */
-	//public async connect(): Promise<void> {
-	//	if (!this.hasCoin()) {
-	//		throw new Exceptions.BadVariableDependencyException(this.constructor.name, this.connect.name, "coin");
-	//	}
-	//
-	//	await this.#attributes.get<Coins.Coin>("coin").__construct();
-	//}
-
-	/** {@inheritDoc IReadWriteWallet.hasCoin} */
-	public hasCoin(): boolean {
-		return this.#attributes.hasStrict("coin");
 	}
 
 	/** {@inheritDoc IReadWriteWallet.hasSyncedWithNetwork} */
@@ -436,8 +423,8 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.signatory} */
-	public signatory(): Services.SignatoryService {
-		return this.#attributes.get<Coins.Coin>("coin").signatory();
+	public signatory(): SignatoryService {
+		return new SignatoryService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.transaction} */
@@ -519,11 +506,6 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.hasBeenPartiallyRestored} */
 	public hasBeenPartiallyRestored(): boolean {
 		return this.#attributes.get("restorationState").partial;
-	}
-
-	/** {@inheritDoc IReadWriteWallet.markAsMissingCoin} */
-	public markAsMissingCoin(): void {
-		this.#attributes.set("isMissingCoin", true);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isMissingCoin} */

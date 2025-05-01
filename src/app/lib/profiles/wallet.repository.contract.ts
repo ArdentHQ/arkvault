@@ -56,14 +56,6 @@ export interface IWalletRepository {
 	values(): IReadWriteWallet[];
 
 	/**
-	 * Get all values that are not missing the coin.
-	 *
-	 * @returns {IReadWriteWallet[]}
-	 * @memberof IWalletRepository
-	 */
-	valuesWithCoin(): IReadWriteWallet[];
-
-	/**
 	 * Fill the storage with wallet data.
 	 *
 	 * @param {Record<string, IWalletData>} struct
