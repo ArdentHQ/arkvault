@@ -1,7 +1,8 @@
-import { Networks } from "@/app/lib/sdk";
 import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
+import { Environment } from "@/app/lib/profiles";
+import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 
 class UsernameExistsError extends Error {
 	constructor(message: string) {
@@ -38,7 +39,7 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (network: Networks.Network, controller: MutableRefObject<AbortController | undefined>) => ({
+	username: (env: Environment, wallet: IReadWriteWallet, controller: MutableRefObject<AbortController | undefined>) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -51,7 +52,7 @@ export const usernameRegistration = (t: any) => ({
 				}
 
 				try {
-					await usernameExists(network, value, controller);
+					await usernameExists(env, wallet, value, controller);
 				} catch (error) {
 					if (error.name === "UsernameExistsError") {
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
@@ -64,20 +65,20 @@ export const usernameRegistration = (t: any) => ({
 });
 
 const usernameExists = async (
-	network: Networks.Network,
+	env: Environment,
+	wallet: IReadWriteWallet,
 	username: string,
 	controller: MutableRefObject<AbortController | undefined>,
 ) => {
-	const endpoints = {
-		"mainsail.devnet": "https://dwallets-evm.mainsailhq.com/api/wallets/",
-		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
-	};
-
 	if (username.length === 0) {
 		return;
 	}
 
-	const response = await fetch(endpoints[network.id()] + username, { signal: controller.current?.signal });
+	const hostSelector = env.hostSelector(wallet.profile());
+
+	const publicApiEndpoint = hostSelector(wallet.config(), "full").host;
+
+	const response = await fetch(`${publicApiEndpoint}/${username}`, { signal: controller.current?.signal });
 
 	if (response.ok) {
 		throw new UsernameExistsError("Username is occupied!");

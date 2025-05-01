@@ -1,10 +1,9 @@
-import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 
 export const validatorRegistration = (t: any) => ({
-	validatorPublicKey: (wallet: Contracts.IReadWriteWallet) => ({
+	validatorPublicKey: (env: Environment, wallet: Contracts.IReadWriteWallet) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
@@ -28,7 +27,7 @@ export const validatorRegistration = (t: any) => ({
 			},
 			unique: debounceAsync(async (publicKey: string) => {
 				try {
-					await publicKeyExists(wallet.network(), publicKey);
+					await publicKeyExists(env, wallet, publicKey);
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
@@ -37,17 +36,20 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (network: Networks.Network, publicKey: string) => {
-	const endpoints = {
-		"mainsail.devnet": "https://dwallets-evm.mainsailhq.com/api/wallets/",
-		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
-	};
-
+const publicKeyExists = async (
+	env: Environment,
+	wallet: Contracts.IReadWriteWallet,
+	publicKey: string
+) => {
 	if (publicKey.length === 0) {
 		return;
 	}
 
-	const response = await fetch(`${endpoints[network.id()]}?attributes.validatorPublicKey=${publicKey}`);
+	const hostSelector = env.hostSelector(wallet.profile());
+
+	const publicApiEndpoint = hostSelector(wallet.config(), "full").host;
+
+	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
 	const data = await response.json();
 
