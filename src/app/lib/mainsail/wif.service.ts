@@ -1,20 +1,17 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { IoC, Services } from "@/app/lib/sdk";
-import { abort_if, abort_unless } from "@/app/lib/helpers";
+import { Services } from "@/app/lib/sdk";
 
 import { BindingType } from "./coin.contract";
 import { WIF as BaseWIF } from "./crypto/identities/wif";
-import { Interfaces } from "./crypto/index";
+import { Interfaces, Managers } from "./crypto/index";
 import { configManager } from "./crypto/managers";
-import { ConfigRepository } from "../sdk/config";
-import { container } from "@/app/lib/profiles/container";
 
 export class WIFService {
 	readonly #config!: Interfaces.NetworkConfig;
 
 	public constructor() {
-		this.#config = container.get(BindingType.Crypto);
+		this.#config = Managers.configManager.all() as Interfaces.NetworkConfig
 	}
 
 	public async fromMnemonic(

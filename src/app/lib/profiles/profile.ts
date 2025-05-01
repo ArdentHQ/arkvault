@@ -341,8 +341,6 @@ export class Profile implements IProfile {
 			throw new Error("Active network is missing");
 		}
 
-		console.log({ activeNetwork });
-
 		return activeNetwork;
 	}
 

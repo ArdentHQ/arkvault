@@ -11,13 +11,11 @@ import {
 	VoteBuilder,
 } from "@arkecosystem/typescript-crypto";
 
-import { BindingType } from "./coin.contract.js";
 import { applyCryptoConfiguration } from "./config.js";
-import { Interfaces } from "./crypto/index.js";
+import { Interfaces, Managers } from "./crypto/index.js";
 import { parseUnits } from "./helpers/parse-units.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
-import { ClientService } from "./client.service.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: number;
@@ -42,8 +40,8 @@ export class TransactionService {
 		this.#addressService = new AddressService();
 
 		this.#configCrypto = {
-			crypto: container.get(BindingType.Crypto),
-			height: container.get(BindingType.Height),
+			crypto: Managers.configManager.all() as Interfaces.NetworkConfig,
+			height: Managers.configManager.getHeight() as number,
 		};
 	}
 

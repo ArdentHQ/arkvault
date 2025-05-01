@@ -17,6 +17,8 @@ import {
 import { AttributeBag } from "./helpers/attribute-bag.js";
 import { MessageService } from "../mainsail/message.service.js";
 import { ClientService } from "../mainsail/client.service.js";
+import { AddressService } from "../mainsail/address.service.js";
+import { PublicKeyService } from "../mainsail/public-key.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -402,14 +404,6 @@ export interface IReadWriteWallet {
 	manifest(): Coins.Manifest;
 
 	/**
-	 * Get the coin configuration.
-	 *
-	 * @return {Coins.Config}
-	 * @memberof IReadWriteWallet
-	 */
-	config(): Coins.ConfigRepository;
-
-	/**
 	 * Get the client service instance.
 	 *
 	 * @return {ClientService}
@@ -423,23 +417,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	addressService(): Services.AddressService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	extendedAddressService(): Services.ExtendedAddressService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	keyPairService(): Services.KeyPairService;
+	addressService(): AddressService;
 
 	/**
 	 * Get the identity service instance.
@@ -455,7 +433,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	publicKeyService(): Services.PublicKeyService;
+	publicKeyService(): PublicKeyService;
 
 	/**
 	 * Get the identity service instance.

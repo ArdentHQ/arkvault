@@ -48,6 +48,10 @@ import { Manifest } from "@/app/lib/sdk/manifest";
 import { Mainsail } from "@/app/lib/mainsail/index";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 import { ClientService } from "@/app/lib/mainsail/client.service";
+import { AddressService } from "@/app/lib/mainsail/address.service.js";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { PrivateKeyService } from "../mainsail/private-key.service.js";
+import { WIFService } from "../mainsail/wif.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -198,14 +202,14 @@ export class Wallet implements IReadWriteWallet {
 		return this.#attributes.get<string>("avatar");
 	}
 
-	/** {@inheritDoc IReadWriteWallet.connect} */
-	public async connect(): Promise<void> {
-		if (!this.hasCoin()) {
-			throw new Exceptions.BadVariableDependencyException(this.constructor.name, this.connect.name, "coin");
-		}
-
-		await this.#attributes.get<Coins.Coin>("coin").__construct();
-	}
+	///** {@inheritDoc IReadWriteWallet.connect} */
+	//public async connect(): Promise<void> {
+	//	if (!this.hasCoin()) {
+	//		throw new Exceptions.BadVariableDependencyException(this.constructor.name, this.connect.name, "coin");
+	//	}
+	//
+	//	await this.#attributes.get<Coins.Coin>("coin").__construct();
+	//}
 
 	/** {@inheritDoc IReadWriteWallet.hasCoin} */
 	public hasCoin(): boolean {
@@ -391,44 +395,29 @@ export class Wallet implements IReadWriteWallet {
 		return new Manifest(Mainsail.manifest);
 	}
 
-	/** {@inheritDoc IReadWriteWallet.config} */
-	public config(): Coins.ConfigRepository {
-		return this.#attributes.get<Coins.Coin>("coin").config();
-	}
-
 	/** {@inheritDoc IReadWriteWallet.client} */
 	public client(): ClientService {
-		return new ClientService(this.network().config());
+		return new ClientService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.addressService} */
-	public addressService(): Services.AddressService {
-		return this.#attributes.get<Coins.Coin>("coin").address();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.extendedAddressService} */
-	public extendedAddressService(): Services.ExtendedAddressService {
-		return this.#attributes.get<Coins.Coin>("coin").extendedAddress();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.keyPairService} */
-	public keyPairService(): Services.KeyPairService {
-		return this.#attributes.get<Coins.Coin>("coin").keyPair();
+	public addressService(): AddressService {
+		return new AddressService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.privateKeyService} */
 	public privateKeyService(): Services.PrivateKeyService {
-		return this.#attributes.get<Coins.Coin>("coin").privateKey();
+		return new PrivateKeyService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.publicKeyService} */
-	public publicKeyService(): Services.PublicKeyService {
-		return this.#attributes.get<Coins.Coin>("coin").publicKey();
+	public publicKeyService(): PublicKeyService {
+		return new PublicKeyService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.wifService} */
 	public wifService(): Services.WIFService {
-		return this.#attributes.get<Coins.Coin>("coin").wif();
+		return new WIFService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
@@ -438,7 +427,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.link} */
 	public link(): Services.LinkService {
-		return new LinkService(this.network().config());
+		return new LinkService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.message} */
