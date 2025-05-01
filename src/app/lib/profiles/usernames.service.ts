@@ -9,7 +9,7 @@ export class UsernamesService implements IUsernamesService {
 	readonly #registry: UsernameRegistry = {};
 
 	public async syncUsernames(profile: IProfile, coin: string, network: string, addresses: string[]): Promise<void> {
-		const clientService = new ClientService(profile.activeNetwork().config())
+		const clientService = new ClientService()
 		const collection = await clientService.usernames(addresses);
 
 		if (this.#registry[network]) {
