@@ -401,11 +401,6 @@ export class Wallet implements IReadWriteWallet {
 		return new ClientService(this.network().config());
 	}
 
-	/** {@inheritDoc IReadWriteWallet.dataTransferObject} */
-	public dataTransferObject(): Services.DataTransferObjectService {
-		return this.#attributes.get<Coins.Coin>("coin").dataTransferObject();
-	}
-
 	/** {@inheritDoc IReadWriteWallet.addressService} */
 	public addressService(): Services.AddressService {
 		return this.#attributes.get<Coins.Coin>("coin").address();

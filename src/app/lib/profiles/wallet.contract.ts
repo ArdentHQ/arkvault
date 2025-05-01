@@ -418,14 +418,6 @@ export interface IReadWriteWallet {
 	client(): ClientService;
 
 	/**
-	 * Get the data transfer object service instance.
-	 *
-	 * @return {Services.DataTransferObjectService}
-	 * @memberof IReadWriteWallet
-	 */
-	dataTransferObject(): Services.DataTransferObjectService;
-
-	/**
 	 * Get the identity service instance.
 	 *
 	 * @return {Services.IdentityService}

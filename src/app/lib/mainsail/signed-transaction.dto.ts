@@ -1,4 +1,4 @@
-import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
+import { MultiPaymentItem, MultiPaymentRecipient } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
@@ -6,13 +6,26 @@ import { Hex } from "viem";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
-import { RawTransactionData } from "@/app/lib/sdk/signed-transaction.dto.contract";
+import { RawTransactionData, SignedTransactionObject } from "@/app/lib/sdk/signed-transaction.dto.contract";
 import { Address } from "@arkecosystem/typescript-crypto";
 
-export class SignedTransactionData  {
+export class SignedTransactionData {
 	protected identifier!: string;
 	protected signedData!: RawTransactionData;
 	protected serialized!: string;
+
+	readonly #types = [
+		{ method: "isMultiPayment", type: "multiPayment" },
+		{ method: "isSecondSignature", type: "secondSignature" },
+		{ method: "isTransfer", type: "transfer" },
+		{ method: "isUsernameRegistration", type: "usernameRegistration" },
+		{ method: "isUsernameResignation", type: "usernameResignation" },
+		{ method: "isUnvote", type: "unvote" },
+		{ method: "isValidatorRegistration", type: "validatorRegistration" },
+		{ method: "isValidatorResignation", type: "validatorResignation" },
+		{ method: "isVote", type: "vote" },
+		{ method: "isVoteCombination", type: "voteCombination" },
+	];
 
 	public configure(signedData: RawTransactionData, serialized: string) {
 		this.identifier = signedData.hash;
@@ -25,6 +38,36 @@ export class SignedTransactionData  {
 
 		return this;
 	}
+
+	public usesMultiSignature(): boolean {
+		return false;
+	}
+
+	public memo(): string {
+		return this.signedData.memo;
+	}
+
+	public recipients(): MultiPaymentRecipient[] {
+		if (this.isMultiPayment()) {
+			return this.payments().map((payment: { recipientId: string; amount: BigNumber }) => ({
+				address: payment.recipientId,
+				amount: BigNumber.make(payment.amount),
+			}));
+		}
+
+		return [
+			{
+				address: this.to(),
+				amount: this.value(),
+			},
+		];
+	}
+
+
+	public hash(): string {
+		return this.identifier;
+	}
+
 
 	public from(): string {
 		return this.signedData.from;
@@ -160,5 +203,80 @@ export class SignedTransactionData  {
 		}
 
 		return data;
+	}
+
+	public toString(): string {
+		if (typeof this.signedData === "string") {
+			return this.signedData;
+		}
+
+		return JSON.stringify(this.signedData);
+	}
+
+	public get<T = string>(key: string): T {
+		return this.signedData[key];
+	}
+
+	public data(): RawTransactionData {
+		return this.signedData;
+	}
+
+	public toObject(): SignedTransactionObject {
+		return {
+			broadcast: this.toBroadcast(),
+			data: this.data(),
+			fee: this.fee().toFixed(0),
+			from: this.from(),
+			hash: this.hash(),
+			timestamp: this.timestamp().toISOString(),
+			to: this.to(),
+			value: this.value().toFixed(0),
+		};
+	}
+
+	protected normalizeTransactionData<T>(value: RawTransactionData): T {
+		return JSON.parse(
+			JSON.stringify(value, (key, value) => {
+				if (typeof value === "bigint") {
+					return value.toString();
+				}
+
+				if (["timestamp"].includes(key)) {
+					return DateTime.make(value).toUNIX();
+				}
+
+				if (["amount", "nonce", "fee"].includes(key)) {
+					return value.toString();
+				}
+
+				if (value instanceof Map) {
+					return Object.fromEntries(value);
+				}
+
+				return value;
+			}),
+		);
+	}
+
+	public toSignedData(): any {
+		return this.normalizeTransactionData(this.signedData);
+	}
+
+	public type(): string {
+		if (this.isVoteCombination()) {
+			return "voteCombination";
+		}
+
+		for (const { type, method } of this.#types) {
+			if (type === "voteCombination") {
+				continue;
+			}
+
+			if (this[method]()) {
+				return type;
+			}
+		}
+
+		return this.methodHash();
 	}
 }

@@ -11,10 +11,10 @@ import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
 import { Exceptions } from "@/app/lib/sdk";
+import { WalletData } from "./wallet.dto.js";
 
 export class LedgerService extends Services.AbstractLedgerService {
 	readonly #addressService!: AddressService;
-	readonly #dataTransferObjectService!: Services.DataTransferObjectService;
 
 	#ledger!: Services.LedgerTransport;
 	#ethLedgerService!: any;
@@ -49,14 +49,13 @@ export class LedgerService extends Services.AbstractLedgerService {
 	}
 
 	public constructor(container?: IoC.IContainer) {
-		super(container);
-
 		if (!container) {
 			return;
 		}
 
+		super(container);
+
 		this.#addressService = new AddressService();
-		this.#dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
 	}
 
 	public override async onPreDestroy(): Promise<void> {
@@ -143,7 +142,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 
 			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
 
-			ledgerWallets[`${path}/0/${addressIndex}`] = this.#dataTransferObjectService.wallet({
+			ledgerWallets[`${path}/0/${addressIndex}`] = new WalletData().fill({
 				address,
 				balance: 0,
 				publicKey,

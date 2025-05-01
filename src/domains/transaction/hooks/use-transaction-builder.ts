@@ -10,7 +10,8 @@ import { httpClient } from "@/app/services";
 type SignFunction = (input: any) => Promise<string>;
 
 const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileContracts.IReadWriteWallet) => {
-	await accessLedgerApp({ coin: wallet.coin() });
+	// @TODO: Re-enable.
+	//await accessLedgerApp({ coin: wallet.coin() });
 
 	const signature = await wallet
 		.signatory()

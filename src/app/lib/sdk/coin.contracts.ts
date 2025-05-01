@@ -4,7 +4,6 @@ import {
 	AddressService,
 	BigNumberService,
 	ClientService,
-	DataTransferObjectService,
 	ExtendedAddressService,
 	FeeService,
 	KeyPairService,
@@ -39,7 +38,6 @@ export interface CoinServices {
 	AddressService?: AddressService;
 	BigNumberService?: BigNumberService;
 	ClientService?: ClientService;
-	DataTransferObjectService?: DataTransferObjectService;
 	ExtendedAddressService?: ExtendedAddressService;
 	FeeService?: FeeService;
 	KeyPairService?: KeyPairService;

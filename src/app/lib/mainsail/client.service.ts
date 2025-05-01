@@ -11,7 +11,10 @@ import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { ConfigRepository } from "@/app/lib/sdk/config";
 import { container } from "@/app/lib/profiles/container";
-import { DataTransferObjectService } from "@/app/lib/sdk/data-transfer-object.contract";
+import { WalletData } from "./wallet.dto";
+import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
+import { ConfirmedTransactionDataCollection } from "@/app/lib/sdk/transactions.collection";
+import { SignedTransactionData } from "./signed-transaction.dto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -23,29 +26,23 @@ const wellKnownContracts = {
 
 export class ClientService {
 	readonly #client!: ArkClient;
-	protected readonly dataTransferObjectService: DataTransferObjectService;
-	readonly #config: ConfigRepository;
 
-	public constructor(config: ConfigRepository) {
-		this.#config = config;
-		this.dataTransferObjectService = container.get(IoC.BindingType.DataTransferObjectService);
-
-		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-
-		const api = hostSelector(config, "full");
-		const evm = hostSelector(config, "evm");
-		const transactions = hostSelector(config, "tx");
+	public constructor() {
+		// @TODO: Remove hardcoded value
+		const api = "https://dwallets-evm.mainsailhq.com/api";
+		const evm = "https://dwallets-evm.mainsailhq.com/evm/api";
+		const transactions = "https://dwallets-evm.mainsailhq.com/tx/api";
 
 		this.#client = new ArkClient({
-			api: api.host,
-			evm: evm.host,
-			transactions: transactions.host,
+			api,
+			evm,
+			transactions,
 		});
 	}
 
-	public async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
+	public async transaction(id: string): Promise<ConfirmedTransactionData> {
 		const body = await this.#client.transactions().get(id);
-		return this.dataTransferObjectService.transaction(body.data);
+		return new ConfirmedTransactionData().configure(body.data);
 	}
 
 	public async transactions(
@@ -55,13 +52,16 @@ export class ClientService {
 		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
 
 		const response = await this.#client.transactions().all(page, limit, parameters);
-		return this.dataTransferObjectService.transactions(response.data, this.#createMetaPagination(response));
+
+		return new ConfirmedTransactionDataCollection(
+			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
+			this.#createMetaPagination(response),
+		);
 	}
 
 	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
-
-		return this.dataTransferObjectService.wallet(body.data);
+		return new WalletData().fill(body.data);
 	}
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
@@ -71,14 +71,14 @@ export class ClientService {
 		const response = await this.#client.wallets().all(page, limit);
 
 		return new Collections.WalletDataCollection(
-			response.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
+			response.data.map((wallet) => new WalletData().fill(wallet)),
 			this.#createMetaPagination(response),
 		);
 	}
 
 	public async delegate(id: string): Promise<Contracts.WalletData> {
 		const body = await this.#client.validators().get(id);
-		return this.dataTransferObjectService.wallet(body.data);
+		return new WalletData().fill(body.data);
 	}
 
 	public async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
@@ -88,7 +88,7 @@ export class ClientService {
 		const body = await this.#client.validators().all(page, limit, parameters);
 
 		return new Collections.WalletDataCollection(
-			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
+			body.data.map((wallet) => new WalletData().fill(wallet)),
 			this.#createMetaPagination(body),
 		);
 	}
@@ -114,7 +114,7 @@ export class ClientService {
 	}
 
 	public async broadcast(
-		transactions: Contracts.SignedTransactionData[],
+		transactions: SignedTransactionData[],
 	): Promise<Services.BroadcastResponse> {
 		const transactionToBroadcast: any[] = [];
 
@@ -326,7 +326,9 @@ export class ClientService {
 
 		if (body.timestamp) {
 			const normalizeTimestamps = (timestamp: Services.RangeCriteria) => {
-				const epoch: string = this.#config.get<string>("network.constants.epoch");
+				// @TODO: Remove hardcoded values.
+				const epoch = '2023-12-21T00:00:00.000Z'
+				//const epoch: string = this.#config.get<string>("network.constants.epoch");
 
 				const normalized = { ...timestamp };
 

@@ -11,7 +11,6 @@ import { BindingType, IServiceProvider, ServiceList } from "./service-provider.c
 import {
 	AbstractAddressService,
 	AbstractClientService,
-	AbstractDataTransferObjectService,
 	AbstractExtendedAddressService,
 	AbstractFeeService,
 	AbstractKeyPairService,
@@ -49,13 +48,6 @@ export class AbstractServiceProvider implements IServiceProvider {
 
 		if (container.missing(BindingType.BigNumberService)) {
 			container.singleton(BindingType.BigNumberService, BigNumberService);
-		}
-
-		if (container.missing(BindingType.DataTransferObjectService)) {
-			container.singleton(
-				BindingType.DataTransferObjectService,
-				services.DataTransferObjectService || AbstractDataTransferObjectService,
-			);
 		}
 
 		if (container.missing(BindingType.ClientService)) {
