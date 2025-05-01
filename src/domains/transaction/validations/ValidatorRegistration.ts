@@ -36,11 +36,7 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (
-	env: Environment,
-	wallet: Contracts.IReadWriteWallet,
-	publicKey: string
-) => {
+const publicKeyExists = async (env: Environment, wallet: Contracts.IReadWriteWallet, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}

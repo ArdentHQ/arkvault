@@ -39,7 +39,11 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (env: Environment, wallet: IReadWriteWallet, controller: MutableRefObject<AbortController | undefined>) => ({
+	username: (
+		env: Environment,
+		wallet: IReadWriteWallet,
+		controller: MutableRefObject<AbortController | undefined>,
+	) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
