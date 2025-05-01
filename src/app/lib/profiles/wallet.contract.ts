@@ -15,10 +15,10 @@ import {
 	IWalletSynchroniser,
 } from "./contracts.js";
 import { AttributeBag } from "./helpers/attribute-bag.js";
-import { MessageService } from "../mainsail/message.service.js";
-import { ClientService } from "../mainsail/client.service.js";
-import { AddressService } from "../mainsail/address.service.js";
-import { PublicKeyService } from "../mainsail/public-key.service.js";
+import { MessageService } from "@/app/lib/mainsail/message.service.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
+import { AddressService } from "@/app/lib/mainsail/address.service.js";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 

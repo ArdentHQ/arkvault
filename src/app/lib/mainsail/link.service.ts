@@ -1,8 +1,6 @@
 import { formatString } from "@/app/lib/helpers";
 import queryString from "query-string";
-import { IContainer } from "@/app/lib/sdk/container.contracts";
-import { ConfigRepository } from "@/app/lib/sdk/config";
-import { randomHost, randomNetworkHostFromConfig } from "@/app/lib/sdk/helpers";
+import { randomHost } from "@/app/lib/sdk/helpers";
 
 export class LinkService {
 	public block(id: string): string {
@@ -20,12 +18,15 @@ export class LinkService {
 	#buildURL(schema: string, id: string): string {
 		// @TODO: Remove hardcoded values.
 		//const { host, query } = randomNetworkHostFromConfig(this.#configRepository, "explorer");
-		const { host, query } = randomHost([
-			{
-				host: "https://explorer-evm-test.mainsailhq.com",
-				type: "explorer",
-			},
-		], "explorer");
+		const { host, query } = randomHost(
+			[
+				{
+					host: "https://explorer-evm-test.mainsailhq.com",
+					type: "explorer",
+				},
+			],
+			"explorer",
+		);
 
 		const url = `${host.replace(/\/$/, "")}/${formatString(schema, id)}`;
 

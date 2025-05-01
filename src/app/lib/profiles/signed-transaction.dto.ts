@@ -14,7 +14,7 @@ export class ExtendedSignedTransactionData {
 	readonly #data: SignedTransactionData;
 	readonly #wallet: IReadWriteWallet;
 
-	public constructor(data:  SignedTransactionData, wallet: IReadWriteWallet) {
+	public constructor(data: SignedTransactionData, wallet: IReadWriteWallet) {
 		this.#data = data;
 		this.#wallet = wallet;
 	}
@@ -129,7 +129,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public isMultiSignatureRegistration(): boolean {
-		return false
+		return false;
 	}
 
 	public isMultiPayment(): boolean {
@@ -143,7 +143,6 @@ export class ExtendedSignedTransactionData {
 	public isValidatorResignation(): boolean {
 		return this.#data.isValidatorResignation();
 	}
-
 
 	public total(): number {
 		if (this.isReturn()) {

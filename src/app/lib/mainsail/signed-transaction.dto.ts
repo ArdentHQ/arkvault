@@ -63,11 +63,9 @@ export class SignedTransactionData {
 		];
 	}
 
-
 	public hash(): string {
 		return this.identifier;
 	}
-
 
 	public from(): string {
 		return this.signedData.from;

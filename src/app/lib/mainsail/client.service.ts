@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
-import { Collections, Contracts, DTO, IoC, Networks, Services } from "@/app/lib/sdk";
+import { Collections, Contracts, DTO, Services } from "@/app/lib/sdk";
 import { DateTime } from "@/app/lib/intl";
 import { UsernamesAbi } from "@mainsail/evm-contracts";
 import dotify from "node-dotify";
@@ -9,8 +9,6 @@ import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { ConfigRepository } from "@/app/lib/sdk/config";
-import { container } from "@/app/lib/profiles/container";
 import { WalletData } from "./wallet.dto";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/sdk/transactions.collection";
@@ -104,18 +102,16 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}
 
-	public async broadcast(
-		transactions: SignedTransactionData[],
-	): Promise<Services.BroadcastResponse> {
+	public async broadcast(transactions: SignedTransactionData[]): Promise<Services.BroadcastResponse> {
 		const transactionToBroadcast: any[] = [];
 
 		for (const transaction of transactions) {
@@ -327,7 +323,7 @@ export class ClientService {
 		if (body.timestamp) {
 			const normalizeTimestamps = (timestamp: Services.RangeCriteria) => {
 				// @TODO: Remove hardcoded values.
-				const epoch = '2023-12-21T00:00:00.000Z'
+				const epoch = "2023-12-21T00:00:00.000Z";
 				//const epoch: string = this.#config.get<string>("network.constants.epoch");
 
 				const normalized = { ...timestamp };

@@ -1,6 +1,6 @@
 import { BuildTransferDataProperties } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 
-export const buildTransferData = async ({ recipients, memo, isMultiSignature }: BuildTransferDataProperties) => {
+export const buildTransferData = ({ recipients, memo }: BuildTransferDataProperties) => {
 	let data: Record<string, any> = {};
 
 	if (recipients?.length === 1) {

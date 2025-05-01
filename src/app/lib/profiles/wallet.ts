@@ -1,4 +1,4 @@
-import { Coins, Contracts, Exceptions, Networks, Services } from "@/app/lib/sdk";
+import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
@@ -52,7 +52,7 @@ import { AddressService } from "@/app/lib/mainsail/address.service";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { PrivateKeyService } from "@/app/lib/mainsail/private-key.service";
 import { WIFService } from "@/app/lib/mainsail/wif.service";
-import { SignatoryService } from "../mainsail/signatory.service.js";
+import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -329,7 +329,6 @@ export class Wallet implements IReadWriteWallet {
 	public isLedger(): boolean {
 		return this.data().get(WalletData.DerivationPath) !== undefined;
 	}
-
 
 	/** {@inheritDoc IReadWriteWallet.isLedgerNanoX} */
 	public isLedgerNanoX(): boolean {

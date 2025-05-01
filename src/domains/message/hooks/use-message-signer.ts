@@ -16,7 +16,7 @@ const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWri
 	return {
 		message,
 		signatory,
-		signature
+		signature,
 	};
 };
 

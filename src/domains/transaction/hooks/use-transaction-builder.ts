@@ -4,7 +4,7 @@ import { Services } from "@/app/lib/sdk";
 import { upperFirst } from "@/app/lib/helpers";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
-import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
+//import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 import { httpClient } from "@/app/services";
 
 type SignFunction = (input: any) => Promise<string>;

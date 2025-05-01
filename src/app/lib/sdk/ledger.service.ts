@@ -10,7 +10,6 @@ import { LedgerService, LedgerTransportFactory, LedgerWalletList } from "./ledge
 import { BindingType } from "./service-provider.contract";
 
 export class AbstractLedgerService implements LedgerService {
-
 	protected readonly configRepository: ConfigRepository;
 	protected readonly ledgerTransportFactory: LedgerTransportFactory;
 

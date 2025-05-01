@@ -98,9 +98,7 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.findByCoin} */
 	public findByCoin(coin: string): IReadWriteWallet[] {
-		return this.values().filter(
-			(wallet: IReadWriteWallet) => wallet.manifest().get<string>("name") === coin,
-		);
+		return this.values().filter((wallet: IReadWriteWallet) => wallet.manifest().get<string>("name") === coin);
 	}
 
 	/** {@inheritDoc IWalletRepository.findByCoinWithNetwork} */

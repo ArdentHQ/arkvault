@@ -1,7 +1,7 @@
 import { BigNumber, NumberLike } from "@/app/lib/helpers";
 
 interface BigNumberOptions {
-	currencyDecimals?: number
+	currencyDecimals?: number;
 }
 
 export class BigNumberService {

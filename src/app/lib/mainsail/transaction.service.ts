@@ -35,7 +35,6 @@ export class TransactionService {
 	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
 	public constructor(container: IoC.IContainer) {
-
 		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
 		this.#addressService = new AddressService();
 
@@ -90,9 +89,7 @@ export class TransactionService {
 		);
 	}
 
-	public async validatorRegistration(
-		input: Services.ValidatorRegistrationInput,
-	): Promise<SignedTransactionData> {
+	public async validatorRegistration(input: Services.ValidatorRegistrationInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -197,9 +194,7 @@ export class TransactionService {
 		);
 	}
 
-	public async usernameRegistration(
-		input: Services.UsernameRegistrationInput,
-	): Promise<SignedTransactionData> {
+	public async usernameRegistration(input: Services.UsernameRegistrationInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -227,9 +222,7 @@ export class TransactionService {
 		);
 	}
 
-	public async usernameResignation(
-		input: Services.UsernameResignationInput,
-	): Promise<SignedTransactionData> {
+	public async usernameResignation(input: Services.UsernameResignationInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -250,9 +243,7 @@ export class TransactionService {
 		);
 	}
 
-	public async validatorResignation(
-		input: Services.ValidatorResignationInput,
-	): Promise<SignedTransactionData> {
+	public async validatorResignation(input: Services.ValidatorResignationInput): Promise<SignedTransactionData> {
 		applyCryptoConfiguration(this.#configCrypto);
 		this.#assertGasFee(input);
 
@@ -293,17 +284,19 @@ export class TransactionService {
 	}
 
 	async #generateNonce(input: Services.TransactionInputs): Promise<string> {
-		if (input.nonce) {
-			return input.nonce;
-		}
+		return new Promise((resolve) => {
+			if (input.nonce) {
+				resolve(input.nonce);
+			}
 
-		//const { address } = await this.#signerData(input);
-		// @TODO: Revisit.
-		//const wallet = await new ClientService().wallet({ type: "address", value: address! });
+			//const { address } = await this.#signerData(input);
+			// @TODO: Revisit.
+			//const wallet = await new ClientService().wallet({ type: "address", value: address! });
 
-		//return wallet.nonce().toFixed(0);
+			//return wallet.nonce().toFixed(0);
 
-		return "0";
+			resolve("0");
+		});
 	}
 
 	async #sign(input: Services.TransferInput, builder: any): Promise<void> {

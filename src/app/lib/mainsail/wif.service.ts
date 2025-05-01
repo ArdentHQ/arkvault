@@ -11,7 +11,7 @@ export class WIFService {
 	readonly #config!: Interfaces.NetworkConfig;
 
 	public constructor() {
-		this.#config = Managers.configManager.all() as Interfaces.NetworkConfig
+		this.#config = Managers.configManager.all() as Interfaces.NetworkConfig;
 	}
 
 	public async fromMnemonic(

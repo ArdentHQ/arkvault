@@ -28,7 +28,7 @@ export class SignatoryService {
 		this.#addressService = new AddressService();
 		this.#privateKeyService = new PrivateKeyService();
 
-		this.#publicKeyService = new PublicKeyService
+		this.#publicKeyService = new PublicKeyService();
 	}
 
 	public async mnemonic(mnemonic: string, options?: IdentityOptions): Promise<Signatory> {
@@ -43,10 +43,7 @@ export class SignatoryService {
 		);
 	}
 
-	public async confirmationMnemonic(
-		signingKey: string,
-		confirmKey: string,
-	): Promise<Signatory> {
+	public async confirmationMnemonic(signingKey: string, confirmKey: string): Promise<Signatory> {
 		return new Signatory(
 			new ConfirmationMnemonicSignatory({
 				address: this.#addressService.fromMnemonic(signingKey).address,

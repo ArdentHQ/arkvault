@@ -41,7 +41,6 @@ export class ConfirmedTransactionData {
 
 	protected data!: KeyValuePair;
 
-
 	public constructor() {
 		this.#addressService = new AddressService();
 		this.bigNumberService = new BigNumberService();
