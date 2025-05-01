@@ -40,7 +40,12 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (env: Environment, network: Networks.Network, profile: IProfile, controller: MutableRefObject<AbortController | undefined>) => ({
+	username: (
+		env: Environment,
+		network: Networks.Network,
+		profile: IProfile,
+		controller: MutableRefObject<AbortController | undefined>,
+	) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -78,7 +83,7 @@ const usernameExists = async (
 
 	const hostSelector = env.hostSelector(profile);
 
-	const coin = profile.coins().get(network.coin(), network.id())
+	const coin = profile.coins().get(network.coin(), network.id());
 
 	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
 

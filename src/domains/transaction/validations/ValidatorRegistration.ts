@@ -39,19 +39,14 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (
-	env: Environment,
-	network: Networks.Network,
-	profile: IProfile,
-	publicKey: string
-) => {
+const publicKeyExists = async (env: Environment, network: Networks.Network, profile: IProfile, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}
 
 	const hostSelector = env.hostSelector(profile);
 
-	const coin = profile.coins().get(network.coin(), network.id())
+	const coin = profile.coins().get(network.coin(), network.id());
 
 	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
 
