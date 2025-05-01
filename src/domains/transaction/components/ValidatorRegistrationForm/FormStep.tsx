@@ -27,10 +27,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
-		if (wallet) {
-			register("validatorPublicKey", validatorRegistration.validatorPublicKey(env, wallet));
-		}
-	}, [register, validatorRegistration, wallet]);
+		register("validatorPublicKey", validatorRegistration.validatorPublicKey(env, profile, network));
+	}, [register, validatorRegistration, profile, network, env]);
 
 	const handleSelectSender = (address: any) => {
 		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });

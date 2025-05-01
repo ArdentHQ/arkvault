@@ -2,7 +2,8 @@ import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
 import { Environment } from "@/app/lib/profiles";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
+import { Networks } from "@/app/lib/sdk";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 class UsernameExistsError extends Error {
 	constructor(message: string) {
@@ -39,7 +40,7 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (env: Environment, wallet: IReadWriteWallet, controller: MutableRefObject<AbortController | undefined>) => ({
+	username: (env: Environment, network: Networks.Network, profile: IProfile, controller: MutableRefObject<AbortController | undefined>) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -52,7 +53,7 @@ export const usernameRegistration = (t: any) => ({
 				}
 
 				try {
-					await usernameExists(env, wallet, value, controller);
+					await usernameExists(env, network, profile, value, controller);
 				} catch (error) {
 					if (error.name === "UsernameExistsError") {
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
@@ -66,7 +67,8 @@ export const usernameRegistration = (t: any) => ({
 
 const usernameExists = async (
 	env: Environment,
-	wallet: IReadWriteWallet,
+	network: Networks.Network,
+	profile: IProfile,
 	username: string,
 	controller: MutableRefObject<AbortController | undefined>,
 ) => {
@@ -74,11 +76,13 @@ const usernameExists = async (
 		return;
 	}
 
-	const hostSelector = env.hostSelector(wallet.profile());
+	const hostSelector = env.hostSelector(profile);
 
-	const publicApiEndpoint = hostSelector(wallet.config(), "full").host;
+	const coin = profile.coins().get(network.coin(), network.id())
 
-	const response = await fetch(`${publicApiEndpoint}/${username}`, { signal: controller.current?.signal });
+	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
+
+	const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
 
 	if (response.ok) {
 		throw new UsernameExistsError("Username is occupied!");
