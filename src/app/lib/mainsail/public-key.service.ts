@@ -1,7 +1,7 @@
 import { Services, Exceptions } from "@/app/lib/sdk";
 
 import { PublicKey } from "@arkecosystem/typescript-crypto";
-import { Bls } from "@ardenthq/arkvault-crypto/dist/bls.js";
+import { Bls } from "@ardenthq/arkvault-crypto";
 
 export class PublicKeyService {
 	public fromMnemonic(mnemonic: string): Services.PublicKeyDataTransferObject {
