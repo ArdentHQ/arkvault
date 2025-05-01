@@ -30,7 +30,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	useEffect(() => {
 		if (!username && wallet) {
-			register("username", usernameRegistration.username(env, userExistsController, wallet));
+			register("username", usernameRegistration.username(env, wallet, userExistsController));
 		}
 	}, [usernameRegistration, register, env, username, wallet]);
 
