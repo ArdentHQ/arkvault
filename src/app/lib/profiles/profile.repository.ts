@@ -1,4 +1,4 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@ardenthq/arkvault-crypto";
 
 import { IProfile, IProfileExportOptions, IProfileInput, IProfileRepository } from "./contracts.js";
 import { DataRepository } from "./data.repository";

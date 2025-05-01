@@ -1,5 +1,5 @@
 import { Coins } from "@/app/lib/sdk";
-import { Base64 } from "@ardenthq/sdk-cryptography";
+import { Base64 } from "@ardenthq/arkvault-crypto";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";

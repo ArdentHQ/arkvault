@@ -1,4 +1,4 @@
-import { PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { PBKDF2 } from "@ardenthq/arkvault-crypto";
 
 import { IReadWriteWallet, IWalletImportFormat } from "./contracts.js";
 
