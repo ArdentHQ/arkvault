@@ -14,7 +14,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 			env.fees().all(network.coin(), network.id());
 		} catch {
 			// Sync network fees for the first time
-			await env.fees().sync(profile, network.coin(), network.id());
+			await env.fees().sync(profile);
 		}
 	};
 

@@ -1,6 +1,9 @@
 import { Coins, Networks } from "@/app/lib/sdk";
 
+import { container } from "./container.js";
+import { Identifiers } from "./container.models.js";
 import { ICoinService, IDataRepository } from "./contracts.js";
+import { NetworkHostSelectorFactory } from "./environment.models.js";
 import { IProfile } from "./profile.contract.js";
 
 export class CoinService implements ICoinService {
@@ -54,6 +57,19 @@ export class CoinService implements ICoinService {
 	}
 
 	/** {@inheritDoc ICoinService.set} */
+	public makeInstance(coin: string, network: string, options: object = {}): Coins.Coin {
+		const bundle = this.#getCoinBundle(coin)
+		console.log({ bundle });
+		return Coins.CoinFactory.make(this.#getCoinBundle(coin), {
+			hostSelector: container.get<NetworkHostSelectorFactory>(Identifiers.NetworkHostSelectorFactory)(
+				this.#profile,
+			),
+			httpClient: container.get(Identifiers.HttpClient),
+			ledgerTransportFactory: container.get(Identifiers.LedgerTransportFactory),
+			network,
+			...options,
+		});
+	}
 
 	/** {@inheritDoc ICoinService.availableNetworks} */
 	public availableNetworks() {
@@ -63,6 +79,10 @@ export class CoinService implements ICoinService {
 		});
 
 		return networks.sort((a, b) => a.displayName().localeCompare(b.displayName()));
+	}
+
+	#getCoinBundle(coin: string): Coins.CoinBundle {
+		return container.get<Coins.CoinBundle>(Identifiers.Coins)[coin];
 	}
 
 	#coinManifests() {

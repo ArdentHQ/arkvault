@@ -49,6 +49,24 @@ export interface ICoinService {
 	flush(): void;
 
 	/**
+	 * Make an instance of the given coin and network.
+	 *
+	 * @param {string} coin
+	 * @param {string} network
+	 * @param {object} [options]
+	 * @return {Coins.Coin}
+	 * @memberof ICoinService
+	 */
+	makeInstance(coin: string, network: string, options?: object): Coins.Coin;
+
+	/**
+	 * Register all available coins stored in profile.
+	 *
+	 * @memberof ICoinService
+	 */
+	register(): void;
+
+	/**
 	 * Get all available coin networks.
 	 *
 	 * @return {Networks.Network[]}
