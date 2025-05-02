@@ -118,6 +118,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 							end: {
 								content: (
 									<InputFeeAdvancedAddon
+										name="InputFeeAdvanced__gasLimit"
 										disabled={!!disabled}
 										isDownDisabled={gasLimit <= defaultGasLimit}
 										onClickDown={handleGasLimitDecrement}
