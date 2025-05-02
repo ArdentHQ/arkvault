@@ -132,7 +132,7 @@ export const useLedgerConnection = () => {
 				//});
 
 				dispatch({ type: "connected" });
-			} catch (connectError) {
+			} catch {
 				//handleLedgerConnectionError(connectError, coinInstance);
 			}
 

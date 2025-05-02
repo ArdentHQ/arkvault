@@ -30,6 +30,5 @@ export const Mainsail: Coins.CoinBundle = bundle({
 	},
 	manifest,
 	serviceProvider: ServiceProvider,
-	services: {
-	},
+	services: {},
 });
