@@ -64,21 +64,13 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 		await Promise.all(
 			data.wallets.map(async (wallet: Record<string, any>) => {
 				if (wallet.address && wallet.balance.ARK) {
-					const importedWallet = await profile.walletFactory().fromAddress({
-						address: wallet.address,
-						coin: "Mainsail",
-						network: "mainsail.mainnet",
-					});
+					const importedWallet = await profile.walletFactory().fromAddress({ address: wallet.address });
 					profile.wallets().push(importedWallet);
 					return wallet;
 				}
 
 				if (wallet.address && wallet.balance.DARK) {
-					const importedWallet = await profile.walletFactory().fromAddress({
-						address: wallet.address,
-						coin: "Mainsail",
-						network: "mainsail.devnet",
-					});
+					const importedWallet = await profile.walletFactory().fromAddress({ address: wallet.address });
 					profile.wallets().push(importedWallet);
 					return importedWallet;
 				}
