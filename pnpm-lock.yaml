@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ardenthq/arkvault-crypto':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.6
+        version: 0.0.6
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
         version: 1.2.0
@@ -468,8 +468,8 @@ packages:
     peerDependencies:
       ajv: '>=8'
 
-  '@ardenthq/arkvault-crypto@0.0.5':
-    resolution: {integrity: sha512-iGNC8LnkxdlZLvGqOzPypB5RmMzzBe9AcmTJhDvanEL419Fj0yiP8A4cm5K2V5fGpHjxoVP4z66W+Pt2xYF1fA==}
+  '@ardenthq/arkvault-crypto@0.0.6':
+    resolution: {integrity: sha512-bwZoWZ6DoR6PO5CIrbWTZCn1X5N7079uI82meK1KuwFtGB1lFBe8v0exwgrc8qoLoishsngi+QKQQlnFBkKcKg==}
 
   '@ardenthq/arkvault-url@1.2.0':
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
@@ -6626,10 +6626,6 @@ packages:
     resolution: {integrity: sha512-6JfvwvjUOn8F/jUoBY2Q1v5WY5XS+rj8qSe0v8Y4ezH4InLgTEeOOPQsRll9OV429Pvo6BCHGavIyJfr3TAhsw==}
     engines: {node: '>=18.0.0'}
 
-  secp256k1@5.0.1:
-    resolution: {integrity: sha512-lDFs9AAIaWP9UCdtWrotXWWF9t8PWgQDcxqgAnpM9rMqxb3Oaq2J0thzPVSxBwdJgyQtkU/sYtFtbM1RSt/iYA==}
-    engines: {node: '>=18.0.0'}
-
   seed-random@2.2.0:
     resolution: {integrity: sha512-34EQV6AAHQGhoc0tn/96a9Fsi6v2xdqe/dMUwljGRaFOzR3EgRmECvD0O8vi8X+/uQ50LGHfkNu/Eue5TPKZkQ==}
 
@@ -7912,7 +7908,7 @@ snapshots:
       jsonpointer: 5.0.1
       leven: 3.1.0
 
-  '@ardenthq/arkvault-crypto@0.0.5':
+  '@ardenthq/arkvault-crypto@0.0.6':
     dependencies:
       '@noble/curves': 1.9.0
       '@noble/hashes': 1.8.0
@@ -7924,7 +7920,6 @@ snapshots:
       bn.js: 5.2.2
       create-xpub: 2.1.0
       hdkey: 2.1.0
-      secp256k1: 5.0.1
       uuid: 11.1.0
 
   '@ardenthq/arkvault-url@1.2.0': {}
@@ -15041,12 +15036,6 @@ snapshots:
       loose-envify: 1.4.0
 
   secp256k1@4.0.4:
-    dependencies:
-      elliptic: 6.6.1
-      node-addon-api: 5.1.0
-      node-gyp-build: 4.8.4
-
-  secp256k1@5.0.1:
     dependencies:
       elliptic: 6.6.1
       node-addon-api: 5.1.0
