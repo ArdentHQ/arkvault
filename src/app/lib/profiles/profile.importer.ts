@@ -50,8 +50,6 @@ export class ProfileImporter implements IProfileImporter {
 
 		this.#profile.settings().fill(data.settings);
 
-		this.#profile.coins().register();
-
 		this.#profile.wallets().fill(data.wallets);
 
 		this.#profile.contacts().fill(data.contacts);
@@ -87,19 +85,4 @@ export class ProfileImporter implements IProfileImporter {
 
 		return data;
 	}
-
-	///**
-	// * Gather all known coins through wallets and contacts.
-	// *
-	// * @private
-	// * @param {IProfileData} data
-	// * @memberof ProfileImporter
-	// */
-	//#gatherCoins(data: IProfileData): void {
-	//	for (const wallet of Object.values(data.wallets)) {
-	//		if (isRegistered(wallet.data[WalletData.Coin])) {
-	//			this.#profile.coins().set(wallet.data[WalletData.Coin], wallet.data[WalletData.Network]);
-	//		}
-	//	}
-	//}
 }

@@ -53,12 +53,6 @@ export class DriverFactory {
 			container.constant(Identifiers.Storage, options.storage);
 		}
 
-		if (typeof options.hostSelector === "function") {
-			container.constant(Identifiers.NetworkHostSelectorFactory, options.hostSelector);
-		} else {
-			container.constant(Identifiers.NetworkHostSelectorFactory, defaultHostSelector);
-		}
-
 		container.constant(Identifiers.LedgerTransportFactory, options.ledgerTransportFactory);
 		container.constant(Identifiers.HttpClient, options.httpClient);
 		container.constant(Identifiers.Coins, options.coins);

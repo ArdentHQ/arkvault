@@ -15,7 +15,7 @@ import {
 	IUsernamesService,
 	IWalletService,
 } from "./contracts.js";
-import { DriverFactory } from "./driver.js";
+import { defaultHostSelector, DriverFactory } from "./driver.js";
 import {
 	CoinList,
 	EnvironmentOptions,
@@ -264,8 +264,6 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public hostSelector(profile: IProfile): Networks.NetworkHostSelector {
-		const hostSelector: NetworkHostSelectorFactory = container.get(Identifiers.NetworkHostSelectorFactory);
-
-		return hostSelector(profile);
+		return defaultHostSelector(profile)
 	}
 }
