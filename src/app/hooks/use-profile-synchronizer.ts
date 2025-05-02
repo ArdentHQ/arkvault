@@ -60,7 +60,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 					});
 					const activeNetwork = profile.activeNetwork();
 
-					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
+					await profile.sync({ networkId: activeNetwork.id(), ttl: 15_000 });
 					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
 
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
@@ -228,7 +228,7 @@ export const useProfileRestore = (profileId: string) => {
 		await env.profiles().restore(profile, password);
 		markAsRestored();
 
-		const activeProfile = getProfileFromUrl(env, history?.location?.pathname);
+		const activeProfile = getProfileFromUrl(env, history.location.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
@@ -375,24 +375,7 @@ export const useProfileSynchronizer = ({
 			}
 
 			try {
-				// If the user only has one network, we skip the network selection
-				// step when creating or importing a wallet, which means we also
-				// skip that part of syncing network coin. The issues caused by that
-				// are solved by syncing the coin initially.
-				const availableNetworks = profileAllEnabledNetworks(profile);
-				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
-				const activeNetwork = profile.activeNetwork();
-
-				if (onlyHasOneNetwork) {
-					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
-					await Promise.all([
-						coin.__construct(),
-						profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 }),
-					]);
-				} else {
-					await profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 });
-				}
-
+				await profile.sync({ ttl: 10_000 });
 				await persist();
 
 				setStatus("synced");

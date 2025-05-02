@@ -8,17 +8,6 @@ import { Services } from "@/app/lib/sdk";
  */
 export interface IWalletMutator {
 	/**
-	 * Set the coin and network that should be communicated with.
-	 *
-	 * @param {string} coin
-	 * @param {string} network
-	 * @param {{ sync: boolean }} [options]
-	 * @return {Promise<void>}
-	 * @memberof IWalletMutator
-	 */
-	coin(coin: string, network: string, options?: { sync: boolean }): Promise<void>;
-
-	/**
 	 * Set the identity based on a mnemonic.
 	 *
 	 * @param {string} mnemonic

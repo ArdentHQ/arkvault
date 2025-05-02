@@ -41,23 +41,6 @@ export class WalletRepository implements IWalletRepository {
 		return this.#data.last();
 	}
 
-	/** {@inheritDoc IWalletRepository.allByCoin} */
-	public allByCoin(): Record<string, Record<string, IReadWriteWallet>> {
-		const result = {};
-
-		for (const [id, wallet] of Object.entries(this.all())) {
-			const coin: string = wallet.currency();
-
-			if (!result[coin]) {
-				result[coin] = {};
-			}
-
-			result[coin][id] = wallet;
-		}
-
-		return result;
-	}
-
 	/** {@inheritDoc IWalletRepository.keys} */
 	public keys(): string[] {
 		return this.#data.keys();
@@ -241,7 +224,7 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.fill} */
-	public async fill(struct: Record<string, IWalletData>): Promise<void> {
+	public fill(struct: Record<string, IWalletData>): void {
 		this.#dataRaw = struct;
 
 		for (const item of Object.values(struct)) {
@@ -253,23 +236,7 @@ export class WalletRepository implements IWalletRepository {
 
 			wallet.settings().fill(settings);
 
-			const coin: string = wallet.data().get<string>(WalletData.Coin)!;
 			const network: string = wallet.data().get<string>(WalletData.Network)!;
-			const specification: Coins.CoinSpec = container.get<Coins.CoinSpec>(Identifiers.Coins)[coin];
-
-			// If a client does not provide a coin instance we will not know how to restore.
-			if (specification === undefined) {
-				wallet.markAsMissingNetwork();
-			}
-
-			if (specification && specification.manifest.networks[network] === undefined) {
-				wallet.markAsMissingNetwork();
-			}
-
-			if (!wallet.isMissingCoin() && !wallet.isMissingNetwork()) {
-				await wallet.mutator().coin(coin, network, { sync: false });
-			}
-
 			wallet.mutator().avatar(wallet.address());
 
 			wallet.markAsPartiallyRestored();
@@ -311,18 +278,16 @@ export class WalletRepository implements IWalletRepository {
 
 	async #restoreWallet({ id, data }, options?: { ttl?: number }): Promise<void> {
 		const previousWallet: IReadWriteWallet = this.findById(id);
-
 		if (previousWallet.hasBeenPartiallyRestored()) {
 			try {
 				await this.#syncWalletWithNetwork(
 					{
 						address: data[WalletData.Address],
-						coin: data[WalletData.Coin],
-						network: data[WalletData.Network],
 						wallet: previousWallet,
 					},
 					options,
 				);
+
 			} catch {
 				// If we end up here the wallet had previously been
 				// partially restored but we again failed to fully
@@ -334,20 +299,15 @@ export class WalletRepository implements IWalletRepository {
 	async #syncWalletWithNetwork(
 		{
 			address,
-			coin,
-			network,
 			wallet,
 		}: {
 			wallet: IReadWriteWallet;
-			coin: string;
-			network: string;
 			address: string;
 		},
 		options?: { ttl?: number },
 	): Promise<void> {
 		await retry(
 			async () => {
-				await wallet.mutator().coin(coin, network);
 				await wallet.mutator().address({ address });
 				await wallet.synchroniser().identity(options);
 			},

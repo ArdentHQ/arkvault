@@ -47,7 +47,7 @@ export class TransactionIndex implements ITransactionIndex {
 	public async findById(hash: string): Promise<ExtendedConfirmedTransactionData> {
 		return transformTransactionData(
 			this.#wallet,
-			await this.#wallet.getAttributes().get<Coins.Coin>("coin").client().transaction(hash),
+			await this.#wallet.client().transaction(hash),
 		);
 	}
 
@@ -57,7 +57,7 @@ export class TransactionIndex implements ITransactionIndex {
 	}
 
 	async #fetch(query: Services.ClientTransactionsInput): Promise<ExtendedConfirmedTransactionDataCollection> {
-		const result = await this.#wallet.getAttributes().get<Coins.Coin>("coin").client().transactions(query);
+		const result = await this.#wallet.client().transactions(query);
 
 		const transactions = result.items();
 

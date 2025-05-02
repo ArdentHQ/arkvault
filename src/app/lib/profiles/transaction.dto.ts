@@ -8,6 +8,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Identifiers } from "./container.models.js";
 import { container } from "./container.js";
+import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -16,9 +17,9 @@ export interface ExtendedTransactionRecipient {
 
 export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
-	readonly #data: Contracts.ConfirmedTransactionData;
+	readonly #data: ConfirmedTransactionData;
 
-	public constructor(wallet: IReadWriteWallet, data: Contracts.ConfirmedTransactionData) {
+	public constructor(wallet: IReadWriteWallet, data: ConfirmedTransactionData) {
 		this.#wallet = wallet;
 		this.#data = data;
 	}

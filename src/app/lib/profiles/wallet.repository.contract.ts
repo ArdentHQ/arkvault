@@ -32,14 +32,6 @@ export interface IWalletRepository {
 	last(): IReadWriteWallet;
 
 	/**
-	 * Get all wallets grouped by their coin and network.
-	 *
-	 * @returns {Record<string, Record<string, IReadWriteWallet>>}
-	 * @memberof IWalletRepository
-	 */
-	allByCoin(): Record<string, Record<string, IReadWriteWallet>>;
-
-	/**
 	 * Get all keys.
 	 *
 	 * @returns {string[]}
@@ -62,7 +54,7 @@ export interface IWalletRepository {
 	 * @returns {Promise<void>}
 	 * @memberof IWalletRepository
 	 */
-	fill(struct: Record<string, IWalletData>): Promise<void>;
+	fill(struct: Record<string, IWalletData>): void;
 
 	/**
 	 * Restore the wallets.

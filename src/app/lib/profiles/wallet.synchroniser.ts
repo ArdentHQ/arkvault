@@ -10,24 +10,15 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 		this.#wallet = wallet;
 	}
 
-	/** {@inheritDoc IWalletSynchroniser.coin} */
-	public async coin(): Promise<void> {
-		await this.#wallet.mutator().coin(this.#wallet.coinId(), this.#wallet.networkId());
-	}
-
 	/** {@inheritDoc IWalletSynchroniser.identity} */
-	public async identity(options?: { ttl?: number }): Promise<void> {
+	public async identity(): Promise<void> {
 		const currentWallet = this.#wallet.getAttributes().get<Contracts.WalletData>("wallet");
 		const currentPublicKey = this.#wallet.data().get<string>(WalletData.PublicKey);
 
 		const walletIdentifier: Services.WalletIdentifier = WalletIdentifierFactory.make(this.#wallet);
 
 		try {
-			const wallet: Contracts.WalletData = await this.#wallet
-				.getAttributes()
-				.get<Coins.Coin>("coin")
-				.client()
-				.wallet(walletIdentifier, options);
+			const wallet: Contracts.WalletData = await this.#wallet.client().wallet(walletIdentifier);
 
 			this.#wallet.getAttributes().set("wallet", wallet);
 
@@ -37,6 +28,7 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 			this.#wallet.data().set(WalletData.Balance, wallet.balance());
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
+			this.#wallet.markAsFullyRestored();
 		} catch {
 			/**
 			 * TODO: decide what to do if the wallet couldn't be found
@@ -47,6 +39,7 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 			this.#wallet.getAttributes().set("wallet", currentWallet);
 			this.#wallet.data().set(WalletData.PublicKey, currentPublicKey);
+			this.#wallet.markAsPartiallyRestored();
 		}
 	}
 
