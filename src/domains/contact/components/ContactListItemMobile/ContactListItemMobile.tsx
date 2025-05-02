@@ -82,7 +82,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 				>
 					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
 						<div data-testid="ContactListItemMobile__addresses" className="w-full space-y-3">
-							{contact.addresses().values().map(renderAddress)}
+							{contact.addresses().values().map((element) => renderAddress(element))}
 						</div>
 					</MobileTableElementRow>
 				</MobileTableElement>
