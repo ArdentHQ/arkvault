@@ -1,4 +1,4 @@
-import { Coins, Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, ITransactionIndex, WalletData } from "./contracts.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
@@ -45,10 +45,7 @@ export class TransactionIndex implements ITransactionIndex {
 
 	/** {@inheritDoc ITransactionIndex.findById} */
 	public async findById(hash: string): Promise<ExtendedConfirmedTransactionData> {
-		return transformTransactionData(
-			this.#wallet,
-			await this.#wallet.client().transaction(hash),
-		);
+		return transformTransactionData(this.#wallet, await this.#wallet.client().transaction(hash));
 	}
 
 	/** {@inheritDoc ITransactionIndex.findByIds} */

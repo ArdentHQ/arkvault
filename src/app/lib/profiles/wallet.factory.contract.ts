@@ -33,8 +33,6 @@ export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
  * @interface IAddressOptions
  */
 export interface IAddressOptions {
-	coin: string;
-	network: string;
 	address: string;
 }
 

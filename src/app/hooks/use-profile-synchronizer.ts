@@ -1,4 +1,3 @@
-import { enabledNetworksCount, profileAllEnabledNetworks } from "@/utils/network-utils";
 import {
 	getErroredNetworks,
 	getProfileById,

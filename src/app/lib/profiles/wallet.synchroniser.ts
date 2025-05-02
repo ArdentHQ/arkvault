@@ -1,4 +1,4 @@
-import { Coins, Contracts, Services } from "@/app/lib/sdk";
+import { Contracts, Services } from "@/app/lib/sdk";
 
 import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";

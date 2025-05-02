@@ -1,9 +1,6 @@
-import { Coins } from "@/app/lib/sdk";
 import { sortBy, sortByDesc } from "@/app/lib/helpers";
 import retry from "p-retry";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
 	IProfile,
@@ -236,7 +233,6 @@ export class WalletRepository implements IWalletRepository {
 
 			wallet.settings().fill(settings);
 
-			const network: string = wallet.data().get<string>(WalletData.Network)!;
 			wallet.mutator().avatar(wallet.address());
 
 			wallet.markAsPartiallyRestored();
@@ -287,7 +283,6 @@ export class WalletRepository implements IWalletRepository {
 					},
 					options,
 				);
-
 			} catch {
 				// If we end up here the wallet had previously been
 				// partially restored but we again failed to fully
