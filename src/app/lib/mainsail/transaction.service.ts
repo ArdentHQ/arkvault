@@ -16,6 +16,7 @@ import { Interfaces, Managers } from "./crypto/index.js";
 import { parseUnits } from "./helpers/parse-units.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
+import { ClientService } from "./client.service.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: number;
@@ -284,19 +285,14 @@ export class TransactionService {
 	}
 
 	async #generateNonce(input: Services.TransactionInputs): Promise<string> {
-		return new Promise((resolve) => {
-			if (input.nonce) {
-				resolve(input.nonce);
-			}
+		if (input.nonce) {
+			return input.nonce;
+		}
 
-			//const { address } = await this.#signerData(input);
-			// @TODO: Revisit.
-			//const wallet = await new ClientService().wallet({ type: "address", value: address! });
+		const { address } = await this.#signerData(input);
+		const wallet = await new ClientService().wallet({ type: "address", value: address! });
 
-			//return wallet.nonce().toFixed(0);
-
-			resolve("0");
-		});
+		return wallet.nonce().toFixed(0);
 	}
 
 	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
