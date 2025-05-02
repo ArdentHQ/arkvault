@@ -274,7 +274,7 @@ export const translations = {
 	SIGNATURE: "Signature",
 
 	SINGLE_ADDRESS_HINT:
-		"You're automatically viewing the latest created/imported address. You can select here to make changes",
+		"You're automatically viewing the latest created/imported address. You can select here to make changes.",
 
 	STATUS: {
 		ACTIVE: "Active",
