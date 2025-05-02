@@ -60,13 +60,6 @@ export interface ICoinService {
 	makeInstance(coin: string, network: string, options?: object): Coins.Coin;
 
 	/**
-	 * Register all available coins stored in profile.
-	 *
-	 * @memberof ICoinService
-	 */
-	register(): void;
-
-	/**
 	 * Get all available coin networks.
 	 *
 	 * @return {Networks.Network[]}
