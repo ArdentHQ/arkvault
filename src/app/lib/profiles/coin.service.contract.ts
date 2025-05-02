@@ -32,27 +32,6 @@ export interface ICoinService {
 	entries(): [string, string[]][];
 
 	/**
-	 * Get an instance of the given coin and network.
-	 *
-	 * @param {string} coin
-	 * @param {string} network
-	 * @return {Coins.Coin}
-	 * @memberof ICoinService
-	 */
-	get(coin: string, network: string): Coins.Coin;
-
-	/**
-	 * Push an instance of the given coin and network.
-	 *
-	 * @param {string} coin
-	 * @param {string} network
-	 * @param {object} [options]
-	 * @return {Coins.Coin}
-	 * @memberof ICoinService
-	 */
-	set(coin: string, network: string, options?: object): Coins.Coin;
-
-	/**
 	 * Check if the given coin and network exist.
 	 *
 	 * @param {string} coin

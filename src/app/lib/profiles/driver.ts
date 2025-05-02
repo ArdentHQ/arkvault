@@ -6,7 +6,7 @@ import { ValidatorService } from "./validator.service.js";
 import { EnvironmentOptions, NetworkHostSelectorFactory } from "./environment.models.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { StorageFactory } from "./factory.storage.js";
-import { FeeService } from "./fee.service.js";
+import { ProfileFeeService } from "./fee.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { IProfile } from "./profile.contract.js";
 import { ProfileSetting } from "./profile.enum.contract.js";
@@ -66,7 +66,7 @@ export class DriverFactory {
 		container.singleton(Identifiers.AppData, DataRepository);
 		container.singleton(Identifiers.ValidatorService, ValidatorService);
 		container.singleton(Identifiers.ExchangeRateService, ExchangeRateService);
-		container.singleton(Identifiers.FeeService, FeeService);
+		container.singleton(Identifiers.FeeService, ProfileFeeService);
 		container.singleton(Identifiers.KnownWalletService, KnownWalletService);
 		container.singleton(Identifiers.ProfileRepository, ProfileRepository);
 		container.singleton(Identifiers.WalletService, WalletService);

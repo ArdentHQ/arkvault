@@ -13,6 +13,7 @@ import { Button } from "@/app/components/Button";
 import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from "@/app/hooks";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { ProfilePaths } from "@/router/paths";
+import { MessageService } from "@/app/lib/mainsail/message.service";
 
 enum Step {
 	FormStep = 1,
@@ -116,16 +117,11 @@ export const VerifyMessage = () => {
 		try {
 			let result: boolean;
 
+			// @TODO: revisit to see if an undefined activeWallet is an actual scenario.
 			if (activeWallet) {
 				result = await activeWallet.message().verify(storedMessage);
 			} else {
-				const coin: Coins.Coin = activeProfile
-					.coins()
-					.set("Mainsail", activeProfile.networks().allByCoin("Mainsail")[0].id);
-
-				await coin.__construct();
-
-				result = await coin.message().verify(storedMessage);
+				result = new MessageService().verify(storedMessage);
 			}
 
 			setVerificationResult({ ...storedMessage, verified: result });

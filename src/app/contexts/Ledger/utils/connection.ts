@@ -1,20 +1,18 @@
+// @TODO: Move this entire logic into sdk ledger service.
 import retry, { AbortError, Options } from "p-retry";
-import { Coins } from "@/app/lib/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 
 export const setupEthTransportInstance = (transport: LedgerTransport) => ({
 	ledgerService,
 	transport: new Eth(transport),
 });
 
-export const accessLedgerDevice = async (coin: Coins.Coin) => {
+export const accessLedgerDevice = async (ledgerService: LedgerService) => {
 	try {
-		await coin.__construct();
-		// @TODO: move eth instance intenall in ledger service.
-		// @ts-ignore
-		await coin.ledger().connect((transport) => setupEthTransportInstance(transport));
+		await ledgerService.connect((transport) => setupEthTransportInstance(transport));
 	} catch (error) {
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.
@@ -24,22 +22,21 @@ export const accessLedgerDevice = async (coin: Coins.Coin) => {
 	}
 };
 
-export const accessLedgerApp = async ({ coin }: { coin: Coins.Coin }) => {
-	await accessLedgerDevice(coin);
+export const accessLedgerApp = async () => {
+	const ledgerService = new LedgerService();
+	await accessLedgerDevice(ledgerService);
 
-	await coin.ledger().getPublicKey(
+	await ledgerService.getPublicKey(
 		formatLedgerDerivationPath({
-			coinType: coin.config().get<number>("network.constants.slip44"),
+			coinType: ledgerService.slip44(),
 		}),
 	);
 };
 
 export const persistLedgerConnection = async ({
-	coin,
 	options,
 	hasRequestedAbort,
 }: {
-	coin: Coins.Coin;
 	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {
@@ -49,7 +46,7 @@ export const persistLedgerConnection = async ({
 		}
 
 		try {
-			await accessLedgerApp({ coin });
+			await accessLedgerApp();
 		} catch (error) {
 			// Delay retry if an operation is in progress.
 			// Error: InvalidStateError: An operation that changes the device state is in progress.

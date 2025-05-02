@@ -12,18 +12,18 @@ export class KnownWalletService implements IKnownWalletService {
 	public async syncAll(profile: IProfile): Promise<void> {
 		const promises: (() => Promise<void>)[] = [];
 
-		for (const [coin, networks] of profile.coins().entries()) {
-			for (const network of networks) {
-				promises.push(async () => {
-					try {
-						this.#registry[network] = await profile.coins().get(coin, network).knownWallet().all();
-					} catch {
-						// Do nothing if it fails. It's not critical functionality.
-					}
-				});
-			}
-		}
-
+		//for (const [coin, networks] of profile.coins().entries()) {
+		//	for (const network of networks) {
+		//		promises.push(async () => {
+		//			try {
+		//				this.#registry[network] = await profile.coins().get(coin, network).knownWallet().all();
+		//			} catch {
+		//				// Do nothing if it fails. It's not critical functionality.
+		//			}
+		//		});
+		//	}
+		//}
+		//
 		await pqueue(promises);
 	}
 

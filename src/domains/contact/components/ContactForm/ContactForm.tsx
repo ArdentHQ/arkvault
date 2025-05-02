@@ -12,6 +12,8 @@ import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 import { Coins } from "@/app/lib/sdk";
+import { Address } from "@/app/components/Address";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -102,7 +104,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 									}).toString()
 								);
 							},
-							validAddress: async (address?: string) => {
+							validAddress: (address?: string) => {
 								if (!address) {
 									return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 										field: t("COMMON.ADDRESS"),
@@ -113,11 +115,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 									return t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE").toString();
 								}
 
-								const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
-
-								await instance.__construct();
-
-								const isValidAddress: boolean = await instance.address().validate(address);
+								const isValidAddress: boolean = new AddressService().validate(address);
 
 								if (!isValidAddress) {
 									return t("CONTACTS.VALIDATION.ADDRESS_IS_INVALID").toString();
@@ -133,9 +131,8 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			</FormField>
 
 			<div
-				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${
-					contact ? "justify-between" : "justify-end"
-				}`}
+				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${contact ? "justify-between" : "justify-end"
+					}`}
 			>
 				{contact && !isXs && (
 					<Button

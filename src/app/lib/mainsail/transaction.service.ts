@@ -17,6 +17,7 @@ import { parseUnits } from "./helpers/parse-units.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { ClientService } from "./client.service.js";
+import { LedgerService } from "./ledger.service.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: number;
@@ -35,8 +36,8 @@ export class TransactionService {
 
 	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
-	public constructor(container: IoC.IContainer) {
-		this.#ledgerService = container.get(IoC.BindingType.LedgerService);
+	public constructor() {
+		this.#ledgerService = new LedgerService();
 		this.#addressService = new AddressService();
 
 		this.#configCrypto = {

@@ -4,6 +4,7 @@ import { RegisterOptions } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { Input } from "./Input";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export type InputAddressProperties = {
 	profile: Contracts.IProfile;
@@ -21,9 +22,6 @@ const defaultProps = {
 };
 
 export const InputAddress = ({
-	profile,
-	coin,
-	network,
 	registerRef,
 	additionalRules = defaultProps.additionalRules,
 	onValidAddress,
@@ -32,9 +30,9 @@ export const InputAddress = ({
 }: InputAddressProperties) => {
 	const { t } = useTranslation();
 
-	const validateAddress = async (address: string) => {
-		const instance = profile.coins().set(coin!, network!);
-		const isValidAddress: boolean = await instance.address().validate(address);
+	const validateAddress = (address: string) => {
+		//const instance = profile.coins().set(coin!, network!);
+		const isValidAddress: boolean = new AddressService().validate(address);
 
 		if (isValidAddress) {
 			onValidAddress?.(address);

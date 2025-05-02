@@ -47,7 +47,7 @@ export class ClientService {
 		query: Services.ClientTransactionsInput,
 	): Promise<Collections.ConfirmedTransactionDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
-		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
+		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const response = await this.#client.transactions().all(page, limit, parameters);
 
@@ -64,7 +64,7 @@ export class ClientService {
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
-		const { limit = 10, page = 1 } = searchParams ?? { limit: 10, page: 1 };
+		const { limit = 10, page = 1 } = searchParams;
 
 		const response = await this.#client.wallets().all(page, limit);
 
@@ -74,14 +74,14 @@ export class ClientService {
 		);
 	}
 
-	public async delegate(id: string): Promise<Contracts.WalletData> {
+	public async validator(id: string): Promise<Contracts.WalletData> {
 		const body = await this.#client.validators().get(id);
 		return new WalletData().fill(body.data);
 	}
 
-	public async delegates(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
+	public async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query ?? {});
-		const { limit = 10, page = 1, ...parameters } = searchParams ?? { limit: 10, page: 1 };
+		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const body = await this.#client.validators().all(page, limit, parameters);
 
@@ -102,11 +102,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
@@ -242,7 +242,7 @@ export class ClientService {
 
 	#createSearchParams(body: Services.ClientTransactionsInput): {
 		body: object | null;
-		searchParams: searchParams | null;
+		searchParams: searchParams;
 	} {
 		if (Object.keys(body).length <= 0) {
 			return { body: null, searchParams: { limit: 10, page: 1 } };
@@ -250,7 +250,10 @@ export class ClientService {
 
 		const result: any = {
 			body,
-			searchParams: {},
+			searchParams: {
+				limit: 10,
+				page: 1,
+			},
 		};
 
 		const mappings: Record<string, string> = {

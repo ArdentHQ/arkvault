@@ -7,6 +7,7 @@ import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 
 export const useLedgerScanner = (coin: string, network: string) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
@@ -34,6 +35,8 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
+		const ledgerService = new LedgerService();
+
 		setIdle();
 		dispatch({ type: "waiting" });
 
@@ -47,17 +50,16 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		setBusy();
 		abortRetryReference.current = false;
 
-		const instance = profile.coins().set(coin, network);
 		await persistLedgerConnection({
-			coin: instance,
 			hasRequestedAbort: () => abortRetryReference.current,
 			options: { factor: 1, randomize: false, retries: 50 },
 		});
 
-		// @ts-ignore
-		const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
 
-		const legacyWallets = isLoadingMore ? {} : await instance.ledger().scan({ onProgress, useLegacy: true });
+		// @ts-ignore
+		const ledgerWallets = await ledgerService.scan({ onProgress, startPath });
+
+		const legacyWallets = isLoadingMore ? {} : await ledgerService.scan({ onProgress, useLegacy: true });
 
 		const allWallets = { ...legacyWallets, ...ledgerWallets };
 

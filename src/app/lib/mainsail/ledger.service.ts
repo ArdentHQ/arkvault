@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 
-import { Contracts, IoC, Services } from "@/app/lib/sdk";
+import { Contracts, Services } from "@/app/lib/sdk";
 // @TODO: Revisit.
 // The internal implementation of HDKey fails to generate public keys from extended ledger public keys
 // which affects ledger wallet import & tx signing.
 // See discussion https://github.com/ArdentHQ/arkvault/pull/1166#discussion_r2046407360
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
+import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
@@ -13,7 +14,7 @@ import { AddressService } from "./address.service.js";
 import { Exceptions } from "@/app/lib/sdk";
 import { WalletData } from "./wallet.dto.js";
 
-export class LedgerService extends Services.AbstractLedgerService {
+export class LedgerService {
 	readonly #addressService!: AddressService;
 
 	#ledger!: Services.LedgerTransport;
@@ -22,6 +23,10 @@ export class LedgerService extends Services.AbstractLedgerService {
 
 	#extractAddressIndexFromPath(path: string): string {
 		return path.split("/").slice(-2).join("/");
+	}
+
+	public constructor() {
+		this.#addressService = new AddressService();
 	}
 
 	async #getPublicKeys(path: string): Promise<{ extendedPublicKey: string; publicKey: string }> {
@@ -48,22 +53,12 @@ export class LedgerService extends Services.AbstractLedgerService {
 		}
 	}
 
-	public constructor(container?: IoC.IContainer) {
-		if (!container) {
-			return;
-		}
-
-		super(container);
-
-		this.#addressService = new AddressService();
-	}
-
-	public override async onPreDestroy(): Promise<void> {
+	public async onPreDestroy(): Promise<void> {
 		return this.disconnect();
 	}
 
-	public override async connect(setupTransport?: SetupLedgerFactory): Promise<void> {
-		this.#ledger = await this.ledgerTransportFactory();
+	public async connect(setupTransport?: SetupLedgerFactory): Promise<void> {
+		this.#ledger = await ledgerTransportFactory();
 
 		if (setupTransport) {
 			const data = setupTransport(this.#ledger);
@@ -73,18 +68,18 @@ export class LedgerService extends Services.AbstractLedgerService {
 		}
 	}
 
-	public override async disconnect(): Promise<void> {
+	public async disconnect(): Promise<void> {
 		if (this.#ledger) {
 			await this.#ledger.close();
 		}
 	}
 
-	public override async getVersion(): Promise<string> {
+	public async getVersion(): Promise<string> {
 		// @TODO: fix hardcoded number.
 		return "1";
 	}
 
-	public override async getPublicKey(path: string): Promise<string> {
+	public async getPublicKey(path: string): Promise<string> {
 		const derivationPath = `m/${this.#extractAddressIndexFromPath(path)}`;
 		const publicKey = await this.getExtendedPublicKey(path);
 
@@ -95,11 +90,11 @@ export class LedgerService extends Services.AbstractLedgerService {
 		return pubKey;
 	}
 
-	public override async getExtendedPublicKey(path: string): Promise<string> {
+	public async getExtendedPublicKey(path: string): Promise<string> {
 		return this.#getExtendedPublicKeyWithRetry(path);
 	}
 
-	public override async sign(path: string, serialized: string | Buffer): Promise<LedgerSignature> {
+	public async sign(path: string, serialized: string | Buffer): Promise<LedgerSignature> {
 		const resolution = await this.#ethLedgerService.resolveTransaction(
 			serialized,
 			{},
@@ -111,12 +106,12 @@ export class LedgerService extends Services.AbstractLedgerService {
 		return await this.#transport.signTransaction(path, serialized, resolution);
 	}
 
-	public override async signMessage(path: string, payload: string): Promise<string> {
+	public async signMessage(path: string, payload: string): Promise<string> {
 		console.log({ path, payload });
 		throw new Exceptions.NotImplemented(this.constructor.name, this.signMessage.name);
 	}
 
-	public override async scan(options?: {
+	public async scan(options?: {
 		useLegacy: boolean;
 		startPath?: string;
 		pageSize?: number;
@@ -124,8 +119,7 @@ export class LedgerService extends Services.AbstractLedgerService {
 	}): Promise<Services.LedgerWalletList> {
 		const pageSize = 5;
 		const page = 0;
-		const slip44 = this.configRepository.get<number>("network.constants.slip44");
-		const path = `m/44'/${slip44}'/0'`;
+		const path = `m/44'/${this.slip44()}'/0'`;
 
 		let initialAddressIndex = 0;
 
@@ -151,11 +145,18 @@ export class LedgerService extends Services.AbstractLedgerService {
 		return ledgerWallets;
 	}
 
-	public override async isNanoS(): Promise<boolean> {
+	public async isNanoS(): Promise<boolean> {
 		return this.#ledger.deviceModel?.id === "nanoS";
 	}
 
-	public override async isNanoX(): Promise<boolean> {
+	public async isNanoX(): Promise<boolean> {
 		return this.#ledger.deviceModel?.id === "nanoX";
 	}
+
+	public slip44(): number {
+		// @TODO: remove hardcoded value.
+		return 111;
+		//const slip44 = this.configRepository.get<number>("network.constants.slip44");
+	}
+
 }

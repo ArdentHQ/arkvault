@@ -10,8 +10,10 @@ import {
 	VotingMethod,
 } from "./network.models";
 import { ConfigRepository } from "./config";
-import { TransactionService } from "@/app/lib/mainsail/transaction.service";
+import { AbstractTransactionService } from "@/app/lib/sdk/transaction.service";
 import { container } from "@/app/lib/profiles/container";
+import { ArkClient } from "@arkecosystem/typescript-client";
+import { Managers } from "@/app/lib/mainsail/crypto";
 
 export class Network {
 	/**
@@ -395,7 +397,25 @@ export class Network {
 		return new ConfigRepository({ networks: { [this.#network.id]: this.#network } });
 	}
 
-	public transaction(): TransactionService {
-		return new TransactionService(container);
+	public transaction(): AbstractTransactionService {
+		return new AbstractTransactionService(container);
+	}
+
+	public async sync(): Promise<void> {
+		const host = this.#network.hosts.find(host => host.type === "full");
+
+		if (!host) {
+			throw new Error(`Expected network host to be a url but received ${typeof host}`);
+		}
+
+		const client = new ArkClient(host.host);
+		const [crypto, status] = await Promise.all([client.node().crypto(), client.node().syncing()]);
+
+		const dataCrypto = crypto.data;
+		const { blockNumber } = status.data;
+
+		// Set network configuration globally.
+		Managers.configManager.setConfig(dataCrypto);
+		Managers.configManager.setHeight(blockNumber);
 	}
 }

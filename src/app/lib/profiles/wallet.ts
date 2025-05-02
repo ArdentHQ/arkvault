@@ -408,7 +408,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
 	public ledger(): LedgerService {
-		return new LedgerService(container);
+		return new LedgerService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.link} */

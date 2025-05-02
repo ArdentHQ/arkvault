@@ -91,8 +91,6 @@ const useWalletAlias = (): HookResult => {
 			addresses: string[];
 		}) => {
 			for (const network of networks) {
-				const coin = profile.coins().get(network.coin(), network.id());
-				await coin.__construct();
 				await env.usernames().syncUsernames(profile, network.coin(), network.id(), addresses);
 			}
 		},

@@ -12,22 +12,19 @@ interface Fees {
 	max: string;
 }
 
-export class FeeService extends Services.AbstractFeeService {
+export class FeeService {
 	readonly #client: ArkClient;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
-
-		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
-
-		this.#client = new ArkClient(host.host);
+	public constructor() {
+		const api = "https://dwallets-evm.mainsailhq.com/api"
+		this.#client = new ArkClient(api);
 	}
 
-	public override async all(): Promise<Services.TransactionFees> {
+	public async all(): Promise<Services.TransactionFees> {
 		const node = await this.#client.node().fees();
 		const dynamicFees: Fees = node.data.evmCall;
 		const fees = this.#transform(dynamicFees);
+
 		return {
 			validatorRegistration: fees,
 			validatorResignation: fees,
@@ -40,7 +37,7 @@ export class FeeService extends Services.AbstractFeeService {
 		};
 	}
 
-	public override async calculate(
+	public async calculate(
 		transaction: Contracts.RawTransactionData,
 		options?: Services.TransactionFeeOptions,
 	): Promise<BigNumber> {

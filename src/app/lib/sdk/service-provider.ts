@@ -36,7 +36,7 @@ export class AbstractServiceProvider implements IServiceProvider {
 	}
 
 	public async make(container: Container): Promise<void> {
-		return this.compose(container);
+		//return this.compose(container);
 	}
 
 	protected async compose(container: Container): Promise<void> {

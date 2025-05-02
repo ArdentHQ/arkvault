@@ -110,14 +110,14 @@ export const useLedgerConnection = () => {
 			}
 
 			isAttemptingConnect.current = true;
-			const coinInstance = profile.coins().set(coin, network);
+			//const coinInstance = profile.coins().set(coin, network);
+			//
+			//if (!isLedgerTransportSupported()) {
+			//	handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, coinInstance);
+			//	return;
+			//}
 
-			if (!isLedgerTransportSupported()) {
-				handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, coinInstance);
-				return;
-			}
-
-			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+			//const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 
 			await resetConnectionState();
 
@@ -125,15 +125,15 @@ export const useLedgerConnection = () => {
 			abortRetryReference.current = false;
 
 			try {
-				await persistLedgerConnection({
-					coin: coinInstance,
-					hasRequestedAbort: () => abortRetryReference.current,
-					options,
-				});
+				//await persistLedgerConnection({
+				//	coin: coinInstance,
+				//	hasRequestedAbort: () => abortRetryReference.current,
+				//	options,
+				//});
 
 				dispatch({ type: "connected" });
 			} catch (connectError) {
-				handleLedgerConnectionError(connectError, coinInstance);
+				//handleLedgerConnectionError(connectError, coinInstance);
 			}
 
 			isAttemptingConnect.current = false;

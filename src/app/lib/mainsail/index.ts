@@ -31,17 +31,5 @@ export const Mainsail: Coins.CoinBundle = bundle({
 	manifest,
 	serviceProvider: ServiceProvider,
 	services: {
-		AddressService,
-		ClientService,
-		FeeService,
-		KnownWalletService,
-		LedgerService,
-		LinkService,
-		MessageService,
-		PrivateKeyService,
-		PublicKeyService,
-		SignatoryService,
-		TransactionService,
-		WIFService,
 	},
 });
