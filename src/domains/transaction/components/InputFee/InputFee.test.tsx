@@ -147,7 +147,7 @@ describe("InputFee", () => {
 
 			await userEvent.click(screen.getByText(optionText));
 
-			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(optionValue.toString());
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(optionValue);
 			expect(asFragment()).toMatchSnapshot();
 		});
 

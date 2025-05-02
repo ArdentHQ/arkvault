@@ -3860,3 +3860,534 @@ exports[`InputFee > simple view type > should render simple view with converted 
   </div>
 </DocumentFragment>
 `;
+
+exports[`InputFee > simple view type > should update value when clicking button Average 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <button
+          class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+          type="button"
+        >
+          Simple
+        </button>
+        <label
+          class="flex items-center cursor-pointer h-3"
+        >
+          <input
+            class="toggle-input sr-only"
+            type="checkbox"
+          />
+          <div
+            class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
+          >
+            <span
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+            />
+          </div>
+        </label>
+        <button
+          class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+          type="button"
+        >
+          Advanced
+        </button>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="6e-7"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5"
+            >
+              Slow
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                data-testid="Amount"
+              >
+                0.0000006 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~10s
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.0000456"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
+            >
+              Average
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
+                data-testid="Amount"
+              >
+                0.0000456 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~5s
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.00005"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5"
+            >
+              Fast
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                data-testid="Amount"
+              >
+                0.00005 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~2s
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee > simple view type > should update value when clicking button Fast 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <button
+          class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+          type="button"
+        >
+          Simple
+        </button>
+        <label
+          class="flex items-center cursor-pointer h-3"
+        >
+          <input
+            class="toggle-input sr-only"
+            type="checkbox"
+          />
+          <div
+            class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
+          >
+            <span
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+            />
+          </div>
+        </label>
+        <button
+          class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+          type="button"
+        >
+          Advanced
+        </button>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="6e-7"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5"
+            >
+              Slow
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                data-testid="Amount"
+              >
+                0.0000006 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~10s
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.0000456"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5"
+            >
+              Average
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                data-testid="Amount"
+              >
+                0.0000456 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~5s
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.00005"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
+            >
+              Fast
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
+                data-testid="Amount"
+              >
+                0.00005 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~2s
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee > simple view type > should update value when clicking button Slow 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <button
+          class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+          type="button"
+        >
+          Simple
+        </button>
+        <label
+          class="flex items-center cursor-pointer h-3"
+        >
+          <input
+            class="toggle-input sr-only"
+            type="checkbox"
+          />
+          <div
+            class="toggle-handle relative inline-flex h-[5px] rounded-full bg-theme-primary-100 dark:bg-theme-secondary-800 w-6"
+          >
+            <span
+              class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
+            />
+          </div>
+        </label>
+        <button
+          class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
+          type="button"
+        >
+          Advanced
+        </button>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="true"
+        aria-label="6e-7"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
+            >
+              Slow
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
+                data-testid="Amount"
+              >
+                0.0000006 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-100 dark:bg-theme-dark-500"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~10s
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.0000456"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5"
+            >
+              Average
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                data-testid="Amount"
+              >
+                0.0000456 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~5s
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.00005"
+        class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex w-full flex-col text-theme-secondary-700 transition-all dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+        >
+          <div
+            class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+          >
+            <div
+              class="text-sm leading-[17px] sm:leading-5"
+            >
+              Fast
+            </div>
+            <div
+              class="flex justify-between sm:w-full"
+            >
+              <span
+                class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
+                data-testid="Amount"
+              >
+                0.00005 ARK
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex w-full justify-between px-3 py-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 transition-all dark:text-theme-dark-200 bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50"
+          >
+            <span>
+              Confirmation Time
+            </span>
+            <span>
+              ~2s
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
