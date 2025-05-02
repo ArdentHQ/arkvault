@@ -19,7 +19,7 @@
 			"evmSpec": "Shanghai",
 			"satoshi": {
 				"decimals": 18,
-				"denomination": 1e+18
+				"denomination": 1e18
 			},
 			"timeouts": {
 				"blockTime": 8000,
