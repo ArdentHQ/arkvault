@@ -5,7 +5,7 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import { BIP44 } from "@ardenthq/sdk-cryptography";
+import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";

@@ -1,4 +1,4 @@
-import { Bcrypt } from "@ardenthq/sdk-cryptography";
+import { Bcrypt } from "@ardenthq/arkvault-crypto";
 
 import { IAuthenticator, IProfile, ProfileSetting } from "./contracts.js";
 

@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { httpClient } from "@/app/services";
 import { OrderStatusResponse } from "@/domains/exchange/exchange.contracts";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@ardenthq/arkvault-crypto";
 
 export const useOrderStatus = () => {
 	const checkOrderStatus = useCallback(async (exchangeTransactions: Contracts.IExchangeTransaction[]) => {

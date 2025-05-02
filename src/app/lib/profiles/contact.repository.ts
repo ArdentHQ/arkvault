@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { UUID } from "@ardenthq/sdk-cryptography";
+import { UUID } from "@ardenthq/arkvault-crypto";
 import { Contact } from "./contact";
 import {
 	IContact,

@@ -1,4 +1,4 @@
-import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Coins } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 

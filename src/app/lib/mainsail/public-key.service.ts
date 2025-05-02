@@ -1,7 +1,7 @@
 import { Services, Exceptions } from "@/app/lib/sdk";
-import { abort_if, abort_unless } from "@/app/lib/helpers";
 
 import { PublicKey } from "@arkecosystem/typescript-crypto";
+import { Bls } from "@ardenthq/arkvault-crypto";
 
 export class PublicKeyService {
 	public fromMnemonic(mnemonic: string): Services.PublicKeyDataTransferObject {
@@ -22,9 +22,7 @@ export class PublicKeyService {
 		throw new Exceptions.NotImplemented(this.constructor.name, this.fromWIF.name);
 	}
 
-	// @TODO: Implement
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	public verifyPublicKeyWithBLS(publicKey: string): Promise<boolean> {
-		throw new Exceptions.NotImplemented(this.constructor.name, this.verifyPublicKeyWithBLS.name);
+	public verifyPublicKeyWithBLS(publicKey: string): boolean {
+		return Bls.verify(publicKey);
 	}
 }
