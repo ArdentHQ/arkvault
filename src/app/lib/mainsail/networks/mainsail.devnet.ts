@@ -41,7 +41,7 @@ const network: Networks.NetworkManifest = {
 	id: "mainsail.devnet",
 	importMethods,
 	knownWallets:
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extendedon",
+		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 	meta: {
 		chainId: 10_000,
 		// fastDelegateSync: true,

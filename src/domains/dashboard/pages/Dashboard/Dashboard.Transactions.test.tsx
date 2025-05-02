@@ -9,7 +9,7 @@ import {
 	env,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
@@ -31,7 +31,7 @@ describe("Dashboard", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

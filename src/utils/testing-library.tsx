@@ -189,7 +189,7 @@ const environmentWithMocks = () =>
 
 export const env = environmentWithMocks();
 
-export const syncDelegates = async (profile: Contracts.IProfile) => await env.delegates().syncAll(profile);
+export const syncValidators = async (profile: Contracts.IProfile) => await env.validators().syncAll(profile);
 
 export const syncFees = async (profile: Contracts.IProfile) => await env.fees().syncAll(profile);
 

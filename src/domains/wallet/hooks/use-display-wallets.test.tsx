@@ -10,7 +10,7 @@ import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
-	syncDelegates,
+	syncValidators,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
@@ -44,7 +44,7 @@ describe("useDisplayWallets", () => {
 		});
 
 		profile.wallets().push(mainnetWallet);
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		wallets = profile.wallets().values();
 

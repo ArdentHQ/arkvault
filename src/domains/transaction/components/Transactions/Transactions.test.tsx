@@ -14,7 +14,7 @@ import {
 	render,
 	renderResponsiveWithRoute,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
@@ -34,7 +34,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 	});
 
 	beforeEach(async () => {
