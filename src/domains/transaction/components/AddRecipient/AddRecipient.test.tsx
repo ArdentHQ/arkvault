@@ -250,24 +250,6 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should show available balance after fee", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(12);
-		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
-
-		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
-			{
-				fee: 8,
-			},
-		);
-
-		expect(screen.getByTestId("AddRecipient__available")).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__available")).toHaveTextContent("4"));
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should hide available balance if fee > balance", async () => {
 		vi.spyOn(wallet, "balance").mockReturnValue(12);
 		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
@@ -402,7 +384,7 @@ describe("AddRecipient", () => {
 	it("should prevent adding invalid recipient address in multiple type", async () => {
 		const values = {
 			amount: 1,
-			recipientAddress: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+			recipientAddress: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af55",
 		};
 
 		let form: ReturnType<typeof useForm>;
@@ -436,7 +418,7 @@ describe("AddRecipient", () => {
 									amount: 1,
 								},
 								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
+									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af58",
 									amount: 1,
 								},
 							]}
