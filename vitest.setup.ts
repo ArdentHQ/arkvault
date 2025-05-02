@@ -6,7 +6,7 @@ import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 import "jest-styled-components";
-
+import { Hash } from "@ardenthq/arkvault-crypto";
 import { server } from "./src/tests/mocks/server";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
@@ -100,6 +100,23 @@ vi.mock("p-retry", async () => {
 });
 
 vi.mock("browser-fs-access");
+
+// Solves `invalid BytesLike value` exception when using ethers on jsdom test environment
+// @see https://github.com/ethers-io/ethers.js/issues/4365
+vi.mock("@arkecosystem/typescript-crypto", async () => {
+	const actual = await vi.importActual("@arkecosystem/typescript-crypto");
+	const Address = {
+		...actual.Address,
+		fromPassphrase: (passphrase) => {
+			return actual.Address.fromPrivateKey(Hash.sha256(Buffer.from(passphrase, "utf8")).toString("hex"));
+		},
+	};
+
+	return {
+		...actual,
+		Address,
+	};
+});
 
 const originalTippyRender = Tippy.render;
 let tippyMock;
