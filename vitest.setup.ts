@@ -105,11 +105,14 @@ vi.mock("browser-fs-access");
 // @see https://github.com/ethers-io/ethers.js/issues/4365
 vi.mock("@arkecosystem/typescript-crypto", async () => {
 	const actual = await vi.importActual("@arkecosystem/typescript-crypto");
+
 	const Address = {
-		...actual.Address,
 		fromPassphrase: (passphrase) => {
 			return actual.Address.fromPrivateKey(Hash.sha256(Buffer.from(passphrase, "utf8")).toString("hex"));
 		},
+		validate: actual.Address.validate,
+		fromPublicKey: actual.Address.fromPublicKey,
+		fromPrivateKey: actual.Address.fromPrivateKey,
 	};
 
 	return {

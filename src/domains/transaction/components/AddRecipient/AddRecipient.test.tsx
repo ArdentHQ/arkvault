@@ -225,7 +225,7 @@ describe("AddRecipient", () => {
 		expect(screen.getByTestId("AddRecipient__divider")).toBeInTheDocument();
 	});
 
-	it.only("should show zero amount if wallet has zero or insufficient balance", async () => {
+	it("should show zero amount if wallet has zero or insufficient balance", async () => {
 		const emptyProfile = await env.profiles().create("Empty");
 
 		const emptyWallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
