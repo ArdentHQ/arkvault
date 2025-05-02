@@ -31,15 +31,13 @@ export class WalletFactory implements IWalletFactory {
 
 	/** {@inheritDoc IWalletFactory.generate} */
 	public async generate({
-		coin,
-		network,
 		locale,
 		wordCount,
 		withPublicKey,
 	}: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }> {
 		const mnemonic: string = BIP39.generate(locale, wordCount);
 
-		const wallet = await this.fromMnemonicWithBIP39({ coin, mnemonic, network });
+		const wallet = await this.fromMnemonicWithBIP39({ mnemonic });
 
 		if (withPublicKey) {
 			const value = new PublicKeyService().fromMnemonic(mnemonic);
@@ -51,8 +49,6 @@ export class WalletFactory implements IWalletFactory {
 
 	/** {@inheritDoc IWalletFactory.fromMnemonicWithBIP39} */
 	public async fromMnemonicWithBIP39({
-		coin,
-		network,
 		mnemonic,
 		password,
 	}: IMnemonicOptions): Promise<IReadWriteWallet> {
@@ -60,8 +56,6 @@ export class WalletFactory implements IWalletFactory {
 
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP39.MNEMONIC);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
-
-		await wallet.mutator().coin(coin, network);
 
 		if (wallet.network().usesExtendedPublicKey()) {
 			throw new Error("The configured network uses extended public keys with BIP44 for derivation.");
@@ -118,7 +112,6 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.Address);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
 		await wallet.mutator().address({ address });
 
 		return wallet;
@@ -131,8 +124,6 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.PublicKey, publicKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
-
 		await wallet.mutator().address(new AddressService().fromPublicKey(publicKey));
 
 		return wallet;
@@ -144,7 +135,6 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.PrivateKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
 		await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
 
 		return wallet;
@@ -174,7 +164,6 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.DerivationPath, path);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
 		await wallet.mutator().address({ address });
 
 		return wallet;
@@ -187,7 +176,6 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.SECRET);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
 		await wallet.mutator().address(new AddressService().fromSecret(secret));
 
 		if (password) {
@@ -203,7 +191,6 @@ export class WalletFactory implements IWalletFactory {
 	public async fromWIF({ coin, network, wif, password }: IWifOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 
-		await wallet.mutator().coin(coin, network);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
 		if (password) {
@@ -239,8 +226,6 @@ export class WalletFactory implements IWalletFactory {
 
 		wallet.data().set(WalletData.ImportMethod, input.importMethod);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
-
-		await wallet.mutator().coin(input.options.coin, input.options.network);
 
 		if (!wallet.gate().allows(input.featureFlag)) {
 			throw new Error(`The configured network does not support ${input.derivationType.toUpperCase()}.`);

@@ -28,14 +28,9 @@ interface CalculateProperties {
 export const useFees = (profile: Contracts.IProfile) => {
 	const { env } = useEnvironmentContext();
 
-	const getWallet = useCallback(
-		async (coin: string, network: string) => profile.walletFactory().generate({ coin, network }),
-		[profile],
-	);
-
 	const createStubTransaction = useCallback(
 		async ({ coin, type, getData, stub }: CreateStubTransactionProperties) => {
-			const { mnemonic, wallet } = await getWallet(coin.network().coin(), coin.network().id());
+			const { mnemonic, wallet } = await profile.walletFactory().generate();
 
 			const signatory = stub
 				? await wallet.signatory().stub(mnemonic)
@@ -47,7 +42,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 				signatory,
 			});
 		},
-		[getWallet],
+		[profile],
 	);
 
 	const calculateBySize = useCallback(
@@ -103,7 +98,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 
 				return {
 					...feesBySize,
-					isDynamic: transactionFees?.isDynamic,
+					isDynamic: transactionFees.isDynamic,
 				};
 			}
 

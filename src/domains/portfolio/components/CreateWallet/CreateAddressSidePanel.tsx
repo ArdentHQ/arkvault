@@ -126,9 +126,7 @@ export const CreateAddressesSidePanel = ({
 		const locale = activeProfile.settings().get<string>(Contracts.ProfileSetting.Bip39Locale, "english");
 
 		return activeProfile.walletFactory().generate({
-			coin: network.coin(),
 			locale,
-			network: network.id(),
 			wordCount: network.wordCount(),
 		});
 	};
@@ -183,9 +181,7 @@ export const CreateAddressesSidePanel = ({
 
 				try {
 					wallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
-						coin: network.coin(),
 						mnemonic,
-						network: network.id(),
 						password: parameters.encryptionPassword,
 					});
 				} catch {

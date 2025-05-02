@@ -89,14 +89,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.isConfirmed();
 	}
 
-	public inputs(): Contracts.UnspentTransactionData[] {
-		return this.#data.inputs();
-	}
-
-	public outputs(): Contracts.UnspentTransactionData[] {
-		return this.#data.outputs();
-	}
-
 	public isSent(): boolean {
 		return this.#data.isSent();
 	}
@@ -293,7 +285,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
 
-	public normalizeData(): Promise<void> {
+	public normalizeData(): void {
 		return this.#data.normalizeData();
 	}
 

@@ -8,8 +8,6 @@ import { IReadWriteWallet } from "./contracts.js";
  * @interface IGenerateOptions
  */
 export interface IGenerateOptions {
-	coin: string;
-	network: string;
 	locale?: string;
 	wordCount?: number;
 	withPublicKey?: boolean;
@@ -21,8 +19,6 @@ export interface IGenerateOptions {
  * @interface IMnemonicOptions
  */
 export interface IMnemonicOptions {
-	coin: string;
-	network: string;
 	mnemonic: string;
 	password?: string;
 }
@@ -117,7 +113,7 @@ export interface IWalletFactory {
 	 * @return {Promise<{ mnemonic: string; wallet: IReadWriteWallet }>}
 	 * @memberof IWalletFactory
 	 */
-	generate(options: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
+	generate(options?: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
 
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP39 proposal.
