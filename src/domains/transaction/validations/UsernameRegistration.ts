@@ -1,7 +1,9 @@
-import { Networks } from "@/app/lib/sdk";
 import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
+import { Environment } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/sdk";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 class UsernameExistsError extends Error {
 	constructor(message: string) {
@@ -38,7 +40,12 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (network: Networks.Network, controller: MutableRefObject<AbortController | undefined>) => ({
+	username: (
+		env: Environment,
+		network: Networks.Network,
+		profile: IProfile,
+		controller: MutableRefObject<AbortController | undefined>,
+	) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -51,7 +58,7 @@ export const usernameRegistration = (t: any) => ({
 				}
 
 				try {
-					await usernameExists(network, value, controller);
+					await usernameExists(env, network, profile, value, controller);
 				} catch (error) {
 					if (error.name === "UsernameExistsError") {
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
@@ -64,20 +71,23 @@ export const usernameRegistration = (t: any) => ({
 });
 
 const usernameExists = async (
+	env: Environment,
 	network: Networks.Network,
+	profile: IProfile,
 	username: string,
 	controller: MutableRefObject<AbortController | undefined>,
 ) => {
-	const endpoints = {
-		"mainsail.devnet": "https://dwallets-evm.mainsailhq.com/api/wallets/",
-		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
-	};
-
 	if (username.length === 0) {
 		return;
 	}
 
-	const response = await fetch(endpoints[network.id()] + username, { signal: controller.current?.signal });
+	const hostSelector = env.hostSelector(profile);
+
+	const coin = profile.coins().get(network.coin(), network.id());
+
+	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
+
+	const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
 
 	if (response.ok) {
 		throw new UsernameExistsError("Username is occupied!");

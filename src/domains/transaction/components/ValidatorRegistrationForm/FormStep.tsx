@@ -12,6 +12,7 @@ import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -23,12 +24,11 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 	const { allWallets } = usePortfolio({ profile });
+	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
-		if (wallet) {
-			register("validatorPublicKey", validatorRegistration.validatorPublicKey(wallet));
-		}
-	}, [register, validatorRegistration, wallet]);
+		register("validatorPublicKey", validatorRegistration.validatorPublicKey(env, profile, network));
+	}, [register, validatorRegistration, profile, network.id(), env]);
 
 	const handleSelectSender = (address: any) => {
 		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
