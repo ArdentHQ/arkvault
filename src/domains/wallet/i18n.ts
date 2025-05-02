@@ -85,9 +85,6 @@ export const translations = {
 		TITLE: "Wallet Update {{version}}",
 	},
 
-	MULTIPLE_ADDRESSES_HINT:
-		"Your address has been automatically added to <br/> the overview. You can select it here to make changes.",
-
 	PAGE_CREATE_WALLET: {
 		NETWORK_STEP: {
 			GENERATION_ERROR:
@@ -275,6 +272,9 @@ export const translations = {
 	},
 
 	SIGNATURE: "Signature",
+
+	SINGLE_ADDRESS_HINT:
+		"You're automatically viewing the latest created/imported address. You can select here to make changes.",
 
 	STATUS: {
 		ACTIVE: "Active",

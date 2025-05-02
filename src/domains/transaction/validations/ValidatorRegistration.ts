@@ -18,9 +18,9 @@ export const validatorRegistration = (t: any) => ({
 		}),
 
 		validate: {
-			pattern: async (publicKey: string) => {
+			pattern: (publicKey: string) => {
 				const coin = profile.coins().get(network.coin(), network.id());
-				const isValid = await coin.publicKey().verifyPublicKeyWithBLS(publicKey);
+				const isValid = coin.publicKey().verifyPublicKeyWithBLS(publicKey);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
