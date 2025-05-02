@@ -4,15 +4,11 @@ on:
         branches:
             - master
             - develop
-        paths-ignore:
-            - "**"
     pull_request:
         types:
             - ready_for_review
             - synchronize
             - opened
-        paths-ignore:
-            - "**"
 jobs:
     application:
         runs-on: ubuntu-latest
