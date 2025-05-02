@@ -9,8 +9,6 @@ import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
 
 const isRegistered = (coin: string) => {
-	console.log("isRegistered", coin);
-
 	if (!coin) {
 		return false;
 	}
