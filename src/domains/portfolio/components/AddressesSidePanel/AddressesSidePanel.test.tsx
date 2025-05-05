@@ -80,7 +80,10 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()), "multiple");
+		expect(onClose).toHaveBeenCalledWith(
+			wallets.values().map((w) => w.address()),
+			"multiple",
+		);
 	});
 
 	it("should switch to delete mode when `manage` clicked", async () => {
