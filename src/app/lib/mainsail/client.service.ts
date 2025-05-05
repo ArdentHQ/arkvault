@@ -13,6 +13,8 @@ import { WalletData } from "./wallet.dto";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/sdk/transactions.collection";
 import { SignedTransactionData } from "./signed-transaction.dto";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -24,12 +26,14 @@ const wellKnownContracts = {
 
 export class ClientService {
 	readonly #client!: ArkClient;
+	#config: ConfigRepository;
 
-	public constructor() {
-		// @TODO: Remove hardcoded value
-		const api = "https://dwallets-evm.mainsailhq.com/api";
-		const evm = "https://dwallets-evm.mainsailhq.com/evm/api";
-		const transactions = "https://dwallets-evm.mainsailhq.com/tx/api";
+	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+		this.#config = config;
+
+		const api = config.host("full", profile);
+		const evm = config.host("evm", profile);
+		const transactions = config.host("tx", profile);
 
 		this.#client = new ArkClient({
 			api,
@@ -325,9 +329,7 @@ export class ClientService {
 
 		if (body.timestamp) {
 			const normalizeTimestamps = (timestamp: Services.RangeCriteria) => {
-				// @TODO: Remove hardcoded values.
-				const epoch = "2023-12-21T00:00:00.000Z";
-				//const epoch: string = this.#config.get<string>("network.constants.epoch");
+				const epoch: string = this.#config.get<string>(ConfigKey.Epoch);
 
 				const normalized = { ...timestamp };
 

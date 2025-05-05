@@ -27,7 +27,6 @@ export class SignatoryService {
 	public constructor() {
 		this.#addressService = new AddressService();
 		this.#privateKeyService = new PrivateKeyService();
-
 		this.#publicKeyService = new PublicKeyService();
 	}
 

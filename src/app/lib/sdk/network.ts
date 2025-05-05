@@ -9,7 +9,7 @@ import {
 	NetworkManifestToken,
 	VotingMethod,
 } from "./network.models";
-import { ConfigRepository } from "./config";
+import { ConfigKey, ConfigRepository } from "./config";
 import { AbstractTransactionService } from "@/app/lib/sdk/transaction.service";
 import { container } from "@/app/lib/profiles/container";
 import { ArkClient } from "@arkecosystem/typescript-client";
@@ -394,7 +394,7 @@ export class Network {
 	}
 
 	public config(): ConfigRepository {
-		return new ConfigRepository({ networks: { [this.#network.id]: this.#network } });
+		return new ConfigRepository({ network: this.#network });
 	}
 
 	public transaction(): AbstractTransactionService {

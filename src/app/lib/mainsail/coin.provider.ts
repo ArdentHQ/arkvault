@@ -6,7 +6,6 @@ import { Managers } from "./crypto/index.js";
 
 export class ServiceProvider extends IoC.AbstractServiceProvider {
 	public override async make(container: IoC.Container): Promise<void> {
-		console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
 		const { host } = hostSelector(container.get(IoC.BindingType.ConfigRepository));
 		const client = new ArkClient(host);

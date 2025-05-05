@@ -1,15 +1,14 @@
 import { get, has, set, unset, ValidatorSchema } from "@/app/lib/helpers";
+import { defaultHostSelector } from "@/app/lib/profiles/driver";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 export class ConfigRepository {
 	readonly #config: Record<string, any>;
 
 	public constructor(config: object) {
 		const { error, value } = ValidatorSchema.object({
-			hostSelector: ValidatorSchema.function().optional(),
-			httpClient: ValidatorSchema.object(),
-			ledgerTransportFactory: ValidatorSchema.function().optional(),
-			network: ValidatorSchema.string(),
-			networks: ValidatorSchema.object().optional(),
+			// @TODO: ADD network field validation.
+			network: ValidatorSchema.object(),
 		}).validate(config);
 
 		if (error !== undefined) {
@@ -52,17 +51,25 @@ export class ConfigRepository {
 	public forget(key: string): boolean {
 		return unset(this.#config, key);
 	}
+
+	public host(type: HostType, profile: IProfile): string {
+		const hostSelector = defaultHostSelector(profile);
+		const { host } = hostSelector(this, type);
+		return host;
+	}
 }
+
+export type HostType = "full" | "tx" | "explorer" | "evm";
 
 export enum ConfigKey {
 	Bech32 = "network.constants.bech32",
 	CurrencyDecimals = "network.currency.decimals",
 	CurrencyTicker = "network.currency.ticker",
 	Epoch = "network.constants.epoch",
-	HttpClient = "httpClient",
 	KnownWallets = "network.knownWallets",
 	Network = "network",
 	NetworkId = "network.id",
 	NetworkType = "network.type",
 	Slip44 = "network.constants.slip44",
+	Wif = "network.meta.wif",
 }

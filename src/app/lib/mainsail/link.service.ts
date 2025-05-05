@@ -1,8 +1,18 @@
 import { formatString } from "@/app/lib/helpers";
 import queryString from "query-string";
+import { ConfigRepository } from "@/app/lib/sdk/coins";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { randomHost } from "@/app/lib/sdk/helpers";
 
 export class LinkService {
+	#config: ConfigRepository;
+	#profile: IProfile;
+
+	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+		this.#config = config;
+		this.#profile = profile;
+	}
+
 	public block(id: string): string {
 		return this.#buildURL("blocks/{0}", id);
 	}
@@ -16,12 +26,12 @@ export class LinkService {
 	}
 
 	#buildURL(schema: string, id: string): string {
-		// @TODO: Remove hardcoded values.
-		//const { host, query } = randomNetworkHostFromConfig(this.#configRepository, "explorer");
+		const explorerUrl = this.#config.host("explorer", this.#profile);
+
 		const { host, query } = randomHost(
 			[
 				{
-					host: "https://explorer-evm-test.mainsailhq.com",
+					host: explorerUrl,
 					type: "explorer",
 				},
 			],

@@ -13,11 +13,13 @@ import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
 import { Exceptions } from "@/app/lib/sdk";
 import { WalletData } from "./wallet.dto.js";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
 
 	#ledger!: Services.LedgerTransport;
+	#config: ConfigRepository;
 	#ethLedgerService!: any;
 	#transport!: any;
 
@@ -25,8 +27,9 @@ export class LedgerService {
 		return path.split("/").slice(-2).join("/");
 	}
 
-	public constructor() {
+	constructor({ config }: { config: ConfigRepository }) {
 		this.#addressService = new AddressService();
+		this.#config = config;
 	}
 
 	async #getPublicKeys(path: string): Promise<{ extendedPublicKey: string; publicKey: string }> {
@@ -154,9 +157,7 @@ export class LedgerService {
 	}
 
 	public slip44(): number {
-		// @TODO: remove hardcoded value.
-		return 111;
-		//const slip44 = this.configRepository.get<number>("network.constants.slip44");
+		return this.#config.get(ConfigKey.Slip44);
 	}
 
 }

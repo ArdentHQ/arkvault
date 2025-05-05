@@ -57,6 +57,7 @@ const isMusig = (body: object): boolean => {
 const urlBelongsToNetwork = async (profile: Contracts.IProfile, url: string, network: Networks.Network) => {
 	const coin: Coins.Coin = profile.coins().makeInstance(network.coin(), network.id());
 	await coin.__construct();
+	// @TODO: Replace with mainsail prober service.
 	return coin.prober().evaluate(url);
 };
 

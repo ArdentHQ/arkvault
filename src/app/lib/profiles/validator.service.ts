@@ -51,7 +51,7 @@ export class ValidatorService implements IValidatorService {
 			`${coin}.${network}.validators`,
 			result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
-				explorerLink: new LinkService().wallet(validator.address()),
+				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(validator.address()),
 				governanceIdentifier: profile.activeNetwork().validatorIdentifier(),
 			})),
 		);

@@ -383,7 +383,10 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.client} */
 	public client(): ClientService {
-		return new ClientService();
+		return new ClientService({
+			config: this.network().config(),
+			profile: this.profile()
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.addressService} */
@@ -403,17 +406,24 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.wifService} */
 	public wifService(): Services.WIFService {
-		return new WIFService();
+		return new WIFService({
+			config: this.network().config()
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
 	public ledger(): LedgerService {
-		return new LedgerService();
+		return new LedgerService({
+			config: this.network().config()
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.link} */
 	public link(): Services.LinkService {
-		return new LinkService();
+		return new LinkService({
+			config: this.network().config(),
+			profile: this.#profile
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.message} */
