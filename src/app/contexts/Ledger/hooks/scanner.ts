@@ -53,6 +53,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		await persistLedgerConnection({
 			hasRequestedAbort: () => abortRetryReference.current,
 			options: { factor: 1, randomize: false, retries: 50 },
+			profile,
 		});
 
 
