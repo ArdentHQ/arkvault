@@ -1,7 +1,7 @@
 import { Networks } from "@/app/lib/sdk";
 import { Mainsail } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React, { act } from "react";
+import React from "react";
 import userEvent from "@testing-library/user-event";
 import { FormProvider, useForm } from "react-hook-form";
 import * as useFeesHook from "@/app/hooks/use-fees";
