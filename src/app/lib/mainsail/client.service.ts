@@ -28,7 +28,7 @@ export class ClientService {
 	readonly #client!: ArkClient;
 	#config: ConfigRepository;
 
-	public constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 
 		const api = config.host("full", profile);
@@ -106,11 +106,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}

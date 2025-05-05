@@ -56,7 +56,6 @@ export const useLedgerScanner = (coin: string, network: string) => {
 			profile,
 		});
 
-
 		// @ts-ignore
 		const ledgerWallets = await ledgerService.scan({ onProgress, startPath });
 

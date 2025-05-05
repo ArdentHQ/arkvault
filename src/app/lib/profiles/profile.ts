@@ -115,7 +115,6 @@ export class Profile implements IProfile {
 	 */
 	readonly #settingRepository: ISettingRepository;
 
-
 	/**
 	 * The appearance settings service.
 	 *
@@ -423,7 +422,7 @@ export class Profile implements IProfile {
 
 	/** {@inheritDoc IProfile.usernames} */
 	public usernames(): UsernamesService {
-		return new UsernamesService({ config: this.activeNetwork().config(), profile: this })
+		return new UsernamesService({ config: this.activeNetwork().config(), profile: this });
 	}
 
 	/** {@inheritDoc IProfile.async} */

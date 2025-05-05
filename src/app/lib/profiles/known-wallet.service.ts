@@ -19,7 +19,7 @@ export class KnownWalletService {
 			const results = response.json();
 
 			if (Array.isArray(results)) {
-				this.#registry[network.id()] = results
+				this.#registry[network.id()] = results;
 			}
 		} catch {
 			// Do nothing if it fails. It's not critical functionality.

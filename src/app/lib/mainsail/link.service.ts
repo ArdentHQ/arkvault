@@ -8,7 +8,7 @@ export class LinkService {
 	#config: ConfigRepository;
 	#profile: IProfile;
 
-	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 		this.#profile = profile;
 	}

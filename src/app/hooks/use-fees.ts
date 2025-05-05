@@ -35,8 +35,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 				? await wallet.signatory().stub(mnemonic)
 				: await wallet.signatory().mnemonic(mnemonic);
 
-
-			return (wallet.transactionService())[type]({
+			return wallet.transactionService()[type]({
 				data: getData(),
 				nonce: "1",
 				signatory,

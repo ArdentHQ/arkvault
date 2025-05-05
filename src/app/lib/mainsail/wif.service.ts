@@ -27,7 +27,7 @@ export class WIFService {
 		});
 
 		return {
-			wif
+			wif,
 		};
 	}
 
@@ -36,13 +36,12 @@ export class WIFService {
 	}
 
 	public async fromPrivateKey(privateKey: string): Promise<Services.WIFDataTransferObject> {
-
 		const wif = WIF.encode({
 			compressed: true,
 			privateKey: privateKey,
 			version: this.#config.get(ConfigKey.Wif),
 		});
 
-		return { wif }
+		return { wif };
 	}
 }

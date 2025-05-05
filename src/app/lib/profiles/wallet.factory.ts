@@ -196,7 +196,9 @@ export class WalletFactory implements IWalletFactory {
 
 			await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
 
-			const unencryptedWifData = await new WIFService({ config: wallet.network().config() }).fromPrivateKey(privateKey);
+			const unencryptedWifData = await new WIFService({ config: wallet.network().config() }).fromPrivateKey(
+				privateKey,
+			);
 			const { publicKey } = await new PublicKeyService().fromWIF(unencryptedWifData.wif);
 			wallet.data().set(WalletData.PublicKey, publicKey);
 		} else {

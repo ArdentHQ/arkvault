@@ -386,7 +386,7 @@ export class Wallet implements IReadWriteWallet {
 	public client(): ClientService {
 		return new ClientService({
 			config: this.network().config(),
-			profile: this.profile()
+			profile: this.profile(),
 		});
 	}
 
@@ -408,14 +408,14 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.wifService} */
 	public wifService(): Services.WIFService {
 		return new WIFService({
-			config: this.network().config()
+			config: this.network().config(),
 		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
 	public ledger(): LedgerService {
 		return new LedgerService({
-			config: this.network().config()
+			config: this.network().config(),
 		});
 	}
 
@@ -423,7 +423,7 @@ export class Wallet implements IReadWriteWallet {
 	public link(): Services.LinkService {
 		return new LinkService({
 			config: this.network().config(),
-			profile: this.#profile
+			profile: this.#profile,
 		});
 	}
 
@@ -446,7 +446,7 @@ export class Wallet implements IReadWriteWallet {
 	public transactionService(): TransactionService {
 		return new TransactionService({
 			config: this.network().config(),
-			profile: this.profile()
+			profile: this.profile(),
 		});
 	}
 

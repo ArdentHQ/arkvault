@@ -11,7 +11,7 @@ export class ProberService {
 	public async evaluate(host: string): Promise<boolean> {
 		try {
 			const client = new ArkClient(host);
-			const { data } = await client.node().crypto()
+			const { data } = await client.node().crypto();
 			return data.network.client.token === this.#config.get(ConfigKey.CurrencyTicker);
 		} catch {
 			return false;

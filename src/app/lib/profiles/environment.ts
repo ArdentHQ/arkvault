@@ -14,12 +14,7 @@ import {
 	IWalletService,
 } from "./contracts.js";
 import { defaultHostSelector, DriverFactory } from "./driver.js";
-import {
-	CoinList,
-	EnvironmentOptions,
-	Storage,
-	StorageData,
-} from "./environment.models.js";
+import { CoinList, EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 
 export class Environment {
@@ -154,7 +149,7 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public knownWallets(): KnownWalletService {
-		return this.#knownWalletService
+		return this.#knownWalletService;
 	}
 
 	/**
@@ -254,6 +249,6 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public hostSelector(profile: IProfile): Networks.NetworkHostSelector {
-		return defaultHostSelector(profile)
+		return defaultHostSelector(profile);
 	}
 }

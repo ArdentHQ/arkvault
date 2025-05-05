@@ -41,7 +41,7 @@ export class ValidatorService implements IValidatorService {
 
 	/** {@inheritDoc IValidatorService.sync} */
 	public async sync(profile: IProfile, coin: string, network: string): Promise<void> {
-		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile })
+		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile });
 		const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
 			? new ParallelValidatorSyncer(clientService)
 			: new SerialValidatorSyncer(clientService);
@@ -52,7 +52,9 @@ export class ValidatorService implements IValidatorService {
 			`${coin}.${network}.validators`,
 			result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
-				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(validator.address()),
+				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(
+					validator.address(),
+				),
 				governanceIdentifier: profile.activeNetwork().validatorIdentifier(),
 			})),
 		);

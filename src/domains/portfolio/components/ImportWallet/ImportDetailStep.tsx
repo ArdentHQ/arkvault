@@ -324,11 +324,7 @@ export const ImportDetailStep = ({
 	return (
 		<section data-testid="ImportWallet__detail-step">
 			<div className="mt-4 space-y-4">
-				<ImportInputField
-					type={importOption.value as OptionsValue}
-					profile={profile}
-					network={network}
-				/>
+				<ImportInputField type={importOption.value as OptionsValue} profile={profile} network={network} />
 
 				<WalletEncryptionBanner
 					importOption={importOption}

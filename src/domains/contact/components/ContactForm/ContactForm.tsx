@@ -129,8 +129,9 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			</FormField>
 
 			<div
-				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${contact ? "justify-between" : "justify-end"
-					}`}
+				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${
+					contact ? "justify-between" : "justify-end"
+				}`}
 			>
 				{contact && !isXs && (
 					<Button

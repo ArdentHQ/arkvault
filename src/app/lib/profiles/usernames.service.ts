@@ -12,7 +12,7 @@ export class UsernamesService implements IUsernamesService {
 	#profile: IProfile;
 	#network: Networks.Network;
 
-	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 		this.#profile = profile;
 		this.#network = profile.activeNetwork();

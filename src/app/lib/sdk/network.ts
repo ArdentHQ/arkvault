@@ -397,7 +397,7 @@ export class Network {
 	}
 
 	public async sync(): Promise<void> {
-		const host = this.#network.hosts.find(host => host.type === "full");
+		const host = this.#network.hosts.find((host) => host.type === "full");
 
 		if (!host) {
 			throw new Error(`Expected network host to be a url but received ${typeof host}`);
@@ -415,6 +415,6 @@ export class Network {
 	}
 
 	public prober(): ProberService {
-		return new ProberService({ config: this.config() })
+		return new ProberService({ config: this.config() });
 	}
 }

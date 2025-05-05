@@ -39,7 +39,7 @@ export const persistLedgerConnection = async ({
 	options,
 	hasRequestedAbort,
 }: {
-	profile: Contracts.IProfile,
+	profile: Contracts.IProfile;
 	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {

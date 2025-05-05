@@ -159,5 +159,4 @@ export class LedgerService {
 	public slip44(): number {
 		return this.#config.get(ConfigKey.Slip44);
 	}
-
 }

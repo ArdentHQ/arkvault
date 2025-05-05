@@ -37,13 +37,12 @@ export class TransactionService {
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
 
-
 	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
-	public constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#ledgerService = new LedgerService({ config });
 		this.#addressService = new AddressService();
-		this.#clientService = new ClientService({ config, profile })
+		this.#clientService = new ClientService({ config, profile });
 
 		this.#configCrypto = {
 			crypto: Managers.configManager.all() as Interfaces.NetworkConfig,

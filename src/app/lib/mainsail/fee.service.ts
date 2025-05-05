@@ -18,7 +18,7 @@ export class FeeService {
 	readonly #client: ArkClient;
 	#config: ConfigRepository;
 
-	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 		this.#client = new ArkClient(this.#config.host("full", profile));
 	}
