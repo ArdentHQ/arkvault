@@ -197,7 +197,7 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId(secretInputID), "secret.111");
+		await userEvent.clear(screen.getByTestId(secretInputID));
 		await userEvent.type(screen.getByTestId(secretInputID), "secret.111");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());

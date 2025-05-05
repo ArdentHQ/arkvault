@@ -102,24 +102,15 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
-// Solves `invalid BytesLike value` exception when using ethers on jsdom test environment
-// @see https://github.com/ethers-io/ethers.js/issues/4365
-vi.mock("@arkecosystem/typescript-crypto", async () => {
-	const actual = await vi.importActual("@arkecosystem/typescript-crypto");
+const originalHasInstance = Uint8Array[Symbol.hasInstance];
 
-	const Address = {
-		fromPassphrase: (passphrase) => {
-			return actual.Address.fromPrivateKey(Hash.sha256(Buffer.from(passphrase, "utf8")).toString("hex"));
-		},
-		validate: actual.Address.validate,
-		fromPublicKey: actual.Address.fromPublicKey,
-		fromPrivateKey: actual.Address.fromPrivateKey,
-	};
-
-	return {
-		...actual,
-		Address,
-	};
+Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+	value(potentialInstance: unknown) {
+		if (this === Uint8Array) {
+			return Object.prototype.toString.call(potentialInstance) === '[object Uint8Array]';
+		}
+		return originalHasInstance.call(this, potentialInstance);
+	},
 });
 
 const originalTippyRender = Tippy.render;
