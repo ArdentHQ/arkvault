@@ -196,7 +196,7 @@ export const CreateAddressesSidePanel = ({
 
 			await importWallets({
 				encryptedWif: parameters.encryptionPassword,
-				networks: activeProfile.availableNetworks().filter((network) => network.id() !== wallet.network().id()),
+				networks: [activeProfile.activeNetwork()],
 				type: "bip39",
 				value: mnemonic,
 			});

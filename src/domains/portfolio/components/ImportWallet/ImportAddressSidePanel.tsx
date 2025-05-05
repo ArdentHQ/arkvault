@@ -163,7 +163,7 @@ export const ImportAddressesSidePanel = ({
 		const { importOption, encryptedWif, value } = getValues();
 		const wallets = await importWallets({
 			encryptedWif,
-			networks: activeProfile.availableNetworks(),
+			networks: [activeProfile.activeNetwork()],
 			type: importOption.value,
 			value,
 		});
