@@ -73,7 +73,7 @@ export class ClientService {
 		const response = await this.#client.wallets().all(page, limit);
 
 		return new Collections.WalletDataCollection(
-			response.data.map((wallet) => new WalletData().fill(wallet)),
+			response.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
 			this.#createMetaPagination(response),
 		);
 	}
