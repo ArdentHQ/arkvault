@@ -23,6 +23,7 @@ import {
 import { AttributeBag } from "./helpers/attribute-bag.js";
 import { IHostRepository } from "./host.repository.contract.js";
 import { INetworkRepository } from "./network.repository.contract.js";
+import { UsernamesService } from "./usernames.service.js";
 
 /**
  *
@@ -364,4 +365,12 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	status(): IProfileStatus;
+
+	/**
+	 * Get the profile username service instance.
+	 *
+	 * @return {UsernamesService}
+	 * @memberof IProfile
+	 */
+	usernames(): UsernamesService;
 }

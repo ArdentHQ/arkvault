@@ -51,7 +51,7 @@ const useWalletAlias = (): HookResult => {
 
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-					onChainUsername = env.usernames().username(network.id(), address);
+					onChainUsername = profile.usernames().username(network.id(), address);
 				}
 
 				const localName = wallet ? wallet.displayName() : undefined;

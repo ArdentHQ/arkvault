@@ -105,7 +105,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		};
 
 		const syncKnownWallets = {
-			callback: () => env.knownWallets().syncAll(profile),
+			callback: () => env.knownWallets().sync(profile, profile.activeNetwork()),
 			interval: Intervals.Long,
 		};
 

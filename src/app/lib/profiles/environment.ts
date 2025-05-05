@@ -21,12 +21,15 @@ import {
 	Storage,
 	StorageData,
 } from "./environment.models.js";
+import { KnownWalletService } from "./known-wallet.service.js";
 
 export class Environment {
 	#storage: StorageData | undefined;
+	#knownWalletService: KnownWalletService;
 
 	public constructor(options: EnvironmentOptions) {
 		DriverFactory.make(container, options);
+		this.#knownWalletService = new KnownWalletService();
 	}
 
 	/**
@@ -151,8 +154,8 @@ export class Environment {
 	 * @returns {KnownWalletService}
 	 * @memberof Environment
 	 */
-	public knownWallets(): IKnownWalletService {
-		return container.get(Identifiers.KnownWalletService);
+	public knownWallets(): KnownWalletService {
+		return this.#knownWalletService
 	}
 
 	/**

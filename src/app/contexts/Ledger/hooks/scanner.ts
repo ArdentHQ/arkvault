@@ -35,7 +35,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
-		const ledgerService = new LedgerService();
+		const ledgerService = new LedgerService({ config: profile.activeNetwork().config() });
 
 		setIdle();
 		dispatch({ type: "waiting" });

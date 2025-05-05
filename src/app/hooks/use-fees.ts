@@ -5,7 +5,6 @@ import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { TransactionFees } from "@/types";
 import { FeeService } from "@/app/lib/mainsail/fee.service";
-import { TransactionService } from "@/app/lib/mainsail/transaction.service";
 
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
@@ -37,7 +36,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 				: await wallet.signatory().mnemonic(mnemonic);
 
 
-			return (new TransactionService())[type]({
+			return (wallet.transactionService())[type]({
 				data: getData(),
 				nonce: "1",
 				signatory,
