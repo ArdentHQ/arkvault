@@ -5,6 +5,8 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { ConfigRepository } from "../sdk/coins";
+import { IProfile } from "../profiles/profile.contract";
 
 interface Fees {
 	min: string;
@@ -14,10 +16,11 @@ interface Fees {
 
 export class FeeService {
 	readonly #client: ArkClient;
+	#config: ConfigRepository;
 
-	public constructor() {
-		const api = "https://dwallets-evm.mainsailhq.com/api"
-		this.#client = new ArkClient(api);
+	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+		this.#config = config;
+		this.#client = new ArkClient(this.#config.host("full", profile));
 	}
 
 	public async all(): Promise<Services.TransactionFees> {

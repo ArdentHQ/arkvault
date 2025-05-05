@@ -27,7 +27,7 @@ export class ProfileFeeService {
 
 	/** {@inheritDoc IFeeService.sync} */
 	public async sync(profile: IProfile): Promise<void> {
-		const feesService = new FeeService();
+		const feesService = new FeeService({ config: profile.activeNetwork().config(), profile });
 		this.#dataRepository.set(`${profile.activeNetwork().id()}.fees`, await feesService.all());
 	}
 }
