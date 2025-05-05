@@ -12,7 +12,8 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	MAINSAIL_MNEMONICS, fixUInt8ArrayIssue,
+	MAINSAIL_MNEMONICS,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
