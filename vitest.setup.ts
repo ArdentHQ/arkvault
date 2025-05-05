@@ -113,7 +113,7 @@ const fixUint8Issue = () => {
 			return originalHasInstance.call(this, potentialInstance);
 		},
 	});
-}
+};
 
 const originalTippyRender = Tippy.render;
 let tippyMock;
