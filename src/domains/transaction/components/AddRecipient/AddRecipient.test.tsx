@@ -527,7 +527,8 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
-		expect(screen.getAllByText("ARK Wallet 1").length).toBe(2);
+
+		expect(screen.getAllByText(/Mainsail Wallet/).length).toBe(2);
 	});
 
 	it("should show error for low balance", async () => {
@@ -695,7 +696,7 @@ describe("AddRecipient", () => {
 	it("should fill inputs in the single tab if one recipient is added in the multiple tab", async () => {
 		const values = {
 			amount: 1,
-			recipientAddress: "DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
+			recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		};
 
 		render(<Component />, {
