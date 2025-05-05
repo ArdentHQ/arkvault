@@ -256,6 +256,6 @@ export const fixUInt8Issue = () => {
 			return originalHasInstance.call(this, potentialInstance);
 		},
 	});
-}
+};
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
