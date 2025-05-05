@@ -21,7 +21,7 @@ import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
 
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+const randomAddress = "0x393f3F74F0cd9e790B5192789F31E0A38159ae03";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
