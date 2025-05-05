@@ -10,7 +10,7 @@ import { KeyPair } from "./crypto/identities/contracts";
 export class WIFService {
 	readonly #config!: ConfigRepository;
 
-	public constructor({ config }: { config: ConfigRepository }) {
+	constructor({ config }: { config: ConfigRepository }) {
 		this.#config = config;
 	}
 
