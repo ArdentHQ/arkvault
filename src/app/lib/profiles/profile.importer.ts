@@ -1,4 +1,3 @@
-import { Coins } from "@/app/lib/sdk";
 import { Base64 } from "@ardenthq/arkvault-crypto";
 
 import { container } from "./container.js";

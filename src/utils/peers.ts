@@ -1,5 +1,4 @@
-import { Contracts } from "@/app/lib/profiles";
-import { Networks, Coins } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { isValidUrl } from "./url-validation";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
@@ -54,7 +53,7 @@ const isMusig = (body: object): boolean => {
 	return body["name"].endsWith("-musig-server");
 };
 
-const urlBelongsToNetwork = async (profile: Contracts.IProfile, url: string, network: Networks.Network) => profile.activeNetwork().prober().evaluate(url);
+const urlBelongsToNetwork = async (url: string, network: Networks.Network) => network.prober().evaluate(url);
 
 const pingServerAddress = async (address: string, type: NetworkHostType): Promise<boolean> => {
 	const baseUrl = getBaseUrl(address);
