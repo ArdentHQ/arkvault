@@ -13,7 +13,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	MAINSAIL_MNEMONICS,
+	MAINSAIL_MNEMONICS, fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
@@ -42,6 +42,7 @@ const testNetwork = "mainsail.devnet";
 
 describe("ImportAddress Validations", () => {
 	let resetProfileNetworksMock: () => void;
+	let uInt8ArrayFix: () => void;
 
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
@@ -60,10 +61,12 @@ describe("ImportAddress Validations", () => {
 		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+		uInt8ArrayFix();
 	});
 
 	it("should error if address cannot be created", async () => {
