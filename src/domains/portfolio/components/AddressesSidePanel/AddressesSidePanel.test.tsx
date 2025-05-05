@@ -59,7 +59,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address()]);
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address()], "multiple");
 	});
 
 	it("should select all displayed addresses when `select all` clicked", async () => {
@@ -80,7 +80,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()));
+		expect(onClose).toHaveBeenCalledWith(wallets.values().map((w) => w.address()), "multiple");
 	});
 
 	it("should switch to delete mode when `manage` clicked", async () => {
@@ -148,7 +148,7 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.first().address(), wallets.last().address()]);
+		expect(onClose).toHaveBeenCalledWith([wallets.first().address(), wallets.last().address()], "multiple");
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
@@ -312,7 +312,7 @@ describe("AddressesSidePanel", () => {
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
 
-		expect(onClose).toHaveBeenCalledWith([wallets.last().address()]);
+		expect(onClose).toHaveBeenCalledWith([wallets.last().address()], "multiple");
 	});
 
 	it("should toggle between single and multiple view", async () => {
@@ -359,6 +359,6 @@ describe("AddressesSidePanel", () => {
 		const closeButton = screen.getByTestId(sidePanelCloseButton);
 		await userEvent.click(closeButton);
 
-		expect(onClose).toHaveBeenCalledWith([profile.wallets().first().address()]);
+		expect(onClose).toHaveBeenCalledWith([profile.wallets().first().address()], "single");
 	});
 });
