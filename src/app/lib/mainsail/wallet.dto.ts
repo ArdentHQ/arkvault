@@ -2,13 +2,14 @@ import { Contracts } from "@/app/lib/sdk";
 import { BigNumber, get, has } from "@/app/lib/helpers";
 import { KeyValuePair } from "@/app/lib/sdk/contracts";
 import { BigNumberService } from "@/app/lib/sdk/big-number.service";
+import { ConfigKey, ConfigRepository } from "../sdk/coins";
 
 export class WalletData {
 	protected data!: KeyValuePair;
 	protected readonly bigNumberService: BigNumberService;
 
-	public constructor() {
-		this.bigNumberService = new BigNumberService();
+	constructor({ config, profile }: { config: ConfigRepository }) {
+		this.bigNumberService = new BigNumberService({ decimals: config.get(ConfigKey.CurrencyDecimals) });
 	}
 
 	public fill(data: KeyValuePair) {

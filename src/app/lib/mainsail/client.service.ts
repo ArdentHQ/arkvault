@@ -63,7 +63,7 @@ export class ClientService {
 
 	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
-		return new WalletData().fill(body.data);
+		return new WalletData({ config: this.#config }).fill(body.data);
 	}
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
@@ -106,11 +106,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}

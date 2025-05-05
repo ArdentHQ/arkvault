@@ -14,7 +14,6 @@ import {
 	UnspentTransactionData,
 } from "./confirmed-transaction.dto.contract";
 import { Exceptions } from "./index";
-import { BigNumberService } from "./big-number.service";
 
 export abstract class AbstractConfirmedTransactionData implements ConfirmedTransactionData {
 	/**
