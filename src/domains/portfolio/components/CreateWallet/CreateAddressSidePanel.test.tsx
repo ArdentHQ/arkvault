@@ -14,7 +14,8 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	act, fixUInt8ArrayIssue,
+	act,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
