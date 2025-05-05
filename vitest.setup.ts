@@ -102,19 +102,6 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
-const originalHasInstance = Uint8Array[Symbol.hasInstance];
-
-const fixUint8Issue = () => {
-	Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-		value(potentialInstance: unknown) {
-			if (this === Uint8Array) {
-				return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-			}
-			return originalHasInstance.call(this, potentialInstance);
-		},
-	});
-}
-
 const originalTippyRender = Tippy.render;
 let tippyMock;
 
@@ -134,8 +121,6 @@ beforeAll(async () => {
 
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
-
-	fixUint8Issue();
 
 	return;
 });
@@ -257,6 +242,17 @@ Object.defineProperty(window, "$zopim", {
 				hide: vi.fn(),
 			},
 		},
+	},
+});
+
+const originalHasInstance = Uint8Array[Symbol.hasInstance];
+
+Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+	value(potentialInstance: unknown) {
+		if (this === Uint8Array) {
+			return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+		}
+		return originalHasInstance.call(this, potentialInstance);
 	},
 });
 
