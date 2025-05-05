@@ -8,7 +8,7 @@ export class BigNumberService {
 	readonly #decimals: number | undefined;
 
 	constructor(options?: BigNumberOptions) {
-		this.#decimals = options?.currencyDecimals;
+		this.#decimals = options?.decimals;
 	}
 
 	public make(value: NumberLike): BigNumber {

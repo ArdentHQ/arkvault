@@ -80,7 +80,7 @@ export class ClientService {
 
 	public async validator(id: string): Promise<Contracts.WalletData> {
 		const body = await this.#client.validators().get(id);
-		return new WalletData().fill(body.data);
+		return new WalletData({ config: this.#config }).fill(body.data);
 	}
 
 	public async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
@@ -90,7 +90,7 @@ export class ClientService {
 		const body = await this.#client.validators().all(page, limit, parameters);
 
 		return new Collections.WalletDataCollection(
-			body.data.map((wallet) => new WalletData().fill(wallet)),
+			body.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
 			this.#createMetaPagination(body),
 		);
 	}

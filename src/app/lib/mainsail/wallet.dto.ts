@@ -8,7 +8,7 @@ export class WalletData {
 	protected data!: KeyValuePair;
 	protected readonly bigNumberService: BigNumberService;
 
-	constructor({ config, profile }: { config: ConfigRepository }) {
+	constructor({ config }: { config: ConfigRepository }) {
 		this.bigNumberService = new BigNumberService({ decimals: config.get(ConfigKey.CurrencyDecimals) });
 	}
 

@@ -139,7 +139,7 @@ export class LedgerService {
 
 			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
 
-			ledgerWallets[`${path}/0/${addressIndex}`] = new WalletData().fill({
+			ledgerWallets[`${path}/0/${addressIndex}`] = new WalletData({ config: this.#config }).fill({
 				address,
 				balance: 0,
 				publicKey,
