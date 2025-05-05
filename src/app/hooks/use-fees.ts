@@ -55,7 +55,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 					type,
 				});
 
-				const fees = new FeeService()
+				const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
 
 				const [min, avg, max] = await Promise.all([
 					fees.calculate(transaction, { priority: "slow" }),
