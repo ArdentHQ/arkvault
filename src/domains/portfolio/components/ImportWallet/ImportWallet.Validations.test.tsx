@@ -13,7 +13,8 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	MAINSAIL_MNEMONICS, fixUInt8ArrayIssue,
+	MAINSAIL_MNEMONICS,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
