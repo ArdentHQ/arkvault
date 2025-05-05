@@ -19,6 +19,7 @@ import { MessageService } from "@/app/lib/mainsail/message.service.js";
 import { ClientService } from "@/app/lib/mainsail/client.service.js";
 import { AddressService } from "@/app/lib/mainsail/address.service.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
+import { TransactionService } from "../mainsail/transaction.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -476,12 +477,20 @@ export interface IReadWriteWallet {
 	signatory(): Services.SignatoryService;
 
 	/**
-	 * Get the transaction service instance.
+	 * Get the wallet transaction service instance.
 	 *
 	 * @return {ITransactionService}
 	 * @memberof IReadWriteWallet
 	 */
 	transaction(): ITransactionService;
+
+	/**
+	 * Get the transaction service instance.
+	 *
+	 * @return {TransactionService}
+	 * @memberof IReadWriteWallet
+	 */
+	transactionService(): TransactionService;
 
 	/**
 	 * Get the supported transaction types.

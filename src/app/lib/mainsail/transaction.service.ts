@@ -18,6 +18,8 @@ import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { ClientService } from "./client.service.js";
 import { LedgerService } from "./ledger.service.js";
+import { ConfigRepository } from "@/app/lib/sdk/coins.js";
+import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: number;
@@ -33,12 +35,15 @@ type TransactionsInputs =
 export class TransactionService {
 	readonly #ledgerService!: Services.LedgerService;
 	readonly #addressService!: AddressService;
+	readonly #clientService!: ClientService;
+
 
 	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
 
-	public constructor() {
-		this.#ledgerService = new LedgerService();
+	public constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+		this.#ledgerService = new LedgerService({ config });
 		this.#addressService = new AddressService();
+		this.#clientService = new ClientService({ config, profile })
 
 		this.#configCrypto = {
 			crypto: Managers.configManager.all() as Interfaces.NetworkConfig,
@@ -291,7 +296,7 @@ export class TransactionService {
 		}
 
 		const { address } = await this.#signerData(input);
-		const wallet = await new ClientService().wallet({ type: "address", value: address! });
+		const wallet = await this.#clientService.wallet({ type: "address", value: address! });
 
 		return wallet.nonce().toFixed(0);
 	}

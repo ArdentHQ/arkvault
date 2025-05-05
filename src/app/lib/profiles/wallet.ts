@@ -40,7 +40,7 @@ import { WalletLedgerModel } from "./wallet.enum";
 import { WalletGate } from "./wallet.gate";
 import { WalletMutator } from "./wallet.mutator";
 import { WalletSynchroniser } from "./wallet.synchroniser";
-import { TransactionService } from "./wallet-transaction.service";
+import { TransactionService as WalletTransactionService } from "./wallet-transaction.service";
 import { WalletImportFormat } from "./wif.js";
 import { LinkService } from "@/app/lib/mainsail/link.service";
 import { MessageService } from "@/app/lib/mainsail/message.service";
@@ -53,6 +53,7 @@ import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { PrivateKeyService } from "@/app/lib/mainsail/private-key.service";
 import { WIFService } from "@/app/lib/mainsail/wif.service";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
+import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -82,7 +83,7 @@ export class Wallet implements IReadWriteWallet {
 
 		this.#dataRepository = new DataRepository();
 		this.#settingRepository = new SettingRepository(profile, Object.values(WalletSetting));
-		this.#transactionService = new TransactionService(this);
+		this.#transactionService = new WalletTransactionService(this);
 		this.#walletGate = new WalletGate(this);
 		this.#walletSynchroniser = new WalletSynchroniser(this);
 		this.#walletMutator = new WalletMutator(this);
@@ -439,6 +440,14 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.transaction} */
 	public transaction(): ITransactionService {
 		return this.#transactionService;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.transactionService} */
+	public transactionService(): TransactionService {
+		return new TransactionService({
+			config: this.network().config(),
+			profile: this.profile()
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.transactionTypes} */

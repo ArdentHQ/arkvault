@@ -10,11 +10,9 @@ import {
 	VotingMethod,
 } from "./network.models";
 import { ConfigRepository } from "./config";
-import { AbstractTransactionService } from "@/app/lib/sdk/transaction.service";
-import { container } from "@/app/lib/profiles/container";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { Managers } from "@/app/lib/mainsail/crypto";
-import { ProberService } from "../mainsail/prober.service";
+import { ProberService } from "@/app/lib/mainsail/prober.service";
 
 export class Network {
 	/**
@@ -396,10 +394,6 @@ export class Network {
 
 	public config(): ConfigRepository {
 		return new ConfigRepository({ network: this.#network });
-	}
-
-	public transaction(): AbstractTransactionService {
-		return new AbstractTransactionService(container);
 	}
 
 	public async sync(): Promise<void> {
