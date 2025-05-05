@@ -1,5 +1,5 @@
 import { path } from "rambda";
-import { IoC, Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/sdk";
 import {
 	MultipaymentBuilder,
 	UnvoteBuilder,

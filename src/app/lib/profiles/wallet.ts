@@ -45,7 +45,7 @@ import { WalletImportFormat } from "./wif.js";
 import { LinkService } from "@/app/lib/mainsail/link.service";
 import { MessageService } from "@/app/lib/mainsail/message.service";
 import { Manifest } from "@/app/lib/sdk/manifest";
-import { Mainsail } from "@/app/lib/mainsail/index";
+import { manifest } from "@/app/lib/mainsail/index";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
@@ -378,7 +378,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.manifest} */
 	public manifest(): Coins.Manifest {
-		return new Manifest(Mainsail.manifest);
+		return new Manifest(manifest);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.client} */

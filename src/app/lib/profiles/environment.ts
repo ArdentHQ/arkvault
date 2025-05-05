@@ -19,7 +19,6 @@ import { defaultHostSelector, DriverFactory } from "./driver.js";
 import {
 	CoinList,
 	EnvironmentOptions,
-	NetworkHostSelectorFactory,
 	Storage,
 	StorageData,
 } from "./environment.models.js";
