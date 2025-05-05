@@ -1,10 +1,11 @@
-import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Environment } from "@/app/lib/profiles";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { Networks } from "@/app/lib/sdk";
 
 export const validatorRegistration = (t: any) => ({
-	validatorPublicKey: (wallet: Contracts.IReadWriteWallet) => ({
+	validatorPublicKey: (env: Environment, profile: IProfile, network: Networks.Network) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
@@ -18,7 +19,8 @@ export const validatorRegistration = (t: any) => ({
 
 		validate: {
 			pattern: (publicKey: string) => {
-				const isValid = wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey);
+				const coin = profile.coins().get(network.coin(), network.id());
+				const isValid = coin.publicKey().verifyPublicKeyWithBLS(publicKey);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
@@ -28,7 +30,7 @@ export const validatorRegistration = (t: any) => ({
 			},
 			unique: debounceAsync(async (publicKey: string) => {
 				try {
-					await publicKeyExists(wallet.network(), publicKey);
+					await publicKeyExists(env, network, profile, publicKey);
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
@@ -37,17 +39,18 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (network: Networks.Network, publicKey: string) => {
-	const endpoints = {
-		"mainsail.devnet": "https://dwallets-evm.mainsailhq.com/api/wallets/",
-		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
-	};
-
+const publicKeyExists = async (env: Environment, network: Networks.Network, profile: IProfile, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}
 
-	const response = await fetch(`${endpoints[network.id()]}?attributes.validatorPublicKey=${publicKey}`);
+	const hostSelector = env.hostSelector(profile);
+
+	const coin = profile.coins().get(network.coin(), network.id());
+
+	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
+
+	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
 	const data = await response.json();
 
