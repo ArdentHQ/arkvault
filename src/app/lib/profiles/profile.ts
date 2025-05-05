@@ -330,6 +330,10 @@ export class Profile implements IProfile {
 		};
 
 		const activeNetwork = this.availableNetworks().find((network) => {
+			if (!network) {
+				return
+			}
+
 			if (activeNetworkId === network.id()) {
 				return network;
 			}
