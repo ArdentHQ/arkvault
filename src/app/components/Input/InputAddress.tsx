@@ -31,7 +31,6 @@ export const InputAddress = ({
 	const { t } = useTranslation();
 
 	const validateAddress = (address: string) => {
-		//const instance = profile.coins().set(coin!, network!);
 		const isValidAddress: boolean = new AddressService().validate(address);
 
 		if (isValidAddress) {
