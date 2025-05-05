@@ -309,7 +309,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesMemo(): boolean {
-		return get(this.#network, "validators.memo", false);
+		return get(this.#network, "transactions.memo", false);
 	}
 
 	/**
@@ -319,7 +319,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesUTXO(): boolean {
-		return get(this.#network, "validators.utxo", false);
+		return get(this.#network, "transactions.utxo", false);
 	}
 
 	/**
@@ -329,7 +329,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public usesLockedBalance(): boolean {
-		return get(this.#network, "validators.lockedBalance", false);
+		return get(this.#network, "transactions.lockedBalance", false);
 	}
 
 	/**
@@ -339,7 +339,7 @@ export class Network {
 	 * @memberof Network
 	 */
 	public multiPaymentRecipients(): number {
-		return get(this.#network, "validators.multiPaymentRecipients", 0);
+		return get(this.#network, "transactions.multiPaymentRecipients", 0);
 	}
 
 	/**
