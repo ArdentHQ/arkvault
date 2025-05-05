@@ -1,4 +1,4 @@
-import { Coins, Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/sdk";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";

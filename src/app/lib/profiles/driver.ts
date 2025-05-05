@@ -11,7 +11,6 @@ import { KnownWalletService } from "./known-wallet.service.js";
 import { IProfile } from "./profile.contract.js";
 import { ProfileSetting } from "./profile.enum.contract.js";
 import { ProfileRepository } from "./profile.repository.js";
-import { UsernamesService } from "./usernames.service.js";
 import { WalletService } from "./wallet.service.js";
 
 export const defaultHostSelector: NetworkHostSelectorFactory =

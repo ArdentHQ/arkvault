@@ -11,8 +11,6 @@ import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
-import { Coins } from "@/app/lib/sdk";
-import { Address } from "@/app/components/Address";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({

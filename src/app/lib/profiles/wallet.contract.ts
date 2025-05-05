@@ -19,7 +19,7 @@ import { MessageService } from "@/app/lib/mainsail/message.service.js";
 import { ClientService } from "@/app/lib/mainsail/client.service.js";
 import { AddressService } from "@/app/lib/mainsail/address.service.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
-import { TransactionService } from "../mainsail/transaction.service.js";
+import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 

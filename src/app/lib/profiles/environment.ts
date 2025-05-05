@@ -9,7 +9,6 @@ import {
 	IValidatorService,
 	IExchangeRateService,
 	IFeeService,
-	IKnownWalletService,
 	IProfile,
 	IProfileRepository,
 	IWalletService,

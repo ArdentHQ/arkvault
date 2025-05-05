@@ -66,7 +66,7 @@ export const sendTransfer = (t: TFunction) => ({
 		isSingleRecipient: boolean,
 	) => ({
 		validate: {
-			valid: async (addressValue: string | undefined) => {
+			valid: (addressValue: string | undefined) => {
 				const address = (addressValue || "").trim();
 				const shouldRequire = !address && recipients.length === 0;
 				const hasAddedRecipients = !address && !isSingleRecipient && recipients.length > 0;
