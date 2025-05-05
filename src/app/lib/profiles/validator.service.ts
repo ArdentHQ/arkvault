@@ -41,9 +41,10 @@ export class ValidatorService implements IValidatorService {
 
 	/** {@inheritDoc IValidatorService.sync} */
 	public async sync(profile: IProfile, coin: string, network: string): Promise<void> {
+		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile })
 		const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
-			? new ParallelValidatorSyncer(new ClientService())
-			: new SerialValidatorSyncer(new ClientService());
+			? new ParallelValidatorSyncer(clientService)
+			: new SerialValidatorSyncer(clientService);
 
 		const result: Contracts.WalletData[] = await syncer.sync();
 
