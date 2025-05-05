@@ -64,6 +64,5 @@ export class DriverFactory {
 		container.singleton(Identifiers.KnownWalletService, KnownWalletService);
 		container.singleton(Identifiers.ProfileRepository, ProfileRepository);
 		container.singleton(Identifiers.WalletService, WalletService);
-		container.singleton(Identifiers.UsernamesService, UsernamesService);
 	}
 }

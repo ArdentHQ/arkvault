@@ -7,7 +7,6 @@ import { ProberService } from "./prober.contract";
 import { BindingType } from "./service-provider.contract";
 import {
 	AddressService,
-	BigNumberService,
 	ClientService,
 	ExtendedAddressService,
 	FeeService,
@@ -71,7 +70,6 @@ export class Coin {
 		}
 
 		await this.#container.unbindAsync(BindingType.AddressService);
-		await this.#container.unbindAsync(BindingType.BigNumberService);
 		await this.#container.unbindAsync(BindingType.ClientService);
 		await this.#container.unbindAsync(BindingType.ExtendedAddressService);
 		await this.#container.unbindAsync(BindingType.ExtendedPublicKeyService);
@@ -112,10 +110,6 @@ export class Coin {
 
 	public address(): AddressService {
 		return this.#container.get(BindingType.AddressService);
-	}
-
-	public bigNumber(): BigNumberService {
-		return this.#container.get(BindingType.BigNumberService);
 	}
 
 	public client(): ClientService {

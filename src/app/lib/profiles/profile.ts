@@ -48,6 +48,7 @@ import { WalletAggregate } from "./wallet.aggregate.js";
 import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
 import { Contracts } from "./index.js";
+import { UsernamesService } from "./usernames.service.js";
 
 export class Profile implements IProfile {
 	/**
@@ -113,6 +114,7 @@ export class Profile implements IProfile {
 	 * @memberof Profile
 	 */
 	readonly #settingRepository: ISettingRepository;
+
 
 	/**
 	 * The appearance settings service.
@@ -341,8 +343,6 @@ export class Profile implements IProfile {
 			throw new Error("Active network is missing");
 		}
 
-		console.log({ activeNetwork })
-
 		return activeNetwork;
 	}
 
@@ -419,6 +419,11 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.getAttributes} */
 	public getAttributes(): AttributeBag<IProfileInput> {
 		return this.#attributes;
+	}
+
+	/** {@inheritDoc IProfile.usernames} */
+	public usernames(): UsernamesService {
+		return new UsernamesService({ config: this.activeNetwork().config(), profile: this })
 	}
 
 	/** {@inheritDoc IProfile.async} */

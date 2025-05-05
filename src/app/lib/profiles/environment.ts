@@ -12,7 +12,6 @@ import {
 	IKnownWalletService,
 	IProfile,
 	IProfileRepository,
-	IUsernamesService,
 	IWalletService,
 } from "./contracts.js";
 import { defaultHostSelector, DriverFactory } from "./driver.js";
@@ -154,16 +153,6 @@ export class Environment {
 	 */
 	public knownWallets(): IKnownWalletService {
 		return container.get(Identifiers.KnownWalletService);
-	}
-
-	/**
-	 * Access the usernames service.
-	 *
-	 * @returns {UsernamesService}
-	 * @memberof Environment
-	 */
-	public usernames(): IUsernamesService {
-		return container.get(Identifiers.UsernamesService);
 	}
 
 	/**

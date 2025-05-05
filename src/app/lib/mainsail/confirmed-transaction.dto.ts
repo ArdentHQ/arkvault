@@ -7,12 +7,10 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
-import { BigNumberService } from "@/app/lib/sdk/big-number.service";
 export type KeyValuePair = Record<string, any>;
 
 export class ConfirmedTransactionData {
 	readonly #addressService: AddressService;
-	protected readonly bigNumberService: BigNumberService;
 
 	/**
 	 * @TODO: Revisit and remove if unused.
@@ -43,7 +41,6 @@ export class ConfirmedTransactionData {
 
 	public constructor() {
 		this.#addressService = new AddressService();
-		this.bigNumberService = new BigNumberService();
 	}
 
 	public configure(data: any) {
