@@ -1,22 +1,18 @@
-import { Coins, Http, IoC, Services } from "@/app/lib/sdk";
+import { ArkClient } from "@arkecosystem/typescript-client";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
 
-export class ProberService extends Services.AbstractProberService {
-	readonly #configRepository: Coins.ConfigRepository;
-	readonly #httpClient: Http.HttpClient;
+export class ProberService {
+	readonly #config: ConfigRepository;
 
-	public constructor(container: IoC.IContainer) {
-		super();
-
-		this.#configRepository = container.get(IoC.BindingType.ConfigRepository);
-		this.#httpClient = container.get(IoC.BindingType.HttpClient);
+	public constructor({ config }: { config: ConfigRepository }) {
+		this.#config = config;
 	}
 
-	public override async evaluate(host: string): Promise<boolean> {
+	public async evaluate(host: string): Promise<boolean> {
 		try {
-			const response = await this.#httpClient.get(`${host}/node/configuration/crypto`.replace(/\/$/, ""));
-			const { data } = response.json();
-
-			return data.network.client.token === this.#configRepository.get(Coins.ConfigKey.CurrencyTicker);
+			const client = new ArkClient(host);
+			const { data } = await client.node().crypto()
+			return data.network.client.token === this.#config.get(ConfigKey.CurrencyTicker);
 		} catch {
 			return false;
 		}

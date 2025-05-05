@@ -28,7 +28,7 @@ export class ClientService {
 	readonly #client!: ArkClient;
 	#config: ConfigRepository;
 
-	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	public constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
 		this.#config = config;
 
 		const api = config.host("full", profile);

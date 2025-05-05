@@ -54,12 +54,7 @@ const isMusig = (body: object): boolean => {
 	return body["name"].endsWith("-musig-server");
 };
 
-const urlBelongsToNetwork = async (profile: Contracts.IProfile, url: string, network: Networks.Network) => {
-	const coin: Coins.Coin = profile.coins().makeInstance(network.coin(), network.id());
-	await coin.__construct();
-	// @TODO: Replace with mainsail prober service.
-	return coin.prober().evaluate(url);
-};
+const urlBelongsToNetwork = async (profile: Contracts.IProfile, url: string, network: Networks.Network) => profile.activeNetwork().prober().evaluate(url);
 
 const pingServerAddress = async (address: string, type: NetworkHostType): Promise<boolean> => {
 	const baseUrl = getBaseUrl(address);

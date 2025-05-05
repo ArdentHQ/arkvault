@@ -9,11 +9,12 @@ import {
 	NetworkManifestToken,
 	VotingMethod,
 } from "./network.models";
-import { ConfigKey, ConfigRepository } from "./config";
+import { ConfigRepository } from "./config";
 import { AbstractTransactionService } from "@/app/lib/sdk/transaction.service";
 import { container } from "@/app/lib/profiles/container";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { Managers } from "@/app/lib/mainsail/crypto";
+import { ProberService } from "../mainsail/prober.service";
 
 export class Network {
 	/**
@@ -417,5 +418,9 @@ export class Network {
 		// Set network configuration globally.
 		Managers.configManager.setConfig(dataCrypto);
 		Managers.configManager.setHeight(blockNumber);
+	}
+
+	public prober(): ProberService {
+		return new ProberService({ config: this.config() })
 	}
 }
