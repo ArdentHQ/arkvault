@@ -80,20 +80,15 @@ const useWalletAlias = (): HookResult => {
 		[env],
 	);
 
-	const syncOnChainUsernames = useCallback(
-		async ({
-			profile,
-			networks,
-			addresses,
-		}: {
-			profile: Contracts.IProfile;
-			networks: Networks.Network[];
-			addresses: string[];
-		}) => {
-			for (const network of networks) {
-				await profile.usernames().syncUsernames(addresses);
-			}
-		},
+	const syncOnChainUsernames = useCallback(async ({
+		profile,
+		addresses,
+	}: {
+		profile: Contracts.IProfile;
+		addresses: string[];
+	}) => {
+		await profile.usernames().syncUsernames(addresses);
+	},
 		[env],
 	);
 
