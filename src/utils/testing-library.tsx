@@ -445,5 +445,5 @@ export const fixUInt8ArrayIssue = () => {
 			configurable: true,
 			value: originalHasInstance,
 		});
-	}
+	};
 };
