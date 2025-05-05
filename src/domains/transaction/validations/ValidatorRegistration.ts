@@ -1,9 +1,11 @@
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { Networks } from "@/app/lib/sdk";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 
 export const validatorRegistration = (t: any) => ({
-	validatorPublicKey: (env: Environment, profile: IProfile, network: Networks.Network) => ({
+	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
@@ -27,7 +29,7 @@ export const validatorRegistration = (t: any) => ({
 			},
 			unique: debounceAsync(async (publicKey: string) => {
 				try {
-					await publicKeyExists(env, network, profile, publicKey);
+					await publicKeyExists(network, profile, publicKey);
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
@@ -36,12 +38,12 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (env: Environment, network: Networks.Network, profile: IProfile, publicKey: string) => {
+const publicKeyExists = async (network: Networks.Network, profile: IProfile, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}
 
-	const publicApiEndpoint = profile.activeNetwork().config().host("full", profile);
+	const publicApiEndpoint = network.config().host("full", profile);
 	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
 	const data = await response.json();
