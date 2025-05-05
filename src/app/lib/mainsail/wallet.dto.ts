@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/sdk";
 import { BigNumber, get, has } from "@/app/lib/helpers";
 import { KeyValuePair } from "@/app/lib/sdk/contracts";
 import { BigNumberService } from "@/app/lib/sdk/big-number.service";
-import { ConfigKey, ConfigRepository } from "../sdk/coins";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
 
 export class WalletData {
 	protected data!: KeyValuePair;
