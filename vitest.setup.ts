@@ -5,7 +5,6 @@ import { env, getDefaultProfileId, getMainsailProfileId } from "@/utils/testing-
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
-import { Hash } from "@ardenthq/arkvault-crypto";
 import "jest-styled-components";
 
 import { server } from "./src/tests/mocks/server";

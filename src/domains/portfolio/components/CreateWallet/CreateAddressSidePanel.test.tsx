@@ -14,7 +14,7 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	act,
+	act, fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "./CreateAddressSidePanel";
@@ -31,16 +31,19 @@ const continueButton = () => screen.getByTestId("CreateWallet__continue-button")
 
 describe("CreateAddressSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
+	let uInt8ArrayFix: () => void;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
+		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterAll(() => {
 		bip39GenerateMock.mockRestore();
+		uInt8ArrayFix();
 	});
 
 	beforeEach(async () => {
