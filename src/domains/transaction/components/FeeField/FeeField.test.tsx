@@ -1,24 +1,35 @@
 import { Networks } from "@/app/lib/sdk";
-import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React from "react";
+import React, { act } from "react";
 import userEvent from "@testing-library/user-event";
 import { FormProvider, useForm } from "react-hook-form";
 import * as useFeesHook from "@/app/hooks/use-fees";
-import { toasts } from "@/app/services";
 import { translations } from "@/domains/transaction/i18n";
-
+import { BigNumber } from "@/app/lib/helpers";
 import { useValidation } from "@/app/hooks";
-import { FeeField } from "@/domains/transaction/components/FeeField/FeeField";
+import { FeeField, GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { expect } from "vitest";
+import { vi } from "vitest";
 
 describe("FeeField", () => {
 	let profile: Contracts.IProfile;
+	let coinNetworkSpy: vi.SpyInstance;
 
-	const networks = new Networks.Network(ARK.manifest, ARK.manifest.networks["ark.devnet"]);
+	const networks = new Networks.Network(Mainsail.manifest, Mainsail.manifest.networks["mainsail.devnet"]);
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		const coin = profile.coins().get("Mainsail", "mainsail.devnet");
+
+		coinNetworkSpy = vi.spyOn(coin, "network").mockReturnValue(networks);
+	});
+
+	afterAll(() => {
+		coinNetworkSpy.mockRestore();
 	});
 
 	const Component = ({ balance = 10, network = networks, type, data }: any) => {
@@ -31,6 +42,8 @@ describe("FeeField", () => {
 		register("fee");
 		register("fees", common.fee(balance, network, fees));
 		register("inputFeeSettings");
+		register("gasPrice");
+		register("gasLimit");
 
 		return (
 			<FormProvider {...form}>
@@ -47,43 +60,11 @@ describe("FeeField", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should not show warning toast when transaction fees are equal to the previous fees", async () => {
-		let useFeesSpy: vi.SpyInstance;
-
-		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
-		});
-
-		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-
-		const { rerender } = render(
-			<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />,
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
-
-		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
-		});
-
-		rerender(<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
-
-		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
-
-		await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
-
-		useFeesSpy.mockRestore();
-	});
-
 	describe("when network's fee type is size", () => {
 		it("should override fee when it is lower than the minimum fees", async () => {
 			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
-			let useFeesSpy: vi.SpyInstance;
-
-			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-
-			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+			let useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 				calculate: () => Promise.resolve({ avg: 3, isDynamic: true, max: 5, min: 1, static: 3 }),
 			});
 
@@ -91,14 +72,14 @@ describe("FeeField", () => {
 				<Component
 					type="transfer"
 					network={networks}
-					data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }}
+					data={{ amount: 1, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
 				/>,
 			);
 
-			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK"));
 
-			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("3 DARK");
-			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("5 DARK");
+			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("3 ARK");
+			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("5 ARK");
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 			await waitFor(() => {
@@ -107,7 +88,9 @@ describe("FeeField", () => {
 
 			await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
+			await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("3"));
+
+			useFeesSpy.mockRestore();
 
 			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 				calculate: () => Promise.resolve({ avg: 9, isDynamic: false, max: 12, min: 6, static: 3 }),
@@ -117,37 +100,46 @@ describe("FeeField", () => {
 				<Component
 					type="transfer"
 					network={networks}
-					data={{ amount: 2, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }}
+					data={{ amount: 2, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
 				/>,
 			);
 
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"), { timeout: 4000 });
-
-			expect(toastSpy).toHaveBeenCalledWith(translations.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE);
+			await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("3"), { timeout: 4000 });
 
 			feeTypeSpy.mockRestore();
-			toastSpy.mockRestore();
 			useFeesSpy.mockRestore();
 		});
-		it.each(["transfer", "multiPayment", "vote", "delegateRegistration"])(
-			"should show 0 when %s data is undefined",
+
+		it.each(["transfer", "multiPayment", "vote", "validatorRegistration"])(
+			"should use env transaction fee when %s data is undefined",
 			async (transactionType) => {
-				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
+				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValue("size");
+
+				const envFeesSpy = vi.spyOn(env.fees(), "findByType").mockReturnValue({
+					avg: BigNumber.make(3),
+					isDynamic: true,
+					max: BigNumber.make(4),
+					min: BigNumber.make(1),
+					static: BigNumber.make(2),
+				});
 
 				render(<Component type={transactionType} network={networks} data={undefined} />);
 
 				await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
-				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 DARK");
+				const amounts = screen.getAllByTestId("Amount");
+
+				expect(amounts[0]).toHaveTextContent(calculateGasFee(1, GasLimit[transactionType]) + " ARK");
+				expect(amounts[1]).toHaveTextContent(calculateGasFee(3, GasLimit[transactionType]) + " ARK");
+				expect(amounts[2]).toHaveTextContent(calculateGasFee(4, GasLimit[transactionType]) + " ARK");
 
 				feeTypeSpy.mockRestore();
+				envFeesSpy.mockRestore();
 			},
 		);
 
-		it.each(["transfer", "multiPayment", "vote", "delegateRegistration"])(
-			"should show 0 %s data is not available yet",
+		it.each(["transfer", "multiPayment", "vote", "validatorRegistration"])(
+			"should show 0 fee when %s data is not available yet",
 			async (transactionType) => {
 				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
@@ -155,9 +147,9 @@ describe("FeeField", () => {
 
 				await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 
-				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 DARK");
-				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 DARK");
+				expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 ARK");
+				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 ARK");
+				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 ARK");
 
 				feeTypeSpy.mockRestore();
 			},
@@ -172,11 +164,13 @@ describe("FeeField", () => {
 
 			const { rerender } = render(<Component {...properties} data={{}} />);
 
-			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0 DARK"));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("0.000042 ARK"));
 
-			rerender(<Component {...properties} data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
+			rerender(
+				<Component {...properties} data={{ amount: 1, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />,
+			);
 
-			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("2 DARK"));
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("2 ARK"));
 
 			feeTypeSpy.mockRestore();
 			calculate.mockRestore();
@@ -206,11 +200,13 @@ describe("FeeField", () => {
 		const calculate = vi.fn().mockResolvedValue({ avg: 30, isDynamic: true, max: 1, min: 1, static: 1 });
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
 
-		render(<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
+		render(<Component type="transfer" data={{ amount: 1, to: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }} />);
 
-		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
+		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK"));
 
-		expect(screen.getByRole("radio", { checked: true })).toHaveTextContent("30 DARK");
+		expect(screen.getByRole("radio", { checked: true })).toHaveTextContent(
+			calculateGasFee(30, GasLimit.transfer) + " ARK",
+		);
 
 		calculate.mockRestore();
 		useFeesMock.mockRestore();
