@@ -60,18 +60,6 @@ describe("App", () => {
 
 		// Mock synchronizer to avoid running any jobs in these tests.
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
-
-		const originalHasInstance = Uint8Array[Symbol.hasInstance];
-
-		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-			configurable: true,
-			value(potentialInstance: unknown) {
-				if (this === Uint8Array) {
-					return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-				}
-				return originalHasInstance.call(this, potentialInstance);
-			},
-		});
 	});
 
 	afterAll(() => {
