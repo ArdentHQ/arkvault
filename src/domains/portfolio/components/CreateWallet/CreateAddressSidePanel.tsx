@@ -203,8 +203,6 @@ export const CreateAddressesSidePanel = ({
 
 			setValue("wallet", wallet);
 
-			activeProfile.wallets().push(wallet);
-
 			await persist();
 		}
 
