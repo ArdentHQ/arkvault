@@ -13,6 +13,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
@@ -45,6 +46,7 @@ const testNetwork = "mainsail.devnet";
 
 describe("ImportAddress Methods", () => {
 	let resetProfileNetworksMock: () => void;
+	let uInt8ArrayFix: () => void;
 
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
@@ -63,10 +65,13 @@ describe("ImportAddress Methods", () => {
 		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+		uInt8ArrayFix();
 	});
 
 	it("should import by address", async () => {
@@ -197,7 +202,7 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId(secretInputID), "secret.111");
+		await userEvent.clear(screen.getByTestId(secretInputID));
 		await userEvent.type(screen.getByTestId(secretInputID), "secret.111");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
