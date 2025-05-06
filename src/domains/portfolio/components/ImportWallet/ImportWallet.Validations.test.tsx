@@ -64,7 +64,6 @@ describe("ImportAddress Validations", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-		uInt8ArrayFix();
 	});
 
 	it("should error if address cannot be created", async () => {
