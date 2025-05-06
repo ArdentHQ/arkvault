@@ -28,7 +28,6 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 			this.#wallet.data().set(WalletData.Balance, wallet.balance());
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
-			this.#wallet.markAsFullyRestored();
 		} catch {
 			/**
 			 * TODO: decide what to do if the wallet couldn't be found
@@ -39,8 +38,9 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 			this.#wallet.getAttributes().set("wallet", currentWallet);
 			this.#wallet.data().set(WalletData.PublicKey, currentPublicKey);
-			this.#wallet.markAsPartiallyRestored();
 		}
+
+		this.#wallet.markAsFullyRestored();
 	}
 
 	/** {@inheritDoc IWalletSynchroniser.votes} */

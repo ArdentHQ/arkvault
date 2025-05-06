@@ -62,7 +62,7 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch } = form;
+	const { getValues, formState, register, watch, errors } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const {
 		value,
@@ -163,7 +163,6 @@ export const ImportAddressesSidePanel = ({
 		const { importOption, encryptedWif, value } = getValues();
 		const wallets = await importWallets({
 			encryptedWif,
-			networks: [activeProfile.activeNetwork()],
 			type: importOption.value,
 			value,
 		});

@@ -220,7 +220,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		ledgerOptions,
 	}: {
 		value: WalletGenerationInput;
-		networks: Networks.Network[];
 		type: string;
 		encryptedWif?: string;
 		ledgerOptions?: {
