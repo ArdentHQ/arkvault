@@ -101,7 +101,9 @@ describe("App", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
-		await expect(screen.findByText(/Select Profile/, undefined)).resolves.toBeVisible();
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+		).resolves.toBeVisible();
 	});
 
 	it("should close page skeleton if not e2e", async () => {
