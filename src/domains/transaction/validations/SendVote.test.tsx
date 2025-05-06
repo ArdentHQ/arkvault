@@ -41,7 +41,9 @@ describe("Send Vote Validation", () => {
 
 		expect(validator.validate("1")).toBe(true);
 
-		const mockWalletVotingValidator = vi.spyOn(profile.wallets().first().voting(), "current").mockReturnValue(votes);
+		const mockWalletVotingValidator = vi
+			.spyOn(profile.wallets().first().voting(), "current")
+			.mockReturnValue(votes);
 
 		expect(validator.validate(profile.wallets().first().address())).not.toBe(true);
 

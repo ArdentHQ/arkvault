@@ -122,7 +122,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockValidatorName = vi.spyOn(env.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockValidatorName = vi
+			.spyOn(env.validators(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
@@ -591,7 +593,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should not navigate when clicking multiple times", async () => {
-		const mockValidatorName = vi.spyOn(env.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockValidatorName = vi
+			.spyOn(env.validators(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);
 

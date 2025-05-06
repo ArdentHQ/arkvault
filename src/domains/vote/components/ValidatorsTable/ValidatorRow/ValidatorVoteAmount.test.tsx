@@ -35,8 +35,8 @@ describe("ValidatorVoteAmount", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isValidator: true,
 			isResignedValidator: false,
+			isValidator: true,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
 		});
