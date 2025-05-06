@@ -93,7 +93,7 @@ export const PortfolioHeader = ({
 		for (const wallet of profile.wallets().values()) {
 			if (address === wallet.address()) {
 				profile.wallets().forget(wallet.id());
-				await removeSelectedAddresses([wallet.address()], wallet.network());
+				await removeSelectedAddresses([wallet.address()]);
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
 		}
