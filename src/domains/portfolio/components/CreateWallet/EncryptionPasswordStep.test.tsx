@@ -26,7 +26,6 @@ const passphrase = "power return attend drink piece found tragic fire liar page 
 const fixtureProfileId = getMainsailProfileId();
 const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
-let uInt8ArrayFix: () => void;
 
 describe("EncryptionPasswordStep", () => {
 	beforeEach(() => {

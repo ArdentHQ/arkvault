@@ -48,7 +48,6 @@ let network;
 
 describe("ImportSidePanel", () => {
 	let resetProfileNetworksMock: () => void;
-	let uInt8ArrayFix: () => void;
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
