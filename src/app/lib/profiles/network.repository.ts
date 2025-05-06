@@ -2,7 +2,7 @@ import { manifest } from "@/app/lib/mainsail/manifest.js";
 import { Networks } from "@/app/lib/sdk/index.js";
 import { NetworkManifest } from "@/app/lib/sdk/networks.js";
 import { DataRepository } from "./data.repository.js";
-import { INetworkRepository, Network, NetworkMap } from "./network.repository.contract.js";
+import { Network, NetworkMap } from "./network.repository.contract.js";
 import { IProfile } from "./profile.contract.js";
 
 export class NetworkRepository {
@@ -54,10 +54,10 @@ export class NetworkRepository {
 	}
 
 	public availableNetworks(): Networks.Network[] {
-		const networks = manifest.networks as Record<string, NetworkManifest>
+		const networks = manifest.networks as Record<string, NetworkManifest>;
 
 		return Object.values(networks)
 			.map((network) => new Networks.Network(manifest, network))
-			.sort((a, b) => a.displayName().localeCompare(b.displayName()))
+			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
 	}
 }
