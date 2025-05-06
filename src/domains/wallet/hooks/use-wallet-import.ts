@@ -230,7 +230,13 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
-		const wallet = await importWallet({ encryptedWif, ledgerOptions, network: profile.activeNetwork(), type, value });
+		const wallet = await importWallet({
+			encryptedWif,
+			ledgerOptions,
+			network: profile.activeNetwork(),
+			type,
+			value,
+		});
 		wallets.push(wallet);
 
 		if (addressViewPreference === AddressViewSelection.single) {
