@@ -124,7 +124,7 @@ export const useLedgerConnection = () => {
 				await persistLedgerConnection({
 					hasRequestedAbort: () => abortRetryReference.current,
 					options,
-					profile,
+					ledgerService: profile.ledger(),
 				});
 
 				dispatch({ type: "connected" });

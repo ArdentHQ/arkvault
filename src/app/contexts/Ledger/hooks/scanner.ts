@@ -35,7 +35,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
-		const ledgerService = new LedgerService({ config: profile.activeNetwork().config() });
+		const ledgerService = profile.ledger();
 
 		setIdle();
 		dispatch({ type: "waiting" });
@@ -52,8 +52,8 @@ export const useLedgerScanner = (coin: string, network: string) => {
 
 		await persistLedgerConnection({
 			hasRequestedAbort: () => abortRetryReference.current,
+			ledgerService,
 			options: { factor: 1, randomize: false, retries: 50 },
-			profile,
 		});
 
 		// @ts-ignore

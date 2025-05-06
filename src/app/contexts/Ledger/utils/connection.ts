@@ -13,7 +13,7 @@ export const setupEthTransportInstance = (transport: LedgerTransport) => ({
 
 const accessLedgerDevice = async (ledgerService: LedgerService) => {
 	try {
-		await ledgerService.connect((transport) => setupEthTransportInstance(transport));
+		await ledgerService.connect();
 	} catch (error) {
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.
@@ -23,8 +23,7 @@ const accessLedgerDevice = async (ledgerService: LedgerService) => {
 	}
 };
 
-const accessLedgerApp = async ({ profile }: { profile: Contracts.IProfile }) => {
-	const ledgerService = new LedgerService({ config: profile.activeNetwork().config() });
+const accessLedgerApp = async ({ ledgerService }: { ledgerService: LedgerService }) => {
 	await accessLedgerDevice(ledgerService);
 
 	await ledgerService.getPublicKey(
@@ -35,11 +34,11 @@ const accessLedgerApp = async ({ profile }: { profile: Contracts.IProfile }) => 
 };
 
 export const persistLedgerConnection = async ({
-	profile,
+	ledgerService,
 	options,
 	hasRequestedAbort,
 }: {
-	profile: Contracts.IProfile;
+	ledgerService: LedgerService,
 	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {
@@ -49,7 +48,7 @@ export const persistLedgerConnection = async ({
 		}
 
 		try {
-			await accessLedgerApp({ profile });
+			await accessLedgerApp({ ledgerService });
 		} catch (error) {
 			// Delay retry if an operation is in progress.
 			// Error: InvalidStateError: An operation that changes the device state is in progress.

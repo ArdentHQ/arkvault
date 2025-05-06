@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 
 import { Contracts, Services } from "@/app/lib/sdk";
-// @TODO: Revisit.
-// The internal implementation of HDKey fails to generate public keys from extended ledger public keys
-// which affects ledger wallet import & tx signing.
-// See discussion https://github.com/ArdentHQ/arkvault/pull/1166#discussion_r2046407360
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
@@ -14,6 +10,7 @@ import { AddressService } from "./address.service.js";
 import { Exceptions } from "@/app/lib/sdk";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
+import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -30,6 +27,7 @@ export class LedgerService {
 	constructor({ config }: { config: ConfigRepository }) {
 		this.#addressService = new AddressService();
 		this.#config = config;
+		this.#ethLedgerService = ledgerService;
 	}
 
 	async #getPublicKeys(path: string): Promise<{ extendedPublicKey: string; publicKey: string }> {
@@ -60,15 +58,9 @@ export class LedgerService {
 		return this.disconnect();
 	}
 
-	public async connect(setupTransport?: SetupLedgerFactory): Promise<void> {
+	public async connect(): Promise<void> {
 		this.#ledger = await ledgerTransportFactory();
-
-		if (setupTransport) {
-			const data = setupTransport(this.#ledger);
-
-			this.#transport = data?.transport;
-			this.#ethLedgerService = data?.ledgerService;
-		}
+		this.#transport = new Eth(this.#ledger);
 	}
 
 	public async disconnect(): Promise<void> {

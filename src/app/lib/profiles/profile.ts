@@ -48,6 +48,7 @@ import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
 import { Contracts } from "./index.js";
 import { UsernamesService } from "./usernames.service.js";
+import { LedgerService } from "../mainsail/ledger.service.js";
 
 export class Profile implements IProfile {
 	/**
@@ -461,5 +462,9 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.hasAcceptedManualInstallationDisclaimer} */
 	public hasAcceptedManualInstallationDisclaimer(): boolean {
 		return this.data().has(ProfileData.HasAcceptedManualInstallationDisclaimer);
+	}
+
+	public ledger(): LedgerService {
+		return new LedgerService({ config: this.activeNetwork().config() })
 	}
 }

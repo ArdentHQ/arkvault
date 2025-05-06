@@ -24,6 +24,7 @@ import { AttributeBag } from "./helpers/attribute-bag.js";
 import { IHostRepository } from "./host.repository.contract.js";
 import { INetworkRepository } from "./network.repository.contract.js";
 import { UsernamesService } from "./usernames.service.js";
+import { LedgerService } from "../mainsail/ledger.service.js";
 
 /**
  *
@@ -373,4 +374,11 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	usernames(): UsernamesService;
+
+	/**
+	 * Get the profile ledger service instance.
+	 *
+	 * @memberof IProfile
+	 */
+	ledger(): LedgerService;
 }
