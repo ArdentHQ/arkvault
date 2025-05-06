@@ -37,7 +37,7 @@ export const persistLedgerConnection = async ({
 	options,
 	hasRequestedAbort,
 }: {
-	ledgerService: LedgerService,
+	ledgerService: LedgerService;
 	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {

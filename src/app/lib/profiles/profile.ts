@@ -465,6 +465,6 @@ export class Profile implements IProfile {
 	}
 
 	public ledger(): LedgerService {
-		return new LedgerService({ config: this.activeNetwork().config() })
+		return new LedgerService({ config: this.activeNetwork().config() });
 	}
 }

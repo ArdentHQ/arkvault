@@ -1,7 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { Networks } from "@/app/lib/sdk";
 import { useEnvironmentContext } from "@/app/contexts";
 import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
@@ -26,11 +25,7 @@ function Balance({ wallets }: { wallets: Contracts.IReadWriteWallet[] }) {
 	};
 }
 
-export function SelectedAddresses({
-	profile,
-}: {
-	profile: Contracts.IProfile;
-}) {
+export function SelectedAddresses({ profile }: { profile: Contracts.IProfile }) {
 	return {
 		/**
 		 * Returns all the selected profile selected addresses.
@@ -46,7 +41,7 @@ export function SelectedAddresses({
 				return [];
 			}
 
-			const selectedAddresses = config.selectedAddresses
+			const selectedAddresses = config.selectedAddresses;
 
 			const profileAddresses = new Set(
 				profile
@@ -114,7 +109,7 @@ export function SelectedAddresses({
 				) as unknown as DashboardConfiguration;
 
 			if (!config.selectedAddresses) {
-				config.selectedAddresses = []
+				config.selectedAddresses = [];
 			}
 
 			config.selectedAddresses = selectedAddresses;

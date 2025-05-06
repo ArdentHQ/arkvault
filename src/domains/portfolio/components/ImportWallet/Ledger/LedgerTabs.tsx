@@ -70,7 +70,10 @@ export const LedgerTabs = ({
 					),
 				);
 
-				await setSelectedAddresses([...selectedAddresses, ...importedWallets.map((wallet) => wallet.address())])
+				await setSelectedAddresses([
+					...selectedAddresses,
+					...importedWallets.map((wallet) => wallet.address()),
+				]);
 			}
 		},
 		[activeProfile, activeNetwork, selectedAddresses, listenDevice],
