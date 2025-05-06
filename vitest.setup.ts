@@ -110,8 +110,6 @@ let localstorageSpy;
 // Treat act warnings as errors.
 actWarningsAsErrors();
 
-let originalHasInstance;
-
 beforeAll(async () => {
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 
