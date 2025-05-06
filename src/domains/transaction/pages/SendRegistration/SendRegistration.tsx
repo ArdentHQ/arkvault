@@ -1,4 +1,3 @@
-import { Networks } from "@/app/lib/sdk";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -53,7 +52,7 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues, errors } = form;
+	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();

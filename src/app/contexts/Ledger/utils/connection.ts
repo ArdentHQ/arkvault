@@ -4,7 +4,6 @@ import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 import { LedgerTransport } from "@/app/contexts/Ledger/Ledger.contracts";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service";
-import { Contracts } from "@/app/lib/profiles";
 
 export const setupEthTransportInstance = (transport: LedgerTransport) => ({
 	ledgerService,

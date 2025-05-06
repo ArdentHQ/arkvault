@@ -5,7 +5,7 @@ import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
 import { createRange } from "./ledger.service.helpers.js";
-import { LedgerSignature, SetupLedgerFactory } from "./ledger.service.types.js";
+import { LedgerSignature } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
 import { Exceptions } from "@/app/lib/sdk";
 import { WalletData } from "./wallet.dto.js";

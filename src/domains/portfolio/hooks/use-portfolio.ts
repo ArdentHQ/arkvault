@@ -175,7 +175,7 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 			addresses.setMode(mode);
 			await persist();
 		},
-		setSelectedAddresses: async (selectedAddresses: string[], network?: Networks.Network) => {
+		setSelectedAddresses: async (selectedAddresses: string[]) => {
 			addresses.set(selectedAddresses);
 
 			if (!addresses.hasSelected() && profile.wallets().first()) {

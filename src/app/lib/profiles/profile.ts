@@ -48,7 +48,7 @@ import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
 import { Contracts } from "./index.js";
 import { UsernamesService } from "./usernames.service.js";
-import { LedgerService } from "../mainsail/ledger.service.js";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 
 export class Profile implements IProfile {
 	/**

@@ -7,7 +7,6 @@ import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
-import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 
 export const useLedgerScanner = (coin: string, network: string) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
