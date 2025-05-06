@@ -62,7 +62,7 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch, errors } = form;
+	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const {
 		value,

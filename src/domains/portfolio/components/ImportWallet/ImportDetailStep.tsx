@@ -272,10 +272,16 @@ const ImportInputField = ({
 			profile={profile}
 			label={t("COMMON.SECRET")}
 			data-testid="ImportWallet__secret-input"
-			findAddress={async (value) => {
+			findAddress={async (secret) => {
 				try {
-					const { address } = await new AddressService().fromSecret(value);
-					return address;
+					const wallet = await profile.walletFactory().fromSecret({ secret });
+					const isValid = new AddressService().validate(wallet.address());
+
+					if (!isValid) {
+						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
+					}
+
+					return wallet.address();
 				} catch (error) {
 					if (error.message.includes("value is BIP39")) {
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));

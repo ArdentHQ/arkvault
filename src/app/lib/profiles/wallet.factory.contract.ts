@@ -79,8 +79,6 @@ export interface IAddressWithDerivationPathOptions {
  * @interface ISecretOptions
  */
 export interface ISecretOptions {
-	coin: string;
-	network: string;
 	secret: string;
 	password?: string;
 }
