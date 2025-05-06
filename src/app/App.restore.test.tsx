@@ -25,18 +25,6 @@ describe("App", () => {
 
 		history.replace("/");
 		env.reset();
-
-		const originalHasInstance = Uint8Array[Symbol.hasInstance];
-
-		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-			configurable: true,
-			value(potentialInstance: unknown) {
-				if (this === Uint8Array) {
-					return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-				}
-				return originalHasInstance.call(this, potentialInstance);
-			},
-		});
 	});
 
 	it("should redirect to root if profile restoration error occurs", async () => {
