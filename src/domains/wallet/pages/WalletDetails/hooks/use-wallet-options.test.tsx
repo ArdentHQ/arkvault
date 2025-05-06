@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { Enums } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Enums } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 
 import { renderHook } from "@testing-library/react";
 import { useWalletOptions } from "./use-wallet-options";

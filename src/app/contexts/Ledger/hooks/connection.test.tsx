@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Options } from "p-retry";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useTranslation } from "react-i18next";

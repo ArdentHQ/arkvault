@@ -1,9 +1,9 @@
 import { omitBy, uniqBy } from "@/app/lib/helpers";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
 
-import { Contracts } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/sdk";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
-import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";

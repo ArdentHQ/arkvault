@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import { createHashHistory } from "history";
 
 import { AddressRow, WalletAvatar } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
-import { data } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
-import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
+import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
@@ -84,7 +84,7 @@ describe("AddressRow", () => {
 		profile.wallets().push(wallet2);
 
 		await profile.sync();
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();

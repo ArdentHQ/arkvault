@@ -7,13 +7,13 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Dashboard } from "./Dashboard";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -37,7 +37,7 @@ describe("Dashboard", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

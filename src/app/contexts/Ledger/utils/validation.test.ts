@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { hasRequiredAppVersion } from "./validation";
 
 import { env, getMainsailProfileId, mockNanoXTransport } from "@/utils/testing-library";

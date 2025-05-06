@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -127,7 +127,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								dataTestId={`AddressRowMobile__wallet-status-${index}`}
 								className="sm:hidden"
 								wallet={votes[0]?.wallet}
-								activeDelegates={wallet.network().delegateCount()}
+								activeValidators={wallet.network().validatorCount()}
 							/>
 
 							{votes[0]?.wallet && (
@@ -164,7 +164,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 					>
 						<WalletStatus
 							wallet={votes[0]?.wallet}
-							activeDelegates={wallet.network().delegateCount()}
+							activeValidators={wallet.network().validatorCount()}
 							fallback={
 								<span className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold">
 									{t("COMMON.NOT_AVAILABLE")}

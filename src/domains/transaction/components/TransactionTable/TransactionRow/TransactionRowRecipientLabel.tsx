@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 
 import { Address } from "@/app/components/Address";
@@ -24,11 +24,11 @@ const RecipientLabel = ({ type }: { type: string }) => {
 };
 
 const VoteCombinationLabel = ({
-	delegate,
+	validator,
 	votes,
 	unvotes,
 }: {
-	delegate?: Contracts.IReadOnlyWallet;
+	validator?: Contracts.IReadOnlyWallet;
 	votes: string[];
 	unvotes: string[];
 }) => (
@@ -36,7 +36,7 @@ const VoteCombinationLabel = ({
 		{votes.length === 1 && unvotes.length === 1 ? (
 			<>
 				<RecipientLabel type="voteCombination" />
-				<DelegateLabel username={delegate?.username()} />
+				<DelegateLabel username={validator?.username()} />
 			</>
 		) : (
 			<div className="space-x-1">
@@ -71,10 +71,10 @@ const DelegateLabel = ({ username, count }: { username?: string; count?: number 
 	</span>
 );
 
-const VoteLabel = ({ delegates, isUnvote }: { delegates: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => (
+const VoteLabel = ({ validators, isUnvote }: { validators: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => (
 	<span data-testid="TransactionRowVoteLabel">
 		<RecipientLabel type={isUnvote ? "unvote" : "vote"} />
-		{delegates.length > 0 && <DelegateLabel username={delegates[0]?.username()} count={delegates.length} />}
+		{validators.length > 0 && <DelegateLabel username={validators[0]?.username()} count={validators.length} />}
 	</span>
 );
 
@@ -89,7 +89,7 @@ export const BaseTransactionRowRecipientLabel = ({
 
 	const { isXs, isSm } = useBreakpoint();
 
-	const [delegates, setDelegates] = useState<{
+	const [validators, setValidators] = useState<{
 		votes: Contracts.IReadOnlyWallet[];
 		unvotes: Contracts.IReadOnlyWallet[];
 	}>({
@@ -99,9 +99,9 @@ export const BaseTransactionRowRecipientLabel = ({
 
 	useEffect(() => {
 		if (transaction?.isVote() || transaction?.isUnvote()) {
-			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
-				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
+			setValidators({
+				unvotes: env.validators().map(transaction.wallet(), transaction.unvotes()),
+				votes: env.validators().map(transaction.wallet(), transaction.votes()),
 			});
 		}
 	}, [env, transaction]);
@@ -131,7 +131,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isVoteCombination()) {
 		return (
 			<VoteCombinationLabel
-				delegate={delegates.votes[0]}
+				validator={validators.votes[0]}
 				votes={transaction?.votes()}
 				unvotes={transaction?.unvotes()}
 			/>
@@ -141,7 +141,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isVote() || transaction?.isUnvote()) {
 		return (
 			<VoteLabel
-				delegates={delegates[transaction?.isVote() ? "votes" : "unvotes"]}
+				validators={validators[transaction?.isVote() ? "votes" : "unvotes"]}
 				isUnvote={transaction.isUnvote()}
 			/>
 		);
@@ -162,7 +162,7 @@ export const TransactionRowRecipientLabel = ({
 	<BaseTransactionRowRecipientLabel
 		transaction={transaction}
 		type={transaction.type()}
-		recipient={transaction.recipient()}
+		recipient={transaction.to()}
 		walletName={walletName}
 		addressClass={addressClass}
 	/>

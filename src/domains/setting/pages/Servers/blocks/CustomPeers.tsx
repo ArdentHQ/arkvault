@@ -2,9 +2,8 @@ import React, { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import cn from "classnames";
-import { Networks } from "@ardenthq/sdk";
-import { Numeral } from "@ardenthq/sdk-intl";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Numeral } from "@/app/lib/intl";
+import { Contracts } from "@/app/lib/profiles";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Button } from "@/app/components/Button";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
@@ -20,31 +19,43 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { MobileTableElement, MobileTableElementRow } from "@/app/components/MobileTableElement";
 import { TruncatedWithTooltip } from "@/app/components/TruncatedWithTooltip";
+import { networkDisplayName } from "@/utils/network-utils";
+
+interface HostDetails {
+	url: string;
+	status?: boolean;
+}
 
 interface PeerRowProperties {
 	name: string;
-	address: string;
 	checked: boolean;
 	height: number | undefined;
 	serverStatus?: boolean;
-	serverType: Networks.NetworkHost["type"];
 	onToggle: (isEnabled: boolean) => void;
+	networkName: string;
 	onSelectOption: ({ value }: DropdownOption) => void;
 	dropdownOptions: DropdownOption[];
+	hosts: {
+		publicApi: HostDetails;
+		txApi: HostDetails;
+		evmApi: HostDetails;
+	};
 }
 
 const PeerRow = ({
 	name,
-	address,
+	hosts,
 	checked,
 	height,
+	networkName,
 	serverStatus,
-	serverType,
 	onToggle,
 	onSelectOption,
 	dropdownOptions,
 }: PeerRowProperties) => {
 	const { t } = useTranslation();
+
+	const { publicApi, txApi, evmApi } = hosts;
 
 	const formattedHeight = useMemo(() => Numeral.make("en").format(height || 0), [height]);
 
@@ -58,33 +69,68 @@ const PeerRow = ({
 		}
 	}, [checked, serverStatus]);
 
+	const tdClasses = cn(rowColor, "flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]");
+
 	return (
 		<TableRow data-testid={checked ? "CustomPeers-network-item--checked" : "CustomPeers-network-item"}>
-			<TableCell variant="start" innerClassName={rowColor}>
-				<div className="md-lg:h-5 md-lg:overflow-hidden relative flex w-full flex-col">
-					<div className="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col">
+			<TableCell variant="start" innerClassName={tdClasses}>
+				<div className="relative flex h-20 w-full flex-col md-lg:overflow-hidden">
+					<div className="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full">
 						<TruncatedWithTooltip
-							className="text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer truncate text-sm font-semibold transition-colors duration-100"
+							className="cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
 							text={name}
 						/>
+						<div className="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dark:text-theme-dark-500">
+							{networkName}
+						</div>
+					</div>
+				</div>
+			</TableCell>
 
+			<TableCell innerClassName={tdClasses}>
+				<div className="h-20 space-y-3">
+					<div className="flex items-center space-x-5">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("SETTINGS.SERVERS.API")}:
+						</div>
 						<TruncatedWithTooltip
-							className="text-theme-secondary-700 dark:text-theme-dark-200 md-lg:hidden text-xs font-semibold"
-							text={address}
+							text={publicApi.url}
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+						/>
+					</div>
+
+					<div className="flex items-center space-x-5">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("SETTINGS.SERVERS.TX")}:
+						</div>
+						<TruncatedWithTooltip
+							text={txApi.url}
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+						/>
+					</div>
+
+					<div className="flex items-center space-x-5">
+						<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+							{t("SETTINGS.SERVERS.EVM")}:
+						</div>
+						<TruncatedWithTooltip
+							text={evmApi.url}
+							className="cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
 						/>
 					</div>
 				</div>
 			</TableCell>
 
-			<TableCell className="md-lg:table-cell hidden" innerClassName={rowColor}>
-				<TruncatedWithTooltip
-					text={address}
-					className="text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer text-sm font-semibold transition-colors duration-100 md:max-w-72 lg:max-w-44 xl:max-w-72"
-				/>
+			<TableCell innerClassName={tdClasses} variant="middle">
+				<div className="flex h-20 w-full flex-col items-center space-y-2.5">
+					<CustomPeerStatusIcon status={publicApi.status} />
+					<CustomPeerStatusIcon status={txApi.status} />
+					<CustomPeerStatusIcon status={evmApi.status} />
+				</div>
 			</TableCell>
 
-			<TableCell innerClassName={rowColor}>
-				<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex h-11 items-center">
+			<TableCell innerClassName={tdClasses}>
+				<div className="flex h-20 items-start text-theme-secondary-900 dark:text-theme-dark-50">
 					{height === undefined ? (
 						<span className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</span>
 					) : (
@@ -93,29 +139,9 @@ const PeerRow = ({
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName={rowColor}>
-				<div className="flex h-11 items-center">
-					<Tooltip content={serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}>
-						<div className="flex cursor-pointer justify-center">
-							<Icon
-								className="text-theme-secondary-700"
-								size="lg"
-								name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
-							/>
-						</div>
-					</Tooltip>
-				</div>
-			</TableCell>
-
-			<TableCell innerClassName={rowColor}>
-				<div className="flex h-11 items-center">
-					<CustomPeerStatusIcon status={serverStatus} />
-				</div>
-			</TableCell>
-
-			<TableCell variant="end" innerClassName={rowColor}>
-				<div className="flex h-11 items-center">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-r pr-3">
+			<TableCell variant="end" innerClassName={cn(tdClasses, "pr-0")}>
+				<div className="flex h-20 items-start">
+					<div className="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 						<Toggle
 							data-testid="CustomPeers-toggle"
 							defaultChecked={checked}
@@ -124,12 +150,13 @@ const PeerRow = ({
 					</div>
 
 					<Dropdown
+						placement="right-start"
 						data-testid="CustomPeers--dropdown"
 						toggleContent={
 							<Button
 								variant="transparent"
 								size="icon"
-								className="text-theme-secondary-700 dark:text-theme-dark-200"
+								className="-mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
 							>
 								<Icon name="EllipsisVerticalFilled" size="md" />
 							</Button>
@@ -151,8 +178,8 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 			className="flex cursor-pointer justify-center"
 			onClick={(event: React.MouseEvent) => event.stopPropagation()}
 		>
-			{status === true && (
-				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}>
+			{status && (
+				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.RESPONSIVE")}>
 					<div data-testid="CustomPeersPeer--statusok">
 						<Icon name="StatusOk" className="text-theme-success-600" size="lg" />
 					</div>
@@ -160,7 +187,7 @@ const CustomPeerStatusIcon = ({ status }: { status?: boolean }) => {
 			)}
 
 			{status === false && (
-				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}>
+				<Tooltip content={t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.UNRESPONSIVE")}>
 					<div data-testid="CustomPeersPeer--statuserror">
 						<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
 					</div>
@@ -186,11 +213,12 @@ const CustomPeersPeer: React.VFC<{
 	// TODO: break it down into smaller components.
 }> = ({ index, normalizedNetwork, onDelete, onUpdate, onToggle, profile }) => {
 	const { persist } = useEnvironmentContext();
-	const { name, serverType, address, height, enabled } = normalizedNetwork;
+	const { name, publicApiEndpoint, transactionApiEndpoint, evmApiEndpoint, height, enabled, network } =
+		normalizedNetwork;
 
 	const { t } = useTranslation();
 
-	const { serverStatus, syncStatus } = useServerStatus({
+	const { publicApiStatus, txApiStatus, evmApiStatus, syncStatus } = useServerStatus({
 		network: normalizedNetwork,
 		profile,
 	});
@@ -239,17 +267,6 @@ const CustomPeersPeer: React.VFC<{
 						onHeaderClick={handleHeaderClick}
 						titleExtra={
 							<div className="flex items-center gap-1">
-								<div
-									className={cn("items-center gap-1", {
-										flex: !isExpanded,
-										"hidden sm:flex": isExpanded,
-									})}
-								>
-									<CustomPeerStatusIcon status={serverStatus} />
-
-									<Divider type="vertical" />
-								</div>
-
 								<Toggle
 									data-testid="CustomPeers-toggle"
 									defaultChecked={enabled}
@@ -290,56 +307,66 @@ const CustomPeersPeer: React.VFC<{
 								</div>
 							</div>
 						}
-						bodyClassName={cn("overflow-auto sm:grid-cols-3", { "hidden sm:grid": !isExpanded })}
+						bodyClassName={cn("overflow-auto sm:grid-cols-[2.5fr_1fr_0.5fr]", {
+							"hidden sm:grid": !isExpanded,
+						})}
 					>
-						<MobileTableElementRow
-							title={t("COMMON.IP_ADDRESS")}
-							className="overflow-auto"
-							bodyClassName="overflow-auto"
-						>
-							<TruncatedWithTooltip
-								text={address}
-								className="text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold"
-							/>
-						</MobileTableElementRow>
+						<MobileTableElementRow title={t("COMMON.ENDPOINTS")}>
+							<div className="space-y-3">
+								<div className="flex items-center space-x-5">
+									<div className="flex min-w-0 flex-1 items-center space-x-5">
+										<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:flex-shrink-0">
+											{t("SETTINGS.SERVERS.API")}:
+										</div>
+										<TruncatedWithTooltip
+											text={publicApiEndpoint}
+											className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+										/>
+									</div>
+									<CustomPeerStatusIcon status={publicApiStatus} />
+								</div>
 
-						<MobileTableElementRow title={t("COMMON.HEIGHT")}>
-							<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm font-semibold">
-								{height}
-							</span>
-						</MobileTableElementRow>
+								<div className="flex items-center space-x-5">
+									<div className="flex min-w-0 flex-1 items-center space-x-5">
+										<div className="w-9 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+											{t("SETTINGS.SERVERS.TX")}:
+										</div>
+										<TruncatedWithTooltip
+											text={transactionApiEndpoint}
+											className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+										/>
+									</div>
+									<CustomPeerStatusIcon status={txApiStatus} />
+								</div>
 
-						<MobileTableElementRow title={t("COMMON.TYPE")}>
-							<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold">
-								<Icon
-									className="text-theme-secondary-700"
-									size="lg"
-									name={serverType === "musig" ? "ServerMultisign" : "ServerPeer"}
-								/>
-								<div>{serverType === "musig" ? t("COMMON.MULTISIG") : t("COMMON.PEER")}</div>
-							</div>
-						</MobileTableElementRow>
-
-						<MobileTableElementRow title={t("COMMON.STATUS")} className="sm:hidden">
-							<div className="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold">
-								<CustomPeerStatusIcon status={serverStatus} />
-								<div>
-									{serverStatus === true && (
-										<span className="truncate">
-											{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.HEALTHY")}
-										</span>
-									)}
-
-									{serverStatus === false && (
-										<span className="truncate">
-											{t("SETTINGS.SERVERS.PEERS_STATUS_TOOLTIPS.WITH_ISSUES")}
-										</span>
-									)}
+								<div className="flex items-center space-x-5">
+									<div className="flex min-w-0 flex-1 items-center space-x-5">
+										<div className="w-9 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+											{t("SETTINGS.SERVERS.EVM")}:
+										</div>
+										<TruncatedWithTooltip
+											text={evmApiEndpoint}
+											className="block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+										/>
+									</div>
+									<CustomPeerStatusIcon status={evmApiStatus} />
 								</div>
 							</div>
 						</MobileTableElementRow>
 
-						<div className="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden">
+						<MobileTableElementRow title={t("COMMON.NETWORK")} className="place-content-start">
+							<div className="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								{networkDisplayName(network)}
+							</div>
+						</MobileTableElementRow>
+
+						<MobileTableElementRow title={t("COMMON.HEIGHT")} className="place-content-start">
+							<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50">
+								{height}
+							</span>
+						</MobileTableElementRow>
+
+						<div className="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden">
 							<Button variant="secondary" size="sm" onClick={() => handleSelectOption({ value: "edit" })}>
 								<Icon name="Pencil" />
 							</Button>
@@ -365,11 +392,23 @@ const CustomPeersPeer: React.VFC<{
 	return (
 		<PeerRow
 			name={name}
-			address={address}
+			hosts={{
+				evmApi: {
+					status: evmApiStatus,
+					url: evmApiEndpoint,
+				},
+				publicApi: {
+					status: publicApiStatus,
+					url: publicApiEndpoint,
+				},
+				txApi: {
+					status: txApiStatus,
+					url: transactionApiEndpoint,
+				},
+			}}
+			networkName={networkDisplayName(network)}
 			checked={enabled}
 			height={height}
-			serverStatus={serverStatus}
-			serverType={serverType}
 			onToggle={onToggle}
 			onSelectOption={handleSelectOption}
 			dropdownOptions={dropdownOptions}
@@ -426,29 +465,25 @@ const CustomPeers: React.VFC<{
 
 	const columns: Column[] = [
 		{
-			Header: t("COMMON.NETWORK"),
+			Header: t("COMMON.NAME") + " / " + t("COMMON.NETWORK"),
+			cellWidth: "md:w-28 md-lg:w-36 lg:w-56 xl:w-64",
 			disableSortBy: true,
 			headerClassName: "no-border w-1/3",
 		},
 		{
-			Header: t("COMMON.IP_ADDRESS"),
+			Header: t("COMMON.ENDPOINTS"),
+			cellWidth: "md:w-40 xl:w-72",
 			disableSortBy: true,
-			headerClassName: "hidden md-lg:table-cell no-border",
-		},
-		{
-			Header: t("COMMON.HEIGHT"),
-			disableSortBy: true,
-			headerClassName: "no-border",
-			minimumWidth: true,
-		},
-		{
-			Header: t("COMMON.TYPE"),
-			disableSortBy: true,
-			headerClassName: "no-border",
-			minimumWidth: true,
+			headerClassName: " no-border",
 		},
 		{
 			Header: t("COMMON.STATUS"),
+			disableSortBy: true,
+			headerClassName: "no-border",
+			minimumWidth: true,
+		},
+		{
+			Header: t("COMMON.HEIGHT"),
 			disableSortBy: true,
 			headerClassName: "no-border",
 			minimumWidth: true,

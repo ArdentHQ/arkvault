@@ -1,5 +1,5 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { MouseEvent, useMemo } from "react";
+import { Contracts, DTO } from "@/app/lib/profiles";
+import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { SignButton } from "./SignedTransactionRow";
 import { TableRow } from "@/app/components/Table";
@@ -8,12 +8,9 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Divider } from "@/app/components/Divider";
-import { Tooltip } from "@/app/components/Tooltip";
-import { assertString } from "@/utils/assertions";
-import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
@@ -44,15 +41,6 @@ export const SignedTransactionRowMobile = ({
 		onRemovePendingTransaction?.(transaction);
 	};
 
-	const canBeDeleted = useMemo(() => {
-		const publicKey = transaction.wallet().publicKey();
-
-		assertString(publicKey);
-
-		const musigInfo = getMultiSignatureInfo(transaction);
-		return musigInfo.publicKeys.includes(publicKey);
-	}, [transaction]);
-
 	return (
 		<TableRow data-testid="TableRow__mobile" onClick={() => onRowClick?.(transaction)} border={false}>
 			<td>
@@ -60,8 +48,8 @@ export const SignedTransactionRowMobile = ({
 					<div className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black">
 						<div className="text-sm font-semibold">
 							<TruncateMiddle
-								className="text-theme-primary-600 cursor-pointer"
-								text={transaction.id()}
+								className="cursor-pointer text-theme-primary-600"
+								text={transaction.hash()}
 								maxChars={14}
 								data-testid="SignedTransactionRowMobile__transaction-id"
 							/>
@@ -90,22 +78,13 @@ export const SignedTransactionRowMobile = ({
 								type="vertical"
 								className="border-theme-secondary-300 dark:border-theme-secondary-800 m-0"
 							/>
-							<Tooltip
-								content={
-									canBeDeleted
-										? undefined
-										: t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG")
-								}
-							>
-								<div>
-									<TableRemoveButton
-										isDisabled={!canBeDeleted}
-										onClick={handleRemove}
-										className="m-0 p-0"
-										data-testid="SignedTransactionRowMobile--remove"
-									/>
-								</div>
-							</Tooltip>
+							<div>
+								<TableRemoveButton
+									onClick={handleRemove}
+									className="m-0 p-0"
+									data-testid="SignedTransactionRowMobile--remove"
+								/>
+							</div>
 						</div>
 					</div>
 

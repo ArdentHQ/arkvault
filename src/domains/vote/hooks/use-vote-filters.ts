@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useMemo, useState } from "react";
 import { useWalletAlias } from "@/app/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";

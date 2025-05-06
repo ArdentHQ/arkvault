@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useForm } from "react-hook-form";
 import { useTranslation, Trans } from "react-i18next";
 import { Prompt } from "react-router-dom";
@@ -106,7 +106,7 @@ export const ServersSettings = () => {
 				i18nKey="SETTINGS.SERVERS.ADD_NEW_SERVER.SUCCESS_MESSAGE"
 				values={{
 					networkName: networkDisplayName(network.network),
-					networkType: network.serverType === "musig" ? "multisig server" : "network peer",
+					networkType: "network peer",
 					serverName: network.name,
 				}}
 				components={{ strong: <strong /> }}

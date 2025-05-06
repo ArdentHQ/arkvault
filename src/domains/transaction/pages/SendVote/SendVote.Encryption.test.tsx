@@ -10,15 +10,15 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@/app/lib/profiles";
+import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
@@ -27,7 +27,7 @@ import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { renderHook } from "@testing-library/react";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
-import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();
@@ -103,7 +103,7 @@ describe("SendVote", () => {
 
 		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {

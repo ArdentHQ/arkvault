@@ -3,7 +3,7 @@ import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
 import { Button } from "@/app/components/Button";
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Amount } from "@/app/components/Amount";
 import { useProfileBalance } from "@/app/hooks/use-profile-balance";
 import { useConfiguration } from "@/app/contexts";

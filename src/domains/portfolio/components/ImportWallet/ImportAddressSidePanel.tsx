@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -35,9 +35,11 @@ enum Step {
 export const ImportAddressesSidePanel = ({
 	open,
 	onOpenChange,
+	onMountChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
+	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const history = useHistory();
 	const activeProfile = useActiveProfile();
@@ -78,18 +80,6 @@ export const ImportAddressesSidePanel = ({
 		register({ name: "useEncryption", type: "boolean", value: false });
 		register({ name: "acceptResponsibility", type: "boolean", value: false });
 	}, [register]);
-
-	useEffect(() => {
-		if (open) {
-			setActiveTab(Step.MethodStep);
-			setWalletGenerationInput(undefined);
-			return;
-		}
-
-		setActiveTab(Step.MethodStep);
-		setImportedWallet(undefined);
-		form.reset();
-	}, [open]);
 
 	useEffect(() => {
 		if (value !== undefined) {
@@ -271,6 +261,7 @@ export const ImportAddressesSidePanel = ({
 			open={open}
 			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
+			onMountChange={onMountChange}
 		>
 			<Form context={form} data-testid="ImportWallet__form">
 				<>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 
 export type TransactionRowProperties = {
 	transaction: DTO.ExtendedConfirmedTransactionData;

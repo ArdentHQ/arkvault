@@ -1,5 +1,5 @@
-import { Enums } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Enums } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
@@ -9,11 +9,8 @@ import { isCustomNetwork } from "@/utils/network-utils";
 import { hasAvailableMusigServer } from "@/utils/server-utils";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
-	try {
-		return wallet.isMultiSignature();
-	} catch {
-		return false;
-	}
+	console.log(wallet);
+	return false;
 };
 
 const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
@@ -68,9 +65,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// 	return registrationOptions;
 	// }
 
-	const walletsWithValidatorActions = wallets.filter(
-		(w) => w.balance() > 0 && !isMultiSignature(w) && isRestoredAndSynced(w),
-	);
+	const walletsWithValidatorActions = wallets.filter((w) => w.balance() > 0 && isRestoredAndSynced(w));
 
 	if (walletsWithValidatorActions.length > 0) {
 		if (
@@ -153,7 +148,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 	// 	return additionalOptions;
 	// }
 
-	if (wallets.some((w) => !isMultiSignature(w) && w.network().allows(Enums.FeatureFlag.MessageSign))) {
+	if (wallets.some((w) => w.network().allows(Enums.FeatureFlag.MessageSign))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),
 			value: "sign-message",

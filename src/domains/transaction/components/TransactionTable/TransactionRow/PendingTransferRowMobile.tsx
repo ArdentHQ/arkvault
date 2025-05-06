@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { TableRow } from "@/app/components/Table";
@@ -8,7 +8,7 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Divider } from "@/app/components/Divider";
 
 export const PendingTransferRowMobile = ({
@@ -30,8 +30,8 @@ export const PendingTransferRowMobile = ({
 					<div className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black">
 						<div className="text-sm font-semibold">
 							<TruncateMiddle
-								className="text-theme-primary-600 cursor-pointer"
-								text={transaction.id()}
+								className="cursor-pointer text-theme-primary-600"
+								text={transaction.hash()}
 								maxChars={14}
 								onClick={() => onRowClick?.(transaction)}
 								data-testid="PendingTransactionRow__transaction-id"
@@ -64,8 +64,8 @@ export const PendingTransferRowMobile = ({
 								</Label>
 								<span className="text-sm">
 									<TruncateMiddle
-										className="text-theme-primary-600 cursor-pointer font-semibold"
-										text={transaction.recipient() || ""}
+										className="cursor-pointer font-semibold text-theme-primary-600"
+										text={transaction.to() || ""}
 										maxChars={14}
 										data-testid="PendingTransactionRowRecipientLabel"
 									/>
@@ -75,7 +75,7 @@ export const PendingTransferRowMobile = ({
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
 							<AmountLabel
-								value={transaction.amount() + transaction.fee()}
+								value={transaction.value() + transaction.fee()}
 								isNegative={transaction.isSent()}
 								ticker={wallet.currency()}
 								isCompact

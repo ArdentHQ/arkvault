@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { useTheme, ViewingModeType } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";

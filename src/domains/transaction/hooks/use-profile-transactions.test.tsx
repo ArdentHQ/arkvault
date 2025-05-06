@@ -4,7 +4,7 @@ import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, syncValidators, waitFor } from "@/utils/testing-library";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -24,7 +24,7 @@ describe("useProfileTransactions", () => {
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -64,7 +64,7 @@ describe("useProfileTransactions", () => {
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -138,7 +138,7 @@ describe("useProfileTransactions", () => {
 	it("#fetchTransactions", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -164,7 +164,7 @@ describe("useProfileTransactions", () => {
 	it("#updateFilters", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -208,7 +208,7 @@ describe("useProfileTransactions", () => {
 	it("#fetchMore", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

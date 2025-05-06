@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { Dropdown } from "@/app/components/Dropdown";
@@ -82,7 +82,10 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 				>
 					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
 						<div data-testid="ContactListItemMobile__addresses" className="w-full space-y-3">
-							{contact.addresses().values().map(renderAddress)}
+							{contact
+								.addresses()
+								.values()
+								.map((element) => renderAddress(element))}
 						</div>
 					</MobileTableElementRow>
 				</MobileTableElement>

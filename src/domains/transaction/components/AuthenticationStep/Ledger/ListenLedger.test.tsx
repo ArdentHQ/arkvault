@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";

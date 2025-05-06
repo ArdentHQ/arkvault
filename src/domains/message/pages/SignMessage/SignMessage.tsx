@@ -1,9 +1,9 @@
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
 import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
@@ -256,9 +256,10 @@ export const SignMessage: React.VFC = () => {
 										data={JSON.stringify(signedMessage)}
 										data-testid="SignMessage__copy-button"
 										wrapperClassName="flex-1 md:flex-none"
+										buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
 									>
 										<div
-											className="relative inline-flex items-center space-x-3 rounded bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
+											className="relative inline-flex items-center space-x-3 rounded"
 											data-testid="SignMessage__back-to-wallet-button"
 										>
 											<Icon name="Copy" />

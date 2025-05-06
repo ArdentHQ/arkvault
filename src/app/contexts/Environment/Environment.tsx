@@ -1,4 +1,4 @@
-import { Environment } from "@ardenthq/sdk-profiles";
+import { Environment } from "@/app/lib/profiles";
 import React from "react";
 
 import { isE2E } from "@/utils/test-helpers";

@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { RegisterOptions } from "react-hook-form";
 import { useTranslation } from "react-i18next";

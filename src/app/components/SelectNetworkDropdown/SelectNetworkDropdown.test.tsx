@@ -1,6 +1,6 @@
 import React from "react";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";
 import { SelectNetworkDropdown } from "./SelectNetworkDropdown";

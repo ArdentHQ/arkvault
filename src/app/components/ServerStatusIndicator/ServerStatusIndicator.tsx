@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";

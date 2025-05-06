@@ -1,11 +1,12 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Link } from "@/app/components/Link";
 import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
+import { DateTime } from "@/app/lib/intl/datetime";
 
 export const TransactionDetails = ({
 	transaction: initialTransaction,
@@ -34,17 +35,21 @@ export const TransactionDetails = ({
 		}
 
 		const refreshTransaction = async () => {
-			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.id());
+			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.hash());
 			setTransaction(confirmedTransaction);
 		};
 
 		void refreshTransaction();
 	}, [isConfirmed, transaction, transactionWallet]);
 
-	const timestamp = transaction.timestamp();
+	const timestamp = DateTime.make(
+		transaction.timestamp(),
+		"en",
+		Intl.DateTimeFormat().resolvedOptions().timeZone,
+	).format(format);
 
 	const { blockHeight } = useBlockHeight({
-		blockId: transaction.blockId(),
+		blockHash: transaction.blockHash(),
 		network: transactionWallet.network(),
 	});
 
@@ -53,27 +58,25 @@ export const TransactionDetails = ({
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
-					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
-						{timestamp.format(format)}
-					</div>
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{timestamp}</div>
 				</div>
 
 				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
-					{transaction.blockId() && (
+					{transaction.blockHash() && (
 						<Link
 							isExternal
-							to={transactionWallet.coin().link().block(transaction.blockId())}
+							to={transactionWallet.coin().link().block(transaction.blockHash())}
 							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
 						>
 							{blockHeight}
 						</Link>
 					)}
 
-					{!transaction.blockId() && (
-						<p className="text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5">
+					{!transaction.blockHash() && (
+						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>
 					)}

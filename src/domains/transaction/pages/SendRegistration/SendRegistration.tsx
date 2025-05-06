@@ -1,5 +1,5 @@
-import { Networks } from "@ardenthq/sdk";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
@@ -19,11 +19,9 @@ import {
 	signValidatorRegistration,
 } from "@/domains/transaction/components/ValidatorRegistrationForm";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
-import { useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
-import { GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
+import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import {
 	signUsernameRegistration,
 	UsernameRegistrationForm,
@@ -44,7 +42,6 @@ export const SendRegistration = () => {
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
@@ -91,10 +88,7 @@ export const SendRegistration = () => {
 		register("isLoading");
 	}, [register, activeWallet, common, fees]);
 
-	const type =
-		registrationType === "validatorRegistration"
-			? "delegateRegistration"
-			: (registrationType as keyof typeof GasLimit);
+	const type = registrationType as keyof typeof GasLimit;
 
 	useToggleFeeFields({
 		activeTab,
@@ -122,7 +116,6 @@ export const SendRegistration = () => {
 	useLayoutEffect(() => {
 		const registrations = {
 			default: () => setRegistrationForm(ValidatorRegistrationForm),
-			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
 			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
 		};
 
@@ -155,8 +148,7 @@ export const SendRegistration = () => {
 		assertWallet(activeWallet);
 
 		try {
-			const { mnemonic, encryptionPassword, wif, privateKey, secret, participants, minParticipants, fee } =
-				getValues();
+			const { mnemonic, encryptionPassword, wif, privateKey, secret } = getValues();
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
@@ -169,22 +161,6 @@ export const SendRegistration = () => {
 				secret,
 				wif,
 			});
-
-			if (registrationType === "multiSignature") {
-				const transaction = await sendMultiSignature({
-					env,
-					fee,
-					minParticipants,
-					participants,
-					signatory,
-					wallet: activeWallet,
-				});
-
-				await env.persist();
-				setTransaction(transaction);
-				setActiveTab(stepCount);
-				return;
-			}
 
 			if (registrationType === "validatorRegistration") {
 				const transaction = await signValidatorRegistration({
@@ -216,9 +192,6 @@ export const SendRegistration = () => {
 	};
 
 	const handleBack = () => {
-		// Abort any existing listener
-		abortReference.current.abort();
-
 		if (activeTab === 1) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
@@ -227,8 +200,6 @@ export const SendRegistration = () => {
 	};
 
 	const handleNext = () => {
-		abortReference.current = new AbortController();
-
 		const nextStep = activeTab + 1;
 		const isNextStepAuthentication = nextStep === authenticationStep;
 

@@ -1,11 +1,11 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 import { TransactionExportModal } from ".";
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncValidators, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
@@ -40,7 +40,7 @@ describe("TransactionExportModal", () => {
 		history.push(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

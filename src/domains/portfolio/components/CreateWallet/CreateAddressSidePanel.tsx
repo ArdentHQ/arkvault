@@ -19,7 +19,7 @@ import { useForm } from "react-hook-form";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Header } from "@/app/components/Header";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -35,9 +35,11 @@ enum Step {
 export const CreateAddressesSidePanel = ({
 	open,
 	onOpenChange,
+	onMountChange,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
+	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const { persist } = useEnvironmentContext();
 	const history = useHistory();
@@ -102,7 +104,6 @@ export const CreateAddressesSidePanel = ({
 
 	useEffect(() => {
 		if (open) {
-			setActiveTab(Step.WalletOverviewStep);
 			void handleGenerateWallet();
 		}
 	}, [open]);
@@ -269,6 +270,7 @@ export const CreateAddressesSidePanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
 			scrollRef={scrollContainerRef}
+			onMountChange={onMountChange}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0">
 				<Tabs activeId={activeTab} className="pb-20">

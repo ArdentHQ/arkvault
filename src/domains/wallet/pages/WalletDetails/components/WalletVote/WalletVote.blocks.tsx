@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { DelegateStatusProperties, VotesProperties } from "./WalletVote.contracts";
+import { ValidatorStatusProperties, VotesProperties } from "./WalletVote.contracts";
 import { Link } from "@/app/components/Link";
 import { Address, AddressLabel } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
@@ -26,12 +26,12 @@ const EmptyVotes = () => {
 	);
 };
 
-export const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) => {
+export const DelegateStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {
 	const { t } = useTranslation();
 
 	// @ts-ignore
-	const activeCount = votes.filter(({ wallet }) => wallet?.rank() <= activeDelegates).length;
-	const resignedCount = votes.filter(({ wallet }) => wallet?.isResignedDelegate()).length;
+	const activeCount = votes.filter(({ wallet }) => wallet?.rank() <= activeValidators).length;
+	const resignedCount = votes.filter(({ wallet }) => wallet?.isResignedValidator()).length;
 	const standbyCount = votes.length - activeCount - resignedCount;
 
 	if (activeCount === votes.length) {
@@ -111,7 +111,7 @@ export const DelegateName = ({
 	return <AddressLabel className={className}>{delegateName}</AddressLabel>;
 };
 
-const Votes = ({ votes, activeDelegates }: VotesProperties) => {
+const Votes = ({ votes, activeValidators }: VotesProperties) => {
 	const { t } = useTranslation();
 
 	const validator = votes[0].wallet!;
@@ -141,7 +141,7 @@ const Votes = ({ votes, activeDelegates }: VotesProperties) => {
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden">
 					{t("COMMON.DELEGATE_STATUS")}
 				</p>
-				<DelegateStatus votes={votes} activeDelegates={activeDelegates} />
+				<DelegateStatus votes={votes} activeValidators={activeValidators} />
 				<Divider
 					type="vertical"
 					className="border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"

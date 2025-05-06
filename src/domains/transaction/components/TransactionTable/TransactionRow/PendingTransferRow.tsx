@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
@@ -6,7 +6,7 @@ import { TableCell, TableRow } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { Amount } from "@/app/components/Amount";
@@ -31,8 +31,8 @@ export const PendingTransferRow = ({
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
-							className="text-theme-primary-600 cursor-pointer"
-							text={transaction.id()}
+							className="cursor-pointer text-theme-primary-600"
+							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
 							data-testid="PendingTransactionRow__transaction-id"
@@ -71,8 +71,8 @@ export const PendingTransferRow = ({
 				</Label>
 				<span className="text-sm">
 					<TruncateMiddle
-						className="text-theme-primary-600 cursor-pointer font-semibold"
-						text={transaction.recipient() || ""}
+						className="cursor-pointer font-semibold text-theme-primary-600"
+						text={transaction.to() || ""}
 						maxChars={14}
 						data-testid="PendingTransactionRowRecipientLabel"
 					/>

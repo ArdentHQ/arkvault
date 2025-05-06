@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -19,12 +19,12 @@ export enum AddressViewSelection {
 }
 
 export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { persist } = useEnvironmentContext();
+	const { persist, state } = useEnvironmentContext();
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const getAddressPanelSettings = (): AddressesPanelSettings => {
 		const defaultSettings: AddressesPanelSettings = {
-			addressViewPreference: AddressViewSelection.multiple,
+			addressViewPreference: AddressViewSelection.single,
 			multiSelectedAddresses: [],
 			singleSelectedAddress: [],
 		};
@@ -47,7 +47,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 
 		if (!config.addressPanelSettings) {
 			config.addressPanelSettings = {
-				addressViewPreference: AddressViewSelection.multiple,
+				addressViewPreference: AddressViewSelection.single,
 				multiSelectedAddresses: [],
 				singleSelectedAddress: [],
 			};
@@ -64,7 +64,7 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 
 	const initialSettings = getAddressPanelSettings();
 	const [addressViewPreference, setAddressViewPreferenceState] = useState<AddressViewType>(
-		initialSettings.addressViewPreference || AddressViewSelection.multiple,
+		initialSettings.addressViewPreference || AddressViewSelection.single,
 	);
 	const [singleSelectedAddress, setSingleSelectedAddressState] = useState<string[]>(
 		initialSettings.singleSelectedAddress || [],
@@ -76,10 +76,10 @@ export const useAddressesPanel = ({ profile }: { profile: Contracts.IProfile }) 
 	// Sync local state with profile settings
 	useEffect(() => {
 		const settings = getAddressPanelSettings();
-		setAddressViewPreferenceState(settings.addressViewPreference || AddressViewSelection.multiple);
+		setAddressViewPreferenceState(settings.addressViewPreference || AddressViewSelection.single);
 		setSingleSelectedAddressState(settings.singleSelectedAddress || []);
 		setMultiSelectedAddressesState(settings.multiSelectedAddresses || []);
-	}, [profile.id(), activeNetwork.id()]);
+	}, [profile.id(), activeNetwork.id(), state]);
 
 	const setAddressViewPreference = async (preference: AddressViewType): Promise<void> => {
 		setAddressViewPreferenceState(preference);

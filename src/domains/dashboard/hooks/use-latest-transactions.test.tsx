@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 
@@ -7,7 +7,7 @@ import { useLatestTransactions } from "./use-latest-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
@@ -28,7 +28,7 @@ describe("useLatestTransactions", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

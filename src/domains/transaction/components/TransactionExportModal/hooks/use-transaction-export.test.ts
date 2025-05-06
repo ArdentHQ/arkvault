@@ -1,10 +1,10 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { act, renderHook } from "@testing-library/react";
 import { http, HttpResponse } from "msw";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
-import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, syncValidators, waitFor } from "@/utils/testing-library";
 import { server } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
@@ -21,7 +21,7 @@ describe("useTransactionExport hook", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

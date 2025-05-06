@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Address } from "@/app/components/Address";

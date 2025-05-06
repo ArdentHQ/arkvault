@@ -1,7 +1,7 @@
 import { ProfileRow, ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import Slider, { Settings } from "react-slick";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DropdownOption } from "@/app/components/Dropdown";
 import React from "react";
 import { chunk } from "@/app/lib/helpers";

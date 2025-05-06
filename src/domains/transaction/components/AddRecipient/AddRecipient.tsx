@@ -9,7 +9,7 @@ import { AddRecipientWrapper } from "./AddRecipient.styles";
 import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { Button } from "@/app/components/Button";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
 import { InputCurrency } from "@/app/components/Input";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";

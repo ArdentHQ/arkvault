@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { generatePath } from "react-router";
 import { ProfilePaths } from "@/router/paths";
 

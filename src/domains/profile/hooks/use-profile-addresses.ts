@@ -1,5 +1,5 @@
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useMemo } from "react";
 
 export interface AddressProperties {
@@ -15,15 +15,6 @@ interface ProfileAddressesProperties {
 	profile: Contracts.IProfile;
 	network?: Networks.Network;
 }
-
-const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
-	try {
-		return wallet.isMultiSignature();
-	} catch {
-		/* istanbul ignore next -- @preserve */
-		return false;
-	}
-};
 
 export const useProfileAddresses = (
 	{ profile, network }: ProfileAddressesProperties,
@@ -48,10 +39,6 @@ export const useProfileAddresses = (
 
 		for (const wallet of profileWallets) {
 			if (!isNetworkSelected(wallet.network().id())) {
-				continue;
-			}
-
-			if (exceptMultiSignature && isMultiSignature(wallet)) {
 				continue;
 			}
 

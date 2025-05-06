@@ -7,8 +7,8 @@ import { Trans, useTranslation } from "react-i18next";
 import { assertExchangeService, isUnavailablePairError } from "@/domains/exchange/utils";
 
 import { Alert } from "@/app/components/Alert";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/sdk";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { Spinner } from "@/app/components/Spinner";
 import cn from "classnames";

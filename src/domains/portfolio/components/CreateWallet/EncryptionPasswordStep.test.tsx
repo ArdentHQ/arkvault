@@ -1,5 +1,5 @@
-import * as bip39 from "@scure/bip39";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -13,6 +13,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 	MAINSAIL_MNEMONICS,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
@@ -26,9 +27,10 @@ const passphrase = "power return attend drink piece found tragic fire liar page 
 const fixtureProfileId = getMainsailProfileId();
 const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
+let uInt8ArrayFix: () => void;
 
 describe("EncryptionPasswordStep", () => {
-	beforeEach(async () => {
+	beforeEach(() => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
 			setSelectedAddresses: () => {},
@@ -39,33 +41,18 @@ describe("EncryptionPasswordStep", () => {
 			profile.wallets().forget(wallet.id());
 		}
 
-		const walletMock = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic: passphrase,
-			network: "mainsail.devnet",
-		});
-
-		vi.spyOn(profile.walletFactory(), "generate").mockImplementation(
-			async () =>
-				new Promise((resolve) => {
-					resolve({
-						mnemonic: passphrase,
-						wallet: walletMock,
-					});
-				}),
-		);
-
-		bip39GenerateMock = vi.spyOn(bip39, "generateMnemonic").mockReturnValue(passphrase);
-
+		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
+		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		bip39GenerateMock.mockRestore();
 
 		resetProfileNetworksMock();
+		uInt8ArrayFix();
 	});
 
 	it("should fail creating a wallet with encryption password", async () => {

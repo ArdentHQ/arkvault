@@ -4,9 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
-import { DTO } from "@ardenthq/sdk-profiles";
-import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
-import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { DTO } from "@/app/lib/profiles";
 
 const validatorPublickey = (transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData) => {
 	try {
@@ -25,8 +23,6 @@ export const TransactionType = ({
 	const { t } = useTranslation();
 
 	const { getLabel } = useTransactionTypes();
-
-	const { min, publicKeys } = transactionPublicKeys(transaction);
 
 	return (
 		<div data-testid="TransactionType">
@@ -62,36 +58,6 @@ export const TransactionType = ({
 
 								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
 									{validatorPublickey(transaction)}
-								</div>
-							</div>
-						</>
-					)}
-
-					{transaction.isMultiSignatureRegistration() && (
-						<>
-							{transaction.wallet() && (
-								<>
-									<DetailDivider />
-
-									<div className="flex w-full justify-between sm:justify-start">
-										<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
-										<div className="leading-5 font-semibold max-sm:text-sm">
-											<MusigGeneratedAddress
-												publicKeys={publicKeys}
-												min={min}
-												wallet={transaction.wallet()}
-											/>
-										</div>
-									</div>
-								</>
-							)}
-
-							<DetailDivider />
-
-							<div className="flex w-full items-center justify-between sm:justify-start">
-								<DetailLabelText>{t("TRANSACTION.SIGNATURES")}</DetailLabelText>
-								<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
-									{min} {t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", { length: publicKeys.length })}
 								</div>
 							</div>
 						</>
