@@ -34,7 +34,6 @@ import { AttributeBag } from "./helpers/attribute-bag.js";
 import { Avatar } from "./helpers/avatar.js";
 import { IHostRepository } from "./host.repository.contract.js";
 import { HostRepository } from "./host.repository.js";
-import { INetworkRepository } from "./network.repository.contract.js";
 import { NetworkRepository } from "./network.repository.js";
 import { IProfileNotificationService } from "./notification.repository.contract.js";
 import { ProfileNotificationService } from "./notification.service.js";
@@ -86,10 +85,10 @@ export class Profile implements IProfile {
 	/**
 	 * The network repository.
 	 *
-	 * @type {INetworkRepository}
+	 * @type {NetworkRepository}
 	 * @memberof Profile
 	 */
-	readonly #networkRepository: INetworkRepository;
+	readonly #networkRepository: NetworkRepository;
 
 	/**
 	 * The exchange transaction repository.
@@ -312,13 +311,13 @@ export class Profile implements IProfile {
 	}
 
 	/** {@inheritDoc IProfile.networks} */
-	public networks(): INetworkRepository {
+	public networks(): NetworkRepository {
 		return this.#networkRepository;
 	}
 
 	/** {@inheritDoc IProfile.availableNetworks} */
 	public availableNetworks(): Networks.Network[] {
-		return this.coins().availableNetworks();
+		return this.networks().availableNetworks();
 	}
 
 	/** {@inheritDoc IProfile.activeNetwork} */
@@ -329,7 +328,7 @@ export class Profile implements IProfile {
 			activeNetworkId: undefined,
 		};
 
-		const activeNetwork = this.availableNetworks().find((network) => {
+		const activeNetwork = this.networks().availableNetworks().find((network) => {
 			if (!network) {
 				return;
 			}
@@ -432,7 +431,10 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.async} */
 	public async sync(options?: { networkId?: string; ttl?: number }): Promise<void> {
 		await this.wallets().restore(options);
-		await this.activeNetwork().sync();
+
+		if (this.wallets().count() > 0) {
+			await this.activeNetwork().sync();
+		}
 	}
 
 	/** {@inheritDoc IProfile.markIntroductoryTutorialAsComplete} */

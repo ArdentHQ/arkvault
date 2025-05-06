@@ -58,6 +58,8 @@ export class CoinService implements ICoinService {
 
 	/** {@inheritDoc ICoinService.set} */
 	public makeInstance(coin: string, network: string, options: object = {}): Coins.Coin {
+		const bundle = this.#getCoinBundle(coin);
+		console.log({ bundle });
 		return Coins.CoinFactory.make(this.#getCoinBundle(coin), {
 			hostSelector: container.get<NetworkHostSelectorFactory>(Identifiers.NetworkHostSelectorFactory)(
 				this.#profile,
