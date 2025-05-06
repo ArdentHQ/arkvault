@@ -426,26 +426,3 @@ export const createMainsailTransactionMock = (
 		wallet: () => wallet,
 		...overrides,
 	} as any);
-
-const originalHasInstance = Uint8Array[Symbol.hasInstance];
-
-// Solves `invalid BytesLike value` exception when using ethers on jsdom test environment
-// @see https://github.com/ethers-io/ethers.js/issues/4365
-export const fixUInt8ArrayIssue = () => {
-	Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-		configurable: true,
-		value(potentialInstance: unknown) {
-			if (this === Uint8Array) {
-				return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-			}
-			return originalHasInstance.call(this, potentialInstance);
-		},
-	});
-
-	return () => {
-		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-			configurable: true,
-			value: originalHasInstance,
-		});
-	};
-};

@@ -123,18 +123,6 @@ beforeAll(async () => {
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
-	originalHasInstance = Uint8Array[Symbol.hasInstance];
-
-	Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-		configurable: true,
-		value(potentialInstance: unknown) {
-			if (this === Uint8Array) {
-				return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-			}
-			return originalHasInstance.call(this, potentialInstance);
-		},
-	});
-
 	return;
 });
 
