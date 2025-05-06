@@ -3,7 +3,7 @@ import React from "react";
 
 import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 
 const onSave = vi.fn();
@@ -47,7 +47,9 @@ describe("CreateContact", () => {
 		await userEvent.type(nameInput(), newContact.name);
 		await userEvent.tab();
 		await userEvent.type(addressInput(), newContact.address);
-		await new Promise((resolve) => setTimeout(resolve, 1000));
+		await act(async () => {
+			await new Promise((resolve) => setTimeout(resolve, 1000));
+		})
 		await userEvent.tab();
 
 		await waitFor(() => {
