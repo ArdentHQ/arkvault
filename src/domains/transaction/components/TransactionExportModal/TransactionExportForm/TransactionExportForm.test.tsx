@@ -9,7 +9,7 @@ import {
 	getDefaultProfileId,
 	renderWithForm,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
@@ -32,7 +32,7 @@ describe("TransactionExportForm", () => {
 		history.push(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

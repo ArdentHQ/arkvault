@@ -17,7 +17,7 @@ import {
 	render,
 	RenderResult,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 } from "@/utils/testing-library";
 
@@ -86,7 +86,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		wallet = profile.wallets().first();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve(fees),

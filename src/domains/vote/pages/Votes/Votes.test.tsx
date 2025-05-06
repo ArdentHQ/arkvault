@@ -10,7 +10,7 @@ import {
 	env,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
@@ -77,7 +77,7 @@ describe("Votes", () => {
 		wallet.settings().set(Contracts.WalletSetting.Alias, "Sample Wallet");
 
 		await env.profiles().restore(profile);
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await wallet.synchroniser().votes();
 		await profile.sync();
 	});
