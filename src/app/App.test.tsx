@@ -102,7 +102,7 @@ describe("App", () => {
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+			screen.findByText(/Select Profile/, undefined),
 		).resolves.toBeVisible();
 	});
 
