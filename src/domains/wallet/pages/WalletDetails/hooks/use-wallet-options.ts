@@ -78,7 +78,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR"),
-				value: "delegate-registration",
+				value: "validator-registration",
 			});
 		}
 
@@ -92,7 +92,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		) {
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR"),
-				value: "delegate-resignation",
+				value: "validator-resignation",
 			});
 		}
 
