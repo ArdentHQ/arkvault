@@ -53,7 +53,7 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues } = form;
+	const { formState, register, setValue, watch, getValues, errors } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -104,13 +104,7 @@ export const SendRegistration = () => {
 
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
 
-		const network = env
-			.availableNetworks()
-			.find(
-				(network: Networks.Network) =>
-					network.coin() === activeWallet.coinId() && network.id() === activeWallet.networkId(),
-			);
-		setValue("network", network, { shouldDirty: true, shouldValidate: true });
+		setValue("network", activeProfile.activeNetwork(), { shouldDirty: true, shouldValidate: true });
 	}, [activeWallet, env, setValue]);
 
 	useLayoutEffect(() => {
