@@ -21,7 +21,7 @@ describe("useWalletAlias", () => {
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
-	it("should return undefined alias when no wallet or contact or delegate was found", () => {
+	it("should return undefined alias when no wallet or contact or validator was found", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(result.current.getWalletAlias({ address: "wrong-address", profile })).toStrictEqual({
 			address: "wrong-address",

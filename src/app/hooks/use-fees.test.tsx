@@ -16,7 +16,7 @@ describe("useFees", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.wallets().syncByProfile(profile);
-		await env.delegates().syncAll(profile);
+		await env.validators().syncAll(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {
@@ -26,7 +26,7 @@ describe("useFees", () => {
 		await env.fees().sync(profile, "Mainsail", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "validatorRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -60,7 +60,7 @@ describe("useFees", () => {
 		await env.fees().sync(profile, "Mainsail", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "validatorRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
@@ -98,7 +98,7 @@ describe("useFees", () => {
 		await env.fees().sync(profile, "Mainsail", MainsailDevnet);
 
 		await expect(
-			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "delegateRegistration" }),
+			current.calculate({ coin: "Mainsail", network: MainsailDevnet, type: "validatorRegistration" }),
 		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
