@@ -240,9 +240,9 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		wallets.push(wallet);
 
 		if (addressViewPreference === AddressViewSelection.single) {
-			await setSelectedAddresses([wallet.address()], wallet.network());
+			await setSelectedAddresses([wallet.address()]);
 		} else {
-			await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
+			await setSelectedAddresses([...selectedAddresses, wallet.address()]);
 		}
 
 		await persist();
