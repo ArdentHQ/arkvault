@@ -34,7 +34,7 @@ describe("App", () => {
 		render(<App />, { history, withProviders: false });
 
 		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+			screen.findByText(/Select Profile/, undefined),
 		).resolves.toBeVisible();
 
 		expect(history.location.pathname).toBe("/");
