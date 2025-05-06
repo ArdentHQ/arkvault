@@ -25,6 +25,18 @@ describe("App", () => {
 
 		history.replace("/");
 		env.reset();
+
+		const originalHasInstance = Uint8Array[Symbol.hasInstance];
+
+		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+			configurable: true,
+			value(potentialInstance: unknown) {
+				if (this === Uint8Array) {
+					return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+				}
+				return originalHasInstance.call(this, potentialInstance);
+			},
+		});
 	});
 
 	it("should redirect to root if profile restoration error occurs", async () => {
@@ -34,7 +46,7 @@ describe("App", () => {
 		render(<App />, { history, withProviders: false });
 
 		await expect(
-			screen.findByText(/Select Profile/, undefined),
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
 		).resolves.toBeVisible();
 
 		expect(history.location.pathname).toBe("/");

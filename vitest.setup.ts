@@ -246,14 +246,15 @@ Object.defineProperty(window, "$zopim", {
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
-const originalHasInstance = Uint8Array[Symbol.hasInstance];
-
-Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-	configurable: true,
-	value(potentialInstance: unknown) {
-		if (this === Uint8Array) {
-			return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-		}
-		return originalHasInstance.call(this, potentialInstance);
-	},
-});
+// const originalHasInstance = Uint8Array[Symbol.hasInstance];
+//
+// Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+// 	configurable: true,
+// 	value(potentialInstance: unknown) {
+// 		console.log(123);
+// 		if (this === Uint8Array) {
+// 			return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+// 		}
+// 		return originalHasInstance.call(this, potentialInstance);
+// 	},
+// });
