@@ -196,7 +196,6 @@ export const CreateAddressesSidePanel = ({
 
 			await importWallets({
 				encryptedWif: parameters.encryptionPassword,
-				networks: [activeProfile.activeNetwork()],
 				type: "bip39",
 				value: mnemonic,
 			});
