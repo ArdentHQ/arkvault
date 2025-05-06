@@ -10,22 +10,22 @@ let votesWithAmount: Contracts.VoteRegistryItem[];
 
 describe("VoteList", () => {
 	beforeAll(() => {
-		const delegates = [0, 1, 2].map(
+		const validators = [0, 1, 2].map(
 			(index) =>
 				new ReadOnlyWallet({
 					address: data[index].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
+					isValidator: true,
+					isResignedValidator: false,
 					publicKey: data[index].publicKey,
 					username: data[index].username,
 				}),
 		);
 
-		votes = delegates;
+		votes = validators;
 
-		votesWithAmount = delegates.map((validator) => ({
+		votesWithAmount = validators.map((validator) => ({
 			amount: 10,
 			wallet: validator,
 		}));

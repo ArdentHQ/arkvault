@@ -29,7 +29,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -113,7 +113,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div
@@ -160,7 +160,7 @@ exports[`ValidatorRow > should render 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -244,7 +244,7 @@ exports[`ValidatorRow > should render 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div
@@ -291,7 +291,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -398,7 +398,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
               </div>
               <span
                 class="absolute inset-y-0 flex items-center space-x-3 right-7"
-                data-testid="DelegateVoteAmount__ticker"
+                data-testid="ValidatorVoteAmount__ticker"
               >
                 <span
                   class="text-theme-text"
@@ -420,7 +420,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline dark:hover:text-theme-primary-500 relative text-theme-warning-700 hover:text-theme-warning-800"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div
@@ -467,7 +467,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -551,7 +551,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div
@@ -598,7 +598,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -682,7 +682,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div
@@ -720,7 +720,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x3F8eCbF08078F22038235F9834540A960E99085b
+                  0x03BC306C369A55c0336EB003bB07F29E5c150F36
                 </span>
                 <span>
                    
@@ -804,7 +804,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
-                data-testid="DelegateRow__toggle-1"
+                data-testid="ValidatorRow__toggle-1"
                 type="button"
               >
                 <div
@@ -842,7 +842,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x137c59f371a7049159ef19a72f908773Ade219b1
+                  0x56F925416Ef2725646442D5E0150088bd7202aCd
                 </span>
                 <span>
                    
@@ -929,7 +929,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               >
                 <button
                   class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500 relative bg-transparent dark:bg-transparent text-black dark:text-theme-black"
-                  data-testid="DelegateRow__toggle-2"
+                  data-testid="ValidatorRow__toggle-2"
                   disabled=""
                   type="button"
                 >
@@ -978,7 +978,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -1062,7 +1062,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div
@@ -1109,7 +1109,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -1217,7 +1217,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
               </div>
               <span
                 class="absolute inset-y-0 flex items-center space-x-3 right-7 cursor-default"
-                data-testid="DelegateVoteAmount__ticker"
+                data-testid="ValidatorVoteAmount__ticker"
               >
                 <span
                   class="text-theme-secondary-400 dark:text-theme-secondary-700"
@@ -1239,7 +1239,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
             >
               <button
                 class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
-                data-testid="DelegateRow__toggle-0"
+                data-testid="ValidatorRow__toggle-0"
                 type="button"
               >
                 <div

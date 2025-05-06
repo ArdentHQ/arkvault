@@ -57,7 +57,7 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 		},
 	);
 
-const firstVoteButtonID = "DelegateRow__toggle-0";
+const firstVoteButtonID = "ValidatorRow__toggle-0";
 
 const searchInputID = "SearchableTableWrapper__search-input";
 
@@ -133,7 +133,7 @@ describe("Votes", () => {
 		currentMock.mockRestore();
 	});
 
-	it("should filter current delegates", async () => {
+	it("should filter current validators", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
@@ -142,8 +142,8 @@ describe("Votes", () => {
 					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
+					isValidator: true,
+					isResignedValidator: false,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
 					username: "arkx",
@@ -206,8 +206,8 @@ describe("Votes", () => {
 					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
+					isValidator: true,
+					isResignedValidator: false,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
 					username: "arkx",
@@ -232,13 +232,13 @@ describe("Votes", () => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
+		const selectValidatorButton = screen.getByTestId(firstVoteButtonID);
 
-		await userEvent.click(selectDelegateButton);
+		await userEvent.click(selectValidatorButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		await userEvent.click(screen.getByTestId("ValidatorTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -268,16 +268,16 @@ describe("Votes", () => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
+		const selectValidatorButton = screen.getByTestId(firstVoteButtonID);
 
-		await userEvent.click(selectDelegateButton);
+		await userEvent.click(selectValidatorButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer--total")).toHaveTextContent("1/1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle wallet vote error and show empty delegates", async () => {
+	it("should handle wallet vote error and show empty validators", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 
 		const walletVoteMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
@@ -292,12 +292,12 @@ describe("Votes", () => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
+		const selectValidatorButton = screen.getByTestId(firstVoteButtonID);
 
-		await userEvent.click(selectDelegateButton);
+		await userEvent.click(selectValidatorButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer--total")).toHaveTextContent("1/1");
 
 		walletVoteMock.mockRestore();
 	});
@@ -311,8 +311,8 @@ describe("Votes", () => {
 					address: "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: true,
+					isValidator: true,
+					isResignedValidator: true,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
 					username: "arkx",
@@ -368,12 +368,12 @@ describe("Votes", () => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
+		const selectValidatorButton = screen.getByTestId(firstVoteButtonID);
 
-		await userEvent.click(selectDelegateButton);
+		await userEvent.click(selectValidatorButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer--total")).toHaveTextContent("1/1");
 
 		await waitFor(() =>
 			expect(onProfileSyncError).toHaveBeenCalledWith([expect.any(String)], expect.any(Function)),
@@ -394,13 +394,13 @@ describe("Votes", () => {
 			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
+		const selectValidatorButton = screen.getByTestId(firstVoteButtonID);
 
-		await userEvent.click(selectDelegateButton);
+		await userEvent.click(selectValidatorButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		await userEvent.click(screen.getByTestId("ValidatorTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -429,15 +429,15 @@ describe("Votes", () => {
 
 		await userEvent.click(selectUnvoteButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
-		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
+		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
 
 		await userEvent.click(selectVoteButton);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		await userEvent.click(screen.getByTestId("ValidatorTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -485,8 +485,8 @@ describe("Votes", () => {
 					address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: true,
+					isValidator: true,
+					isResignedValidator: true,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
 					username: "arkx",
@@ -503,7 +503,7 @@ describe("Votes", () => {
 		walletSpy.mockRestore();
 	});
 
-	it("should filter delegates by address", async () => {
+	it("should filter validators by address", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		renderPage(route);
 
@@ -522,7 +522,7 @@ describe("Votes", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
 
-	it("should filter delegates by alias", async () => {
+	it("should filter validators by alias", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		renderPage(route);
 

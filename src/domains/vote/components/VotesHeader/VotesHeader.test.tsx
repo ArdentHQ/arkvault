@@ -18,7 +18,7 @@ describe("VotesHeader", () => {
 				profile={profile}
 				setSearchQuery={vi.fn()}
 				isFilterChanged={false}
-				isSelectDelegateStep={false}
+				isSelectValidatorStep={false}
 				filterProperties={undefined}
 				totalCurrentVotes={0}
 			/>,
@@ -36,7 +36,7 @@ describe("VotesHeader", () => {
 				profile={profile}
 				setSearchQuery={vi.fn()}
 				isFilterChanged={false}
-				isSelectDelegateStep={true}
+				isSelectValidatorStep={true}
 				filterProperties={undefined}
 				totalCurrentVotes={0}
 			/>,

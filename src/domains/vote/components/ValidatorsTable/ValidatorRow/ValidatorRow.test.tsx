@@ -11,7 +11,7 @@ import { env, getMainsailProfileId, render, screen } from "@/utils/testing-libra
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
 
-const firstValidatorVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+const firstValidatorVoteButton = () => screen.getByTestId("ValidatorRow__toggle-0");
 
 describe("ValidatorRow", () => {
 	beforeAll(() => {
@@ -22,8 +22,8 @@ describe("ValidatorRow", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
+			isValidator: true,
+			isResignedValidator: false,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
 		});
@@ -111,22 +111,22 @@ describe("ValidatorRow", () => {
 	});
 
 	it("should render the selected vote", () => {
-		const secondDelegate = new ReadOnlyWallet({
+		const secondValidator = new ReadOnlyWallet({
 			address: data[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
+			isValidator: true,
+			isResignedValidator: false,
 			publicKey: data[1].publicKey,
 			username: data[1].username,
 		});
 
-		const thirdDelegate = new ReadOnlyWallet({
+		const thirdValidator = new ReadOnlyWallet({
 			address: data[2].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
+			isValidator: true,
+			isResignedValidator: false,
 			publicKey: data[2].publicKey,
 			username: data[2].username,
 		});
@@ -151,7 +151,7 @@ describe("ValidatorRow", () => {
 					/>
 					<ValidatorRow
 						index={1}
-						validator={secondDelegate}
+						validator={secondValidator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
@@ -162,7 +162,7 @@ describe("ValidatorRow", () => {
 					/>
 					<ValidatorRow
 						index={2}
-						validator={thirdDelegate}
+						validator={thirdValidator}
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						isVoteDisabled={true}
@@ -178,8 +178,8 @@ describe("ValidatorRow", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
-		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
-		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
+		expect(screen.getByTestId("ValidatorRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
+		expect(screen.getByTestId("ValidatorRow__toggle-2")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
