@@ -20,7 +20,7 @@ const wallet = {
 };
 
 export const TransactionFixture = {
-	id: () => "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+	hash: () => "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
 	blockId: () => "71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
 	type: () => "transfer",
 	timestamp: () => DateTime.fromUnix(1596213281),
@@ -28,7 +28,7 @@ export const TransactionFixture = {
 	votes: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
 	unvotes: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
 	sender: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-	recipient: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+	to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	recipients: () => [],
 	amount: () => 100,
 	nonce: () => BigNumber.make(1),
