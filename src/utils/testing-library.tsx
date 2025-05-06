@@ -417,7 +417,7 @@ export const createMainsailTransactionMock = (
 		timestamp: () => DateTime.make(),
 		to: () => mainsailTransactionFixture.data.to,
 		type: () => "transfer",
-		value: () => +mainsailTransactionFixture.data.value/ 1e18,
+		value: () => +mainsailTransactionFixture.data.value / 1e18,
 		wallet: () => wallet,
 		...overrides,
 	} as any);
