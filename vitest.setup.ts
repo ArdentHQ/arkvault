@@ -110,6 +110,8 @@ let localstorageSpy;
 // Treat act warnings as errors.
 actWarningsAsErrors();
 
+let originalHasInstance;
+
 beforeAll(async () => {
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 
@@ -120,6 +122,18 @@ beforeAll(async () => {
 
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
+
+	originalHasInstance = Uint8Array[Symbol.hasInstance];
+
+	Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+		configurable: true,
+		value(potentialInstance: unknown) {
+			if (this === Uint8Array) {
+				return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+			}
+			return originalHasInstance.call(this, potentialInstance);
+		},
+	});
 
 	return;
 });
@@ -246,15 +260,4 @@ Object.defineProperty(window, "$zopim", {
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
-// const originalHasInstance = Uint8Array[Symbol.hasInstance];
-//
-// Object.defineProperty(Uint8Array, Symbol.hasInstance, {
-// 	configurable: true,
-// 	value(potentialInstance: unknown) {
-// 		console.log(123);
-// 		if (this === Uint8Array) {
-// 			return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
-// 		}
-// 		return originalHasInstance.call(this, potentialInstance);
-// 	},
-// });
+
