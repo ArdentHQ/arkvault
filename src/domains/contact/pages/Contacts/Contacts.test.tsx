@@ -22,7 +22,7 @@ import {
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
-const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F"
+const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F";
 
 const renderComponent = (profileId = profile.id()) => {
 	const contactsURL = `/profiles/${profileId}/contacts`;
@@ -62,7 +62,6 @@ const createContact = (targetProfile: Contracts.IProfile, name: string, address:
 	targetProfile.contacts().create(name, [
 		{
 			address,
-			coin: "ARK",
 		},
 	]);
 
@@ -202,7 +201,7 @@ describe("Contacts", () => {
 		await userEvent.click(saveButton());
 
 		await waitFor(() => {
-			expect(profile.contacts().findByAddress( contactAddress)).toHaveLength(1);
+			expect(profile.contacts().findByAddress(contactAddress)).toHaveLength(1);
 		});
 	});
 
@@ -434,7 +433,7 @@ describe("Contacts", () => {
 		await userEvent.click(sendButton());
 
 		expect(history.location.pathname).toBe("/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer");
-		expect(history.location.search).toBe("?coin=Mainsail&recipient=0x0000000000000000000000000000000000000000");
+		expect(history.location.search).toBe("?recipient=0x0000000000000000000000000000000000000000");
 
 		contactsSpy.mockRestore();
 	});

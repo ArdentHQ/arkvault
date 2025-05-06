@@ -26,7 +26,7 @@ let resetProfileNetworksMock: () => void;
 const addressInput = () => screen.getByTestId("contact-form__address-input");
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
-const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F"
+const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F";
 
 describe("ContactForm", () => {
 	beforeAll(() => {
@@ -198,7 +198,6 @@ describe("ContactForm", () => {
 			expect(onSave).toHaveBeenCalledWith({
 				address: {
 					address: validDevnetAddress,
-					coin: "Mainsail",
 					name: validDevnetAddress,
 				},
 				name: expect.any(String),

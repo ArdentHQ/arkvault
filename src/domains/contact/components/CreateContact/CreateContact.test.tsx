@@ -28,9 +28,7 @@ describe("CreateContact", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(
-			<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />,
-		);
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
 		await waitFor(() => {
 			expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
@@ -49,7 +47,7 @@ describe("CreateContact", () => {
 		await userEvent.type(nameInput(), newContact.name);
 		await userEvent.tab();
 		await userEvent.type(addressInput(), newContact.address);
-		await new Promise(resolve => setTimeout(resolve, 1000));
+		await new Promise((resolve) => setTimeout(resolve, 1000));
 		await userEvent.tab();
 
 		await waitFor(() => {
