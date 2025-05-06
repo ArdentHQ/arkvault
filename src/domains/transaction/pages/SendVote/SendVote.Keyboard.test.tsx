@@ -25,11 +25,12 @@ import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { renderHook } from "@testing-library/react";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
 import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
+import { expect } from "vitest";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -45,8 +46,8 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -92,14 +93,14 @@ describe("SendVote", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		await wallet.synchroniser().identity();
 
-		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
 
 		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
+			env.validators().findByAddress(wallet.coinId(), wallet.networkId(), validatorData[index].address);
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
@@ -143,7 +144,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -173,7 +174,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		// Fee
 		await waitFor(() => {

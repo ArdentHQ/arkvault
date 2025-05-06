@@ -28,7 +28,7 @@ import { Signatories } from "@/app/lib/sdk";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { createHashHistory } from "history";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
@@ -49,8 +49,8 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -80,8 +80,8 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => unvoteFixture.data.fee / 1e8,
 		id: () => unvoteFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -107,13 +107,13 @@ const votingMockImplementation = () => [
 	{
 		amount: 10,
 		wallet: new ReadOnlyWallet({
-			address: delegateData[1].address,
+			address: validatorData[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
-			publicKey: delegateData[1].publicKey,
-			username: delegateData[1].username,
+			isValidator: true,
+			isResignedValidator: false,
+			publicKey: validatorData[1].publicKey,
+			username: validatorData[1].username,
 		}),
 	},
 ];
@@ -146,14 +146,14 @@ describe("SendVote", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		await wallet.synchroniser().identity();
 
-		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
 
 		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
+			env.validators().findByAddress(wallet.coinId(), wallet.networkId(), validatorData[index].address);
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
@@ -185,11 +185,11 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 	});
 
-	it("should return to the select a delegate page to unvote", async () => {
+	it("should return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
@@ -201,9 +201,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[1].username));
 
-		// Back to select a delegate page
+		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
@@ -211,14 +211,14 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should return to the select a delegate page to unvote/vote", async () => {
+	it("should return to the select a validator page to unvote/vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[0].address }];
+		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
@@ -234,9 +234,9 @@ describe("SendVote", () => {
 		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
-		// Back to select a delegate page
+		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
@@ -255,7 +255,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -275,7 +275,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -334,7 +334,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it("should warning in toast if wallet is already voting the delegate", async () => {
+	it("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -342,12 +342,12 @@ describe("SendVote", () => {
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[0].address,
+					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[0].publicKey,
+					isValidator: true,
+					isResignedValidator: false,
+					publicKey: validatorData[0].publicKey,
 					rank: 1,
 					username: "arkx",
 				}),
@@ -361,7 +361,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -400,7 +400,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[1].address,
+				validatorAddress: validatorData[1].address,
 			},
 		];
 
@@ -409,7 +409,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -429,7 +429,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -497,7 +497,7 @@ describe("SendVote", () => {
 					unvotes: [
 						{
 							amount: 10,
-							id: delegateData[1].address,
+							id: validatorData[1].address,
 						},
 					],
 				},
@@ -514,7 +514,7 @@ describe("SendVote", () => {
 					votes: [
 						{
 							amount: 10,
-							id: delegateData[0].publicKey,
+							id: validatorData[0].publicKey,
 						},
 					],
 				},
@@ -652,7 +652,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -672,7 +672,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -709,7 +709,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -729,7 +729,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -782,25 +782,25 @@ describe("SendVote", () => {
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[0].address,
+					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[0].publicKey,
-					username: delegateData[0].username,
+					isValidator: true,
+					isResignedValidator: false,
+					publicKey: validatorData[0].publicKey,
+					username: validatorData[0].username,
 				}),
 			},
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[1].address,
+					address: validatorData[1].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[1].publicKey,
-					username: delegateData[1].username,
+					isValidator: true,
+					isResignedValidator: false,
+					publicKey: validatorData[1].publicKey,
+					username: validatorData[1].username,
 				}),
 			},
 		]);
@@ -810,7 +810,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -830,7 +830,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -886,7 +886,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -906,7 +906,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		// Fee
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
@@ -942,7 +942,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -962,7 +962,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		// Fee
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
@@ -998,7 +998,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1018,11 +1018,11 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1058,7 +1058,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1079,11 +1079,11 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1135,7 +1135,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[1].address,
+				validatorAddress: validatorData[1].address,
 			},
 		];
 
@@ -1155,7 +1155,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[1].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1227,7 +1227,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1247,7 +1247,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1334,7 +1334,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1354,7 +1354,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());

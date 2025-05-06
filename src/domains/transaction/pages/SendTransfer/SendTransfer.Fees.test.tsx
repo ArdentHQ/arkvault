@@ -41,8 +41,8 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -462,7 +462,7 @@ describe("SendTransfer Fee Handling", () => {
 		});
 
 		vi.spyOn(arkWallet, "balance").mockReturnValue(10);
-		vi.spyOn(arkWallet, "isDelegate").mockReturnValue(false);
+		vi.spyOn(arkWallet, "isValidator").mockReturnValue(false);
 
 		profile.wallets().push(arkWallet);
 

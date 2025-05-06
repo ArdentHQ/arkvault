@@ -23,7 +23,7 @@ import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
 import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
@@ -43,8 +43,8 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -71,13 +71,13 @@ const votingMockImplementation = () => [
 	{
 		amount: 10,
 		wallet: new ReadOnlyWallet({
-			address: delegateData[1].address,
+			address: validatorData[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
-			publicKey: delegateData[1].publicKey,
-			username: delegateData[1].username,
+			isValidator: true,
+			isResignedValidator: false,
+			publicKey: validatorData[1].publicKey,
+			username: validatorData[1].username,
 		}),
 	},
 ];
@@ -100,14 +100,14 @@ describe("SendVote Combined", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		await wallet.synchroniser().identity();
 
-		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
 
 		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
+			env.validators().findByAddress(wallet.coinId(), wallet.networkId(), validatorData[index].address);
 		}
 	});
 
@@ -148,7 +148,7 @@ describe("SendVote Combined", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[1].address,
+				validatorAddress: validatorData[1].address,
 			},
 		];
 
@@ -157,7 +157,7 @@ describe("SendVote Combined", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -177,7 +177,7 @@ describe("SendVote Combined", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => {
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();

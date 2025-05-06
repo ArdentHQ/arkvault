@@ -37,7 +37,7 @@ vi.mock("@/utils/delay", () => ({
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
-const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRegistration") => {
+const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorRegistration") => {
 	const registrationURL = `/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/${type}`;
 
 	history.push(registrationURL);
@@ -96,8 +96,8 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => true,

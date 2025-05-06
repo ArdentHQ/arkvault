@@ -3,7 +3,7 @@ import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 
 import { sendVote } from "./SendVote";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 
 let profile: Contracts.IProfile;
 let translationMock: any;
@@ -13,9 +13,9 @@ const votes = [
 	{
 		amount: 10,
 		wallet: new ReadOnlyWallet({
-			address: delegateData[0].address,
+			address: validatorData[0].address,
 			explorerLink: "",
-			publicKey: delegateData[0].publicKey,
+			publicKey: validatorData[0].publicKey,
 			rank: 1,
 			username: "arkx",
 		}),
@@ -41,11 +41,11 @@ describe("Send Vote Validation", () => {
 
 		expect(validator.validate("1")).toBe(true);
 
-		const mockWalletVotingDelegate = vi.spyOn(profile.wallets().first().voting(), "current").mockReturnValue(votes);
+		const mockWalletVotingValidator = vi.spyOn(profile.wallets().first().voting(), "current").mockReturnValue(votes);
 
 		expect(validator.validate(profile.wallets().first().address())).not.toBe(true);
 
-		mockWalletVotingDelegate.mockRestore();
+		mockWalletVotingValidator.mockRestore();
 
 		expect(validator.validate(profile.wallets().first().address())).toBe(true);
 	});
