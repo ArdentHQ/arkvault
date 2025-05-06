@@ -5,7 +5,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
 import * as envHooks from "@/app/hooks/env";
-import { env, getMainsailProfileId, render, syncDelegates } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, syncValidators } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const history = createHashHistory();
@@ -20,7 +20,7 @@ describe("WalletActionsModals", () => {
 
 		wallet = profile.wallets().first();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
