@@ -49,7 +49,7 @@ describe("CreateContact", () => {
 		await userEvent.type(addressInput(), newContact.address);
 		await act(async () => {
 			await new Promise((resolve) => setTimeout(resolve, 1000));
-		})
+		});
 		await userEvent.tab();
 
 		await waitFor(() => {
