@@ -1150,7 +1150,7 @@ exports[`Dashboard > should render 1`] = `
                         <p
                           class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:hidden"
                         >
-                          Delegate Status
+                          Validator Status
                         </p>
                         <div
                           class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid dark:border-theme-success-800"
