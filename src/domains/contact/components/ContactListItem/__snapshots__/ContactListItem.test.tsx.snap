@@ -195,7 +195,7 @@ exports[`ContactListItem > should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContactListItem > should render as delegate 1`] = `
+exports[`ContactListItem > should render as validator 1`] = `
 <DocumentFragment>
   <table>
     <tbody>

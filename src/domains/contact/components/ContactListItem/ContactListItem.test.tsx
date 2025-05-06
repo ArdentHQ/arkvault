@@ -69,8 +69,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-	it("should render as delegate", () => {
-		const delegateContact = {
+	it("should render as validator", () => {
+		const validatorContact = {
 			addresses: () => ({
 				count: () => 1,
 				values: () => [
@@ -78,7 +78,7 @@ describe("ContactListItem", () => {
 						address: () => "id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 						coin: () => "ARK",
 						hasSyncedWithNetwork: () => true,
-						isDelegate: () => true,
+						isValidator: () => true,
 						network: () => "ark.devnet",
 					},
 				],
@@ -89,7 +89,7 @@ describe("ContactListItem", () => {
 		};
 
 		const { asFragment } = renderContactList({
-			item: delegateContact as unknown as Contracts.IContact,
+			item: validatorContact as unknown as Contracts.IContact,
 			options,
 		});
 
