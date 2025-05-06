@@ -14,7 +14,6 @@ import {
 	mockNanoXTransport,
 	mockNanoSTransport,
 	mockLedgerTransportError,
-	fixUInt8ArrayIssue,
 	getDefaultWalletMnemonic,
 } from "@/utils/testing-library";
 const MainsailDevnet = "mainsail.devnet";
@@ -31,12 +30,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 	let goMock: any;
-	let restoreUInt8ArrayFix: () => void;
 	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
-
-	beforeAll(() => {
-		restoreUInt8ArrayFix = fixUInt8ArrayIssue();
-	});
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -44,10 +38,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		goMock = vi.fn();
 
 		vi.spyOn(reactRouterDomMock, "useHistory").mockReturnValue({ go: goMock });
-	});
-
-	afterAll(() => {
-		restoreUInt8ArrayFix();
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {

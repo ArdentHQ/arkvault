@@ -18,7 +18,6 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
-	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
@@ -64,12 +63,10 @@ describe("ImportSidePanel", () => {
 		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-		uInt8ArrayFix();
 	});
 
 	it("should render method step", async () => {

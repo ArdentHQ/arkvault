@@ -8,16 +8,7 @@ import { Route } from "react-router-dom";
 import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
-import {
-	env,
-	getDefaultProfileId,
-	MNEMONICS,
-	render,
-	screen,
-	waitFor,
-	within,
-	fixUInt8ArrayIssue,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
 
 const translations = buildTranslations();
 
@@ -235,8 +226,6 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show zero amount if wallet has zero or insufficient balance", async () => {
-		const restoreUInt8Patch = fixUInt8ArrayIssue();
-
 		const emptyProfile = await env.profiles().create("Empty");
 
 		const emptyWallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
@@ -259,8 +248,6 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0"));
 
 		expect(container).toMatchSnapshot();
-
-		restoreUInt8Patch();
 	});
 
 	it("should hide available balance if fee > balance", async () => {
