@@ -336,65 +336,65 @@ jobs:
 #                  max_attempts: 2
 #                  command: pnpm test:coverage src/app/components/[S-Z]**/**test*
 #
-#    domains-contact:
-#        runs-on: ubuntu-latest
-#        env:
-#            COVERAGE_INCLUDE_PATH: src/domains/contact
-#        strategy:
-#            matrix:
-#                node-version:
-#                    - 20.12.2
-#        concurrency:
-#            group: ${{ github.head_ref }}-test-domains-contact
-#            cancel-in-progress: true
-#        steps:
-#            - uses: actions/checkout@v4
-#              with:
-#                  ref: ${{ github.head_ref }}
-#            - uses: pnpm/action-setup@v4
-#              with:
-#                  version: 10
-#            - uses: actions/setup-node@v4
-#              with:
-#                  node-version: ${{ matrix.node-version }}
-#                  cache: pnpm
-#            - name: Update System
-#              run: sudo apt-get update
-#            - name: Install (Ledger Requirements)
-#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-#            - name: Install (pnpm)
-#              run: pnpm install --frozen-lockfile
-#            - name: Rebuild
-#              run: pnpm rebuild
-#            - name: Test (components)
-#              env:
-#                  COVERAGE_THRESHOLD_LINES: 93.19
-#                  COVERAGE_THRESHOLD_FUNCTIONS: 96.15
-#                  COVERAGE_THRESHOLD_STATEMENTS: 93.5
-#                  COVERAGE_THRESHOLD_BRANCHES: 87.67
-#                  COVERAGE_INCLUDE_PATH: src/domains/contact/components
-#              uses: nick-invision/retry@v2
-#              with:
-#                  timeout_minutes: 10
-#                  max_attempts: 2
-#                  command: pnpm test:coverage src/domains/contact/components
-#
-#            - name: Test (pages)
-#              uses: nick-invision/retry@v2
-#              env:
-#                  COVERAGE_INCLUDE_PATH: src/domains/contact/pages
-#              with:
-#                  timeout_minutes: 10
-#                  max_attempts: 2
-#                  command: pnpm test:coverage src/domains/contact/pages
-#
-#            - name: Test (Validations)
-#              uses: nick-invision/retry@v2
-#              with:
-#                  timeout_minutes: 10
-#                  max_attempts: 2
-#                  command: pnpm test:coverage src/domains/contact/routing.test.ts src/domains/validations
-#
+    domains-contact:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/contact
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-contact
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test (components)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 93.19
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.15
+                  COVERAGE_THRESHOLD_STATEMENTS: 93.5
+                  COVERAGE_THRESHOLD_BRANCHES: 87.67
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/components
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 2
+                  command: pnpm test:coverage src/domains/contact/components
+
+            - name: Test (pages)
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/pages
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 2
+                  command: pnpm test:coverage src/domains/contact/pages
+
+            - name: Test (Validations)
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 2
+                  command: pnpm test:coverage src/domains/contact/routing.test.ts src/domains/validations
+
 #    domains-dashboard:
 #        runs-on: ubuntu-latest
 #        env:

@@ -2,10 +2,10 @@
 	"data": {
 		"constants": {
 			"gas": {
-				"minimumGasFee": 5,
 				"maximumGasLimit": 2000000,
+				"maximumGasPrice": 10000000000000,
 				"minimumGasLimit": 21000,
-				"nativeFeeMultiplier": 100
+				"minimumGasPrice": 5000000000
 			},
 			"block": {
 				"version": 1,
@@ -13,13 +13,13 @@
 				"maxGasLimit": 10000000,
 				"maxTransactions": 150
 			},
-			"epoch": "2024-11-18T00:00:00.000Z",
-			"height": 1,
+			"epoch": "2025-04-28T00:00:00.000Z",
+			"height": 0,
 			"reward": "0",
 			"evmSpec": "Shanghai",
 			"satoshi": {
 				"decimals": 18,
-				"denomination": 1000000000000000000
+				"denomination": 1e18
 			},
 			"timeouts": {
 				"blockTime": 8000,
@@ -28,15 +28,17 @@
 				"blockPrepareTime": 4000,
 				"stageTimeoutIncrease": 2000
 			},
-			"activeValidators": 53,
+			"activeValidators": 0,
 			"vendorFieldLength": 255
 		},
 		"core": {
-			"version": "0.0.1-evm.9"
+			"version": "0.0.1-evm.18"
 		},
 		"explorer": "",
 		"nethash": "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
-		"ports": {},
+		"ports": {
+			"@mainsail/api-database": null
+		},
 		"slip44": 1,
 		"symbol": "TѦ",
 		"token": "ARK",
