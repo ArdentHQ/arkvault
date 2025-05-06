@@ -6,28 +6,28 @@ import { PageHeader } from "@/app/components/Header";
 import { useBreakpoint } from "@/app/hooks";
 
 interface VotesHeaderProperties {
-	isSelectDelegateStep: boolean;
+	isSelectValidatorStep: boolean;
 }
 
-export const VotesHeader = ({ isSelectDelegateStep }: VotesHeaderProperties) => {
+export const VotesHeader = ({ isSelectValidatorStep }: VotesHeaderProperties) => {
 	const { t } = useTranslation();
 
 	const { isMdAndAbove } = useBreakpoint();
 
 	const headerTitle = useMemo(() => {
-		if (isSelectDelegateStep) {
+		if (isSelectValidatorStep) {
 			return t("VOTE.VALIDATOR_TABLE.TITLE");
 		}
 
 		return t("VOTE.VOTES_PAGE.TITLE");
-	}, [t, isMdAndAbove, isSelectDelegateStep]);
+	}, [t, isMdAndAbove, isSelectValidatorStep]);
 
 	return (
 		<PageHeader
 			title={headerTitle}
-			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
+			subtitle={isSelectValidatorStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
 			titleIcon={
-				isSelectDelegateStep ? undefined : (
+				isSelectValidatorStep ? undefined : (
 					<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" />
 				)
 			}

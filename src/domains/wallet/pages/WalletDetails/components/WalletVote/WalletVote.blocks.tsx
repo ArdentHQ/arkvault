@@ -26,7 +26,7 @@ const EmptyVotes = () => {
 	);
 };
 
-export const DelegateStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {
+export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {
 	const { t } = useTranslation();
 
 	// @ts-ignore
@@ -96,19 +96,19 @@ export const DelegateStatus = ({ votes, activeValidators }: ValidatorStatusPrope
 	);
 };
 
-export const DelegateName = ({
-	delegateName,
+export const ValidatorName = ({
+	validatorName,
 	isUsername,
 	className,
 }: {
-	delegateName: string;
+	validatorName: string;
 	isUsername: boolean;
 	className?: string;
 }) => {
 	if (!isUsername) {
-		return <Address address={delegateName} addressClass={className} showCopyButton={false} />;
+		return <Address address={validatorName} addressClass={className} showCopyButton={false} />;
 	}
-	return <AddressLabel className={className}>{delegateName}</AddressLabel>;
+	return <AddressLabel className={className}>{validatorName}</AddressLabel>;
 };
 
 const Votes = ({ votes, activeValidators }: VotesProperties) => {
@@ -123,8 +123,8 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
 				<div className="max-w-28 truncate xs:max-w-32 sm:max-w-40 md:max-w-48">
-					<DelegateName
-						delegateName={validator.username() || validator.address()}
+					<ValidatorName
+						validatorName={validator.username() || validator.address()}
 						className="text-sm dark:text-theme-dark-50 md:text-base md:leading-5"
 						isUsername={validator.username() !== undefined}
 					/>
@@ -139,9 +139,9 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 					{validator.rank() ? `#${validator.rank()}` : t("COMMON.NOT_AVAILABLE")}
 				</p>
 				<p className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:hidden">
-					{t("COMMON.DELEGATE_STATUS")}
+					{t("COMMON.VALIDATOR_STATUS")}
 				</p>
-				<DelegateStatus votes={votes} activeValidators={activeValidators} />
+				<ValidatorStatus votes={votes} activeValidators={activeValidators} />
 				<Divider
 					type="vertical"
 					className="ml-1 mr-3 hidden h-5 border-theme-secondary-300 p-0 dark:border-s-theme-dark-700 md:flex"

@@ -31,7 +31,7 @@ export const ReviewStep = ({
 	}, [unregister]);
 
 	return (
-		<section data-testid="DelegateRegistrationForm__review-step">
+		<section data-testid="ValidatorRegistrationForm__review-step">
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}

@@ -4,11 +4,11 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
 
-interface DelegateRowSkeletonProperties {
+interface ValidatorRowSkeletonProperties {
 	requiresStakeAmount?: boolean;
 }
 
-export const ValidatorRowSkeleton = ({ requiresStakeAmount }: DelegateRowSkeletonProperties) => {
+export const ValidatorRowSkeleton = ({ requiresStakeAmount }: ValidatorRowSkeletonProperties) => {
 	const nameWidth = useRandomNumber(120, 150);
 
 	return (
