@@ -10,7 +10,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 } from "@/utils/testing-library";
@@ -102,7 +102,7 @@ describe("SendVote Combined", () => {
 
 		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {

@@ -11,7 +11,7 @@ import {
 	AddressRowMobileDelegateName,
 } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
+import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { createHashHistory } from "history";
 import { within } from "@testing-library/react";
@@ -88,7 +88,7 @@ describe("AddressRowMobile", () => {
 		profile.wallets().push(wallet2);
 
 		await profile.sync();
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();

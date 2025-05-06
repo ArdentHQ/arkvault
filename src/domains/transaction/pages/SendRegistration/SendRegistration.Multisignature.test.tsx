@@ -6,7 +6,7 @@ import {
 	mockNanoXTransport,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 } from "@/utils/testing-library";
@@ -147,7 +147,7 @@ describe("Multisignature Registration", () => {
 			}),
 		);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 
 		signatory = await wallet.signatoryFactory().make({

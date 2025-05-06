@@ -5,7 +5,7 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 	within,
@@ -130,7 +130,7 @@ describe("SendValidatorResignation", () => {
 
 		await wallet.synchroniser().identity();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 	});
 

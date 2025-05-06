@@ -13,7 +13,7 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 	within,
@@ -100,7 +100,7 @@ describe("Registration Fee", () => {
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 	});
 
