@@ -9,29 +9,21 @@ exports[`TransactionRowRecipient > should render 1`] = `
       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
     >
       <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
+        class="font-semibold text-base text-theme-text"
+        data-testid="Address__alias"
       >
-        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+        <span
+          class="no-ligatures transition-colors duration-200"
+          data-testid="TruncateEnd"
+        >
+          Mainsail Wallet …
+        </span>
       </span>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TransactionRowRecipient > should render compact 1`] = `
-<DocumentFragment>
-  <div
-    class="w-0 flex-1"
-  >
-    <div
-      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-    >
       <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
         data-testid="Address__address"
       >
-        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
       </span>
     </div>
   </div>

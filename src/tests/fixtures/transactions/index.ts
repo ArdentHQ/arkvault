@@ -2,7 +2,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
 const wallet = {
-	address: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+	address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	alias: () => "Test Wallet",
 	currency: () => "ARK",
 	exchangeCurrency: () => "BTC",
@@ -14,7 +14,7 @@ const wallet = {
 		isAwaitingOurSignature: () => false,
 	}),
 	network: () => ({
-		id: () => "ark.devnet",
+		id: () => "mainsail.devnet",
 		isTest: () => true,
 	}),
 };
