@@ -43,7 +43,7 @@
 		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
 	},
 	"dependencies": {
-		"@ardenthq/arkvault-crypto": "^0.0.6",
+		"@ardenthq/arkvault-crypto": "^0.0.8",
 		"@ardenthq/arkvault-url": "^1.2.0",
 		"@arkecosystem/typescript-client": "^0.0.3",
 		"@arkecosystem/typescript-crypto": "0.0.6",
