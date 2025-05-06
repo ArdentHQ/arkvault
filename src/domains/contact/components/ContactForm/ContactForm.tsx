@@ -9,7 +9,6 @@ import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
-import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
@@ -24,8 +23,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
-	const network = profile.availableNetworks().find((network) => network.id() === NetworkOption.Mainnet);
-
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: contact?.addresses().first().address() ?? "",
@@ -34,7 +31,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		mode: "onChange",
 	});
 
-	const { formState, register, setError, watch } = form;
+	const { formState, register, setError, watch, errors: errs } = form;
 	const { isValid } = formState;
 
 	const { name, address } = watch();
@@ -55,7 +52,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				onSave({
 					address: {
 						address: address,
-						coin: network!.coin(),
 						name: address,
 					},
 					name,
@@ -78,8 +74,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				<InputAddress
 					profile={profile}
 					registerRef={register}
-					coin={network?.coin()}
-					network={network?.id()}
 					useDefaultRules={false}
 					additionalRules={{
 						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
@@ -105,10 +99,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 									return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 										field: t("COMMON.ADDRESS"),
 									}).toString();
-								}
-
-								if (!network) {
-									return t("CONTACTS.VALIDATION.NETWORK_NOT_AVAILABLE").toString();
 								}
 
 								const isValidAddress: boolean = new AddressService().validate(address);

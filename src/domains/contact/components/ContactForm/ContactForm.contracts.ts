@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 
 interface AddressItem {
 	address: string;
-	coin: string;
 	name: string;
 }
 

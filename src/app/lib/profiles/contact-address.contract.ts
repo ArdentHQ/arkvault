@@ -5,7 +5,6 @@
  * @interface IContactAddressInput
  */
 export interface IContactAddressInput {
-	coin: string;
 	address: string;
 }
 

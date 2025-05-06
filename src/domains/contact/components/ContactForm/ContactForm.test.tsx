@@ -50,7 +50,7 @@ describe("ContactForm", () => {
 	});
 
 	it.each(["xs", "sm"])("should render responsive %s", async (breakpoint) => {
-		const { asFragment } = renderResponsive(
+		renderResponsive(
 			<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />,
 			breakpoint,
 		);

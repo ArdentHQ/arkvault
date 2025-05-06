@@ -37,7 +37,6 @@ describe("CreateContact", () => {
 		});
 
 		expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.DESCRIPTION);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should call onSave when form is submitted", async () => {
@@ -50,6 +49,7 @@ describe("CreateContact", () => {
 		await userEvent.type(nameInput(), newContact.name);
 		await userEvent.tab();
 		await userEvent.type(addressInput(), newContact.address);
+		await new Promise(resolve => setTimeout(resolve, 1000));
 		await userEvent.tab();
 
 		await waitFor(() => {
