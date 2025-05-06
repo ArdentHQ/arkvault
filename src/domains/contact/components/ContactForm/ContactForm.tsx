@@ -9,7 +9,6 @@ import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
-import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 
@@ -24,9 +23,8 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 }) => {
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
-	const { env } = useEnvironmentContext();
 
-	const network = env.availableNetworks().find((network) => network.id() === NetworkOption.Mainnet);
+	const network = profile.availableNetworks().find((network) => network.id() === NetworkOption.Mainnet);
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
@@ -129,9 +127,8 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			</FormField>
 
 			<div
-				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${
-					contact ? "justify-between" : "justify-end"
-				}`}
+				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${contact ? "justify-between" : "justify-end"
+					}`}
 			>
 				{contact && !isXs && (
 					<Button
