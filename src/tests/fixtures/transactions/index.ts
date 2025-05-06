@@ -6,9 +6,9 @@ const wallet = {
 	alias: () => "Test Wallet",
 	currency: () => "ARK",
 	exchangeCurrency: () => "BTC",
-	isDelegate: () => true,
+	isValidator: () => true,
 	isLedger: () => false,
-	isResignedDelegate: () => false,
+	isResignedValidator: () => false,
 	transaction: () => ({
 		canBeSigned: () => false,
 		isAwaitingOurSignature: () => false,
@@ -45,8 +45,8 @@ export const TransactionFixture = {
 	isSecondSignature: () => false,
 	isMultiSignatureRegistration: () => false,
 	usesMultiSignature: () => false,
-	isDelegateRegistration: () => false,
-	isDelegateResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => false,
 	isVoteCombination: () => false,
 	isVote: () => false,
 	isUnvote: () => false,
@@ -73,7 +73,7 @@ export const TransactionFixture = {
 	coin: () => undefined,
 	data: () => {
 		return {
-			data: () => {},
+			data: () => { },
 		};
 	},
 	get: () => "",
