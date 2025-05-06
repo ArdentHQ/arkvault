@@ -27,7 +27,7 @@ import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { renderHook } from "@testing-library/react";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
-import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();

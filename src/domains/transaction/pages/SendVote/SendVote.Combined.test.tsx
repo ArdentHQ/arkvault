@@ -23,7 +23,7 @@ import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
 import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";

@@ -10,7 +10,7 @@ const endpoints = [
 		data: require("../../fixtures/coins/mainsail/devnet/cryptoConfiguration.json"),
 	},
 	{ path: "/transactions", data: require("../../fixtures/coins/mainsail/devnet/transactions.json") },
-	{ path: "/delegates", data: require("../../fixtures/coins/mainsail/devnet/delegates.json") },
+	{ path: "/delegates", data: require("../../fixtures/coins/mainsail/devnet/validators.json") },
 	{ path: "/node/syncing", data: require("../../fixtures/coins/mainsail/devnet/syncing.json") },
 	// { path: "/transactions/fees", data: require("../../fixtures/coins/mainsail/devnet/transaction-fees.json") },
 ];
