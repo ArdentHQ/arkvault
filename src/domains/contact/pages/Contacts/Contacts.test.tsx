@@ -22,6 +22,7 @@ import {
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
+const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F"
 
 const renderComponent = (profileId = profile.id()) => {
 	const contactsURL = `/profiles/${profileId}/contacts`;
@@ -172,13 +173,6 @@ describe("Contacts", () => {
 	});
 
 	it("should successfully add contact", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
-
 		renderComponent();
 
 		await waitFor(() => {
@@ -197,10 +191,10 @@ describe("Contacts", () => {
 			expect(screen.getByTestId(contactFormNameInputId)).toHaveValue("Test Contact");
 		});
 
-		await userEvent.type(screen.getByTestId("contact-form__address-input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		await userEvent.type(screen.getByTestId("contact-form__address-input"), contactAddress);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(contactAddress);
 		});
 
 		await waitFor(() => expect(saveButton()).not.toBeDisabled());
@@ -208,19 +202,11 @@ describe("Contacts", () => {
 		await userEvent.click(saveButton());
 
 		await waitFor(() => {
-			expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
+			expect(profile.contacts().findByAddress( contactAddress)).toHaveLength(1);
 		});
-		validateMock.mockRestore();
 	});
 
 	it("should successfully add contact on mobile", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
-
 		renderResponsiveComponent();
 
 		await waitFor(() => {
@@ -257,11 +243,10 @@ describe("Contacts", () => {
 		await waitFor(() => {
 			expect(profile.contacts().findByAddress("0x0000000000000000000000000000000000000001")).toHaveLength(1);
 		});
-		validateMock.mockRestore();
 	});
 
 	it("should successfully delete contact", async () => {
-		const newContact = createContact(profile, "New Contact", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		const newContact = createContact(profile, "New Contact", contactAddress);
 
 		const contactsSpy = vi
 			.spyOn(profile.contacts(), "values")
@@ -392,7 +377,7 @@ describe("Contacts", () => {
 	});
 
 	it("should successfully delete contact from update modal", async () => {
-		const newContact = createContact(profile, "New Contact", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		const newContact = createContact(profile, "New Contact", contactAddress);
 
 		const contactsSpy = vi
 			.spyOn(profile.contacts(), "values")
@@ -486,7 +471,7 @@ describe("Contacts", () => {
 		const blankProfile = await env.profiles().create("empty");
 
 		const resetBlankProfileNetworksMock = mockProfileWithPublicAndTestNetworks(blankProfile);
-		const contact1 = createContact(blankProfile, "contact1", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		const contact1 = createContact(blankProfile, "contact1", contactAddress);
 		const contact2 = createContact(blankProfile, "contact2", "D5YZY7CKdeHtUQhWdmBaqqXvNshq3Tkj4a");
 
 		const contact1Address = contact1.addresses().first().address();
