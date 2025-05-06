@@ -244,18 +244,6 @@ export const requestMocks = {
 		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
 		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
 	],
-	validators: [
-		// devnet
-		mockRequest("https://ark-test.arkvault.io/api/validators", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=1", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=2", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=3", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=4", validatorsFixture),
-		mockRequest("https://ark-test.arkvault.io/api/validators?page=5", validatorsFixture),
-
-		// mainnet
-		mockRequest("https://ark-live.arkvault.io/api/validators", "coins/ark/mainnet/validators"),
-	],
 	exchange: [
 		mockRequest(
 			// eslint-disable-next-line unicorn/better-regex
@@ -396,6 +384,18 @@ export const requestMocks = {
 		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
 
 		...searchAddressesMocks(),
+	],
+	validators: [
+		// devnet
+		mockRequest("https://ark-test.arkvault.io/api/validators", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=1", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=2", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=3", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=4", validatorsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/validators?page=5", validatorsFixture),
+
+		// mainnet
+		mockRequest("https://ark-live.arkvault.io/api/validators", "coins/ark/mainnet/validators"),
 	],
 	wallets: [
 		mockRequest("https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0", {}),

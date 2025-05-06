@@ -11,10 +11,10 @@ describe("TransactionType", () => {
 			<TransactionType
 				transaction={
 					{
-						isValidatorRegistration: () => false,
-						isValidatorResignation: () => false,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => false,
+						isValidatorRegistration: () => false,
+						isValidatorResignation: () => false,
 						isVote: () => false,
 						type: () => "multiPayment",
 						username: () => "validator",
@@ -35,10 +35,10 @@ describe("TransactionType", () => {
 			<TransactionType
 				transaction={
 					{
-						isValidatorRegistration: () => true,
-						isValidatorResignation: () => false,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => false,
+						isValidatorRegistration: () => true,
+						isValidatorResignation: () => false,
 						isVote: () => false,
 						type: () => "validatorRegistration",
 						username: () => "validator",
@@ -59,10 +59,10 @@ describe("TransactionType", () => {
 			<TransactionType
 				transaction={
 					{
-						isValidatorRegistration: () => false,
-						isValidatorResignation: () => true,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => false,
+						isValidatorRegistration: () => false,
+						isValidatorResignation: () => true,
 						isVote: () => false,
 						type: () => "validatorResignation",
 						username: () => "validator",
@@ -92,10 +92,10 @@ describe("TransactionType", () => {
 							],
 						}),
 						hash: () => hash,
-						isValidatorRegistration: () => false,
-						isValidatorResignation: () => false,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => true,
+						isValidatorRegistration: () => false,
+						isValidatorResignation: () => false,
 						isVote: () => false,
 						type: () => "multiSignature",
 						username: () => "validator",

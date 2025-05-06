@@ -38,8 +38,8 @@ describe("WalletVote", () => {
 			address: wallet.address(),
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isValidator: false,
 			isResignedValidator: false,
+			isValidator: false,
 			publicKey: wallet.publicKey(),
 		};
 
@@ -300,8 +300,8 @@ describe("WalletVote", () => {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 				}),
 			};
 
@@ -362,16 +362,16 @@ describe("WalletVote", () => {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
@@ -440,8 +440,8 @@ describe("ValidatorStatus", () => {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
@@ -456,8 +456,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
@@ -473,8 +473,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
@@ -482,8 +482,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 					rank: 52,
 				}),
 			},
@@ -491,8 +491,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
@@ -510,8 +510,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
@@ -519,8 +519,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 					rank: 52,
 				}),
 			},
@@ -528,8 +528,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
@@ -545,8 +545,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
@@ -554,8 +554,8 @@ describe("ValidatorStatus", () => {
 				amount: 1,
 				wallet: new ReadOnlyWallet({
 					...defaultValidator,
-					isValidator: true,
 					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
