@@ -38,7 +38,7 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render registration variant if transaction is validator registration", () => {
-		const registrationFixture = { ...fixture, isDelegateRegistration: () => true, username: () => "test" };
+		const registrationFixture = { ...fixture, isValidatorRegistration: () => true, username: () => "test" };
 		render(<TransactionRowAddressing transaction={registrationFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__vote")).toBeInTheDocument();
@@ -47,7 +47,7 @@ describe("TransactionRowAddressing", () => {
 	it("should render resignation variant if transaction is validator resignation", () => {
 		const resignationFixture = {
 			...fixture,
-			isDelegateResignation: () => true,
+			isValidatorResignation: () => true,
 			wallet: () => ({
 				...TransactionFixture.wallet(),
 				coin: () => ({

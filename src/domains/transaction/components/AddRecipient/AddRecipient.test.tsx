@@ -158,10 +158,10 @@ describe("AddRecipient", () => {
 
 	it("should set amount", async () => {
 		const onChange = vi.fn();
-		const findDelegateSpy = vi.spyOn(env.delegates(), "findByAddress").mockImplementation(
+		const findValidatorSpy = vi.spyOn(env.validators(), "findByAddress").mockImplementation(
 			() =>
 				({
-					username: () => "delegate username",
+					username: () => "validator username",
 				}) as any,
 		);
 
@@ -175,13 +175,13 @@ describe("AddRecipient", () => {
 		expect(onChange).toHaveBeenCalledWith([
 			{
 				address: address,
-				alias: "delegate username",
+				alias: "validator username",
 				amount: amount,
-				isDelegate: true,
+				isValidator: true,
 			},
 		]);
 
-		findDelegateSpy.mockRestore();
+		findValidatorSpy.mockRestore();
 	});
 
 	it("should select recipient", async () => {

@@ -168,13 +168,13 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
-		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(env.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
 					new ReadOnlyWallet({
 						address: vote,
-						username: `delegate-${index}`,
+						username: `validator-${index}`,
 					}),
 			),
 		);
@@ -229,13 +229,13 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render an vote swap modal for signed transaction", () => {
-		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(env.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
 					new ReadOnlyWallet({
 						address: vote,
-						username: `delegate-${index}`,
+						username: `validator-${index}`,
 					}),
 			),
 		);
@@ -275,7 +275,7 @@ describe("TransactionDetailModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Vote Swap");
 	});
 
-	it("should render a delegate registration modal", () => {
+	it("should render a validator registration modal", () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
@@ -283,7 +283,7 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "delegateRegistration",
+						type: () => "validatorRegistration",
 						username: () => "ARK Wallet",
 						wallet: () => wallet,
 					}}
@@ -298,7 +298,7 @@ describe("TransactionDetailModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Registration");
 	});
 
-	it("should render a delegate resignation modal", () => {
+	it("should render a validator resignation modal", () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
@@ -306,7 +306,7 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "delegateResignation",
+						type: () => "validatorResignation",
 						wallet: () => wallet,
 					}}
 				/>

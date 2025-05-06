@@ -9,7 +9,7 @@ import { Route } from "react-router-dom";
 import { ValidatorRegistrationForm, signValidatorRegistration } from "./ValidatorRegistrationForm";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { translations } from "@/domains/transaction/i18n";
-import delegateRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/delegate-registration.json";
+import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import {
 	env,
 	getDefaultProfileId,
@@ -65,14 +65,14 @@ const renderComponent = (properties?: any) => {
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +delegateRegistrationFixture.data.amount / 1e8,
-		data: () => ({ data: () => delegateRegistrationFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${delegateRegistrationFixture.data.id}`,
-		fee: () => +delegateRegistrationFixture.data.fee / 1e8,
-		id: () => delegateRegistrationFixture.data.id,
-		recipient: () => delegateRegistrationFixture.data.recipient,
-		sender: () => delegateRegistrationFixture.data.sender,
-		username: () => delegateRegistrationFixture.data.asset.delegate.username,
+		amount: () => +validatorRegistrationFixture.data.amount / 1e8,
+		data: () => ({ data: () => validatorRegistrationFixture.data }),
+		explorerLink: () => `https://test.arkscan.io/transaction/${validatorRegistrationFixture.data.id}`,
+		fee: () => +validatorRegistrationFixture.data.fee / 1e8,
+		id: () => validatorRegistrationFixture.data.id,
+		recipient: () => validatorRegistrationFixture.data.recipient,
+		sender: () => validatorRegistrationFixture.data.sender,
+		username: () => validatorRegistrationFixture.data.asset.validator.username,
 	});
 
 const formStepID = "ValidatorRegistrationForm_form-step";
@@ -104,7 +104,7 @@ describe("ValidatorRegistrationForm", () => {
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -175,9 +175,9 @@ describe("ValidatorRegistrationForm", () => {
 		};
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [delegateRegistrationFixture.data.id],
+			accepted: [validatorRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -193,8 +193,8 @@ describe("ValidatorRegistrationForm", () => {
 			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
 			fee: 1,
 		});
-		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
-		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -204,12 +204,12 @@ describe("ValidatorRegistrationForm", () => {
 	it("should output transaction details", () => {
 		const translations = vi.fn((translation) => translation);
 		const transaction = {
-			amount: () => delegateRegistrationFixture.data.amount / 1e8,
-			data: () => ({ data: () => delegateRegistrationFixture.data }),
-			fee: () => delegateRegistrationFixture.data.fee / 1e8,
-			id: () => delegateRegistrationFixture.data.id,
-			recipient: () => delegateRegistrationFixture.data.recipient,
-			sender: () => delegateRegistrationFixture.data.sender,
+			amount: () => validatorRegistrationFixture.data.amount / 1e8,
+			data: () => ({ data: () => validatorRegistrationFixture.data }),
+			fee: () => validatorRegistrationFixture.data.fee / 1e8,
+			id: () => validatorRegistrationFixture.data.id,
+			recipient: () => validatorRegistrationFixture.data.recipient,
+			sender: () => validatorRegistrationFixture.data.sender,
 		} as Contracts.SignedTransactionData;
 
 		render(
@@ -245,9 +245,9 @@ describe("ValidatorRegistrationForm", () => {
 		};
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(delegateRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [delegateRegistrationFixture.data.id],
+			accepted: [validatorRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -263,8 +263,8 @@ describe("ValidatorRegistrationForm", () => {
 			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
 			fee: 1,
 		});
-		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
-		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.id);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

@@ -11,15 +11,15 @@ describe("TransactionType", () => {
 			<TransactionType
 				transaction={
 					{
-						isDelegateRegistration: () => false,
-						isDelegateResignation: () => false,
+						isValidatorRegistration: () => false,
+						isValidatorResignation: () => false,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => false,
 						isVote: () => false,
 						type: () => "multiPayment",
-						username: () => "delegate",
+						username: () => "validator",
 						wallet: () => ({
-							username: () => "delegate",
+							username: () => "validator",
 						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -30,20 +30,20 @@ describe("TransactionType", () => {
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.MULTI_PAYMENT);
 	});
 
-	it("should render delegate registration", () => {
+	it("should render validator registration", () => {
 		const { container } = render(
 			<TransactionType
 				transaction={
 					{
-						isDelegateRegistration: () => true,
-						isDelegateResignation: () => false,
+						isValidatorRegistration: () => true,
+						isValidatorResignation: () => false,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => false,
 						isVote: () => false,
-						type: () => "delegateRegistration",
-						username: () => "delegate",
+						type: () => "validatorRegistration",
+						username: () => "validator",
 						wallet: () => ({
-							username: () => "delegate",
+							username: () => "validator",
 						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -51,23 +51,23 @@ describe("TransactionType", () => {
 		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.VALIDATOR_REGISTRATION);
-		expect(container).toHaveTextContent("delegate");
+		expect(container).toHaveTextContent("validator");
 	});
 
-	it("should render delegate resignation", () => {
+	it("should render validator resignation", () => {
 		const { container } = render(
 			<TransactionType
 				transaction={
 					{
-						isDelegateRegistration: () => false,
-						isDelegateResignation: () => true,
+						isValidatorRegistration: () => false,
+						isValidatorResignation: () => true,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => false,
 						isVote: () => false,
-						type: () => "delegateResignation",
-						username: () => "delegate",
+						type: () => "validatorResignation",
+						username: () => "validator",
 						wallet: () => ({
-							username: () => "delegate",
+							username: () => "validator",
 						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -75,7 +75,7 @@ describe("TransactionType", () => {
 		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.VALIDATOR_RESIGNATION);
-		expect(container).toHaveTextContent("delegate");
+		expect(container).toHaveTextContent("validator");
 	});
 
 	it("should render multisignature registration", () => {
@@ -92,13 +92,13 @@ describe("TransactionType", () => {
 							],
 						}),
 						hash: () => hash,
-						isDelegateRegistration: () => false,
-						isDelegateResignation: () => false,
+						isValidatorRegistration: () => false,
+						isValidatorResignation: () => false,
 						isIpfs: () => false,
 						isMultiSignatureRegistration: () => true,
 						isVote: () => false,
 						type: () => "multiSignature",
-						username: () => "delegate",
+						username: () => "validator",
 						wallet: () => env.profiles().first().wallets().first(),
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -115,13 +115,13 @@ describe("TransactionType", () => {
 					{
 						isUsernameRegistration: () => true,
 						wallet: () => ({
-							username: () => "delegate",
+							username: () => "validator",
 						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
 		);
 
-		expect(container).toHaveTextContent("delegate");
+		expect(container).toHaveTextContent("validator");
 	});
 });

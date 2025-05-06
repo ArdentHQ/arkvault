@@ -62,14 +62,14 @@ describe("TransactionRecipients", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a single recipient that is delegate", () => {
+	it("should render a single recipient that is validator", () => {
 		const { container } = render(
-			<TransactionRecipients currency={currency} recipients={[{ address, isDelegate: true }]} />,
+			<TransactionRecipients currency={currency} recipients={[{ address, isValidator: true }]} />,
 		);
 
 		expect(container).toHaveTextContent(address);
 
-		expect(queryElementForSvg(container, "delegate-registration")).toBeInTheDocument();
+		expect(queryElementForSvg(container, "validator-registration")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -96,13 +96,13 @@ describe("TransactionRecipients", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should render recipients with delegate icon in %s", (breakpoint) => {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render recipients with validator icon in %s", (breakpoint) => {
 		const { container } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
 				<TransactionRecipients
 					currency={currency}
 					recipients={[
-						{ address, amount: 1, isDelegate: true },
+						{ address, amount: 1, isValidator: true },
 						{ address, amount: 1 },
 					]}
 				/>

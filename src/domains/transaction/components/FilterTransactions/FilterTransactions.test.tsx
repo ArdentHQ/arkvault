@@ -9,8 +9,8 @@ let profile: Contracts.IProfile;
 
 describe("FilterTransactions", () => {
 	const allTypes = [
-		"delegateRegistration",
-		"delegateResignation",
+		"validatorRegistration",
+		"validatorResignation",
 		"multiPayment",
 		"multiSignature",
 		"transfer",
@@ -247,7 +247,7 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["delegateRegistration", "delegateResignation", "multiSignature"],
+			["validatorRegistration", "validatorResignation", "multiSignature"],
 		);
 	});
 
@@ -258,7 +258,7 @@ describe("FilterTransactions", () => {
 			<FilterTransactions
 				wallets={profile.wallets().values()}
 				onSelect={onSelect}
-				selectedTransactionTypes={["delegateRegistration", "delegateResignation", "multiSignature"]}
+				selectedTransactionTypes={["validatorRegistration", "validatorResignation", "multiSignature"]}
 			/>,
 		);
 
