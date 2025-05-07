@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useMemo } from "react";
 
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
@@ -17,7 +17,7 @@ export const TransactionRowRecipient = ({ transaction, profile, labelClass }: Pr
 	const { alias } = useMemo(
 		() =>
 			getWalletAlias({
-				address: transaction.recipient(),
+				address: transaction.to(),
 				network: transaction.wallet().network(),
 				profile,
 			}),

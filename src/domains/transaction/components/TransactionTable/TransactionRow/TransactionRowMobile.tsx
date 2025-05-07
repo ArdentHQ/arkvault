@@ -5,7 +5,7 @@ import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
 import { TransactionRowProperties } from "./TransactionRow.contracts";
 import { TableRow } from "@/app/components/Table";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";

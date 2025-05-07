@@ -1,8 +1,8 @@
-import { Http } from "@ardenthq/sdk";
+import { Http } from "@/app/lib/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./Cache";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 
 type Primitive = null | undefined | string | number | boolean | symbol | bigint;
 

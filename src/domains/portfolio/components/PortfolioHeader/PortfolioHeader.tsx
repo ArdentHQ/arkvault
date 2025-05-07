@@ -4,7 +4,7 @@ import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Dropdown } from "@/app/components/Dropdown";
 import { t } from "i18next";
@@ -24,6 +24,8 @@ import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
 export const PortfolioHeader = ({
 	profile,
@@ -56,6 +58,8 @@ export const PortfolioHeader = ({
 		allWallets,
 		removeSelectedAddresses,
 		selectedWallet,
+		mode,
+		setMode,
 	} = usePortfolio({ profile });
 
 	const wallet = selectedWallets.at(0);
@@ -69,12 +73,12 @@ export const PortfolioHeader = ({
 	const { persist } = useEnvironmentContext();
 
 	const [showHint, setShowHint] = useState<boolean>(false);
-	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("multiple-addresses-hint", undefined);
+	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
 
-		if (hasFocus && hintHasShown === undefined && selectedWallets.length > 1) {
+		if (hasFocus && hintHasShown === undefined && allWallets.length > 1 && mode === "single") {
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -83,7 +87,7 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, selectedWallets.length]);
+	}, [hasFocus, hintHasShown, mode, allWallets.length]);
 
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
@@ -111,9 +115,9 @@ export const PortfolioHeader = ({
 						visible={showHint}
 						interactive={true}
 						content={
-							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-								<div className="mb-2 block sm:mb-0 sm:inline">
-									<Trans i18nKey="WALLETS.MULTIPLE_ADDRESSES_HINT" />
+							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
+								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
 									size="xs"
@@ -155,6 +159,7 @@ export const PortfolioHeader = ({
 										availableWallets={allWallets.length}
 										wallets={selectedWallets}
 										profile={profile}
+										mode={mode}
 									/>
 									{allWallets.length > 1 && (
 										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
@@ -379,20 +384,23 @@ export const PortfolioHeader = ({
 				</div>
 			</div>
 
-			<AddressesSidePanel
-				profile={profile}
-				wallets={allWallets}
-				defaultSelectedAddresses={selectedAddresses}
-				defaultSelectedWallet={selectedWallet}
-				onClose={(addresses) => {
-					setSelectedAddresses(addresses);
-				}}
-				open={showAddressesPanel}
-				onOpenChange={setShowAddressesPanel}
-				onDelete={(address) => {
-					void onDeleteAddress(address);
-				}}
-			/>
+			<ResetWhenUnmounted>
+				<AddressesSidePanel
+					profile={profile}
+					wallets={allWallets}
+					defaultSelectedAddresses={selectedAddresses}
+					defaultSelectedWallet={selectedWallet}
+					onClose={(addresses, newMode: AddressViewType) => {
+						setSelectedAddresses(addresses);
+						setMode(newMode);
+					}}
+					open={showAddressesPanel}
+					onOpenChange={setShowAddressesPanel}
+					onDelete={(address) => {
+						void onDeleteAddress(address);
+					}}
+				/>
+			</ResetWhenUnmounted>
 
 			<WalletActionsModals
 				wallets={selectedWallets}

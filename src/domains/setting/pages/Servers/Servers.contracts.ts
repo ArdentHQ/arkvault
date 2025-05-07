@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { OptionProperties } from "@/app/components/SelectDropdown";
 
 interface ServersSettingsState {
@@ -24,10 +24,11 @@ interface NetworkSelectProperties extends OptionProperties {
 type NetworkHostType = Networks.NetworkHost["type"];
 
 interface CustomNetwork {
-	address: string;
+	evmApiEndpoint: string;
+	publicApiEndpoint: string;
+	transactionApiEndpoint: string;
 	name: string;
 	network?: string;
-	serverType?: NetworkHostType;
 }
 interface UserCustomNetwork {
 	address: string;
@@ -40,10 +41,11 @@ interface UserCustomNetwork {
 }
 
 interface NormalizedNetwork {
-	address: string;
+	publicApiEndpoint: string;
+	transactionApiEndpoint: string;
+	evmApiEndpoint: string;
 	name: string;
 	network: Networks.Network;
-	serverType: Networks.NetworkHost["type"];
 	online?: boolean;
 	enabled: boolean;
 	height?: number;

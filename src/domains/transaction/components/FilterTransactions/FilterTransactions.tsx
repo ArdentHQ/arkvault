@@ -3,7 +3,7 @@ import React, { memo } from "react";
 
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import classNames from "classnames";
 import { useTransactionTypeFilters } from "./use-transaction-type-filters";
 import { useTranslation } from "react-i18next";

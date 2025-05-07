@@ -1,124 +1,178 @@
-import { useCallback, useEffect, useState } from "react";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { useEffect, useRef, useState } from "react";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import { HttpClient } from "@/app/services/HttpClient";
-import { NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
-import {
-	addressIsValid as checkIfAddressIsValid,
-	getBaseUrl,
-	isPeer,
-	isMusig,
-	urlBelongsToNetwork,
-	getServerHeight,
-} from "@/utils/peers";
+import { addressIsValid as checkIfAddressIsValid, urlBelongsToNetwork, getServerHeight } from "@/utils/peers";
+import { DeepMap, FieldError } from "react-hook-form";
+import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+import { useTranslation } from "react-i18next";
+
+export async function pingTransactionApi(endpoint: string, controller: AbortController): Promise<boolean> {
+	const { signal } = controller;
+	const client = new HttpClient(0).withOptions({ signal });
+
+	const response = await client.get(`${endpoint}/configuration`);
+
+	const body = JSON.parse(response.body());
+
+	return !!body.data.height;
+}
+
+export async function pingEvmApi(endpoint: string, controller: AbortController): Promise<boolean> {
+	const { signal } = controller;
+	const client = new HttpClient(0).withOptions({ signal });
+
+	const response = await client.post(endpoint, {
+		id: 1,
+		jsonrpc: "2.0",
+		method: "eth_call",
+		params: [
+			{
+				data: "0x0000000000000000000000000000000000000000000000000000000000000000",
+				to: "0x0000000000000000000000000000000000000000",
+			},
+			"latest",
+		],
+	});
+
+	const body = JSON.parse(response.body());
+
+	return body.result === "0x";
+}
 
 const useHandleServers = ({
 	profile,
-	address,
+	transactionApiEndpoint,
+	publicApiEndpoint,
+	evmApiEndpoint,
 	network,
-	addressIsValid,
+	errors,
+	setError,
+	clearErrors,
 }: {
 	profile: Contracts.IProfile;
-	address: string;
+	publicApiEndpoint: string;
+	transactionApiEndpoint: string;
+	evmApiEndpoint: string;
 	network?: Networks.Network;
-	addressIsValid: boolean;
+	errors: DeepMap<CustomNetwork, FieldError>;
+	setError: (name: keyof CustomNetwork, error: FieldError) => void;
+	clearErrors: (name: keyof CustomNetwork | (keyof CustomNetwork)[] | undefined) => void;
 }) => {
-	const [networkMismatch, setNetworkMismatch] = useState(false);
+	const { t } = useTranslation();
+
 	const [fetchingDetails, setFetchingDetails] = useState(false);
-	const [fetchingError, setFetchingError] = useState(false);
-	const [serverType, setServerType] = useState<NetworkHostType | undefined>(undefined);
+
 	const [serverHeight, setServerHeight] = useState<number | undefined>(undefined);
-	const baseUrl = checkIfAddressIsValid(address) ? getBaseUrl(address) : undefined;
 
-	const validateAddress = useCallback(async () => {
-		const controller = new AbortController();
-
-		const { signal } = controller;
-
-		const client = new HttpClient(0).withOptions({ signal });
-
-		let serverType: "full" | "musig" | undefined;
-
-		try {
-			// baseUrl cannot be undefined since this method is only called when
-			// the address is valid
-			const response = await client.get(baseUrl!);
-
-			const body = JSON.parse(response.body());
-
-			if (isPeer(body)) {
-				serverType = "full";
-			}
-
-			if (isMusig(body)) {
-				serverType = "musig";
-			}
-		} catch {
-			serverType = undefined;
+	function isValid(url: string, type: string) {
+		if (!url || !network || errors[type] !== undefined) {
+			return false;
 		}
 
-		if (serverType === "full") {
-			if (await urlBelongsToNetwork(profile, address, network!)) {
-				setServerHeight(await getServerHeight(address));
-			} else {
-				setNetworkMismatch(true);
-			}
-		} else {
-			setServerHeight(undefined);
-		}
+		return checkIfAddressIsValid(url);
+	}
 
-		setServerType(serverType);
-
-		if (serverType === undefined) {
-			setFetchingError(true);
-		}
-
-		setFetchingDetails(false);
-
-		return controller;
-	}, [baseUrl, address, network, profile]);
-
-	const shouldFetchAddressType = () => baseUrl !== undefined && !!address && !!network && addressIsValid;
-
-	useEffect(() => {
-		let timeout: ReturnType<typeof setTimeout> | undefined;
-
-		let controller: AbortController | undefined;
-
-		setFetchingError(false);
-
-		setServerType(undefined);
-
+	async function validatePublicApi() {
 		setServerHeight(undefined);
 
-		setNetworkMismatch(false);
-
-		if (!shouldFetchAddressType()) {
-			setFetchingDetails(false);
+		if (!isValid(publicApiEndpoint, "publicApiEndpoint")) {
 			return;
 		}
 
+		clearErrors("publicApiEndpoint");
+
 		setFetchingDetails(true);
 
-		timeout = setTimeout(async () => {
-			timeout = undefined;
+		if (await urlBelongsToNetwork(profile, publicApiEndpoint, network!)) {
+			setServerHeight(await getServerHeight(publicApiEndpoint));
+		} else {
+			setError("publicApiEndpoint", {
+				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.NETWORK_MISMATCH_ERROR"),
+				type: "invalidUrl",
+			});
+		}
+		setFetchingDetails(false);
+	}
 
-			controller = await validateAddress();
-		}, 1000);
+	async function validateTransactionApi(controller: AbortController) {
+		if (!isValid(transactionApiEndpoint, "transactionApiEndpoint")) {
+			return;
+		}
 
-		return () => {
-			if (timeout) {
-				clearTimeout(timeout);
-				timeout = undefined;
+		clearErrors("transactionApiEndpoint");
+
+		setFetchingDetails(true);
+
+		try {
+			const status = await pingTransactionApi(transactionApiEndpoint, controller);
+			if (!status) {
+				setError("transactionApiEndpoint", {
+					message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+					type: "invalidUrl",
+				});
 			}
+		} catch {
+			setError("transactionApiEndpoint", {
+				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+				type: "invalidUrl",
+			});
+		}
 
-			if (controller) {
-				controller.abort();
+		setFetchingDetails(false);
+	}
+
+	async function validateEvmApi(controller: AbortController) {
+		if (!isValid(evmApiEndpoint, "evmApiEndpoint")) {
+			return;
+		}
+
+		clearErrors("evmApiEndpoint");
+
+		setFetchingDetails(true);
+
+		try {
+			const status = await pingEvmApi(evmApiEndpoint, controller);
+			if (!status) {
+				setError("evmApiEndpoint", {
+					message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+					type: "invalidUrl",
+				});
 			}
-		};
-	}, [address, network]);
+		} catch {
+			setError("evmApiEndpoint", {
+				message: t("SETTINGS.SERVERS.ADD_NEW_SERVER.ENDPOINT_ERROR"),
+				type: "invalidUrl",
+			});
+		}
 
-	return { fetchingDetails, fetchingError, networkMismatch, serverHeight, serverType };
+		setFetchingDetails(false);
+	}
+
+	const controllers = useRef<Record<"transactionApi" | "evmApi", AbortController | undefined>>({
+		evmApi: undefined,
+		transactionApi: undefined,
+	});
+
+	const networkId = network?.id();
+
+	useEffect(() => {
+		void validatePublicApi();
+	}, [networkId, publicApiEndpoint]);
+
+	useEffect(() => {
+		controllers.current.transactionApi?.abort();
+		controllers.current.transactionApi = new AbortController();
+		void validateTransactionApi(controllers.current.transactionApi);
+	}, [networkId, transactionApiEndpoint]);
+
+	useEffect(() => {
+		controllers.current.evmApi?.abort();
+		controllers.current.evmApi = new AbortController();
+		void validateEvmApi(controllers.current.evmApi);
+	}, [networkId, evmApiEndpoint]);
+
+	return { fetchingDetails, serverHeight };
 };
 
 export { useHandleServers };

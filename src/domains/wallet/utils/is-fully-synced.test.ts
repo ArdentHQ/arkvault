@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import { env, getMainsailProfileId } from "@/utils/testing-library";

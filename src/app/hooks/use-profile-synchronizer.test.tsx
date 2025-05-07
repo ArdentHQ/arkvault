@@ -21,7 +21,7 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	MAINSAIL_MNEMONICS,
@@ -180,7 +180,7 @@ describe("useProfileSynchronizer", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);

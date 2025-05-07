@@ -1,5 +1,5 @@
-import { DateTime } from "@ardenthq/sdk-intl";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { DateTime } from "@/app/lib/intl";
+import { Contracts } from "@/app/lib/profiles";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 

@@ -6,7 +6,7 @@ import {
 	mockNanoXTransport,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 } from "@/utils/testing-library";
@@ -14,8 +14,8 @@ import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@/app/lib/profiles";
+import { DateTime } from "@/app/lib/intl";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
@@ -147,7 +147,7 @@ describe("Multisignature Registration", () => {
 			}),
 		);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 
 		signatory = await wallet.signatoryFactory().make({

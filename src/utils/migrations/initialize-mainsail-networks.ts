@@ -1,4 +1,4 @@
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 
 export const initializeMainsailNetworks = ({ data }) => {
 	if (!data.networks) {

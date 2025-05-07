@@ -21,7 +21,7 @@ export const NotificationTransactionItemMobile = ({
 	const { alias } = useMemo(
 		() =>
 			getWalletAlias({
-				address: transaction.recipient(),
+				address: transaction.to(),
 				network: transaction.wallet().network(),
 				profile,
 			}),
@@ -34,15 +34,15 @@ export const NotificationTransactionItemMobile = ({
 				<td className="flex-col space-y-4 px-6 py-4" data-testid="NotificationTransactionItemMobile">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
-						<div className="xs:w-50 w-40 min-[480px]:w-2/3">
-							<Address address={transaction.sender()} walletName={alias} />
+						<div className="min-[480px]:w-2/3 w-40 xs:w-50">
+							<Address address={transaction.from()} walletName={alias} />
 						</div>
 					</RowWrapper>
 
 					<RowWrapper>
 						<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
 						<AmountLabel
-							value={transaction.amount()}
+							value={transaction.value()}
 							isNegative={transaction.isSent()}
 							ticker={transaction.wallet().currency()}
 						/>

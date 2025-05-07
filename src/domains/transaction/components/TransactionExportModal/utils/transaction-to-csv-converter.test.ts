@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import { convertToCsv } from "./transaction-to-csv-converter";
-import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
+import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 
 const defaultSettings = {
 	delimiter: ",",
@@ -21,7 +21,7 @@ describe("CsvFormatter", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

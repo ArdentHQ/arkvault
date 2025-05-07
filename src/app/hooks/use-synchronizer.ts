@@ -1,4 +1,4 @@
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";

@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
@@ -7,7 +7,7 @@ import {
 	env,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
@@ -39,7 +39,7 @@ describe("AddressTable", () => {
 
 		wallet = profile.wallets().findById("ee02b13f-8dbf-4191-a9dc-08d2ab72ec28");
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await wallet.synchroniser().votes();
 	});
 

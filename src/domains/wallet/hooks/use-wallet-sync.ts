@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 
 interface WalletImportTypes {
 	profile: Contracts.IProfile;
@@ -26,10 +26,10 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 
 		if (network.allowsVoting()) {
 			try {
-				env.delegates().all(network.coin(), network.id());
+				env.validators().all(network.coin(), network.id());
 			} catch {
-				// Sync network delegates for the first time
-				await env.delegates().sync(profile, network.coin(), network.id());
+				// Sync network validators for the first time
+				await env.validators().sync(profile, network.coin(), network.id());
 			}
 
 			if (wallet.hasSyncedWithNetwork()) {

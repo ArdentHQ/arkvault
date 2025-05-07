@@ -150,19 +150,23 @@ export const translations = {
 
 	SERVERS: {
 		ADD_NEW_SERVER: {
-			DESCRIPTION:
-				"Add a custom network peer or multisignature server for the selected network by providing a valid address.",
+			DESCRIPTION: "To add a custom peer, enter valid endpoints for the selected network.",
+			ENDPOINT_ERROR: "Either failed to connect to the endpoint or it doesn't contain the expected information.",
+			EVM_API_ENDPOINT: "EVM API Endpoint",
 			FETCHING_DETAILS: "Fetching details ...",
 			FETCHING_ERROR:
-				"We were unable to connect to the provided server or failed to find the expected information. Please check your input and try again.",
+				"We were unable to connect to the provided endpoint(s) or failed to find the expected information. Please check your input and try again.",
 			MULTISIG_SERVER: "Multisig Server",
-			NETWORK_MISMATCH_ERROR: "Failed to connect to host because it is on another network.",
+			NETWORK_MISMATCH_ERROR: "Either failed to connect to the endpoint or it is on another network.",
 			NETWORK_PLACEHOLDER: "https://ip:port/api or https://domain",
 			PEER_SERVER: "Network Peer",
+			PUBLIC_API_ENDPOINT: "Public API Endpoint",
 			SUCCESS_MESSAGE:
 				"New {{networkType}} <strong>{{serverName}}</strong> for <strong>{{networkName}}</strong> has been successfully added.",
 			TITLE: "Add New Server",
+			TRANSACTION_API_ENDPOINT: "Transaction API Endpoint",
 		},
+		API: "API",
 		CUSTOM_PEERS: {
 			EMPTY_MESSAGE: "No custom network peers or multisignature servers added yet.",
 		},
@@ -176,6 +180,7 @@ export const translations = {
 			SUCCESS_MESSAGE: "Server data for <strong>{{serverName}}</strong> has been successfully updated.",
 			TITLE: "Edit Server",
 		},
+		EVM: "EVM",
 		MENU_ITEM: "Servers",
 		NODE_STATUS_TOOLTIPS: {
 			HEALTHY: "Default nodes are healthy.",
@@ -199,11 +204,14 @@ export const translations = {
 		},
 		PEERS_STATUS_TOOLTIPS: {
 			HEALTHY: "Peer is healthy.",
+			RESPONSIVE: "Responsive",
+			UNRESPONSIVE: "Unresponsive",
 			WITH_ISSUES: "Peer is not resolving.",
 		},
 		SUBTITLE: "Manage custom network peers and multisignature servers for your Profile.",
 		SUCCESS: "Your server settings have been successfully updated.",
 		TITLE: "Peers & Multisig Servers",
+		TX: "Tx",
 	},
 
 	TITLE: "Settings",

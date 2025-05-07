@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -26,13 +26,13 @@ interface AddressRowProperties {
 
 export const WalletStatus = ({
 	wallet,
-	activeDelegates,
+	activeValidators,
 	fallback = <></>,
 	className = "",
 	dataTestId = "AddressRow__wallet-status",
 }: {
 	wallet?: Contracts.IReadOnlyWallet;
-	activeDelegates: number;
+	activeValidators: number;
 	fallback?: React.ReactNode;
 	className?: string;
 	dataTestId?: string;
@@ -45,7 +45,7 @@ export const WalletStatus = ({
 
 	assertReadOnlyWallet(wallet);
 
-	if (wallet.isResignedDelegate()) {
+	if (wallet.isResignedValidator()) {
 		return (
 			<div
 				data-testid={dataTestId}
@@ -59,7 +59,7 @@ export const WalletStatus = ({
 		);
 	}
 
-	if (Number(wallet.rank()) > activeDelegates) {
+	if (Number(wallet.rank()) > activeValidators) {
 		return (
 			<div
 				data-testid={dataTestId}
@@ -234,7 +234,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					</TableCell>
 
 					<TableCell innerClassName="text-sm justify-center">
-						<WalletStatus wallet={votes[0]?.wallet} activeDelegates={wallet.network().delegateCount()} />
+						<WalletStatus wallet={votes[0]?.wallet} activeValidators={wallet.network().validatorCount()} />
 					</TableCell>
 				</>
 			) : (

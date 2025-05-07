@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
@@ -10,20 +10,20 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
 import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
@@ -102,7 +102,7 @@ describe("SendVote Combined", () => {
 
 		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {

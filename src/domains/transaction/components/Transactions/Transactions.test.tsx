@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -14,7 +14,7 @@ import {
 	render,
 	renderResponsiveWithRoute,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
@@ -34,7 +34,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 	});
 
 	beforeEach(async () => {

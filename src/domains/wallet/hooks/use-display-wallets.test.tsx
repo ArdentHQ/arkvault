@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 import * as envHooks from "@/app/hooks/env";
@@ -10,7 +10,7 @@ import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import {
 	env,
-	syncDelegates,
+	syncValidators,
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
@@ -44,7 +44,7 @@ describe("useDisplayWallets", () => {
 		});
 
 		profile.wallets().push(mainnetWallet);
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		wallets = profile.wallets().values();
 

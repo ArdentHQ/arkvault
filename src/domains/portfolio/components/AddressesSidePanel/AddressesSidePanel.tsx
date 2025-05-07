@@ -6,7 +6,7 @@ import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
@@ -28,6 +28,7 @@ export const AddressesSidePanel = ({
 	onOpenChange,
 	onClose,
 	onDelete,
+	onMountChange,
 }: {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
@@ -35,8 +36,9 @@ export const AddressesSidePanel = ({
 	defaultSelectedWallet?: Contracts.IReadWriteWallet;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	onClose: (addresses: string[]) => void;
+	onClose: (addresses: string[], mode: AddressViewType) => void;
 	onDelete?: (addresses: string) => void;
+	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const {
 		addressViewPreference,
@@ -136,7 +138,7 @@ export const AddressesSidePanel = ({
 			await setSingleSelectedAddress([address]);
 
 			onOpenChange(false);
-			onClose([address]);
+			onClose([address], activeMode);
 		} else {
 			if (selectedAddresses.includes(address)) {
 				const newSelection = selectedAddresses.filter((a) => a !== address);
@@ -193,7 +195,11 @@ export const AddressesSidePanel = ({
 	// Reset selected addresses when panel closes
 	useEffect(() => {
 		if (open) {
-			setSelectedAddresses(selectedAddressesFromPortfolio);
+			setSelectedAddresses(
+				activeMode === AddressViewSelection.single
+					? [selectedAddressesFromPortfolio[selectedAddressesFromPortfolio.length - 1]]
+					: selectedAddressesFromPortfolio,
+			);
 		} else {
 			setSelectedAddresses(
 				activeMode === AddressViewSelection.single ? singleSelectedAddress : multiSelectedAddresses,
@@ -289,10 +295,11 @@ export const AddressesSidePanel = ({
 				setSearchQuery("");
 
 				if (!open) {
-					onClose(selectedAddresses);
+					onClose(selectedAddresses, activeMode);
 				}
 			}}
 			dataTestId="AddressesSidePanel"
+			onMountChange={onMountChange}
 		>
 			<Tabs
 				className={cn("mb-3", { hidden: wallets.length === 1 })}

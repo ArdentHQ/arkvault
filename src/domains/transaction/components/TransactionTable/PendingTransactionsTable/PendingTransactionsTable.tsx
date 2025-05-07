@@ -1,28 +1,24 @@
-import { DTO } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
-
 import { PendingTransaction, Properties } from "./PendingTransactionsTable.contracts";
-import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
-import { Table } from "@/app/components/Table";
-import { ConfirmRemovePendingTransaction } from "@/domains/transaction/components/ConfirmRemovePendingTransaction";
+import React, { useCallback, useMemo } from "react";
+
+import { DTO } from "@/app/lib/profiles";
 import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
 import { PendingTransferRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRowMobile";
 import { SignedTransactionRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRow";
-import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-import { useBreakpoint } from "@/app/hooks";
+import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
+import { Table } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { useBreakpoint } from "@/app/hooks";
+import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
+import { useTranslation } from "react-i18next";
 
 export const PendingTransactions = ({
-	profile,
 	wallet,
 	onClick,
-	onRemove,
 	onPendingTransactionClick,
 	pendingTransactions,
 }: Properties) => {
 	const { t } = useTranslation();
-	const [pendingRemovalTransaction, setPendingRemovalTransaction] = useState<DTO.ExtendedSignedTransactionData>();
 
 	const columns = usePendingTransactionTableColumns({ coin: wallet.network().coinName() });
 
@@ -59,7 +55,6 @@ export const PendingTransactions = ({
 						transaction={transaction.transaction as DTO.ExtendedSignedTransactionData}
 						wallet={wallet}
 						onRowClick={onClick}
-						onRemovePendingTransaction={setPendingRemovalTransaction}
 					/>
 				);
 			}
@@ -69,18 +64,11 @@ export const PendingTransactions = ({
 					transaction={transaction.transaction as DTO.ExtendedSignedTransactionData}
 					wallet={wallet}
 					onRowClick={onClick}
-					onRemovePendingTransaction={setPendingRemovalTransaction}
 				/>
 			);
 		},
-		[wallet, onClick, setPendingRemovalTransaction, onPendingTransactionClick, useResponsive],
+		[wallet, onClick, onPendingTransactionClick, useResponsive],
 	);
-
-	const handleRemove = async (transaction: DTO.ExtendedSignedTransactionData) => {
-		await wallet.coin().multiSignature().forgetById(transaction.id());
-		setPendingRemovalTransaction(undefined);
-		onRemove?.(transaction);
-	};
 
 	return (
 		<div data-testid="PendingTransactions" className="relative">
@@ -98,15 +86,6 @@ export const PendingTransactions = ({
 					{renderTableRow}
 				</Table>
 			</TableWrapper>
-
-			{!!pendingRemovalTransaction && (
-				<ConfirmRemovePendingTransaction
-					profile={profile}
-					transaction={pendingRemovalTransaction}
-					onClose={() => setPendingRemovalTransaction(undefined)}
-					onRemove={handleRemove}
-				/>
-			)}
 		</div>
 	);
 };

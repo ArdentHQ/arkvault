@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import React from "react";
 import { useWalletAlias } from "./use-wallet-alias";
@@ -40,7 +40,7 @@ describe("useWalletAlias", () => {
 			}),
 		).toStrictEqual({
 			address: "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
-			alias: "Genesis 1",
+			alias: undefined,
 			isContact: false,
 		});
 	});

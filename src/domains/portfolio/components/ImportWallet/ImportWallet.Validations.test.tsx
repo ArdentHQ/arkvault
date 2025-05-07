@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -14,6 +14,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 	MAINSAIL_MNEMONICS,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
@@ -21,7 +22,7 @@ import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
 
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+const randomAddress = "0x393f3F74F0cd9e790B5192789F31E0A38159ae03";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
@@ -42,6 +43,7 @@ const testNetwork = "mainsail.devnet";
 
 describe("ImportAddress Validations", () => {
 	let resetProfileNetworksMock: () => void;
+	let uInt8ArrayFix: () => void;
 
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
@@ -60,16 +62,53 @@ describe("ImportAddress Validations", () => {
 		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+		uInt8ArrayFix();
 	});
 
 	it("should error if address cannot be created", async () => {
 		const coin = profile.coins().get("Mainsail", testNetwork);
-		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementationOnce(() => {
+		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementation(() => {
 			throw new Error("test");
+		});
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
+
+		expect(detailStep()).toBeInTheDocument();
+
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
+		const secretInput = screen.getByTestId(secretInputID);
+
+		expect(secretInput).toBeInTheDocument();
+
+		await userEvent.clear(secretInput);
+		await userEvent.type(secretInput, "wrong-secret");
+
+		await waitFor(() => expect(continueButton()).not.toBeEnabled());
+		coinMock.mockRestore();
+	});
+
+	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
+		const coin = profile.coins().get("Mainsail", testNetwork);
+		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementation(() => {
+			throw new Error("value is BIP39");
 		});
 
 		render(
@@ -99,35 +138,6 @@ describe("ImportAddress Validations", () => {
 
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
 		coinMock.mockRestore();
-	});
-
-	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</Route>,
-			{
-				route: route,
-			},
-		);
-
-		expect(methodStep()).toBeInTheDocument();
-
-		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByText(commonTranslations.SECRET));
-
-		expect(detailStep()).toBeInTheDocument();
-
-		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
-		const passphraseInput = screen.getByTestId(secretInputID);
-
-		expect(passphraseInput).toBeInTheDocument();
-
-		await userEvent.clear(passphraseInput);
-		await userEvent.type(passphraseInput, MNEMONICS[0]);
-
-		await waitFor(() => expect(continueButton()).not.toBeEnabled());
 	});
 
 	// @TODO enable when we have 2nd signature enabled

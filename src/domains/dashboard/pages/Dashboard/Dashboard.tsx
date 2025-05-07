@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -68,7 +68,7 @@ export const Dashboard = ({
 				// Sync votes for all selected wallets
 				await Promise.all(
 					selectedWallets.map(async (wallet) => {
-						await env.delegates().sync(activeProfile, wallet.coinId(), wallet.networkId());
+						await env.validators().sync(activeProfile, wallet.coinId(), wallet.networkId());
 						await wallet.synchroniser().votes();
 					}),
 				);

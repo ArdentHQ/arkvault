@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 
 import { sendVote } from "./SendVote";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 
 let profile: Contracts.IProfile;
 let translationMock: any;

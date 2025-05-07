@@ -1,4 +1,4 @@
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 import { TransactionDetailModal } from "./TransactionDetailModal";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
@@ -22,7 +22,7 @@ describe("TransactionDetailModal", () => {
 		history.push(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();

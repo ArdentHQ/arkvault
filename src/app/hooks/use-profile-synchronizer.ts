@@ -10,9 +10,9 @@ import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { Services } from "@ardenthq/sdk";
+import { Services } from "@/app/lib/sdk";
 import { delay } from "@/utils/delay";
 import { getActiveNetwork } from "./use-active-network";
 import { isEqual } from "@/app/lib/helpers";
@@ -60,7 +60,10 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 						...(reset && { isProfileInitialSync: true }),
 					});
 					const activeNetwork = getActiveNetwork(profile);
+
 					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
+					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
+
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
 						.wallets()
 						.values()
@@ -80,8 +83,8 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			interval: Intervals.VeryShort,
 		};
 
-		const syncDelegates = {
-			callback: () => env.delegates().syncAll(profile),
+		const syncValidators = {
+			callback: () => env.validators().syncAll(profile),
 			interval: Intervals.Long,
 		};
 
@@ -108,11 +111,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			interval: Intervals.Long,
 		};
 
-		const syncPendingMusigWallets = {
-			callback: () => profile.pendingMusigWallets().sync(),
-			interval: Intervals.VeryShort,
-		};
-
 		const syncServerStatus = {
 			callback: async () => {
 				setConfiguration(profileId, { serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
@@ -125,9 +123,8 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncExchangeRates,
 				syncNotifications,
 				syncKnownWallets,
-				syncDelegates,
+				syncValidators,
 				syncProfileWallets,
-				syncPendingMusigWallets,
 				syncServerStatus,
 			],
 			syncExchangeRates: syncExchangeRates.callback,

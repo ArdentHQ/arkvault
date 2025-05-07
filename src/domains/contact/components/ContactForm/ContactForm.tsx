@@ -11,7 +11,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkOption } from "@/app/components/NavigationBar/components/SelectNetwork/SelectNetwork.blocks";
-import { Coins } from "@ardenthq/sdk";
+import { Coins } from "@/app/lib/sdk";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,

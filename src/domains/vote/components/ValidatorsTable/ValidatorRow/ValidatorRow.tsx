@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { TableCell, TableRow } from "@/app/components/Table";
 
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ValidatorRowSkeleton } from "./ValidatorRowSkeleton";
 import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { ValidatorVoteButton } from "./ValidatorVoteButton";
@@ -77,7 +77,7 @@ export const useValidatorRow = ({
 	const isActive = useMemo(() => {
 		const rank = validator?.rank?.();
 		if (rank !== undefined) {
-			return rank <= selectedWallet.network().delegateCount();
+			return rank <= selectedWallet.network().validatorCount();
 		}
 		return false;
 	}, [validator, selectedWallet]);

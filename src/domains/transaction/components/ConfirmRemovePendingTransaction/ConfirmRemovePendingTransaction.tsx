@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
@@ -58,9 +58,7 @@ export const ConfirmRemovePendingTransaction = ({
 	}
 
 	const typeLabel = getLabel(transaction.type());
-	const typeSuffix = transaction.isMultiSignatureRegistration()
-		? t("TRANSACTION.REGISTRATION")
-		: t("TRANSACTION.TRANSACTION");
+	const typeSuffix = t("TRANSACTION.TRANSACTION");
 
 	const isButtonDisabled = () => {
 		if ((!wallet.isLedger() && !isDirty) || isSubmitting) {

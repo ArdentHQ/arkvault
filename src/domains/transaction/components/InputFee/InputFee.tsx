@@ -9,11 +9,11 @@ import {
 import React, { memo } from "react";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
 import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import { Switch } from "@/app/components/Switch";
-import { formatUnits } from "@ardenthq/sdk-mainsail";
+import { formatUnits } from "@/app/lib/mainsail";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useTranslation } from "react-i18next";
 

@@ -1,11 +1,11 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 export interface VotesProperties {
 	votes: Contracts.VoteRegistryItem[];
-	activeDelegates: number;
+	activeValidators: number;
 }
 
-export interface DelegateStatusProperties {
+export interface ValidatorStatusProperties {
 	votes: Contracts.VoteRegistryItem[];
-	activeDelegates: number;
+	activeValidators: number;
 }

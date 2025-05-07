@@ -1,16 +1,16 @@
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
-import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import { HashHistory, To, createHashHistory } from "history";
 import { RenderResult, render } from "@testing-library/react";
 
 /* eslint-disable testing-library/no-node-access */
 import { BigNumber } from "@/app/lib/helpers";
-import { DTO } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DTO } from "@/app/lib/profiles";
+import { DateTime } from "@/app/lib/intl";
 import { I18nextProvider } from "react-i18next";
 import { LayoutBreakpoint } from "@/types";
-import { Mainsail } from "@ardenthq/sdk-mainsail";
+import { Mainsail } from "@/app/lib/mainsail";
 import MainsailDefaultManifest from "@/tests/fixtures/coins/mainsail/manifest/default.json";
 import React from "react";
 import { Context as ResponsiveContext } from "react-responsive";
@@ -189,7 +189,7 @@ const environmentWithMocks = () =>
 
 export const env = environmentWithMocks();
 
-export const syncDelegates = async (profile: Contracts.IProfile) => await env.delegates().syncAll(profile);
+export const syncValidators = async (profile: Contracts.IProfile) => await env.validators().syncAll(profile);
 
 export const syncFees = async (profile: Contracts.IProfile) => await env.fees().syncAll(profile);
 
@@ -426,3 +426,26 @@ export const createMainsailTransactionMock = (
 		wallet: () => wallet,
 		...overrides,
 	} as any);
+
+const originalHasInstance = Uint8Array[Symbol.hasInstance];
+
+// Solves `invalid BytesLike value` exception when using ethers on jsdom test environment
+// @see https://github.com/ethers-io/ethers.js/issues/4365
+export const fixUInt8ArrayIssue = () => {
+	Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+		configurable: true,
+		value(potentialInstance: unknown) {
+			if (this === Uint8Array) {
+				return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+			}
+			return originalHasInstance.call(this, potentialInstance);
+		},
+	});
+
+	return () => {
+		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+			configurable: true,
+			value: originalHasInstance,
+		});
+	};
+};

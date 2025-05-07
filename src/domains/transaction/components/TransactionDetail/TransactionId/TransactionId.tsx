@@ -1,15 +1,15 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
-import { AddressLabel } from "@/app/components/Address";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { twMerge } from "tailwind-merge";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -21,6 +21,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
+	const reference = useRef(null);
 
 	return (
 		<div
@@ -31,14 +32,14 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
-			<div className="grow font-semibold sm:px-4">
-				<AddressLabel>{transaction.id()}</AddressLabel>
+			<div ref={reference} className="flex-1 overflow-hidden font-semibold sm:mx-4">
+				<TruncateMiddleDynamic value={transaction.hash()} parentRef={reference} />
 			</div>
 
 			<div className="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4">
 				<Clipboard
 					variant={isSmAndAbove ? "icon" : "button"}
-					data={transaction.id()}
+					data={transaction.hash()}
 					tooltip={t("COMMON.COPY_ID")}
 					tooltipDarkTheme={isDarkMode}
 					iconButtonClassName={twMerge(getStyles({ variant: "secondary" }), "space-x-0 p-2")}

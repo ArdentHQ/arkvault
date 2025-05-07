@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -83,7 +83,7 @@ export const ReviewStep = ({
 						<FormField name="fee">
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 							<FeeField
-								type="delegateRegistration"
+								type="validatorRegistration"
 								data={feeTransactionData}
 								network={wallet.network()}
 								profile={profile}

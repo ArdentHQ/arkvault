@@ -1,4 +1,4 @@
-import { Networks } from "@ardenthq/sdk";
+import { Networks } from "@/app/lib/sdk";
 import React, { memo } from "react";
 
 import { wrapperClasses, optionClasses } from "./NetworkOptions.styles";

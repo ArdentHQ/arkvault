@@ -5,7 +5,7 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 	within,
@@ -13,8 +13,8 @@ import {
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@/app/lib/profiles";
+import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendValidatorResignation } from "./SendValidatorResignation";
@@ -130,7 +130,7 @@ describe("SendValidatorResignation", () => {
 
 		await wallet.synchroniser().identity();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 	});
 

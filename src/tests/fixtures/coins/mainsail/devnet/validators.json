@@ -1,0 +1,1393 @@
+{
+	"meta": {
+		"totalCountIsEstimate": false,
+		"count": 59,
+		"first": "/validators?limit=100&page=1",
+		"last": "/validators?limit=100&page=1",
+		"next": null,
+		"pageCount": 1,
+		"previous": null,
+		"self": "/validators?limit=100&page=1",
+		"totalCount": 59
+	},
+	"data": [
+		{
+			"address": "0xB8Be76b31E402a2D89294Aa107056484Bef94362",
+			"publicKey": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
+			"balance": "2358490605549865849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xB8Be76b31E402a2D89294Aa107056484Bef94362",
+				"validatorRank": 1,
+				"validatorApproval": 0.0192,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "cd6806dd564e0e23543dad8ba3b16498155b211d4f9f9696a84cf713f5e63e14",
+					"number": 34313,
+					"timestamp": 1746189349693
+				},
+				"validatorPublicKey": "9572d4dacfb9f44314f1091abb4c58b7d9a3c4af00d57de16c3d54f1a5e4d7c45712624842a9dc8303d8ae9db434a27c",
+				"validatorForgedFees": "39512130000000000",
+				"validatorForgedTotal": "140013039512130000000000",
+				"validatorVoteBalance": "2398490603664023153485279",
+				"validatorVotersCount": 2,
+				"validatorForgedRewards": "140013000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34313"
+		},
+		{
+			"address": "0x03BC306C369A55c0336EB003bB07F29E5c150F36",
+			"publicKey": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
+			"balance": "2358490566037735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x03BC306C369A55c0336EB003bB07F29E5c150F36",
+				"validatorRank": 2,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "d924dece5f1216306f31a864f0d6790c3278422133ec8706b91904d9a9cb6a28",
+					"number": 34304,
+					"timestamp": 1746189277693
+				},
+				"validatorPublicKey": "8093139580a4035a93e7d49aa28c49c1fa852df8ef006f312435050359025e0d519c5511d3aa879a827337c12a89a3f8",
+				"validatorVoteBalance": "2364351546586243036556603",
+				"validatorVotersCount": 4,
+				"validatorProducedBlocks": 647
+			},
+			"updated_at": "34304"
+		},
+		{
+			"address": "0x56F925416Ef2725646442D5E0150088bd7202aCd",
+			"publicKey": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
+			"balance": "2358490566784900849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x56F925416Ef2725646442D5E0150088bd7202aCd",
+				"validatorRank": 3,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "38c6ec13a672b09df422feb4ddf63f04ef1fd150f38337fdfdcf6639d92e189e",
+					"number": 34298,
+					"timestamp": 1746189229693
+				},
+				"validatorPublicKey": "b8bdf1dc386689a9f3bad8b41d7c00f77030839b73a3237ed4035ab89b35002410b9bcb301e3394fd77764e4794edf65",
+				"validatorForgedFees": "747165000000000",
+				"validatorForgedTotal": "747165000000000",
+				"validatorVoteBalance": "2360648123512569597924204",
+				"validatorVotersCount": 3,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34298"
+		},
+		{
+			"address": "0xb7ec3FE01A2b29Eb0cf472c0d9576fC057954e54",
+			"publicKey": "0202ae73a4bdf012f8047bbe115dcd87c424ef9d794a87a5e8f777ef58974dd793",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xb7ec3FE01A2b29Eb0cf472c0d9576fC057954e54",
+				"validatorRank": 4,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "de15c2af784fe7f42d14b56b450d8cf19ebe3280a09e983fca8ad4f3ea71be7e",
+					"number": 34352,
+					"timestamp": 1746189661693
+				},
+				"validatorPublicKey": "8a42348a01be6137e8c03c4421cd58a2254a69f1e18d53134a22f80bc0ba936010de767653eeae4ccf09b7f52e3e7dcd",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "31001050000000000000",
+				"validatorVoteBalance": "2360439227325179911556603",
+				"validatorVotersCount": 2,
+				"validatorForgedRewards": "31000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34352"
+		},
+		{
+			"address": "0x95b4Cf480fC2C1e90A3Aee36B5DC1D8A0C623b87",
+			"publicKey": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
+			"balance": "2358490627315935944985307",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x95b4Cf480fC2C1e90A3Aee36B5DC1D8A0C623b87",
+				"validatorRank": 5,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "2bf2b70c079163d500211d953915a3fbabceece6cbdf4ce57b2f51af2870a799",
+					"number": 34326,
+					"timestamp": 1746189453693
+				},
+				"validatorPublicKey": "9156e05ef8d542f7a93f53eb51407d95ac8e163d5155b97befaa33d283ceec95dada9c74b4bc9128b3ae97f3756ca060",
+				"validatorForgedFees": "61278200095928704",
+				"validatorForgedTotal": "149399061278200095928704",
+				"validatorVoteBalance": "2358490627315935944985307",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "149399000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34326"
+		},
+		{
+			"address": "0x7762598E3e3203FAC062D2588e70950CF19F918B",
+			"publicKey": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
+			"balance": "2358490598280216717806603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x7762598E3e3203FAC062D2588e70950CF19F918B",
+				"validatorRank": 6,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "3c859671344f64393e6b50aa514ee18cc1997bea95427d009d09569265936dd2",
+					"number": 34303,
+					"timestamp": 1746189269693
+				},
+				"validatorPublicKey": "b259bbe5897e40d3a71dd691d4d8ebcc304881564e715efbbbca6be8e8657e545842150d8a698870fa6a509ef718b3e1",
+				"validatorForgedFees": "32242480868750000",
+				"validatorForgedTotal": "149960928107355868750000",
+				"validatorVoteBalance": "2358490598280216717806603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "149960895864875000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34303"
+		},
+		{
+			"address": "0x677fdAE653661CC73295728746E3653351d50887",
+			"publicKey": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
+			"balance": "2358490596677505849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x677fdAE653661CC73295728746E3653351d50887",
+				"validatorRank": 7,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "6071aa66438ca6cea67e04dcdd825547af9072d56108b23835082e98be74c603",
+					"number": 34324,
+					"timestamp": 1746189437693
+				},
+				"validatorPublicKey": "916a6dae3e0eb5c0f34fb640e250e06ba83ae4f80244fff56f386fd6404271720150d38c5d63e9486e9052fa1818cd59",
+				"validatorForgedFees": "30639770000000000",
+				"validatorForgedTotal": "149997571350730937500000",
+				"validatorVoteBalance": "2358490596677505849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "149997540710960937500000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34324"
+		},
+		{
+			"address": "0xDF419379AD91b59005e438fB47deE4D610B997a5",
+			"publicKey": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
+			"balance": "2358490568038863892573625",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xDF419379AD91b59005e438fB47deE4D610B997a5",
+				"validatorRank": 8,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "5f5cfe76a865e49a4083aeec382a265f260d3bc04afbd6a3d000338cb834d443",
+					"number": 34296,
+					"timestamp": 1746189213693
+				},
+				"validatorPublicKey": "8a11dfb163a1cc01568a8ded5b36bbf189885d1df96e1a36b17d3e29038dc74ec41c9d0f3d69bf5d9a83bd98eb212538",
+				"validatorForgedFees": "2001128043517022",
+				"validatorForgedTotal": "2001128043517022",
+				"validatorVoteBalance": "2358490568038863892573625",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34296"
+		},
+		{
+			"address": "0xEbc20236953408F61356AE616ce3fD3c46EBF2Db",
+			"publicKey": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
+			"balance": "2358490568029285849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xEbc20236953408F61356AE616ce3fD3c46EBF2Db",
+				"validatorRank": 9,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "e8543accf4f9091beef2ee8b1407710981a15dab771f5c06d55c781dfeaf9882",
+					"number": 34312,
+					"timestamp": 1746189341693
+				},
+				"validatorPublicKey": "922286e1480c5ef4286476b799fd49882c8b0fc54b0e8a0d5138dcaa3d86d6d81bd373e5c61defd31dff059232cb569c",
+				"validatorForgedFees": "1991550000000000",
+				"validatorForgedTotal": "34301991550000000000",
+				"validatorVoteBalance": "2358490568029285849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "34300000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34312"
+		},
+		{
+			"address": "0xb78843D7a0F237AA83911a9834Bf410C1b4c1CDe",
+			"publicKey": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
+			"balance": "2358490567993380849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xb78843D7a0F237AA83911a9834Bf410C1b4c1CDe",
+				"validatorRank": 10,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "e6b175dc019a59c00db5041fceb943ca9c34e6bb69732e8aaf95c5859ea19753",
+					"number": 34299,
+					"timestamp": 1746189237693
+				},
+				"validatorPublicKey": "87a8a52a8b6a68d303bd7cf451583645a3c651067bf2f738c4d156945370400e1e6272f3dc0151aaeeb9fe28ef69889e",
+				"validatorForgedFees": "1955645000000000",
+				"validatorForgedTotal": "21001955645000000000",
+				"validatorVoteBalance": "2358490567993380849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "21000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34299"
+		},
+		{
+			"address": "0x137c59f371a7049159ef19a72f908773Ade219b1",
+			"publicKey": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
+			"balance": "2358490567938842458431603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x137c59f371a7049159ef19a72f908773Ade219b1",
+				"validatorRank": 11,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "d1da955c82d7d1e8c185bdbbfdad1e9865dd54f9dcdaa2d77b55c7b43164a837",
+					"number": 34327,
+					"timestamp": 1746189461693
+				},
+				"validatorPublicKey": "b3d708887ce4011308d262a1800d5e009e000e04f09bd3770350b1c0132beefd87c41c52d7800fce1e2f6cc8289a9c2d",
+				"validatorForgedFees": "1901106609375000",
+				"validatorForgedTotal": "123301901106609375000",
+				"validatorVoteBalance": "2358490567938842458431603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "123300000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34327"
+		},
+		{
+			"address": "0x54e64501796D3040a826628490B5Ea755B56E965",
+			"publicKey": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
+			"balance": "2358490567834900849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x54e64501796D3040a826628490B5Ea755B56E965",
+				"validatorRank": 12,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "6f2da8a64d83a1d3887fb6d7b31b6c12b2de793f264ed55a999c072333767308",
+					"number": 34345,
+					"timestamp": 1746189605693
+				},
+				"validatorPublicKey": "a45d5b16714a55ac48089a4a9443ce38b732e84664566de441a0e703186455fb8fddb8532f99d6fb2443660fe0e76b77",
+				"validatorForgedFees": "1797165000000000",
+				"validatorForgedTotal": "30001797165000000000",
+				"validatorVoteBalance": "2358490567834900849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "30000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34345"
+		},
+		{
+			"address": "0x07Ac3E438719be72a9e2591bB6015F10E8Af2468",
+			"publicKey": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
+			"balance": "2358490567726270849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x07Ac3E438719be72a9e2591bB6015F10E8Af2468",
+				"validatorRank": 13,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "248bcd3f1d64ede41c4ba6c76916d5962f39fbd610e821716609a63c865cb518",
+					"number": 34350,
+					"timestamp": 1746189645693
+				},
+				"validatorPublicKey": "8ed23a6889cfa6c58ec9fdd916677f5fa226268b1ee81603a70be7263c77ad621816225a8523460939522c5ab1580f94",
+				"validatorForgedFees": "1688535000000000",
+				"validatorForgedTotal": "301688535000000000",
+				"validatorVoteBalance": "2358490567726270849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "300000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34350"
+		},
+		{
+			"address": "0xa732C81De8a23d1aa2422463Fe7489b2cBCb48c4",
+			"publicKey": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
+			"balance": "2358490567690485849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xa732C81De8a23d1aa2422463Fe7489b2cBCb48c4",
+				"validatorRank": 14,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "a865a29f3b01f40ca166d05d6c3b39c1d25f329577260139296d883aa1e2cb76",
+					"number": 34344,
+					"timestamp": 1746189597693
+				},
+				"validatorPublicKey": "8c820e9c8ceaa403ddc6bba99dde7be6e0fe5bd1945c5dab4355a635728d6d649c5274fb8bac8a5584229d0ca7b9d8ea",
+				"validatorForgedFees": "1652750000000000",
+				"validatorForgedTotal": "1652750000000000",
+				"validatorVoteBalance": "2358490567690485849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34344"
+		},
+		{
+			"address": "0x9fF98D41d6a06062e9566c0d0d8A0BB92D5baD6F",
+			"publicKey": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
+			"balance": "2358490567549579156730198",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x9fF98D41d6a06062e9566c0d0d8A0BB92D5baD6F",
+				"validatorRank": 15,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "c25552fbbbe63c543fdd359e5061e2862a4f637bf4e46adda8938a8bd1a6327e",
+					"number": 34332,
+					"timestamp": 1746189501693
+				},
+				"validatorPublicKey": "9132e38bb6fa3f18c9a3797acdb128ecb982f056275b8454f5c6200592dc6424904b9503775c8f4d2cbff12cd3bcabe2",
+				"validatorForgedFees": "1511843307673595",
+				"validatorForgedTotal": "1511843307673595",
+				"validatorVoteBalance": "2358490567549579156730198",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34332"
+		},
+		{
+			"address": "0xB34415Af3A8127596b94f86efdb6AdaE2E9dF45e",
+			"publicKey": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
+			"balance": "2358490567495685849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xB34415Af3A8127596b94f86efdb6AdaE2E9dF45e",
+				"validatorRank": 16,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "b27911e35bda2471611b91ef92f7d5701dc56d50b8aadcf5a52b65b42f06e915",
+					"number": 34354,
+					"timestamp": 1746189677693
+				},
+				"validatorPublicKey": "8edaf2f10ca6888f6a2bcc3e2bc8255f82d134469cfb2209fc4cffb4a3ab256f5dcf0580d04c91af5c07e487ffb6158f",
+				"validatorForgedFees": "1457950000000000",
+				"validatorForgedTotal": "31001457950000000000",
+				"validatorVoteBalance": "2358490567495685849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "31000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34354"
+		},
+		{
+			"address": "0x3F8eCbF08078F22038235F9834540A960E99085b",
+			"publicKey": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
+			"balance": "2358490567491170849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x3F8eCbF08078F22038235F9834540A960E99085b",
+				"validatorRank": 17,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "2f624a5f644225d6b0b74a4cce67b996e2e20b67bb619f5c1bef0d03164e2e09",
+					"number": 34317,
+					"timestamp": 1746189381693
+				},
+				"validatorPublicKey": "b41881c3ad67ab36dabf74ac9271f10fa315c5b281313c14e3143103a3f5f43ca6abf50e3c7bd0271e12631fdb4640dc",
+				"validatorForgedFees": "1453435000000000",
+				"validatorForgedTotal": "1453435000000000",
+				"validatorVoteBalance": "2358490567491170849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34317"
+		},
+		{
+			"address": "0x7e1372c9B66F434A22c429C600835894cE33641b",
+			"publicKey": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
+			"balance": "2358490567479680849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x7e1372c9B66F434A22c429C600835894cE33641b",
+				"validatorRank": 18,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "7d959074f74d4781b0af14c31ba1e66680dd6738fee622b32b672d25af67ec41",
+					"number": 34358,
+					"timestamp": 1746189709693
+				},
+				"validatorPublicKey": "8721636e8eec6651422de9eb6915bd0cdb46b59f4796e473088ed5b33b767ce3461d678df12dd80d16d9f878f3a9bd89",
+				"validatorForgedFees": "1441945000000000",
+				"validatorForgedTotal": "28001441945000000000",
+				"validatorVoteBalance": "2358490567479680849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "28000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34358"
+		},
+		{
+			"address": "0x218A779dcAC83b284a4417A75128c3c881156bAE",
+			"publicKey": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
+			"balance": "2358490567418995017620787",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x218A779dcAC83b284a4417A75128c3c881156bAE",
+				"validatorRank": 19,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "cdc65be8cf1950f385e73ac9ed0918b2747b31eb90a1dfe1ce3d2553e465a579",
+					"number": 34353,
+					"timestamp": 1746189669693
+				},
+				"validatorPublicKey": "b62620a509751fc7ffb565780c77ca6825cf1862d8ffe015464b2ebc24ce55ed71af74a64814097aacb1731caa46ff4b",
+				"validatorForgedFees": "1381259168564184",
+				"validatorForgedTotal": "2001381259168564184",
+				"validatorVoteBalance": "2358490567418995017620787",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "2000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34353"
+		},
+		{
+			"address": "0x2F61f2118fd6Fa819Cf1695642c14145a4539F9a",
+			"publicKey": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
+			"balance": "2358490567327975849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x2F61f2118fd6Fa819Cf1695642c14145a4539F9a",
+				"validatorRank": 20,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "5c53f31ee90c504e89ee980ced7775d49c4ba7f8c74caa2dad9806f53c0a0ece",
+					"number": 34293,
+					"timestamp": 1746189189693
+				},
+				"validatorPublicKey": "ae2a4513692f6d62ed1d60c1b82f202804cfeff2e93defc1fbe87c8a605fd006b0f7d97c6ebadb874007de616cc3e3e9",
+				"validatorForgedFees": "1290240000000000",
+				"validatorForgedTotal": "34001290240000000000",
+				"validatorVoteBalance": "2358490567327975849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "34000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34293"
+		},
+		{
+			"address": "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
+			"publicKey": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
+			"balance": "2358490567193065849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
+				"validatorRank": 21,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "c9895bd99049725fcb56a688619b9a526d5a3148f4b595c708d45577176efb11",
+					"number": 34340,
+					"timestamp": 1746189565693
+				},
+				"validatorPublicKey": "abc5daa62f4daddcf4651d91dfa1a2e403302931ee77211db29527b612959efea2110b5afc6ca4475558187148b54a60",
+				"validatorForgedFees": "1155330000000000",
+				"validatorForgedTotal": "1155330000000000",
+				"validatorVoteBalance": "2358490567193065849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34340"
+		},
+		{
+			"address": "0xA64d324eBc9E95d763A45B77bdAa0546d0D37DC8",
+			"publicKey": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+			"balance": "2358490567144407675877927",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xA64d324eBc9E95d763A45B77bdAa0546d0D37DC8",
+				"validatorRank": 22,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "845a1a57628a3f73e92d9f10e045556dfcb4f877bd7c5bd3e3612325d1af7fdd",
+					"number": 34318,
+					"timestamp": 1746189389693
+				},
+				"validatorPublicKey": "a7bf828ea379e2147d9692bd1576891583ed5444887d67f0270c7f12a25091f4dd746a18f9ad542464abcdc662252309",
+				"validatorForgedFees": "1106671826821324",
+				"validatorForgedTotal": "1106671826821324",
+				"validatorVoteBalance": "2358490567144407675877927",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34318"
+		},
+		{
+			"address": "0x59b7882d257D7C1C5e82f61F09DfAec7d9bF97d7",
+			"publicKey": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
+			"balance": "2358490567133334537071603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x59b7882d257D7C1C5e82f61F09DfAec7d9bF97d7",
+				"validatorRank": 23,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "5dd37bcdb6e53f4bd3c6e88345059d9065882c742bbb0d4f7d98ebde16535344",
+					"number": 34349,
+					"timestamp": 1746189637693
+				},
+				"validatorPublicKey": "92caf44ab5ce5e1d8c78455400372588563e28df80b5776a04851fbf03a0b67ee9d318f06bd05f7bf10e2f640bc9fa18",
+				"validatorForgedFees": "1095598688015000",
+				"validatorForgedTotal": "1001095598688015000",
+				"validatorVoteBalance": "2358490567133334537071603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "1000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34349"
+		},
+		{
+			"address": "0x1e9c31895Da0F14d7c0f73F1BC0567631cb0fF01",
+			"publicKey": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x1e9c31895Da0F14d7c0f73F1BC0567631cb0fF01",
+				"validatorRank": 24,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "f51d40710ee96581c272170d24c5bf01bf3255687ab75519f7099c1f00d50728",
+					"number": 34301,
+					"timestamp": 1746189253693
+				},
+				"validatorPublicKey": "a3e6dd53d3d6820ce1ff607e5cc60beca98aedbfb5bc6f64f0cf9585c15f955cb76d3e48193fafd2834f8fa8f5650cae",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "28001050000000000000",
+				"validatorVoteBalance": "2358490567087735849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "28000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34301"
+		},
+		{
+			"address": "0x38f3f308e63Ae213633d71ed6f4A89d4Ee7C386e",
+			"publicKey": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x38f3f308e63Ae213633d71ed6f4A89d4Ee7C386e",
+				"validatorRank": 25,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "b98d0dbd64343837c7b0d09b1ed2c154aa6905dafe82e5348a08a9fe0d0da4b2",
+					"number": 34356,
+					"timestamp": 1746189693693
+				},
+				"validatorPublicKey": "b339112bc9b4542ab0c1e95eebc2b87ddf9f65daf3ac84b3c9005c4ab2c6968906561b1e30508de3d6b531e1718549cd",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "32001050000000000000",
+				"validatorVoteBalance": "2358490567087735849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "32000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34356"
+		},
+		{
+			"address": "0x57Dc55AED392F634d6bea6E6A89718de7f5fA7e0",
+			"publicKey": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x57Dc55AED392F634d6bea6E6A89718de7f5fA7e0",
+				"validatorRank": 26,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "6da55436aa98e940f510808fe9a5d21eddf800ffd02abdf5d7d657dc6d768d47",
+					"number": 34355,
+					"timestamp": 1746189685693
+				},
+				"validatorPublicKey": "a6a368a94a0de1fe4c5490a9b18d6384f4d6812e8c00aa79ff4c214361ed235905a214960f5a079f38bb065a2e4a57ea",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "33001050000000000000",
+				"validatorVoteBalance": "2358490567087735849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "33000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34355"
+		},
+		{
+			"address": "0x989eb5C243Ac348fed0a32704a6a767Ceab26065",
+			"publicKey": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x989eb5C243Ac348fed0a32704a6a767Ceab26065",
+				"validatorRank": 27,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "bc60822973c5a2bdb824424bc756d6d8650bfa516728d0616b13cdf23bbb0035",
+					"number": 34316,
+					"timestamp": 1746189373693
+				},
+				"validatorPublicKey": "aaa5c3860a2e2d2170b8dab16a333cadb6b4816fc71a570079d616db2d004f3307efbb920ddf9d3f1e0129e74c1f7ba3",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "27001050000000000000",
+				"validatorVoteBalance": "2358490567087735849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "27000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34316"
+		},
+		{
+			"address": "0x9df2D2396BcEB5B0D3d5b4D1fF53E1373d776CBB",
+			"publicKey": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x9df2D2396BcEB5B0D3d5b4D1fF53E1373d776CBB",
+				"validatorRank": 28,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "f0ff49b35658a0ee879fd6b0f26a24edc4a068f758efd4759cf8eb0e952af98e",
+					"number": 34314,
+					"timestamp": 1746189357693
+				},
+				"validatorPublicKey": "8135433db3d55f2dea9fd407ea1ae24a7e07dd22c8a754031f951a29c29199aa6fbc6ca0774ca963a0051eb0fb26b28c",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "29001050000000000000",
+				"validatorVoteBalance": "2358490567087735849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "29000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34314"
+		},
+		{
+			"address": "0xa1440fda0dc509B428E0C954893Ac3ec21dDb146",
+			"publicKey": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
+			"balance": "2358490567087735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xa1440fda0dc509B428E0C954893Ac3ec21dDb146",
+				"validatorRank": 29,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "9a43f8dfbc4622cfd94528497c48c54c69798111ca79d902913a86a026fecaff",
+					"number": 34307,
+					"timestamp": 1746189301693
+				},
+				"validatorPublicKey": "98a376cb676c9a5576e2ba042110dda8d5cac8aff57b316f4e1fd221316b9d523a6b38cf413bde6d1c7ff90b62e0def4",
+				"validatorForgedFees": "1050000000000000",
+				"validatorForgedTotal": "35001050000000000000",
+				"validatorVoteBalance": "2358490567087735849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "35000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34307"
+		},
+		{
+			"address": "0x373012E575CFD07dCd1139AEb3D71188677039be",
+			"publicKey": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
+			"balance": "2358490567016785849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x373012E575CFD07dCd1139AEb3D71188677039be",
+				"validatorRank": 30,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "01a4797a91059a71112a10e64a1a79524df4de6e0cc0e57b4b05edc7abba1e18",
+					"number": 34309,
+					"timestamp": 1746189317693
+				},
+				"validatorPublicKey": "aa61bcc95a4a64d0aac80ae9177d007a01c1fca641b1ccfb4ccf8902d4d471cd91d07e0a195ec93b6c79cd67fa8b5a07",
+				"validatorForgedFees": "979050000000000",
+				"validatorForgedTotal": "300979050000000000",
+				"validatorVoteBalance": "2358490567016785849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "300000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34309"
+		},
+		{
+			"address": "0xD07c4ccd83cff5b6B6e9e29181824c0a2Df1139c",
+			"publicKey": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
+			"balance": "2358490567016785849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xD07c4ccd83cff5b6B6e9e29181824c0a2Df1139c",
+				"validatorRank": 31,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "240a809844d4a5e6a6cbf1b7fc3ba88a7d58c45461d3451e7d3a77fe8cd7eb3a",
+					"number": 34351,
+					"timestamp": 1746189653693
+				},
+				"validatorPublicKey": "b5300e91d2c40c0ec46ff541ce33b705a961d727370f0c0238f50897e3f8aaa55fb52d5902cdd62b82277738a94d50cf",
+				"validatorForgedFees": "979050000000000",
+				"validatorForgedTotal": "300979050000000000",
+				"validatorVoteBalance": "2358490567016785849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "300000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34351"
+		},
+		{
+			"address": "0x09C94A51cb63b4b70A9Dbf190543c371741D13Fd",
+			"publicKey": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
+			"balance": "2358490566966515849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x09C94A51cb63b4b70A9Dbf190543c371741D13Fd",
+				"validatorRank": 32,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "b2d45c258622c2a6278517a1d5665eb77285c4580ef029f6de994d299c23bdb5",
+					"number": 34292,
+					"timestamp": 1746189181693
+				},
+				"validatorPublicKey": "8ba871d2ba2ddd65fdd24e559d5d27424bdfc5be6a1d1d5bc946068f3e24bfecc66d4e1f0bde3a7aeb8a29564e63e139",
+				"validatorForgedFees": "928780000000000",
+				"validatorForgedTotal": "15000928780000000000",
+				"validatorVoteBalance": "2358490566966515849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "15000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34292"
+		},
+		{
+			"address": "0xC46C85b3Dc856cdD23ac864a38be2E12090e7715",
+			"publicKey": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
+			"balance": "2358490566945060849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xC46C85b3Dc856cdD23ac864a38be2E12090e7715",
+				"validatorRank": 33,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "065cac2a36dd63a86acbae5b8c541aa3d201c6e14491683ebbdf4593c58440f1",
+					"number": 34359,
+					"timestamp": 1746189717693
+				},
+				"validatorPublicKey": "a590daad2c88699ce48bd0bf978f70cdd82c5bb2b6284e56511fca0fbd5657bfa2e42e4a4b20c6c3d1735473f39852c9",
+				"validatorForgedFees": "907325000000000",
+				"validatorForgedTotal": "907325000000000",
+				"validatorVoteBalance": "2358490566945060849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34359"
+		},
+		{
+			"address": "0x4041C30B708da49227856c005a656F55fe44eF1C",
+			"publicKey": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
+			"balance": "2358490566943380849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x4041C30B708da49227856c005a656F55fe44eF1C",
+				"validatorRank": 34,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "bf9592149d8bac0ddab018a26a7381e9498f92ef5c85d9e5a3c6a32ac6e97593",
+					"number": 34335,
+					"timestamp": 1746189525693
+				},
+				"validatorPublicKey": "ae294666a41610acc1a35c94372b4c573978d7cb76014aa41e7aa6829e27414d8003a2d7196009aa9e7ad5fac4d23231",
+				"validatorForgedFees": "905645000000000",
+				"validatorForgedTotal": "905645000000000",
+				"validatorVoteBalance": "2358490566943380849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34335"
+		},
+		{
+			"address": "0xC3bBE9B1CeE1ff85Ad72b87414B0E9B7F2366763",
+			"publicKey": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
+			"balance": "2358490566943380849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xC3bBE9B1CeE1ff85Ad72b87414B0E9B7F2366763",
+				"validatorRank": 35,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "22c0a8813c55204cd4bac2d7ab92840a895d15312cdd29ecdd966ce7fd3752d7",
+					"number": 34348,
+					"timestamp": 1746189629693
+				},
+				"validatorPublicKey": "848a73c1c9be7733138c0bef8ea5f091130facc89c141490282d7c095f8b54e0a44e06b1cae516e8e9e4c560461d160d",
+				"validatorForgedFees": "905645000000000",
+				"validatorForgedTotal": "905645000000000",
+				"validatorVoteBalance": "2358490566943380849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34348"
+		},
+		{
+			"address": "0xA71dAdA10295c14854B5FBc6D28eFd170e8470B4",
+			"publicKey": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
+			"balance": "2358490566807356070987023",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xA71dAdA10295c14854B5FBc6D28eFd170e8470B4",
+				"validatorRank": 36,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "d5a3d2cda3b9c1049070e34782f5f9ade589857d92a79ee3ef205ae72be7f424",
+					"number": 34311,
+					"timestamp": 1746189333693
+				},
+				"validatorPublicKey": "b257540df9d345d60017d6e170b7c63c55cb7b64f90e8ad742dd8a3256f9732c2d12aa6cfb5505f65f00d6008e829a07",
+				"validatorForgedFees": "769620221930420",
+				"validatorForgedTotal": "769620221930420",
+				"validatorVoteBalance": "2358490566807356070987023",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34311"
+		},
+		{
+			"address": "0xFf44bE17e48C35D0bcB6f64b36cddbea45B17817",
+			"publicKey": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
+			"balance": "2358490566746430849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xFf44bE17e48C35D0bcB6f64b36cddbea45B17817",
+				"validatorRank": 37,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "16058b80321042a6ff405da24baa5439e03bf718409c58380cb1c5716a2e1da1",
+					"number": 34360,
+					"timestamp": 1746189725693
+				},
+				"validatorPublicKey": "87f1a4066c513325adfc2431b510d9ee1c7b56788ae256272228d89e6cd143d36aedf923c51712cc12359c75986f6823",
+				"validatorForgedFees": "708695000000000",
+				"validatorForgedTotal": "708695000000000",
+				"validatorVoteBalance": "2358490566746430849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34360"
+		},
+		{
+			"address": "0x6762BAAaE8374748793c77225FFb6a444a9D5de9",
+			"publicKey": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
+			"balance": "2358490566489005849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x6762BAAaE8374748793c77225FFb6a444a9D5de9",
+				"validatorRank": 38,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "d0d4b58f1a720aa30c125f2edc6311353e6fa5b4e7d1c71300c37d602870156d",
+					"number": 34302,
+					"timestamp": 1746189261693
+				},
+				"validatorPublicKey": "87b4b3f66caf02230c448469e9811fe7d4d077c98747507460786ba89b4e140eecdbfe0ac21e14cc92b4da914071cb17",
+				"validatorForgedFees": "451270000000000",
+				"validatorForgedTotal": "1000451270000000000",
+				"validatorVoteBalance": "2358490566489005849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "1000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34302"
+		},
+		{
+			"address": "0x522CbD1C22529a27ba4BFDBf4b6f037F71b2AC77",
+			"publicKey": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
+			"balance": "2358490566456830849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x522CbD1C22529a27ba4BFDBf4b6f037F71b2AC77",
+				"validatorRank": 39,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "e1c2fe9765ec833531df9918c336dd6188324e6f3a3130632510c842a20a6346",
+					"number": 34325,
+					"timestamp": 1746189445693
+				},
+				"validatorPublicKey": "8e5d17e0e88a7669b68d45e09f8710a208c267b8d7c48596f61d9bf4c661ce4141c37f349345d3a932da89a1a049ddaa",
+				"validatorForgedFees": "419095000000000",
+				"validatorForgedTotal": "419095000000000",
+				"validatorVoteBalance": "2358490566456830849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34325"
+		},
+		{
+			"address": "0x12361f0Bd5f95C3Ea8BF34af48F5484b811B5CCe",
+			"publicKey": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
+			"balance": "2358490566452660849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x12361f0Bd5f95C3Ea8BF34af48F5484b811B5CCe",
+				"validatorRank": 40,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "6e4173e706997ad3b8c8c7f7f66b8561419fc5fd85a481d0814f063553b19a6f",
+					"number": 34343,
+					"timestamp": 1746189589693
+				},
+				"validatorPublicKey": "a6dc6f406b2bbd1ab93d0a2d903b1952a7f6e753bcc18c109646d392a2e4414f38ff25f2ed23d8191cd3e60521a32ec2",
+				"validatorForgedFees": "414925000000000",
+				"validatorForgedTotal": "414925000000000",
+				"validatorVoteBalance": "2358490566452660849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34343"
+		},
+		{
+			"address": "0x7AF9d8582F439ECC9d83c84a425DFbA422bc7a84",
+			"publicKey": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
+			"balance": "2358490566448705849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x7AF9d8582F439ECC9d83c84a425DFbA422bc7a84",
+				"validatorRank": 41,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "603b7c0a49c3883fedf1b046b8545df4c15cc05baa3551916c9fdaf6fb6e107d",
+					"number": 34361,
+					"timestamp": 1746189733693
+				},
+				"validatorPublicKey": "b6ce18e6d4a21fdf469a45c5299ae7e20b64f4bb2d077aa7bb0d315f844dbfeefb262064e49516f1d0d1dc9260fd0edd",
+				"validatorForgedFees": "410970000000000",
+				"validatorForgedTotal": "410970000000000",
+				"validatorVoteBalance": "2358490566448705849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34361"
+		},
+		{
+			"address": "0xC2402c93F00C67B10a11d78CE5c57B3D8D1FC2da",
+			"publicKey": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
+			"balance": "2358490566446835849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xC2402c93F00C67B10a11d78CE5c57B3D8D1FC2da",
+				"validatorRank": 42,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "cb920e84b293d53a9d387400324d021321dc0c658dd0d635303ae0ef892a35b3",
+					"number": 34341,
+					"timestamp": 1746189573693
+				},
+				"validatorPublicKey": "8a2654afc229f199a45611f52ea3e077d387733d7ffed460ba6fcac51a71ac82d33288264749b2724e8ab8ba85ab9968",
+				"validatorForgedFees": "409100000000000",
+				"validatorForgedTotal": "409100000000000",
+				"validatorVoteBalance": "2358490566446835849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34341"
+		},
+		{
+			"address": "0x2a74550fC2e741118182B7ab020DC0B7Ed01e1db",
+			"publicKey": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
+			"balance": "2358490566444030849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x2a74550fC2e741118182B7ab020DC0B7Ed01e1db",
+				"validatorRank": 43,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "0dd6cbdbc1e70753c4b8543fceb19678360bc8ca96a9546b786a5b3c0432bbd6",
+					"number": 34329,
+					"timestamp": 1746189477693
+				},
+				"validatorPublicKey": "9309ad5df3747c2fd525a8612982bc994a24ec114b726d7ca630dbe1cfd2ee3450eb51d152c4e4c9e1b638731de23310",
+				"validatorForgedFees": "406295000000000",
+				"validatorForgedTotal": "406295000000000",
+				"validatorVoteBalance": "2358490566444030849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 647
+			},
+			"updated_at": "34329"
+		},
+		{
+			"address": "0xBA595868ce9F740Cba0e39de124ca33fb5Ed92fE",
+			"publicKey": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
+			"balance": "2358490566432455849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xBA595868ce9F740Cba0e39de124ca33fb5Ed92fE",
+				"validatorRank": 44,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "b6ab512c9c02b7b8abd9f6f5336354480698e81a4bd1bdd20499687815243a1c",
+					"number": 34297,
+					"timestamp": 1746189221693
+				},
+				"validatorPublicKey": "8767aad179f0ed0e109b31e2c57821de1a84581a949923eedd8834cbe5dbf3ef0117ffc4135d96c60e076277b52423fb",
+				"validatorForgedFees": "394720000000000",
+				"validatorForgedTotal": "394720000000000",
+				"validatorVoteBalance": "2358490566432455849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34297"
+		},
+		{
+			"address": "0xFb0Af483A0a4FdE23EA71aDBE2ea2D4301828E4B",
+			"publicKey": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
+			"balance": "2358490566344180849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0xFb0Af483A0a4FdE23EA71aDBE2ea2D4301828E4B",
+				"validatorRank": 45,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "3e796c7e89ad453bb4d8c8d6772279383791b914ce17cee3102387c6acf09b7f",
+					"number": 34346,
+					"timestamp": 1746189613693
+				},
+				"validatorPublicKey": "9904ec6be10f56db0f1a4d4bd6f00332af21ac7a83ac0ecc6e95df12c89dfd139773bf1066216d9244840775a030d95a",
+				"validatorForgedFees": "306445000000000",
+				"validatorForgedTotal": "306445000000000",
+				"validatorVoteBalance": "2358490566344180849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34346"
+		},
+		{
+			"address": "0x44083669cf29374D548b71c558EBD1e2F5DCC4De",
+			"publicKey": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
+			"balance": "2358490566209299286556603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x44083669cf29374D548b71c558EBD1e2F5DCC4De",
+				"validatorRank": 46,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "beb7bad34689f29d80f83158116e74ae914f75e7eab07413b4f482cf8a729b26",
+					"number": 34315,
+					"timestamp": 1746189365693
+				},
+				"validatorPublicKey": "8dfc3ec76e11c9403527854f8ee5d551a4bb81b6caac312d92c82d02cab2c98a089ca0ced7042d415e177aeb3716715f",
+				"validatorForgedFees": "171563437500000",
+				"validatorForgedTotal": "123000171563437500000",
+				"validatorVoteBalance": "2358490566209299286556603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "123000000000000000000",
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34315"
+		},
+		{
+			"address": "0x1C45E829a6a0d5AfB01f9FB0F394D0D8aA2f4fae",
+			"publicKey": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
+			"balance": "2358490566203110849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x1C45E829a6a0d5AfB01f9FB0F394D0D8aA2f4fae",
+				"validatorRank": 47,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "d0d1d0b9b9a184253d67fd6268c70a7cecca43838f86d62d49137a7f9c4720c6",
+					"number": 34362,
+					"timestamp": 1746189741693
+				},
+				"validatorPublicKey": "ac7b8bfbfae20363bf775cf09fa3ff7bcfbedbaed917d77a4dc95062d4467810725093b11ff7fc5a0423b2a28565cc79",
+				"validatorForgedFees": "165375000000000",
+				"validatorForgedTotal": "200000165375000000000",
+				"validatorVoteBalance": "2358490566203110849056603",
+				"validatorVotersCount": 1,
+				"validatorForgedRewards": "200000000000000000000",
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34362"
+		},
+		{
+			"address": "0x21c61c9E608df7ad6fD8730a0CEBe37A83B9F365",
+			"publicKey": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
+			"balance": "2358490566037735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x21c61c9E608df7ad6fD8730a0CEBe37A83B9F365",
+				"validatorRank": 48,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "27d09a1653b287428a3366287b717143826a9842de8ffadc21e08dd7586fb76a",
+					"number": 34294,
+					"timestamp": 1746189197693
+				},
+				"validatorPublicKey": "a380143f5ef0b5f474135ae7c7e715eaff5824ff713a046a22add009edaaf7d04f4bc2238aad737e2e87edc58ed4fb53",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34294"
+		},
+		{
+			"address": "0x3FCe699F036325B142e5568992EaA020ee15518B",
+			"publicKey": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
+			"balance": "2358490566037735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x3FCe699F036325B142e5568992EaA020ee15518B",
+				"validatorRank": 49,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "32b6d238b7606654156a742c2ef9623809dd613daea5d0334142f1d5b6a6ea30",
+					"number": 34347,
+					"timestamp": 1746189621693
+				},
+				"validatorPublicKey": "af276ab35b3dd5d1c911c7e1396dae24519f7f9c25240e15325d705e61fd8b9cc2175bf1507b2f5a5210bd053d7a8aa6",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34347"
+		},
+		{
+			"address": "0x69aD988298FB856adD785070781aaE6370cf0093",
+			"publicKey": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
+			"balance": "2358490566037735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x69aD988298FB856adD785070781aaE6370cf0093",
+				"validatorRank": 50,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "1c883245ce8cd88a2ae52fe33cf840c7d85d8687069f65fd4f27598846acad30",
+					"number": 34336,
+					"timestamp": 1746189533693
+				},
+				"validatorPublicKey": "95e766b01acc717706d9cde51e2501c960fe8f39d342517f02b48fd75515cb10bb28a00510f06a26f434a29cd2ba37e1",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34336"
+		},
+		{
+			"address": "0x7228d1eE0Fa9AC810Aa02072bFdde6A172258051",
+			"publicKey": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
+			"balance": "2358490566037735849056603",
+			"nonce": "2",
+			"attributes": {
+				"vote": "0x7228d1eE0Fa9AC810Aa02072bFdde6A172258051",
+				"validatorRank": 51,
+				"validatorApproval": 0.0189,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "8c37b0b6010f6075c18e397d658859c1e3893e2c797cb557cc4fd0f5aa87a0f5",
+					"number": 34342,
+					"timestamp": 1746189581693
+				},
+				"validatorPublicKey": "a6346192db9d40984037fe2275d91fa7c5fc55550fcc9c177e01c2689e5b41d5cd8ab6b96a55a027bd3c2991dee5babe",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34342"
+		},
+		{
+			"address": "0xBE47E4E73DC8c82f0fF2f5BFa8900aA57624144B",
+			"publicKey": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
+			"balance": "2218490527210765849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0xBE47E4E73DC8c82f0fF2f5BFa8900aA57624144B",
+				"validatorRank": 52,
+				"validatorApproval": 0.0177,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "2e056090277b669b0a5978c860166280ccc9dec681881d4bf9398fa6110d268b",
+					"number": 34300,
+					"timestamp": 1746189245693
+				},
+				"validatorPublicKey": "a058709acee67dd7c005f3b301ad201def1a764fca5dfd632c2c0a8280182075e34379ce604908ef9729e930fc97262d",
+				"validatorVoteBalance": "2218490527210765849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 648
+			},
+			"updated_at": "34300"
+		},
+		{
+			"address": "0x07CDD5CB29a70ad52ba6F4ad9fb94d397a26486e",
+			"publicKey": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
+			"balance": "1938490523056825849056603",
+			"nonce": "5",
+			"attributes": {
+				"vote": "0x07CDD5CB29a70ad52ba6F4ad9fb94d397a26486e",
+				"validatorRank": 53,
+				"validatorApproval": 0.0155,
+				"validatorResigned": false,
+				"validatorLastBlock": {
+					"hash": "a0cde7fc5fbabe9fa27111ca02a3fffcd3fe5e2cc837143ae5f4121be7eb0530",
+					"number": 34357,
+					"timestamp": 1746189701693
+				},
+				"validatorPublicKey": "b4ff268381b76fe4a156d859ae63e7cc2a3a13fa3a473996f6a896101198b4aacb7d253c31b10bc56e9882b279320eb7",
+				"validatorVoteBalance": "1938490523056825849056603",
+				"validatorVotersCount": 1,
+				"validatorProducedBlocks": 649
+			},
+			"updated_at": "34357"
+		},
+		{
+			"address": "0x6AA51e1F72c18E67a2A87Be4EE06518634cc4852",
+			"publicKey": "032c9b05b4835345428d0410c48008228d102b0b5b7eef4cd20d187fdeeca9240e",
+			"balance": "1968259088829062500000",
+			"nonce": "13",
+			"attributes": {
+				"username": "4hzas9mcusoz",
+				"validatorRank": 54,
+				"validatorApproval": 0,
+				"validatorResigned": false,
+				"validatorPublicKey": "b2aaaf31e7aa48107a41ac1863dfd62138070cb2d261d17091751c40684b8051229d821e712f58ae588900ac6c45c34a",
+				"validatorVoteBalance": "0",
+				"validatorVotersCount": 0
+			},
+			"updated_at": "657"
+		},
+		{
+			"address": "0x992B49e803Da33a7B2efe4fadaE26CCed66927A1",
+			"publicKey": "03dae91dcf96ccb02834dbc1acf0000884f40ed07fa6da1ec226b58f3260463808",
+			"balance": "1949359108974062500000",
+			"nonce": "13",
+			"attributes": {
+				"username": "orn6t",
+				"validatorRank": 55,
+				"validatorApproval": 0,
+				"validatorResigned": false,
+				"validatorPublicKey": "aad154ff6964c3454c8f97e19224235d39674542d6d52a9ccd2aeba4cb98f09d32a5b5905ef364493b581e01a8e23beb",
+				"validatorVoteBalance": "0",
+				"validatorVotersCount": 0
+			},
+			"updated_at": "657"
+		},
+		{
+			"address": "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+			"publicKey": "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
+			"balance": "39999998034130788003474",
+			"nonce": "2",
+			"attributes": {
+				"validatorRank": 56,
+				"validatorApproval": 0,
+				"validatorResigned": false,
+				"validatorPublicKey": "82ac408b348d6b2b2ae6112dc921dd2daf62855600c9552f51e6f08f723dfb138c2d622f32f0867254ce1153f194b664",
+				"validatorVoteBalance": "0",
+				"validatorVotersCount": 0
+			},
+			"updated_at": "32850"
+		},
+		{
+			"address": "0x12EBb2017B5906a846b3D318AEbC30157Ef2E961",
+			"publicKey": "03d02d4cbd310814de72ff8ced3ef1c9a7aa84dc19de1abcbf08ebc83cc92de1c2",
+			"balance": "1960657630054062500000",
+			"nonce": "17",
+			"attributes": {
+				"validatorRank": 57,
+				"validatorApproval": 0,
+				"validatorResigned": true,
+				"validatorPublicKey": "a07b1a251b02719a7ad83eb649d6260c2d555efbbe6fddb4f6a8cd50a884048818e34ece1892a4107d760dc0536ef8ce",
+				"validatorVoteBalance": "0",
+				"validatorVotersCount": 0
+			},
+			"updated_at": "659"
+		},
+		{
+			"address": "0xAa6d78a89706b744eDD2894CE30BeCE77Ab0F753",
+			"publicKey": "03b559827f444adf6ee1760ae72b49f80119521968be573c01415c552df1a213e3",
+			"balance": "1960257745344062500000",
+			"nonce": "16",
+			"attributes": {
+				"username": "9yehx0gckk8",
+				"validatorRank": 58,
+				"validatorApproval": 0,
+				"validatorResigned": true,
+				"validatorPublicKey": "af0e8e9c099b5c93efdfda37e04a82d8c37563a18608b83cfd724bc42f39a357681fe0c1820bc195bdb01dc5c0525073",
+				"validatorVoteBalance": "0",
+				"validatorVotersCount": 0
+			},
+			"updated_at": "655"
+		},
+		{
+			"address": "0xB09F904498b4948cF751CCd2320AC23a91FCA8FF",
+			"publicKey": "02625a7534c40e28a1ad38bc2f04bde473e183d4e1ab0770fbd9efb225ef6f6298",
+			"balance": "1961457529059062500000",
+			"nonce": "17",
+			"attributes": {
+				"validatorRank": 59,
+				"validatorApproval": 0,
+				"validatorResigned": true,
+				"validatorPublicKey": "af7f530788e5657b13b43591d8c791d11bc02c86f7eca7a05bbb4bea4b1d5ee4fe5e1655e45666cd8350f10a33de6890",
+				"validatorVoteBalance": "0",
+				"validatorVotersCount": 0
+			},
+			"updated_at": "659"
+		}
+	]
+}

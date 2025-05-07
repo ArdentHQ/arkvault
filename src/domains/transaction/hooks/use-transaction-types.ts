@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { uniq } from "@/app/lib/helpers";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";

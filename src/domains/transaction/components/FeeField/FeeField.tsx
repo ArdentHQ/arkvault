@@ -1,5 +1,5 @@
-import { Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
@@ -11,8 +11,8 @@ interface Properties {
 		| "transfer"
 		| "multiPayment"
 		| "vote"
-		| "delegateRegistration"
-		| "delegateResignation"
+		| "validatorRegistration"
+		| "validatorResignation"
 		| "multiSignature"
 		| "usernameRegistration"
 		| "usernameResignation";
@@ -22,13 +22,13 @@ interface Properties {
 }
 
 export const GasLimit: Record<Properties["type"], number> = {
-	delegateRegistration: 500_000,
-	delegateResignation: 150_000,
 	multiPayment: 21_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
 	usernameRegistration: 200_000,
 	usernameResignation: 200_000,
+	validatorRegistration: 500_000,
+	validatorResignation: 150_000,
 	vote: 200_000,
 };
 
@@ -59,16 +59,16 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			});
 
 			/* istanbul ignore else -- @preserve */
+			const isMultiPayment = type === "multiPayment";
+			const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
+			const defaultGasLimit = isMultiPayment ? GasLimit.multiPayment * recipientsCount : GasLimit[type];
+
 			if (getValues("gasPrice") === undefined) {
 				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
 			}
 
-			if (getValues("gasLimit") === undefined) {
-				setValue("gasLimit", GasLimit[type], { shouldDirty: true, shouldValidate: true });
-			}
-
+			setValue("gasLimit", defaultGasLimit, { shouldDirty: true, shouldValidate: true });
 			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
-
 			setIsLoadingFee(false);
 		};
 
@@ -83,7 +83,11 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			loading={!fees || isLoadingFee}
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
-			defaultGasLimit={GasLimit[type]}
+			defaultGasLimit={
+				type === "multiPayment" && Array.isArray(data?.payments)
+					? GasLimit.multiPayment * data.payments.length
+					: GasLimit[type]
+			}
 			minGasPrice={MIN_GAS_PRICE}
 			gasPriceStep={1}
 			network={network}
