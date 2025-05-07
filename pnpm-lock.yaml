@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ardenthq/arkvault-crypto':
-        specifier: ^0.0.6
-        version: 0.0.6
+        specifier: ^0.0.7
+        version: 0.0.7
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
         version: 1.2.0
@@ -468,8 +468,8 @@ packages:
     peerDependencies:
       ajv: '>=8'
 
-  '@ardenthq/arkvault-crypto@0.0.6':
-    resolution: {integrity: sha512-bwZoWZ6DoR6PO5CIrbWTZCn1X5N7079uI82meK1KuwFtGB1lFBe8v0exwgrc8qoLoishsngi+QKQQlnFBkKcKg==}
+  '@ardenthq/arkvault-crypto@0.0.7':
+    resolution: {integrity: sha512-l+akr+TVs1QuJp5lCn2+6F4gcC6G6NG0NjeEcMeTH+z9D73AgVtENikxPoohyAXFgziu9OUKRxxt0uzMFMObzw==}
 
   '@ardenthq/arkvault-url@1.2.0':
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
@@ -7908,7 +7908,7 @@ snapshots:
       jsonpointer: 5.0.1
       leven: 3.1.0
 
-  '@ardenthq/arkvault-crypto@0.0.6':
+  '@ardenthq/arkvault-crypto@0.0.7':
     dependencies:
       '@noble/curves': 1.9.0
       '@noble/hashes': 1.8.0

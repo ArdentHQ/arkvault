@@ -143,7 +143,7 @@ describe("SendExchangeTransfer", () => {
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});

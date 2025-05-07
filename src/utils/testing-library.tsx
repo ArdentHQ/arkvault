@@ -76,7 +76,7 @@ export function renderWithForm(
 	let responsiveRenderFunction: any;
 
 	if (options?.breakpoint) {
-		responsiveRenderFunction = (options?.withProviders ?? true) ? renderResponsiveWithRoute : renderResponsive;
+		responsiveRenderFunction = (options.withProviders ?? true) ? renderResponsiveWithRoute : renderResponsive;
 	} else {
 		renderFunction = (options?.withProviders ?? true) ? renderWithRouter : render;
 	}
@@ -391,22 +391,18 @@ export const createMainsailTransactionMock = (
 	overrides: Partial<DTO.ExtendedSignedTransactionData> = {},
 ) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +mainsailTransactionFixture.data.amount / 1e18,
-		blockId: () => "1",
+		blockHash: () => "1",
 		confirmations: () => BigNumber.make(154_178),
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => mainsailTransactionFixture.data.data }),
 		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
 		explorerLinkForBlock: () =>
 			`https://mainsail-explorer.ihost.org/transactions/${mainsailTransactionFixture.data.id}`,
-		fee: () => +mainsailTransactionFixture.data.fee / 1e18,
-		id: () => mainsailTransactionFixture.data.id,
+		fee: () => (+mainsailTransactionFixture.data.gasPrice * +mainsailTransactionFixture.data.gas) / 1e18,
+		from: () => mainsailTransactionFixture.data.from,
+		hash: () => mainsailTransactionFixture.data.hash,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => true,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
 		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
 		isSuccess: () => true,
 		isTransfer: () => true,
 		isUnvote: () => false,
@@ -418,11 +414,10 @@ export const createMainsailTransactionMock = (
 		isVoteCombination: () => false,
 		memo: () => null,
 		nonce: () => BigNumber.make(1),
-		recipient: () => mainsailTransactionFixture.data.recipient,
-		sender: () => mainsailTransactionFixture.data.senderAddress,
 		timestamp: () => DateTime.make(),
+		to: () => mainsailTransactionFixture.data.to,
 		type: () => "transfer",
-		usesMultiSignature: () => false,
+		value: () => +mainsailTransactionFixture.data.value / 1e18,
 		wallet: () => wallet,
 		...overrides,
 	} as any);

@@ -22,8 +22,8 @@ export class Keys {
 			console.error({
 				error,
 				message: error.message,
-				privateKeLength: privateKey.length,
 				privateKey,
+				privateKeyLength: privateKey.length,
 			});
 
 			throw error;
