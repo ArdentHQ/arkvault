@@ -16,7 +16,7 @@ import {
 	screen,
 	waitFor,
 	triggerMessageSignOnce,
-	MAINSAIL_MNEMONICS,
+	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -53,6 +53,8 @@ vi.stubGlobal(
 	},
 );
 
+const originalHasInstance = Uint8Array[Symbol.hasInstance];
+
 describe("VerifyMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -64,13 +66,23 @@ describe("VerifyMessage", () => {
 
 		signedMessageText = "Hello World";
 
-		const signatory = await wallet.coin().signatory().mnemonic(MAINSAIL_MNEMONICS[0]);
+		const signatory = await wallet.coin().signatory().mnemonic(getDefaultMainsailWalletMnemonic());
 
 		await triggerMessageSignOnce(wallet);
 
 		signedMessage = await wallet.message().sign({
 			message: signedMessageText,
 			signatory,
+		});
+
+		Object.defineProperty(Uint8Array, Symbol.hasInstance, {
+			configurable: true,
+			value(potentialInstance: unknown) {
+				if (this === Uint8Array) {
+					return Object.prototype.toString.call(potentialInstance) === "[object Uint8Array]";
+				}
+				return originalHasInstance.call(this, potentialInstance);
+			},
 		});
 	});
 
@@ -287,7 +299,7 @@ describe("VerifyMessage", () => {
 
 		await userEvent.click(verifyButton());
 
-		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE);
 	});
 
 	it("should return to dashboard when accessed through deeplink", async () => {
@@ -328,7 +340,7 @@ describe("VerifyMessage", () => {
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
 		await userEvent.type(messageInput(), signedMessage.message);
 		await userEvent.clear(signatureInput());
-		await userEvent.type(signatureInput(), "fake-signature");
+		await userEvent.type(signatureInput(), "a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b");
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
