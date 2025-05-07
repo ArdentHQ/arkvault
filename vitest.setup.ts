@@ -6,7 +6,7 @@ import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 import "jest-styled-components";
-
+import { Hash } from "@ardenthq/arkvault-crypto";
 import { server } from "./src/tests/mocks/server";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";

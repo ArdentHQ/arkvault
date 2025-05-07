@@ -13,7 +13,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 	MAINSAIL_MNEMONICS,
-	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
@@ -27,7 +26,6 @@ const passphrase = "power return attend drink piece found tragic fire liar page 
 const fixtureProfileId = getMainsailProfileId();
 const password = "S3cUrePa$sword";
 let resetProfileNetworksMock: () => void;
-let uInt8ArrayFix: () => void;
 
 describe("EncryptionPasswordStep", () => {
 	beforeEach(() => {
@@ -45,14 +43,12 @@ describe("EncryptionPasswordStep", () => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		vi.spyOn(randomWordPositionsMock, "randomWordPositions").mockReturnValue([1, 2, 3]);
-		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		bip39GenerateMock.mockRestore();
 
 		resetProfileNetworksMock();
-		uInt8ArrayFix();
 	});
 
 	it("should fail creating a wallet with encryption password", async () => {
