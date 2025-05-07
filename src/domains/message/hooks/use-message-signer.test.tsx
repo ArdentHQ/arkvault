@@ -134,7 +134,8 @@ describe("Use Message Signer Hook", () => {
 		expect(signedMessage).toStrictEqual({
 			message: "message",
 			signatory: "0302ea3440907269312bce7018f19df2c7be2811c5dbd0fe82cca4c0f1f83addc1",
-			signature: "c0e83da207c5f198210a211bdc250e3b3fd6db403baecc380605e82de5eacee926a2d4bbff06c3e26b65972fa5e243a20d22d55b7367f9ed5c4a63479c4a9d531b",
+			signature:
+				"c0e83da207c5f198210a211bdc250e3b3fd6db403baecc380605e82de5eacee926a2d4bbff06c3e26b65972fa5e243a20d22d55b7367f9ed5c4a63479c4a9d531b",
 		});
 
 		walletActsWithSecret.mockRestore();
