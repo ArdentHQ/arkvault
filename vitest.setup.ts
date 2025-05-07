@@ -121,7 +121,7 @@ beforeAll(async () => {
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
-	vi.stubGlobal('crypto', {
+	vi.stubGlobal("crypto", {
 		...globalThis.crypto,
 		subtle: new Crypto().subtle,
 	});
@@ -176,7 +176,7 @@ afterAll(() => {
 
 	MockDate.reset();
 
-	vi.unstubAllGlobals()
+	vi.unstubAllGlobals();
 
 	if (global.gc) {
 		global.gc();
