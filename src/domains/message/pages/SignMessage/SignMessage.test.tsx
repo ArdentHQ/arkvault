@@ -16,7 +16,7 @@ import {
 	triggerMessageSignOnce,
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
-import {Crypto} from "@peculiar/webcrypto";
+import { Crypto } from "@peculiar/webcrypto";
 import { afterAll } from "vitest";
 
 const history = createHashHistory();
@@ -54,7 +54,7 @@ describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
-		vi.stubGlobal('crypto', {
+		vi.stubGlobal("crypto", {
 			...globalThis.crypto,
 			subtle: new Crypto().subtle,
 		});
@@ -80,7 +80,7 @@ describe("SignMessage", () => {
 	});
 
 	afterAll(() => {
-		vi.unstubAllGlobals()
+		vi.unstubAllGlobals();
 	});
 
 	describe("Sign with Wallet", () => {
