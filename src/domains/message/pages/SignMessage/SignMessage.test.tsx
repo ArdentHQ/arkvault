@@ -50,13 +50,11 @@ vi.stubGlobal(
 	},
 );
 
-let cryptoStub;
-
 describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
-		cryptoStub = vi.stubGlobal('crypto', {
+		vi.stubGlobal('crypto', {
 			...globalThis.crypto,
 			subtle: new Crypto().subtle,
 		});
@@ -83,7 +81,7 @@ describe("SignMessage", () => {
 	});
 
 	afterAll(() => {
-		cryptoStub.mockRestore();
+		vi.unstubAllGlobals()
 	});
 
 	describe("Sign with Wallet", () => {
