@@ -7112,10 +7112,6 @@ packages:
   tailwindcss@4.1.4:
     resolution: {integrity: sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A==}
 
-  tapable@2.2.1:
-    resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
-    engines: {node: '>=6'}
-
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
     engines: {node: '>=8'}
@@ -13713,7 +13709,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  jiti@2.4.2: {}
+  jiti@1.21.6: {}
 
   joi@17.13.3:
     dependencies:
@@ -15640,8 +15636,6 @@ snapshots:
   tailwind-merge@2.5.2: {}
 
   tailwindcss@4.1.4: {}
-
-  tapable@2.2.1: {}
 
   temp-dir@2.0.0: {}
 
