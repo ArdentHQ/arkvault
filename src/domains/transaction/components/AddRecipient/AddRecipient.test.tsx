@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-
+import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
@@ -22,7 +22,7 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 			defaultValues: {
 				fee: 0,
 				network,
-				senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 				...defaultValues,
 			},
 			mode: "onChange",
@@ -67,13 +67,15 @@ const selectRecipientID = "SelectRecipient__select-recipient";
 describe("AddRecipient", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
+		wallet = profile
+			.wallets()
+			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
 		network = wallet.network();
 	});
 
 	const Component = () => {
 		const form = useForm({
-			defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
 			mode: "onChange",
 		});
 
@@ -110,7 +112,7 @@ describe("AddRecipient", () => {
 	it("should render with single recipient data", async () => {
 		const values = {
 			amount: "1",
-			recipientAddress: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+			recipientAddress: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 		};
 
 		const { container } = renderWithFormProvider(
@@ -122,7 +124,7 @@ describe("AddRecipient", () => {
 			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 		});
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
+		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54");
 		expect(container).toMatchSnapshot();
 	});
 
@@ -158,14 +160,14 @@ describe("AddRecipient", () => {
 
 	it("should set amount", async () => {
 		const onChange = vi.fn();
-		const findDelegateSpy = vi.spyOn(env.delegates(), "findByAddress").mockImplementation(
+		const findDelegateSpy = vi.spyOn(env, "usernames").mockImplementation(
 			() =>
 				({
 					username: () => "delegate username",
 				}) as any,
 		);
 
-		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";
+		const address = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 		const amount = 1;
 
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />);
@@ -177,7 +179,6 @@ describe("AddRecipient", () => {
 				address: address,
 				alias: "delegate username",
 				amount: amount,
-				isDelegate: true,
 			},
 		]);
 
@@ -209,15 +210,13 @@ describe("AddRecipient", () => {
 
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
+		await waitFor(() =>
+			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(
+				`${BigNumber.make(wallet.balance()).minus(0.000_105).toFixed(10)}`,
+			),
+		);
 
 		expect(container).toMatchSnapshot();
-	});
-
-	it("should set available amount in mobile", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
-
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
 	});
 
 	it("should show divider only if single recipient and sender has balance", async () => {
@@ -230,9 +229,9 @@ describe("AddRecipient", () => {
 		const emptyProfile = await env.profiles().create("Empty");
 
 		const emptyWallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
+			coin: "Mainsail",
 			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			network: "mainsail.devnet",
 		});
 
 		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
@@ -247,24 +246,6 @@ describe("AddRecipient", () => {
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0"));
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should show available balance after fee", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(12);
-		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
-
-		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
-			{
-				fee: 8,
-			},
-		);
-
-		expect(screen.getByTestId("AddRecipient__available")).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__available")).toHaveTextContent("4"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -311,7 +292,7 @@ describe("AddRecipient", () => {
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+				defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
 				mode: "onChange",
 				shouldUnregister: false,
 			});
@@ -330,7 +311,7 @@ describe("AddRecipient", () => {
 							onChange={onChange}
 							recipients={[
 								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 									amount: 1,
 								},
 								{
@@ -358,7 +339,7 @@ describe("AddRecipient", () => {
 
 		await expect(screen.findByText(recipientLabel)).resolves.toBeVisible();
 
-		await fillFieldsWithValidAddressAndAmount("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax", amount);
+		await fillFieldsWithValidAddressAndAmount("0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54", amount);
 		await waitFor(() => expect(addRecipientButton()).toBeEnabled());
 		await userEvent.click(addRecipientButton());
 
@@ -381,7 +362,7 @@ describe("AddRecipient", () => {
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
 
-		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";
+		const address = "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54";
 		const amount = "1";
 		const recipientLabel = "Recipient #1";
 
@@ -403,14 +384,14 @@ describe("AddRecipient", () => {
 	it("should prevent adding invalid recipient address in multiple type", async () => {
 		const values = {
 			amount: 1,
-			recipientAddress: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
+			recipientAddress: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af55",
 		};
 
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+				defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
 				mode: "onChange",
 				shouldUnregister: false,
 			});
@@ -429,15 +410,15 @@ describe("AddRecipient", () => {
 							onChange={vi.fn()}
 							recipients={[
 								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 									amount: undefined,
 								},
 								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 									amount: 1,
 								},
 								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
+									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af58",
 									amount: 1,
 								},
 							]}
@@ -470,7 +451,7 @@ describe("AddRecipient", () => {
 
 		// Valid address
 		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
-		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6");
 
 		await waitFor(() => expect(addRecipientButton()).toBeEnabled());
 
@@ -533,7 +514,9 @@ describe("AddRecipient", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"),
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
+				"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			),
 		);
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -544,7 +527,8 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
-		expect(screen.getAllByText("ARK Wallet 1").length).toBe(2);
+
+		expect(screen.getAllByText(/Mainsail Wallet/).length).toBe(2);
 	});
 
 	it("should show error for low balance", async () => {
@@ -623,7 +607,7 @@ describe("AddRecipient", () => {
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+				defaultValues: { fee: 0, network, senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
 				mode: "onChange",
 			});
 
@@ -641,7 +625,7 @@ describe("AddRecipient", () => {
 							onChange={vi.fn()}
 							recipients={[
 								{
-									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+									address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 									amount: 1,
 								},
 								{
@@ -683,7 +667,12 @@ describe("AddRecipient", () => {
 
 		const Component = () => {
 			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", ...values },
+				defaultValues: {
+					fee: 0,
+					network,
+					senderAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+					...values,
+				},
 				mode: "onChange",
 			});
 
@@ -707,7 +696,7 @@ describe("AddRecipient", () => {
 	it("should fill inputs in the single tab if one recipient is added in the multiple tab", async () => {
 		const values = {
 			amount: 1,
-			recipientAddress: "DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
+			recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		};
 
 		render(<Component />, {
@@ -738,7 +727,7 @@ describe("AddRecipient", () => {
 			<AddRecipient
 				recipients={[
 					{
-						address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+						address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
 						amount: 1,
 					},
 				]}

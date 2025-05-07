@@ -13,6 +13,7 @@ interface Properties {
 	onClickDown: () => void;
 	onClickUp: () => void;
 	showConvertedValue: boolean;
+	name?: string;
 }
 
 const ArrowButtonStyled = ({
@@ -41,6 +42,7 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 	onClickDown,
 	onClickUp,
 	showConvertedValue,
+	name = "InputFeeAdvanced",
 }: Properties) => (
 	<div className="flex items-center">
 		{showConvertedValue && (
@@ -58,7 +60,7 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 				type="button"
 				onClick={onClickUp}
 				disabled={disabled}
-				data-testid="InputFeeAdvanced__up"
+				data-testid={`${name}__up`}
 				className="border-r sm:border-r-0"
 			>
 				<Icon name="ChevronUpSmall" size="sm" />
@@ -68,7 +70,7 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 				onClick={onClickDown}
 				disabled={disabled || isDownDisabled}
 				isDownArrow
-				data-testid="InputFeeAdvanced__down"
+				data-testid={`${name}__down`}
 			>
 				<Icon name="ChevronDownSmall" size="sm" />
 			</ArrowButtonStyled>
