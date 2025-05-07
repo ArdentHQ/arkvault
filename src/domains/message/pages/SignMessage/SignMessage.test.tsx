@@ -16,8 +16,6 @@ import {
 	triggerMessageSignOnce,
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
-import {Crypto} from "@peculiar/webcrypto";
-import { afterAll } from "vitest";
 
 const history = createHashHistory();
 
@@ -54,11 +52,6 @@ describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
-		vi.stubGlobal('crypto', {
-			...globalThis.crypto,
-			subtle: new Crypto().subtle,
-		});
-
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "Mainsail",
 			mnemonic,
@@ -77,10 +70,6 @@ describe("SignMessage", () => {
 		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
-	});
-
-	afterAll(() => {
-		vi.unstubAllGlobals()
 	});
 
 	describe("Sign with Wallet", () => {
