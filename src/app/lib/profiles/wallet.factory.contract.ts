@@ -89,8 +89,6 @@ export interface ISecretOptions {
  * @interface IWifOptions
  */
 export interface IWifOptions {
-	coin: string;
-	network: string;
 	wif: string;
 	password?: string;
 }

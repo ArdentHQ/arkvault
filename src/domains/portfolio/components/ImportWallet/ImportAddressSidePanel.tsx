@@ -53,7 +53,7 @@ export const ImportAddressesSidePanel = ({
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+	const activeNetwork = activeProfile.activeNetwork();
 
 	const { t } = useTranslation();
 	const { importWallets } = useWalletImport({ profile: activeProfile });
@@ -62,7 +62,7 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch } = form;
+	const { getValues, formState, register, watch, errors  } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const {
 		value,

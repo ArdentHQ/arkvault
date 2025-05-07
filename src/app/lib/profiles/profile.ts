@@ -84,6 +84,14 @@ export class Profile implements IProfile {
 	readonly #hostRepository: IHostRepository;
 
 	/**
+	 * The profile's active network.
+	 *
+	 * @type {Networks.Network}
+	 * @memberof Profile
+	 */
+	#activeNetwork: Networks.Network;
+
+	/**
 	 * The network repository.
 	 *
 	 * @type {NetworkRepository}
@@ -329,6 +337,10 @@ export class Profile implements IProfile {
 			activeNetworkId: undefined,
 		};
 
+		if (this.#activeNetwork && this.#activeNetwork.id() === activeNetworkId) {
+			return this.#activeNetwork;
+		}
+
 		const activeNetwork = this.networks()
 			.availableNetworks()
 			.find((network) => {
@@ -347,6 +359,8 @@ export class Profile implements IProfile {
 		if (!activeNetwork) {
 			throw new Error("Active network is missing");
 		}
+
+		this.#activeNetwork = activeNetwork;
 
 		return activeNetwork;
 	}

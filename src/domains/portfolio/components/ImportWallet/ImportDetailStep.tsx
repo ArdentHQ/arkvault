@@ -133,6 +133,20 @@ const PublicKeyField = ({ profile }: { profile: Contracts.IProfile }) => {
 								return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
 							}
 						},
+						publicKey: async (publicKey) => {
+							try {
+								const wallet = await profile.walletFactory().fromPublicKey({ publicKey });
+								const isValid = new AddressService().validate(wallet.address());
+
+								if (!isValid) {
+									return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
+								}
+
+								return true
+							} catch {
+								return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
+							}
+						},
 					},
 				})}
 				data-testid="ImportWallet__publicKey-input"
@@ -154,10 +168,16 @@ const ImportInputField = ({
 	const { register } = useFormContext();
 
 	if (type.startsWith("bip")) {
-		const findAddress = async (value: string) => {
+		const findAddress = async (mnemonic: string) => {
 			try {
-				const { address } = await new AddressService().fromMnemonic(value);
-				return address;
+				const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic });
+				const isValid = new AddressService().validate(wallet.address());
+
+				if (!isValid) {
+					throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
+				}
+
+				return wallet.address();
 			} catch {
 				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
@@ -204,10 +224,16 @@ const ImportInputField = ({
 				profile={profile}
 				label={t("COMMON.PRIVATE_KEY")}
 				data-testid="ImportWallet__privatekey-input"
-				findAddress={async (value) => {
+				findAddress={async (privateKey) => {
 					try {
-						const { address } = await new AddressService().fromPrivateKey(value);
-						return address;
+						const wallet = await profile.walletFactory().fromPrivateKey({ privateKey });
+						const isValid = new AddressService().validate(wallet.address());
+
+						if (!isValid) {
+							throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
+						}
+
+						return wallet.address();
 					} catch {
 						/* istanbul ignore next -- @preserve */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
@@ -224,10 +250,16 @@ const ImportInputField = ({
 				profile={profile}
 				label={t("COMMON.WIF")}
 				data-testid="ImportWallet__wif-input"
-				findAddress={async (value) => {
+				findAddress={async (wif) => {
 					try {
-						const { address } = await new AddressService().fromWIF(value);
-						return address;
+						const wallet = await profile.walletFactory().fromWIF({ wif });
+						const isValid = new AddressService().validate(wallet.address());
+
+						if (!isValid) {
+							throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
+						}
+
+						return wallet.address();
 					} catch {
 						/* istanbul ignore next -- @preserve */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));

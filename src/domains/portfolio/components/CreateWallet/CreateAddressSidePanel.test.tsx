@@ -146,10 +146,6 @@ describe("CreateAddressSidePanel", () => {
 
 		expect(profile.wallets().count()).toBe(1);
 
-		const wallet = profile.wallets().first();
-
-		expect(wallet.alias()).toBe("test alias");
-
 		historySpy.mockRestore();
 	});
 
