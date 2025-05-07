@@ -475,7 +475,6 @@ describe("ImportSidePanel", () => {
 
 		expect(methodStep()).toBeInTheDocument();
 
-
 		await expect(screen.findByText(commonTranslations.ENCRYPTED_WIF)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByText(commonTranslations.ENCRYPTED_WIF));
