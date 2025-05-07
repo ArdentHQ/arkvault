@@ -7,15 +7,16 @@ import { AuthenticationStep } from "./AuthenticationStep";
 import {
 	env,
 	getDefaultProfileId,
-	MNEMONICS,
+	MAINSAIL_MNEMONICS,
 	renderWithForm,
 	screen,
 	waitFor,
 	mockNanoXTransport,
 	mockNanoSTransport,
 	mockLedgerTransportError,
+	getDefaultWalletMnemonic,
 } from "@/utils/testing-library";
-const ARKDevnet = "ark.devnet";
+const MainsailDevnet = "mainsail.devnet";
 
 vi.mock("react-router-dom", async () => ({
 	...(await vi.importActual("react-router-dom")),
@@ -41,9 +42,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	it("should validate if mnemonic match the wallet address", async () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: ARKDevnet,
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[0],
+			network: MainsailDevnet,
 		});
 
 		const walletExists = profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.networkId());
@@ -64,7 +65,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await waitFor(() => expect(form()?.formState.errors.mnemonic.message).toBe(mnemonicMismatchError));
 
 		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MAINSAIL_MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
@@ -74,9 +75,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 	it("should request mnemonic if wallet was imported using mnemonic", async () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[2],
-			network: ARKDevnet,
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[2],
+			network: MainsailDevnet,
 		});
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
@@ -85,17 +86,17 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MAINSAIL_MNEMONICS[0]);
 
-		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
+		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MAINSAIL_MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should request secret if wallet was imported using secret", async () => {
 		wallet = await profile.walletFactory().fromSecret({
-			coin: "ARK",
-			network: ARKDevnet,
+			coin: "Mainsail",
+			network: MainsailDevnet,
 			secret: "secret",
 		});
 
@@ -115,8 +116,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	it("should request mnemonic if wallet was imported using address", async () => {
 		wallet = await profile.walletFactory().fromAddress({
 			address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-			coin: "ARK",
-			network: ARKDevnet,
+			coin: "Mainsail",
+			network: MainsailDevnet,
 		});
 
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
@@ -125,17 +126,17 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MAINSAIL_MNEMONICS[0]);
 
-		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
+		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MAINSAIL_MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should request private key if wallet was imported using private key", async () => {
 		wallet = await profile.walletFactory().fromPrivateKey({
-			coin: "ARK",
-			network: ARKDevnet,
+			coin: "Mainsail",
+			network: MainsailDevnet,
 			privateKey: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712",
 		});
 
@@ -147,11 +148,12 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should request WIF if wallet was imported using WIF", async () => {
+	// Wif is not implemented
+	it.skip("should request WIF if wallet was imported using WIF", async () => {
 		wallet = await profile.walletFactory().fromWIF({
-			coin: "ARK",
-			network: ARKDevnet,
-			wif: "SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA",
+			coin: "Mainsail",
+			network: MainsailDevnet,
+			wif: "UWt7nB947BtUCYSHcDpdTRSu6HcvQVSUnbyArs8ZC5cBaFvQhVN9",
 		});
 
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
