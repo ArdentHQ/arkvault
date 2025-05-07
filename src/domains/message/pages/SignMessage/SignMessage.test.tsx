@@ -16,6 +16,8 @@ import {
 	triggerMessageSignOnce,
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
+import {Crypto} from "@peculiar/webcrypto";
+import { afterAll } from "vitest";
 
 const history = createHashHistory();
 
@@ -48,9 +50,16 @@ vi.stubGlobal(
 	},
 );
 
+let cryptoStub;
+
 describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
+
+		cryptoStub = vi.stubGlobal('crypto', {
+			...globalThis.crypto,
+			subtle: new Crypto().subtle,
+		});
 
 		// wallet = profile.wallets().first();
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -71,6 +80,10 @@ describe("SignMessage", () => {
 		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
+	});
+
+	afterAll(() => {
+		cryptoStub.mockRestore();
 	});
 
 	describe("Sign with Wallet", () => {
@@ -123,9 +136,9 @@ describe("SignMessage", () => {
 		it("should sign message with mnemonic", async () => {
 			const signedMessage = {
 				message: signMessage,
-				signatory: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
+				signatory: "033007be09f5bf01d8a441e6b97f5607899b65a24aa70b7d144d53986a3f50eb91",
 				signature:
-					"345bc9b6111d11432032f6005391a98fb2d21b0358800406f3dcd05b5477730ab300c9f5707597903f1e9fa1b4f3db2a67f2c98fed09160cb4212080e82e21be",
+					"1cf3d536c4ab197966e12b7a01717c9ede6f3485afdad96f0726df1f31608e067dacf59471ccbccda8be2ab9a2f15585d5e38016362df3aca81f718c5f1605cd1b",
 			};
 
 			render(

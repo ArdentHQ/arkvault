@@ -65,8 +65,7 @@ describe("SignMessage with encrypted secret", () => {
 			network: "mainsail.devnet",
 			secret,
 		});
-
-		encryptedWallet.signingKey().set(secret, "password");
+		await encryptedWallet.signingKey().set(secret, "password");
 
 		encryptedWallet
 			.data()
