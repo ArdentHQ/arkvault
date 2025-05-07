@@ -59,7 +59,6 @@ describe("SignMessage", () => {
 			subtle: new Crypto().subtle,
 		});
 
-		// wallet = profile.wallets().first();
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "Mainsail",
 			mnemonic,
