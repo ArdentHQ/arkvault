@@ -480,161 +480,161 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/portfolio --exclude src/domains/portfolio/components/ImportWallet/Ledger
 
-        domains-error:
-            runs-on: ubuntu-latest
-            env:
-                COVERAGE_INCLUDE_PATH: src/domains/error
-            strategy:
-                matrix:
-                    node-version:
-                        - 20.12.2
-            concurrency:
-                group: ${{ github.head_ref }}-test-domains-error
-                cancel-in-progress: true
-            steps:
-                - uses: actions/checkout@v4
-                  with:
-                      ref: ${{ github.head_ref }}
-                - uses: pnpm/action-setup@v4
-                  with:
-                      version: 10
-                - uses: actions/setup-node@v4
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                      cache: pnpm
-                - name: Update System
-                  run: sudo apt-get update
-                - name: Install (Ledger Requirements)
-                  run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-                - name: Install (pnpm)
-                  run: pnpm install --frozen-lockfile
-                - name: Rebuild
-                  run: pnpm rebuild
-                - name: Test
-                  uses: nick-invision/retry@v2
-                  with:
-                      timeout_minutes: 10
-                      max_attempts: 1
-                      command: pnpm test:coverage src/domains/error
-        domains-exchange:
-            runs-on: ubuntu-latest
-            env:
-                COVERAGE_INCLUDE_PATH: src/domains/exchange
-                COVERAGE_THRESHOLD_LINES: 98.5
-                COVERAGE_THRESHOLD_FUNCTIONS: 98
-                COVERAGE_THRESHOLD_STATEMENTS: 98
-                COVERAGE_THRESHOLD_BRANCHES: 99.46
-            strategy:
-                matrix:
-                    node-version:
-                        - 20.12.2
-            concurrency:
-                group: ${{ github.head_ref }}-test-domains-exchange
-                cancel-in-progress: true
-            steps:
-                - uses: actions/checkout@v4
-                  with:
-                      ref: ${{ github.head_ref }}
-                - uses: pnpm/action-setup@v4
-                  with:
-                      version: 10
-                - uses: actions/setup-node@v4
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                      cache: pnpm
-                - name: Update System
-                  run: sudo apt-get update
-                - name: Install (Ledger Requirements)
-                  run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-                - name: Install (pnpm)
-                  run: pnpm install --frozen-lockfile
-                - name: Rebuild
-                  run: pnpm rebuild
-                - name: Test
-                  uses: nick-invision/retry@v2
-                  with:
-                      timeout_minutes: 10
-                      max_attempts: 1
-                      command: pnpm test:coverage src/domains/exchange
-        domains-message:
-            runs-on: ubuntu-latest
-            env:
-                COVERAGE_INCLUDE_PATH: src/domains/message
-            strategy:
-                matrix:
-                    node-version:
-                        - 20.12.2
-            concurrency:
-                group: ${{ github.head_ref }}-test-domains-message
-                cancel-in-progress: true
-            steps:
-                - uses: actions/checkout@v4
-                  with:
-                      ref: ${{ github.head_ref }}
-                - uses: pnpm/action-setup@v4
-                  with:
-                      version: 10
-                - uses: actions/setup-node@v4
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                      cache: pnpm
-                - name: Update System
-                  run: sudo apt-get update
-                - name: Install (Ledger Requirements)
-                  run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-                - name: Install (pnpm)
-                  run: pnpm install --frozen-lockfile
-                - name: Rebuild
-                  run: pnpm rebuild
-                - name: Test
-                  uses: nick-invision/retry@v2
-                  env:
-                      COVERAGE_THRESHOLD_LINES: 99.57
-                      COVERAGE_THRESHOLD_FUNCTIONS: 98.3
-                      COVERAGE_THRESHOLD_STATEMENTS: 99.6
-                      COVERAGE_THRESHOLD_BRANCHES: 99.17
-                      COVERAGE_INCLUDE_PATH: src/domains/message
-                  with:
-                      timeout_minutes: 10
-                      max_attempts: 1
-                      command: pnpm test:coverage src/domains/message
-        domains-network:
-            runs-on: ubuntu-latest
-            env:
-                COVERAGE_INCLUDE_PATH: src/domains/network
-                COVERAGE_THRESHOLD_BRANCHES: 96.55
-            strategy:
-                matrix:
-                    node-version:
-                        - 20.12.2
-            concurrency:
-                group: ${{ github.head_ref }}-test-domains-network
-                cancel-in-progress: true
-            steps:
-                - uses: actions/checkout@v4
-                  with:
-                      ref: ${{ github.head_ref }}
-                - uses: pnpm/action-setup@v4
-                  with:
-                      version: 10
-                - uses: actions/setup-node@v4
-                  with:
-                      node-version: ${{ matrix.node-version }}
-                      cache: pnpm
-                - name: Update System
-                  run: sudo apt-get update
-                - name: Install (Ledger Requirements)
-                  run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-                - name: Install (pnpm)
-                  run: pnpm install --frozen-lockfile
-                - name: Rebuild
-                  run: pnpm rebuild
-                - name: Test
-                  uses: nick-invision/retry@v2
-                  with:
-                      timeout_minutes: 10
-                      max_attempts: 1
-                      command: pnpm test:coverage src/domains/network
+    domains-error:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/error
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-error
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/error
+    domains-exchange:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/exchange
+            COVERAGE_THRESHOLD_LINES: 98.5
+            COVERAGE_THRESHOLD_FUNCTIONS: 98
+            COVERAGE_THRESHOLD_STATEMENTS: 98
+            COVERAGE_THRESHOLD_BRANCHES: 99.46
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-exchange
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/exchange
+    domains-message:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/message
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-message
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.57
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.3
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
+                  COVERAGE_THRESHOLD_BRANCHES: 99.17
+                  COVERAGE_INCLUDE_PATH: src/domains/message
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/message
+    domains-network:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/network
+            COVERAGE_THRESHOLD_BRANCHES: 96.55
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-network
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/network
 
     #    domains-profile:
     #        runs-on: ubuntu-latest
