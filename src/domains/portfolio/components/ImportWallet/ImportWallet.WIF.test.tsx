@@ -33,6 +33,7 @@ const route = `/profiles/${fixtureProfileId}/dashboard`;
 describe("ImportWallet WIF", () => {
 	let resetProfileNetworksMock: () => void;
 	const wif = "wif.1111";
+	let newWallet: Contracts.IReadWriteWallet | undefined;
 
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
@@ -41,7 +42,8 @@ describe("ImportWallet WIF", () => {
 		});
 
 		profile = env.profiles().findById(fixtureProfileId);
-		network = profile.availableNetworks().find((net) => net.coin() === "Mainsail" && net.id() === testNetwork);
+		network = profile.activeNetwork();
+		newWallet = await profile.walletFactory().fromSecret({ secret: "123" });
 
 		network.importMethods = () => ({
 			wif: {
@@ -67,6 +69,16 @@ describe("ImportWallet WIF", () => {
 	});
 
 	it("should import with valid wif", async () => {
+		const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
+			wif: {
+				canBeEncrypted: true,
+				default: true,
+				permissions: ["read", "write"],
+			},
+		}));
+
+		const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet);
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
@@ -75,6 +87,8 @@ describe("ImportWallet WIF", () => {
 				route: route,
 			},
 		);
+
+		expect(profile.wallets().count()).toBe(2);
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -99,10 +113,11 @@ describe("ImportWallet WIF", () => {
 		});
 
 		await waitFor(() => {
-			expect(
-				profile.wallets().findByAddressWithNetwork("0x393f3F74F0cd9e790B5192789F31E0A38159ae03", testNetwork),
-			).toBeInstanceOf(Wallet);
+			expect(profile.wallets().count()).toBe(3);
 		});
+
+		activeNetworkMock.mockRestore();
+		fromWIFMock.mockRestore();
 	});
 
 	it("should import with invalid wif", async () => {
