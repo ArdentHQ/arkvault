@@ -1,5 +1,4 @@
 import { Networks } from "@/app/lib/sdk";
-import { Mainsail } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
