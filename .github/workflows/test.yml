@@ -878,121 +878,121 @@ jobs:
 #                  timeout_minutes: 10
 #                  max_attempts: 1
 #                  command: pnpm test:coverage src/domains/vote
-#    domains-wallet:
-#        runs-on: ubuntu-latest
-#        env:
-#            COVERAGE_INCLUDE_PATH: src/domains/wallet
-#        strategy:
-#            matrix:
-#                node-version:
-#                    - 20.12.2
-#        concurrency:
-#            group: ${{ github.head_ref }}-test-domains-wallet
-#            cancel-in-progress: true
-#        steps:
-#            - uses: actions/checkout@v4
-#              with:
-#                  ref: ${{ github.head_ref }}
-#            - uses: pnpm/action-setup@v4
-#              with:
-#                  version: 10
-#            - uses: actions/setup-node@v4
-#              with:
-#                  node-version: ${{ matrix.node-version }}
-#                  cache: pnpm
-#            - name: Update System
-#              run: sudo apt-get update
-#            - name: Install (Ledger Requirements)
-#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-#            - name: Install (pnpm)
-#              run: pnpm install --frozen-lockfile
-#            - name: Rebuild
-#              run: pnpm rebuild
-#            - name: Test
-#              uses: nick-invision/retry@v2
-#              env:
-#                  COVERAGE_THRESHOLD_LINES: 83.85
-#                  COVERAGE_THRESHOLD_FUNCTIONS: 87.74
-#                  COVERAGE_THRESHOLD_STATEMENTS: 84.24
-#                  COVERAGE_THRESHOLD_BRANCHES: 81.28
-#                  COVERAGE_INCLUDE_PATH: src/domains/wallet
-#              with:
-#                  timeout_minutes: 10
-#                  max_attempts: 1
-#                  command: pnpm test:coverage src/domains/wallet
-#    router:
-#        runs-on: ubuntu-latest
-#        env:
-#            COVERAGE_INCLUDE_PATH: src/router
-#        strategy:
-#            matrix:
-#                node-version:
-#                    - 20.12.2
-#        concurrency:
-#            group: ${{ github.head_ref }}-test-router
-#            cancel-in-progress: true
-#        steps:
-#            - uses: actions/checkout@v4
-#              with:
-#                  ref: ${{ github.head_ref }}
-#            - uses: pnpm/action-setup@v4
-#              with:
-#                  version: 10
-#            - uses: actions/setup-node@v4
-#              with:
-#                  node-version: ${{ matrix.node-version }}
-#                  cache: pnpm
-#            - name: Update System
-#              run: sudo apt-get update
-#            - name: Install (Ledger Requirements)
-#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-#            - name: Install (pnpm)
-#              run: pnpm install --frozen-lockfile
-#            - name: Rebuild
-#              run: pnpm rebuild
-#            - name: Test
-#              uses: nick-invision/retry@v2
-#              with:
-#                  timeout_minutes: 10
-#                  max_attempts: 1
-#                  command: pnpm test:coverage src/router
-#    utils:
-#        runs-on: ubuntu-latest
-#        env:
-#            COVERAGE_INCLUDE_PATH: src/utils
-#            COVERAGE_THRESHOLD_LINES: 49.13
-#            COVERAGE_THRESHOLD_BRANCHES: 26.27
-#            COVERAGE_THRESHOLD_FUNCTIONS: 24.5
-#            COVERAGE_THRESHOLD_STATEMENTS: 45.61
-#        strategy:
-#            matrix:
-#                node-version:
-#                    - 20.12.2
-#        concurrency:
-#            group: ${{ github.head_ref }}-test-utils
-#            cancel-in-progress: true
-#        steps:
-#            - uses: actions/checkout@v4
-#              with:
-#                  ref: ${{ github.head_ref }}
-#            - uses: pnpm/action-setup@v4
-#              with:
-#                  version: 10
-#            - uses: actions/setup-node@v4
-#              with:
-#                  node-version: ${{ matrix.node-version }}
-#                  cache: pnpm
-#            - name: Update System
-#              run: sudo apt-get update
-#            - name: Install (Ledger Requirements)
-#              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
-#            - name: Install (pnpm)
-#              run: pnpm install --frozen-lockfile
-#            - name: Rebuild
-#              run: pnpm rebuild
-#            - name: Test
-#              uses: nick-invision/retry@v2
-#              with:
-#                  timeout_minutes: 10
-#                  max_attempts: 1
-#                  command: pnpm test:coverage src/utils
+    domains-wallet:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/wallet
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-wallet
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 83.85
+                  COVERAGE_THRESHOLD_FUNCTIONS: 87.74
+                  COVERAGE_THRESHOLD_STATEMENTS: 84.24
+                  COVERAGE_THRESHOLD_BRANCHES: 81.28
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/wallet
+    router:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/router
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-router
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/router
+    utils:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/utils
+            COVERAGE_THRESHOLD_LINES: 49.13
+            COVERAGE_THRESHOLD_BRANCHES: 26.27
+            COVERAGE_THRESHOLD_FUNCTIONS: 24.5
+            COVERAGE_THRESHOLD_STATEMENTS: 45.61
+        strategy:
+            matrix:
+                node-version:
+                    - 20.12.2
+        concurrency:
+            group: ${{ github.head_ref }}-test-utils
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/utils
