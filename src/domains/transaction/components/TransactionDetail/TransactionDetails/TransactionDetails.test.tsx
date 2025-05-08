@@ -22,8 +22,8 @@ describe("TransactionDetails", () => {
 	});
 
 	it("should render without block id", () => {
-		render(<TransactionDetails transaction={{ ...TransactionFixture, blockId: () => null }} />);
+		render(<TransactionDetails transaction={{ ...TransactionFixture, blockHash: () => null }} />);
 
-		expect(screen.queryByText(TransactionFixture.blockId())).not.toBeInTheDocument();
+		expect(screen.queryByText(TransactionFixture.blockHash())).not.toBeInTheDocument();
 	});
 });

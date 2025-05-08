@@ -17,11 +17,17 @@ const wallet = {
 		id: () => "mainsail.devnet",
 		isTest: () => true,
 	}),
+	coin: () => ({
+		link: () => ({
+			block: () =>
+				"https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
+		}),
+	}),
 };
 
 export const TransactionFixture = {
 	hash: () => "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
-	blockId: () => "71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
+	blockHash: () => "71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
 	type: () => "transfer",
 	timestamp: () => DateTime.fromUnix(1596213281),
 	confirmations: () => BigNumber.make(10),
