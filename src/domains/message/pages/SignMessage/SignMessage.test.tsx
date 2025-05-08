@@ -174,7 +174,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should sign message with secret", async () => {
-			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "secret" })
+			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "secret" });
 			profile.wallets().push(walletWithSecret);
 
 			render(
@@ -207,7 +207,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should error and go back", async () => {
-			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" })
+			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
 			profile.wallets().push(walletWithSecret);
 
 			render(
@@ -235,7 +235,7 @@ describe("SignMessage", () => {
 
 			vi.spyOn(walletWithSecret.message(), "sign").mockImplementation(() => {
 				throw new Error("failed to sign");
-			})
+			});
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 			await userEvent.click(continueButton());

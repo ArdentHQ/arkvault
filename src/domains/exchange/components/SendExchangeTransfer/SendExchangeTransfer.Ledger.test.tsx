@@ -10,7 +10,6 @@ import {
 	syncFees,
 	getMainsailProfileId,
 	createTransactionMock,
-	within,
 } from "@/utils/testing-library";
 import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import { afterAll, expect, MockInstance } from "vitest";
@@ -18,7 +17,6 @@ import * as environmentHooks from "@/app/hooks/env";
 import { renderHook } from "@testing-library/react";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { useTranslation } from "react-i18next";
-import userEvent from "@testing-library/user-event";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let exchangeTransaction: Contracts.IExchangeTransaction;
@@ -171,9 +169,6 @@ describe("SendExchangeTransfer", () => {
 	});
 
 	it("should handle ledger submission error", async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
 		const isNanoXMock = vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
@@ -200,5 +195,4 @@ describe("SendExchangeTransfer", () => {
 		profileWalletsMock.mockRestore();
 		isNanoXMock.mockRestore();
 	});
-
 });
