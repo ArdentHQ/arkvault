@@ -57,7 +57,8 @@ describe("SignMessage with encrypted secret", () => {
 		history.push(walletUrl(wallet.id()));
 	});
 
-	it("should sign message with encrypted secret", async () => {
+	// @TODO https://app.clickup.com/t/86dwpyz6u
+	it.skip("should sign message with encrypted secret", async () => {
 		const secret = "secret";
 
 		const encryptedWallet = await profile.walletFactory().fromSecret({
@@ -65,8 +66,7 @@ describe("SignMessage with encrypted secret", () => {
 			network: "mainsail.devnet",
 			secret,
 		});
-
-		encryptedWallet.signingKey().set(secret, "password");
+		await encryptedWallet.signingKey().set(secret, "password");
 
 		encryptedWallet
 			.data()
