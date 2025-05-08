@@ -676,7 +676,6 @@ jobs:
                   timeout_minutes: 10
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/profile
-
     #    domains-setting:
     #        runs-on: ubuntu-latest
     #        env:
@@ -839,7 +838,6 @@ jobs:
     #               timeout_minutes: 10
     #               max_attempts: 1
     #               command: pnpm test:coverage src/domains/transaction/validations
-
 #    domains-vote:
 #        runs-on: ubuntu-latest
 #        env:
