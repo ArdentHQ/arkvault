@@ -118,6 +118,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 							end: {
 								content: (
 									<InputFeeAdvancedAddon
+										name="InputFeeAdvanced__gasLimit"
 										disabled={!!disabled}
 										isDownDisabled={gasLimit <= defaultGasLimit}
 										onClickDown={handleGasLimitDecrement}
@@ -141,7 +142,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					<span>Max Fee </span>
 					<Amount ticker={network.ticker()} value={gasFee} />
 					{network.isLive() && (
-						<span>
+						<span data-testid="InputFeeAdvanced__convertedGasFee">
 							{" "}
 							~<Amount ticker={exchangeTicker} value={convertedGasFee} />{" "}
 						</span>
