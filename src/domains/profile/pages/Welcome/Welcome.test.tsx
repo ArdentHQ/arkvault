@@ -126,7 +126,7 @@ describe("Welcome with deeplink", () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
-			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&delegate=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		render(
 			<Route path="/">
