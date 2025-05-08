@@ -240,10 +240,7 @@ export const useSearchParametersValidation = () => {
 		parameters: URLSearchParams,
 		requiredParameters?: RequiredParameters,
 	) => {
-		assertProfile(profile);
-
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-
 		const coin = parameters.get("coin")?.toUpperCase() || "Mainsail";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
