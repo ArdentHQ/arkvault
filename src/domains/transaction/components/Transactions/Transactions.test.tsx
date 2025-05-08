@@ -18,7 +18,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 const history = createHashHistory();
@@ -395,12 +395,12 @@ describe("Transactions", () => {
 
 	it("should abort previous request", async () => {
 		server.use(
-			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
-				data: transactionsFixture.data.slice(0, 4),
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data,
 				meta: transactionsFixture.meta,
 			}),
 			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
-				data: transactionsFixture.data.slice(0, 1),
+				data: transactionsFixture.data.slice(0, 5),
 				meta: transactionsFixture.meta,
 			}),
 		);
@@ -418,9 +418,9 @@ describe("Transactions", () => {
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(10), { timeout: 500 });
 
 		await userEvent.click(screen.getByTestId("tabs__tab-button-received"));
-		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-all"));
 
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(8), { timeout: 1000 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(5), { timeout: 1000 });
 	});
 
 	it("should filter by mode", async () => {
