@@ -2,12 +2,12 @@ import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
-import { assertProfile, assertString } from "@/utils/assertions";
+import { assertProfile } from "@/utils/assertions";
 
 interface Properties {
 	address: string;
 	network?: Networks.Network;
-	profile?: Contracts.IProfile;
+	profile: Contracts.IProfile;
 }
 
 interface WalletAliasResult {
@@ -32,9 +32,6 @@ const useWalletAlias = (): HookResult => {
 	const getWalletAlias = useCallback(
 		({ address, profile, network }: Properties) => {
 			try {
-				assertProfile(profile);
-				assertString(address);
-
 				if (network && env.knownWallets().is(network.id(), address)) {
 					return {
 						address,
