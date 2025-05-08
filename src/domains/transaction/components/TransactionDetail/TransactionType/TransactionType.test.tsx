@@ -3,7 +3,7 @@ import { DTO } from "@/app/lib/profiles";
 
 import { TransactionType } from "./TransactionType";
 import { translations } from "@/domains/transaction/i18n";
-import { renderResponsive, render, env } from "@/utils/testing-library";
+import { renderResponsive, render } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("TransactionType", () => {
