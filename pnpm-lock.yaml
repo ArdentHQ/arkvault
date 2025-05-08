@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@ardenthq/arkvault-crypto':
-        specifier: 0.0.7
+        specifier: ^0.0.7
         version: 0.0.7
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
