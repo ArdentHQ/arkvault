@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
