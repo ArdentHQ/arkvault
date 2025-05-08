@@ -132,9 +132,6 @@ describe("Transactions", () => {
 
 		await userEvent.click(options.at(0));
 
-		// see options html
-		console.log(options.at(0).outerHTML);
-
 		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 	});
 
