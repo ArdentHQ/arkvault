@@ -8,7 +8,6 @@ import { translations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
-	queryElementForSvg,
 	render,
 	renderResponsive,
 	renderResponsiveWithRoute,
