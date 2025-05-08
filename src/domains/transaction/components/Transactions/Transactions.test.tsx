@@ -224,7 +224,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
 		expect(button).toBeDisabled();
@@ -242,7 +242,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(15),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		let button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -264,7 +264,7 @@ describe("Transactions", () => {
 
 		await userEvent.click(options.at(-1));
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 
 		button = screen.getAllByRole("button", { name: /Type/ })[0];
 		expect(button).not.toBeDisabled();
@@ -305,6 +305,23 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
+		// Paginated result
+		server.use(
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				// transaction.data only has 10 items, create 5 items more
+				data: [...transactionsFixture.data, ...transactionsFixture.data, ...transactionsFixture.data].slice(
+					0,
+					30,
+				),
+				meta: {
+					...transactionsFixture.meta,
+					count: 15,
+					next: "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
+					totalCount: 63,
+				},
+			}),
+		);
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
@@ -315,12 +332,14 @@ describe("Transactions", () => {
 			},
 		);
 
+		await expect(screen.findByTestId("transactions__fetch-more-button")).resolves.toBeVisible();
+
 		const fetchMoreButtonHasContent = (content) =>
 			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(content);
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10);
+		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
 
 		await userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
@@ -502,7 +521,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 	});
 
 	it("should update wallet filters", async () => {
@@ -516,7 +535,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
