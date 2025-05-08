@@ -165,6 +165,7 @@ describe("Use Message Signer Hook", () => {
 	});
 
 	// @TODO: Implement message signing with mainsail
+	// Task: https://app.clickup.com/t/86dwq94f5
 	it.skip("should sign message with ledger", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { result } = renderHook(() => useMessageSigner());
