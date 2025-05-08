@@ -424,6 +424,17 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by mode", async () => {
+		server.use(
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data,
+				meta: transactionsFixture.meta,
+			}),
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data.slice(0, 8),
+				meta: transactionsFixture.meta,
+			}),
+		);
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
@@ -446,6 +457,17 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by mode on mobile", async () => {
+		server.use(
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data,
+				meta: transactionsFixture.meta,
+			}),
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data.slice(0, 8),
+				meta: transactionsFixture.meta,
+			}),
+		);
+
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
@@ -518,7 +540,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 	});
 
 	it("should update wallet filters", async () => {
@@ -532,7 +554,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
