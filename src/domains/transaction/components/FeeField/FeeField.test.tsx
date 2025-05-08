@@ -16,20 +16,12 @@ import { vi } from "vitest";
 
 describe("FeeField", () => {
 	let profile: Contracts.IProfile;
-	let coinNetworkSpy: vi.SpyInstance;
-
-	const networks = new Networks.Network(Mainsail.manifest, Mainsail.manifest.networks["mainsail.devnet"]);
+	let networks: Networks.Network;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+		networks = profile.activeNetwork();
 
-		const coin = profile.coins().get("Mainsail", "mainsail.devnet");
-
-		coinNetworkSpy = vi.spyOn(coin, "network").mockReturnValue(networks);
-	});
-
-	afterAll(() => {
-		coinNetworkSpy.mockRestore();
 	});
 
 	const Component = ({ balance = 10, network = networks, type, data }: any) => {
