@@ -1,4 +1,3 @@
-
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -362,12 +361,10 @@ describe("VerifyMessage", () => {
 			expect(messageInput()).toHaveValue(signedMessage.message);
 		});
 
-		const signature = "a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b"
+		const signature =
+			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b";
 
-		await userEvent.type(
-			signatureInput(),
-			signature,
-		);
+		await userEvent.type(signatureInput(), signature);
 
 		await waitFor(() => {
 			expect(signatureInput()).toHaveValue(signature);
@@ -409,12 +406,10 @@ describe("VerifyMessage", () => {
 			expect(messageInput()).toHaveValue(signedMessage.message);
 		});
 
-		const signature = "a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b"
+		const signature =
+			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b";
 
-		await userEvent.type(
-			signatureInput(),
-			signature,
-		);
+		await userEvent.type(signatureInput(), signature);
 
 		await waitFor(() => {
 			expect(signatureInput()).toHaveValue(signature);
