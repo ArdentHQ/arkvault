@@ -57,7 +57,6 @@ describe("useNetworks", () => {
 		resetMock();
 	});
 
-
 	it("should filter networks", () => {
 		const resetMock = mockProfileWithOnlyPublicNetworks(profile);
 
