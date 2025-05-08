@@ -664,9 +664,9 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Timestamp
                                 </div>
                                 <div
-                                  class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                                  class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                 >
-                                  03.04.2025 8:34 AM
+                                  03.04.2025 3:34 AM
                                 </div>
                               </div>
                               <div
@@ -795,15 +795,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         class="mt-2"
                       >
                         <div
-                          class="max-sm:text-sm rounded-xl border border-theme-danger-200 bg-theme-danger-50 py-2 dark:border-theme-danger-info-border dark:bg-transparent sm:py-4 sm:leading-5"
+                          class="border-theme-danger-200 bg-theme-danger-50 dark:border-theme-danger-info-border rounded-xl border py-2 max-sm:text-sm sm:py-4 sm:leading-5 dark:bg-transparent"
                           data-testid="TransactionFailedAlert"
                         >
                           <div
-                            class="border-theme-success-200 bg-theme-success-50 dark:border-theme-success-600 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6"
                           >
                             <div
-                              class="text-theme-success-700 flex items-center space-x-2"
+                              class="text-theme-danger-700 dark:text-theme-danger-info-border flex items-center space-x-2"
                             >
                               <div
                                 class="h-5"
@@ -842,10 +841,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </p>
                             </div>
                             <div
-                              class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-success-200 dark:text-theme-secondary-800 h-5"
+                              class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-danger-200 dark:text-theme-secondary-800 h-5"
                             />
                             <p
-                              class="text-theme-secondary-700 dark:text-theme-success-600 text-sm font-semibold sm:text-base"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold"
                             >
                               <span>
                                 808 Confirmations
@@ -854,7 +853,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             </p>
                           </div>
                           <p
-                            class="border-t border-theme-danger-200 px-3 pt-2 font-semibold text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 sm:px-6 sm:pt-4"
+                            class="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4"
                           >
                             Error encountered during contract execution.
                           </p>
