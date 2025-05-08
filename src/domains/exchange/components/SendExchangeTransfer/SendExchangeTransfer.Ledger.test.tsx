@@ -25,16 +25,6 @@ let exchangeTransaction: Contracts.IExchangeTransaction;
 
 let useActiveProfileSpy: MockInstance;
 
-const selectSender = async () => {
-	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
-
-	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-
-	await userEvent.click(firstAddress);
-};
-
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
