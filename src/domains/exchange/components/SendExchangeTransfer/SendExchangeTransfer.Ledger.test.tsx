@@ -80,10 +80,9 @@ describe("SendExchangeTransfer", () => {
 
 	it("should render ledger authentication screen", async () => {
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 		const connectMock = vi.spyOn(wallet.ledger(), "connect").mockResolvedValue(true);
-		const versionMock = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
+		const versionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
 		const mockWalletData = vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
 			if (key === Contracts.WalletData.DerivationPath) {
@@ -102,7 +101,7 @@ describe("SendExchangeTransfer", () => {
 		const profileWalletsMock = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
 
 		const ledgerGetPublicKeyMock = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
 		const transportMock = mockNanoXTransport();
@@ -110,7 +109,7 @@ describe("SendExchangeTransfer", () => {
 		createTransactionMock(wallet);
 		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+		vi.spyOn(wallet.ledger(), "scan").mockImplementation(({ onProgress }) => {
 			onProgress(wallet);
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),
@@ -153,12 +152,11 @@ describe("SendExchangeTransfer", () => {
 
 	it("should handle ledger submission error", async () => {
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 		const connectMock = vi.spyOn(wallet.ledger(), "connect").mockResolvedValue(true);
-		const versionMock = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
+		const versionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
 
@@ -188,13 +186,13 @@ describe("SendExchangeTransfer", () => {
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
 
 		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+		vi.spyOn(wallet.ledger(), "scan").mockImplementation(({ onProgress }) => {
 			onProgress(wallet);
 			return {
 				"m/44'/1'/0'/0/0": wallet.toData(),
