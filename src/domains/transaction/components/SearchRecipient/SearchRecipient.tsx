@@ -128,12 +128,14 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	onAction,
 	recipients,
 	selectedAddress,
+	profile,
 }) => {
 	const {
 		setSearchKeyword,
 		filteredList: filteredRecipients,
 		isEmptyResults,
 	} = useSearchWallet({
+		profile,
 		wallets: recipients,
 	});
 
