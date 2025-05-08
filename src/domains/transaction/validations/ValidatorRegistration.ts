@@ -39,12 +39,7 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (
-	env: Environment,
-	network: Networks.Network,
-	profile: IProfile,
-	publicKey: string
-) => {
+const publicKeyExists = async (env: Environment, network: Networks.Network, profile: IProfile, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}
