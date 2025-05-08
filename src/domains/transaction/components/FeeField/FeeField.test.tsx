@@ -20,7 +20,6 @@ describe("FeeField", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		networks = profile.activeNetwork();
-
 	});
 
 	const Component = ({ balance = 10, network = networks, type, data }: any) => {
