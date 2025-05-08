@@ -222,9 +222,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 									wallet={
 										senderWallet
 											? {
-													address: senderWallet.address(),
-													network: senderWallet.network(),
-												}
+												address: senderWallet.address(),
+												network: senderWallet.network(),
+											}
 											: undefined
 									}
 									wallets={wallets}
