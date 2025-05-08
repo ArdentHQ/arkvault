@@ -9,7 +9,6 @@ import "jest-styled-components";
 import { server } from "./src/tests/mocks/server";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
-import { Crypto } from "@peculiar/webcrypto";
 
 expect.extend(matchers);
 
@@ -121,11 +120,6 @@ beforeAll(async () => {
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
-	// vi.stubGlobal("crypto", {
-	// 	...globalThis.crypto,
-	// 	subtle: new Crypto().subtle,
-	// });
-
 	return;
 });
 
@@ -175,8 +169,6 @@ afterAll(() => {
 	server.close();
 
 	MockDate.reset();
-
-	vi.unstubAllGlobals();
 
 	if (global.gc) {
 		global.gc();
