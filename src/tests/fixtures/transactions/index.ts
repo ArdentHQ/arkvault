@@ -27,7 +27,7 @@ export const TransactionFixture = {
 	confirmations: () => BigNumber.make(10),
 	votes: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
 	unvotes: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
-	sender: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+	from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	recipients: () => [],
 	amount: () => 100,
@@ -60,8 +60,6 @@ export const TransactionFixture = {
 	hasFailed: () => false,
 	getMeta: () => "",
 	setMeta: () => "",
-	// IPFS Type
-	hash: () => "QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68",
 	// @ts-ignore
 	explorerLink: () =>
 		"https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe",
