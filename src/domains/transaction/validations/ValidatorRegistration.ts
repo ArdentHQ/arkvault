@@ -45,16 +45,18 @@ const publicKeyExists = async (env: Environment, network: Networks.Network, prof
 	}
 
 	const hostSelector = env.hostSelector(profile);
-
 	const coin = profile.coins().get(network.coin(), network.id());
-
 	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
 
 	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
-	const data = await response.json();
+	if (response.status !== 404) {
+		const data = await response.json();
 
-	if (data.meta.count > 0) {
-		throw new Error("Public key has been used already!");
+		if (data.meta?.count > 0) {
+			throw new Error("Public key has been used already!");
+		}
 	}
+
+	return true;
 };
