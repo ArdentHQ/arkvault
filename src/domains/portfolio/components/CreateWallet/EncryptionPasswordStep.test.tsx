@@ -199,7 +199,7 @@ describe("EncryptionPasswordStep", () => {
 		});
 
 		const walletSpy = vi.spyOn(profile.walletFactory(), "fromMnemonicWithBIP39").mockImplementation(() => {
-			throw new Error("Test")
+			throw new Error("Test");
 		});
 
 		await userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
@@ -207,5 +207,4 @@ describe("EncryptionPasswordStep", () => {
 		expect(screen.queryByTestId("CreateWallet__SuccessStep")).not.toBeInTheDocument();
 		walletSpy.mockRestore();
 	});
-
 });
