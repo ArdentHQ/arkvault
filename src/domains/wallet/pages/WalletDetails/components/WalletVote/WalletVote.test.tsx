@@ -424,7 +424,7 @@ describe("DelegateName", () => {
 
 	it("should render a username", () => {
 		render(<DelegateName delegateName={"TestingUsername"} isUsername={true} />);
-		expect(screen.getByText("Testi...rname")).toBeInTheDocument();
+		expect(screen.getByText("TestingUsername")).toBeInTheDocument();
 	});
 });
 
