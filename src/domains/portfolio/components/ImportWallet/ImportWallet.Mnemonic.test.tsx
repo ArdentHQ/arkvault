@@ -43,6 +43,7 @@ const testNetwork = "mainsail.devnet";
 
 describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
+
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
