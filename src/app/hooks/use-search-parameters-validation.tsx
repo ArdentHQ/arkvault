@@ -112,14 +112,14 @@ const validateVerify = ({ parameters }: ValidateParameters) => {
 };
 
 const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
-	const delegateName = parameters.get("delegate");
+	const validatorName = parameters.get("validator");
 	const publicKey = parameters.get("publicKey");
 
-	if (!delegateName && !publicKey) {
+	if (!validatorName && !publicKey) {
 		return { error: { type: SearchParametersError.MissingValidator } };
 	}
 
-	if (!!publicKey && !!delegateName) {
+	if (!!publicKey && !!validatorName) {
 		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
@@ -135,11 +135,11 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		});
 
 	if (!validator) {
-		return { error: { type: SearchParametersError.ValidatorNotFound, value: delegateName || validatorPublicKey } };
+		return { error: { type: SearchParametersError.ValidatorNotFound, value: validatorName || validatorPublicKey } };
 	}
 
 	if (validator.isResignedValidator()) {
-		return { error: { type: SearchParametersError.ValidatorResigned, value: delegateName || validatorPublicKey } };
+		return { error: { type: SearchParametersError.ValidatorResigned, value: validatorName || validatorPublicKey } };
 	}
 };
 
