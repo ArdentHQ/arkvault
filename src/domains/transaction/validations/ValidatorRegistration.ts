@@ -46,9 +46,13 @@ const publicKeyExists = async (network: Networks.Network, profile: IProfile, pub
 	const publicApiEndpoint = network.config().host("full", profile);
 	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
-	const data = await response.json();
+	if (response.status !== 404) {
+		const data = await response.json();
 
-	if (data.meta.count > 0) {
-		throw new Error("Public key has been used already!");
+		if (data.meta?.count > 0) {
+			throw new Error("Public key has been used already!");
+		}
 	}
+
+	return true;
 };
