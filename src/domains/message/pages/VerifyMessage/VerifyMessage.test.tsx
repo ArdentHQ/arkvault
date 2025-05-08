@@ -340,7 +340,10 @@ describe("VerifyMessage", () => {
 		await userEvent.type(signatoryInput(), signedMessage.signatory);
 		await userEvent.type(messageInput(), signedMessage.message);
 		await userEvent.clear(signatureInput());
-		await userEvent.type(signatureInput(), "a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b");
+		await userEvent.type(
+			signatureInput(),
+			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b",
+		);
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
