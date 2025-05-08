@@ -11,7 +11,7 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
-import { Contracts, Wallet } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 

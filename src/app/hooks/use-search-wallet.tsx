@@ -3,6 +3,7 @@ import { useCallback, useMemo, useState } from "react";
 
 import { useWalletAlias } from "./use-wallet-alias";
 import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
+import { assertProfile } from "@/utils/assertions";
 
 interface SearchWalletProperties {
 	profile?: Contracts.IProfile;
@@ -30,6 +31,7 @@ export const useSearchWallet = ({ profile, wallets }: SearchWalletProperties) =>
 		}
 
 		return (wallets as Contracts.IReadWriteWallet[]).filter((wallet) => {
+			assertProfile(profile);
 			const { alias } = getWalletAlias({
 				address: wallet.address(),
 				network: wallet.network(),

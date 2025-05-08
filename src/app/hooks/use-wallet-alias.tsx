@@ -2,7 +2,6 @@ import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
-import { assertProfile } from "@/utils/assertions";
 
 interface Properties {
 	address: string;

@@ -34,7 +34,6 @@ describe("EncryptionPasswordStep", () => {
 			setSelectedAddresses: () => {},
 		});
 		profile = env.profiles().findById(fixtureProfileId);
-		console.log({ id: profile.id() })
 
 		for (const wallet of profile.wallets().values()) {
 			profile.wallets().forget(wallet.id());
