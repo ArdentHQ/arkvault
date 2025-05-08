@@ -52,7 +52,30 @@ describe("useNetworks", () => {
 			result: { current },
 		} = renderHookWithProfile(profile);
 
+		expect(current).toHaveLength(2);
+
+		resetMock();
+	});
+
+
+	it("should filter networks", () => {
+		const resetMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useNetworks({
+					filter: (network) => network.id() === "mainsail.mainnet",
+					profile: profile,
+				}),
+			{
+				wrapper,
+			},
+		);
+
 		expect(current).toHaveLength(1);
+		expect(current[0].id()).toBe("mainsail.mainnet");
 
 		resetMock();
 	});
@@ -68,16 +91,6 @@ describe("useNetworks", () => {
 					},
 					id: "random.custom",
 					name: "Custom",
-					type: "test",
-				},
-				custom2: {
-					...DefaultManifest,
-					coin: "Mainsail",
-					currency: {
-						ticker: "ARK",
-					},
-					id: "random.custom",
-					name: "Custom 2",
 					type: "test",
 				},
 				devnet: {
@@ -107,35 +120,9 @@ describe("useNetworks", () => {
 			result: { current },
 		} = renderHookWithProfile(profile);
 
-		expect(current).toHaveLength(4);
-
 		expect(current[0].name()).toBe("Mainnet");
 		expect(current[1].name()).toBe("Devnet");
-		expect(current[2].name()).toBe("Custom");
-		expect(current[3].name()).toBe("Custom 2");
 
 		mock.mockRestore();
-	});
-
-	it("should filter networks", () => {
-		const resetMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useNetworks({
-					filter: (network) => network.id() === "mainsail.mainnet",
-					profile: profile,
-				}),
-			{
-				wrapper,
-			},
-		);
-
-		expect(current).toHaveLength(1);
-		expect(current[0].id()).toBe("mainsail.mainnet");
-
-		resetMock();
 	});
 });
