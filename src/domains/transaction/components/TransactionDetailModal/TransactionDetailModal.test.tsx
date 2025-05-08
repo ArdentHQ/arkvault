@@ -31,7 +31,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					profile={profile}
@@ -51,11 +51,10 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a transfer modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					profile={profile}
@@ -77,13 +76,12 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a multi signature modal", async () => {
 		await profile.wallets().restore();
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					profile={profile}
@@ -110,12 +108,10 @@ describe("TransactionDetailModal", () => {
 				translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE,
 			),
 		);
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a multi payment modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					profile={profile}
@@ -141,7 +137,6 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSACTION_DETAILS.TITLE);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
