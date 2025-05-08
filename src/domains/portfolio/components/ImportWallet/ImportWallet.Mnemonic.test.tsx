@@ -15,7 +15,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	MAINSAIL_MNEMONICS,
 	getMainsailProfileId,
-	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
@@ -44,8 +43,6 @@ const testNetwork = "mainsail.devnet";
 
 describe("ImportAddress", () => {
 	let resetProfileNetworksMock: () => void;
-	let uInt8ArrayFix: () => void;
-
 	beforeEach(async () => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
@@ -63,12 +60,10 @@ describe("ImportAddress", () => {
 		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		uInt8ArrayFix = fixUInt8ArrayIssue();
 	});
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-		uInt8ArrayFix();
 	});
 
 	it("should import by mnemonic", async () => {
