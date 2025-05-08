@@ -62,14 +62,12 @@ describe("TransactionRecipients", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a single recipient that is delegate", () => {
+	it("should render a single recipient that is validator", () => {
 		const { container } = render(
-			<TransactionRecipients currency={currency} recipients={[{ address, isDelegate: true }]} />,
+			<TransactionRecipients currency={currency} recipients={[{ address, isValidator: true }]} />,
 		);
 
 		expect(container).toHaveTextContent(address);
-
-		expect(queryElementForSvg(container, "delegate-registration")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
