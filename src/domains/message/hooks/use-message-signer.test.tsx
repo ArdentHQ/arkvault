@@ -169,7 +169,7 @@ describe("Use Message Signer Hook", () => {
 		const { result } = renderHook(() => useMessageSigner());
 
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		vi.spyOn(wallet.coin().ledger(), "signMessage").mockResolvedValue("signature");
+		vi.spyOn(wallet.ledger(), "signMessage").mockResolvedValue("signature");
 
 		const signedMessage = await result.current.sign(wallet, "message");
 
@@ -188,10 +188,10 @@ describe("Use Message Signer Hook", () => {
 
 		vi.spyOn(wallet, "publicKey").mockReturnValue(undefined);
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
-		vi.spyOn(wallet.coin().ledger(), "signMessage").mockResolvedValue("signature");
+		vi.spyOn(wallet.ledger(), "signMessage").mockResolvedValue("signature");
 
 		const signedMessage = await result.current.sign(wallet, "message");
 
@@ -211,7 +211,7 @@ describe("Use Message Signer Hook", () => {
 		const { result } = renderHook(() => useMessageSigner());
 
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		vi.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(
+		vi.spyOn(wallet.ledger(), "signMessage").mockImplementation(
 			() => new Promise((resolve) => setTimeout(() => resolve("signature"), 20_000)),
 		);
 
