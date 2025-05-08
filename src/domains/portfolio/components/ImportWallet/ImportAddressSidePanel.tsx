@@ -18,7 +18,6 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
 import { assertString, assertWallet } from "@/utils/assertions";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
 import { ImportActionToolbar, LedgerStepHeader, StepHeader } from "./ImportAddressSidePanel.blocks";
@@ -62,7 +61,7 @@ export const ImportAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch, errors  } = form;
+	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 	const {
 		value,

@@ -89,7 +89,7 @@ export class Profile implements IProfile {
 	 * @type {Networks.Network}
 	 * @memberof Profile
 	 */
-	#activeNetwork: Networks.Network;
+	#activeNetwork!: Networks.Network;
 
 	/**
 	 * The network repository.

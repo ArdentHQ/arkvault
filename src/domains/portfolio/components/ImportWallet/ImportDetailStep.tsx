@@ -142,7 +142,7 @@ const PublicKeyField = ({ profile }: { profile: Contracts.IProfile }) => {
 									return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
 								}
 
-								return true
+								return true;
 							} catch {
 								return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
 							}

@@ -42,8 +42,6 @@ export interface IAddressOptions {
  * @interface IPublicKeyOptions
  */
 export interface IPublicKeyOptions {
-	coin: string;
-	network: string;
 	publicKey: string;
 	bip44?: Services.IdentityLevels;
 	bip49?: Services.IdentityLevels;
@@ -56,8 +54,6 @@ export interface IPublicKeyOptions {
  * @interface IPrivateKeyOptions
  */
 export interface IPrivateKeyOptions {
-	coin: string;
-	network: string;
 	privateKey: string;
 }
 
@@ -67,8 +63,6 @@ export interface IPrivateKeyOptions {
  * @interface IAddressWithDerivationPathOptions
  */
 export interface IAddressWithDerivationPathOptions {
-	coin: string;
-	network: string;
 	address: string;
 	path: string;
 }

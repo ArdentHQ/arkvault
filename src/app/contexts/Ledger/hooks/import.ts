@@ -1,4 +1,3 @@
-import { Coins } from "@/app/lib/sdk";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { useCallback } from "react";
 import { LedgerDevice } from "./connection.state";
@@ -12,12 +11,10 @@ interface LedgerWalletImportProperties {
 
 export const useLedgerImport = ({ device, env }: LedgerWalletImportProperties) => {
 	const importLedgerWallets = useCallback(
-		async (wallets: LedgerData[], coin: Coins.Coin, profile: Contracts.IProfile) => {
+		async (wallets: LedgerData[], profile: Contracts.IProfile) => {
 			for (const { address, path } of wallets) {
 				const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
 					address,
-					coin: coin.network().coin(),
-					network: coin.network().id(),
 					path,
 				});
 

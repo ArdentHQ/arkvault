@@ -26,8 +26,8 @@ import { expect } from "vitest";
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
 
-const mnemonic = "skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin";
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+const mnemonic =
+	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 const history = createHashHistory();
@@ -43,11 +43,15 @@ const privateKeyInput = () => screen.getByTestId("ImportWallet__privatekey-input
 const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-input");
 
-const testNetwork = "mainsail.devnet";
-let network;
-
 describe("ImportSidePanel", () => {
+	let network;
 	let resetProfileNetworksMock: () => void;
+
+	const Component = () => (
+		<EnvironmentProvider env={env}>
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+		</EnvironmentProvider>
+	);
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -63,14 +67,6 @@ describe("ImportSidePanel", () => {
 	});
 
 	it("should render method step", async () => {
-		const Component = () => {
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
@@ -100,7 +96,7 @@ describe("ImportSidePanel", () => {
 	it("should be possible to change import type in method step", async () => {
 		let form: ReturnType<typeof useForm>;
 
-		const Component = () => {
+		const ImportAddressesSidePanelComponent = () => {
 			network.importMethods = () => ({
 				address: {
 					default: false,
@@ -131,7 +127,7 @@ describe("ImportSidePanel", () => {
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
-				<Component />
+				<ImportAddressesSidePanelComponent />
 			</Route>,
 			{ history, withProviders: false },
 		);
@@ -162,7 +158,7 @@ describe("ImportSidePanel", () => {
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		vi.spyOn(usePortfolio, "usePortfolio").mockReturnValue({
 			selectedAddresses: [],
-			setSelectedAddresses: () => { },
+			setSelectedAddresses: () => {},
 		});
 
 		let form: ReturnType<typeof useForm>;
@@ -266,7 +262,6 @@ describe("ImportSidePanel", () => {
 	});
 
 	describe("import with private key", () => {
-
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
 		beforeEach(async () => {
 			profile = env.profiles().findById(fixtureProfileId);
@@ -275,12 +270,6 @@ describe("ImportSidePanel", () => {
 			await env.profiles().restore(profile);
 		});
 
-		const Component = () => (
-			<EnvironmentProvider env={env}>
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</EnvironmentProvider>
-		);
-
 		it("when is valid", async () => {
 			const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
 				privateKey: {
@@ -288,7 +277,7 @@ describe("ImportSidePanel", () => {
 					default: true,
 					permissions: ["read", "write"],
 				},
-			}))
+			}));
 
 			history.push(`/profiles/${profile.id()}`);
 
@@ -322,11 +311,11 @@ describe("ImportSidePanel", () => {
 					default: true,
 					permissions: ["read", "write"],
 				},
-			}))
+			}));
 
 			const privateKeyMock = vi.spyOn(profile.walletFactory(), "fromPrivateKey").mockImplementation(() => {
 				throw new Error("error");
-			})
+			});
 
 			history.push(`/profiles/${profile.id()}`);
 
@@ -366,12 +355,6 @@ describe("ImportSidePanel", () => {
 			await env.profiles().restore(profile);
 		});
 
-		const Component = () => (
-			<EnvironmentProvider env={env}>
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</EnvironmentProvider>
-		);
-
 		it("with valid wif", async () => {
 			history.push(`/profiles/${profile.id()}`);
 
@@ -381,10 +364,9 @@ describe("ImportSidePanel", () => {
 					default: true,
 					permissions: ["read", "write"],
 				},
-			}))
+			}));
 
-			const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet)
-
+			const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet);
 
 			render(
 				<Route path="/profiles/:profileId">
@@ -416,11 +398,11 @@ describe("ImportSidePanel", () => {
 					default: true,
 					permissions: ["read", "write"],
 				},
-			}))
+			}));
 
 			const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
 				throw new Error("error");
-			})
+			});
 
 			history.push(`/profiles/${profile.id()}`);
 
@@ -459,15 +441,9 @@ describe("ImportSidePanel", () => {
 
 		const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
 			encryptedWif: true,
-		}))
+		}));
 
-		const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet)
-
-		const Component = () => (
-			<EnvironmentProvider env={env}>
-				<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-			</EnvironmentProvider>
-		);
+		const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet);
 
 		history.push(`/profiles/${profile.id()}`);
 
@@ -497,5 +473,7 @@ describe("ImportSidePanel", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
+		activeNetworkMock.mockRestore();
+		fromWIFMock.mockRestore();
 	});
 });
