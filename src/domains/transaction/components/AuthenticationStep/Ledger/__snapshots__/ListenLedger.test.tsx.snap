@@ -7,7 +7,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
     data-testid="LedgerAuthStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -170,7 +170,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
         class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
-        class="animate-pulse font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text animate-pulse font-semibold"
         data-testid="LedgerWaitingDevice-loading_message"
       >
         Waiting for confirmation ...
@@ -187,7 +187,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
     data-testid="LedgerAuthStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -350,7 +350,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
         class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
-        class="animate-pulse font-semibold text-theme-secondary-text"
+        class="text-theme-secondary-text animate-pulse font-semibold"
         data-testid="LedgerWaitingDevice-loading_message"
       >
         Waiting for confirmation ...
