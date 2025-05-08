@@ -101,7 +101,7 @@ describe("Use Message Signer Hook", () => {
 		walletWifMock.mockRestore();
 	});
 
-	it("should sign message with encrypted secret with encryption", async () => {
+	it("should sign message with encrypted secret", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
 		const walletActsWithSecretWithEncryption = vi
