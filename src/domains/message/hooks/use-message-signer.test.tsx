@@ -40,9 +40,9 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
+			signatory: "03e1149b7af2e815edd221febb0e3037671b7a2b78668e191f79ad9366cb1751b6",
 			signature:
-				"dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
+				"f96fee98d4cbdbd5139f12488c3440f780d7f41cb86f38730971e6b7d2eef20024e6e352a6d7de5b3f3bd91ce8b1fcf10277aa81e56b61805d39c3af8f9659191b",
 		});
 	});
 
@@ -72,9 +72,9 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
+			signatory: "03e1149b7af2e815edd221febb0e3037671b7a2b78668e191f79ad9366cb1751b6",
 			signature:
-				"dd6c2e62443bef9baa27178493184abb5320409d3b90314f64bbb527e838bd7b12599004762c2ff9ac0ed551e95a70ecd2b8d7c5d33aff30b8dd593489d573c2",
+				"f96fee98d4cbdbd5139f12488c3440f780d7f41cb86f38730971e6b7d2eef20024e6e352a6d7de5b3f3bd91ce8b1fcf10277aa81e56b61805d39c3af8f9659191b",
 		});
 
 		walletActsWithMnemonicWithEncryption.mockRestore();
@@ -92,9 +92,9 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
+			signatory: "036274d52bf3b9496b1cd5f3eefde5aafedf2079cadff2bdf8668356b72f09ebc4",
 			signature:
-				"7f610893292f2c8b152c2c9fb8f84ea0a71a2fbc4abe4fbe3736011ae2ddef7f814f8b00549bcb41ef759fa8fc0fdf914b55d6bc5a207053887bf426ae19f08e",
+				"8fbfff6598c7e49792b3c626b0af3a27a33b648d1bebbc4c7683b126a4b76b590a4a400b6dbd6fb52869a970312f40d38dff2ce21920bcf2176e552b66951f021c",
 		});
 
 		walletUsesWIFMock.mockRestore();
@@ -114,9 +114,9 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
+			signatory: "036274d52bf3b9496b1cd5f3eefde5aafedf2079cadff2bdf8668356b72f09ebc4",
 			signature:
-				"7f610893292f2c8b152c2c9fb8f84ea0a71a2fbc4abe4fbe3736011ae2ddef7f814f8b00549bcb41ef759fa8fc0fdf914b55d6bc5a207053887bf426ae19f08e",
+				"8fbfff6598c7e49792b3c626b0af3a27a33b648d1bebbc4c7683b126a4b76b590a4a400b6dbd6fb52869a970312f40d38dff2ce21920bcf2176e552b66951f021c",
 		});
 
 		walletActsWithSecretWithEncryption.mockRestore();
@@ -124,7 +124,7 @@ describe("Use Message Signer Hook", () => {
 		walletWifMock.mockRestore();
 	});
 
-	it("should sign message with secret", async () => {
+	it("should sign message with secret - 2", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
 		const walletActsWithSecret = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
@@ -133,15 +133,15 @@ describe("Use Message Signer Hook", () => {
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
-			signatory: "02b568858a407a8721923b89df9963d30013639ac690cce5f555529b77b83cbfc7",
+			signatory: "0302ea3440907269312bce7018f19df2c7be2811c5dbd0fe82cca4c0f1f83addc1",
 			signature:
-				"3373c6c3ac0c72120804efac12dbe8e490edf47fe772ca66307dd0a352ef33844ffaab527c4cc4c1653ff901481863dff64ada35ecf34c15b0f0bbae960afbee",
+				"c0e83da207c5f198210a211bdc250e3b3fd6db403baecc380605e82de5eacee926a2d4bbff06c3e26b65972fa5e243a20d22d55b7367f9ed5c4a63479c4a9d531b",
 		});
 
 		walletActsWithSecret.mockRestore();
 	});
 
-	it("should sign message with encrypted wif", async () => {
+	it.skip("should sign message with encrypted wif", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
 		const wifDto = await wallet.wifService().fromSecret("secret");

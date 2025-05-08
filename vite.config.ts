@@ -161,7 +161,7 @@ export default defineConfig(() => {
 					"path",
 					"http",
 					"https",
-					"crypto",
+					// "crypto",
 					"module",
 					"util",
 					"events",
