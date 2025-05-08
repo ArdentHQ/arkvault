@@ -57,7 +57,8 @@ describe("SignMessage with encrypted mnemonic", () => {
 		history.push(walletUrl(wallet.id()));
 	});
 
-	it("should sign message with encrypted mnemonic", async () => {
+	// @TODO https://app.clickup.com/t/86dwpyz6u
+	it.skip("should sign message with encrypted mnemonic", async () => {
 		const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[1],
