@@ -185,11 +185,13 @@ export const CreateAddressesSidePanel = ({
 						password: parameters.encryptionPassword,
 					});
 				} catch {
-					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
-				} finally {
 					setIsGeneratingWallet(false);
+					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
+					return;
 				}
 			}
+
+			setIsGeneratingWallet(false);
 
 			assertWallet(wallet);
 			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));

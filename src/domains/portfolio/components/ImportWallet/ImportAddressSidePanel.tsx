@@ -122,7 +122,7 @@ export const ImportAddressesSidePanel = ({
 				setIsImporting(true);
 
 				try {
-					await importWalletsInAllNetworks();
+					await importWallet();
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(Step.EncryptPasswordStep);
@@ -158,7 +158,7 @@ export const ImportAddressesSidePanel = ({
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWalletsInAllNetworks = async () => {
+	const importWallet = async () => {
 		const { importOption, encryptedWif, value } = getValues();
 		const wallets = await importWallets({
 			encryptedWif,
@@ -166,8 +166,7 @@ export const ImportAddressesSidePanel = ({
 			value,
 		});
 
-		const currentWallet = wallets.find((wallet) => wallet.network().id() === activeNetwork.id());
-		setImportedWallet(currentWallet);
+		setImportedWallet(wallets.at(0));
 	};
 
 	const encryptInputs = async () => {
