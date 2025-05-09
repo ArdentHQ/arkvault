@@ -1,17 +1,17 @@
 import { BigNumber, NumberLike } from "@/app/lib/helpers";
 
-import { ConfigKey, ConfigRepository } from "./config";
-import { IContainer } from "./container.contracts";
-import { BindingType } from "./service-provider.contract";
+interface BigNumberOptions {
+	decimals?: number;
+}
 
 export class BigNumberService {
-	readonly #configRepository: ConfigRepository;
+	readonly #decimals: number | undefined;
 
-	public constructor(container: IContainer) {
-		this.#configRepository = container.get(BindingType.ConfigRepository);
+	constructor(options?: BigNumberOptions) {
+		this.#decimals = options?.decimals;
 	}
 
 	public make(value: NumberLike): BigNumber {
-		return BigNumber.make(value, this.#configRepository.get<number>(ConfigKey.CurrencyDecimals));
+		return BigNumber.make(value, this.#decimals);
 	}
 }

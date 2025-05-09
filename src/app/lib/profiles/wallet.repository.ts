@@ -1,9 +1,6 @@
-import { Coins } from "@/app/lib/sdk";
 import { sortBy, sortByDesc } from "@/app/lib/helpers";
 import retry from "p-retry";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
 	IProfile,
@@ -41,23 +38,6 @@ export class WalletRepository implements IWalletRepository {
 		return this.#data.last();
 	}
 
-	/** {@inheritDoc IWalletRepository.allByCoin} */
-	public allByCoin(): Record<string, Record<string, IReadWriteWallet>> {
-		const result = {};
-
-		for (const [id, wallet] of Object.entries(this.all())) {
-			const coin: string = wallet.currency();
-
-			if (!result[coin]) {
-				result[coin] = {};
-			}
-
-			result[coin][id] = wallet;
-		}
-
-		return result;
-	}
-
 	/** {@inheritDoc IWalletRepository.keys} */
 	public keys(): string[] {
 		return this.#data.keys();
@@ -66,11 +46,6 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.values} */
 	public values(): IReadWriteWallet[] {
 		return this.#data.values();
-	}
-
-	/** {@inheritDoc IWalletRepository.valuesWithCoin} */
-	public valuesWithCoin(): IReadWriteWallet[] {
-		return this.values().filter((wallet: IReadWriteWallet) => !wallet.isMissingCoin());
 	}
 
 	/** {@inheritDoc IWalletRepository.findById} */
@@ -103,9 +78,7 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.findByCoin} */
 	public findByCoin(coin: string): IReadWriteWallet[] {
-		return this.values().filter(
-			(wallet: IReadWriteWallet) => wallet.coin().manifest().get<string>("name") === coin,
-		);
+		return this.values().filter((wallet: IReadWriteWallet) => wallet.manifest().get<string>("name") === coin);
 	}
 
 	/** {@inheritDoc IWalletRepository.findByCoinWithNetwork} */
@@ -248,7 +221,7 @@ export class WalletRepository implements IWalletRepository {
 	}
 
 	/** {@inheritDoc IWalletRepository.fill} */
-	public async fill(struct: Record<string, IWalletData>): Promise<void> {
+	public fill(struct: Record<string, IWalletData>): void {
 		this.#dataRaw = struct;
 
 		for (const item of Object.values(struct)) {
@@ -259,24 +232,6 @@ export class WalletRepository implements IWalletRepository {
 			wallet.data().fill(data);
 
 			wallet.settings().fill(settings);
-
-			const coin: string = wallet.data().get<string>(WalletData.Coin)!;
-			const network: string = wallet.data().get<string>(WalletData.Network)!;
-			const specification: Coins.CoinSpec = container.get<Coins.CoinSpec>(Identifiers.Coins)[coin];
-
-			// If a client does not provide a coin instance we will not know how to restore.
-			if (specification === undefined) {
-				wallet.markAsMissingCoin();
-				wallet.markAsMissingNetwork();
-			}
-
-			if (specification && specification.manifest.networks[network] === undefined) {
-				wallet.markAsMissingNetwork();
-			}
-
-			if (!wallet.isMissingCoin() && !wallet.isMissingNetwork()) {
-				await wallet.mutator().coin(coin, network, { sync: false });
-			}
 
 			wallet.mutator().avatar(wallet.address());
 
@@ -319,14 +274,11 @@ export class WalletRepository implements IWalletRepository {
 
 	async #restoreWallet({ id, data }, options?: { ttl?: number }): Promise<void> {
 		const previousWallet: IReadWriteWallet = this.findById(id);
-
 		if (previousWallet.hasBeenPartiallyRestored()) {
 			try {
 				await this.#syncWalletWithNetwork(
 					{
 						address: data[WalletData.Address],
-						coin: data[WalletData.Coin],
-						network: data[WalletData.Network],
 						wallet: previousWallet,
 					},
 					options,
@@ -342,20 +294,15 @@ export class WalletRepository implements IWalletRepository {
 	async #syncWalletWithNetwork(
 		{
 			address,
-			coin,
-			network,
 			wallet,
 		}: {
 			wallet: IReadWriteWallet;
-			coin: string;
-			network: string;
 			address: string;
 		},
 		options?: { ttl?: number },
 	): Promise<void> {
 		await retry(
 			async () => {
-				await wallet.mutator().coin(coin, network);
 				await wallet.mutator().address({ address });
 				await wallet.synchroniser().identity(options);
 			},

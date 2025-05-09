@@ -83,7 +83,7 @@ export const Contacts: FC = () => {
 
 	const handleSend = useCallback(
 		(address: Contracts.IContactAddress) => {
-			const schema = { coin: address.coin(), recipient: address.address() };
+			const schema = { recipient: address.address() };
 			const queryParameters = new URLSearchParams(schema).toString();
 			const url = `/profiles/${activeProfile.id()}/send-transfer?${queryParameters}`;
 

@@ -6,14 +6,6 @@
  */
 export interface IWalletSynchroniser {
 	/**
-	 * Synchronise the coin.
-	 *
-	 * @return {Promise<void>}
-	 * @memberof IReadWriteWallet
-	 */
-	coin(): Promise<void>;
-
-	/**
 	 * Synchronise the wallet identity.
 	 *
 	 * @param {Object} [options]

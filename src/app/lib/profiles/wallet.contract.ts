@@ -15,6 +15,11 @@ import {
 	IWalletSynchroniser,
 } from "./contracts.js";
 import { AttributeBag } from "./helpers/attribute-bag.js";
+import { MessageService } from "@/app/lib/mainsail/message.service.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
+import { AddressService } from "@/app/lib/mainsail/address.service.js";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
+import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -83,14 +88,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	id(): string;
-
-	/**
-	 * Get the coin instance.
-	 *
-	 * @return {Coins.Coin}
-	 * @memberof IReadWriteWallet
-	 */
-	coin(): Coins.Coin;
 
 	/**
 	 * Get the network data.
@@ -408,28 +405,12 @@ export interface IReadWriteWallet {
 	manifest(): Coins.Manifest;
 
 	/**
-	 * Get the coin configuration.
-	 *
-	 * @return {Coins.Config}
-	 * @memberof IReadWriteWallet
-	 */
-	config(): Coins.ConfigRepository;
-
-	/**
 	 * Get the client service instance.
 	 *
-	 * @return {Services.ClientService}
+	 * @return {ClientService}
 	 * @memberof IReadWriteWallet
 	 */
-	client(): Services.ClientService;
-
-	/**
-	 * Get the data transfer object service instance.
-	 *
-	 * @return {Services.DataTransferObjectService}
-	 * @memberof IReadWriteWallet
-	 */
-	dataTransferObject(): Services.DataTransferObjectService;
+	client(): ClientService;
 
 	/**
 	 * Get the identity service instance.
@@ -437,23 +418,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	addressService(): Services.AddressService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	extendedAddressService(): Services.ExtendedAddressService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
-	keyPairService(): Services.KeyPairService;
+	addressService(): AddressService;
 
 	/**
 	 * Get the identity service instance.
@@ -469,7 +434,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	publicKeyService(): Services.PublicKeyService;
+	publicKeyService(): PublicKeyService;
 
 	/**
 	 * Get the identity service instance.
@@ -498,10 +463,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the message service instance.
 	 *
-	 * @return {Services.MessageService}
+	 * @return {MessageService}
 	 * @memberof IReadWriteWallet
 	 */
-	message(): Services.MessageService;
+	message(): MessageService;
 
 	/**
 	 * Get the signatory service instance.
@@ -512,12 +477,20 @@ export interface IReadWriteWallet {
 	signatory(): Services.SignatoryService;
 
 	/**
-	 * Get the transaction service instance.
+	 * Get the wallet transaction service instance.
 	 *
 	 * @return {ITransactionService}
 	 * @memberof IReadWriteWallet
 	 */
 	transaction(): ITransactionService;
+
+	/**
+	 * Get the transaction service instance.
+	 *
+	 * @return {TransactionService}
+	 * @memberof IReadWriteWallet
+	 */
+	transactionService(): TransactionService;
 
 	/**
 	 * Get the supported transaction types.
@@ -566,13 +539,6 @@ export interface IReadWriteWallet {
 	hasBeenPartiallyRestored(): boolean;
 
 	/**
-	 * Mark the wallet as missing its coin.
-	 *
-	 * @memberof IReadWriteWallet
-	 */
-	markAsMissingCoin(): void;
-
-	/**
 	 * Determine if the wallet is missing its coin.
 	 *
 	 * @return {boolean}
@@ -594,22 +560,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isMissingNetwork(): boolean;
-
-	/**
-	 * Connect the coin to the network.
-	 *
-	 * @return {Promise<void>}
-	 * @memberof IReadWriteWallet
-	 */
-	connect(): Promise<void>;
-
-	/**
-	 * Determine if the wallet has yet configured a coin.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	hasCoin(): boolean;
 
 	/**
 	 * Get the underlying attributes.

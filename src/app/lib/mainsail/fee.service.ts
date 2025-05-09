@@ -5,6 +5,8 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { ConfigRepository } from "../sdk/coins";
+import { IProfile } from "../profiles/profile.contract";
 
 interface Fees {
 	min: string;
@@ -12,22 +14,20 @@ interface Fees {
 	max: string;
 }
 
-export class FeeService extends Services.AbstractFeeService {
+export class FeeService {
 	readonly #client: ArkClient;
+	#config: ConfigRepository;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
-
-		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
-
-		this.#client = new ArkClient(host.host);
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+		this.#config = config;
+		this.#client = new ArkClient(this.#config.host("full", profile));
 	}
 
-	public override async all(): Promise<Services.TransactionFees> {
+	public async all(): Promise<Services.TransactionFees> {
 		const node = await this.#client.node().fees();
 		const dynamicFees: Fees = node.data.evmCall;
 		const fees = this.#transform(dynamicFees);
+
 		return {
 			validatorRegistration: fees,
 			validatorResignation: fees,
@@ -40,7 +40,7 @@ export class FeeService extends Services.AbstractFeeService {
 		};
 	}
 
-	public override async calculate(
+	public async calculate(
 		transaction: Contracts.RawTransactionData,
 		options?: Services.TransactionFeeOptions,
 	): Promise<BigNumber> {

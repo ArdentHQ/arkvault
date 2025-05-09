@@ -264,7 +264,6 @@ export const AddressesSidePanel = ({
 		}
 
 		const query = searchQuery.toLowerCase();
-
 		const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
 
 		return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));

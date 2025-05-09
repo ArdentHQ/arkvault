@@ -1,10 +1,12 @@
-import { Coins, Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/sdk";
 
 import { IDataRepository, IValidatorService, IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { IValidatorSyncer, ParallelValidatorSyncer, SerialValidatorSyncer } from "./validator-syncer.service.js";
 import { pqueueSettled } from "./helpers/queue.js";
 import { ReadOnlyWallet } from "./read-only-wallet.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
+import { LinkService } from "@/app/lib/mainsail/link.service.js";
 
 export class ValidatorService implements IValidatorService {
 	readonly #dataRepository: IDataRepository = new DataRepository();
@@ -39,16 +41,10 @@ export class ValidatorService implements IValidatorService {
 
 	/** {@inheritDoc IValidatorService.sync} */
 	public async sync(profile: IProfile, coin: string, network: string): Promise<void> {
-		const instance: Coins.Coin = profile.coins().set(coin, network);
-
-		if (!instance.hasBeenSynchronized()) {
-			await instance.__construct();
-		}
-
-		// TODO injection here based on coin config would be awesome
-		const syncer: IValidatorSyncer = instance.network().meta().fastValidatorSync
-			? new ParallelValidatorSyncer(instance.client())
-			: new SerialValidatorSyncer(instance.client());
+		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile });
+		const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
+			? new ParallelValidatorSyncer(clientService)
+			: new SerialValidatorSyncer(clientService);
 
 		const result: Contracts.WalletData[] = await syncer.sync();
 
@@ -56,8 +52,10 @@ export class ValidatorService implements IValidatorService {
 			`${coin}.${network}.validators`,
 			result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
-				explorerLink: instance.link().wallet(validator.address()),
-				governanceIdentifier: instance.network().validatorIdentifier(),
+				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(
+					validator.address(),
+				),
+				governanceIdentifier: profile.activeNetwork().validatorIdentifier(),
 			})),
 		);
 	}

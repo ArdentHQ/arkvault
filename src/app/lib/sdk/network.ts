@@ -9,6 +9,10 @@ import {
 	NetworkManifestToken,
 	VotingMethod,
 } from "./network.models";
+import { ConfigRepository } from "./config";
+import { ArkClient } from "@arkecosystem/typescript-client";
+import { Managers } from "@/app/lib/mainsail/crypto";
+import { ProberService } from "@/app/lib/mainsail/prober.service";
 
 export class Network {
 	/**
@@ -386,5 +390,31 @@ export class Network {
 	 */
 	public allowsLedger(): boolean {
 		return get(this.#network, "featureFlags.Ledger", []).length > 0;
+	}
+
+	public config(): ConfigRepository {
+		return new ConfigRepository({ network: this.#network });
+	}
+
+	public async sync(): Promise<void> {
+		const host = this.#network.hosts.find((host) => host.type === "full");
+
+		if (!host) {
+			throw new Error(`Expected network host to be a url but received ${typeof host}`);
+		}
+
+		const client = new ArkClient(host.host);
+		const [crypto, status] = await Promise.all([client.node().crypto(), client.node().syncing()]);
+
+		const dataCrypto = crypto.data;
+		const { blockNumber } = status.data;
+
+		// Set network configuration globally.
+		Managers.configManager.setConfig(dataCrypto);
+		Managers.configManager.setHeight(blockNumber);
+	}
+
+	public prober(): ProberService {
+		return new ProberService({ config: this.config() });
 	}
 }

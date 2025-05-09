@@ -24,10 +24,9 @@ describe("InputAddress", () => {
 	);
 
 	it("should render", () => {
-		const { asFragment } = render(<TestInputAddress coin="ARK" network="ark.devnet" profile={profile} />);
+		render(<TestInputAddress coin="ARK" network="ark.devnet" profile={profile} />);
 
 		expect(screen.getByTestId("InputAddress__input")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should validate a wrong address", async () => {

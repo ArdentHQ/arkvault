@@ -46,32 +46,6 @@ export class CoinService implements ICoinService {
 		return Object.entries(result);
 	}
 
-	/** {@inheritDoc ICoinService.get} */
-	public get(coin: string, network: string): Coins.Coin {
-		const instance: Coins.Coin | undefined = this.#dataRepository.get<Coins.Coin>(`${coin}.${network}`);
-
-		if (instance === undefined) {
-			throw new Error(`An instance for [${coin}.${network}] does not exist.`);
-		}
-
-		return instance;
-	}
-
-	/** {@inheritDoc ICoinService.set} */
-	public set(coin: string, network: string, options: object = {}): Coins.Coin {
-		const cacheKey = `${coin}.${network}`;
-
-		if (this.#dataRepository.has(cacheKey)) {
-			return this.#dataRepository.get(cacheKey)!;
-		}
-
-		const instance = this.makeInstance(coin, network, options);
-
-		this.#dataRepository.set(cacheKey, instance);
-
-		return instance;
-	}
-
 	/** {@inheritDoc ICoinService.has} */
 	public has(coin: string, network: string): boolean {
 		return this.#dataRepository.has(`${coin}.${network}`);
@@ -103,15 +77,6 @@ export class CoinService implements ICoinService {
 		});
 
 		return networks.sort((a, b) => a.displayName().localeCompare(b.displayName()));
-	}
-
-	/** {@inheritDoc ICoinService.register} */
-	public register(): void {
-		for (const manifest of this.#coinManifests()) {
-			for (const network of Object.values(manifest.networks)) {
-				this.set(manifest.name, network.id, { networks: manifest.networks });
-			}
-		}
 	}
 
 	#getCoinBundle(coin: string): Coins.CoinBundle {
