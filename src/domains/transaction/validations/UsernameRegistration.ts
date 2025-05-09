@@ -81,12 +81,7 @@ const usernameExists = async (
 		return;
 	}
 
-	const hostSelector = env.hostSelector(profile);
-
-	const coin = profile.coins().get(network.coin(), network.id());
-
-	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
-
+	const publicApiEndpoint = network.config().host("full", profile);
 	const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
 
 	if (response.ok) {

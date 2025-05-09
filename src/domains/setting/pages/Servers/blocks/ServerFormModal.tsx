@@ -50,7 +50,6 @@ const ServerFormModal: React.VFC<{
 		errors,
 		evmApiEndpoint,
 		network: networks.find((item) => item.id() === network),
-		profile,
 		publicApiEndpoint,
 		setError,
 		transactionApiEndpoint,

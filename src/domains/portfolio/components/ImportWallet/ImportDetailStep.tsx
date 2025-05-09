@@ -1,8 +1,8 @@
-import { Coins, Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
 import { Input, InputAddress, InputPassword } from "@/app/components/Input";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
@@ -11,6 +11,7 @@ import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryp
 import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 const validateAddress = async ({
 	findAddress,
@@ -78,7 +79,7 @@ const MnemonicField = ({
 	);
 };
 
-const AddressField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.IProfile }) => {
+const AddressField = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 	const { register } = useFormContext();
 
@@ -87,8 +88,8 @@ const AddressField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.
 			<FormLabel label={t("COMMON.ADDRESS")} />
 			<InputAddress
 				profile={profile}
-				coin={coin.network().coin()}
-				network={coin.network().id()}
+				coin={profile.activeNetwork().coin()}
+				network={profile.activeNetwork().id()}
 				registerRef={register}
 				additionalRules={{
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
@@ -96,7 +97,7 @@ const AddressField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.
 					}).toString(),
 					validate: {
 						duplicateAddress: (address) =>
-							!profile.wallets().findByAddressWithNetwork(address, coin.network().id()) ||
+							!profile.wallets().findByAddressWithNetwork(address, profile.activeNetwork().id()) ||
 							t("COMMON.INPUT_ADDRESS.VALIDATION.ADDRESS_ALREADY_EXISTS", { address }).toString(),
 					},
 				}}
@@ -106,7 +107,7 @@ const AddressField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.
 	);
 };
 
-const PublicKeyField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.IProfile }) => {
+const PublicKeyField = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 	const { register } = useFormContext();
 
@@ -119,14 +120,26 @@ const PublicKeyField = ({ coin, profile }: { coin: Coins.Coin; profile: Contract
 						field: t("COMMON.PUBLIC_KEY"),
 					}).toString(),
 					validate: {
-						duplicateAddress: async (value) => {
+						duplicateAddress: (value) => {
 							try {
-								const { address } = await coin.address().fromPublicKey(value);
-
-								if (profile.wallets().findByAddressWithNetwork(address, coin.network().id())) {
+								if (profile.wallets().findByPublicKey(value)) {
 									return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", {
 										publicKey: truncate(value, { length: 15, omissionPosition: "middle" }),
 									}).toString();
+								}
+
+								return true;
+							} catch {
+								return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
+							}
+						},
+						publicKey: async (publicKey) => {
+							try {
+								const wallet = await profile.walletFactory().fromPublicKey({ publicKey });
+								const isValid = new AddressService().validate(wallet.address());
+
+								if (!isValid) {
+									return t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY").toString();
 								}
 
 								return true;
@@ -144,12 +157,10 @@ const PublicKeyField = ({ coin, profile }: { coin: Coins.Coin; profile: Contract
 
 const ImportInputField = ({
 	type,
-	coin,
 	profile,
 	network,
 }: {
 	type: OptionsValue;
-	coin: Coins.Coin;
 	profile: Contracts.IProfile;
 	network: Networks.Network;
 }) => {
@@ -157,10 +168,16 @@ const ImportInputField = ({
 	const { register } = useFormContext();
 
 	if (type.startsWith("bip")) {
-		const findAddress = async (value: string) => {
+		const findAddress = async (mnemonic: string) => {
 			try {
-				const { address } = await coin.address().fromMnemonic(value);
-				return address;
+				const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic });
+				const isValid = new AddressService().validate(wallet.address());
+
+				if (!isValid) {
+					throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
+				}
+
+				return wallet.address();
 			} catch {
 				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
@@ -194,11 +211,11 @@ const ImportInputField = ({
 	}
 
 	if (type === OptionsValue.ADDRESS) {
-		return <AddressField coin={coin} profile={profile} />;
+		return <AddressField profile={profile} />;
 	}
 
 	if (type === OptionsValue.PUBLIC_KEY) {
-		return <PublicKeyField coin={coin} profile={profile} />;
+		return <PublicKeyField profile={profile} />;
 	}
 
 	if (type === OptionsValue.PRIVATE_KEY) {
@@ -207,10 +224,16 @@ const ImportInputField = ({
 				profile={profile}
 				label={t("COMMON.PRIVATE_KEY")}
 				data-testid="ImportWallet__privatekey-input"
-				findAddress={async (value) => {
+				findAddress={async (privateKey) => {
 					try {
-						const { address } = await coin.address().fromPrivateKey(value);
-						return address;
+						const wallet = await profile.walletFactory().fromPrivateKey({ privateKey });
+						const isValid = new AddressService().validate(wallet.address());
+
+						if (!isValid) {
+							throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
+						}
+
+						return wallet.address();
 					} catch {
 						/* istanbul ignore next -- @preserve */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
@@ -227,10 +250,16 @@ const ImportInputField = ({
 				profile={profile}
 				label={t("COMMON.WIF")}
 				data-testid="ImportWallet__wif-input"
-				findAddress={async (value) => {
+				findAddress={async (wif) => {
 					try {
-						const { address } = await coin.address().fromWIF(value);
-						return address;
+						const wallet = await profile.walletFactory().fromWIF({ wif });
+						const isValid = new AddressService().validate(wallet.address());
+
+						if (!isValid) {
+							throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
+						}
+
+						return wallet.address();
 					} catch {
 						/* istanbul ignore next -- @preserve */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
@@ -275,10 +304,16 @@ const ImportInputField = ({
 			profile={profile}
 			label={t("COMMON.SECRET")}
 			data-testid="ImportWallet__secret-input"
-			findAddress={async (value) => {
+			findAddress={async (secret) => {
 				try {
-					const { address } = await coin.address().fromSecret(value);
-					return address;
+					const wallet = await profile.walletFactory().fromSecret({ secret });
+					const isValid = new AddressService().validate(wallet.address());
+
+					if (!isValid) {
+						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
+					}
+
+					return wallet.address();
 				} catch (error) {
 					if (error.message.includes("value is BIP39")) {
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
@@ -304,8 +339,6 @@ export const ImportDetailStep = ({
 }) => {
 	const { watch, setValue, clearErrors } = useFormContext();
 
-	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
-
 	const useEncryption = Boolean(watch("useEncryption"));
 	const acceptResponsibility = Boolean(watch("acceptResponsibility"));
 
@@ -329,12 +362,7 @@ export const ImportDetailStep = ({
 	return (
 		<section data-testid="ImportWallet__detail-step">
 			<div className="mt-4 space-y-4">
-				<ImportInputField
-					type={importOption.value as OptionsValue}
-					coin={coin}
-					profile={profile}
-					network={network}
-				/>
+				<ImportInputField type={importOption.value as OptionsValue} profile={profile} network={network} />
 
 				<WalletEncryptionBanner
 					importOption={importOption}

@@ -19,7 +19,6 @@ import { BigNumberService } from "./big-number.service";
 import { BindingType } from "./service-provider.contract";
 import { ClientService } from "./client.contract";
 import { ConfigRepository } from "./coins";
-import { DataTransferObjectService } from "./data-transfer-object.contract";
 import { HttpClient } from "./http";
 import { IContainer } from "./container.contracts";
 import { NetworkHostSelector } from "./network.models";
@@ -30,7 +29,6 @@ export class AbstractTransactionService implements Contract {
 	protected readonly bigNumberService: BigNumberService;
 	protected readonly clientService: ClientService;
 	protected readonly configRepository: ConfigRepository;
-	protected readonly dataTransferObjectService: DataTransferObjectService;
 	protected readonly httpClient: HttpClient;
 	protected readonly hostSelector: NetworkHostSelector;
 
@@ -38,7 +36,6 @@ export class AbstractTransactionService implements Contract {
 		this.bigNumberService = container.get(BindingType.BigNumberService);
 		this.clientService = container.get(BindingType.ClientService);
 		this.configRepository = container.get(BindingType.ConfigRepository);
-		this.dataTransferObjectService = container.get(BindingType.DataTransferObjectService);
 		this.httpClient = container.get(BindingType.HttpClient);
 		this.hostSelector = container.get(BindingType.NetworkHostSelector);
 	}

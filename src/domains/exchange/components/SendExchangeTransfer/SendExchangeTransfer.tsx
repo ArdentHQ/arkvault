@@ -104,8 +104,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 	useEffect(() => {
 		const calculateFee = async () => {
-			const data = await buildTransferData({
-				coin: profile.coins().get(network.coin(), network.id()),
+			const data = buildTransferData({
 				recipients,
 			});
 

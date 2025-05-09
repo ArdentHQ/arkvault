@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Networks } from "@/app/lib/sdk";
-import { Contracts } from "@/app/lib/profiles";
 import { HttpClient } from "@/app/services/HttpClient";
 import { addressIsValid as checkIfAddressIsValid, urlBelongsToNetwork, getServerHeight } from "@/utils/peers";
 import { DeepMap, FieldError } from "react-hook-form";
@@ -41,7 +40,6 @@ export async function pingEvmApi(endpoint: string, controller: AbortController):
 }
 
 const useHandleServers = ({
-	profile,
 	transactionApiEndpoint,
 	publicApiEndpoint,
 	evmApiEndpoint,
@@ -50,7 +48,6 @@ const useHandleServers = ({
 	setError,
 	clearErrors,
 }: {
-	profile: Contracts.IProfile;
 	publicApiEndpoint: string;
 	transactionApiEndpoint: string;
 	evmApiEndpoint: string;
@@ -84,7 +81,7 @@ const useHandleServers = ({
 
 		setFetchingDetails(true);
 
-		if (await urlBelongsToNetwork(profile, publicApiEndpoint, network!)) {
+		if (await urlBelongsToNetwork(publicApiEndpoint, network!)) {
 			setServerHeight(await getServerHeight(publicApiEndpoint));
 		} else {
 			setError("publicApiEndpoint", {

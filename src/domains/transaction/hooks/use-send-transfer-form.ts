@@ -97,8 +97,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				wif,
 			});
 
-			const data = await buildTransferData({
-				coin: wallet.coin(),
+			const data = buildTransferData({
 				isMultiSignature: false,
 				memo,
 				recipients,

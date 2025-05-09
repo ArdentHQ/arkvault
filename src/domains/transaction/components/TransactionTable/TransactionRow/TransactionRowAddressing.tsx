@@ -95,7 +95,7 @@ const ContractAddressing = ({
 
 			<div className="flex w-full items-center justify-between space-x-4">
 				<Link
-					to={transaction.wallet().coin().link().wallet(address)}
+					to={transaction.wallet().link().wallet(address)}
 					isExternal
 					showExternalIcon={false}
 					className="whitespace-nowrap text-sm font-semibold"
@@ -238,7 +238,7 @@ export const TransactionRowAddressing = ({
 					<TransactionRowLabel direction="sent" style="return" />
 					<div className="flex w-full items-center justify-between space-x-4">
 						<Link
-							to={transaction.wallet().coin().link().wallet(recipientAddress)}
+							to={transaction.wallet().link().wallet(recipientAddress)}
 							isExternal
 							showExternalIcon={false}
 							className="whitespace-nowrap text-sm font-semibold"

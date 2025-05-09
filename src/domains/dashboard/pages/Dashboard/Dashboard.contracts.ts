@@ -6,5 +6,6 @@ export interface DashboardConfiguration {
 	addressPanelSettings?: AddressesPanelSettings;
 	selectedMode: AddressViewType;
 	selectedAddressesByNetwork: Record<string, string[]>;
+	selectedAddresses: string[];
 	activeNetworkId?: string;
 }

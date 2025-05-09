@@ -18,7 +18,6 @@ import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPassword
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/use-wallet-import";
 import { assertString, assertWallet } from "@/utils/assertions";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodStep";
 import { ImportActionToolbar, LedgerStepHeader, StepHeader } from "./ImportAddressSidePanel.blocks";
@@ -53,7 +52,7 @@ export const ImportAddressesSidePanel = ({
 	const [isEncrypting, setIsEncrypting] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+	const activeNetwork = activeProfile.activeNetwork();
 
 	const { t } = useTranslation();
 	const { importWallets } = useWalletImport({ profile: activeProfile });
@@ -123,7 +122,7 @@ export const ImportAddressesSidePanel = ({
 				setIsImporting(true);
 
 				try {
-					await importWalletsInAllNetworks();
+					await importWallet();
 
 					if (useEncryption && importOption.canBeEncrypted) {
 						setActiveTab(Step.EncryptPasswordStep);
@@ -159,17 +158,15 @@ export const ImportAddressesSidePanel = ({
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWalletsInAllNetworks = async () => {
+	const importWallet = async () => {
 		const { importOption, encryptedWif, value } = getValues();
 		const wallets = await importWallets({
 			encryptedWif,
-			networks: activeProfile.availableNetworks(),
 			type: importOption.value,
 			value,
 		});
 
-		const currentWallet = wallets.find((wallet) => wallet.network().id() === activeNetwork.id());
-		setImportedWallet(currentWallet);
+		setImportedWallet(wallets.at(0));
 	};
 
 	const encryptInputs = async () => {

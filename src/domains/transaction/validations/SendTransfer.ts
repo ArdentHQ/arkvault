@@ -1,8 +1,9 @@
-import { Coins, Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export const sendTransfer = (t: TFunction) => ({
 	amount: (
@@ -65,7 +66,7 @@ export const sendTransfer = (t: TFunction) => ({
 		isSingleRecipient: boolean,
 	) => ({
 		validate: {
-			valid: async (addressValue: string | undefined) => {
+			valid: (addressValue: string | undefined) => {
 				const address = (addressValue || "").trim();
 				const shouldRequire = !address && recipients.length === 0;
 				const hasAddedRecipients = !address && !isSingleRecipient && recipients.length > 0;
@@ -84,8 +85,7 @@ export const sendTransfer = (t: TFunction) => ({
 					});
 				}
 
-				const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-				const isValidAddress: boolean = await coin.address().validate(address);
+				const isValidAddress: boolean = new AddressService().validate(address);
 				return isValidAddress || t("COMMON.VALIDATION.RECIPIENT_INVALID");
 			},
 		},

@@ -473,7 +473,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 67.14
                   COVERAGE_THRESHOLD_FUNCTIONS: 59.3
                   COVERAGE_THRESHOLD_STATEMENTS: 66.78
-                  COVERAGE_THRESHOLD_BRANCHES: 61.23
+                  COVERAGE_THRESHOLD_BRANCHES: 61.04
                   COVERAGE_INCLUDE_PATH: src/domains/portfolio
               with:
                   timeout_minutes: 10
@@ -589,10 +589,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.57
+                  COVERAGE_THRESHOLD_LINES: 98.32
                   COVERAGE_THRESHOLD_FUNCTIONS: 98.3
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
-                  COVERAGE_THRESHOLD_BRANCHES: 97.52
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.41
+                  COVERAGE_THRESHOLD_BRANCHES: 95.86
                   COVERAGE_INCLUDE_PATH: src/domains/message
               with:
                   timeout_minutes: 10

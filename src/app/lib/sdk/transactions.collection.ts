@@ -1,4 +1,4 @@
-import { ConfirmedTransactionData } from "./confirmed-transaction.dto.contract";
+import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 import { Paginator } from "./paginator";
 
 export class ConfirmedTransactionDataCollection extends Paginator<ConfirmedTransactionData> {

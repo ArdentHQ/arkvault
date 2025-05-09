@@ -7,7 +7,7 @@ const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWri
 	let signatory = wallet.publicKey();
 
 	if (!signatory) {
-		signatory = await wallet.coin().ledger().getPublicKey(path!);
+		signatory = await wallet.ledger().getPublicKey(path!);
 	}
 
 	const signature = await wallet.ledger().signMessage(path!, message);

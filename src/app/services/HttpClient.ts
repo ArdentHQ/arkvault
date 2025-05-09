@@ -91,7 +91,7 @@ export class HttpClient extends Http.AbstractRequest {
 
 	public forgetWalletCache(environment: Environment, wallet: Contracts.IReadWriteWallet) {
 		const selectHost = environment.hostSelector(wallet.profile());
-		const { host } = selectHost(wallet.coin().config(), "full");
+		const { host } = selectHost(wallet.network().config(), "full");
 
 		const cacheKey = this.buildCacheKey("get", `${host}/wallets/${wallet.address()}`, {});
 

@@ -1,5 +1,5 @@
-import { Contracts, DTO, IoC } from "@/app/lib/sdk";
-import { MultiPaymentItem } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
+import { Contracts, Exceptions } from "@/app/lib/sdk";
+import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
@@ -7,45 +7,163 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
+export type KeyValuePair = Record<string, any>;
 
-export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionData {
+export class ConfirmedTransactionData {
 	readonly #addressService: AddressService;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
+	/**
+	 * @TODO: Revisit and remove if unused.
+	 *
+	 * Various coins need post-processing to determine things like
+	 * "isSent" or "isReceived" with data that comes from outside
+	 * of the transaction or network data itself. This object can
+	 * be used to store the data necessary for those actions.
+	 */
+	readonly #meta: Record<string, TransactionDataMeta> = {};
 
+	readonly #types = [
+		{ method: "isMultiPayment", type: "multiPayment" },
+		{ method: "isSecondSignature", type: "secondSignature" },
+		{ method: "isTransfer", type: "transfer" },
+		{ method: "isUsernameRegistration", type: "usernameRegistration" },
+		{ method: "isUsernameResignation", type: "usernameResignation" },
+		{ method: "isUnvote", type: "unvote" },
+		{ method: "isValidatorRegistration", type: "validatorRegistration" },
+		{ method: "isValidatorResignation", type: "validatorResignation" },
+		{ method: "isVote", type: "vote" },
+		{ method: "isVoteCombination", type: "voteCombination" },
+	];
+
+	protected decimals?: number;
+
+	protected data!: KeyValuePair;
+
+	public constructor() {
 		this.#addressService = new AddressService();
 	}
 
-	public override hash(): string {
+	public configure(data: any) {
+		this.data = data;
+
+		return this;
+	}
+
+	public withDecimals(decimals?: number | string): this {
+		this.decimals = typeof decimals === "string" ? Number.parseInt(decimals) : decimals;
+
+		return this;
+	}
+
+	public type(): string {
+		if (this.isVoteCombination()) {
+			return "voteCombination";
+		}
+
+		for (const { type, method } of this.#types) {
+			if (type === "voteCombination") {
+				continue;
+			}
+
+			if (this[method]()) {
+				return type;
+			}
+		}
+
+		return this.methodHash();
+	}
+
+	// Multi-Signature Registration
+	public publicKeys(): string[] {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.publicKeys.name);
+	}
+
+	public min(): number {
+		throw new Exceptions.NotImplemented(this.constructor.name, this.min.name);
+	}
+
+	public toObject(): KeyValuePair {
+		return {
+			confirmations: this.confirmations(),
+			fee: this.fee(),
+			from: this.from(),
+			hash: this.hash(),
+			timestamp: this.timestamp(),
+			to: this.to(),
+			type: this.type(),
+			value: this.value(),
+		};
+	}
+
+	public toJSON(): KeyValuePair {
+		return {
+			...this.toObject(),
+			confirmations: this.confirmations().toString(),
+			fee: this.fee().toString(),
+			timestamp: this.timestamp()?.toISOString(),
+			value: this.value().toString(),
+		};
+	}
+
+	public toHuman(): KeyValuePair {
+		return {
+			...this.toObject(),
+			confirmations: this.confirmations().toString(),
+			fee: this.fee().toHuman(),
+			timestamp: this.timestamp()?.toISOString(),
+			value: this.value().toHuman(),
+		};
+	}
+
+	public raw(): KeyValuePair {
+		return this.data;
+	}
+
+	public hasPassed(): boolean {
+		return Object.keys(this.data).length > 0;
+	}
+
+	public hasFailed(): boolean {
+		return !this.hasPassed();
+	}
+
+	public getMeta(key: string): TransactionDataMeta {
+		return this.#meta[key];
+	}
+
+	public setMeta(key: string, value: TransactionDataMeta): void {
+		this.#meta[key] = value;
+	}
+
+	public hash(): string {
 		return this.data.hash;
 	}
 
-	public override nonce(): BigNumber {
+	public nonce(): BigNumber {
 		return this.data.nonce;
 	}
 
-	public override blockHash(): string | undefined {
+	public blockHash(): string | undefined {
 		return this.data.blockHash;
 	}
 
-	public override timestamp(): DateTime | undefined {
+	public timestamp(): DateTime | undefined {
 		return DateTime.fromUnix(Number(this.data.timestamp) / 1000);
 	}
 
-	public override confirmations(): BigNumber {
+	public confirmations(): BigNumber {
 		return BigNumber.make(this.data.confirmations);
 	}
 
-	public override from(): string {
+	public from(): string {
 		return this.data.from;
 	}
 
-	public override to(): string {
+	public to(): string {
 		return this.data.to;
 	}
 
-	public override recipients(): Contracts.MultiPaymentRecipient[] {
+	public recipients(): Contracts.MultiPaymentRecipient[] {
 		if (!this.isMultiPayment()) {
 			return [];
 		}
@@ -56,7 +174,7 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		}));
 	}
 
-	public override value(): BigNumber {
+	public value(): BigNumber {
 		if (this.isMultiPayment()) {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
@@ -64,12 +182,12 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return formatUnits(this.data.value, "ark");
 	}
 
-	public override fee(): BigNumber {
+	public fee(): BigNumber {
 		const gasPrice = formatUnits(this.data.gasPrice, "ark");
 		return gasPrice.times(this.data.gas);
 	}
 
-	public override isReturn(): boolean {
+	public isReturn(): boolean {
 		if (this.isTransfer()) {
 			return this.isSent() && this.isReceived();
 		}
@@ -81,81 +199,81 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return false;
 	}
 
-	public override isSent(): boolean {
+	public isSent(): boolean {
 		return [this.getMeta("address"), this.getMeta("publicKey")].includes(this.from());
 	}
 
-	public override isReceived(): boolean {
+	public isReceived(): boolean {
 		return [this.getMeta("address"), this.getMeta("publicKey")].includes(this.to());
 	}
 
-	public override isTransfer(): boolean {
+	public isTransfer(): boolean {
 		return TransactionTypeService.isTransfer(this.data);
 	}
 
-	public override isSecondSignature(): boolean {
+	public isSecondSignature(): boolean {
 		return false;
 	}
 
-	public override isUsernameRegistration(): boolean {
+	public isUsernameRegistration(): boolean {
 		return TransactionTypeService.isUsernameRegistration(this.data);
 	}
 
-	public override isUsernameResignation(): boolean {
+	public isUsernameResignation(): boolean {
 		return TransactionTypeService.isUsernameResignation(this.data);
 	}
 
-	public override isValidatorRegistration(): boolean {
+	public isValidatorRegistration(): boolean {
 		return TransactionTypeService.isValidatorRegistration(this.data);
 	}
 
-	public override isVoteCombination(): boolean {
+	public isVoteCombination(): boolean {
 		return TransactionTypeService.isVoteCombination(this.data);
 	}
 
-	public override isVote(): boolean {
+	public isVote(): boolean {
 		return TransactionTypeService.isVote(this.data);
 	}
 
-	public override isUnvote(): boolean {
+	public isUnvote(): boolean {
 		return TransactionTypeService.isUnvote(this.data);
 	}
 
-	public override isMultiPayment(): boolean {
+	public isMultiPayment(): boolean {
 		return TransactionTypeService.isMultiPayment(this.data);
 	}
 
-	public override isValidatorResignation(): boolean {
+	public isValidatorResignation(): boolean {
 		return TransactionTypeService.isValidatorResignation(this.data);
 	}
 
 	// Username registration
-	public override username(): string {
+	public username(): string {
 		return decodeFunctionData(this.data.data, AbiType.Username).args[0] as string;
 	}
 
-	public override validatorPublicKey(): string {
+	public validatorPublicKey(): string {
 		const key = decodeFunctionData(this.data.data).args[0] as string;
 		return key.slice(2); // removes 0x part
 	}
 
 	// Vote
-	public override votes(): string[] {
+	public votes(): string[] {
 		const voteAddress = decodeFunctionData(this.data.data).args[0] as string;
 		return [voteAddress];
 	}
 
-	public override unvotes(): string[] {
+	public unvotes(): string[] {
 		return [];
 	}
 
 	// Second-Signature Registration
-	public override secondPublicKey(): string {
+	public secondPublicKey(): string {
 		return this.data.asset.signature.publicKey;
 	}
 
 	// Multi-Payment
-	public override payments(): MultiPaymentItem[] {
+	public payments(): MultiPaymentItem[] {
 		const payments: MultiPaymentItem[] = [];
 
 		const [recipients, amounts] = decodeFunctionData(this.data.data, AbiType.MultiPayment).args;
@@ -170,26 +288,30 @@ export class ConfirmedTransactionData extends DTO.AbstractConfirmedTransactionDa
 		return payments;
 	}
 
-	public override methodHash(): string {
+	public methodHash(): string {
 		// Confirmed transactions have data prefixed with `0x`
 		// that is why we are using first 10 chars to extract method.
 		return this.data.data.slice(0, 10);
 	}
 
-	public override expirationType(): number {
+	public expirationType(): number {
 		return this.data.asset.lock.expiration.type;
 	}
 
-	public override expirationValue(): number {
+	public expirationValue(): number {
 		return this.data.asset.lock.expiration.value;
 	}
 
-	public override async normalizeData(): Promise<void> {
-		const { address } = await this.#addressService.fromPublicKey(this.data.senderPublicKey);
+	public normalizeData(): void {
+		const { address } = this.#addressService.fromPublicKey(this.data.senderPublicKey);
 		this.data.sender = address;
 	}
 
-	public override isSuccess(): boolean {
+	public isSuccess(): boolean {
 		return this.data.receipt.status === 1;
+	}
+
+	public isConfirmed(): boolean {
+		return this.confirmations().isGreaterThanOrEqualTo(1);
 	}
 }

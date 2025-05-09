@@ -57,11 +57,9 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
-	const coin = profile.coins().get(network.coin(), network.id());
 	useEffect(() => {
-		const updateFeeTransactionData = async () => {
-			const transferData = await buildTransferData({
-				coin,
+		const updateFeeTransactionData = () => {
+			const transferData = buildTransferData({
 				recipients,
 			});
 
@@ -69,7 +67,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 		};
 
 		void updateFeeTransactionData();
-	}, [recipients, coin]);
+	}, [recipients]);
 
 	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 

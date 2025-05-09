@@ -160,7 +160,7 @@ describe("AddRecipient", () => {
 
 	it("should set amount", async () => {
 		const onChange = vi.fn();
-		const findDelegateSpy = vi.spyOn(env, "usernames").mockImplementation(
+		const findDelegateSpy = vi.spyOn(profile, "usernames").mockImplementation(
 			() =>
 				({
 					username: () => "delegate username",

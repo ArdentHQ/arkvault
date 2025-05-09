@@ -1,6 +1,7 @@
 import { Contracts } from "@/app/lib/sdk";
 
-import { IReadWriteWallet, IWalletData, WalletData, WalletFlag } from "./contracts.js";
+import { IReadWriteWallet, IWalletData, WalletData, WalletFlag } from "./contracts";
+import { BigNumber } from "@/app/lib/helpers/bignumber";
 
 interface SerializedBalance {
 	available: string;
@@ -28,7 +29,6 @@ export class WalletSerialiser {
 
 		return {
 			data: {
-				[WalletData.Coin]: this.#wallet.coin().manifest().get<string>("name"),
 				[WalletData.Network]: this.#wallet.networkId(),
 				[WalletData.Address]: this.#wallet.address(),
 				[WalletData.PublicKey]: this.#wallet.publicKey(),
@@ -59,16 +59,8 @@ export class WalletSerialiser {
 		const balance = this.#wallet.data().get<Contracts.WalletBalance>(WalletData.Balance);
 
 		const serializedBalance: SerializedBalance = {
-			available: this.#wallet
-				.coin()
-				.bigNumber()
-				.make(balance?.available || 0)
-				.toString(),
-			fees: this.#wallet
-				.coin()
-				.bigNumber()
-				.make(balance?.fees || 0)
-				.toString(),
+			available: BigNumber.make(balance?.available || 0).toString(),
+			fees: BigNumber.make(balance?.fees || 0).toString(),
 		};
 
 		if (balance?.locked) {
