@@ -74,7 +74,7 @@ describe("Use Ledger Connection", () => {
 
 		const handleImport = async () => {
 			const wallets = [{ address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03", path: "m/44'/1'/0'/0/0" }];
-			await importLedgerWallets(wallets, wallet.coin(), profile);
+			await importLedgerWallets(wallets, profile);
 		};
 
 		return (

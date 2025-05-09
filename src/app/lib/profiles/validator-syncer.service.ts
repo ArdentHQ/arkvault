@@ -1,15 +1,16 @@
 import { Contracts, Services } from "@/app/lib/sdk";
 
 import { pqueueSettled } from "./helpers/queue.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
 
 export interface IValidatorSyncer {
 	sync(): Promise<Contracts.WalletData[]>;
 }
 
 export class ParallelValidatorSyncer implements IValidatorSyncer {
-	readonly #clientService: Services.ClientService;
+	readonly #clientService: ClientService;
 
-	public constructor(clientService: Services.ClientService) {
+	public constructor(clientService: ClientService) {
 		this.#clientService = clientService;
 	}
 
@@ -46,9 +47,9 @@ export class ParallelValidatorSyncer implements IValidatorSyncer {
 }
 
 export class SerialValidatorSyncer implements IValidatorSyncer {
-	readonly #client: Services.ClientService;
+	readonly #client: ClientService;
 
-	public constructor(client: Services.ClientService) {
+	public constructor(client: ClientService) {
 		this.#client = client;
 	}
 

@@ -214,14 +214,12 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	};
 
 	const importWallets = async ({
-		networks,
 		value,
 		type,
 		encryptedWif,
 		ledgerOptions,
 	}: {
 		value: WalletGenerationInput;
-		networks: Networks.Network[];
 		type: string;
 		encryptedWif?: string;
 		ledgerOptions?: {
@@ -231,15 +229,19 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
-		for (const network of networks) {
-			const wallet = await importWallet({ encryptedWif, ledgerOptions, network, type, value });
-			wallets.push(wallet);
+		const wallet = await importWallet({
+			encryptedWif,
+			ledgerOptions,
+			network: profile.activeNetwork(),
+			type,
+			value,
+		});
+		wallets.push(wallet);
 
-			if (addressViewPreference === AddressViewSelection.single) {
-				await setSelectedAddresses([wallet.address()], wallet.network());
-			} else {
-				await setSelectedAddresses([...selectedAddresses, wallet.address()], wallet.network());
-			}
+		if (addressViewPreference === AddressViewSelection.single) {
+			await setSelectedAddresses([wallet.address()]);
+		} else {
+			await setSelectedAddresses([...selectedAddresses, wallet.address()]);
 		}
 
 		await persist();

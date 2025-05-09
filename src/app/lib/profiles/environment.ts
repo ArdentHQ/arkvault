@@ -9,26 +9,21 @@ import {
 	IValidatorService,
 	IExchangeRateService,
 	IFeeService,
-	IKnownWalletService,
 	IProfile,
 	IProfileRepository,
-	IUsernamesService,
 	IWalletService,
 } from "./contracts.js";
-import { DriverFactory } from "./driver.js";
-import {
-	CoinList,
-	EnvironmentOptions,
-	NetworkHostSelectorFactory,
-	Storage,
-	StorageData,
-} from "./environment.models.js";
+import { defaultHostSelector, DriverFactory } from "./driver.js";
+import { CoinList, EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
+import { KnownWalletService } from "./known-wallet.service.js";
 
 export class Environment {
 	#storage: StorageData | undefined;
+	#knownWalletService: KnownWalletService;
 
 	public constructor(options: EnvironmentOptions) {
 		DriverFactory.make(container, options);
+		this.#knownWalletService = new KnownWalletService();
 	}
 
 	/**
@@ -153,18 +148,8 @@ export class Environment {
 	 * @returns {KnownWalletService}
 	 * @memberof Environment
 	 */
-	public knownWallets(): IKnownWalletService {
-		return container.get(Identifiers.KnownWalletService);
-	}
-
-	/**
-	 * Access the usernames service.
-	 *
-	 * @returns {UsernamesService}
-	 * @memberof Environment
-	 */
-	public usernames(): IUsernamesService {
-		return container.get(Identifiers.UsernamesService);
+	public knownWallets(): KnownWalletService {
+		return this.#knownWalletService;
 	}
 
 	/**
@@ -264,8 +249,6 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public hostSelector(profile: IProfile): Networks.NetworkHostSelector {
-		const hostSelector: NetworkHostSelectorFactory = container.get(Identifiers.NetworkHostSelectorFactory);
-
-		return hostSelector(profile);
+		return defaultHostSelector(profile);
 	}
 }

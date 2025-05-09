@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
-import { Collections, Contracts, DTO, IoC, Networks, Services } from "@/app/lib/sdk";
+import { Collections, Contracts, DTO, Services } from "@/app/lib/sdk";
 import { DateTime } from "@/app/lib/intl";
 import { UsernamesAbi } from "@mainsail/evm-contracts";
 import dotify from "node-dotify";
@@ -9,6 +9,12 @@ import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { WalletData } from "./wallet.dto";
+import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
+import { ConfirmedTransactionDataCollection } from "@/app/lib/sdk/transactions.collection";
+import { SignedTransactionData } from "./signed-transaction.dto";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -18,77 +24,78 @@ const wellKnownContracts = {
 	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 };
 
-export class ClientService extends Services.AbstractClientService {
+export class ClientService {
 	readonly #client!: ArkClient;
+	#config: ConfigRepository;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
+	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+		this.#config = config;
 
-		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-
-		const api = hostSelector(container.get(IoC.BindingType.ConfigRepository), "full");
-		const evm = hostSelector(container.get(IoC.BindingType.ConfigRepository), "evm");
-		const transactions = hostSelector(container.get(IoC.BindingType.ConfigRepository), "tx");
+		const api = config.host("full", profile);
+		const evm = config.host("evm", profile);
+		const transactions = config.host("tx", profile);
 
 		this.#client = new ArkClient({
-			api: api.host,
-			evm: evm.host,
-			transactions: transactions.host,
+			api,
+			evm,
+			transactions,
 		});
 	}
 
-	public override async transaction(id: string): Promise<Contracts.ConfirmedTransactionData> {
+	public async transaction(id: string): Promise<ConfirmedTransactionData> {
 		const body = await this.#client.transactions().get(id);
-		return this.dataTransferObjectService.transaction(body.data);
+		return new ConfirmedTransactionData().configure(body.data);
 	}
 
-	public override async transactions(
+	public async transactions(
 		query: Services.ClientTransactionsInput,
 	): Promise<Collections.ConfirmedTransactionDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const response = await this.#client.transactions().all(page, limit, parameters);
-		return this.dataTransferObjectService.transactions(response.data, this.#createMetaPagination(response));
+
+		return new ConfirmedTransactionDataCollection(
+			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
+			this.#createMetaPagination(response),
+		);
 	}
 
-	public override async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
+	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
-
-		return this.dataTransferObjectService.wallet(body.data);
+		return new WalletData({ config: this.#config }).fill(body.data);
 	}
 
-	public override async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
+	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1 } = searchParams;
 
 		const response = await this.#client.wallets().all(page, limit);
 
 		return new Collections.WalletDataCollection(
-			response.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
+			response.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
 			this.#createMetaPagination(response),
 		);
 	}
 
-	public override async validator(id: string): Promise<Contracts.WalletData> {
+	public async validator(id: string): Promise<Contracts.WalletData> {
 		const body = await this.#client.validators().get(id);
-
-		return this.dataTransferObjectService.wallet(body.data);
+		return new WalletData({ config: this.#config }).fill(body.data);
 	}
 
-	public override async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
+	public async validators(query?: Contracts.KeyValuePair): Promise<Collections.WalletDataCollection> {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const body = await this.#client.validators().all(page, limit, parameters);
 
 		return new Collections.WalletDataCollection(
-			body.data.map((wallet) => this.dataTransferObjectService.wallet(wallet)),
+			body.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
 			this.#createMetaPagination(body),
 		);
 	}
 
-	public override async votes(id: string): Promise<Services.VoteReport> {
+	public async votes(id: string): Promise<Services.VoteReport> {
 		const { data } = await this.#client.wallets().get(id);
 
 		const vote = data.vote || data.attributes?.vote;
@@ -108,9 +115,7 @@ export class ClientService extends Services.AbstractClientService {
 		};
 	}
 
-	public override async broadcast(
-		transactions: Contracts.SignedTransactionData[],
-	): Promise<Services.BroadcastResponse> {
+	public async broadcast(transactions: SignedTransactionData[]): Promise<Services.BroadcastResponse> {
 		const transactionToBroadcast: any[] = [];
 
 		for (const transaction of transactions) {
@@ -161,8 +166,9 @@ export class ClientService extends Services.AbstractClientService {
 		return result;
 	}
 
-	public override async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
+	public async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
 		try {
+			// @ts-ignore
 			const response = await this.#client.evm().ethCall(callData);
 
 			return {
@@ -176,7 +182,7 @@ export class ClientService extends Services.AbstractClientService {
 		}
 	}
 
-	public override async usernames(addresses: string[]): Promise<Collections.UsernameDataCollection> {
+	public async usernames(addresses: string[]): Promise<Collections.UsernameDataCollection> {
 		try {
 			let data;
 
@@ -323,7 +329,7 @@ export class ClientService extends Services.AbstractClientService {
 
 		if (body.timestamp) {
 			const normalizeTimestamps = (timestamp: Services.RangeCriteria) => {
-				const epoch: string = this.configRepository.get<string>("network.constants.epoch");
+				const epoch: string = this.#config.get<string>(ConfigKey.Epoch);
 
 				const normalized = { ...timestamp };
 

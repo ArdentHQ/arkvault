@@ -126,9 +126,7 @@ export const CreateAddressesSidePanel = ({
 		const locale = activeProfile.settings().get<string>(Contracts.ProfileSetting.Bip39Locale, "english");
 
 		return activeProfile.walletFactory().generate({
-			coin: network.coin(),
 			locale,
-			network: network.id(),
 			wordCount: network.wordCount(),
 		});
 	};
@@ -183,31 +181,28 @@ export const CreateAddressesSidePanel = ({
 
 				try {
 					wallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
-						coin: network.coin(),
 						mnemonic,
-						network: network.id(),
 						password: parameters.encryptionPassword,
 					});
 				} catch {
-					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
-				} finally {
 					setIsGeneratingWallet(false);
+					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
+					return;
 				}
 			}
+
+			setIsGeneratingWallet(false);
 
 			assertWallet(wallet);
 			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			await importWallets({
 				encryptedWif: parameters.encryptionPassword,
-				networks: activeProfile.availableNetworks().filter((network) => network.id() !== wallet.network().id()),
 				type: "bip39",
 				value: mnemonic,
 			});
 
 			setValue("wallet", wallet);
-
-			activeProfile.wallets().push(wallet);
 
 			await persist();
 		}

@@ -1,11 +1,11 @@
-import { Environment } from "@/app/lib/profiles";
-import { debounceAsync } from "@/utils/debounce";
-import { ValidateResult } from "react-hook-form";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { Networks } from "@/app/lib/sdk";
+import { debounceAsync } from "@/utils/debounce";
+import { ValidateResult } from "react-hook-form";
 
 export const validatorRegistration = (t: any) => ({
-	validatorPublicKey: (env: Environment, profile: IProfile, network: Networks.Network) => ({
+	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
@@ -19,8 +19,7 @@ export const validatorRegistration = (t: any) => ({
 
 		validate: {
 			pattern: (publicKey: string) => {
-				const coin = profile.coins().get(network.coin(), network.id());
-				const isValid = coin.publicKey().verifyPublicKeyWithBLS(publicKey);
+				const isValid = new PublicKeyService().verifyPublicKeyWithBLS(publicKey);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
@@ -30,7 +29,7 @@ export const validatorRegistration = (t: any) => ({
 			},
 			unique: debounceAsync(async (publicKey: string) => {
 				try {
-					await publicKeyExists(env, network, profile, publicKey);
+					await publicKeyExists(network, profile, publicKey);
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
@@ -39,15 +38,12 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (env: Environment, network: Networks.Network, profile: IProfile, publicKey: string) => {
+const publicKeyExists = async (network: Networks.Network, profile: IProfile, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}
 
-	const hostSelector = env.hostSelector(profile);
-	const coin = profile.coins().get(network.coin(), network.id());
-	const publicApiEndpoint = hostSelector(coin.config(), "full").host;
-
+	const publicApiEndpoint = network.config().host("full", profile);
 	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
 	if (response.status !== 404) {

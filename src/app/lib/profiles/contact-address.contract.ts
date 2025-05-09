@@ -5,7 +5,6 @@
  * @interface IContactAddressInput
  */
 export interface IContactAddressInput {
-	coin: string;
 	address: string;
 }
 
@@ -17,7 +16,6 @@ export interface IContactAddressInput {
  */
 export interface IContactAddressData {
 	id: string;
-	coin: string;
 	address: string;
 }
 
@@ -35,14 +33,6 @@ export interface IContactAddress {
 	 * @memberof IContactAddress
 	 */
 	id(): string;
-
-	/**
-	 *
-	 *
-	 * @returns {string}
-	 * @memberof IContactAddress
-	 */
-	coin(): string;
 
 	/**
 	 *

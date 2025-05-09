@@ -1,14 +1,15 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Coins, Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { Trans, useTranslation } from "react-i18next";
-import { assertNetwork, assertProfile } from "@/utils/assertions";
+import { assertNetwork } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 
 import { ProfilePaths } from "@/router/paths";
 import React from "react";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@/app/lib/helpers";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 interface RequiredParameters {
 	network?: string;
@@ -122,9 +123,6 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
-	const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-	await coin.__construct();
-
 	await env.validators().sync(profile, network.coin(), network.id());
 
 	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
@@ -145,15 +143,11 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 	}
 };
 
-const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
+const validateTransfer = ({ parameters }: ValidateParameters) => {
 	const recipient = parameters.get("recipient");
 
 	if (recipient) {
-		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-
-		await coin.__construct();
-
-		const isValid = await coin.address().validate(recipient);
+		const isValid = new AddressService().validate(recipient);
 
 		if (!isValid) {
 			return { error: { type: SearchParametersError.InvalidAddress } };
@@ -161,7 +155,7 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 	}
 };
 
-const validateSign = async ({ parameters, profile, network }: ValidateParameters) => {
+const validateSign = ({ parameters }: ValidateParameters) => {
 	const message = parameters.get("message");
 	const address = parameters.get("address");
 
@@ -170,11 +164,7 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 	}
 
 	if (address) {
-		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-
-		await coin.__construct();
-
-		const isValid = await coin.address().validate(address);
+		const isValid = new AddressService().validate(address);
 
 		if (!isValid) {
 			return { error: { type: SearchParametersError.InvalidAddress } };
@@ -250,10 +240,7 @@ export const useSearchParametersValidation = () => {
 		parameters: URLSearchParams,
 		requiredParameters?: RequiredParameters,
 	) => {
-		assertProfile(profile);
-
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-
 		const coin = parameters.get("coin")?.toUpperCase() || "Mainsail";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;

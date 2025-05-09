@@ -7,14 +7,12 @@ import { DateTime } from "@/app/lib/intl";
 
 import { KeyValuePair } from "./contracts";
 import { NotImplemented } from "./exceptions";
-import { BindingType } from "./service-provider.contract";
 import {
 	ConfirmedTransactionData,
 	MultiPaymentRecipient,
 	TransactionDataMeta,
 	UnspentTransactionData,
 } from "./confirmed-transaction.dto.contract";
-import { IContainer } from "./container.contracts";
 import { Exceptions } from "./index";
 
 export abstract class AbstractConfirmedTransactionData implements ConfirmedTransactionData {
@@ -42,12 +40,6 @@ export abstract class AbstractConfirmedTransactionData implements ConfirmedTrans
 	protected decimals?: number;
 
 	protected data!: KeyValuePair;
-
-	protected readonly bigNumberService: any; // @TODO: import BigNumberService causes a circular dependency
-
-	public constructor(container: IContainer) {
-		this.bigNumberService = container.get(BindingType.BigNumberService);
-	}
 
 	public configure(data: any) {
 		this.data = data;

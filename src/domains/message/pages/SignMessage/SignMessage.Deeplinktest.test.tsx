@@ -24,6 +24,7 @@ let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
+const secondMnemonic = MAINSAIL_MNEMONICS[1];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
@@ -51,21 +52,15 @@ describe("SignMessage", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic,
-			network: "mainsail.devnet",
 		});
 
 		wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic,
-			network: "mainsail.mainnet",
+			mnemonic: secondMnemonic,
 		});
 
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
-
-		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -126,7 +121,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should select address from deeplinking", async () => {
-			const signUrl = `/profiles/${getMainsailProfileId()}/sign-message?coin=Mainsail&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+			const signUrl = `/profiles/${getMainsailProfileId()}/sign-message?&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
 			)}&address=${wallet2.address()}`;
 
@@ -151,7 +146,7 @@ describe("SignMessage", () => {
 			expect(messageInput()).toHaveValue(signMessage);
 
 			const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
-			await userEvent.type(mnemonicInput, mnemonic);
+			await userEvent.type(mnemonicInput, secondMnemonic);
 
 			expect(continueButton()).toBeEnabled();
 			vi.restoreAllMocks();

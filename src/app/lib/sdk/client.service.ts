@@ -17,7 +17,6 @@ import { ConfirmedTransactionDataCollection, UsernameDataCollection, WalletDataC
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto.contract";
 import { IContainer } from "./container.contracts";
 import { EvmCallData, EvmCallResponse, KeyValuePair, SignedTransactionData, WalletData } from "./contracts";
-import { DataTransferObjectService } from "./data-transfer-object.contract";
 import { NotImplemented } from "./exceptions";
 import { HttpClient } from "./http";
 import { NetworkHostSelector } from "./network.models";
@@ -25,13 +24,11 @@ import { BindingType } from "./service-provider.contract";
 
 export class AbstractClientService implements ClientService {
 	protected readonly configRepository: ConfigRepository;
-	protected readonly dataTransferObjectService: DataTransferObjectService;
 	protected readonly httpClient: HttpClient;
 	protected readonly hostSelector: NetworkHostSelector;
 
 	public constructor(container: IContainer) {
 		this.configRepository = container.get(BindingType.ConfigRepository);
-		this.dataTransferObjectService = container.get(BindingType.DataTransferObjectService);
 		this.httpClient = container.get(BindingType.HttpClient);
 		this.hostSelector = container.get(BindingType.NetworkHostSelector);
 	}
