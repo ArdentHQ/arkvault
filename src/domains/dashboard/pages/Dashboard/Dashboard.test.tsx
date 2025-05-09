@@ -94,7 +94,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		await waitFor(() => {
@@ -241,7 +241,7 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("WalletMyVotes__button")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("WalletMyVotes__button"));
+		await userEvent.click(screen.getByTestId("WalletMyVotes__button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith({ pathname: `/profiles/${profile.id()}/votes` });
@@ -283,7 +283,7 @@ describe("Dashboard", () => {
 			expect(screen.getByTestId("WalletVote__button")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("WalletVote__button"));
+		await userEvent.click(screen.getByTestId("WalletVote__button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);

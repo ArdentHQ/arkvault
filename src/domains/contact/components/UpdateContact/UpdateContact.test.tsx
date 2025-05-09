@@ -81,18 +81,11 @@ describe("UpdateContact", () => {
 	});
 
 	it("should update contact name and address", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
 		const onSaveFunction = vi.fn();
 
 		const newName = "Updated name";
 		const newAddress = {
-			address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			coin: "ARK",
+			address: "0x811b4bD8133c348a1c9F290F79046d1587AEf30F",
 			name: "Test Address",
 			network: "ark.devnet",
 		};
@@ -116,6 +109,7 @@ describe("UpdateContact", () => {
 
 		await userEvent.clear(nameInput());
 		await userEvent.type(nameInput(), newName);
+		await new Promise((resolve) => setTimeout(resolve, 1000));
 
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue(newName);
@@ -141,6 +135,5 @@ describe("UpdateContact", () => {
 		const savedContact = profile.contacts().findById(contact.id());
 		expect(savedContact.name()).toBe(newName);
 		expect(savedContact.addresses().findByAddress(newAddress.address)).toHaveLength(1);
-		validateMock.mockRestore();
 	});
 });

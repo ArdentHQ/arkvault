@@ -8,6 +8,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Identifiers } from "./container.models.js";
 import { container } from "./container.js";
+import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -16,12 +17,10 @@ export interface ExtendedTransactionRecipient {
 
 export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
-	readonly #coin: Coins.Coin;
-	readonly #data: Contracts.ConfirmedTransactionData;
+	readonly #data: ConfirmedTransactionData;
 
-	public constructor(wallet: IReadWriteWallet, data: Contracts.ConfirmedTransactionData) {
+	public constructor(wallet: IReadWriteWallet, data: ConfirmedTransactionData) {
 		this.#wallet = wallet;
-		this.#coin = wallet.coin();
 		this.#data = data;
 	}
 
@@ -88,14 +87,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public isConfirmed(): boolean {
 		return this.#data.isConfirmed();
-	}
-
-	public inputs(): Contracts.UnspentTransactionData[] {
-		return this.#data.inputs();
-	}
-
-	public outputs(): Contracts.UnspentTransactionData[] {
-		return this.#data.outputs();
 	}
 
 	public isSent(): boolean {
@@ -206,12 +197,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public explorerLink(): string {
-		return this.#coin.link().transaction(this.hash());
+		return this.#wallet.link().transaction(this.hash());
 	}
 
 	public explorerLinkForBlock(): string | undefined {
 		if (this.blockHash()) {
-			return this.#coin.link().block(this.blockHash()!);
+			return this.#wallet.link().block(this.blockHash()!);
 		}
 
 		return undefined;
@@ -278,10 +269,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#wallet;
 	}
 
-	public coin(): Coins.Coin {
-		return this.#coin;
-	}
-
 	protected data<T>(): T {
 		return this.#data as unknown as T;
 	}
@@ -298,7 +285,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
 
-	public normalizeData(): Promise<void> {
+	public normalizeData(): void {
 		return this.#data.normalizeData();
 	}
 

@@ -18,6 +18,9 @@ import {
 import { WalletFlag } from "./wallet.enum.js";
 import { IMnemonicDerivativeOptions, ISecretOptions } from "./wallet.factory.contract.js";
 import { Wallet } from "./wallet.js";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { AddressService } from "@/app/lib/mainsail/address.service";
+import { WIFService } from "@/app/lib/mainsail/wif.service";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -28,18 +31,16 @@ export class WalletFactory implements IWalletFactory {
 
 	/** {@inheritDoc IWalletFactory.generate} */
 	public async generate({
-		coin,
-		network,
 		locale,
 		wordCount,
 		withPublicKey,
 	}: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }> {
 		const mnemonic: string = BIP39.generate(locale, wordCount);
 
-		const wallet = await this.fromMnemonicWithBIP39({ coin, mnemonic, network });
+		const wallet = await this.fromMnemonicWithBIP39({ mnemonic });
 
 		if (withPublicKey) {
-			const value = await wallet.coin().publicKey().fromMnemonic(mnemonic);
+			const value = new PublicKeyService().fromMnemonic(mnemonic);
 			wallet.data().set(WalletData.PublicKey, value.publicKey);
 		}
 
@@ -47,18 +48,11 @@ export class WalletFactory implements IWalletFactory {
 	}
 
 	/** {@inheritDoc IWalletFactory.fromMnemonicWithBIP39} */
-	public async fromMnemonicWithBIP39({
-		coin,
-		network,
-		mnemonic,
-		password,
-	}: IMnemonicOptions): Promise<IReadWriteWallet> {
+	public async fromMnemonicWithBIP39({ mnemonic, password }: IMnemonicOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP39.MNEMONIC);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
-
-		await wallet.mutator().coin(coin, network);
 
 		if (wallet.network().usesExtendedPublicKey()) {
 			throw new Error("The configured network uses extended public keys with BIP44 for derivation.");
@@ -110,64 +104,41 @@ export class WalletFactory implements IWalletFactory {
 	}
 
 	/** {@inheritDoc IWalletFactory.fromAddress} */
-	public async fromAddress({ coin, network, address }: IAddressOptions): Promise<IReadWriteWallet> {
+	public async fromAddress({ address }: IAddressOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.Address);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
 		await wallet.mutator().address({ address });
 
 		return wallet;
 	}
 
 	/** {@inheritDoc IWalletFactory.fromPublicKey} */
-	public async fromPublicKey({
-		coin,
-		network,
-		publicKey,
-		bip44,
-		bip49,
-		bip84,
-	}: IPublicKeyOptions): Promise<IReadWriteWallet> {
+	public async fromPublicKey({ publicKey }: IPublicKeyOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.PublicKey);
 		wallet.data().set(WalletData.PublicKey, publicKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
-
-		if (wallet.network().usesExtendedPublicKey()) {
-			if (!bip44 && !bip49 && !bip84) {
-				throw new Error("Please specify the levels and try again.");
-			}
-
-			await wallet
-				.mutator()
-				.address(await wallet.coin().address().fromPublicKey(publicKey, { bip44, bip49, bip84 }));
-		} else {
-			await wallet.mutator().address(await wallet.coin().address().fromPublicKey(publicKey));
-		}
+		await wallet.mutator().address(new AddressService().fromPublicKey(publicKey));
 
 		return wallet;
 	}
 
 	/** {@inheritDoc IWalletFactory.fromPrivateKey} */
-	public async fromPrivateKey({ coin, network, privateKey }: IPrivateKeyOptions): Promise<IReadWriteWallet> {
+	public async fromPrivateKey({ privateKey }: IPrivateKeyOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.PrivateKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
-		await wallet.mutator().address(await wallet.coin().address().fromPrivateKey(privateKey));
+		await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
 
 		return wallet;
 	}
 
 	/** {@inheritDoc IWalletFactory.fromAddressWithDerivationPath} */
 	public async fromAddressWithDerivationPath({
-		coin,
-		network,
 		address,
 		path,
 	}: IAddressWithDerivationPathOptions): Promise<IReadWriteWallet> {
@@ -188,21 +159,19 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.DerivationPath, path);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
 		await wallet.mutator().address({ address });
 
 		return wallet;
 	}
 
 	/** {@inheritDoc IWalletFactory.fromSecret} */
-	public async fromSecret({ coin, network, secret, password }: ISecretOptions): Promise<IReadWriteWallet> {
+	public async fromSecret({ secret, password }: ISecretOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.SECRET);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(coin, network);
-		await wallet.mutator().address(await wallet.coin().address().fromSecret(secret));
+		await wallet.mutator().address(new AddressService().fromSecret(secret));
 
 		if (password) {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.SECRET_WITH_ENCRYPTION);
@@ -214,10 +183,9 @@ export class WalletFactory implements IWalletFactory {
 	}
 
 	/** {@inheritDoc IWalletFactory.fromWIF} */
-	public async fromWIF({ coin, network, wif, password }: IWifOptions): Promise<IReadWriteWallet> {
+	public async fromWIF({ wif, password }: IWifOptions): Promise<IReadWriteWallet> {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 
-		await wallet.mutator().coin(coin, network);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
 		if (password) {
@@ -226,17 +194,19 @@ export class WalletFactory implements IWalletFactory {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIFWithEncryption);
 			wallet.data().set(WalletData.EncryptedSigningKey, BIP38.encrypt(privateKey, password, compressed));
 
-			await wallet.mutator().address(await wallet.coin().address().fromPrivateKey(privateKey));
+			await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
 
-			const unencryptedWifData = await wallet.coin().wif().fromPrivateKey(privateKey);
-			const { publicKey } = await wallet.coin().publicKey().fromWIF(unencryptedWifData.wif);
+			const unencryptedWifData = await new WIFService({ config: wallet.network().config() }).fromPrivateKey(
+				privateKey,
+			);
+			const { publicKey } = await new PublicKeyService().fromWIF(unencryptedWifData.wif);
 			wallet.data().set(WalletData.PublicKey, publicKey);
 		} else {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIF);
 
-			await wallet.mutator().address(await wallet.coin().address().fromWIF(wif));
+			await wallet.mutator().address(new AddressService().fromWIF(wif));
 
-			const { publicKey } = await wallet.coin().publicKey().fromWIF(wif);
+			const { publicKey } = await new PublicKeyService().fromWIF(wif);
 			wallet.data().set(WalletData.PublicKey, publicKey);
 		}
 
@@ -254,37 +224,35 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, input.importMethod);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		await wallet.mutator().coin(input.options.coin, input.options.network);
-
 		if (!wallet.gate().allows(input.featureFlag)) {
 			throw new Error(`The configured network does not support ${input.derivationType.toUpperCase()}.`);
 		}
 
 		if (wallet.network().usesExtendedPublicKey()) {
-			if (!input.options.levels) {
-				throw new Error("Please specify the levels and try again.");
-			}
-
-			const walletData = await wallet
-				.coin()
-				.address()
-				.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels });
-
-			wallet.data().set(WalletData.Address, walletData.address);
-
-			wallet.data().set(
-				WalletData.PublicKey,
-				await wallet
-					.coin()
-					.extendedPublicKey()
-					.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels }),
-			);
-
-			wallet.mutator().avatar(wallet.address());
-
-			wallet.data().set(WalletData.DerivationType, input.derivationType);
+			//if (!input.options.levels) {
+			//	throw new Error("Please specify the levels and try again.");
+			//}
+			//
+			//const walletData = await wallet
+			//	.coin()
+			//	.address()
+			//	.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels });
+			//
+			//wallet.data().set(WalletData.Address, walletData.address);
+			//
+			//wallet.data().set(
+			//	WalletData.PublicKey,
+			//	await wallet
+			//		.coin()
+			//		.extendedPublicKey()
+			//		.fromMnemonic(input.options.mnemonic, { [input.derivationType]: input.options.levels }),
+			//);
+			//
+			//wallet.mutator().avatar(wallet.address());
+			//
+			//wallet.data().set(WalletData.DerivationType, input.derivationType);
 		} else {
-			await wallet.mutator().identity(input.options.mnemonic, { [input.derivationType]: input.options.levels });
+			await wallet.mutator().identity(input.options.mnemonic);
 		}
 
 		return wallet;

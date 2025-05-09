@@ -43,14 +43,10 @@ describe("SignMessage with ledger", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic,
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
-
-		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -64,13 +60,13 @@ describe("SignMessage with ledger", () => {
 
 		const consoleErrorMock = vi.spyOn(console, "error").mockImplementation(() => void 0);
 
-		const signMessageSpy = vi.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(() => {
+		const signMessageSpy = vi.spyOn(wallet.ledger(), "signMessage").mockImplementation(() => {
 			throw new Error("Condition of use not satisfied");
 		});
 
-		const getVersionMock = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
+		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
-		const getPublicKeySpy = vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(wallet.publicKey()!);
+		const getPublicKeySpy = vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(wallet.publicKey()!);
 
 		const ledgerListenMock = mockNanoXTransport();
 
@@ -118,7 +114,7 @@ describe("SignMessage with ledger", () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 		const signMessageSpy = vi
-			.spyOn(wallet.coin().ledger(), "signMessage")
+			.spyOn(wallet.ledger(), "signMessage")
 			.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
 		const publicKeyPaths = new Map([
@@ -128,10 +124,10 @@ describe("SignMessage with ledger", () => {
 		]);
 
 		const getPublicKeyMock = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
-		const getVersionMock = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
+		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
 		const ledgerListenMock = mockNanoXTransport();
 

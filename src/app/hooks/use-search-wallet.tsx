@@ -5,7 +5,7 @@ import { useWalletAlias } from "./use-wallet-alias";
 import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
 
 interface SearchWalletProperties {
-	profile?: Contracts.IProfile;
+	profile: Contracts.IProfile;
 	wallets: (Contracts.IReadWriteWallet | RecipientProperties)[];
 }
 

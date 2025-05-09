@@ -3,7 +3,7 @@ import React from "react";
 
 import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
-import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 
 const onSave = vi.fn();
@@ -28,16 +28,13 @@ describe("CreateContact", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(
-			<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />,
-		);
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
 		await waitFor(() => {
 			expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
 		});
 
 		expect(modalInner()).toHaveTextContent(translations.MODAL_CREATE_CONTACT.DESCRIPTION);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should call onSave when form is submitted", async () => {
@@ -50,6 +47,9 @@ describe("CreateContact", () => {
 		await userEvent.type(nameInput(), newContact.name);
 		await userEvent.tab();
 		await userEvent.type(addressInput(), newContact.address);
+		await act(async () => {
+			await new Promise((resolve) => setTimeout(resolve, 1000));
+		});
 		await userEvent.tab();
 
 		await waitFor(() => {

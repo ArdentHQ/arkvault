@@ -1,14 +1,11 @@
-import { Coins } from "@/app/lib/sdk";
 import { Base64 } from "@ardenthq/arkvault-crypto";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
-import { IProfile, IProfileData, IProfileImporter, IProfileValidator, WalletData } from "./contracts.js";
+import { IProfile, IProfileData, IProfileImporter, IProfileValidator } from "./contracts.js";
 import { Migrator } from "./migrator.js";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
-
-const isRegistered = (coin: string) => !!container.get<Coins.CoinBundle>(Identifiers.Coins)[coin.toUpperCase()];
 
 export class ProfileImporter implements IProfileImporter {
 	readonly #profile: IProfile;
@@ -44,13 +41,9 @@ export class ProfileImporter implements IProfileImporter {
 
 		this.#profile.settings().fill(data.settings);
 
-		this.#profile.coins().register();
-
-		await this.#profile.wallets().fill(data.wallets);
+		this.#profile.wallets().fill(data.wallets);
 
 		this.#profile.contacts().fill(data.contacts);
-
-		this.#gatherCoins(data);
 	}
 
 	/**
@@ -82,20 +75,5 @@ export class ProfileImporter implements IProfileImporter {
 		}
 
 		return data;
-	}
-
-	/**
-	 * Gather all known coins through wallets and contacts.
-	 *
-	 * @private
-	 * @param {IProfileData} data
-	 * @memberof ProfileImporter
-	 */
-	#gatherCoins(data: IProfileData): void {
-		for (const wallet of Object.values(data.wallets)) {
-			if (isRegistered(wallet.data[WalletData.Coin])) {
-				this.#profile.coins().set(wallet.data[WalletData.Coin], wallet.data[WalletData.Network]);
-			}
-		}
 	}
 }

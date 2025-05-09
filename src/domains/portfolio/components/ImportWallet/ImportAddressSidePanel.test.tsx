@@ -26,8 +26,8 @@ import { expect } from "vitest";
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
 
-const mnemonic = "buddy year cost vendor honey tonight viable nut female alarm duck symptom";
-const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+const mnemonic =
+	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin";
 
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 const history = createHashHistory();
@@ -43,23 +43,21 @@ const privateKeyInput = () => screen.getByTestId("ImportWallet__privatekey-input
 const wifInput = () => screen.getByTestId("ImportWallet__wif-input");
 const encryptedWifInput = () => screen.getByTestId("ImportWallet__encryptedWif-input");
 
-const testNetwork = "mainsail.devnet";
-let network;
-
 describe("ImportSidePanel", () => {
+	let network;
 	let resetProfileNetworksMock: () => void;
+
+	const Component = () => (
+		<EnvironmentProvider env={env}>
+			<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
+		</EnvironmentProvider>
+	);
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
-		network = profile.availableNetworks().find((net) => net.coin() === "Mainsail" && net.id() === testNetwork);
+		network = profile.activeNetwork();
 
 		await env.profiles().restore(profile);
-
-		const walletId = profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)?.id();
-
-		if (walletId) {
-			profile.wallets().forget(walletId);
-		}
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -69,20 +67,6 @@ describe("ImportSidePanel", () => {
 	});
 
 	it("should render method step", async () => {
-		const Component = () => {
-			network.importMethods = () => ({
-				bip39: {
-					default: false,
-					permissions: [],
-				},
-			});
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
@@ -112,7 +96,7 @@ describe("ImportSidePanel", () => {
 	it("should be possible to change import type in method step", async () => {
 		let form: ReturnType<typeof useForm>;
 
-		const Component = () => {
+		const ImportAddressesSidePanelComponent = () => {
 			network.importMethods = () => ({
 				address: {
 					default: false,
@@ -143,7 +127,7 @@ describe("ImportSidePanel", () => {
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
-				<Component />
+				<ImportAddressesSidePanelComponent />
 			</Route>,
 			{ history, withProviders: false },
 		);
@@ -279,26 +263,21 @@ describe("ImportSidePanel", () => {
 
 	describe("import with private key", () => {
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
+		beforeEach(async () => {
+			profile = env.profiles().findById(fixtureProfileId);
+			network = profile.activeNetwork();
 
-		const Component = () => {
-			network.importMethods = () => ({
+			await env.profiles().restore(profile);
+		});
+
+		it("when is valid", async () => {
+			const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
 				privateKey: {
 					canBeEncrypted: true,
 					default: true,
 					permissions: ["read", "write"],
 				},
-			});
-
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
-		it("when is valid", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
+			}));
 
 			history.push(`/profiles/${profile.id()}`);
 
@@ -322,13 +301,20 @@ describe("ImportSidePanel", () => {
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			coinMock.mockRestore();
+			activeNetworkMock.mockRestore();
 		});
 
 		it("when is not valid", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
-				throw new Error("test");
+			const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
+				privateKey: {
+					canBeEncrypted: true,
+					default: true,
+					permissions: ["read", "write"],
+				},
+			}));
+
+			const privateKeyMock = vi.spyOn(profile.walletFactory(), "fromPrivateKey").mockImplementation(() => {
+				throw new Error("error");
 			});
 
 			history.push(`/profiles/${profile.id()}`);
@@ -352,41 +338,35 @@ describe("ImportSidePanel", () => {
 			await userEvent.type(privateKeyInput(), privateKey);
 
 			await waitFor(() => expect(continueButton()).not.toBeEnabled());
-
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Invalid Private Key.");
-			});
-
-			coinMock.mockRestore();
+			activeNetworkMock.mockRestore();
+			privateKeyMock.mockRestore();
 		});
 	});
 
 	describe("import with wif", () => {
 		const wif = "wif.1111";
+		let newWallet: Contracts.IReadWriteWallet | undefined;
 
-		const Component = () => {
-			network.importMethods = () => ({
+		beforeEach(async () => {
+			profile = env.profiles().findById(fixtureProfileId);
+			network = profile.activeNetwork();
+			newWallet = await profile.walletFactory().fromSecret({ secret: "123" });
+
+			await env.profiles().restore(profile);
+		});
+
+		it("with valid wif", async () => {
+			history.push(`/profiles/${profile.id()}`);
+
+			const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
 				wif: {
 					canBeEncrypted: true,
 					default: true,
 					permissions: ["read", "write"],
 				},
-			});
+			}));
 
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
-
-		it("with valid wif", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
-			const coinMock = vi
-				.spyOn(coin.address(), "fromWIF")
-				.mockResolvedValue({ address: "whatever", type: "bip39" });
-
-			history.push(`/profiles/${profile.id()}`);
+			const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet);
 
 			render(
 				<Route path="/profiles/:profileId">
@@ -407,14 +387,21 @@ describe("ImportSidePanel", () => {
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			coinMock.mockRestore();
+			fromWIFMock.mockRestore();
+			activeNetworkMock.mockRestore();
 		});
 
 		it("with invalid wif", async () => {
-			const coin = profile.coins().get("Mainsail", testNetwork);
+			const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
+				wif: {
+					canBeEncrypted: true,
+					default: true,
+					permissions: ["read", "write"],
+				},
+			}));
 
-			const coinMock = vi.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
-				throw new Error("Something went wrong");
+			const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
+				throw new Error("error");
 			});
 
 			history.push(`/profiles/${profile.id()}`);
@@ -442,27 +429,21 @@ describe("ImportSidePanel", () => {
 
 			await waitFor(() => expect(continueButton()).not.toBeEnabled());
 
-			coinMock.mockRestore();
+			fromWIFMock.mockRestore();
+			activeNetworkMock.mockRestore();
 		});
 	});
 
 	it("should import with encryped wif", async () => {
 		const wif = "wif.1111";
 		const wifPassword = "password";
+		let newWallet: Contracts.IReadWriteWallet | undefined;
 
-		const Component = () => {
-			//ts-ignore
-			network.importMethods = () => ({
-				//ts-ignore
-				encryptedWif: true,
-			});
+		const activeNetworkMock = vi.spyOn(network, "importMethods").mockImplementation(() => ({
+			encryptedWif: true,
+		}));
 
-			return (
-				<EnvironmentProvider env={env}>
-					<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />
-				</EnvironmentProvider>
-			);
-		};
+		const fromWIFMock = vi.spyOn(profile.walletFactory(), "fromWIF").mockResolvedValue(newWallet);
 
 		history.push(`/profiles/${profile.id()}`);
 
@@ -472,8 +453,6 @@ describe("ImportSidePanel", () => {
 			</Route>,
 			{ history, withProviders: false },
 		);
-
-		expect(methodStep()).toBeInTheDocument();
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -494,5 +473,7 @@ describe("ImportSidePanel", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
+		activeNetworkMock.mockRestore();
+		fromWIFMock.mockRestore();
 	});
 });

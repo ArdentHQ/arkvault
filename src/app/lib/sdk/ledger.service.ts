@@ -5,21 +5,17 @@
 import { ConfigRepository } from "./config";
 import { IContainer } from "./container.contracts";
 import { WalletData } from "./contracts";
-import { DataTransferObjectService } from "./data-transfer-object.contract";
 import { NotImplemented } from "./exceptions";
 import { LedgerService, LedgerTransportFactory, LedgerWalletList } from "./ledger.contract";
 import { BindingType } from "./service-provider.contract";
 
 export class AbstractLedgerService implements LedgerService {
-	readonly #dataTransferObjectService: DataTransferObjectService;
-
 	protected readonly configRepository: ConfigRepository;
 	protected readonly ledgerTransportFactory: LedgerTransportFactory;
 
 	public constructor(container: IContainer) {
 		this.configRepository = container.get(BindingType.ConfigRepository);
 		this.ledgerTransportFactory = container.get(BindingType.LedgerTransportFactory);
-		this.#dataTransferObjectService = container.get(BindingType.DataTransferObjectService);
 	}
 
 	public async onPreDestroy(): Promise<void> {
@@ -64,35 +60,5 @@ export class AbstractLedgerService implements LedgerService {
 
 	public async isNanoX(): Promise<boolean> {
 		return false;
-	}
-
-	protected mapPathsToWallets(
-		addressCache: Record<string, { address: string; publicKey: string }>,
-		wallets: WalletData[],
-	): LedgerWalletList {
-		let foundFirstCold = false;
-		const ledgerWallets: LedgerWalletList = {};
-
-		for (const [path, { address, publicKey }] of Object.entries(addressCache)) {
-			const matchingWallet: WalletData | undefined = wallets.find(
-				(wallet: WalletData) => wallet.address() === address,
-			);
-
-			if (matchingWallet === undefined) {
-				if (foundFirstCold) {
-					continue;
-				}
-				foundFirstCold = true;
-
-				ledgerWallets[path] = this.#dataTransferObjectService.wallet({
-					address,
-					balance: 0,
-					publicKey,
-				});
-			} else {
-				ledgerWallets[path] = matchingWallet;
-			}
-		}
-		return ledgerWallets;
 	}
 }

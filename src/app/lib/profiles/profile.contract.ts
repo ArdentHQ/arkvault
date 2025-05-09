@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Networks } from "@/app/lib/sdk";
 
 import {
@@ -10,7 +9,6 @@ import {
 	IDataRepository,
 	IExchangeTransactionRepository,
 	IPasswordManager,
-	IPortfolio,
 	IProfileAppearance,
 	IProfileNotificationService,
 	IProfileStatus,
@@ -25,6 +23,8 @@ import {
 import { AttributeBag } from "./helpers/attribute-bag.js";
 import { IHostRepository } from "./host.repository.contract.js";
 import { INetworkRepository } from "./network.repository.contract.js";
+import { UsernamesService } from "./usernames.service.js";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 
 /**
  *
@@ -146,14 +146,6 @@ export interface IProfile {
 	coins(): ICoinService;
 
 	/**
-	 * Get the portfolio service instance.
-	 *
-	 * @return {IPortfolio}
-	 * @memberof IProfile
-	 */
-	portfolio(): IPortfolio;
-
-	/**
 	 * Get the contact repository instance.
 	 *
 	 * @return {IContactRepository}
@@ -184,6 +176,14 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	networks(): INetworkRepository;
+
+	/**
+	 * Get all active network stored in profile.
+	 *
+	 * @return {Networks.Network}
+	 * @memberof IProfile
+	 */
+	activeNetwork(): Networks.Network;
 
 	/**
 	 * Get all available coin networks stored in profile.
@@ -366,4 +366,19 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	status(): IProfileStatus;
+
+	/**
+	 * Get the profile username service instance.
+	 *
+	 * @return {UsernamesService}
+	 * @memberof IProfile
+	 */
+	usernames(): UsernamesService;
+
+	/**
+	 * Get the profile ledger service instance.
+	 *
+	 * @memberof IProfile
+	 */
+	ledger(): LedgerService;
 }

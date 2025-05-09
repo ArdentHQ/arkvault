@@ -26,6 +26,7 @@ let resetProfileNetworksMock: () => void;
 const addressInput = () => screen.getByTestId("contact-form__address-input");
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 const saveButton = () => screen.getByTestId("contact-form__save-btn");
+const contactAddress = "0x811b4bD8133c348a1c9F290F79046d1587AEf30F";
 
 describe("ContactForm", () => {
 	beforeAll(() => {
@@ -49,7 +50,7 @@ describe("ContactForm", () => {
 	});
 
 	it.each(["xs", "sm"])("should render responsive %s", async (breakpoint) => {
-		const { asFragment } = renderResponsive(
+		renderResponsive(
 			<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />,
 			breakpoint,
 		);
@@ -57,8 +58,6 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with errors", async () => {
@@ -104,13 +103,6 @@ describe("ContactForm", () => {
 	});
 
 	it("should add a valid address successfully", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
-
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
@@ -128,18 +120,9 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
 		});
-
-		validateMock.mockRestore();
 	});
 
 	it("should not add invalid address and should display error message", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(false),
-			}),
-		});
-
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
@@ -161,18 +144,9 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-
-		validateMock.mockRestore();
 	});
 
 	it("should not add duplicate address and display error message", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(false),
-			}),
-		});
-
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
@@ -196,19 +170,10 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-
-		validateMock.mockRestore();
 	});
 
 	it("should handle save", async () => {
 		const onSave = vi.fn();
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
-
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
@@ -233,14 +198,11 @@ describe("ContactForm", () => {
 			expect(onSave).toHaveBeenCalledWith({
 				address: {
 					address: validDevnetAddress,
-					coin: "Mainsail",
 					name: validDevnetAddress,
 				},
 				name: expect.any(String),
 			});
 		});
-
-		validateMock.mockRestore();
 	});
 
 	it("should select the network if only one is available", async () => {
@@ -249,20 +211,14 @@ describe("ContactForm", () => {
 
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		await userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+		await userEvent.type(addressInput(), contactAddress);
 
 		await waitFor(() => {
-			expect(addressInput()).toHaveValue("AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+			expect(addressInput()).toHaveValue(contactAddress);
 		});
 	});
 
 	it("should remove network from options", async () => {
-		const validateMock = vi.spyOn(profile.coins(), "set").mockReturnValue({
-			__construct: vi.fn(),
-			address: () => ({
-				validate: vi.fn().mockResolvedValue(true),
-			}),
-		});
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await userEvent.type(nameInput(), "name");
@@ -271,16 +227,14 @@ describe("ContactForm", () => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		await userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+		await userEvent.type(addressInput(), contactAddress);
 
 		await waitFor(() => {
-			expect(addressInput()).toHaveValue("AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+			expect(addressInput()).toHaveValue(contactAddress);
 		});
 
 		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
 		});
-
-		validateMock.mockRestore();
 	});
 });

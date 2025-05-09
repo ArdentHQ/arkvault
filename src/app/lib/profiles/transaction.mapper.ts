@@ -1,12 +1,13 @@
-import { Collections, Contracts } from "@/app/lib/sdk";
+import { Collections } from "@/app/lib/sdk";
 
 import { IReadWriteWallet } from "./contracts.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
+import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto.js";
 
 export const transformTransactionData = (
 	wallet: IReadWriteWallet,
-	transaction: Contracts.ConfirmedTransactionData,
+	transaction: ConfirmedTransactionData,
 ): ExtendedConfirmedTransactionData => new ExtendedConfirmedTransactionData(wallet, transaction);
 
 export const transformConfirmedTransactionDataCollection = async (
@@ -18,7 +19,7 @@ export const transformConfirmedTransactionDataCollection = async (
 	return new ExtendedConfirmedTransactionDataCollection(
 		transactions
 			.items()
-			.map((transaction: Contracts.ConfirmedTransactionData) => transformTransactionData(wallet, transaction)),
+			.map((transaction: ConfirmedTransactionData) => transformTransactionData(wallet, transaction)),
 		transactions.getPagination(),
 	);
 };

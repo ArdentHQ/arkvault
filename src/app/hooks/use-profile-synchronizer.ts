@@ -1,4 +1,3 @@
-import { enabledNetworksCount, profileAllEnabledNetworks } from "@/utils/network-utils";
 import {
 	getErroredNetworks,
 	getProfileById,
@@ -14,7 +13,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { Services } from "@/app/lib/sdk";
 import { delay } from "@/utils/delay";
-import { getActiveNetwork } from "./use-active-network";
 import { isEqual } from "@/app/lib/helpers";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { usePrevious } from "./use-previous";
@@ -59,9 +57,9 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 						profileIsSyncingWallets: true,
 						...(reset && { isProfileInitialSync: true }),
 					});
-					const activeNetwork = getActiveNetwork(profile);
+					const activeNetwork = profile.activeNetwork();
 
-					await profile.sync({ networkId: activeNetwork?.id(), ttl: 15_000 });
+					await profile.sync({ networkId: activeNetwork.id(), ttl: 15_000 });
 					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
 
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
@@ -107,7 +105,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		};
 
 		const syncKnownWallets = {
-			callback: () => env.knownWallets().syncAll(profile),
+			callback: () => env.knownWallets().sync(profile, profile.activeNetwork()),
 			interval: Intervals.Long,
 		};
 
@@ -229,7 +227,7 @@ export const useProfileRestore = (profileId: string) => {
 		await env.profiles().restore(profile, password);
 		markAsRestored();
 
-		const activeProfile = getProfileFromUrl(env, history?.location?.pathname);
+		const activeProfile = getProfileFromUrl(env, history.location.pathname);
 		if (activeProfile?.id() !== profile.id()) {
 			return;
 		}
@@ -376,24 +374,7 @@ export const useProfileSynchronizer = ({
 			}
 
 			try {
-				// If the user only has one network, we skip the network selection
-				// step when creating or importing a wallet, which means we also
-				// skip that part of syncing network coin. The issues caused by that
-				// are solved by syncing the coin initially.
-				const availableNetworks = profileAllEnabledNetworks(profile);
-				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
-				const activeNetwork = getActiveNetwork(profile);
-
-				if (onlyHasOneNetwork) {
-					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
-					await Promise.all([
-						coin.__construct(),
-						profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 }),
-					]);
-				} else {
-					await profile.sync({ networkId: activeNetwork?.id(), ttl: 10_000 });
-				}
-
+				await profile.sync({ ttl: 10_000 });
 				await persist();
 
 				setStatus("synced");

@@ -1,3 +1,3 @@
-import { IoC } from "@/app/lib/sdk";
+import { Container } from "@/app/lib/sdk/container";
 
-export const container = new IoC.Container();
+export const container = new Container();

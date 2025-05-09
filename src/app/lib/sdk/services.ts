@@ -3,8 +3,6 @@ export * from "./address.service";
 export * from "./big-number.service";
 export * from "./client.contract";
 export * from "./client.service";
-export * from "./data-transfer-object.contract";
-export * from "./data-transfer-object.service";
 export * from "./extended-address.contract";
 export * from "./extended-address.service";
 export * from "./extended-public-key.contract";
