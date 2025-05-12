@@ -24,7 +24,7 @@ export class UsernamesService implements IUsernamesService {
 	public async syncUsernames(addresses: string[]): Promise<void> {
 		const clientService = new ClientService({ config: this.#config, profile: this.#profile });
 		const collection = await clientService.usernames(addresses);
-		console.log("Synced usernames", collection.items(),);
+		console.log("Synced usernames", collection.items());
 
 		if (this.#registry[this.#network.id()]) {
 			const existingCollection = this.#registry[this.#network.id()];
