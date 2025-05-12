@@ -142,22 +142,19 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const {
-			result: { current },
-		} = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), { wrapper });
-
-		const response = await current.fetchTransactions({
-			cursor: 1,
-			flush: true,
-			mode: "all",
-			wallets: profile.wallets().values(),
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
 		});
-		await waitFor(() => expect(response.items()).toHaveLength(10));
 
-		//@ts-ignore
-		const responseEmpty = await current.fetchTransactions({});
-		await waitFor(() => expect(responseEmpty.hasMorePages()).toBe(false));
-		await waitFor(() => expect(responseEmpty.items()).toHaveLength(0));
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "sent" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+
+		expect(result.current.transactions).toHaveLength(10);
+
+		expect(result.current.hasMore).toBe(false);
 	});
 
 	it("#updateFilters", async () => {
@@ -216,15 +213,17 @@ describe("useProfileTransactions", () => {
 			wrapper,
 		});
 
-		await waitFor(() =>
-			expect(result.current.fetchTransactions({ wallets: profile.wallets().values() })).resolves.toBeTruthy(),
-		);
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 
 		await hookAct(async () => {
 			await result.current.fetchMore();
 		});
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(10), { timeout: 4000 });
+		await waitFor(() => expect(result.current.transactions).toHaveLength(20), { timeout: 4000 });
 
 		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -235,7 +234,7 @@ describe("useProfileTransactions", () => {
 			await result.current.fetchMore();
 		});
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(10), { timeout: 4000 });
+		await waitFor(() => expect(result.current.transactions).toHaveLength(20), { timeout: 4000 });
 
 		mockTransactionsAggregate.mockRestore();
 	});
