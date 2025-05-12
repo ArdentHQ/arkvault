@@ -129,7 +129,7 @@ describe("useWalletAlias", () => {
 		usernamesSpy.mockRestore();
 	});
 
-	it("should return onChainUsername when useNetworkWalletNames is false and no wallet or contact exists", async () => {
+	it("should return onChainUsername when useNetworkWalletNames is false and no wallet or contact exists", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const testNetwork = profile.activeNetwork();
 
