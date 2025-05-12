@@ -105,7 +105,7 @@ describe("useWalletAlias", () => {
 	it("should choose onChainUsername over address when no wallet or contact exists (useNetworkWalletNames true)", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
 		const testNetwork = wallet.network();
-		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
+		const usernamesSpy = vi.spyOn(profile.usernames(), "username").mockImplementation((networkId, address) => {
 			if (address === UNKNOWN_ADDRESS) {
 				return ONCHAIN_USERNAME;
 			}
