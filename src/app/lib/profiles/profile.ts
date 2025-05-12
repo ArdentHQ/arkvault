@@ -451,7 +451,7 @@ export class Profile implements IProfile {
 
 	/** {@inheritDoc IProfile.usernames} */
 	public usernames(): UsernamesService {
-		return this.#usernameService
+		return this.#usernameService;
 	}
 
 	/** {@inheritDoc IProfile.async} */
