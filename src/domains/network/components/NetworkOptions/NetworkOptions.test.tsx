@@ -11,6 +11,7 @@ let networkTestnet: Networks.Network;
 
 const ariaLabelAttribute = "aria-label";
 
+const testId = "NetworkOption-Mainsail-mainsail.devnet";
 describe("NetworkOption", () => {
 	beforeAll(async () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
@@ -38,10 +39,7 @@ describe("NetworkOption", () => {
 	it("should render network", () => {
 		render(<NetworkOption network={network} />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
-			ariaLabelAttribute,
-			network.displayName(),
-		);
+		expect(screen.getByTestId(testId)).toHaveAttribute(ariaLabelAttribute, network.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 	});
 
@@ -60,10 +58,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onSelect={onSelect} />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
-			ariaLabelAttribute,
-			network.displayName(),
-		);
+		expect(screen.getByTestId(testId)).toHaveAttribute(ariaLabelAttribute, network.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("NetworkOption"));
@@ -76,10 +71,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onSelect={onSelect} disabled />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
-			ariaLabelAttribute,
-			network.displayName(),
-		);
+		expect(screen.getByTestId(testId)).toHaveAttribute(ariaLabelAttribute, network.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("NetworkOption"));
@@ -92,10 +84,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onDeselect={onDeselect} isSelected />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
-			ariaLabelAttribute,
-			network.displayName(),
-		);
+		expect(screen.getByTestId(testId)).toHaveAttribute(ariaLabelAttribute, network.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("NetworkOption"));
@@ -106,10 +95,7 @@ describe("NetworkOption", () => {
 	it("should not render different class for testnet network", () => {
 		const { asFragment } = render(<NetworkOption network={networkTestnet} />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
-			ariaLabelAttribute,
-			networkTestnet.displayName(),
-		);
+		expect(screen.getByTestId(testId)).toHaveAttribute(ariaLabelAttribute, networkTestnet.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 		expect(asFragment).toMatchSnapshot();
 	});
