@@ -380,7 +380,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
-		const nethash = "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
 		const { container } = render(
 			<Route path="/">
 				<Welcome />
