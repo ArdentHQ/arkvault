@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { act as hookAct, renderHook } from "@testing-library/react";
 import React from "react";
 
@@ -29,7 +28,7 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const sent = await profile.transactionAggregate().all({ limit: 30 });
+		const sent = await profile.transactionAggregate().all({ limit: 10 });
 		const items = sent.items();
 
 		const mockIsConfirmed = vi.spyOn(items[0], "isConfirmed").mockReturnValue(false);
@@ -87,7 +86,7 @@ describe("useProfileTransactions", () => {
 
 		await hook.waitForNextUpdate();
 
-		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(30));
+		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(10));
 
 		mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -109,7 +108,7 @@ describe("useProfileTransactions", () => {
 				type: "address",
 				value: address,
 			})),
-			limit: 30,
+			limit: 10,
 		});
 
 		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(items.length));
@@ -153,7 +152,7 @@ describe("useProfileTransactions", () => {
 			mode: "all",
 			wallets: profile.wallets().values(),
 		});
-		await waitFor(() => expect(response.items()).toHaveLength(30));
+		await waitFor(() => expect(response.items()).toHaveLength(10));
 
 		//@ts-ignore
 		const responseEmpty = await current.fetchTransactions({});
@@ -188,7 +187,7 @@ describe("useProfileTransactions", () => {
 		});
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
-		await waitFor(() => expect(result.current.transactions).toHaveLength(30));
+		await waitFor(() => expect(result.current.transactions).toHaveLength(10));
 
 		const mockEmpty = vi.spyOn(profile.transactionAggregate(), "sent").mockResolvedValue({
 			hasMorePages: () => false,
@@ -225,7 +224,7 @@ describe("useProfileTransactions", () => {
 			await result.current.fetchMore();
 		});
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
+		await waitFor(() => expect(result.current.transactions).toHaveLength(10), { timeout: 4000 });
 
 		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -236,7 +235,7 @@ describe("useProfileTransactions", () => {
 			await result.current.fetchMore();
 		});
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
+		await waitFor(() => expect(result.current.transactions).toHaveLength(10), { timeout: 4000 });
 
 		mockTransactionsAggregate.mockRestore();
 	});
