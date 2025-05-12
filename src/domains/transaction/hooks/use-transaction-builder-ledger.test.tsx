@@ -107,7 +107,7 @@ describe("Use Transaction Builder with Ledger", () => {
 		vi.clearAllMocks();
 	});
 
-	it.only("should abort build with ledger", async () => {
+	it("should abort build with ledger", async () => {
 		const abortCtrl = new AbortController();
 		const abortSignal = abortCtrl.signal;
 
