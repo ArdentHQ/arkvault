@@ -1,5 +1,4 @@
 import fs from "fs";
-import { Profile } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
