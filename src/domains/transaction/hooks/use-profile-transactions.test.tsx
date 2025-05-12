@@ -142,15 +142,18 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
-			wrapper,
-		});
+		const { result } = renderHook(
+			() => useProfileTransactions({ limit: 10, profile, wallets: profile.wallets().values() }),
+			{
+				wrapper,
+			},
+		);
 
 		hookAct(() => {
-			result.current.updateFilters({ activeMode: "sent" });
+			result.current.updateFilters({ activeMode: "all" });
 		});
 
-		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
 
 		expect(result.current.transactions).toHaveLength(10);
 
