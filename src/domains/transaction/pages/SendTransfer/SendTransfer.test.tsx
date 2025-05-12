@@ -55,10 +55,10 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		confirmations: () => 10,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.hash}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
-		id: () => transactionFixture.data.id,
+		hash: () => transactionFixture.data.hash,
 		isConfirmed: () => true,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
@@ -714,9 +714,9 @@ describe("SendTransfer", () => {
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -833,13 +833,13 @@ describe("SendTransfer", () => {
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [],
 			//@ts-ignore
-			errors: { [transactionFixture.data.id]: "ERROR" },
+			errors: { [transactionFixture.data.hash]: "ERROR" },
 
-			rejected: [transactionFixture.data.id],
+			rejected: [transactionFixture.data.hash],
 		});
 		const transactionMock = createTransactionMock(wallet);
 
@@ -924,9 +924,9 @@ describe("SendTransfer", () => {
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -1006,9 +1006,9 @@ describe("SendTransfer", () => {
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -1042,12 +1042,12 @@ describe("SendTransfer", () => {
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
 
-		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
+		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 		createTransactionMock(wallet);
 
 		vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -1448,9 +1448,9 @@ describe("SendTransfer", () => {
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -1514,9 +1514,9 @@ describe("SendTransfer", () => {
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -1672,9 +1672,9 @@ describe("SendTransfer", () => {
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
