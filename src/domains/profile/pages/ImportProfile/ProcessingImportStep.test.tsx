@@ -43,7 +43,13 @@ describe("Import Profile - Processing import", () => {
 	it("should successfully import wwe profile", async () => {
 		const onSuccess = vi.fn();
 		render(<ProcessingImport env={env} file={wwe} onSuccess={onSuccess} />);
-		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
+
+		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.objectContaining({
+			id: expect.any(Function)
+		})));
+
+		const [[calledProfile]] = onSuccess.mock.calls;
+		expect(calledProfile.name()).toBe("test");
 
 		expect(screen.queryByTestId("FilePreviewPlain__Success")).not.toBeInTheDocument();
 	});
@@ -51,7 +57,13 @@ describe("Import Profile - Processing import", () => {
 	it("should successfully import json profile", async () => {
 		const onSuccess = vi.fn();
 		render(<ProcessingImport env={env} file={json} onSuccess={onSuccess} />);
-		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
+
+		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.objectContaining({
+			id: expect.any(Function)
+		})));
+
+		const [[calledProfile]] = onSuccess.mock.calls;
+		expect(calledProfile.name()).toBe("export");
 
 		expect(screen.queryByTestId("FilePreviewPlain__Success")).not.toBeInTheDocument();
 	});
