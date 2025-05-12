@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 import { translations } from "@/domains/transaction/i18n";
 import { WalletDetailNetwork } from "./WalletDetailNetwork";
