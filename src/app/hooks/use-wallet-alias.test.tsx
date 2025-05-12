@@ -4,6 +4,7 @@ import React from "react";
 import { useWalletAlias } from "./use-wallet-alias";
 import { EnvironmentProvider } from "@/app/contexts";
 import { env, getMainsailProfileId, getDefaultMainsailWalletId } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
 
 const UNKNOWN_ADDRESS = "unknown-address";
 const ONCHAIN_USERNAME = "onchain_username";
@@ -19,6 +20,20 @@ describe("useWalletAlias", () => {
 		await env.profiles().restore(profile);
 		await env.knownWallets().sync(profile, profile.activeNetwork());
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
+
+		server.use(
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/evm/api/",
+				{
+					id: 1,
+					jsonrpc: "2.0",
+					result: "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000093485b57ff3ded81430d08579142fae8234c6a170000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000673686168696e0000000000000000000000000000000000000000000000000000000000000000000000000000cd15953dd076e56dc6a5bc46da23308ff3158ee6000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000127661756c745f746573745f616464726573730000000000000000000000000000",
+				},
+				{
+					"method": "post"
+				}
+			)
+		);
 	});
 
 	it("should return undefined alias when no wallet or contact or delegate was found", () => {
@@ -102,51 +117,58 @@ describe("useWalletAlias", () => {
 		displayNameSpy.mockRestore();
 	});
 
-	it("should choose onChainUsername over address when no wallet or contact exists (useNetworkWalletNames true)", () => {
+	it("should choose onChainUsername over address when no wallet or contact exists (useNetworkWalletNames true)", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
 		const testNetwork = wallet.network();
-		const usernamesSpy = vi.spyOn(profile.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === UNKNOWN_ADDRESS) {
-				return ONCHAIN_USERNAME;
-			}
-		});
+
+		const testAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		await result.current.syncOnChainUsernames({
+			addresses: [testAddress],
+			networks: [profile.activeNetwork()],
+			profile
+		});
+
 		expect(
 			result.current.getWalletAlias({
-				address: UNKNOWN_ADDRESS,
+				address: testAddress,
 				network: testNetwork,
 				profile,
 			}),
 		).toStrictEqual({
-			address: UNKNOWN_ADDRESS,
-			alias: ONCHAIN_USERNAME,
+			address: testAddress,
+			alias: "vault_test_address",
 			isContact: false,
 		});
-		usernamesSpy.mockRestore();
 	});
 
-	it("should return onChainUsername when useNetworkWalletNames is false and no wallet or contact exists", () => {
+	it("should return onChainUsername when useNetworkWalletNames is false and no wallet or contact exists", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
-		const testNetwork = wallet.network();
-		const usernamesSpy = vi.spyOn(profile.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === UNKNOWN_ADDRESS) {
-				return ONCHAIN_USERNAME;
-			}
-		});
+		const testNetwork = profile.activeNetwork();
+
+		const testAddress = "0x93485b57ff3DeD81430D08579142fAe8234c6A17";
+
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		await result.current.syncOnChainUsernames({
+			addresses: [testAddress],
+			networks: [testNetwork],
+			profile
+		});
+
 		expect(
 			result.current.getWalletAlias({
-				address: UNKNOWN_ADDRESS,
+				address: testAddress,
 				network: testNetwork,
 				profile,
 			}),
 		).toStrictEqual({
-			address: UNKNOWN_ADDRESS,
-			alias: ONCHAIN_USERNAME,
+			address: testAddress,
+			alias: "shahin",
 			isContact: false,
 		});
-		usernamesSpy.mockRestore();
 	});
 
 	it("should return onChainUsername when wallet exists but has no username or displayName", () => {

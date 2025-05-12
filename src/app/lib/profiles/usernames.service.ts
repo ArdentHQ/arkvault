@@ -3,6 +3,7 @@ import { Collections, DTO, Networks } from "@/app/lib/sdk";
 import { IProfile, IUsernamesService } from "./contracts.js";
 import { ClientService } from "@/app/lib/mainsail/client.service.js";
 import { ConfigRepository } from "@/app/lib/sdk/coins.js";
+import { UUID } from "@ardenthq/arkvault-crypto";
 
 type UsernameRegistry = Record<string, Collections.UsernameDataCollection>;
 
@@ -11,16 +12,19 @@ export class UsernamesService implements IUsernamesService {
 	#config: ConfigRepository;
 	#profile: IProfile;
 	#network: Networks.Network;
+	#id: string = "";
 
 	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 		this.#profile = profile;
 		this.#network = profile.activeNetwork();
+		this.#id = UUID.random();
 	}
 
 	public async syncUsernames(addresses: string[]): Promise<void> {
 		const clientService = new ClientService({ config: this.#config, profile: this.#profile });
 		const collection = await clientService.usernames(addresses);
+		console.log("Synced usernames", collection.items(),);
 
 		if (this.#registry[this.#network.id()]) {
 			const existingCollection = this.#registry[this.#network.id()];
@@ -32,6 +36,7 @@ export class UsernamesService implements IUsernamesService {
 		} else {
 			this.#registry[this.#network.id()] = collection;
 		}
+		console.log("setting registry", this.#id, this.#registry);
 	}
 
 	public username(network: string, address: string): string | undefined {
@@ -43,6 +48,7 @@ export class UsernamesService implements IUsernamesService {
 	}
 
 	#findByAddress(network: string, address: string): DTO.UsernameData | undefined {
+		console.log("reading registry", this.#id, this.#registry);
 		const registry = this.#registry[network];
 		if (!registry) {
 			return undefined;
