@@ -1,5 +1,5 @@
 import { Coins, Networks } from "@/app/lib/sdk";
-import { Mainsail } from "@/app/lib/mainsail";
+import * as Mainsail from "@/app/lib/mainsail";
 
 const createNetwork = (coin: Coins.CoinBundle, network: string) =>
 	new Networks.Network(coin.manifest, coin.manifest.networks[network]);

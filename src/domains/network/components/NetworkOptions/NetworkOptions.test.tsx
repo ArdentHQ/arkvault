@@ -20,7 +20,7 @@ describe("NetworkOption", () => {
 		const wallet1 = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: "mainsail.mainnet",
+			network: "mainsail.devnet",
 		});
 
 		network = wallet1.network();
@@ -38,7 +38,7 @@ describe("NetworkOption", () => {
 	it("should render network", () => {
 		render(<NetworkOption network={network} />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -60,7 +60,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onSelect={onSelect} />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -76,7 +76,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onSelect={onSelect} disabled />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
@@ -92,7 +92,7 @@ describe("NetworkOption", () => {
 
 		render(<NetworkOption network={network} onDeselect={onDeselect} isSelected />, {});
 
-		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.mainnet")).toHaveAttribute(
+		expect(screen.getByTestId("NetworkOption-Mainsail-mainsail.devnet")).toHaveAttribute(
 			ariaLabelAttribute,
 			network.displayName(),
 		);
