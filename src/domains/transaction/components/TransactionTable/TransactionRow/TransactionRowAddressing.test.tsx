@@ -10,10 +10,8 @@ describe("TransactionRowAddressing", () => {
 		...TransactionFixture,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
-			coin: () => ({
-				link: () => ({ wallet: () => ({ address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }) }),
-			}),
 			currency: () => "ARK",
+			link: () => ({ wallet: () => ({ address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }) }),
 		}),
 	};
 
@@ -52,9 +50,7 @@ describe("TransactionRowAddressing", () => {
 			isValidatorResignation: () => true,
 			wallet: () => ({
 				...TransactionFixture.wallet(),
-				coin: () => ({
-					link: () => ({ wallet: () => ({ address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }) }),
-				}),
+				link: () => ({ wallet: () => ({ address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }) }),
 				username: () => "test",
 			}),
 		};
