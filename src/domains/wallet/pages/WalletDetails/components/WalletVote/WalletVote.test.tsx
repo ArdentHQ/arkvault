@@ -331,7 +331,6 @@ describe("WalletVote", () => {
 
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
-		await wallet.synchroniser().coin();
 
 		const votes = [];
 
