@@ -13,7 +13,7 @@ describe("useTransaction", () => {
 
 	beforeEach(() => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: [
 					{
 						...transactionsFixture.data[0],
