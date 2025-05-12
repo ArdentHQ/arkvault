@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
-import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
@@ -301,10 +300,6 @@ export const SendTransfer = () => {
 
 	const renderTabs = () => (
 		<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
-			<TabPanel tabId={SendTransferStep.NetworkStep}>
-				<NetworkStep profile={activeProfile} networks={networks} />
-			</TabPanel>
-
 			<TabPanel tabId={SendTransferStep.FormStep}>
 				<FormStep
 					network={activeNetwork}
