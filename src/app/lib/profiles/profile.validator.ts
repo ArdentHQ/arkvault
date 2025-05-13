@@ -115,12 +115,6 @@ export class ProfileValidator implements IProfileValidator {
 		}).validate(data, { allowUnknown: true, stripUnknown: true });
 
 		if (error !== undefined) {
-			const missingData = error.details.some((d) => d.path[0] === "data" && d.type === "any.required");
-
-			if (missingData && typeof (data as any).ciphertext === "string") {
-				throw new Error("PasswordRequired");
-			}
-
 			throw error;
 		}
 
