@@ -1,4 +1,3 @@
-export * from "./bundle.js";
 export * as Coins from "./coins";
 export * as Collections from "./collections";
 export * as Contracts from "./contracts";

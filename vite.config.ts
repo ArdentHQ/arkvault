@@ -157,7 +157,7 @@ export default defineConfig(() => {
 					"buffer",
 					"os",
 					"process",
-					"fs",
+					// "fs",
 					"path",
 					"http",
 					"https",
