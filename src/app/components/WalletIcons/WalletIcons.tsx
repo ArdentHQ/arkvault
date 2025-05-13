@@ -57,7 +57,11 @@ export const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDar
 			content={label || t(`COMMON.${constantCase(type)}` as const as any)}
 			theme={tooltipDarkTheme ? "dark" : undefined}
 		>
-			<Button variant="transparent" data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
+			<Button
+				variant="transparent"
+				data-testid={`WalletIcon__${type}`}
+				className={`inline-block p-1 ${iconColor || getIconColor(type)}`}
+			>
 				<Icon name={getIconName(type)} size={iconSize} />
 			</Button>
 		</Tooltip>
