@@ -14,10 +14,10 @@ describe("TransactionRow", () => {
 		isSuccess: () => true,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
-			currency: () => "DARK",
+			currency: () => "ARK",
 			network: () => ({
-				coin: () => "DARK",
-				id: () => "ark.devnet",
+				coin: () => "Mainsail",
+				id: () => "mainsail.devnet",
 			}),
 			username: () => "test_username",
 		}),
@@ -52,7 +52,7 @@ describe("TransactionRow", () => {
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(4);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(4);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 
@@ -75,7 +75,7 @@ describe("TransactionRow", () => {
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 	});
 
@@ -127,16 +127,16 @@ describe("TransactionRow", () => {
 								amount: () => 0,
 								wallet: () => ({
 									...fixture.wallet(),
-									currency: () => "DARK",
+									currency: () => "ARK",
 									isLedger: () => false,
 									network: () => ({
-										coin: () => "DARK",
-										id: () => "ark.devnet",
+										coin: () => "ARK",
+										id: () => "mainsail.devnet",
 									}),
 								}),
 							} as any
 						}
-						exchangeCurrency="DARK"
+						exchangeCurrency="ARK"
 						profile={profile}
 						onClick={() => {}}
 					/>
@@ -160,16 +160,16 @@ describe("TransactionRow", () => {
 								amount: () => 0,
 								wallet: () => ({
 									...fixture.wallet(),
-									currency: () => "shouldUseDarkColors",
+									currency: () => "shouldUseARKColors",
 									isLedger: () => false,
 									network: () => ({
-										coin: () => "DARK",
-										id: () => "ark.devnet",
+										coin: () => "ARK",
+										id: () => "mainsail.devnet",
 									}),
 								}),
 							} as any
 						}
-						exchangeCurrency="DARK"
+						exchangeCurrency="ARK"
 						profile={profile}
 						onClick={() => {}}
 					/>

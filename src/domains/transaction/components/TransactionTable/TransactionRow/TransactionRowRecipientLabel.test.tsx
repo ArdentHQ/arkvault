@@ -10,13 +10,13 @@ describe("TransactionRowRecipientLabel", () => {
 	it("should show address", () => {
 		render(<TransactionRowRecipientLabel transaction={TransactionFixture} />);
 
-		expect(screen.getByTestId("Address__address")).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		expect(screen.getByTestId("Address__address")).toHaveTextContent("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6");
 	});
 
 	it("should show label", () => {
 		render(
 			<TransactionRowRecipientLabel
-				transaction={{ ...TransactionFixture, type: () => "delegateRegistration" }}
+				transaction={{ ...TransactionFixture, type: () => "validatorRegistration" }}
 			/>,
 		);
 
@@ -54,7 +54,7 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	describe("Votes", () => {
-		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(env.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore

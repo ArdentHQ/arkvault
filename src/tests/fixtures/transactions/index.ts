@@ -2,35 +2,41 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
 const wallet = {
-	address: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+	address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	alias: () => "Test Wallet",
 	currency: () => "ARK",
 	exchangeCurrency: () => "BTC",
-	isDelegate: () => true,
+	isValidator: () => true,
 	isLedger: () => false,
-	isResignedDelegate: () => false,
+	isResignedValidator: () => false,
 	transaction: () => ({
 		canBeSigned: () => false,
 		isAwaitingOurSignature: () => false,
 	}),
 	network: () => ({
-		id: () => "ark.devnet",
+		id: () => "mainsail.devnet",
 		isTest: () => true,
+	}),
+	coin: () => ({
+		link: () => ({
+			block: () =>
+				"https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
+		}),
 	}),
 };
 
 export const TransactionFixture = {
-	id: () => "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
-	blockId: () => "71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
+	hash: () => "ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+	blockHash: () => "71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
 	type: () => "transfer",
 	timestamp: () => DateTime.fromUnix(1596213281),
 	confirmations: () => BigNumber.make(10),
-	votes: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
-	unvotes: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
-	sender: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-	recipient: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+	votes: () => ["0xB8Be76b31E402a2D89294Aa107056484Bef94362"],
+	unvotes: () => ["0x03BC306C369A55c0336EB003bB07F29E5c150F36"],
+	from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+	to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 	recipients: () => [],
-	amount: () => 100,
+	value: () => 100,
 	nonce: () => BigNumber.make(1),
 	convertedAmount: () => 0,
 	fee: () => 21,
@@ -42,11 +48,14 @@ export const TransactionFixture = {
 	isReceived: () => false,
 	isReturn: () => false,
 	isTransfer: () => true,
+	isSuccess: () => true,
 	isSecondSignature: () => false,
 	isMultiSignatureRegistration: () => false,
 	usesMultiSignature: () => false,
-	isDelegateRegistration: () => false,
-	isDelegateResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
 	isVoteCombination: () => false,
 	isVote: () => false,
 	isUnvote: () => false,
@@ -60,8 +69,6 @@ export const TransactionFixture = {
 	hasFailed: () => false,
 	getMeta: () => "",
 	setMeta: () => "",
-	// IPFS Type
-	hash: () => "QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68",
 	// @ts-ignore
 	explorerLink: () =>
 		"https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe",

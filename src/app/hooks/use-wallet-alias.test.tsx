@@ -17,7 +17,7 @@ describe("useWalletAlias", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
-		await env.knownWallets().syncAll(profile);
+		await env.knownWallets().sync(profile, profile.activeNetwork());
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
@@ -105,10 +105,13 @@ describe("useWalletAlias", () => {
 	it("should choose onChainUsername over address when no wallet or contact exists (useNetworkWalletNames true)", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
 		const testNetwork = wallet.network();
-		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === UNKNOWN_ADDRESS) {
-				return ONCHAIN_USERNAME;
-			}
+
+		const usernamesSpy = vi.spyOn(profile, "usernames").mockReturnValue({
+			username: (networkId, address) => {
+				if (address === UNKNOWN_ADDRESS) {
+					return ONCHAIN_USERNAME;
+				}
+			},
 		});
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
@@ -129,10 +132,12 @@ describe("useWalletAlias", () => {
 	it("should return onChainUsername when useNetworkWalletNames is false and no wallet or contact exists", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, false);
 		const testNetwork = wallet.network();
-		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === UNKNOWN_ADDRESS) {
-				return ONCHAIN_USERNAME;
-			}
+		const usernamesSpy = vi.spyOn(profile, "usernames").mockReturnValue({
+			username: (networkId, address) => {
+				if (address === UNKNOWN_ADDRESS) {
+					return ONCHAIN_USERNAME;
+				}
+			},
 		});
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
@@ -157,10 +162,12 @@ describe("useWalletAlias", () => {
 		}
 		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue(undefined);
 		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue(undefined);
-		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockImplementation((networkId, address) => {
-			if (address === wallet.address()) {
-				return ONCHAIN_USERNAME;
-			}
+		const usernamesSpy = vi.spyOn(profile, "usernames").mockReturnValue({
+			username: (networkId, address) => {
+				if (address === wallet.address()) {
+					return ONCHAIN_USERNAME;
+				}
+			},
 		});
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
@@ -242,7 +249,13 @@ describe("useWalletAlias", () => {
 			.create("contactName", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
 		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue("walletUsername");
 		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("localName");
-		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockReturnValue("onChainUsername");
+		const usernamesSpy = vi.spyOn(profile, "usernames").mockReturnValue({
+			username: (networkId, address) => {
+				if (address === wallet.address()) {
+					return ONCHAIN_USERNAME;
+				}
+			},
+		});
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({
@@ -268,7 +281,13 @@ describe("useWalletAlias", () => {
 			.create("contactName", [{ address: wallet.address(), coin: "ARK", network: "ark.devnet" }]);
 		const usernameSpy = vi.spyOn(wallet, "username").mockReturnValue("walletUsername");
 		const displayNameSpy = vi.spyOn(wallet, "displayName").mockReturnValue("localName");
-		const usernamesSpy = vi.spyOn(env.usernames(), "username").mockReturnValue("onChainUsername");
+		const usernamesSpy = vi.spyOn(profile, "usernames").mockReturnValue({
+			username: (networkId, address) => {
+				if (address === wallet.address()) {
+					return ONCHAIN_USERNAME;
+				}
+			},
+		});
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 		expect(
 			result.current.getWalletAlias({

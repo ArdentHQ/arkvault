@@ -16,10 +16,10 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		isSuccess: () => true,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
-			currency: () => "DARK",
+			currency: () => "ARK",
 			network: () => ({
-				coin: () => "DARK",
-				id: () => "ark.devnet",
+				coin: () => "Mainsail",
+				id: () => "mainsail.devnet",
 			}),
 			username: () => "test_username",
 		}),
@@ -48,7 +48,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 	});
 
@@ -169,7 +169,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			</table>,
 		);
 
-		expect(screen.getByText("Amount (DARK)")).toBeInTheDocument();
+		expect(screen.getByText("Amount (ARK)")).toBeInTheDocument();
 	});
 
 	it("should render skeleton with hideSender", () => {
