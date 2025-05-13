@@ -48,9 +48,9 @@ exports[`VoteList > should render in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -64,7 +64,7 @@ exports[`VoteList > should render in lg 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -153,9 +153,9 @@ exports[`VoteList > should render in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -169,7 +169,7 @@ exports[`VoteList > should render in md 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -260,7 +260,7 @@ exports[`VoteList > should render in sm 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -272,9 +272,9 @@ exports[`VoteList > should render in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -363,9 +363,9 @@ exports[`VoteList > should render in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -379,7 +379,7 @@ exports[`VoteList > should render in xl 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -470,7 +470,7 @@ exports[`VoteList > should render in xs 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -482,9 +482,9 @@ exports[`VoteList > should render in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -583,9 +583,9 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -599,7 +599,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -718,9 +718,9 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -734,7 +734,7 @@ exports[`VoteList > should render with amount in md 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -865,7 +865,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -877,9 +877,9 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -988,9 +988,9 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>
@@ -1004,7 +1004,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -1135,7 +1135,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
-            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            0x03BC306C369A55c0336EB003bB07F29E5c150F36
           </span>
         </div>
       </div>
@@ -1147,9 +1147,9 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
-            alt="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
             src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
-            title="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+            title="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
           />
         </div>
       </div>

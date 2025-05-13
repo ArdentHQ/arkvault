@@ -4234,7 +4234,7 @@ exports[`Votes > should render 1`] = `
                                     class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                     data-testid="Address__address"
                                   >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
                                   <span>
                                      
@@ -4267,7 +4267,7 @@ exports[`Votes > should render 1`] = `
                                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://explorer-evm-test.mainsailhq.com/addresses/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                                href="https://explorer-evm-test.mainsailhq.com/addresses/0x03BC306C369A55c0336EB003bB07F29E5c150F36"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -12206,7 +12206,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                                     class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                     data-testid="Address__address"
                                   >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
                                   <span>
                                      
@@ -12239,7 +12239,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://explorer-evm-test.mainsailhq.com/addresses/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                                href="https://explorer-evm-test.mainsailhq.com/addresses/0x03BC306C369A55c0336EB003bB07F29E5c150F36"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -20178,7 +20178,7 @@ exports[`Votes > should select a validator 1`] = `
                                     class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                     data-testid="Address__address"
                                   >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
                                   <span>
                                      
@@ -20211,7 +20211,7 @@ exports[`Votes > should select a validator 1`] = `
                                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://explorer-evm-test.mainsailhq.com/addresses/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                                href="https://explorer-evm-test.mainsailhq.com/addresses/0x03BC306C369A55c0336EB003bB07F29E5c150F36"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -28473,7 +28473,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                                     class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                                     data-testid="Address__address"
                                   >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    0x03BC306C369A55c0336EB003bB07F29E5c150F36
                                   </span>
                                   <span>
                                      
@@ -28506,7 +28506,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                                 class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://explorer-evm-test.mainsailhq.com/addresses/0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                                href="https://explorer-evm-test.mainsailhq.com/addresses/0x03BC306C369A55c0336EB003bB07F29E5c150F36"
                                 rel="noopener noreferrer"
                               >
                                 <span
