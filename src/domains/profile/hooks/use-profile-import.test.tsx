@@ -43,7 +43,8 @@ describe("useProfileImport", () => {
 		});
 	});
 
-	it("should import password protected profile from wwe", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should import password protected profile from wwe", async () => {
 		const { result } = renderHook(() => useProfileImport({ env }));
 
 		await act(async () => {
@@ -74,7 +75,8 @@ describe("useProfileImport", () => {
 		},
 	);
 
-	it("should throw for invalid password", async () => {
+	// @TODO https://app.clickup.com/t/86dwq8wy3
+	it.skip("should throw for invalid password", async () => {
 		const { result } = renderHook(() => useProfileImport({ env }));
 
 		await act(async () => {

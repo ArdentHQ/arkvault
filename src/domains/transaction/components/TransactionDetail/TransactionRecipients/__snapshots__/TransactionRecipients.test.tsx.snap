@@ -58,6 +58,62 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
 </div>
 `;
 
+exports[`TransactionRecipients > should render a single recipient that is validator 1`] = `
+<div>
+  <div
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
+    data-testid="TransactionRecipients"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Recipient
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="w-0 flex-1 text-right md:text-left"
+        >
+          <div
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          >
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
+            >
+              test-address
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center -space-x-1"
+    >
+      <div
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+        >
+          <img
+            alt="test-address"
+            src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FC9F0F%22%2F%3E%3C%2Fsvg%3E"
+            title="test-address"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`TransactionRecipients > should render a single recipient with alias 1`] = `
 <div>
   <div
