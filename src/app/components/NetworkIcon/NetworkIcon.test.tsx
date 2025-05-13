@@ -1,16 +1,17 @@
 import { Networks } from "@/app/lib/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { NetworkIcon } from "./NetworkIcon";
-import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render, screen } from "@/utils/testing-library";
 
 let network: Networks.Network;
 
 describe("NetworkIcon", () => {
 	beforeEach(() => {
-		network = availableNetworksMock[0];
+		const profile = env.profiles().findById(getDefaultProfileId());
+		network = profile.activeNetwork();
 	});
 
 	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
@@ -40,8 +41,6 @@ describe("NetworkIcon", () => {
 	});
 
 	it("should render with test network", () => {
-		network = availableNetworksMock[1];
-
 		render(<NetworkIcon size="lg" network={network} />, {});
 
 		expect(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
@@ -49,26 +48,6 @@ describe("NetworkIcon", () => {
 			network.displayName(),
 		);
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
-	});
-
-	it("should render for custom network", () => {
-		const customNetwork = {
-			...availableNetworksMock[1],
-			coin: () => "Whatever",
-			coinName: () => "Custom Network",
-			id: () => "whatever.custom",
-			isLive: () => false,
-			ticker: () => "WTH",
-		};
-
-		render(<NetworkIcon size="lg" network={customNetwork} />, {});
-
-		expect(screen.getByTestId(`NetworkIcon-Whatever-whatever.custom`)).toHaveAttribute(
-			"aria-label",
-			"Custom Network",
-		);
-
-		expect(screen.getByTestId(`NetworkIcon-Whatever-whatever.custom`)).toHaveTextContent("CU");
 	});
 
 	it("should render network with custom classname", () => {

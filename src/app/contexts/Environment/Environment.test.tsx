@@ -1,4 +1,4 @@
-import { Mainsail } from "@/app/lib/mainsail";
+import * as Mainsail from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";

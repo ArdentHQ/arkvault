@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
-import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
@@ -16,7 +15,7 @@ import { QRModal } from "@/app/components/QRModal";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
 import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "@/domains/transaction/components/ConfirmSendTransaction";
@@ -24,7 +23,6 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
@@ -50,11 +48,6 @@ export const SendTransfer = () => {
 
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-
-	const networks = useNetworks({
-		filter: (network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
-		profile: activeProfile,
-	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
@@ -301,10 +294,6 @@ export const SendTransfer = () => {
 
 	const renderTabs = () => (
 		<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
-			<TabPanel tabId={SendTransferStep.NetworkStep}>
-				<NetworkStep profile={activeProfile} networks={networks} />
-			</TabPanel>
-
 			<TabPanel tabId={SendTransferStep.FormStep}>
 				<FormStep
 					network={activeNetwork}
