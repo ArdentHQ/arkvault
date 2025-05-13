@@ -122,11 +122,13 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi
+			.spyOn(env.validators(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
 		const route =
-			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&delegate=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+			"?method=vote&coin=Mainsail&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		render(
 			<Route path="/">
@@ -194,7 +196,7 @@ describe("Welcome with deeplink", () => {
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi.spyOn(env.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		render(
 			<Route path="/">
@@ -378,7 +380,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
-		const nethash = "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51";
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
 		const { container } = render(
 			<Route path="/">
 				<Welcome />
@@ -591,7 +593,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should not navigate when clicking multiple times", async () => {
-		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi
+			.spyOn(env.validators(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);
 

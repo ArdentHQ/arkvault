@@ -1,6 +1,7 @@
 /* eslint-disable unicorn/no-null */
 import { Coins, Networks } from "@/app/lib/sdk";
-import { Profile, Wallet } from "@/app/lib/profiles";
+import { Profile } from "@/app/lib/profiles/profile";
+import { Wallet } from "@/app/lib/profiles/wallet";
 
 import {
 	assertArray,
