@@ -58,10 +58,6 @@ export class ProfileImporter implements IProfileImporter {
 		let data: IProfileData | undefined;
 		let errorReason = "";
 
-		if (!password) {
-			throw new Error("PasswordRequired");
-		}
-
 		try {
 			if (typeof password === "string") {
 				this.#profile.password().set(password);
