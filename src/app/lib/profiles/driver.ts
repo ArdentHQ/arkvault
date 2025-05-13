@@ -1,17 +1,10 @@
 import { Coins, Helpers, IoC, Networks } from "@/app/lib/sdk";
 
 import { Identifiers } from "./container.models.js";
-import { DataRepository } from "./data.repository.js";
-import { ValidatorService } from "./validator.service.js";
 import { EnvironmentOptions, NetworkHostSelectorFactory } from "./environment.models.js";
-import { ExchangeRateService } from "./exchange-rate.service.js";
-import { StorageFactory } from "./factory.storage.js";
-import { ProfileFeeService } from "./fee.service.js";
-import { KnownWalletService } from "./known-wallet.service.js";
 import { IProfile } from "./profile.contract.js";
 import { ProfileSetting } from "./profile.enum.contract.js";
-import { ProfileRepository } from "./profile.repository.js";
-import { WalletService } from "./wallet.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 export const defaultHostSelector: NetworkHostSelectorFactory =
 	(profile: IProfile) => (configRepository: Coins.ConfigRepository, type?: Networks.NetworkHostType) => {
@@ -46,22 +39,8 @@ export const defaultHostSelector: NetworkHostSelectorFactory =
 
 export class DriverFactory {
 	public static make(container: IoC.Container, options: EnvironmentOptions): void {
-		if (typeof options.storage === "string") {
-			container.constant(Identifiers.Storage, StorageFactory.make(options.storage));
-		} else {
-			container.constant(Identifiers.Storage, options.storage);
-		}
-
-		container.constant(Identifiers.LedgerTransportFactory, options.ledgerTransportFactory);
 		container.constant(Identifiers.HttpClient, options.httpClient);
-		container.constant(Identifiers.Coins, options.coins);
 
-		container.singleton(Identifiers.AppData, DataRepository);
-		container.singleton(Identifiers.ValidatorService, ValidatorService);
 		container.singleton(Identifiers.ExchangeRateService, ExchangeRateService);
-		container.singleton(Identifiers.FeeService, ProfileFeeService);
-		container.singleton(Identifiers.KnownWalletService, KnownWalletService);
-		container.singleton(Identifiers.ProfileRepository, ProfileRepository);
-		container.singleton(Identifiers.WalletService, WalletService);
 	}
 }

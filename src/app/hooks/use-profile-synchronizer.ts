@@ -82,14 +82,14 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		};
 
 		const syncValidators = {
-			callback: () => env.validators().syncAll(profile),
+			callback: () => profile.validators().syncAll(profile),
 			interval: Intervals.Long,
 		};
 
 		const syncExchangeRates = {
 			callback: async () => {
 				setConfiguration(profileId, { profileIsSyncingExchangeRates: true });
-				const currencies = Object.keys(profile.coins().all());
+				const currencies = profile.availableNetworks().map((network) => network.ticker());
 				const allRates = await Promise.all(
 					currencies.map((currency) => env.exchangeRates().syncAll(profile, currency)),
 				);
@@ -105,7 +105,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		};
 
 		const syncKnownWallets = {
-			callback: () => env.knownWallets().sync(profile, profile.activeNetwork()),
+			callback: () => profile.knownWallets().sync(profile.activeNetwork()),
 			interval: Intervals.Long,
 		};
 

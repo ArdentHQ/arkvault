@@ -2,9 +2,8 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 
 import { Address } from "@/app/components/Address";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { useBreakpoint } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 
 interface Properties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
@@ -85,7 +84,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	walletName,
 	addressClass,
 }: Properties) => {
-	const { env } = useEnvironmentContext();
+	const activeProfile = useActiveProfile();
 
 	const { isXs, isSm } = useBreakpoint();
 
@@ -100,11 +99,11 @@ export const BaseTransactionRowRecipientLabel = ({
 	useEffect(() => {
 		if (transaction?.isVote() || transaction?.isUnvote()) {
 			setValidators({
-				unvotes: env.validators().map(transaction.wallet(), transaction.unvotes()),
-				votes: env.validators().map(transaction.wallet(), transaction.votes()),
+				unvotes: activeProfile.validators().map(transaction.wallet(), transaction.unvotes()),
+				votes: activeProfile.validators().map(transaction.wallet(), transaction.votes()),
 			});
 		}
-	}, [env, transaction]);
+	}, [activeProfile, transaction]);
 
 	if (type === "transfer") {
 		return (
@@ -122,7 +121,7 @@ export const BaseTransactionRowRecipientLabel = ({
 			<span>
 				<RecipientLabel type="multiPayment" />
 				<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-					{transaction?.recipients().length}
+					{transaction.recipients().length}
 				</span>
 			</span>
 		);
@@ -132,8 +131,8 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<VoteCombinationLabel
 				validator={validators.votes[0]}
-				votes={transaction?.votes()}
-				unvotes={transaction?.unvotes()}
+				votes={transaction.votes()}
+				unvotes={transaction.unvotes()}
 			/>
 		);
 	}
@@ -141,7 +140,7 @@ export const BaseTransactionRowRecipientLabel = ({
 	if (transaction?.isVote() || transaction?.isUnvote()) {
 		return (
 			<VoteLabel
-				validators={validators[transaction?.isVote() ? "votes" : "unvotes"]}
+				validators={validators[transaction.isVote() ? "votes" : "unvotes"]}
 				isUnvote={transaction.isUnvote()}
 			/>
 		);

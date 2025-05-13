@@ -24,7 +24,7 @@ export const customNetworks = (env: Environment, profile: Contracts.IProfile) =>
 				const txHost = servers.find(({ host }) => host.type === "tx")?.host as Host;
 				const evmHost = servers.find(({ host }) => host.type === "evm")?.host as Host;
 
-				const network = env.availableNetworks().find((network) => network.id() === `${coin}.${key}`);
+				const network = profile.availableNetworks().find((network) => network.id() === `${coin}.${key}`);
 
 				serverList.push({
 					enabled: !!publicHost.enabled,

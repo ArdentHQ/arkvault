@@ -72,13 +72,13 @@ const defaultNetworks = {
 	},
 };
 
-const validatorFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
+const validatorFromSearchParameters = ({ profile, network, searchParameters }: PathProperties) => {
 	const validatorName = searchParameters.get("validator");
 	const validatorPublicKey = searchParameters.get("publicKey");
 
 	if (validatorName) {
 		try {
-			return env.validators().findByUsername(network.coin(), network.id(), validatorName);
+			return profile.validators().findByUsername(network.coin(), network.id(), validatorName);
 		} catch {
 			//
 		}
@@ -86,7 +86,7 @@ const validatorFromSearchParameters = ({ env, network, searchParameters }: PathP
 
 	if (validatorPublicKey) {
 		try {
-			return env.validators().findByPublicKey(network.coin(), network.id(), validatorPublicKey);
+			return profile.validators().findByPublicKey(network.coin(), network.id(), validatorPublicKey);
 		} catch {
 			//
 		}
@@ -123,7 +123,7 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
-	await env.validators().sync(profile, network.coin(), network.id());
+	await profile.validators().sync(profile, network.id());
 
 	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
 

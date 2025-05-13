@@ -7,7 +7,6 @@ import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
 	IExchangeRateService,
-	IKnownWalletService,
 	IProfile,
 	IReadWriteWallet,
 	IReadWriteWalletAttributes,
@@ -29,7 +28,6 @@ import {
 } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { AttributeBag } from "./helpers/attribute-bag.js";
-import { KnownWalletService } from "./known-wallet.service.js";
 import { WalletSerialiser } from "./serialiser.js";
 import { SettingRepository } from "./setting.repository";
 import { SignatoryFactory } from "./signatory.factory.js";
@@ -54,6 +52,7 @@ import { PrivateKeyService } from "@/app/lib/mainsail/private-key.service";
 import { WIFService } from "@/app/lib/mainsail/wif.service";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
+import { ValidatorService } from "./validator.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -243,7 +242,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.knownName} */
 	public knownName(): string | undefined {
-		return container.get<KnownWalletService>(Identifiers.KnownWalletService).name(this.networkId(), this.address());
+		return this.#profile.knownWallets().name(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.secondPublicKey} */
@@ -311,21 +310,17 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.isKnown} */
 	public isKnown(): boolean {
-		return container.get<IKnownWalletService>(Identifiers.KnownWalletService).is(this.networkId(), this.address());
+		return this.#profile.knownWallets().is(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isOwnedByExchange} */
 	public isOwnedByExchange(): boolean {
-		return container
-			.get<IKnownWalletService>(Identifiers.KnownWalletService)
-			.isExchange(this.networkId(), this.address());
+		return this.#profile.knownWallets().isExchange(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isOwnedByTeam} */
 	public isOwnedByTeam(): boolean {
-		return container
-			.get<IKnownWalletService>(Identifiers.KnownWalletService)
-			.isTeam(this.networkId(), this.address());
+		return this.#profile.knownWallets().isTeam(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
@@ -643,6 +638,11 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.signatoryFactory} */
 	public signatoryFactory(): ISignatoryFactory {
 		return this.#signatoryFactory;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.validators} */
+	public validators(): ValidatorService {
+		return this.#profile.validators();
 	}
 
 	#restore(): void {

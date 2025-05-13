@@ -54,12 +54,11 @@ export interface IValidatorService {
 	 * Synchronise validators for the given coin and network.
 	 *
 	 * @param {IProfile} profile
-	 * @param {string} coin
 	 * @param {string} network
 	 * @return {Promise<void>}
 	 * @memberof IValidatorService
 	 */
-	sync(profile: IProfile, coin: string, network: string): Promise<void>;
+	sync(profile: IProfile, network: string): Promise<void>;
 
 	/**
 	 * Synchronise validators for all coins and networks.

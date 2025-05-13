@@ -54,7 +54,7 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	describe("Votes", () => {
-		vi.spyOn(env.validators(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore

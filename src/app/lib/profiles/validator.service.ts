@@ -40,7 +40,7 @@ export class ValidatorService implements IValidatorService {
 	}
 
 	/** {@inheritDoc IValidatorService.sync} */
-	public async sync(profile: IProfile, coin: string, network: string): Promise<void> {
+	public async sync(profile: IProfile, network: string): Promise<void> {
 		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile });
 		const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
 			? new ParallelValidatorSyncer(clientService)
@@ -49,7 +49,7 @@ export class ValidatorService implements IValidatorService {
 		const result: Contracts.WalletData[] = await syncer.sync();
 
 		this.#dataRepository.set(
-			`${coin}.${network}.validators`,
+			`${network}.validators`,
 			result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
 				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(
@@ -64,10 +64,8 @@ export class ValidatorService implements IValidatorService {
 	public async syncAll(profile: IProfile): Promise<void> {
 		const promises: (() => Promise<void>)[] = [];
 
-		for (const [coin, networks] of profile.coins().entries()) {
-			for (const network of networks) {
-				promises.push(() => this.sync(profile, coin, network));
-			}
+		for (const network of profile.availableNetworks()) {
+			promises.push(() => this.sync(profile, network.id()));
 		}
 
 		await pqueueSettled(promises);
