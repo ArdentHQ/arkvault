@@ -67,11 +67,11 @@ const MnemonicField = ({
 					validate: async (value: string) => {
 						const count = value.trim().split(/\s+/).length;
 						if (count !== 12 && count !== 24) {
-						  return t("COMMON.INPUT_ADDRESS.VALIDATION.NOT_VALID");
+							return t("COMMON.INPUT_ADDRESS.VALIDATION.NOT_VALID");
 						}
 
 						return validateAddress({ findAddress, network, profile, t, value });
-					  },
+					},
 				})}
 				{...properties}
 			/>
