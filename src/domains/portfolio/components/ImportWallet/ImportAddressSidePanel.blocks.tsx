@@ -1,23 +1,128 @@
 import React from "react";
 import { Button } from "@/app/components/Button";
-import { StepIndicator } from "@/app/components/StepIndicator";
 import { useTranslation } from "react-i18next";
-import { Header } from "@/app/components/Header";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { TFunction } from "i18next";
 import { ImportOption } from "@/domains/wallet/hooks";
+import { Icon } from "@/app/components/Icon";
+import { ThemeIcon } from "@/app/components/Icon";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
-enum Step {
+export enum ImportAddressStep {
 	MethodStep = 1,
 	ImportDetailStep = 2,
 	EncryptPasswordStep,
 	SummaryStep,
 }
 
+export interface StepHeaderConfig {
+	title: string;
+	subtitle?: string;
+	titleIcon?: React.ReactNode;
+}
+
+export function useStepHeaderConfig(
+	step: ImportAddressStep,
+	importOption?: ImportOption,
+): StepHeaderConfig {
+	const { t } = useTranslation();
+
+	switch (step) {
+		case ImportAddressStep.MethodStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"),
+			};
+		}
+
+		case ImportAddressStep.ImportDetailStep: {
+			return {
+				subtitle: importOption?.description ?? "",
+				title: importOption?.header ?? "",
+				titleIcon: importOption?.icon,
+			};
+		}
+
+		case ImportAddressStep.EncryptPasswordStep: {
+			return {
+				title: t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"),
+				titleIcon: (
+					<ThemeIcon
+						lightIcon="WalletEncryptionLight"
+						darkIcon="WalletEncryptionDark"
+						className="hidden md:block"
+						dimensions={[24, 24]}
+					/>
+				),
+			};
+		}
+
+		case ImportAddressStep.SummaryStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE"),
+				titleIcon: (
+					<Icon
+						name="Completed"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
+						dimensions={[24, 24]}
+						data-testid="icon-Completed"
+					/>
+				),
+			};
+		}
+
+		default: {
+			return { title: "" };
+		}
+	}
+}
+
+export function useLedgerStepHeaderConfig(
+	step: LedgerTabStep,
+	importOption?: ImportOption,
+): StepHeaderConfig {
+	const { t } = useTranslation();
+	
+	switch (step) {
+		case LedgerTabStep.LedgerConnectionStep: {
+			return {
+				subtitle: importOption?.description ?? t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.LEDGER_DESCRIPTION"),
+				title: importOption?.header ?? t("COMMON.LEDGER"),
+				titleIcon: importOption?.icon ?? <Icon name="LedgerImport" className="hidden md:block" />,
+			};
+		}
+
+		case LedgerTabStep.LedgerScanStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE"),
+				titleIcon: (
+					<Icon name="NoteCheck" dimensions={[22, 22]} className="hidden text-theme-primary-600 md:block" />
+				),
+			};
+		}
+
+		case LedgerTabStep.LedgerImportStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: 2 }),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE"),
+				titleIcon: (
+					<Icon
+						name="DoubleCheckedCircle"
+						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
+						dimensions={[22, 22]}
+					/>
+				),
+			};
+		}
+
+		default: {
+			return { title: "" };
+		}
+	}
+}
+
 export const ImportActionToolbar = ({
-	showSteps,
-	activeTab,
-	allSteps,
 	onBack,
 	onContinue,
 	isLoading,
@@ -30,9 +135,6 @@ export const ImportActionToolbar = ({
 }: {
 	showButtons?: boolean;
 	isLoading?: boolean;
-	showSteps?: boolean;
-	activeTab: number;
-	allSteps: string[];
 	isContinueDisabled?: boolean;
 	isBackDisabled?: boolean;
 	isSubmitDisabled?: boolean;
@@ -43,13 +145,7 @@ export const ImportActionToolbar = ({
 }) => {
 	const { t } = useTranslation();
 	return (
-		<div className="fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
-			{showSteps && (
-				<div className="hidden w-[136px] sm:block">
-					<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-				</div>
-			)}
-
+		<div className="fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8">
 			<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
 				{showButtons && (
 					<>
@@ -81,127 +177,4 @@ export const ImportActionToolbar = ({
 			</div>
 		</div>
 	);
-};
-
-export const StepHeader = ({
-	step,
-	importOption,
-}: {
-	step: Step;
-	importOption: ImportOption | undefined;
-}): JSX.Element => {
-	const { t } = useTranslation();
-
-	const headers: Record<Step, JSX.Element> = {
-		[Step.MethodStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
-				className="mt-px"
-			/>
-		),
-		[Step.ImportDetailStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={importOption?.header ?? ""}
-				subtitle={importOption?.description ?? ""}
-				titleIcon={
-					importOption?.icon ? (
-						<div className="hidden text-theme-primary-600 dark:text-theme-navy-500 md:block">
-							{" "}
-							{importOption.icon}{" "}
-						</div>
-					) : undefined
-				}
-				className="mt-px"
-			/>
-		),
-		[Step.EncryptPasswordStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-				className="mt-px"
-				titleIcon={
-					<ThemeIcon
-						lightIcon="WalletEncryptionLight"
-						darkIcon="WalletEncryptionDark"
-						className="hidden md:block"
-						dimensions={[24, 24]}
-					/>
-				}
-			/>
-		),
-		[Step.SummaryStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				className="mt-px"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
-			/>
-		),
-	};
-
-	return headers[step];
-};
-
-export const LedgerStepHeader = ({
-	step,
-	importOption,
-}: {
-	step: LedgerTabStep;
-	importOption: ImportOption | undefined;
-}): JSX.Element => {
-	const { t } = useTranslation();
-
-	const headers: Record<string, JSX.Element> = {
-		[LedgerTabStep.LedgerConnectionStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={importOption?.header ?? ""}
-				subtitle={importOption?.description ?? ""}
-				titleIcon={
-					importOption?.icon ? (
-						<div className="hidden text-theme-primary-600 dark:text-theme-navy-500 md:block">
-							{" "}
-							{importOption.icon}{" "}
-						</div>
-					) : undefined
-				}
-				className="mt-px"
-			/>
-		),
-		[LedgerTabStep.LedgerScanStep]: (
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
-				titleIcon={
-					<Icon name="NoteCheck" dimensions={[22, 22]} className="hidden text-theme-primary-600 md:block" />
-				}
-			/>
-		),
-		[LedgerTabStep.LedgerImportStep]: (
-			<Header
-				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: 2 })}
-				titleIcon={
-					<Icon
-						name="DoubleCheckedCircle"
-						className="hidden text-theme-success-100 dark:text-theme-success-900 md:block"
-						dimensions={[22, 22]}
-					/>
-				}
-			/>
-		),
-	};
-
-	return headers[step];
 };
