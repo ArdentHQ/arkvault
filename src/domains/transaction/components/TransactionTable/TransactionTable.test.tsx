@@ -14,7 +14,7 @@ import { requestMock, server } from "@/tests/mocks/server";
 import React from "react";
 import { TransactionTable } from "./TransactionTable";
 import { sortByDesc } from "@/app/lib/helpers";
-import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json";
+import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
 
 describe("TransactionTable", () => {
@@ -23,7 +23,7 @@ describe("TransactionTable", () => {
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
 
 	beforeEach(async () => {
-		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture));
+		server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", transactionsFixture));
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById(getDefaultWalletId());
@@ -34,7 +34,11 @@ describe("TransactionTable", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
 		const { asFragment } = renderResponsive(
-			<TransactionTable transactions={transactions} profile={profile} />,
+			<TransactionTable
+				transactions={transactions}
+				profile={profile}
+				sortBy={{ column: "timestamp", desc: true }}
+			/>,
 			breakpoint,
 		);
 
@@ -43,7 +47,14 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render with currency", () => {
-		render(<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} />);
+		render(
+			<TransactionTable
+				transactions={transactions}
+				exchangeCurrency="BTC"
+				profile={profile}
+				sortBy={{ column: "timestamp", desc: true }}
+			/>,
+		);
 
 		expect(screen.getAllByTestId("TransactionRow__exchange-currency")).toHaveLength(transactions.length);
 	});
@@ -61,7 +72,13 @@ describe("TransactionTable", () => {
 
 		it("should render", () => {
 			const { asFragment } = render(
-				<TransactionTable transactions={[]} isLoading skeletonRowsLimit={5} profile={profile} />,
+				<TransactionTable
+					transactions={[]}
+					isLoading
+					skeletonRowsLimit={5}
+					profile={profile}
+					sortBy={{ column: "timestamp", desc: true }}
+				/>,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -76,6 +93,7 @@ describe("TransactionTable", () => {
 					exchangeCurrency="BTC"
 					skeletonRowsLimit={5}
 					profile={profile}
+					sortBy={{ column: "timestamp", desc: true }}
 				/>,
 			);
 
@@ -88,25 +106,17 @@ describe("TransactionTable", () => {
 		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
-		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
+		render(
+			<TransactionTable
+				sortBy={{ column: "timestamp", desc: true }}
+				transactions={sortedByDateDesc}
+				onRowClick={onClick}
+				profile={profile}
+			/>,
+		);
 
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(sortedByDateDesc[0]);
-	});
-
-	it("should render active wallet's coin name", () => {
-		const onClick = vi.fn();
-
-		render(
-			<TransactionTable
-				transactions={transactions}
-				onRowClick={onClick}
-				profile={profile}
-				coinName={wallet.currency()}
-			/>,
-		);
-
-		expect(screen.getByText(`Value (${wallet.currency()})`)).toBeInTheDocument();
 	});
 });

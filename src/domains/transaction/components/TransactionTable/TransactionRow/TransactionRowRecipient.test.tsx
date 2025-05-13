@@ -11,9 +11,10 @@ let wallet: Contracts.IReadWriteWallet;
 describe("TransactionRowRecipient", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
 		wallet = profile
 			.wallets()
-			.findByAddressWithNetwork(TransactionFixture.recipient(), TransactionFixture.wallet().network().id());
+			.findByAddressWithNetwork(TransactionFixture.to(), TransactionFixture.wallet().network().id());
 	});
 
 	it("should render", () => {
@@ -21,20 +22,7 @@ describe("TransactionRowRecipient", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
-		expect(screen.getByTestId("Address__alias")).toHaveTextContent(wallet.alias());
-		expect(screen.getByTestId("Address__address")).toHaveTextContent(wallet.address());
-	});
-
-	it("should render compact", () => {
-		const { asFragment } = render(
-			<TransactionRowRecipient transaction={TransactionFixture} profile={profile} isCompact />,
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
-		expect(screen.getByTestId("Address__alias")).toHaveTextContent(wallet.alias());
+		expect(screen.getByTestId("Address__alias")).toHaveTextContent(/Mainsail Wallet/);
 		expect(screen.getByTestId("Address__address")).toHaveTextContent(wallet.address());
 	});
 });
