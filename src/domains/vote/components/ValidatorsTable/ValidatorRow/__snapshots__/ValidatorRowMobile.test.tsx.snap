@@ -209,7 +209,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
                     </span>
                   </div>
                 </div>

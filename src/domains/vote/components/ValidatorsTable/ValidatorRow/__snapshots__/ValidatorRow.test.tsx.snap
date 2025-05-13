@@ -720,7 +720,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                  0x03BC306C369A55c0336EB003bB07F29E5c150F36
                 </span>
                 <span>
                    
