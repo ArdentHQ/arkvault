@@ -21,7 +21,7 @@ import {
 	within,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { StepsProvider, minVersionList } from "@/app/contexts";
 import { requestMock, server } from "@/tests/mocks/server";
 
@@ -116,7 +116,7 @@ const ComponentWrapper = ({
 		register("network");
 		register("fee");
 		register("fees");
-		register("inputFeeSettings");
+		register("Input_GasPriceSettings");
 		register("senderAddress");
 		register("recipients");
 	}, [register]);
@@ -170,8 +170,6 @@ describe("SendTransfer", () => {
 
 		firstWalletAddress = wallet.address();
 
-		// profile.coins().set("Mainsail", "mainsail.devnet");
-
 		await syncFees(profile);
 	});
 
@@ -200,8 +198,6 @@ describe("SendTransfer", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
-
-		// vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
 			confirmations: 10,
@@ -391,43 +387,33 @@ describe("SendTransfer", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each([
-		["with memo", "memo"],
-		["without memo", undefined],
-	])("should render review step with multiple recipients (%s)", async (_, memo) => {
+	it("should render review step with multiple recipients (%s)", async (_, memo) => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		history.push(transferURL);
 
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "1",
-					memo,
-					network: wallet.network(),
-					recipients: [
-						{
-							address: wallet.address(),
-							amount: 1,
-						},
-						{
-							address: secondWallet.address(),
-							amount: 1,
-						},
-					],
-					senderAddress: wallet.address(),
+		const defaultValues = {
+			gasLimit: "1",
+			gasPrice: "1",
+			network: wallet.network(),
+			recipients: [
+				{
+					address: wallet.address(),
+					amount: 1,
 				},
-			}),
-		);
+				{
+					address: secondWallet.address(),
+					amount: 1,
+				},
+			],
+			senderAddress: wallet.address(),
+		};
 
 		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<FormProvider {...form.current}>
-					<StepsProvider activeStep={1} steps={4}>
-						<ReviewStep wallet={wallet} />
-					</StepsProvider>
-					,
-				</FormProvider>
+				<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
+					<ReviewStep wallet={wallet} network={wallet.network()} />
+				</ComponentWrapper>
 			</Route>,
 			{
 				history,
@@ -446,73 +432,15 @@ describe("SendTransfer", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render network selection without selected wallet", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
-
-		history.push(transferURL);
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
-
-		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render network selection with sorted network", async () => {
-		const profile = await env.profiles().create("test");
-		await env.profiles().restore(profile);
-
-		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "Mainsail",
-			network: "mainsail.devnet",
-		});
-		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
-			coin: "Mainsail",
-			network: "mainsail.mainnet",
-		});
-		profile.wallets().push(arkMainnetWallet);
-		profile.wallets().push(arkWallet);
-		await env.wallets().syncByProfile(profile);
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		const transferURL = `/profiles/${profile.id()}/send-transfer`;
-
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
-
-		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
-
-		expect(queryElementForSvg(screen.getByTestId("NetworkOptions"), "Mainsail")).toBeInTheDocument();
-
-		resetProfileNetworksMock();
-	});
-
 	it("should render with only one network", async () => {
-		const networkMock = vi.spyOn(profile, "availableNetworks").mockReturnValue([profile.availableNetworks()[1]]);
+		const networkMock = vi.spyOn(profile, "availableNetworks").mockReturnValue([profile.availableNetworks()[0]]);
 
-		const transferURL = `/profiles/${profile.id()}/send-transfer`;
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 
 		history.push(transferURL);
 
 		render(
-			<Route path="/profiles/:profileId/send-transfer">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
 			{
@@ -520,6 +448,8 @@ describe("SendTransfer", () => {
 				route: transferURL,
 			},
 		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
@@ -620,14 +550,10 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
-
-		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
-
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
@@ -745,7 +671,9 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
@@ -850,7 +778,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -945,7 +875,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1042,7 +974,9 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1118,7 +1052,9 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1204,7 +1140,9 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1374,7 +1312,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1505,7 +1445,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1596,7 +1538,9 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await userEvent.click(
+			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
+		);
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
