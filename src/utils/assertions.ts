@@ -1,6 +1,7 @@
 import { AssertionError } from "assert";
 import { Coins, Networks } from "@/app/lib/sdk";
-import { Contracts, DTO, Profile, Wallet } from "@/app/lib/profiles";
+import { Contracts, DTO, Wallet } from "@/app/lib/profiles";
+import { Profile } from "@/app/lib/profiles/profile";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {
