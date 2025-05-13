@@ -53,7 +53,7 @@ const ServerFormModal: React.VFC<{
 		clearErrors,
 		errors,
 		evmApiEndpoint: debouncedEvm,
-		network: networks.find((n) => n.id() === network),
+		network: networks.find((item) => item.id() === network),
 		publicApiEndpoint: debouncedPublic,
 		setError,
 		transactionApiEndpoint: debouncedTransaction,
