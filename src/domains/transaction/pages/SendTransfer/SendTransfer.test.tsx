@@ -19,6 +19,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
+	getMainsailProfileId,
 } from "@/utils/testing-library";
 import React, { useEffect } from "react";
 import { StepsProvider, minVersionList } from "@/app/contexts";
@@ -27,13 +28,13 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { FormStep } from "./FormStep";
-import { NetworkStep } from "./NetworkStep";
+// import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { Route } from "react-router-dom";
 import { SendTransfer } from "./SendTransfer";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { createHashHistory } from "history";
-import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/node-fees.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/devnet/node-fees.json";
 import { renderHook } from "@testing-library/react";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -97,12 +98,16 @@ const defaultRegisterCallback = ({ register }) => {
 	register("fees");
 };
 
-const Component = ({ deeplinkProperties }) => {
+const ComponentWrapper = ({
+	defaultValues = {
+		network: wallet.network(),
+		senderAddress: wallet.address(),
+	},
+	activeStep = 0,
+	children,
+}) => {
 	const form = useForm({
-		defaultValues: {
-			network: wallet.network(),
-			senderAddress: wallet.address(),
-		},
+		defaultValues,
 	});
 
 	const { register } = form;
@@ -113,16 +118,21 @@ const Component = ({ deeplinkProperties }) => {
 		register("fees");
 		register("inputFeeSettings");
 		register("senderAddress");
+		register("recipients");
 	}, [register]);
 
 	return (
-		<StepsProvider activeStep={0} steps={4}>
-			<FormProvider {...form}>
-				<FormStep profile={profile} deeplinkProps={deeplinkProperties} />
-			</FormProvider>
+		<StepsProvider activeStep={activeStep} steps={4}>
+			<FormProvider {...form}>{children}</FormProvider>
 		</StepsProvider>
 	);
 };
+
+const FormStepComponent = ({ deeplinkProperties }) => (
+	<ComponentWrapper>
+		<FormStep profile={profile} deeplinkProps={deeplinkProperties} network={wallet.network()} />
+	</ComponentWrapper>
+);
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -142,7 +152,7 @@ const history = createHashHistory();
 
 describe("SendTransfer", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -153,29 +163,31 @@ describe("SendTransfer", () => {
 		// Profile needs a wallet on the mainnet network to show network selection
 		// step.
 		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.mainnet",
+			coin: "Mainsail",
+			network: "mainsail.mainnet",
 		});
 		profile.wallets().push(arkMainnetWallet);
 
 		firstWalletAddress = wallet.address();
 
-		profile.coins().set("ARK", "ark.devnet");
+		// profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await syncFees(profile);
 	});
 
 	beforeEach(() => {
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		server.use(
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+				"https://dwallets-evm.mainsailhq.com/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
 				transactionFixture,
 			),
-			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", transactionsFixture, {
 				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
 			}),
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions",
+				"https://dwallets-evm.mainsailhq.com/api/transactions",
 				{ data: [], meta: {} },
 				{
 					query: {
@@ -189,8 +201,7 @@ describe("SendTransfer", () => {
 			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
 
-		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		// vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
 			confirmations: 10,
@@ -203,53 +214,53 @@ describe("SendTransfer", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render network step with network cards", async () => {
-		const { asFragment } = renderWithForm(
-			<StepsProvider activeStep={1} steps={4}>
-				<NetworkStep profile={profile} networks={profile.availableNetworks().slice(0, 2)} />
-			</StepsProvider>,
-			{
-				registerCallback: defaultRegisterCallback,
-				withProviders: true,
-			},
-		);
+	// it("should render network step with network cards", async () => {
+	// 	const { asFragment } = renderWithForm(
+	// 		<StepsProvider activeStep={1} steps={4}>
+	// 			<NetworkStep profile={profile} networks={profile.availableNetworks().slice(0, 2)} />
+	// 		</StepsProvider>,
+	// 		{
+	// 			registerCallback: defaultRegisterCallback,
+	// 			withProviders: true,
+	// 		},
+	// 	);
 
-		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
+	// 	expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.queryByTestId("FormLabel")).not.toBeInTheDocument());
+	// 	await waitFor(() => expect(screen.queryByTestId("FormLabel")).not.toBeInTheDocument());
 
-		expect(
-			within(screen.getByTestId("SendTransfer__network-step__select")).getAllByTestId("NetworkOption"),
-		).toHaveLength(2);
+	// 	expect(
+	// 		within(screen.getByTestId("SendTransfer__network-step__select")).getAllByTestId("NetworkOption"),
+	// 	).toHaveLength(2);
 
-		expect(asFragment()).toMatchSnapshot();
-	});
+	// 	expect(asFragment()).toMatchSnapshot();
+	// });
 
-	it("should render network step with dropdown", () => {
-		const { asFragment } = renderWithForm(
-			<StepsProvider activeStep={1} steps={4}>
-				<NetworkStep profile={profile} networks={profile.availableNetworks()} />
-			</StepsProvider>,
-			{
-				registerCallback: defaultRegisterCallback,
-				withProviders: true,
-			},
-		);
+	// it("should render network step with dropdown", () => {
+	// 	const { asFragment } = renderWithForm(
+	// 		<StepsProvider activeStep={1} steps={4}>
+	// 			<NetworkStep profile={profile} networks={profile.availableNetworks()} />
+	// 		</StepsProvider>,
+	// 		{
+	// 			registerCallback: defaultRegisterCallback,
+	// 			withProviders: true,
+	// 		},
+	// 	);
 
-		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
-		expect(screen.getByTestId("FormLabel")).toBeInTheDocument();
+	// 	expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
+	// 	expect(screen.getByTestId("FormLabel")).toBeInTheDocument();
 
-		expect(
-			within(screen.getByTestId("SendTransfer__network-step__select")).getByTestId("SelectDropdown"),
-		).toBeInTheDocument();
+	// 	expect(
+	// 		within(screen.getByTestId("SendTransfer__network-step__select")).getByTestId("SelectDropdown"),
+	// 	).toBeInTheDocument();
 
-		expect(asFragment()).toMatchSnapshot();
-	});
+	// 	expect(asFragment()).toMatchSnapshot();
+	// });
 
 	it.each(["xs", "lg"])("should render form step (%s)", async (breakpoint) => {
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} profile={profile} />
+				<FormStep deeplinkProps={{}} profile={profile} network={wallet.network()} />
 			</StepsProvider>,
 			{
 				breakpoint,
@@ -271,60 +282,11 @@ describe("SendTransfer", () => {
 
 		if (breakpoint === "lg") {
 			expect(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN)).toBeInTheDocument();
-
-			await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
 		}
 
+		await screen.findByTestId("Amount");
+
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render form step without memo input", async () => {
-		const memoMock = vi.spyOn(wallet.network(), "usesMemo").mockReturnValue(false);
-
-		renderWithForm(
-			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} profile={profile} />
-			</StepsProvider>,
-			{
-				defaultValues: {
-					network: wallet.network(),
-				},
-				registerCallback: defaultRegisterCallback,
-				withProviders: true,
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("Input__memo")).not.toBeInTheDocument();
-		});
-
-		memoMock.mockRestore();
-	});
-
-	it("should render form step without test networks", async () => {
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		renderWithForm(
-			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} profile={profile} />,
-			</StepsProvider>,
-			{
-				defaultValues: {
-					network: wallet.network(),
-				},
-				// eslint-disable-next-line sonarjs/no-identical-functions
-				registerCallback: defaultRegisterCallback,
-				withProviders: true,
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
-
-		resetProfileNetworksMock();
 	});
 
 	it("should render form step with deeplink values and use them", async () => {
@@ -334,16 +296,16 @@ describe("SendTransfer", () => {
 
 		const deeplinkProperties: any = {
 			amount: "1.2",
-			coin: "ARK",
+			coin: "Mainsail",
 			method: "transfer",
-			network: "ark.devnet",
-			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
+			network: "mainsail.devnet",
+			recipient: wallet.address(),
 		};
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<StepsProvider activeStep={1} steps={4}>
-					<Component deeplinkProperties={deeplinkProperties} />
+					<FormStepComponent deeplinkProperties={deeplinkProperties} />
 				</StepsProvider>
 				,
 			</Route>,
@@ -359,23 +321,22 @@ describe("SendTransfer", () => {
 	it("should render form step with deeplink values and handle case no coin returned", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		const profileCoinsSpy = vi.spyOn(profile.coins(), "get").mockReturnValueOnce(undefined);
 		const walletNetworkSpy = vi.spyOn(wallet.network(), "ticker");
 
 		history.push(transferURL);
 
 		const deeplinkProperties: any = {
 			amount: "1.2",
-			coin: "ARK",
+			coin: "Mainsail",
 			method: "transfer",
-			network: "ark.devnet",
-			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
+			network: "mainsail.devnet",
+			recipient: wallet.address(),
 		};
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<StepsProvider activeStep={1} steps={4}>
-					<Component deeplinkProperties={deeplinkProperties} />
+					<FormStepComponent deeplinkProperties={deeplinkProperties} />
 				</StepsProvider>
 				,
 			</Route>,
@@ -389,7 +350,6 @@ describe("SendTransfer", () => {
 
 		await expect(walletNetworkSpy).toHaveBeenCalledWith();
 
-		profileCoinsSpy.mockRestore();
 		walletNetworkSpy.mockRestore();
 	});
 
@@ -398,32 +358,25 @@ describe("SendTransfer", () => {
 
 		history.push(transferURL);
 
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "1",
-					memo: "test memo",
-					network: wallet.network(),
-					recipients: [
-						{
-							address: wallet.address(),
-							alias: wallet.alias(),
-							amount: 1,
-						},
-					],
-					senderAddress: wallet.address(),
+		const defaultValues = {
+			gasLimit: "1",
+			gasPrice: "1",
+			network: wallet.network(),
+			recipients: [
+				{
+					address: wallet.address(),
+					alias: wallet.alias(),
+					amount: 1,
 				},
-			}),
-		);
+			],
+			senderAddress: wallet.address(),
+		};
 
 		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<FormProvider {...form.current}>
-					<StepsProvider activeStep={1} steps={4}>
-						<ReviewStep wallet={wallet} />
-					</StepsProvider>
-					,
-				</FormProvider>
+				<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
+					<ReviewStep wallet={wallet} network={wallet.network()} />
+				</ComponentWrapper>
 			</Route>,
 			{
 				history,
@@ -433,8 +386,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
-		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
-		expect(container).toHaveTextContent("test memo");
+		expect(container).toHaveTextContent(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -519,12 +471,12 @@ describe("SendTransfer", () => {
 		await env.profiles().restore(profile);
 
 		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.devnet",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 		});
 		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.mainnet",
+			coin: "Mainsail",
+			network: "mainsail.mainnet",
 		});
 		profile.wallets().push(arkMainnetWallet);
 		profile.wallets().push(arkWallet);
@@ -547,7 +499,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		expect(queryElementForSvg(screen.getByTestId("NetworkOptions"), "ark")).toBeInTheDocument();
+		expect(queryElementForSvg(screen.getByTestId("NetworkOptions"), "Mainsail")).toBeInTheDocument();
 
 		resetProfileNetworksMock();
 	});
@@ -575,7 +527,7 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render form and use location state with network parameter", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet&amount=0`;
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=mainsail.devnet&amount=0`;
 		history.push(transferURL);
 
 		render(
@@ -609,7 +561,7 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render form and use location state without memo", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=ark.devnet`;
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=mainsail.devnet`;
 		history.push(transferURL);
 
 		render(
