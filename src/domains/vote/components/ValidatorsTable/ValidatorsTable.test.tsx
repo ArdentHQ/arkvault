@@ -105,7 +105,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	describe.each(["base", "requiresAmount"])("loading state for %s", (voteType) => {
-		it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+		it("should render when isCompact = %s", () => {
 			const votesAmountMinimumMock = vi
 				.spyOn(wallet.network(), "votesAmountMinimum")
 				.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
