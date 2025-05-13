@@ -108,19 +108,17 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                          data-testid="Address__address"
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          Mainsail Wallet …
                         </span>
-                        <span>
-                           
-                        </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                   <button
@@ -187,19 +185,17 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            Mainsail Wallet …
                           </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <button
@@ -273,19 +269,17 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <div
-                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                        data-testid="Address__address"
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        Mainsail Wallet …
                       </span>
-                      <span>
-                         
-                      </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <button
@@ -357,19 +351,17 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <div
-                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                        data-testid="Address__address"
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        Mainsail Wallet …
                       </span>
-                      <span>
-                         
-                      </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <button
@@ -438,7 +430,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </span>
             </div>
@@ -452,7 +444,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              0 DARK
+              0 ARK
             </span>
           </div>
         </td>
@@ -570,19 +562,17 @@ exports[`TransactionRow > should render 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                          data-testid="Address__address"
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          Mainsail Wallet …
                         </span>
-                        <span>
-                           
-                        </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                   <button
@@ -649,19 +639,17 @@ exports[`TransactionRow > should render 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            Mainsail Wallet …
                           </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <button
@@ -735,19 +723,17 @@ exports[`TransactionRow > should render 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <div
-                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                        data-testid="Address__address"
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        Mainsail Wallet …
                       </span>
-                      <span>
-                         
-                      </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <button
@@ -819,19 +805,17 @@ exports[`TransactionRow > should render 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <div
-                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                        data-testid="Address__address"
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        Mainsail Wallet …
                       </span>
-                      <span>
-                         
-                      </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <button
@@ -1024,19 +1008,17 @@ exports[`TransactionRow > should render responsive 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -1100,19 +1082,17 @@ exports[`TransactionRow > should render responsive 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -1165,7 +1145,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount (DARK)
+                  Amount (ARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -1306,19 +1286,17 @@ exports[`TransactionRow > should render responsive 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -1382,19 +1360,17 @@ exports[`TransactionRow > should render responsive 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -1447,7 +1423,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount (DARK)
+                  Amount (ARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -1909,19 +1885,17 @@ exports[`TransactionRow > should render with currency 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                      <span
+                        class="font-semibold text-sm text-theme-text"
+                        data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                          data-testid="Address__address"
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          Mainsail Wallet …
                         </span>
-                        <span>
-                           
-                        </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                   <button
@@ -1988,19 +1962,17 @@ exports[`TransactionRow > should render with currency 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
+                        <span
+                          class="font-semibold text-sm text-theme-text"
+                          data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
                           >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                            Mainsail Wallet …
                           </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <button
@@ -2074,19 +2046,17 @@ exports[`TransactionRow > should render with currency 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <div
-                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                        data-testid="Address__address"
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        Mainsail Wallet …
                       </span>
-                      <span>
-                         
-                      </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <button
@@ -2158,19 +2128,17 @@ exports[`TransactionRow > should render with currency 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <div
-                      class="relative grow leading-[17px] sm:leading-5 text-left"
+                    <span
+                      class="font-semibold text-sm text-theme-text"
+                      data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                        data-testid="Address__address"
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        Mainsail Wallet …
                       </span>
-                      <span>
-                         
-                      </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
                 <button
@@ -2239,7 +2207,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  0 DARK
+                  0 ARK
                 </span>
               </span>
             </div>
@@ -2253,7 +2221,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              0 DARK
+              0 ARK
             </span>
           </div>
         </td>
