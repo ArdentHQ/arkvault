@@ -90,7 +90,7 @@ describe("Use Vote Filters", () => {
 		expect(result.current.hasEmptyResults).toBe(true);
 
 		const wallet1 = await profile.walletFactory().fromMnemonicWithBIP39({
-			mnemonic: MAINSAIL_MNEMONICS[1]
+			mnemonic: MAINSAIL_MNEMONICS[1],
 		});
 		profile.wallets().push(wallet1);
 		rerender();
