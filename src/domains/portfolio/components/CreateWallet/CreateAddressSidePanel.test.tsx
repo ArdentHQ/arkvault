@@ -172,14 +172,14 @@ describe("CreateAddressSidePanel", () => {
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await userEvent.click(continueButton());
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -264,14 +264,14 @@ describe("CreateAddressSidePanel", () => {
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(3);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await userEvent.click(continueButton());
 
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__encryption-toggle"));
 		await userEvent.click(screen.getByTestId("WalletEncryptionBanner__checkbox"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(12);
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
