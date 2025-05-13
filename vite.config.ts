@@ -48,10 +48,8 @@ export default defineConfig(() => {
 							"react-hook-form",
 							"react-i18next",
 							"react-idle-timer",
-							"react-linkify",
 							"react-loading-skeleton",
 							"react-qr-reader",
-							"react-range",
 							"react-router",
 							"react-router-dom",
 							"react-table",
@@ -63,12 +61,12 @@ export default defineConfig(() => {
 				},
 				plugins: [
 					process.env.ANALYZE_BUNDLE &&
-						visualizer({
-							open: true,
-							brotliSize: true,
-							gzipSize: true,
-							template: "treemap",
-						}),
+					visualizer({
+						open: true,
+						brotliSize: true,
+						gzipSize: true,
+						template: "treemap",
+					}),
 				],
 			},
 		},
