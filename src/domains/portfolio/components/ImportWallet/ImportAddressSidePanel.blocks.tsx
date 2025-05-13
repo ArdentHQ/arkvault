@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@/app/components/Button";
 import { useTranslation } from "react-i18next";
-import { TFunction } from "i18next";
 import { ImportOption } from "@/domains/wallet/hooks";
 import { Icon } from "@/app/components/Icon";
 import { ThemeIcon } from "@/app/components/Icon";

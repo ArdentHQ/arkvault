@@ -1,6 +1,5 @@
 import React from "react";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 
 export enum CreateStep {
