@@ -61,13 +61,11 @@ describe("AddressRow", () => {
 
 		blankWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: blankWalletPassphrase,
-			network: "mainsail.devnet",
 		});
 		profile.wallets().push(blankWallet);
 
 		unvotedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(unvotedWallet);
@@ -76,7 +74,6 @@ describe("AddressRow", () => {
 
 		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[1],
-			network: "mainsail.devnet",
 		});
 		profile.wallets().push(wallet2);
 
