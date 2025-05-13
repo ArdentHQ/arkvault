@@ -6,10 +6,10 @@ import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { useConfiguration } from "@/app/contexts";
 import { pingServerAddress } from "@/utils/peers";
 import { useActiveProfile } from "@/app/hooks";
+import { NetworkIcon } from "@/app/components/NetworkIcon";
 
 const NodeStatusNode: React.VFC<{
 	network: Networks.Network;

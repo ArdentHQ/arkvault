@@ -2,10 +2,10 @@ import { Networks } from "@/app/lib/sdk";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 import { networkDisplayName } from "@/utils/network-utils";
+import { NetworkIcon } from "@/app/components/NetworkIcon";
 
 type WalletDetailNetworkProperties = {
 	network: Networks.Network;

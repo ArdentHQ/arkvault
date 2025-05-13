@@ -2,14 +2,12 @@ import React from "react";
 
 import { WalletDetailNetwork } from "./WalletDetailNetwork";
 import { translations } from "@/domains/transaction/i18n";
-import { availableNetworksMock } from "@/tests/mocks/networks";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("WalletDetailNetwork", () => {
 	it("should render", () => {
-		const network = availableNetworksMock.find((network) => network.id() === "mainsail.devnet");
-
-		const { asFragment } = render(<WalletDetailNetwork network={network!} />);
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const { asFragment } = render(<WalletDetailNetwork network={profile.activeNetwork()} />);
 
 		expect(screen.getByTestId("WalletDetailNetwork")).toHaveTextContent(translations.CRYPTOASSET);
 

@@ -10,8 +10,8 @@ describe("TransactionRowAddressing", () => {
 		...TransactionFixture,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
-			coin: () => ({ link: () => ({ wallet: () => ({ address: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" }) }) }),
-			currency: () => "DARK",
+			currency: () => "ARK",
+			link: () => ({ wallet: () => ({ address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }) }),
 		}),
 	};
 
@@ -38,7 +38,7 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render registration variant if transaction is validator registration", () => {
-		const registrationFixture = { ...fixture, isDelegateRegistration: () => true, username: () => "test" };
+		const registrationFixture = { ...fixture, isValidatorRegistration: () => true, username: () => "test" };
 		render(<TransactionRowAddressing transaction={registrationFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__vote")).toBeInTheDocument();
@@ -47,12 +47,10 @@ describe("TransactionRowAddressing", () => {
 	it("should render resignation variant if transaction is validator resignation", () => {
 		const resignationFixture = {
 			...fixture,
-			isDelegateResignation: () => true,
+			isValidatorResignation: () => true,
 			wallet: () => ({
 				...TransactionFixture.wallet(),
-				coin: () => ({
-					link: () => ({ wallet: () => ({ address: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" }) }),
-				}),
+				link: () => ({ wallet: () => ({ address: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }) }),
 				username: () => "test",
 			}),
 		};
@@ -69,7 +67,11 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render label with the 'to' prefix if transaction is outgoing", () => {
-		const sentFixture = { ...fixture, isSent: () => true, recipient: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss" };
+		const sentFixture = {
+			...fixture,
+			isSent: () => true,
+			recipient: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		};
 		render(<TransactionRowAddressing transaction={sentFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
@@ -79,7 +81,7 @@ describe("TransactionRowAddressing", () => {
 		const notSentFixture = {
 			...fixture,
 			isSent: () => false,
-			recipient: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
+			recipient: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		};
 		render(<TransactionRowAddressing transaction={notSentFixture as any} profile={profile} />);
 
@@ -87,13 +89,11 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should expand width of address container if the wallet has alias", () => {
-		const aliasFixture = { ...fixture, sender: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" };
+		const aliasFixture = { ...fixture, sender: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" };
 
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass(
-			"w-40 sm:w-40 md:w-32 lg:w-50",
-		);
+		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("grow");
 	});
 
 	it("should render label with the 'Return' prefix if transaction is sent to address itself", () => {
@@ -123,7 +123,11 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render the sender address if the transaction is sent", () => {
-		const sentFixture = { ...fixture, isSent: () => true, sender: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss" };
+		const sentFixture = {
+			...fixture,
+			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			isSent: () => true,
+		};
 		render(
 			<TransactionRowAddressing
 				transaction={sentFixture as any}
@@ -134,7 +138,7 @@ describe("TransactionRowAddressing", () => {
 		);
 
 		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toHaveTextContent(
-			"DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
+			/Mainsail Wallet/,
 		);
 	});
 

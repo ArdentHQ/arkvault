@@ -100,19 +100,17 @@ exports[`TransactionRowMobile > should render 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -176,19 +174,17 @@ exports[`TransactionRowMobile > should render 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -241,7 +237,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount (DARK)
+                  Amount (ARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -382,19 +378,17 @@ exports[`TransactionRowMobile > should render 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -458,19 +452,17 @@ exports[`TransactionRowMobile > should render 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -523,7 +515,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount (DARK)
+                  Amount (ARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -997,7 +989,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                               </span>
                               <span>
                                  
@@ -1066,19 +1058,17 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -1279,7 +1269,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                               </span>
                               <span>
                                  
@@ -1348,19 +1338,17 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
