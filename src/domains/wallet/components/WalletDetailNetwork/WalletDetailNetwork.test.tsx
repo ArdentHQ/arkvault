@@ -1,7 +1,8 @@
 import React from "react";
-import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
-import { translations } from "@/domains/transaction/i18n";
+
 import { WalletDetailNetwork } from "./WalletDetailNetwork";
+import { translations } from "@/domains/transaction/i18n";
+import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("WalletDetailNetwork", () => {
 	it("should render", () => {
@@ -12,6 +13,7 @@ describe("WalletDetailNetwork", () => {
 
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(screen.getByTestId("WalletDetailNetwork").querySelector("svg#ark")).toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
