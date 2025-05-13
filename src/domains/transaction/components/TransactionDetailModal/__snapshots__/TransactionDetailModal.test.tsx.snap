@@ -1,3 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`TransactionDetailModal > should not render if not open 1`] = `<DocumentFragment />`;
