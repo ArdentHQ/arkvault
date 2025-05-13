@@ -37,11 +37,12 @@
 			"updated_at": "34313"
 		},
 		{
-			"address": "0x03BC306C369A55c0336EB003bB07F29E5c150F36",
+			"address": "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			"publicKey": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
 			"balance": "2358490566037735849056603",
 			"nonce": "2",
 			"attributes": {
+				"username": "vault_test_address",
 				"vote": "0x03BC306C369A55c0336EB003bB07F29E5c150F36",
 				"validatorRank": 2,
 				"validatorApproval": 0.0189,

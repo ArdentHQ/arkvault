@@ -29,7 +29,7 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -160,7 +160,7 @@ exports[`ValidatorRow > should render 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -291,7 +291,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -467,7 +467,7 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -598,7 +598,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -720,7 +720,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x3F8eCbF08078F22038235F9834540A960E99085b
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <span>
                    
@@ -842,7 +842,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x137c59f371a7049159ef19a72f908773Ade219b1
+                  0x56F925416Ef2725646442D5E0150088bd7202aCd
                 </span>
                 <span>
                    
@@ -978,7 +978,7 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
@@ -1109,7 +1109,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                   class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
-                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  0xB8Be76b31E402a2D89294Aa107056484Bef94362
                 </span>
                 <span>
                    
