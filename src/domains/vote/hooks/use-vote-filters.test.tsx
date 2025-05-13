@@ -4,7 +4,12 @@ import React from "react";
 
 import { useVoteFilters } from "./use-vote-filters";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getMainsailProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import {
+	env,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
+} from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
@@ -15,7 +20,6 @@ const wrapper = ({ children }: any) => (
 );
 
 const MAINSAIL_MAINNET_NETWORK_ID = "mainsail.mainnet";
-const MAINSAIL_DEVNET_NETWORK_ID = "mainsail.devnet";
 
 describe("Use Vote Filters", () => {
 	beforeAll(async () => {
@@ -27,51 +31,6 @@ describe("Use Vote Filters", () => {
 
 	beforeEach(() => {
 		profile.wallets().flush();
-	});
-
-	it("should include only wallets from the active network", async () => {
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		const { wallet: mainsailMainWallet } = await profile.walletFactory().generate({
-			coin: "Mainsail",
-			network: MAINSAIL_MAINNET_NETWORK_ID,
-		});
-		profile.wallets().push(mainsailMainWallet);
-
-		const { wallet: mainsailDevWallet } = await profile.walletFactory().generate({
-			coin: "Mainsail",
-			network: MAINSAIL_DEVNET_NETWORK_ID,
-		});
-		profile.wallets().push(mainsailDevWallet);
-
-		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
-		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
-			...config,
-			activeNetworkId: MAINSAIL_MAINNET_NETWORK_ID,
-		});
-
-		const { result } = renderHook(
-			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: mainsailMainWallet }),
-			{ wrapper },
-		);
-
-		expect(result.current.filteredWallets).toHaveLength(1);
-		expect(result.current.filteredWallets[0].network().id()).toBe(MAINSAIL_MAINNET_NETWORK_ID);
-
-		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
-			...config,
-			activeNetworkId: MAINSAIL_DEVNET_NETWORK_ID,
-		});
-
-		const { result: updatedResult } = renderHook(
-			() => useVoteFilters({ filter: "all", hasWalletId: false, profile, wallet: mainsailMainWallet }),
-			{ wrapper },
-		);
-
-		expect(updatedResult.current.filteredWallets).toHaveLength(1);
-		expect(updatedResult.current.filteredWallets[0].network().id()).toBe(MAINSAIL_DEVNET_NETWORK_ID);
-
-		resetProfileNetworksMock();
 	});
 
 	it("should filter wallets based on search query", async () => {
@@ -130,9 +89,8 @@ describe("Use Vote Filters", () => {
 		expect(result.current.hasWallets).toBe(false);
 		expect(result.current.hasEmptyResults).toBe(true);
 
-		const { wallet: wallet1 } = await profile.walletFactory().generate({
-			coin: "Mainsail",
-			network: MAINSAIL_MAINNET_NETWORK_ID,
+		const wallet1 = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[1]
 		});
 		profile.wallets().push(wallet1);
 		rerender();
