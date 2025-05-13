@@ -22,7 +22,7 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 
 	return (
 		<section data-testid="ImportWallet__method-step">
-			<div className="mt-4 space-y-2">
+			<div className="space-y-2">
 				{options.map((option, index) => (
 					<Option onSelect={onOptionSelect} option={option} key={index} />
 				))}
