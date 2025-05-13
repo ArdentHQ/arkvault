@@ -84,7 +84,11 @@ export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsP
 				<WalletIcon type="TestNetwork" {...iconProperties} />
 			)}
 			{!exclude?.includes("hasUsername") && wallet.username() && (
-				<WalletIcon type="Username" label={`${t("COMMON.USERNAME")}: ${wallet.username()}`} {...iconProperties} />
+				<WalletIcon
+					type="Username"
+					label={`${t("COMMON.USERNAME")}: ${wallet.username()}`}
+					{...iconProperties}
+				/>
 			)}
 		</>
 	);
