@@ -6,6 +6,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { constantCase } from "@/app/lib/helpers";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/app/components/Button";
 
 interface WalletIconsProperties {
 	exclude?: string[];
@@ -56,16 +57,16 @@ export const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDar
 			content={label || t(`COMMON.${constantCase(type)}` as const as any)}
 			theme={tooltipDarkTheme ? "dark" : undefined}
 		>
-			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
+			<Button variant="transparent" data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
 				<Icon name={getIconName(type)} size={iconSize} />
-			</div>
+			</Button>
 		</Tooltip>
 	);
 };
 
 export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsProperties) => {
 	const { t } = useTranslation();
-	console.log(wallet.username());
+
 	return (
 		<>
 			{!exclude?.includes("isKnown") && wallet.isKnown() && (
