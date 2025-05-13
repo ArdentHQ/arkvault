@@ -18,7 +18,6 @@ describe("getDefaultAlias", () => {
 
 	it("should return a default alias when wallet already exists", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[0],
 			network: "mainsail.devnet",
 		});
@@ -34,7 +33,6 @@ describe("getDefaultAlias", () => {
 
 	it("should not return alias that already exist", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[0],
 			network: "mainsail.devnet",
 		});
@@ -52,7 +50,6 @@ describe("getDefaultAlias", () => {
 
 	it("should increase the alias number regardless of the network", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MAINSAIL_MNEMONICS[0],
 			network: "mainsail.devnet",
 		});
@@ -66,8 +63,7 @@ describe("getDefaultAlias", () => {
 		expect(result).toBe("Address #1");
 
 		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic: MAINSAIL_MNEMONICS[0],
+			mnemonic: MAINSAIL_MNEMONICS[1],
 			network: "mainsail.mainnet",
 		});
 

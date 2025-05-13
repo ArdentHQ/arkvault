@@ -8,7 +8,7 @@ import { Input, InputDefault } from "@/app/components/Input";
 import { CustomNetwork, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useHandleServers } from "@/domains/setting/hooks/use-handle-servers";
 import { Button } from "@/app/components/Button";
-import { useActiveProfile, useNetworkOptions, useValidation } from "@/app/hooks";
+import { useActiveProfile, useDebounce, useNetworkOptions, useValidation } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { Alert } from "@/app/components/Alert";
@@ -45,14 +45,18 @@ const ServerFormModal: React.VFC<{
 
 	const { evmApiEndpoint, transactionApiEndpoint, publicApiEndpoint, network } = watch();
 
+	const [debouncedPublic] = useDebounce(publicApiEndpoint, 500);
+	const [debouncedTransaction] = useDebounce(transactionApiEndpoint, 500);
+	const [debouncedEvm] = useDebounce(evmApiEndpoint, 500);
+
 	const { fetchingDetails, serverHeight } = useHandleServers({
 		clearErrors,
 		errors,
-		evmApiEndpoint,
+		evmApiEndpoint: debouncedEvm,
 		network: networks.find((item) => item.id() === network),
-		publicApiEndpoint,
+		publicApiEndpoint: debouncedPublic,
 		setError,
-		transactionApiEndpoint,
+		transactionApiEndpoint: debouncedTransaction,
 	});
 
 	function updateServerName() {

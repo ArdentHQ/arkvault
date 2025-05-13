@@ -542,19 +542,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -787,19 +785,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -3822,19 +3818,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -3908,19 +3902,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -3992,19 +3984,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -5021,19 +5011,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -5266,19 +5254,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -8301,19 +8287,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -8387,19 +8371,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -8471,19 +8453,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -9500,19 +9480,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -9745,19 +9723,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -12780,19 +12756,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -12866,19 +12840,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -12950,19 +12922,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -13979,19 +13949,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -14224,19 +14192,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -17259,19 +17225,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -17345,19 +17309,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -17429,19 +17391,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -18458,19 +18418,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -18703,19 +18661,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -21738,19 +21694,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -21824,19 +21778,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -21908,19 +21860,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -22937,19 +22887,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -23182,19 +23130,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -26217,19 +26163,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -26303,19 +26247,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -26387,19 +26329,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -27847,19 +27787,17 @@ exports[`Transactions > should hide view more button when there are no next page
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -28092,19 +28030,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -31127,19 +31063,17 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -31213,19 +31147,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -31297,19 +31229,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -32742,19 +32672,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                shahin
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -32987,19 +32915,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -36022,19 +35948,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="font-semibold text-sm text-theme-text"
+                                data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                  data-testid="Address__address"
+                                  class="no-ligatures transition-colors duration-200"
+                                  data-testid="TruncateEnd"
                                 >
-                                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                                  shahin
                                 </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                           <button
@@ -36108,19 +36032,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
@@ -36192,19 +36114,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          <span
+                            class="font-semibold text-sm text-theme-text"
+                            data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
                             >
-                              0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                              shahin
                             </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                          </span>
                         </div>
                       </div>
                       <button
