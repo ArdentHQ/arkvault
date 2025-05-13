@@ -28,7 +28,6 @@ let resetProfileNetworksMock: () => void;
 
 const routePath = "/profiles/:profileId/votes";
 
-const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 const walletID = "ee02b13f-8dbf-4191-a9dc-08d2ab72ec28";
 
 const Wrapper = ({ children }) => {
