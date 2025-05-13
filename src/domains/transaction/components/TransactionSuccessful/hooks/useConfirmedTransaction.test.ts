@@ -29,9 +29,11 @@ describe("useConfirmedTransaction", () => {
 	});
 
 	it("should set isConfirmed to true when transaction is found", async () => {
-		vi.spyOn(wallet.coin().client(), "transaction").mockImplementation(() => ({
-			confirmations: () => BigNumber.make(1),
-			id: () => "123",
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: () => ({
+				confirmations: () => BigNumber.make(1),
+				id: () => "123",
+			}),
 		}));
 
 		const { result } = renderHook(() =>

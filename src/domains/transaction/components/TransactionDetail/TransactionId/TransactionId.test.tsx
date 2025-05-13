@@ -12,7 +12,7 @@ describe("TransactionId", () => {
 				transaction={
 					{
 						explorerLink: () => "https://test.com",
-						id: () => "id",
+						hash: () => "hash",
 						isConfirmed: () => true,
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -33,7 +33,7 @@ describe("TransactionId", () => {
 				transaction={
 					{
 						explorerLink: () => "https://test.com",
-						id: () => "id",
+						hash: () => "hash",
 						isConfirmed: () => true,
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -41,7 +41,7 @@ describe("TransactionId", () => {
 		);
 
 		expect(screen.getByTestId("TransactionId")).toBeInTheDocument();
-		expect(screen.getByText("id")).toBeInTheDocument();
+		expect(screen.getByText("hash")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("explorer-link"));
 		expect(openExternalMock).toHaveBeenCalled();
