@@ -16,7 +16,7 @@ interface WalletIconsProperties {
 }
 
 interface WalletIconProperties {
-	type: "SecondSignature" | "Multisignature" | "TestNetwork" | "Ledger" | "Starred" | "Verified";
+	type: "SecondSignature" | "Multisignature" | "TestNetwork" | "Ledger" | "Starred" | "Verified" | "Username";
 	label?: string;
 	iconColor?: string;
 	iconSize?: Size;
@@ -34,6 +34,10 @@ const getIconName = (type: string) => {
 
 	if (type === "TestNetwork") {
 		return "Code";
+	}
+
+	if (type === "Username") {
+		return "UserCircledCheckMark";
 	}
 
 	return type;
@@ -61,7 +65,7 @@ export const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDar
 
 export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsProperties) => {
 	const { t } = useTranslation();
-
+	console.log(wallet.username());
 	return (
 		<>
 			{!exclude?.includes("isKnown") && wallet.isKnown() && (
@@ -78,6 +82,9 @@ export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsP
 			{!exclude?.includes("isStarred") && wallet.isStarred() && <WalletIcon type="Starred" {...iconProperties} />}
 			{!exclude?.includes("isTestNetwork") && wallet.network().isTest() && (
 				<WalletIcon type="TestNetwork" {...iconProperties} />
+			)}
+			{!exclude?.includes("hasUsername") && wallet.username() && (
+				<WalletIcon type="Username" label={`${t("COMMON.USERNAME")}: ${wallet.username()}`} {...iconProperties} />
 			)}
 		</>
 	);
