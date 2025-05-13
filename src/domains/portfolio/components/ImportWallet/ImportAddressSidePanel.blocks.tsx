@@ -19,10 +19,7 @@ export interface StepHeaderConfig {
 	titleIcon?: React.ReactNode;
 }
 
-export function useStepHeaderConfig(
-	step: ImportAddressStep,
-	importOption?: ImportOption,
-): StepHeaderConfig {
+export function useStepHeaderConfig(step: ImportAddressStep, importOption?: ImportOption): StepHeaderConfig {
 	const { t } = useTranslation();
 
 	switch (step) {
@@ -76,12 +73,9 @@ export function useStepHeaderConfig(
 	}
 }
 
-export function useLedgerStepHeaderConfig(
-	step: LedgerTabStep,
-	importOption?: ImportOption,
-): StepHeaderConfig {
+export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: ImportOption): StepHeaderConfig {
 	const { t } = useTranslation();
-	
+
 	switch (step) {
 		case LedgerTabStep.LedgerConnectionStep: {
 			return {
