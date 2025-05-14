@@ -203,6 +203,8 @@ describe("SendTransfer", () => {
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
+		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
+
 		server.use(
 			requestMock(
 				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
@@ -972,11 +974,11 @@ describe("SendTransfer", () => {
 		await userEvent.click(screen.getByTestId(sendAllID));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
 
-		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+		await userEvent.click(continueButton());
 
 		// Fee
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
@@ -984,14 +986,12 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
+		// Review Step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
 		await waitFor(() => {
 			expect(continueButton()).not.toBeDisabled();
 		});
-
-		await userEvent.click(continueButton());
-
-		// Review Step
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		expect(continueButton()).not.toBeDisabled();
 
@@ -1058,22 +1058,16 @@ describe("SendTransfer", () => {
 		await userEvent.click(screen.getByTestId(sendAllID));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"), "test memo");
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
+		// Step 2
+		expect(continueButton()).not.toBeDisabled();
 
-		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+		await userEvent.click(continueButton());
 
 		// Fee
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
-
-		// Step 2
-		expect(continueButton()).not.toBeDisabled();
-
-		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
