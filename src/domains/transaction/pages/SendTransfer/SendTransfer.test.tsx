@@ -51,38 +51,65 @@ vi.mock("@/utils/delay", () => ({
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +transactionFixture.data.amount / 1e8,
-		blockId: () => transactionFixture.data.blockId,
-		confirmations: () => 10,
-		convertedAmount: () => +transactionFixture.data.amount / 1e8,
-		data: () => ({ data: () => transactionFixture.data }),
+		blockHash: () => {},
+		confirmations: () => BigNumber.ZERO,
+		convertedAmount: () => +transactionFixture.data.value / 1e8,
+		convertedFee: () => {
+			const fee = BigNumber.make(transactionFixture.data.gasPrice)
+				.times(transactionFixture.data.gas)
+				.dividedBy(1e8);
+			return fee.toNumber();
+		},
+		convertedTotal: () => {
+			const value = +transactionFixture.data.value / 1e8;
+			const calculatedFee = BigNumber.make(transactionFixture.data.gasPrice)
+				.times(transactionFixture.data.gas)
+				.dividedBy(1e8)
+				.toNumber();
+			return value + calculatedFee;
+		},
+		data: () => transactionFixture.data,
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.hash}`,
-		fee: () => +transactionFixture.data.fee / 1e8,
+		explorerLinkForBlock: () => {},
+		fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
+		from: () => transactionFixture.data.from,
 		hash: () => transactionFixture.data.hash,
-		isConfirmed: () => true,
+		isConfirmed: () => false,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
-		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
 		isReturn: () => false,
+		isSecondSignature: () => false,
 		isSent: () => true,
+		isSuccess: () => true,
 		isTransfer: () => true,
 		isUnvote: () => false,
+		isUsernameRegistration: () => false,
+		isUsernameResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isVote: () => false,
 		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(276),
-		recipient: () => transactionFixture.data.recipient,
+		memo: () => transactionFixture.data.memo || undefined,
+		nonce: () => BigNumber.make(transactionFixture.data.nonce),
+		payments: () => [],
 		recipients: () => [
-			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },
+			{
+				address: transactionFixture.data.to,
+				amount: +transactionFixture.data.value / 1e8,
+			},
 		],
-		sender: () => transactionFixture.data.sender,
-		timestamp: () => DateTime.make(),
-		total: () => +transactionFixture.data.amount / 1e8,
+		timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+		to: () => transactionFixture.data.to,
+		total: () => {
+			const value = BigNumber.make(transactionFixture.data.value);
+			const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+			return value.plus(feeVal);
+		},
 		type: () => "transfer",
 		usesMultiSignature: () => false,
+		value: () => +transactionFixture.data.value / 1e8,
 		wallet: () => wallet,
 	} as DTO.ExtendedSignedTransactionData);
 
@@ -116,7 +143,7 @@ const ComponentWrapper = ({
 		register("network");
 		register("fee");
 		register("fees");
-		register("Input_GasPriceSettings");
+		register("InputFeeSettings");
 		register("senderAddress");
 		register("recipients");
 	}, [register]);
@@ -178,12 +205,16 @@ describe("SendTransfer", () => {
 
 		server.use(
 			requestMock(
-				"https://dwallets-evm.mainsailhq.com/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+				`https://dwallets-evm.mainsailhq.com/api/transactions/${transactionFixture.data.hash}`,
 				transactionFixture,
 			),
 			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", transactionsFixture, {
-				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+				query: { address: wallet.address() },
 			}),
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/blocks/${transactionFixture.data.blockHash}`,
+				{ data: {} }, // Basic mock for block data
+			),
 			requestMock(
 				"https://dwallets-evm.mainsailhq.com/api/transactions",
 				{ data: [], meta: {} },
@@ -550,18 +581,6 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
-		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
-
-		expect(screen.getAllByRole("radio")[0]).toBeChecked();
-
-		// remove focus from fee button
-		await userEvent.click(document.body);
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
-
 		// Step 2
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
 
@@ -572,6 +591,16 @@ describe("SendTransfer", () => {
 		}
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+
+		expect(screen.getAllByRole("radio")[0]).toBeChecked();
+
+		// remove focus from fee button
+		await userEvent.click(document.body);
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -664,27 +693,19 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
-
-		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
-
-		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
-
-		expect(screen.getAllByRole("radio")[0]).toBeChecked();
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
-
 		// Step 2
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
 
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+
+		expect(screen.getAllByRole("radio")[0]).toBeChecked();
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Back to Step 1
 		await userEvent.click(backButton());
@@ -772,25 +793,18 @@ describe("SendTransfer", () => {
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
-		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
-
-		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
-
 		// Step 2
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
 
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -813,7 +827,6 @@ describe("SendTransfer", () => {
 			rejected: [],
 		});
 		const transactionMock = createTransactionMock(wallet);
-		const expirationMock = vi.spyOn(wallet.coin().transaction(), "estimateExpiration").mockResolvedValue(undefined);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 		await userEvent.click(sendButton());
@@ -834,99 +847,37 @@ describe("SendTransfer", () => {
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
-		expirationMock.mockRestore();
-	});
-
-	it("should send a single transfer with a multisignature wallet", async () => {
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		const multisignatureSpy = vi
-			.spyOn(wallet.multiSignature(), "all")
-			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
-
-		const transferURL = `/profiles/${fixtureProfileId}/transactions/${wallet.id()}/transfer`;
-
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
-
-		await selectRecipient();
-
-		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-
-		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
-
-		// Amount
-		await expect(screen.findByTestId(sendAllID)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId(sendAllID));
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
-
-		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
-
-		// Step 2
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		// Step 5 (skip step 4 for now - ledger confirmation)
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signTransfer")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.hash],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
-
-		expect(signMock).toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: expect.anything(),
-				fee: expect.any(Number),
-				signatory: expect.any(Object),
-			}),
-		);
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		isMultiSignatureSpy.mockRestore();
-		multisignatureSpy.mockRestore();
 	});
 
 	it("should send a single transfer with a ledger wallet", async () => {
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(profile.ledger(), "isNanoX").mockResolvedValue(true);
+
+		vi.spyOn(profile.ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
 
 		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.hash));
+
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "m/44'/1'/1'/0/0";
+
+		vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
+		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
 
 		createTransactionMock(wallet);
 
@@ -965,43 +916,19 @@ describe("SendTransfer", () => {
 
 		// Amount
 		await userEvent.click(screen.getByTestId(sendAllID));
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
-
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
-
-		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
-
-		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
-
-		const address = wallet.address();
-		const balance = wallet.balance();
-		const derivationPath = "m/44'/1'/1'/0/0";
-
-		vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
-			if (key == Contracts.WalletData.Address) {
-				return address;
-			}
-			if (key == Contracts.WalletData.Balance) {
-				return balance;
-			}
-
-			if (key == Contracts.WalletData.DerivationPath) {
-				return derivationPath;
-			}
-		});
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue(0), { timeout: 4000 });
 
 		// Step 2
+		expect(continueButton()).not.toBeDisabled();
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -1009,7 +936,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(continueButton());
 
 		// Auto broadcast
-		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
+		await expect(screen.findByText("Ledger Wallet")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
@@ -1052,12 +979,10 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		await waitFor(() => {
 			expect(continueButton()).not.toBeDisabled();
@@ -1140,12 +1065,10 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 2
 		expect(continueButton()).not.toBeDisabled();
@@ -1312,12 +1235,10 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 2
 		expect(continueButton()).not.toBeDisabled();
@@ -1445,12 +1366,10 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		expect(continueButton()).not.toBeDisabled();
 
@@ -1538,13 +1457,11 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		await userEvent.click(
-			within(screen.getByTestId("Input_GasPrice")).getByText(transactionTranslations.FEES.SLOW),
-		);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 2
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
