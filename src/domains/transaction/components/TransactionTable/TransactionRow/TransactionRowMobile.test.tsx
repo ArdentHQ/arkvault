@@ -28,8 +28,6 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 				username: () => "test_username",
 			}),
 		};
-
-
 	});
 
 	it("should render", () => {
@@ -54,17 +52,15 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			<table>
 				<tbody>
 					<TransactionRowMobile
-						transaction={
-							{
-								...fixture,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "BTC",
-									isLedger: () => false,
-									network: () => ({ isTest: () => false }),
-								}),
-							}
-						}
+						transaction={{
+							...fixture,
+							wallet: () => ({
+								...fixture.wallet(),
+								currency: () => "BTC",
+								isLedger: () => false,
+								network: () => ({ isTest: () => false }),
+							}),
+						}}
 						profile={profile}
 						isLoading
 					/>
@@ -81,20 +77,18 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			<table>
 				<tbody>
 					<TransactionRowMobile
-						transaction={
-							{
-								...fixture,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "DARK",
-									isLedger: () => false,
-									network: () => ({
-										coin: () => "DARK",
-										id: () => "ark.devnet",
-									}),
+						transaction={{
+							...fixture,
+							wallet: () => ({
+								...fixture.wallet(),
+								currency: () => "DARK",
+								isLedger: () => false,
+								network: () => ({
+									coin: () => "DARK",
+									id: () => "ark.devnet",
 								}),
-							}
-						}
+							}),
+						}}
 						exchangeCurrency="DARK"
 						profile={profile}
 					/>
