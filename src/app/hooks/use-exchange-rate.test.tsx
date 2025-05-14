@@ -6,7 +6,13 @@ import { env, WithProviders, getDefaultProfileId } from "@/utils/testing-library
 
 describe("useExchangeRate", () => {
 	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
-	const profile = env.profiles().findById(getDefaultProfileId());
+	let profile: IProfile;
+
+	beforeAll(async () => {
+		await env.boot()
+		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+	})
 
 	const renderExchangeRate = () =>
 		renderHook(
@@ -22,7 +28,7 @@ describe("useExchangeRate", () => {
 		);
 
 	it("should return a function to convert values based on exchange rates", () => {
-		vi.spyOn(env.exchangeRates(), "exchange").mockReturnValueOnce(1);
+		vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValueOnce(1);
 
 		const { result } = renderExchangeRate();
 
