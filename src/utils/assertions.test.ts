@@ -2,6 +2,7 @@
 import { Coins, Networks } from "@/app/lib/sdk";
 import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
+import { env } from "@/utils/testing-library";
 
 import {
 	assertArray,
@@ -21,7 +22,7 @@ describe("#assertProfile", () => {
 					data: "{}",
 					id: "id",
 					name: "John Doe",
-				}),
+				}, env),
 			),
 		).not.toThrow();
 	});
