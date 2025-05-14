@@ -157,13 +157,13 @@ export const SidePanel = ({
 												</div>
 											</div>
 
-											<div className="flex flex-col gap-4 p-6">
+											<div className="flex flex-col gap-4 px-6 py-4">
 												{subtitle && (
 													<div className="text-sm font-normal leading-5 text-theme-secondary-text md:text-base">
 														{subtitle}
 													</div>
 												)}
-												{children}
+												<div className="flex flex-col">{children}</div>
 											</div>
 										</div>
 									</div>
