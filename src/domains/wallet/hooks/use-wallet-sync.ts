@@ -26,7 +26,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 
 		if (network.allowsVoting()) {
 			try {
-				profile.validators().all(network.coin(), network.id());
+				profile.validators().all(network.id());
 			} catch {
 				// Sync network validators for the first time
 				await profile.validators().sync(profile, network.id());

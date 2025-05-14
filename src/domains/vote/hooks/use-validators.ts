@@ -28,7 +28,7 @@ export const useValidators = ({
 		async (wallet) => {
 			setIsLoadingValidators(true);
 			await profile.validators().sync(profile, wallet.networkId());
-			const validators = profile.validators().all(wallet.coinId(), wallet.networkId());
+			const validators = profile.validators().all(wallet.networkId());
 
 			setValidators(validators);
 			setIsLoadingValidators(false);

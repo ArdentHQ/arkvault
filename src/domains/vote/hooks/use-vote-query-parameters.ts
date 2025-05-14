@@ -34,7 +34,7 @@ export const useValidatorsFromURL = ({
 			setIsLoading(true);
 
 			try {
-				profile.validators().all(network.coin(), network.id());
+				profile.validators().all(network.id());
 			} catch {
 				await profile.validators().sync(profile, network.id());
 			}
@@ -42,7 +42,7 @@ export const useValidatorsFromURL = ({
 			if (unvoteValidators.length > 0 && unvotes.length === 0) {
 				const unvotesList: Contracts.VoteRegistryItem[] = unvoteValidators?.map((unvote) => ({
 					amount: unvote.amount,
-					wallet: profile.validators().findByAddress(network.coin(), network.id(), unvote.validatorAddress),
+					wallet: profile.validators().findByAddress(network.id(), unvote.validatorAddress),
 				}));
 
 				setUnvotes(unvotesList);
@@ -51,7 +51,7 @@ export const useValidatorsFromURL = ({
 			if (voteValidators.length > 0 && votes.length === 0) {
 				const votesList: Contracts.VoteRegistryItem[] = voteValidators?.map((vote) => ({
 					amount: vote.amount,
-					wallet: profile.validators().findByAddress(network.coin(), network.id(), vote.validatorAddress),
+					wallet: profile.validators().findByAddress(network.id(), vote.validatorAddress),
 				}));
 
 				setVotes(votesList);
