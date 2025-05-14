@@ -250,7 +250,7 @@ export const ImportAddressesSidePanel = ({
 			return ledgerActiveTab - 2;
 		}
 		if (!isMethodStep) {
-			return activeTab;
+			return activeTab - 1;
 		}
 		return 1;
 	};
@@ -264,8 +264,8 @@ export const ImportAddressesSidePanel = ({
 			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
 			onMountChange={onMountChange}
-			hasSteps
-			totalSteps={isMethodStep ? 2 : allSteps.length}
+			hasSteps={!isMethodStep}
+			totalSteps={allSteps.length}
 			activeStep={getActiveStep()}
 		>
 			<Form context={form} data-testid="ImportWallet__form">
