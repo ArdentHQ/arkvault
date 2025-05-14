@@ -91,12 +91,15 @@ export class ProfileRepository implements IProfileRepository {
 
 	/** {@inheritDoc IProfileRepository.import} */
 	public async import(data: string, password?: string): Promise<Profile> {
-		const result = new Profile({
-			data,
-			id: UUID.random(),
-			name: "",
-			password,
-		}, this.#env);
+		const result = new Profile(
+			{
+				data,
+				id: UUID.random(),
+				name: "",
+				password,
+			},
+			this.#env,
+		);
 
 		await new ProfileImporter(result).import(password);
 
@@ -111,7 +114,6 @@ export class ProfileRepository implements IProfileRepository {
 	/** {@inheritDoc IProfileRepository.restore} */
 	public async restore(profile: IProfile, password?: string): Promise<void> {
 		await new ProfileImporter(profile).import(password);
-
 
 		profile.status().markAsRestored();
 	}
