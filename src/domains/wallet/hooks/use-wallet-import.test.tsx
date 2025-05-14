@@ -223,7 +223,7 @@ describe("useWalletImport", () => {
 		expect(importedWallet).toBeInstanceOf(Wallet);
 		expect(importedWallet.address()).toBeDefined();
 
-		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()], importedWallet.network());
+		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()]);
 	});
 
 	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
@@ -245,6 +245,6 @@ describe("useWalletImport", () => {
 		expect(importedWallet).toBeInstanceOf(Wallet);
 		expect(importedWallet.address()).toBeDefined();
 
-		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()], importedWallet.network());
+		expect(setSelectedAddressesMock).toHaveBeenCalledWith([importedWallet.address()]);
 	});
 });

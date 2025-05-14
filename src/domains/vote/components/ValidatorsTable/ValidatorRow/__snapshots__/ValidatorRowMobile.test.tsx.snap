@@ -66,7 +66,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
                     </span>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      0x3F8eCbF08078F22038235F9834540A960E99085b
+                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
                     </span>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                       data-testid="Address__address"
                     >
-                      0x137c59f371a7049159ef19a72f908773Ade219b1
+                      0x56F925416Ef2725646442D5E0150088bd7202aCd
                     </span>
                   </div>
                 </div>

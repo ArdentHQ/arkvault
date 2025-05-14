@@ -6,6 +6,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { constantCase } from "@/app/lib/helpers";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/app/components/Button";
 
 interface WalletIconsProperties {
 	exclude?: string[];
@@ -16,7 +17,7 @@ interface WalletIconsProperties {
 }
 
 interface WalletIconProperties {
-	type: "SecondSignature" | "Multisignature" | "TestNetwork" | "Ledger" | "Starred" | "Verified";
+	type: "SecondSignature" | "Multisignature" | "TestNetwork" | "Ledger" | "Starred" | "Verified" | "Username";
 	label?: string;
 	iconColor?: string;
 	iconSize?: Size;
@@ -36,6 +37,10 @@ const getIconName = (type: string) => {
 		return "Code";
 	}
 
+	if (type === "Username") {
+		return "UserCircledCheckMark";
+	}
+
 	return type;
 };
 
@@ -52,9 +57,13 @@ export const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDar
 			content={label || t(`COMMON.${constantCase(type)}` as const as any)}
 			theme={tooltipDarkTheme ? "dark" : undefined}
 		>
-			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
+			<Button
+				variant="transparent"
+				data-testid={`WalletIcon__${type}`}
+				className={`inline-block p-1 ${iconColor || getIconColor(type)}`}
+			>
 				<Icon name={getIconName(type)} size={iconSize} />
-			</div>
+			</Button>
 		</Tooltip>
 	);
 };
@@ -78,6 +87,13 @@ export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsP
 			{!exclude?.includes("isStarred") && wallet.isStarred() && <WalletIcon type="Starred" {...iconProperties} />}
 			{!exclude?.includes("isTestNetwork") && wallet.network().isTest() && (
 				<WalletIcon type="TestNetwork" {...iconProperties} />
+			)}
+			{!exclude?.includes("hasUsername") && wallet.username() && (
+				<WalletIcon
+					type="Username"
+					label={`${t("COMMON.USERNAME")}: ${wallet.username()}`}
+					{...iconProperties}
+				/>
 			)}
 		</>
 	);

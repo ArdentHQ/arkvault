@@ -18,12 +18,12 @@ import { renderResponsive } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
-let defaultDelegate: {
+let defaultValidator: {
 	address: string;
 	publicKey?: string;
 	explorerLink: string;
-	isDelegate: boolean;
-	isResignedDelegate: boolean;
+	isValidator: boolean;
+	isResignedValidator: boolean;
 	governanceIdentifier: string;
 };
 
@@ -34,12 +34,12 @@ describe("WalletVote", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 
-		defaultDelegate = {
+		defaultValidator = {
 			address: wallet.address(),
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: false,
-			isResignedDelegate: false,
+			isResignedValidator: false,
+			isValidator: false,
 			publicKey: wallet.publicKey(),
 		};
 
@@ -70,7 +70,7 @@ describe("WalletVote", () => {
 		ledgerMock.mockRestore();
 	});
 
-	it("should render skelethon if loading", async () => {
+	it("should render skeleton if loading", async () => {
 		const { asFragment } = render(
 			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={true} />,
 		);
@@ -147,14 +147,14 @@ describe("WalletVote", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
+					...defaultValidator,
 					rank: 1,
 				}),
 			},
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
+					...defaultValidator,
 					rank: 2,
 				}),
 			},
@@ -182,14 +182,14 @@ describe("WalletVote", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
+					...defaultValidator,
 					rank: 1,
 				}),
 			},
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
+					...defaultValidator,
 					rank: 2,
 				}),
 			},
@@ -239,11 +239,11 @@ describe("WalletVote", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		it("should render a vote for an active delegate", async () => {
+		it("should render a vote for an active validator", async () => {
 			const delegate = {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
+					...defaultValidator,
 					rank: 10,
 				}),
 			};
@@ -274,7 +274,7 @@ describe("WalletVote", () => {
 			const delegate = {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
+					...defaultValidator,
 					rank: 54,
 				}),
 			};
@@ -296,12 +296,12 @@ describe("WalletVote", () => {
 			const { result } = renderHook(() => useTranslation());
 			const { t } = result.current;
 
-			const delegate = {
+			const validator = {
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 				}),
 			};
 
@@ -310,7 +310,7 @@ describe("WalletVote", () => {
 					wallet={wallet}
 					wallets={[wallet]}
 					onButtonClick={vi.fn()}
-					votes={[delegate]}
+					votes={[validator]}
 					isLoadingVotes={false}
 				/>,
 			);
@@ -331,7 +331,6 @@ describe("WalletVote", () => {
 
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
-		await wallet.synchroniser().coin();
 
 		const votes = [];
 
@@ -361,17 +360,17 @@ describe("WalletVote", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: true,
+					...defaultValidator,
+					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: true,
+					...defaultValidator,
+					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
@@ -424,13 +423,13 @@ describe("DelegateName", () => {
 
 	it("should render a username", () => {
 		render(<DelegateName delegateName={"TestingUsername"} isUsername={true} />);
-		expect(screen.getByText("Testi...rname")).toBeInTheDocument();
+		expect(screen.getByText("TestingUsername")).toBeInTheDocument();
 	});
 });
 
 describe("DelegateStatus", () => {
 	it("should render stand by", () => {
-		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		render(<DelegateStatus votes={votes} activeValidators={10} />);
 		expect(screen.getByText("Standby")).toBeInTheDocument();
 	});
 
@@ -439,14 +438,14 @@ describe("DelegateStatus", () => {
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: true,
+					...defaultValidator,
+					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		render(<DelegateStatus votes={votes} activeValidators={10} />);
 		expect(screen.getByText("Resigned")).toBeInTheDocument();
 	});
 
@@ -455,15 +454,15 @@ describe("DelegateStatus", () => {
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		render(<DelegateStatus votes={votes} activeValidators={10} />);
 		expect(screen.getByText("Active")).toBeInTheDocument();
 	});
 
@@ -472,32 +471,32 @@ describe("DelegateStatus", () => {
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 					rank: 52,
 				}),
 			},
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: true,
+					...defaultValidator,
+					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		render(<DelegateStatus votes={votes} activeValidators={10} />);
 
 		expect(screen.getByText("Active 1")).toBeInTheDocument();
 		expect(screen.getByText("/ Standby 1")).toBeInTheDocument();
@@ -509,32 +508,32 @@ describe("DelegateStatus", () => {
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 					rank: 52,
 				}),
 			},
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: true,
+					...defaultValidator,
+					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		render(<DelegateStatus votes={votes} activeValidators={10} />);
 
 		expect(screen.getByText("& Resigned 1")).toBeInTheDocument();
 	});
@@ -544,23 +543,23 @@ describe("DelegateStatus", () => {
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: false,
+					...defaultValidator,
+					isResignedValidator: false,
+					isValidator: true,
 					rank: 1,
 				}),
 			},
 			{
 				amount: 1,
 				wallet: new ReadOnlyWallet({
-					...defaultDelegate,
-					isDelegate: true,
-					isResignedDelegate: true,
+					...defaultValidator,
+					isResignedValidator: true,
+					isValidator: true,
 				}),
 			},
 		];
 
-		render(<DelegateStatus votes={votes} activeDelegates={10} />);
+		render(<DelegateStatus votes={votes} activeValidators={10} />);
 
 		expect(screen.getByText("/ Resigned 1")).toBeInTheDocument();
 	});
