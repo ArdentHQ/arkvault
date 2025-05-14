@@ -44,7 +44,7 @@ import { TransactionAggregate } from "./transaction.aggregate.js";
 import { WalletAggregate } from "./wallet.aggregate.js";
 import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
-import { Contracts } from "./index.js";
+import { Contracts, Environment } from "./index.js";
 import { UsernamesService } from "./usernames.service.js";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 import { ValidatorService } from "./validator.service.js";
@@ -236,7 +236,7 @@ export class Profile implements IProfile {
 	 */
 	readonly #status: IProfileStatus;
 
-	public constructor(data: IProfileInput) {
+	public constructor(data: IProfileInput, env: Environment) {
 		this.#attributes = new AttributeBag<IProfileInput>(data);
 		this.#contactRepository = new ContactRepository(this);
 		this.#dataRepository = new DataRepository();
@@ -258,7 +258,7 @@ export class Profile implements IProfile {
 		this.#status = new ProfileStatus();
 		this.#knownWalletService = new KnownWalletService();
 		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
-		this.#exchangeRateService = new ExchangeRateService();
+		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
 	}
 
 	/** {@inheritDoc IProfile.id} */

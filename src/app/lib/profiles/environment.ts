@@ -150,7 +150,7 @@ export class Environment {
 	public reset(options?: EnvironmentOptions): void {
 		this.#data = new DataRepository();
 		this.#fees = new ProfileFeeService();
-		this.#profiles = new ProfileRepository();
+		this.#profiles = new ProfileRepository(this);
 		this.#knownWalletService = new KnownWalletService();
 		this.#wallets = new WalletService();
 
@@ -176,5 +176,9 @@ export class Environment {
 	public setMigrations(schemas: object, version: string): void {
 		container.constant(Identifiers.MigrationSchemas, schemas);
 		container.constant(Identifiers.MigrationVersion, version);
+	}
+
+	public storage(): Storage {
+		return this.#storage;
 	}
 }
