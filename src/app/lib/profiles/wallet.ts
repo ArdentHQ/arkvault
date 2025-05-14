@@ -257,11 +257,13 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.username} */
 	public username(): string | undefined {
-		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
+		const attributes = this.#attributes.get<Contracts.WalletData>("wallet")
+
+		if (!attributes) {
 			throw new Error(ERR_NOT_SYNCED);
 		}
 
-		return this.#attributes.get<Contracts.WalletData>("wallet").username();
+		return attributes.username();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.validatorPublicKey} */
@@ -497,7 +499,6 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.markAsFullyRestored} */
 	public markAsFullyRestored(): void {
-		this.#attributes.forget("isMissingCoin");
 		this.#attributes.forget("isMissingNetwork");
 
 		this.#attributes.set("restorationState", {
@@ -522,11 +523,6 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.hasBeenPartiallyRestored} */
 	public hasBeenPartiallyRestored(): boolean {
 		return this.#attributes.get("restorationState").partial;
-	}
-
-	/** {@inheritDoc IReadWriteWallet.isMissingCoin} */
-	public isMissingCoin(): boolean {
-		return this.#attributes.has("isMissingCoin");
 	}
 
 	/** {@inheritDoc IReadWriteWallet.markAsMissingNetwork} */
