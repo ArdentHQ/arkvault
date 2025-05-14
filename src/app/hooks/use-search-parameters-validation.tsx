@@ -70,7 +70,7 @@ const validatorFromSearchParameters = ({ profile, network, searchParameters }: P
 
 	if (validatorName) {
 		try {
-			return profile.validators().findByUsername(network.coin(), network.id(), validatorName);
+			return profile.validators().findByUsername(network.id(), validatorName);
 		} catch {
 			//
 		}
@@ -78,7 +78,7 @@ const validatorFromSearchParameters = ({ profile, network, searchParameters }: P
 
 	if (validatorPublicKey) {
 		try {
-			return profile.validators().findByPublicKey(network.coin(), network.id(), validatorPublicKey);
+			return profile.validators().findByPublicKey(network.id(), validatorPublicKey);
 		} catch {
 			//
 		}
