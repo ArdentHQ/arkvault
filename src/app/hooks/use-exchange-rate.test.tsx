@@ -9,10 +9,10 @@ describe("useExchangeRate", () => {
 	let profile: IProfile;
 
 	beforeAll(async () => {
-		await env.boot()
+		await env.boot();
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
-	})
+	});
 
 	const renderExchangeRate = () =>
 		renderHook(
