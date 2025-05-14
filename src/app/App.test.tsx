@@ -8,14 +8,7 @@ import { toasts } from "@/app/services";
 import { translations as errorTranslations } from "@/domains/error/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import * as themeUtils from "@/utils/theme";
-import {
-	env,
-	getDefaultPassword,
-	getPasswordProtectedProfileId,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getPasswordProtectedProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
@@ -259,7 +252,6 @@ describe("App", () => {
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 		).resolves.toBeVisible();
 
-
 		expect(history.location.pathname).toBe("/");
 
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
@@ -287,5 +279,4 @@ describe("App", () => {
 		toastSpy.mockRestore();
 		vi.restoreAllMocks();
 	});
-
 });

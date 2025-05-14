@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/no-null */
-import { Coins, Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
 import { env } from "@/utils/testing-library";
@@ -18,11 +18,14 @@ describe("#assertProfile", () => {
 	it("should pass with a profile instance", () => {
 		expect(() =>
 			assertProfile(
-				new Profile({
-					data: "{}",
-					id: "id",
-					name: "John Doe",
-				}, env),
+				new Profile(
+					{
+						data: "{}",
+						id: "id",
+						name: "John Doe",
+					},
+					env,
+				),
 			),
 		).not.toThrow();
 	});
