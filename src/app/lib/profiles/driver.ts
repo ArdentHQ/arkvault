@@ -39,8 +39,6 @@ export const defaultHostSelector: NetworkHostSelectorFactory =
 
 export class DriverFactory {
 	public static make(container: IoC.Container, options: EnvironmentOptions): void {
-		container.constant(Identifiers.HttpClient, options.httpClient);
-
 		container.singleton(Identifiers.ExchangeRateService, ExchangeRateService);
 	}
 }
