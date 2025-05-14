@@ -1,11 +1,11 @@
 import { get, has, set, unset, ValidatorSchema } from "@/app/lib/helpers";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { NetworkHostSelectorFactory } from "@/app/lib/profiles";
-import { Coins, Helpers, Networks } from ".";
+import { Helpers, Networks } from ".";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 export const hostSelector: NetworkHostSelectorFactory =
-	(profile: IProfile) => (configRepository: Coins.ConfigRepository, type?: Networks.NetworkHostType) => {
+	(profile: IProfile) => (configRepository: ConfigRepository, type?: Networks.NetworkHostType) => {
 		type ??= "full";
 
 		const defaultHosts = Helpers.filterHostsFromConfig(configRepository, type);

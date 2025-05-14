@@ -2,26 +2,10 @@
 
 import { BigNumber } from "@/app/lib/helpers";
 
-import { BigNumberService } from "./big-number.service";
-import { IContainer } from "./container.contracts";
 import { KeyValuePair, WalletBalance } from "./contracts";
 import { NotImplemented } from "./exceptions";
-import { BindingType } from "./service-provider.contract";
 
 export class AbstractWalletData {
-	protected readonly bigNumberService: BigNumberService;
-	protected data!: KeyValuePair;
-
-	public constructor(container: IContainer) {
-		this.bigNumberService = container.get(BindingType.BigNumberService);
-	}
-
-	public fill(data: KeyValuePair) {
-		this.data = data;
-
-		return this;
-	}
-
 	// Wallet
 	public primaryKey(): string {
 		throw new NotImplemented(this.constructor.name, this.primaryKey.name);
@@ -99,50 +83,5 @@ export class AbstractWalletData {
 			username: this.username(),
 			votes: this.votes(),
 		};
-	}
-
-	public toHuman(): KeyValuePair {
-		const { available, fees, locked, tokens } = this.balance();
-
-		const balance: {
-			available: number;
-			fees: number;
-			locked?: number | undefined;
-			tokens?: Record<string, number> | undefined;
-		} = {
-			available: available.toHuman(),
-			fees: fees.toHuman(),
-			locked: undefined,
-			tokens: undefined,
-		};
-
-		if (locked) {
-			balance.locked = locked.toHuman();
-		}
-
-		if (tokens) {
-			balance.tokens = {};
-
-			for (const [key, value] of Object.entries(tokens)) {
-				balance.tokens[key] = value.toHuman();
-			}
-		}
-
-		return {
-			...this.toObject(),
-			balance,
-		};
-	}
-
-	public raw(): KeyValuePair {
-		return this.data;
-	}
-
-	public hasPassed(): boolean {
-		return Object.keys(this.data).length > 0;
-	}
-
-	public hasFailed(): boolean {
-		return !this.hasPassed();
 	}
 }

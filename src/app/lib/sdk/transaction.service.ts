@@ -15,31 +15,10 @@ import {
 	ValidatorResignationInput,
 } from "./transaction.contract";
 
-import { BigNumberService } from "./big-number.service";
-import { BindingType } from "./service-provider.contract";
-import { ClientService } from "./client.contract";
-import { ConfigRepository } from "./coins";
-import { HttpClient } from "./http";
-import { IContainer } from "./container.contracts";
-import { NetworkHostSelector } from "./network.models";
 import { NotImplemented } from "./exceptions";
 import { SignedTransactionData } from "./contracts";
 
 export class AbstractTransactionService implements Contract {
-	protected readonly bigNumberService: BigNumberService;
-	protected readonly clientService: ClientService;
-	protected readonly configRepository: ConfigRepository;
-	protected readonly httpClient: HttpClient;
-	protected readonly hostSelector: NetworkHostSelector;
-
-	public constructor(container: IContainer) {
-		this.bigNumberService = container.get(BindingType.BigNumberService);
-		this.clientService = container.get(BindingType.ClientService);
-		this.configRepository = container.get(BindingType.ConfigRepository);
-		this.httpClient = container.get(BindingType.HttpClient);
-		this.hostSelector = container.get(BindingType.NetworkHostSelector);
-	}
-
 	public async transfer(input: TransferInput): Promise<SignedTransactionData> {
 		throw new NotImplemented(this.constructor.name, this.transfer.name);
 	}
@@ -74,9 +53,5 @@ export class AbstractTransactionService implements Contract {
 
 	public async estimateExpiration(value?: string): Promise<string | undefined> {
 		return undefined;
-	}
-
-	protected toSatoshi(value: NumberLike): BigNumber {
-		return this.bigNumberService.make(value).toSatoshi();
 	}
 }

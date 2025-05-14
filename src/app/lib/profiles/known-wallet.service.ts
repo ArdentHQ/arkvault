@@ -1,7 +1,7 @@
 import { Networks, Services } from "@/app/lib/sdk";
 
 import { HttpClient } from "@/app/services/HttpClient.js";
-import { ConfigKey } from "@/app/lib/sdk/coins.js";
+import { ConfigKey } from "@/app/lib/sdk/config";
 
 type KnownWalletRegistry = Record<string, Services.KnownWallet[]>;
 

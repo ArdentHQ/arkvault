@@ -1,4 +1,4 @@
-import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
@@ -376,7 +376,7 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.manifest} */
-	public manifest(): Coins.Manifest {
+	public manifest(): Manifest {
 		return new Manifest(manifest);
 	}
 

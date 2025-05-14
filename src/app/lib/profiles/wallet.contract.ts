@@ -1,4 +1,4 @@
-import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import {
@@ -22,6 +22,8 @@ import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
+import { SignatoryService } from "../mainsail/signatory.service.js";
+import { Manifest } from "../sdk/manifest.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -50,7 +52,6 @@ export interface IReadWriteWalletAttributes {
 	initialState: IWalletData;
 	restorationState: { full: boolean; partial: boolean };
 	// Will be empty initially
-	coin: Coins.Coin;
 	wallet: Contracts.WalletData | undefined;
 	address: string;
 	publicKey: string | undefined;
@@ -399,12 +400,12 @@ export interface IReadWriteWallet {
 	networkId(): string;
 
 	/**
-	 * Get the coin manifest.
+	 * Get the manifest.
 	 *
-	 * @return {Coins.Manifest}
+	 * @return {Manifest}
 	 * @memberof IReadWriteWallet
 	 */
-	manifest(): Coins.Manifest;
+	manifest(): Manifest;
 
 	/**
 	 * Get the profile validators service.
@@ -492,7 +493,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.SignatoryService}
 	 * @memberof IReadWriteWallet
 	 */
-	signatory(): Services.SignatoryService;
+	signatory(): SignatoryService;
 
 	/**
 	 * Get the wallet transaction service instance.
