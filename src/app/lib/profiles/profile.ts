@@ -212,6 +212,14 @@ export class Profile implements IProfile {
 	readonly #attributes: AttributeBag<IProfileInput>;
 
 	/**
+	 * The username service
+	 *
+	 * @type {UsernamesService}
+	 * @memberof Profile
+	 */
+	readonly #usernameService: UsernamesService;
+
+	/**
 	 * The status service.
 	 *
 	 * @type {IProfileStatus}
@@ -240,6 +248,7 @@ export class Profile implements IProfile {
 		this.#password = new PasswordManager();
 		this.#status = new ProfileStatus();
 		this.#knownWalletService = new KnownWalletService();
+		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -446,7 +455,7 @@ export class Profile implements IProfile {
 
 	/** {@inheritDoc IProfile.usernames} */
 	public usernames(): UsernamesService {
-		return new UsernamesService({ config: this.activeNetwork().config(), profile: this });
+		return this.#usernameService;
 	}
 
 	/** {@inheritDoc IProfile.ValidatorService} */
