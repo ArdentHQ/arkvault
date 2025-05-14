@@ -25,7 +25,7 @@ export const SuccessStep = ({
 
 	return (
 		<section data-testid="ImportWallet__success-step">
-			<div className="mt-4 space-y-4">
+			<div className="space-y-4">
 				<DetailWrapper label={t("COMMON.IMPORTED")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
