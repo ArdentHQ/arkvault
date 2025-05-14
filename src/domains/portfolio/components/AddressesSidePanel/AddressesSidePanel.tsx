@@ -281,7 +281,7 @@ export const AddressesSidePanel = ({
 	return (
 		<SidePanel
 			className={cn({ "animate-shake": isAnimating })}
-			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
+			title={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
 			open={open}
 			onOpenChange={(open) => {
 				if (selectedAddresses.length === 0) {
