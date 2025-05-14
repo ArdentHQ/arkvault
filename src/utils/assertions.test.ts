@@ -5,7 +5,6 @@ import { Wallet } from "@/app/lib/profiles/wallet";
 
 import {
 	assertArray,
-	assertCoin,
 	assertNetwork,
 	assertNumber,
 	assertProfile,
@@ -104,25 +103,6 @@ describe("#assertReadOnlyWallet", () => {
 		expect(() => assertReadOnlyWallet([])).toThrow(
 			"Expected 'wallet' to be Contracts.IReadOnlyWallet, but received ",
 		);
-	});
-});
-
-describe("#assertCoin", () => {
-	it("should pass with a coin instance", () => {
-		// @ts-ignore
-		expect(() => assertCoin(new Coins.Coin())).not.toThrow();
-	});
-
-	it("should fail without a coin instance", () => {
-		expect(() => assertCoin(undefined)).toThrow("Expected 'coin' to be Coins.Coin, but received undefined");
-		expect(() => assertCoin(null)).toThrow("Expected 'coin' to be Coins.Coin, but received null");
-		expect(() => assertCoin(true)).toThrow("Expected 'coin' to be Coins.Coin, but received true");
-		expect(() => assertCoin(false)).toThrow("Expected 'coin' to be Coins.Coin, but received false");
-		expect(() => assertCoin("")).toThrow("Expected 'coin' to be Coins.Coin, but received ");
-		expect(() => assertCoin("a")).toThrow("Expected 'coin' to be Coins.Coin, but received a");
-		expect(() => assertCoin(1)).toThrow("Expected 'coin' to be Coins.Coin, but received 1");
-		expect(() => assertCoin({})).toThrow("Expected 'coin' to be Coins.Coin, but received [object Object]");
-		expect(() => assertCoin([])).toThrow("Expected 'coin' to be Coins.Coin, but received ");
 	});
 });
 
