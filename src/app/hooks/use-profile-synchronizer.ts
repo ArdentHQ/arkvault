@@ -91,7 +91,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				setConfiguration(profileId, { profileIsSyncingExchangeRates: true });
 				const currencies = profile.availableNetworks().map((network) => network.ticker());
 				const allRates = await Promise.all(
-					currencies.map((currency) => env.exchangeRates().syncAll(profile, currency)),
+					currencies.map((currency) => profile.exchangeRates().syncAll(profile, currency)),
 				);
 				setConfiguration(profileId, { profileIsSyncingExchangeRates: false });
 				return allRates;

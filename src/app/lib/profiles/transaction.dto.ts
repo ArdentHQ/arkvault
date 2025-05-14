@@ -280,8 +280,8 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 			return 0;
 		}
 
-		return container
-			.get<IExchangeRateService>(Identifiers.ExchangeRateService)
+		return this.wallet()
+			.exchangeRates()
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
 

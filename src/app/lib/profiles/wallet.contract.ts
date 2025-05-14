@@ -21,6 +21,7 @@ import { AddressService } from "@/app/lib/mainsail/address.service.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -420,6 +421,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	client(): ClientService;
+
+	/**
+	 * Get the identity service instance.
+	 *
+	 * @return {ExchangeRateService}
+	 * @memberof IReadWriteWallet
+	 */
+	exchangeRates(): ExchangeRateService;
 
 	/**
 	 * Get the identity service instance.

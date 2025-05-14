@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/sdk";
 
 import { useQueryParameters } from "@/app/hooks";

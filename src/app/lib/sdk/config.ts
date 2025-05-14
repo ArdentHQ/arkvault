@@ -1,6 +1,39 @@
 import { get, has, set, unset, ValidatorSchema } from "@/app/lib/helpers";
-import { defaultHostSelector } from "@/app/lib/profiles/driver";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { NetworkHostSelectorFactory } from "@/app/lib/profiles";
+import { Coins, Helpers, Networks } from ".";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+
+export const hostSelector: NetworkHostSelectorFactory =
+	(profile: IProfile) => (configRepository: Coins.ConfigRepository, type?: Networks.NetworkHostType) => {
+		type ??= "full";
+
+		const defaultHosts = Helpers.filterHostsFromConfig(configRepository, type);
+		const customHosts = profile
+			.hosts()
+			.allByNetwork(configRepository.get("network.id"))
+			.map(({ host }) => host)
+			.filter(({ custom, enabled, type: hostType }) => custom && enabled && hostType === type);
+
+		if (customHosts.length === 0) {
+			return Helpers.randomHost(defaultHosts, type);
+		}
+
+		if (profile.settings().get(ProfileSetting.FallbackToDefaultNodes)) {
+			const customHost = Helpers.randomHost(customHosts, type);
+
+			if (!customHost.failedCount || customHost.failedCount < 3) {
+				return customHost;
+			}
+
+			return Helpers.randomHost(
+				defaultHosts.filter(({ custom }) => !custom),
+				type,
+			);
+		}
+
+		return Helpers.randomHost(customHosts, type);
+	};
 
 export class ConfigRepository {
 	readonly #config: Record<string, any>;
@@ -53,7 +86,7 @@ export class ConfigRepository {
 	}
 
 	public host(type: HostType, profile: IProfile): string {
-		const hostSelector = defaultHostSelector(profile);
+		const hostSelector = hostSelector(profile);
 		const { host } = hostSelector(this, type);
 		return host;
 	}

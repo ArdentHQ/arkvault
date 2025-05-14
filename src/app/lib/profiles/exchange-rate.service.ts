@@ -14,7 +14,6 @@ export class ExchangeRateService implements IExchangeRateService {
 	readonly #dataRepository: DataRepository = new DataRepository();
 	readonly #httpClient: HttpClient;
 
-
 	public constructor() {
 		this.#httpClient = new HttpClient(10_000);
 	}

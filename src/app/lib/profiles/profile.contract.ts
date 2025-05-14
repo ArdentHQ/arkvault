@@ -25,8 +25,8 @@ import { INetworkRepository } from "./network.repository.contract.js";
 import { UsernamesService } from "./usernames.service.js";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 import { ValidatorService } from "./validator.service.js";
-import { KnownWallet } from "../sdk/known-wallet.contract.js";
 import { KnownWalletService } from "./known-wallet.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 /**
  *
@@ -378,6 +378,14 @@ export interface IProfile {
 	usernames(): UsernamesService;
 
 	/**
+	 * Get the profile exchange service instance.
+	 *
+	 * @return {ExchangeRateService}
+	 * @memberof IProfile
+	 */
+	exchangeRates(): ExchangeRateService;
+
+	/**
 	 * Get the profile ledger service instance.
 	 *
 	 * @memberof IProfile
@@ -390,5 +398,4 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	knownWallets(): KnownWalletService;
-
 }

@@ -4,7 +4,7 @@ import React from "react";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, render, screen, renderResponsive } from "@/utils/testing-library";
+import { render, screen, renderResponsive } from "@/utils/testing-library";
 
 describe("TransactionRowRecipientLabel", () => {
 	it("should show address", () => {

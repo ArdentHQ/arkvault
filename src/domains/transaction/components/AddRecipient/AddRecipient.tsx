@@ -87,7 +87,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
-	const { convert } = useExchangeRate({ exchangeTicker, ticker });
+	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
@@ -436,6 +436,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									ticker={ticker}
 									exchangeTicker={exchangeTicker}
 									showExchangeAmount={network.isLive()}
+									profile={profile}
 								/>
 							))}
 						</div>

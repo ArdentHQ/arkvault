@@ -2,11 +2,8 @@ import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
-	IExchangeRateService,
 	IProfile,
 	IReadWriteWallet,
 	IReadWriteWalletAttributes,
@@ -53,6 +50,7 @@ import { WIFService } from "@/app/lib/mainsail/wif.service";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -178,9 +176,12 @@ export class Wallet implements IReadWriteWallet {
 			return 0;
 		}
 
-		return +container
-			.get<IExchangeRateService>(Identifiers.ExchangeRateService)
-			.exchange(this.currency(), this.exchangeCurrency(), DateTime.make(), this.balance(type));
+		return this.exchangeRates().exchange(
+			this.currency(),
+			this.exchangeCurrency(),
+			DateTime.make(),
+			this.balance(type),
+		);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.nonce} */
@@ -669,5 +670,9 @@ export class Wallet implements IReadWriteWallet {
 		} catch {
 			return 18;
 		}
+	}
+
+	exchangeRates(): ExchangeRateService {
+		return this.#profile.exchangeRates();
 	}
 }

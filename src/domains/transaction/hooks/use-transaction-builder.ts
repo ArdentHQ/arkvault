@@ -2,7 +2,7 @@ import { DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 
 import { Services } from "@/app/lib/sdk";
 import { upperFirst } from "@/app/lib/helpers";
-import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";
 //import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection";
 import { httpClient } from "@/app/services";
@@ -25,7 +25,6 @@ const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileC
 
 export const useTransactionBuilder = () => {
 	const { abortConnectionRetry } = useLedgerContext();
-	const { env } = useEnvironmentContext();
 
 	const build = async (
 		type: string,
@@ -36,7 +35,7 @@ export const useTransactionBuilder = () => {
 		},
 	): Promise<{ uuid: string; transaction: DTO.ExtendedSignedTransactionData }> => {
 		// Ensures the cache is flushed so it always fetches the latest wallet nonce
-		httpClient.forgetWalletCache(env, wallet);
+		httpClient.forgetWalletCache(wallet);
 
 		const service = wallet.transaction();
 

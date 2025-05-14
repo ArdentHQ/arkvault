@@ -1,17 +1,8 @@
-import { Networks } from "@/app/lib/sdk";
 import Joi from "joi";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
-import {
-	IDataRepository,
-	IExchangeRateService,
-	IFeeService,
-	IProfile,
-	IProfileRepository,
-	IWalletService,
-} from "./contracts.js";
-import { defaultHostSelector, DriverFactory } from "./driver.js";
+import { IDataRepository, IFeeService, IProfileRepository, IWalletService } from "./contracts.js";
 import { EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { StorageFactory } from "./factory.storage.js";
@@ -21,27 +12,15 @@ import { ProfileRepository } from "./profile.repository.js";
 import { WalletService } from "./wallet.service.js";
 
 export class Environment {
-	#storage: Storage;
-	#knownWalletService: KnownWalletService;
-	#data: DataRepository;
-	#fees: ProfileFeeService;
-	#profiles: ProfileRepository;
-	#wallets: WalletService;
+	#storage!: Storage;
+	#knownWalletService!: KnownWalletService;
+	#data!: DataRepository;
+	#fees!: ProfileFeeService;
+	#profiles!: ProfileRepository;
+	#wallets!: WalletService;
 
 	public constructor(options: EnvironmentOptions) {
-		DriverFactory.make(container, options);
-
-		this.#data = new DataRepository();
-		this.#fees = new ProfileFeeService();
-		this.#profiles = new ProfileRepository();
-		this.#knownWalletService = new KnownWalletService();
-		this.#wallets = new WalletService();
-
-		if (typeof options.storage === "string") {
-			this.#storage = StorageFactory.make(options.storage);
-		} else {
-			this.#storage = options.storage;
-		}
+		this.reset(options);
 	}
 
 	/**
@@ -51,7 +30,7 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public async verify(storageData?: StorageData): Promise<void> {
-		const storage = storageData ?? await this.#storage.all<StorageData>();
+		const storage = storageData ?? (await this.#storage.all<StorageData>());
 
 		const data: object = storage.data || {};
 		const profiles: object = storage.profiles || {};
@@ -83,7 +62,7 @@ export class Environment {
 			throw new Error("Please call [verify] before booting the environment.");
 		}
 
-		const storage = await this.#storage.all<StorageData>()
+		const storage = await this.#storage.all<StorageData>();
 
 		if (Object.keys(storage.data).length > 0) {
 			this.data().fill(storage.data);
@@ -91,11 +70,6 @@ export class Environment {
 
 		if (Object.keys(storage.profiles).length > 0) {
 			this.profiles().fill(storage.profiles);
-		}
-
-		/* istanbul ignore next */
-		if (container.has(Identifiers.ExchangeRateService)) {
-			await container.get<IExchangeRateService>(Identifiers.ExchangeRateService).restore();
 		}
 	}
 
@@ -126,16 +100,6 @@ export class Environment {
 	 */
 	public data(): IDataRepository {
 		return this.#data;
-	}
-
-	/**
-	 * Access the exchange rate service.
-	 *
-	 * @returns {ExchangeRateService}
-	 * @memberof Environment
-	 */
-	public exchangeRates(): IExchangeRateService {
-		return container.get(Identifiers.ExchangeRateService);
 	}
 
 	/**
@@ -184,10 +148,21 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public reset(options?: EnvironmentOptions): void {
-		container.flush();
+		this.#data = new DataRepository();
+		this.#fees = new ProfileFeeService();
+		this.#profiles = new ProfileRepository();
+		this.#knownWalletService = new KnownWalletService();
+		this.#wallets = new WalletService();
 
-		if (options !== undefined) {
-			DriverFactory.make(container, options);
+		if (!options) {
+			this.#storage = StorageFactory.make("indexeddb");
+			return;
+		}
+
+		if (typeof options.storage === "string") {
+			this.#storage = StorageFactory.make(options.storage || "indexeddb");
+		} else {
+			this.#storage = options.storage;
 		}
 	}
 
@@ -201,15 +176,5 @@ export class Environment {
 	public setMigrations(schemas: object, version: string): void {
 		container.constant(Identifiers.MigrationSchemas, schemas);
 		container.constant(Identifiers.MigrationVersion, version);
-	}
-
-	/**
-	 * Get the host selector function.
-	 *
-	 * @returns {Function}
-	 * @memberof Environment
-	 */
-	public hostSelector(profile: IProfile): Networks.NetworkHostSelector {
-		return defaultHostSelector(profile);
 	}
 }

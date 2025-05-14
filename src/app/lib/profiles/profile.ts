@@ -49,6 +49,7 @@ import { UsernamesService } from "./usernames.service.js";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 export class Profile implements IProfile {
 	/**
@@ -220,6 +221,14 @@ export class Profile implements IProfile {
 	readonly #usernameService: UsernamesService;
 
 	/**
+	 * The username service
+	 *
+	 * @type {UsernamesService}
+	 * @memberof Profile
+	 */
+	readonly #exchangeRateService: ExchangeRateService;
+
+	/**
 	 * The status service.
 	 *
 	 * @type {IProfileStatus}
@@ -249,6 +258,7 @@ export class Profile implements IProfile {
 		this.#status = new ProfileStatus();
 		this.#knownWalletService = new KnownWalletService();
 		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
+		this.#exchangeRateService = new ExchangeRateService();
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -504,4 +514,7 @@ export class Profile implements IProfile {
 		return this.#knownWalletService;
 	}
 
+	public exchangeRates(): ExchangeRateService {
+		return this.#exchangeRateService;
+	}
 }

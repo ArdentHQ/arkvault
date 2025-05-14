@@ -2,16 +2,18 @@ import { renderHook, RenderHookResult } from "@testing-library/react";
 import React from "react";
 
 import { useExchangeRate } from "./use-exchange-rate";
-import { env, WithProviders } from "@/utils/testing-library";
+import { env, WithProviders, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("useExchangeRate", () => {
 	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
+	const profile = env.profiles().findById(getDefaultProfileId());
 
 	const renderExchangeRate = () =>
 		renderHook(
 			() =>
 				useExchangeRate({
 					exchangeTicker: "USD",
+					profile,
 					ticker: "ARK",
 				}),
 			{
@@ -38,6 +40,7 @@ describe("useExchangeRate", () => {
 			() =>
 				useExchangeRate({
 					exchangeTicker: "USD",
+					profile,
 				}),
 			{
 				wrapper,
@@ -49,6 +52,7 @@ describe("useExchangeRate", () => {
 		hook = renderHook(
 			() =>
 				useExchangeRate({
+					profile,
 					ticker: "ARK",
 				}),
 			{
