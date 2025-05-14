@@ -64,10 +64,8 @@ export class ValidatorService implements IValidatorService {
 	public async syncAll(profile: IProfile): Promise<void> {
 		const promises: (() => Promise<void>)[] = [];
 
-		for (const [coin, networks] of profile.coins().entries()) {
-			for (const network of networks) {
-				promises.push(() => this.sync(profile, coin, network));
-			}
+		for (const network of profile.availableNetworks()) {
+			promises.push(() => this.sync(profile, network.coin(), network.id()));
 		}
 
 		await pqueueSettled(promises);

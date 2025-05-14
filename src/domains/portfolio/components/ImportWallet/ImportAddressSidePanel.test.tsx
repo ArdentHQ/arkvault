@@ -4,7 +4,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-
+import { renderHook } from "@testing-library/react";
 import { SuccessStep } from "./SuccessStep";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -22,6 +22,8 @@ import {
 import * as usePortfolio from "@/domains/portfolio/hooks/use-portfolio";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
+import { ImportAddressStep, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
@@ -475,5 +477,77 @@ describe("ImportSidePanel", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		activeNetworkMock.mockRestore();
 		fromWIFMock.mockRestore();
+	});
+});
+
+describe("useStepHeaderConfig", () => {
+	it("returns correct config for MethodStep", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.MethodStep));
+		expect(result.current).toEqual({
+			subtitle: "Select the method you want to use to import your address.",
+			title: "Import",
+		});
+	});
+
+	it("returns config for ImportDetailStep with importOption", () => {
+		const option = { description: "Desc", header: "Header", icon: <span>Icon</span> } as unknown as ImportOption;
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.ImportDetailStep, option));
+		expect(result.current).toEqual({
+			subtitle: "Desc",
+			title: "Header",
+			titleIcon: option.icon,
+		});
+	});
+
+	it("returns correct config for EncryptPasswordStep", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.EncryptPasswordStep));
+		expect(result.current).toMatchObject({
+			title: "Encryption Password",
+		});
+	});
+
+	it("returns correct config for SummaryStep", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.SummaryStep));
+		expect(result.current).toMatchObject({
+			subtitle: "The address has been successfully imported.",
+			title: "Import Completed",
+		});
+	});
+});
+
+describe("useLedgerStepHeaderConfig", () => {
+	it("returns config for LedgerConnectionStep with importOption", () => {
+		const option = { description: "LDesc", header: "LHeader", icon: <span>LICON</span> } as unknown as ImportOption;
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerConnectionStep, option));
+		expect(result.current).toEqual({
+			subtitle: "LDesc",
+			title: "LHeader",
+			titleIcon: option.icon,
+		});
+	});
+
+	it("returns config for LedgerScanStep", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerScanStep));
+		expect(result.current).toEqual({
+			subtitle: "Select the addresses that you want to import.",
+			title: "Ledger Addresses",
+			titleIcon: expect.anything(),
+		});
+	});
+
+	it("returns config for LedgerImportStep", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerImportStep));
+		expect(result.current).toEqual({
+			subtitle: "Your Ledger addresses have been imported.",
+			title: "Import Completed",
+			titleIcon: expect.anything(),
+		});
+	});
+
+	it("returns default config for unknown step", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(999 as unknown as ImportAddressStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
 	});
 });

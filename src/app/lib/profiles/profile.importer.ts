@@ -74,6 +74,10 @@ export class ProfileImporter implements IProfileImporter {
 			throw new Error(`Failed to decode or decrypt the profile.${errorReason}`);
 		}
 
+		if (!data?.data && !password) {
+			throw new Error("PasswordRequired");
+		}
+
 		return data;
 	}
 }
