@@ -76,7 +76,7 @@ export class ProfileRepository implements IProfileRepository {
 			throw new Error(`The profile [${name}] already exists.`);
 		}
 
-		const result: IProfile = ProfileFactory.fromName(name);
+		const result: IProfile = ProfileFactory.fromName(name, env);
 
 		this.push(result);
 
