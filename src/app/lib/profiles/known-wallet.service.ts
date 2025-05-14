@@ -9,7 +9,7 @@ export class KnownWalletService {
 	readonly #registry: KnownWalletRegistry = {};
 
 	/** {@inheritDoc IKnownWalletService.sync} */
-	public async sync(network: Networks.Network): Promise<void> {
+	public async sync(profile: IProfile, network: Networks.Network): Promise<void> {
 		const client = new HttpClient(0);
 
 		try {
