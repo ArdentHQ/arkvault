@@ -1,12 +1,10 @@
-import { Coins, Networks } from "@/app/lib/sdk";
-import { sortBy } from "@/app/lib/helpers";
+import { Networks } from "@/app/lib/sdk";
 import Joi from "joi";
 
 import { container } from "./container.js";
 import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
-	IValidatorService,
 	IExchangeRateService,
 	IFeeService,
 	IProfile,
@@ -14,11 +12,10 @@ import {
 	IWalletService,
 } from "./contracts.js";
 import { defaultHostSelector, DriverFactory } from "./driver.js";
-import { CoinList, EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
+import { EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { StorageFactory } from "./factory.storage.js";
 import { DataRepository } from "./repositories.js";
-import { ValidatorService } from "./validator.service.js";
 import { ProfileFeeService } from "./fee.service.js";
 import { ProfileRepository } from "./profile.repository.js";
 import { WalletService } from "./wallet.service.js";
