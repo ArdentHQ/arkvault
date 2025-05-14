@@ -258,10 +258,10 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.username} */
 	public username(): string | undefined {
 		if (this.isCold()) {
-			return
+			return;
 		}
 
-		const attributes = this.#attributes.get<Contracts.WalletData>("wallet")
+		const attributes = this.#attributes.get<Contracts.WalletData>("wallet");
 
 		if (!attributes) {
 			throw new Error(ERR_NOT_SYNCED);
@@ -672,7 +672,7 @@ export class Wallet implements IReadWriteWallet {
 		}
 	}
 
-	exchangeRates(): ExchangeRateService {
+	public exchangeRates(): ExchangeRateService {
 		return this.#profile.exchangeRates();
 	}
 }

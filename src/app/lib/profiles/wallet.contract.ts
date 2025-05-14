@@ -56,8 +56,6 @@ export interface IReadWriteWalletAttributes {
 	address: string;
 	publicKey: string | undefined;
 	avatar: string;
-	// Will be set when the client removes implementations
-	isMissingCoin: boolean;
 	isMissingNetwork: boolean;
 }
 
@@ -556,14 +554,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	hasBeenPartiallyRestored(): boolean;
-
-	/**
-	 * Determine if the wallet is missing its coin.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	isMissingCoin(): boolean;
 
 	/**
 	 * Mark the wallet as missing its network.
