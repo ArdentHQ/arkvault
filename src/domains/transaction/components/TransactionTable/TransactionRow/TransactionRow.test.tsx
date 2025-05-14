@@ -2,35 +2,32 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { TransactionRow } from "./TransactionRow";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, renderResponsive } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("TransactionRow", () => {
-	const fixture = {
-		...TransactionFixture,
-		isSuccess: () => true,
-		wallet: () => ({
-			...TransactionFixture.wallet(),
-			currency: () => "ARK",
-			network: () => ({
-				coin: () => "Mainsail",
-				id: () => "mainsail.devnet",
-			}),
-			username: () => "test_username",
-		}),
-	};
+	let fixture;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-	});
+		fixture = {
+			...TransactionFixture,
+			isSuccess: () => true,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				network: () => ({
+					coin: () => "Mainsail",
+					id: () => "mainsail.devnet",
+				}),
+				profile: () => profile,
+				username: () => "test_username",
+			}),
+		};
 
-	afterAll(() => {
-		useRandomNumberHook.useRandomNumber.mockRestore();
 	});
 
 	it("should render", () => {
@@ -38,7 +35,7 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={fixture as any}
+						transaction={fixture}
 						profile={profile}
 						exchangeCurrency={"USD"}
 						onClick={() => {}}
@@ -61,7 +58,7 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={fixture as any}
+						transaction={fixture}
 						profile={profile}
 						exchangeCurrency="USD"
 						onClick={() => {}}
@@ -134,7 +131,7 @@ describe("TransactionRow", () => {
 										id: () => "mainsail.devnet",
 									}),
 								}),
-							} as any
+							}
 						}
 						exchangeCurrency="ARK"
 						profile={profile}
@@ -167,7 +164,7 @@ describe("TransactionRow", () => {
 										id: () => "mainsail.devnet",
 									}),
 								}),
-							} as any
+							}
 						}
 						exchangeCurrency="ARK"
 						profile={profile}
@@ -187,7 +184,7 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={fixture as any}
+						transaction={fixture}
 						profile={profile}
 						exchangeCurrency="USD"
 						onClick={() => {}}
@@ -205,7 +202,7 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={{ ...fixture, timestamp: () => {} } as any}
+						transaction={{ ...fixture, timestamp: () => {} }}
 						profile={profile}
 						exchangeCurrency="USD"
 						onClick={() => {}}
@@ -222,7 +219,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} onClick={() => {}} />
+					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
