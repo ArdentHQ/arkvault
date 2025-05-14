@@ -27,7 +27,6 @@ describe("TransactionRow", () => {
 				username: () => "test_username",
 			}),
 		};
-
 	});
 
 	it("should render", () => {
@@ -57,12 +56,7 @@ describe("TransactionRow", () => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow
-						transaction={fixture}
-						profile={profile}
-						exchangeCurrency="USD"
-						onClick={() => {}}
-					/>
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 			breakpoint,
@@ -118,21 +112,19 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={
-							{
-								...fixture,
-								amount: () => 0,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "ARK",
-									isLedger: () => false,
-									network: () => ({
-										coin: () => "ARK",
-										id: () => "mainsail.devnet",
-									}),
+						transaction={{
+							...fixture,
+							amount: () => 0,
+							wallet: () => ({
+								...fixture.wallet(),
+								currency: () => "ARK",
+								isLedger: () => false,
+								network: () => ({
+									coin: () => "ARK",
+									id: () => "mainsail.devnet",
 								}),
-							}
-						}
+							}),
+						}}
 						exchangeCurrency="ARK"
 						profile={profile}
 						onClick={() => {}}
@@ -151,21 +143,19 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={
-							{
-								...fixture,
-								amount: () => 0,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "shouldUseARKColors",
-									isLedger: () => false,
-									network: () => ({
-										coin: () => "ARK",
-										id: () => "mainsail.devnet",
-									}),
+						transaction={{
+							...fixture,
+							amount: () => 0,
+							wallet: () => ({
+								...fixture.wallet(),
+								currency: () => "shouldUseARKColors",
+								isLedger: () => false,
+								network: () => ({
+									coin: () => "ARK",
+									id: () => "mainsail.devnet",
 								}),
-							}
-						}
+							}),
+						}}
 						exchangeCurrency="ARK"
 						profile={profile}
 						onClick={() => {}}
@@ -183,12 +173,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow
-						transaction={fixture}
-						profile={profile}
-						exchangeCurrency="USD"
-						onClick={() => {}}
-					/>
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
