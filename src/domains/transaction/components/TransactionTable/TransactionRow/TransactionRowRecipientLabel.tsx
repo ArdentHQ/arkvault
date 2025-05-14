@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Address } from "@/app/components/Address";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { IProfile } from "@/app/lib/profiles/contracts";
 
 interface Properties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
@@ -84,8 +85,6 @@ export const BaseTransactionRowRecipientLabel = ({
 	walletName,
 	addressClass,
 }: Properties) => {
-	const activeProfile = useActiveProfile();
-
 	const { isXs, isSm } = useBreakpoint();
 
 	const [validators, setValidators] = useState<{
@@ -99,11 +98,11 @@ export const BaseTransactionRowRecipientLabel = ({
 	useEffect(() => {
 		if (transaction?.isVote() || transaction?.isUnvote()) {
 			setValidators({
-				unvotes: activeProfile.validators().map(transaction.wallet(), transaction.unvotes()),
-				votes: activeProfile.validators().map(transaction.wallet(), transaction.votes()),
+				unvotes: transaction.wallet().validators().map(transaction.wallet(), transaction.unvotes()),
+				votes: transaction.wallet().validators().map(transaction.wallet(), transaction.votes()),
 			});
 		}
-	}, [activeProfile, transaction]);
+	}, [transaction]);
 
 	if (type === "transfer") {
 		return (
