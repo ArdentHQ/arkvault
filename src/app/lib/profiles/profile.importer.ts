@@ -44,6 +44,8 @@ export class ProfileImporter implements IProfileImporter {
 		this.#profile.wallets().fill(data.wallets);
 
 		this.#profile.contacts().fill(data.contacts);
+
+		this.#profile.exchangeRates().restore();
 	}
 
 	/**
@@ -74,7 +76,7 @@ export class ProfileImporter implements IProfileImporter {
 			throw new Error(`Failed to decode or decrypt the profile.${errorReason}`);
 		}
 
-		if (!data?.data && !password) {
+		if (!data.data && !password) {
 			throw new Error("PasswordRequired");
 		}
 
