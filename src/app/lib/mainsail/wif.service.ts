@@ -3,9 +3,9 @@
 import { Services } from "@/app/lib/sdk";
 
 import { Keys } from "./crypto/identities";
-import { ConfigKey, ConfigRepository } from "../sdk/coins";
 import { WIF } from "@ardenthq/arkvault-crypto";
 import { KeyPair } from "./crypto/identities/contracts";
+import { ConfigKey, ConfigRepository } from "../sdk/config";
 
 export class WIFService {
 	readonly #config!: ConfigRepository;

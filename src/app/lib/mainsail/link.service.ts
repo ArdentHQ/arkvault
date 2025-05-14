@@ -1,6 +1,6 @@
 import { formatString } from "@/app/lib/helpers";
 import queryString from "query-string";
-import { ConfigRepository } from "@/app/lib/sdk/coins";
+import { ConfigRepository } from "@/app/lib/sdk/config";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { randomHost } from "@/app/lib/sdk/helpers";
 

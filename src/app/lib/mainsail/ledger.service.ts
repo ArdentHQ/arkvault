@@ -9,7 +9,7 @@ import { LedgerSignature } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
 import { Exceptions } from "@/app/lib/sdk";
 import { WalletData } from "./wallet.dto.js";
-import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/config";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 
 export class LedgerService {

@@ -22,8 +22,8 @@ import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
-import { SignatoryService } from "../mainsail/signatory.service.js";
-import { Manifest } from "../sdk/manifest.js";
+import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
+import { Manifest } from "@/app/lib/sdk/manifest.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 

@@ -1,30 +1,31 @@
 import { Base64 } from "@ardenthq/arkvault-crypto";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import { IProfile, IProfileData, IProfileImporter, IProfileValidator } from "./contracts.js";
 import { Migrator } from "./migrator.js";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
+import { Environment } from "./environment.js";
 
 export class ProfileImporter implements IProfileImporter {
 	readonly #profile: IProfile;
 	readonly #validator: IProfileValidator;
+	readonly #env: Environment;
 
-	public constructor(profile: IProfile) {
+	public constructor(profile: IProfile, env: Environment) {
 		this.#profile = profile;
 		this.#validator = new ProfileValidator();
+		this.#env = env;
 	}
 
 	/** {@inheritDoc IProfileImporter.import} */
 	public async import(password?: string): Promise<void> {
 		let data: IProfileData | undefined = await this.#unpack(password);
 
-		if (container.has(Identifiers.MigrationSchemas) && container.has(Identifiers.MigrationVersion)) {
-			await new Migrator(this.#profile, data).migrate(
-				container.get(Identifiers.MigrationSchemas),
-				container.get(Identifiers.MigrationVersion),
-			);
+		const schemas = this.#env.migrationSchemas();
+		const version = this.#env.migrationVersion();
+
+		if (!!schemas && !!version) {
+			await new Migrator(this.#profile, data).migrate(schemas, version);
 		}
 
 		data = this.#validator.validate(data);

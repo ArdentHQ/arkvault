@@ -1,7 +1,5 @@
 import Joi from "joi";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import { IDataRepository, IFeeService, IProfileRepository, IWalletService } from "./contracts.js";
 import { EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
 import { KnownWalletService } from "./known-wallet.service.js";
@@ -18,6 +16,8 @@ export class Environment {
 	#fees!: ProfileFeeService;
 	#profiles!: ProfileRepository;
 	#wallets!: WalletService;
+	#migrationVersion!: string;
+	#migrationSchemas!: object;
 
 	public constructor(options: EnvironmentOptions) {
 		this.reset(options);
@@ -174,8 +174,27 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public setMigrations(schemas: object, version: string): void {
-		container.constant(Identifiers.MigrationSchemas, schemas);
-		container.constant(Identifiers.MigrationVersion, version);
+		this.#migrationSchemas = schemas;
+		this.#migrationVersion = version;
+	}
+
+	/**
+	 * Get the latest migration version.
+	 *
+	 * @return string migration version
+	 * @memberof Environment
+	 */
+	public migrationVersion(): string | undefined {
+		return this.#migrationVersion;
+	}
+	/**
+	 * Get the migration schemas.
+	 *
+	 * @return object schemas
+	 * @memberof Environment
+	 */
+	public migrationSchemas(): object | undefined {
+		return this.#migrationSchemas;
 	}
 
 	public storage(): Storage {

@@ -101,7 +101,7 @@ export class ProfileRepository implements IProfileRepository {
 			this.#env,
 		);
 
-		await new ProfileImporter(result).import(password);
+		await new ProfileImporter(result, this.#env).import(password);
 
 		return result;
 	}
@@ -113,7 +113,7 @@ export class ProfileRepository implements IProfileRepository {
 
 	/** {@inheritDoc IProfileRepository.restore} */
 	public async restore(profile: IProfile, password?: string): Promise<void> {
-		await new ProfileImporter(profile).import(password);
+		await new ProfileImporter(profile, this.#env).import(password);
 
 		profile.status().markAsRestored();
 	}
