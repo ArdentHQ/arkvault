@@ -27,6 +27,10 @@ let network: Networks.Network;
 const peerHostLive = "https://dwallets-evm.mainsailhq.com";
 const peerHostTest = "https://dwallets-evm.mainsailhq.com";
 
+const publicHost = "https://dwallets-evm.mainsailhq.com/api";
+const txHost = "https://dwallets-evm.mainsailhq.com/tx/api";
+const evmHost = "https://dwallets-evm.mainsailhq.com/evm/api";
+
 const networksStub: any = {
 	mainsail: {
 		devnet: [
@@ -61,7 +65,6 @@ const networksStub: any = {
 	},
 };
 
-
 const peerResponse = {
 	data: "Hello World!",
 };
@@ -69,9 +72,11 @@ const peerResponse = {
 const peerResponseHeight = {
 	data: {
 		block: {
-			height: 999_999,
+			hash: "fbdfadffb76f3ea2a7694615b97f7224c3f92fb00df30a1c2633b445fdd2d0e1",
+			number: 999_999
 		},
-	},
+		supply: "125179421999999999999999959"
+	}
 };
 
 const mainsailDevnet = "ark.devnet";
@@ -90,46 +95,92 @@ const nodeStatusLoadingTestId = "NodeStatus--statusloading";
 const customPeersToggleTestId = "CustomPeers-toggle";
 const modalAlertTestId = "ServerFormModal-alert";
 
-// const fillServerForm = async ({ name = "Test", address = musigHostTest }) => {
-// 	const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId("SelectDropdown__input");
-//
-// 	expect(networkSelect).toBeInTheDocument();
-//
-// 	await userEvent.click(networkSelect);
-//
-// 	const firstOption = screen.getByTestId("SelectDropdown__option--0");
-//
-// 	expect(firstOption).toBeVisible();
-//
-// 	await userEvent.click(firstOption);
-//
-// 	const nameField = screen.getByTestId("ServerFormModal--name");
-// 	await userEvent.clear(nameField);
-// 	await userEvent.type(nameField, name);
-//
-// 	expect(nameField).toHaveValue(name);
-//
-// 	const addressField = screen.getByTestId("ServerFormModal--address");
-// 	await userEvent.clear(addressField);
-// 	await userEvent.type(addressField, address);
-//
-// 	expect(addressField).toHaveValue(address);
-//
-// 	fireEvent.focusOut(addressField);
-// };
-//
-// const waitUntilServerIsValidated = async () => {
-// 	await expect(screen.findByTestId("Servertype-fetching")).resolves.toBeVisible();
-//
-// 	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).not.toBeInTheDocument(), {
-// 		timeout: 4000,
-// 	});
-// };
-//
-// const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse));
-//
-// const mockPeerHeight = () => server.use(requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight));
-//
+const fillServerForm = async ({
+								  name = "Test",
+								  publicApiEndpoint = publicHost,
+								  txApiEndpoint = txHost,
+								  evmApiEndpoint = evmHost
+	}) => {
+	const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId("SelectDropdown__input");
+
+	expect(networkSelect).toBeInTheDocument();
+
+	await userEvent.click(networkSelect);
+
+	const firstOption = screen.getByTestId("SelectDropdown__option--0");
+
+	expect(firstOption).toBeVisible();
+
+	await userEvent.click(firstOption);
+
+	const nameField = screen.getByTestId("ServerFormModal--name");
+	await userEvent.clear(nameField);
+	await userEvent.type(nameField, name);
+
+	expect(nameField).toHaveValue(name);
+
+	const publicApiField = screen.getByTestId("ServerFormModal--publicApiEndpoint");
+	await userEvent.clear(publicApiField);
+	await userEvent.type(publicApiField, publicApiEndpoint);
+
+	expect(publicApiField).toHaveValue(publicApiEndpoint);
+
+	fireEvent.focusOut(publicApiField);
+
+	const txApiField = screen.getByTestId("ServerFormModal--transactionApiEndpoint");
+	await userEvent.clear(txApiField);
+	await userEvent.type(txApiField, txApiEndpoint);
+
+	expect(txApiField).toHaveValue(txApiEndpoint);
+
+	fireEvent.focusOut(txApiField);
+
+	const evmApiField = screen.getByTestId("ServerFormModal--evmApiEndpoint");
+	await userEvent.clear(evmApiField);
+	await userEvent.type(evmApiField, evmApiEndpoint);
+
+	expect(evmApiField).toHaveValue(evmApiEndpoint);
+
+	fireEvent.focusOut(evmApiField);
+};
+
+const waitUntilServerFormIsReady = async () => {
+	await waitFor(() => expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled());
+};
+
+const mockPublicEndpoint = () => server.use(requestMock(publicHost, peerResponse));
+const mockTxEndpoint= () => server.use(requestMock(`${txHost}/configuration`, {
+	"data": {
+		"core": {
+			"version": "0.0.1-evm.18"
+		},
+		"height": 165_077,
+	}
+}));
+
+const mockEvmEndpoint= () => server.use(
+	requestMock(
+		evmHost,
+		{
+			"id":1,
+			"jsonrpc":"2.0",
+			"result":"0x"
+		},
+		{
+			method: "post",
+		}
+	)
+);
+
+const mockRequests = () => {
+	mockPublicEndpoint();
+	mockPeerHeight();
+	mockTxEndpoint();
+	mockEvmEndpoint();
+}
+
+const mockPeerHeight = () => server.use(requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight));
+
 describe("Servers Settings", () => {
 	let resetProfileNetworksMock: () => void;
 
@@ -143,14 +194,9 @@ describe("Servers Settings", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		// coin = (profile.coins().all().ARK as any).ark.devnet;
-		// coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(true);
-		// profileCoinSpy = vi.spyOn(profile.coins(), "makeInstance").mockReturnValue(coin);
 	});
 
 	afterEach(() => {
-		// coinSpy.mockRestore();
-		// profileCoinSpy.mockRestore();
 		resetProfileNetworksMock();
 	});
 
@@ -365,216 +411,179 @@ describe("Servers Settings", () => {
 		});
 	});
 
-	// describe("New server", () => {
-	// 	let profileHostsSpy;
-	//
-	// 	beforeEach(() => {
-	// 		profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({});
-	// 	});
-	//
-	// 	afterEach(() => {
-	// 		profileHostsSpy.mockRestore();
-	// 	});
-	//
-	// 	describe("with reachable server", () => {
-	// 		it("can fill the form and store the new server", async () => {
-	// 			server.use(requestMock(musigHostTest, musigResponse));
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await waitFor(() => expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled());
-	//
-	// 			await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
-	//
-	// 			await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
-	// 		});
-	//
-	// 		it("can fill the form and store the new server for peer server", async () => {
-	// 			const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-	//
-	// 			mockPeerNetwork();
-	// 			mockPeerHeight();
-	//
-	// 			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: peerHostLive,
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await waitFor(() => expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled());
-	//
-	// 			expect(screen.getByTestId("Servertype-type")).toBeInTheDocument();
-	//
-	// 			await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
-	//
-	// 			await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
-	//
-	// 			serverPushSpy.mockRestore();
-	// 			hostsMock.mockRestore();
-	// 		});
-	//
-	// 		it("can fill the form with an ip host", async () => {
-	// 			const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-	//
-	// 			server.use(requestMock("https://127.0.0.1", musigResponse));
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: "https://127.0.0.1/api",
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	// 			hostsMock.mockRestore();
-	// 		});
-	//
-	// 		it("should create a new server and save settings", async () => {
-	// 			mockPeerNetwork();
-	// 			mockPeerHeight();
-	//
-	// 			const settingsSetSpy = vi.spyOn(profile.settings(), "set");
-	// 			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
-	// 			const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: peerHostLive,
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await waitFor(() => expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled());
-	//
-	// 			expect(screen.getByTestId("Servertype-type")).toBeInTheDocument();
-	//
-	// 			await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
-	//
-	// 			await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
-	// 			await waitFor(() => expect(screen.getByTestId("Server-settings__submit-button")).not.toBeDisabled());
-	//
-	// 			await userEvent.click(screen.getByTestId("Server-settings__submit-button"));
-	//
-	// 			await waitFor(() =>
-	// 				expect(serverPushSpy).toHaveBeenCalledWith({
-	// 					host: {
-	// 						custom: true,
-	// 						enabled: false,
-	// 						height: 999_999,
-	// 						host: "https://ark-live.arkvault.io",
-	// 						type: "full",
-	// 					},
-	// 					name: "Test",
-	// 					network: "ark.mainnet",
-	// 				}),
-	// 			);
-	//
-	// 			serverPushSpy.mockRestore();
-	// 			settingsSetSpy.mockRestore();
-	// 			hostsSpy.mockRestore();
-	// 		});
-	// 	});
-	//
-	// 	describe("with invalid server", () => {
-	// 		it("shows an error if the server is reachable but invalid", async () => {
-	// 			const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-	//
-	// 			server.use(requestMock(musigHostTest, { foo: "bar" }));
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: musigHostTest,
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
-	//
-	// 			expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
-	//
-	// 			hostsSpy.mockRestore();
-	// 		});
-	//
-	// 		it("shows an error if the server is valid but doesnt match the network", async () => {
-	// 			mockPeerNetwork();
-	//
-	// 			coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(false);
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: peerHostLive,
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
-	//
-	// 			expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
-	// 		});
+	describe("New server", () => {
+		let profileHostsSpy;
+
+		beforeEach(() => {
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({});
+		});
+
+		afterEach(() => {
+			profileHostsSpy.mockRestore();
+		});
+
+		describe("with reachable server", () => {
+			it("can fill the form and store the new server for peer server", async () => {
+				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({
+					mainsail: []
+				});
+
+				mockRequests();
+
+				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await waitFor(() => expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled());
+
+				await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
+
+				await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
+
+				serverPushSpy.mockRestore();
+				hostsMock.mockRestore();
+			});
+
+			it("can fill the form with an ip host", async () => {
+				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({
+					mainsail: []
+				});
+
+				mockRequests();
+				server.use(requestMock("https://127.0.0.1", peerResponse));
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({
+					publicApiEndpoint: "https://127.0.0.1/api",
+				});
+
+				await waitUntilServerFormIsReady();
+				hostsMock.mockRestore();
+			});
+
+			it("should create a new server and save settings", async () => {
+				mockRequests();
+
+				const settingsSetSpy = vi.spyOn(profile.settings(), "set");
+				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ mainsail: [] });
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await waitUntilServerFormIsReady();
+
+				await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
+
+				await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
+				await waitFor(() => expect(screen.getByTestId("Server-settings__submit-button")).not.toBeDisabled());
+
+				await userEvent.click(screen.getByTestId("Server-settings__submit-button"));
+
+				await waitFor(() =>
+					expect(serverPushSpy).toHaveBeenCalledWith({
+						host: {
+							custom: true,
+							enabled: false,
+							height: 999_999,
+							host: "https://dwallets-evm.mainsailhq.com/api",
+							id: "Test",
+							type: "full"
+						},
+						name: "Test",
+						network: "mainsail.devnet",
+					}),
+				);
+
+				serverPushSpy.mockRestore();
+				settingsSetSpy.mockRestore();
+				hostsSpy.mockRestore();
+			});
+		});
+
+		describe("with invalid server", () => {
+			it("shows an error if the server is reachable but invalid", async () => {
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({
+					mainsail: []
+				});
+
+				server.use(requestMock(publicHost, { foo: "bar" }));
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+
+				hostsSpy.mockRestore();
+			});
+
+			it("shows an error if the server is valid but doesnt match the network", async () => {
+				mockPublicEndpoint();
+
+				const networkSpy = vi.spyOn(network.prober(), "evaluate").mockReturnValue(false);
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+
+				networkSpy.mockRestore();
+			});
 	//
 	// 		it("shows an error if the server is reachable but invalid json response", async () => {
 	// 			server.use(requestMock(musigHostTest, "invalid response"));
@@ -654,7 +663,7 @@ describe("Servers Settings", () => {
 	// 			);
 	// 		});
 	// 	});
-	// });
+	});
 	//
 	// describe("with servers", () => {
 	// 	let profileHostsSpy;
@@ -1210,7 +1219,7 @@ describe("Servers Settings", () => {
 	// 	});
 	//
 	// 	it("can update a server", async () => {
-	// 		mockPeerNetwork();
+	// 		mockPublicEndpoint();
 	//
 	// 		render(
 	// 			<Route path="/profiles/:profileId/settings/servers">
@@ -1241,7 +1250,7 @@ describe("Servers Settings", () => {
 	// 		await userEvent.clear(nameField);
 	// 		await userEvent.type(nameField, "New name");
 	//
-	// 		await waitUntilServerIsValidated();
+	// 		await ();
 	//
 	// 		await waitFor(() => {
 	// 			expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled();
@@ -1404,5 +1413,5 @@ describe("Servers Settings", () => {
 	//
 	// 		expect(asFragment()).toMatchSnapshot();
 	// 	});
-	// });
+	});
 });
