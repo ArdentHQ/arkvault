@@ -7,10 +7,17 @@ import { Identifiers } from "./container.models.js";
 import { IExchangeRateService, IProfile, IReadWriteWallet, ProfileSetting } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { Storage } from "./environment.models.js";
+import { HttpClient } from "@/app/services/HttpClient.js";
 
 export class ExchangeRateService implements IExchangeRateService {
 	readonly #storageKey: string = "EXCHANGE_RATE_SERVICE";
 	readonly #dataRepository: DataRepository = new DataRepository();
+	readonly #httpClient: HttpClient;
+
+
+	public constructor() {
+		this.#httpClient = new HttpClient(10_000);
+	}
 
 	/** {@inheritDoc IExchangeRateService.syncAll} */
 	public async syncAll(profile: IProfile, currency: string): Promise<void> {
@@ -34,7 +41,7 @@ export class ExchangeRateService implements IExchangeRateService {
 
 		const historicalRates = await MarketService.make(
 			profile.settings().get(ProfileSetting.MarketProvider) as string,
-			container.get(Identifiers.HttpClient),
+			this.#httpClient,
 		).historicalPrice({
 			currency: exchangeCurrency,
 			dateFormat: "YYYY-MM-DD",
@@ -93,7 +100,7 @@ export class ExchangeRateService implements IExchangeRateService {
 			`${currency}.${exchangeCurrency}.${DateTime.make().format("YYYY-MM-DD")}`,
 			await MarketService.make(
 				profile.settings().get(ProfileSetting.MarketProvider) as string,
-				container.get(Identifiers.HttpClient),
+				this.#httpClient,
 			).dailyAverage(currency, exchangeCurrency, +Date.now()),
 		);
 	}
