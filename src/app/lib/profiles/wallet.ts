@@ -257,6 +257,10 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.username} */
 	public username(): string | undefined {
+		if (this.isCold()) {
+			return
+		}
+
 		const attributes = this.#attributes.get<Contracts.WalletData>("wallet")
 
 		if (!attributes) {
