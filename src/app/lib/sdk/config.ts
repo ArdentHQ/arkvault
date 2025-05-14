@@ -86,8 +86,7 @@ export class ConfigRepository {
 	}
 
 	public host(type: HostType, profile: IProfile): string {
-		const hostSelector = hostSelector(profile);
-		const { host } = hostSelector(this, type);
+		const { host } = hostSelector(profile)(this, type);
 		return host;
 	}
 }
