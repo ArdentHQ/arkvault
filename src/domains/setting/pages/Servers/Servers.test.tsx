@@ -24,8 +24,8 @@ import { act } from "@testing-library/react";
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 
-const peerHostLive = "https://dwallets-evm.mainsailhq.com/api";
-const peerHostTest = "https://dwallets-evm.mainsailhq.com/api";
+const peerHostLive = "https://dwallets-evm.mainsailhq.com";
+const peerHostTest = "https://dwallets-evm.mainsailhq.com";
 
 const networksStub: any = {
 	mainsail: {
@@ -314,60 +314,57 @@ describe("Servers Settings", () => {
 
 				setIntervalSpy.mockRestore();
 			});
-	//
-	// 		it("should load the node statuses with error", async () => {
-	// 			server.use(
-	// 				requestMock(peerHostTest, peerResponse),
-	// 				requestMock(musigHostTest, undefined, { status: 404 }),
-	// 			);
-	//
-	// 			const { container } = render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			expect(container).toBeInTheDocument();
-	//
-	// 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-	//
-	// 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-	//
-	// 			// Loading initially
-	// 			expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
-	//
-	// 			await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
-	// 		});
-	//
-	// 		it("should load the node statuses with error if the response is invalid json", async () => {
-	// 			server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, "invalid json"));
-	//
-	// 			const { container } = render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			expect(container).toBeInTheDocument();
-	//
-	// 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
-	//
-	// 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
-	//
-	// 			// Loading initially
-	// 			expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(2);
-	//
-	// 			await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
-	// 		});
+
+			it("should load the node status with error", async () => {
+				server.use(requestMock(peerHostTest, undefined, { status: 404 }));
+
+				const { container } = render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				expect(container).toBeInTheDocument();
+
+				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+
+				// Loading initially
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+			});
+
+			it("should load the node statuses with error if the response is invalid json", async () => {
+				server.use(requestMock(peerHostTest, "invalid json"));
+
+				const { container } = render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				expect(container).toBeInTheDocument();
+
+				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+
+				// Loading initially
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+			});
 		});
 	});
-	//
+
 	// describe("New server", () => {
 	// 	let profileHostsSpy;
 	//
