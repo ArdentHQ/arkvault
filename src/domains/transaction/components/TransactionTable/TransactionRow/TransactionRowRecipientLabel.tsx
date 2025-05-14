@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { Address } from "@/app/components/Address";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
-import { IProfile } from "@/app/lib/profiles/contracts";
+import { useBreakpoint } from "@/app/hooks";
 
 interface Properties {
 	transaction?: DTO.ExtendedConfirmedTransactionData;
