@@ -29,6 +29,8 @@ export const useVoteFilters = ({
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 
+	const walletsCount = profile.wallets().count();
+
 	const wallets = useMemo(
 		() =>
 			sortWallets(
@@ -37,7 +39,7 @@ export const useVoteFilters = ({
 					.values()
 					.filter((wallet) => wallet.network().id() === activeNetwork.id()),
 			),
-		[profile, activeNetwork],
+		[profile, activeNetwork, walletsCount],
 	);
 
 	const filteredWallets = useMemo(() => {
