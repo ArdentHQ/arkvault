@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { TransactionRowMobile } from "./TransactionRowMobile";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
@@ -10,36 +9,34 @@ let profile: Contracts.IProfile;
 
 describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 	const render = (content: React.ReactNode) => renderResponsive(content, breakpoint);
-
-	const fixture = {
-		...TransactionFixture,
-		isSuccess: () => true,
-		wallet: () => ({
-			...TransactionFixture.wallet(),
-			currency: () => "ARK",
-			network: () => ({
-				coin: () => "Mainsail",
-				id: () => "mainsail.devnet",
-			}),
-			username: () => "test_username",
-		}),
-	};
+	let fixture;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-	});
+		fixture = {
+			...TransactionFixture,
+			isSuccess: () => true,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				network: () => ({
+					coin: () => "Mainsail",
+					id: () => "mainsail.devnet",
+				}),
+				profile: () => profile,
+				username: () => "test_username",
+			}),
+		};
 
-	afterAll(() => {
-		useRandomNumberHook.useRandomNumber.mockRestore();
+
 	});
 
 	it("should render", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} />
+					<TransactionRowMobile transaction={fixture} profile={profile} />
 				</tbody>
 			</table>,
 		);
@@ -66,7 +63,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 									isLedger: () => false,
 									network: () => ({ isTest: () => false }),
 								}),
-							} as any
+							}
 						}
 						profile={profile}
 						isLoading
@@ -96,7 +93,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 										id: () => "ark.devnet",
 									}),
 								}),
-							} as any
+							}
 						}
 						exchangeCurrency="DARK"
 						profile={profile}
@@ -114,7 +111,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={{ ...fixture, timestamp: () => {} } as any} profile={profile} />
+					<TransactionRowMobile transaction={{ ...fixture, timestamp: () => {} }} profile={profile} />
 				</tbody>
 			</table>,
 		);
@@ -126,7 +123,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} />
+					<TransactionRowMobile transaction={fixture} profile={profile} />
 				</tbody>
 			</table>,
 		);
@@ -139,7 +136,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={false} />
+					<TransactionRowMobile transaction={fixture} profile={profile} hideSender={false} />
 				</tbody>
 			</table>,
 		);
@@ -152,7 +149,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} />
+					<TransactionRowMobile transaction={fixture} profile={profile} hideSender={true} />
 				</tbody>
 			</table>,
 		);
@@ -164,7 +161,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={true} />
+					<TransactionRowMobile transaction={fixture} profile={profile} hideSender={true} />
 				</tbody>
 			</table>,
 		);
@@ -176,7 +173,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile} hideSender={false} isLoading />
+					<TransactionRowMobile transaction={fixture} profile={profile} hideSender={false} isLoading />
 				</tbody>
 			</table>,
 		);

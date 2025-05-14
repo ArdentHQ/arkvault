@@ -410,7 +410,7 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.wifService} */
-	public wifService(): Services.WIFService {
+	public wifService(): WIFService {
 		return new WIFService({
 			config: this.network().config(),
 		});

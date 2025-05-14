@@ -24,6 +24,7 @@ import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { Manifest } from "@/app/lib/sdk/manifest.js";
+import { WIFService } from "@/app/lib/mainsail/wif.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -456,10 +457,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the identity service instance.
 	 *
-	 * @return {Services.IdentityService}
+	 * @return {WIFService}
 	 * @memberof IReadWriteWallet
 	 */
-	wifService(): Services.WIFService;
+	wifService(): WIFService;
 
 	/**
 	 * Get the ledger service instance.
