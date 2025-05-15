@@ -4,9 +4,9 @@ import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contr
 import { isSameNetwork } from "@/utils/peers";
 import { customNetworks, sortByName } from "@/utils/server-utils";
 
-export const useCustomNetworks = (env: Environment, profile: Contracts.IProfile) => {
+export const useCustomNetworks = (profile: Contracts.IProfile) => {
 	const [allCustomNetworks, setAllCustomNetworks] = useState<NormalizedNetwork[]>(
-		sortByName(customNetworks(env, profile)),
+		sortByName(customNetworks(profile)),
 	);
 
 	const updateNetwork = useCallback(
