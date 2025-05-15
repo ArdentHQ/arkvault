@@ -134,7 +134,6 @@ const fillServerForm = async ({
 
 	await fillHost("ServerFormModal--publicApiEndpoint", publicApiEndpoint);
 
-	console.log(txApiEndpoint, evmApiEndpoint);
 	if (txApiEndpoint) {
 		await fillHost("ServerFormModal--transactionApiEndpoint", txApiEndpoint);
 	}
