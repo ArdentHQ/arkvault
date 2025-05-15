@@ -15,7 +15,6 @@ import {
 	within,
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
 import { server, requestMock } from "@/tests/mocks/server";
@@ -24,12 +23,11 @@ import { act } from "@testing-library/react";
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 
-const peerHostLive = "https://dwallets-evm.mainsailhq.com";
-const peerHostTest = "https://dwallets-evm.mainsailhq.com";
+const publicBaseUrl = "https://dwallets-evm.mainsailhq.com";
 
-const publicHost = "https://dwallets-evm.mainsailhq.com/api";
-const txHost = "https://dwallets-evm.mainsailhq.com/tx/api";
-const evmHost = "https://dwallets-evm.mainsailhq.com/evm/api";
+const publicApiUrl = publicBaseUrl + "/api";
+const txApiUrl = "https://dwallets-evm.mainsailhq.com/tx/api";
+const evmApiUrl = "https://dwallets-evm.mainsailhq.com/evm/api";
 
 const customServerName = 'Mainsail Devnet "Peer" #1';
 
@@ -40,7 +38,7 @@ const networksStub: any = {
 				host: {
 					custom: true,
 					height: 174_400,
-					host: publicHost,
+					host: publicApiUrl,
 					id: customServerName,
 					type: "full",
 				},
@@ -49,7 +47,7 @@ const networksStub: any = {
 			{
 				host: {
 					custom: true,
-					host: txHost,
+					host: txApiUrl,
 					id: customServerName,
 					type: "tx",
 				},
@@ -58,7 +56,7 @@ const networksStub: any = {
 			{
 				host: {
 					custom: true,
-					host: evmHost,
+					host: evmApiUrl,
 					id: customServerName,
 					type: "evm",
 				},
@@ -82,7 +80,6 @@ const peerResponseHeight = {
 	},
 };
 
-const mainsailDevnet = "ark.devnet";
 const serverFormSaveButtonTestingId = "ServerFormModal--save";
 const addNewPeerButtonTestId = "CustomPeers--addnew";
 const peerStatusOkTestId = "CustomPeersPeer--statusok";
@@ -100,9 +97,9 @@ const modalAlertTestId = "ServerFormModal-alert";
 
 const fillServerForm = async ({
 	name = "Test",
-	publicApiEndpoint = publicHost,
-	txApiEndpoint = txHost,
-	evmApiEndpoint = evmHost,
+	publicApiEndpoint = publicApiUrl,
+	txApiEndpoint = txApiUrl,
+	evmApiEndpoint = evmApiUrl,
 }) => {
 	const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId("SelectDropdown__input");
 
@@ -122,7 +119,7 @@ const fillServerForm = async ({
 
 	expect(nameField).toHaveValue(name);
 
-	const fillHost = async (fieldId:string, url:string) => {
+	const fillHost = async (fieldId: string, url: string) => {
 		const field = screen.getByTestId(fieldId);
 		await userEvent.clear(field);
 		await userEvent.type(field, url);
@@ -130,7 +127,7 @@ const fillServerForm = async ({
 		expect(field).toHaveValue(url);
 
 		fireEvent.focusOut(field);
-	}
+	};
 
 	await fillHost("ServerFormModal--publicApiEndpoint", publicApiEndpoint);
 
@@ -147,10 +144,13 @@ const waitUntilServerFormIsReady = async () => {
 	await waitFor(() => expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled());
 };
 
-const mockPublicEndpoint = () => server.use(requestMock(publicHost, peerResponse));
+const mockPublicEndpoint = () => server.use(requestMock(publicApiUrl, peerResponse));
+
+const mockHeight = () => server.use(requestMock(`${publicApiUrl}/blockchain`, peerResponseHeight));
+
 const mockTxEndpoint = () =>
 	server.use(
-		requestMock(`${txHost}/configuration`, {
+		requestMock(`${txApiUrl}/configuration`, {
 			data: {
 				core: {
 					version: "0.0.1-evm.18",
@@ -163,7 +163,7 @@ const mockTxEndpoint = () =>
 const mockEvmEndpoint = () =>
 	server.use(
 		requestMock(
-			evmHost,
+			evmApiUrl,
 			{
 				id: 1,
 				jsonrpc: "2.0",
@@ -177,12 +177,11 @@ const mockEvmEndpoint = () =>
 
 const mockRequests = () => {
 	mockPublicEndpoint();
-	mockPeerHeight();
+	mockHeight();
 	mockTxEndpoint();
 	mockEvmEndpoint();
 };
 
-const mockPeerHeight = () => server.use(requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight));
 
 describe("Servers Settings", () => {
 	let resetProfileNetworksMock: () => void;
@@ -294,7 +293,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses", async () => {
-				server.use(requestMock(peerHostTest, peerResponse));
+				mockPublicEndpoint();
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -318,7 +317,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses in an interval", async () => {
-				server.use(requestMock(peerHostTest, peerResponse));
+				mockPublicEndpoint();
 
 				const originalSetInterval = global.setInterval;
 				let intervalPingFunction: () => void;
@@ -365,7 +364,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node status with error", async () => {
-				server.use(requestMock(peerHostTest, undefined, { status: 404 }));
+				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -389,7 +388,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses with error if the response is invalid json", async () => {
-				server.use(requestMock(peerHostTest, "invalid json"));
+				server.use(requestMock(publicBaseUrl, "invalid json"));
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -541,7 +540,7 @@ describe("Servers Settings", () => {
 					mainsail: [],
 				});
 
-				server.use(requestMock(publicHost, { foo: "bar" }));
+				server.use(requestMock(publicApiUrl, { foo: "bar" }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -589,7 +588,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is reachable but invalid json response", async () => {
-				server.use(requestMock(publicHost, "invalid response"));
+				server.use(requestMock(publicApiUrl, "invalid response"));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -610,7 +609,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is unreachable", async () => {
-				server.use(requestMock(publicHost, undefined, { status: 500 }));
+				server.use(requestMock(publicApiUrl, undefined, { status: 500 }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -712,7 +711,7 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
-			await fillServerForm({evmApiEndpoint: null, txApiEndpoint: null});
+			await fillServerForm({ evmApiEndpoint: null, txApiEndpoint: null });
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 		});
@@ -752,141 +751,459 @@ describe("Servers Settings", () => {
 			});
 		});
 
-			it("should render customs servers in xs", () => {
-				const { asFragment } = renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+		it("should render customs servers in xs", () => {
+			const { asFragment } = renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
-				const table = screen.getByTestId(customPeerListTestId);
+			const table = screen.getByTestId(customPeerListTestId);
 
-				expect(table).toBeInTheDocument();
+			expect(table).toBeInTheDocument();
 
-				expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
 
-				expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
+			expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
 
-				expect(asFragment()).toMatchSnapshot();
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("can expand a custom servers accordion in xs", async () => {
+			renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+			expect(screen.getAllByTestId("mobile-table-element-body")[0]).toBeInTheDocument();
+		});
+
+		it("can check servers accordion in mobile", async () => {
+			renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+			await waitFor(() =>
+				expect(screen.getAllByTestId("CustomPeers-network-item--mobile--checked")).toHaveLength(1),
+			);
+
+			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+			expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
+		});
+
+		it("can edit servers in mobile", async () => {
+			renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--edit")[0]);
+
+			expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
+		});
+
+		it("can delete servers in mobile", async () => {
+			renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--delete")[0]);
+
+			await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+		});
+
+		it("can refresh servers in mobile", async () => {
+			const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
+
+			renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
+
+			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--refresh")[0]);
+
+			await waitFor(() => {
+				expect(refreshPersistMock).toHaveBeenCalledOnce();
 			});
 
-			it("can expand a custom servers accordion in xs", async () => {
-				renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+			refreshPersistMock.mockRestore();
+		});
 
-				const table = screen.getByTestId(customPeerListTestId);
+		it("should show status ok after ping the servers", async () => {
+			const { asFragment } = render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
-				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
-				expect(screen.getAllByTestId("mobile-table-element-body")[0]).toBeInTheDocument();
+			// After ping, it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("can check an online server", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+			// After ping it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+			await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
+		});
+
+		it("should show status ok after ping the servers on mobile", async () => {
+			const { asFragment } = renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+			// After ping, it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should show status ok after ping the servers on mobile when expanded", async () => {
+			const { asFragment } = renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			await userEvent.click(
+				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+			);
+
+			// After ping it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should ping the servers in an interval", async () => {
+			const originalSetInterval = global.setInterval;
+
+			const intervalPingFunction: (() => void)[] = [];
+
+			const setIntervalSpy = vi.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
+				intervalPingFunction.push(intervalFunction);
+				return originalSetInterval(intervalFunction, time);
 			});
 
-			it("can check servers accordion in mobile", async () => {
-				renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+			const { asFragment } = render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
-				const table = screen.getByTestId(customPeerListTestId);
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
-				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			// After ping it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
-				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-
-				await waitFor(() =>
-					expect(screen.getAllByTestId("CustomPeers-network-item--mobile--checked")).toHaveLength(1),
-				);
-
-				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-
-				expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
+			act(() => {
+				for (const item of intervalPingFunction) {
+					item();
+				}
 			});
 
-			it("can edit servers in mobile", async () => {
-				renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+			// After ping, it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
-				const table = screen.getByTestId(customPeerListTestId);
+			expect(asFragment()).toMatchSnapshot();
 
-				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			setIntervalSpy.mockRestore();
+		});
 
-				await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--edit")[0]);
+		it("can delete a server", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
+			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+			await userEvent.click(dropdown);
+
+			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+				"dropdown__option--1",
+			);
+
+			expect(deleteButton).toBeInTheDocument();
+
+			await userEvent.click(deleteButton);
+
+			await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+			await waitFor(() => expect(screen.queryByTestId("CustomPeers-network-item")).not.toBeInTheDocument());
+		});
+
+		it("can cancel a server deletion", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+			await userEvent.click(dropdown);
+
+			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+				"dropdown__option--1",
+			);
+
+			expect(deleteButton).toBeInTheDocument();
+
+			await userEvent.click(deleteButton);
+
+			await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("DeleteResource__cancel-button"));
+
+			expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
+		});
+
+		it("can close a server deletion", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+			await userEvent.click(dropdown);
+
+			const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+				"dropdown__option--1",
+			);
+
+			expect(deleteButton).toBeInTheDocument();
+
+			await userEvent.click(deleteButton);
+
+			await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("Modal__close-button"));
+
+			expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
+		});
+
+		it("can update a server", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+			await userEvent.click(dropdown);
+
+			const editButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+				"dropdown__option--0",
+			);
+
+			expect(editButton).toBeInTheDocument();
+
+			await userEvent.click(editButton);
+
+			await waitFor(() => {
 				expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
 			});
 
-			it("can delete servers in mobile", async () => {
-				renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+			const nameField = screen.getByTestId("ServerFormModal--name");
+			await userEvent.clear(nameField);
+			await userEvent.type(nameField, "New name");
 
-				const table = screen.getByTestId(customPeerListTestId);
-
-				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-
-				await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--delete")[0]);
-
-				await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled();
 			});
 
-			it("can refresh servers in mobile", async () => {
-				const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
+			await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
 
-				renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
+			await waitFor(() => expect(screen.queryByTestId("ServerFormModal")).not.toBeInTheDocument(), {
+				timeout: 4000,
+			});
+		});
+
+		it("can refresh a server", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+			const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+			await userEvent.click(dropdown);
+
+			const refreshButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+				"dropdown__option--2",
+			);
+
+			expect(refreshButton).toBeInTheDocument();
+
+			await userEvent.click(refreshButton);
+
+			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
+
+			expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3);
+		});
+
+		it("can check and uncheck a server", async () => {
+			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
+
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+			await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
+
+			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+			expect(screen.getAllByTestId("CustomPeers-network-item")).toHaveLength(1);
+
+			serverPushSpy.mockReset();
+		});
+	});
+	describe("with unreachable servers", () => {
+			let profileHostsSpy;
+
+			beforeEach(() => {
+				profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+
+				mockHeight();
+				mockTxEndpoint();
+				mockEvmEndpoint();
+
+				server.use(
+					requestMock(publicBaseUrl, undefined, { status: 404 }),
 				);
-
-				const table = screen.getByTestId(customPeerListTestId);
-
-				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-
-				await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
-
-				await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--refresh")[0]);
-
-				await waitFor(() => {
-					expect(refreshPersistMock).toHaveBeenCalledOnce();
-				});
-
-				refreshPersistMock.mockRestore();
 			});
 
-			it("should show status ok after ping the servers", async () => {
+			afterEach(() => {
+				profileHostsSpy.mockRestore();
+			});
+
+			it("should show status error if request fails", async () => {
 				const { asFragment } = render(
 					<Route path="/profiles/:profileId/settings/servers">
 						<ServersSettings />
@@ -899,332 +1216,11 @@ describe("Servers Settings", () => {
 				// Is loading initially
 				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
-				// After ping, it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+				// After ping it should show error
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
 
 				expect(asFragment()).toMatchSnapshot();
 			});
-
-			it("can check an online server", async () => {
-				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				// Is loading initially
-				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-
-				// After ping it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-
-				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-
-				await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
-			});
-
-			it("should show status ok after ping the servers on mobile", async () => {
-				const { asFragment } = renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				// Is loading initially
-				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-
-				// After ping, it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-
-				expect(asFragment()).toMatchSnapshot();
-			});
-
-			it("should show status ok after ping the servers on mobile when expanded", async () => {
-				const { asFragment } = renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				await userEvent.click(
-					within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
-				);
-
-				// After ping it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-
-				expect(asFragment()).toMatchSnapshot();
-			});
-
-			it("should ping the servers in an interval", async () => {
-				const originalSetInterval = global.setInterval;
-
-				const intervalPingFunction: (() => void)[] = [];
-
-				const setIntervalSpy = vi.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
-					intervalPingFunction.push(intervalFunction);
-					return originalSetInterval(intervalFunction, time);
-				});
-
-				const { asFragment } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				// Is loading initially
-				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-
-				// After ping it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-
-				act(() => {
-					for (const item of intervalPingFunction) {
-						item();
-					}
-				});
-
-				// After ping, it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-
-				expect(asFragment()).toMatchSnapshot();
-
-				setIntervalSpy.mockRestore();
-			});
-
-			it("can delete a server", async () => {
-				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-
-				await userEvent.click(dropdown);
-
-				const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-					"dropdown__option--1",
-				);
-
-				expect(deleteButton).toBeInTheDocument();
-
-				await userEvent.click(deleteButton);
-
-				await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
-
-				await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
-				await waitFor(() => expect(screen.queryByTestId("CustomPeers-network-item")).not.toBeInTheDocument());
-			});
-
-			it("can cancel a server deletion", async () => {
-				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-
-				await userEvent.click(dropdown);
-
-				const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-					"dropdown__option--1",
-				);
-
-				expect(deleteButton).toBeInTheDocument();
-
-				await userEvent.click(deleteButton);
-
-				await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
-
-				await userEvent.click(screen.getByTestId("DeleteResource__cancel-button"));
-
-				expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
-			});
-		//
-		// 	it("can close a server deletion", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-		//
-		// 		await userEvent.click(dropdown);
-		//
-		// 		const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-		// 			"dropdown__option--1",
-		// 		);
-		//
-		// 		expect(deleteButton).toBeInTheDocument();
-		//
-		// 		await userEvent.click(deleteButton);
-		//
-		// 		await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
-		//
-		// 		await userEvent.click(screen.getByTestId("Modal__close-button"));
-		//
-		// 		expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
-		// 	});
-		//
-		// 	it("can update a server", async () => {
-		// 		mockPublicEndpoint();
-		//
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-		//
-		// 		await userEvent.click(dropdown);
-		//
-		// 		const editButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-		// 			"dropdown__option--0",
-		// 		);
-		//
-		// 		expect(editButton).toBeInTheDocument();
-		//
-		// 		await userEvent.click(editButton);
-		//
-		// 		await waitFor(() => {
-		// 			expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
-		// 		});
-		//
-		// 		const nameField = screen.getByTestId("ServerFormModal--name");
-		// 		await userEvent.clear(nameField);
-		// 		await userEvent.type(nameField, "New name");
-		//
-		// 		await ();
-		//
-		// 		await waitFor(() => {
-		// 			expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled();
-		// 		});
-		//
-		// 		await userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
-		//
-		// 		await waitFor(() => expect(screen.queryByTestId("ServerFormModal")).not.toBeInTheDocument(), {
-		// 			timeout: 4000,
-		// 		});
-		// 	});
-		//
-		// 	it("can refresh a server", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-		//
-		// 		const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-		//
-		// 		await userEvent.click(dropdown);
-		//
-		// 		const refreshButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-		// 			"dropdown__option--2",
-		// 		);
-		//
-		// 		expect(refreshButton).toBeInTheDocument();
-		//
-		// 		await userEvent.click(refreshButton);
-		//
-		// 		await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
-		//
-		// 		expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3);
-		// 	});
-		//
-		// 	it("can check and uncheck a server", async () => {
-		// 		const serverPushSpy = vi.spyOn(profile.hosts(), "push");
-		//
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-		//
-		// 		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
-		//
-		// 		await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-		//
-		// 		expect(screen.getAllByTestId("CustomPeers-network-item")).toHaveLength(3);
-		//
-		// 		serverPushSpy.mockReset();
-		// 	});
-		// });
-		//
-		// describe("with unreachable servers", () => {
-		// 	let profileHostsSpy;
-		//
-		// 	beforeEach(() => {
-		// 		profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
-		//
-		// 		server.use(
-		// 			requestMock(musigHostTest, undefined, { status: 403 }),
-		// 			requestMock(musigHostLive, undefined, { status: 500 }),
-		// 			requestMock(peerHostLive, undefined, { status: 404 }),
-		// 		);
-		// 	});
-		//
-		// 	afterEach(() => {
-		// 		profileHostsSpy.mockRestore();
-		// 	});
-		//
-		// 	it("should show status error if request fails", async () => {
-		// 		const { asFragment } = render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-		//
-		// 		// After ping it should show error
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(3));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
 		//
 		// 	it("can check an offline server", async () => {
 		// 		render(
