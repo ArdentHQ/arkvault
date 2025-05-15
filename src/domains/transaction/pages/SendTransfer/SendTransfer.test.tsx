@@ -49,69 +49,62 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const signedTransactionMock = {
+	blockHash: () => {},
+	confirmations: () => BigNumber.ZERO,
+	convertedAmount: () => +transactionFixture.data.value / 1e8,
+	convertedFee: () => {
+		const fee = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas).dividedBy(1e8);
+		return fee.toNumber();
+	},
+	convertedTotal: () => BigNumber.ZERO,
+	data: () => transactionFixture.data,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
+	explorerLinkForBlock: () => {},
+	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
+	from: () => transactionFixture.data.from,
+	hash: () => transactionFixture.data.hash,
+	isConfirmed: () => false,
+	isDelegateRegistration: () => false,
+	isDelegateResignation: () => false,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isReturn: () => false,
+	isSecondSignature: () => false,
+	isSent: () => true,
+	isSuccess: () => true,
+	isTransfer: () => true,
+	isUnvote: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => false,
+	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => transactionFixture.data.memo || undefined,
+	nonce: () => BigNumber.make(transactionFixture.data.nonce),
+	payments: () => [],
+	recipients: () => [
+		{
+			address: transactionFixture.data.to,
+			amount: +transactionFixture.data.value / 1e8,
+		},
+	],
+	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+	to: () => transactionFixture.data.to,
+	total: () => {
+		const value = BigNumber.make(transactionFixture.data.value);
+		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+		return value.plus(feeVal);
+	},
+	type: () => "transfer",
+	usesMultiSignature: () => false,
+	value: () => +transactionFixture.data.value / 1e8,
+	wallet: () => wallet,
+} as DTO.ExtendedSignedTransactionData;
+
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		blockHash: () => {},
-		confirmations: () => BigNumber.ZERO,
-		convertedAmount: () => +transactionFixture.data.value / 1e8,
-		convertedFee: () => {
-			const fee = BigNumber.make(transactionFixture.data.gasPrice)
-				.times(transactionFixture.data.gas)
-				.dividedBy(1e8);
-			return fee.toNumber();
-		},
-		convertedTotal: () => {
-			const value = +transactionFixture.data.value / 1e8;
-			const calculatedFee = BigNumber.make(transactionFixture.data.gasPrice)
-				.times(transactionFixture.data.gas)
-				.dividedBy(1e8)
-				.toNumber();
-			return value + calculatedFee;
-		},
-		data: () => transactionFixture.data,
-		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
-		explorerLinkForBlock: () => {},
-		fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
-		from: () => transactionFixture.data.from,
-		hash: () => transactionFixture.data.hash,
-		isConfirmed: () => false,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isReturn: () => false,
-		isSecondSignature: () => false,
-		isSent: () => true,
-		isSuccess: () => true,
-		isTransfer: () => true,
-		isUnvote: () => false,
-		isUsernameRegistration: () => false,
-		isUsernameResignation: () => false,
-		isValidatorRegistration: () => false,
-		isValidatorResignation: () => false,
-		isVote: () => false,
-		isVoteCombination: () => false,
-		memo: () => transactionFixture.data.memo || undefined,
-		nonce: () => BigNumber.make(transactionFixture.data.nonce),
-		payments: () => [],
-		recipients: () => [
-			{
-				address: transactionFixture.data.to,
-				amount: +transactionFixture.data.value / 1e8,
-			},
-		],
-		timestamp: () => DateTime.make(transactionFixture.data.timestamp),
-		to: () => transactionFixture.data.to,
-		total: () => {
-			const value = BigNumber.make(transactionFixture.data.value);
-			const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
-			return value.plus(feeVal);
-		},
-		type: () => "transfer",
-		usesMultiSignature: () => false,
-		value: () => +transactionFixture.data.value / 1e8,
-		wallet: () => wallet,
-	} as DTO.ExtendedSignedTransactionData);
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -1103,7 +1096,7 @@ describe("SendTransfer", () => {
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
+		const walletDetailPage = `/profiles/${getDefaultProfileId()}/dashboard`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
 
 		signMock.mockRestore();
@@ -1150,36 +1143,16 @@ describe("SendTransfer", () => {
 			Promise.resolve({
 				items: () => [
 					{
-						convertedTotal: () => 0,
-						isConfirmed: () => false,
-						isMultiPayment: () => false,
-						isReturn: () => false,
-						isSent: () => true,
-						isTransfer: () => true,
-						isUnvote: () => false,
-						isVote: () => false,
-						recipient: () => "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-						recipients: () => ["D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", wallet.address()],
-						timestamp: () => DateTime.make(),
-						total: () => 1,
-						type: () => "transfer",
-						wallet: () => wallet,
-					},
-					{
-						convertedTotal: () => 0,
+						...signedTransactionMock,
 						isConfirmed: () => false,
 						isMultiPayment: () => true,
-						isReturn: () => false,
-						isSent: () => true,
+						isTransfer: () => true,
+					},
+					{
+						...signedTransactionMock,
+						isConfirmed: () => false,
+						isMultiPayment: () => true,
 						isTransfer: () => false,
-						isUnvote: () => false,
-						isVote: () => false,
-						recipient: () => "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-						recipients: () => ["D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", wallet.address()],
-						timestamp: () => DateTime.make(),
-						total: () => 1,
-						type: () => "multiPayment",
-						wallet: () => wallet,
 					},
 				],
 			}),
@@ -1213,7 +1186,7 @@ describe("SendTransfer", () => {
 
 		await selectRecipient();
 
-		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		await selectFirstRecipient();
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
@@ -1223,23 +1196,18 @@ describe("SendTransfer", () => {
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
-		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
-
-		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
-
 		// Step 2
 		expect(continueButton()).not.toBeDisabled();
 
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -1266,7 +1234,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 		await userEvent.click(sendButton());
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await waitFor(() => expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible());
 
 		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
