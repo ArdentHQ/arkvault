@@ -8,7 +8,7 @@ export class WalletData {
 	#config: ConfigRepository;
 
 	constructor({ config }: { config: ConfigRepository }) {
-		this.#config = config
+		this.#config = config;
 	}
 
 	public fill(data: KeyValuePair) {
