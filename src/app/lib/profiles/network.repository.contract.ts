@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 export type Network = Networks.NetworkManifest;
 export type NetworkMap = Record<string, Network>;

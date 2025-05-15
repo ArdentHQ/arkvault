@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
 
 export class AddressService {

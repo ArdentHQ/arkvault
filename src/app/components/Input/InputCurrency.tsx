@@ -2,7 +2,7 @@ import { Currency } from "@/app/lib/intl";
 import React, { useEffect, useState } from "react";
 
 import { Input } from "./Input";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 type InputCurrencyProperties = {
 	addons?: any;

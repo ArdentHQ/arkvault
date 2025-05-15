@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { isValidUrl } from "./url-validation";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";

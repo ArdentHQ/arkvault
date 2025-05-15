@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";

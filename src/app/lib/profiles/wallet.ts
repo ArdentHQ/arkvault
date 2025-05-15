@@ -1,4 +1,4 @@
-import { Contracts, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
@@ -39,7 +39,7 @@ import { TransactionService as WalletTransactionService } from "./wallet-transac
 import { WalletImportFormat } from "./wif.js";
 import { LinkService } from "@/app/lib/mainsail/link.service";
 import { MessageService } from "@/app/lib/mainsail/message.service";
-import { Manifest } from "@/app/lib/sdk/manifest";
+import { Manifest } from "@/app/lib/mainsail/manifest.class";
 import { manifest } from "@/app/lib/mainsail/index";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 import { ClientService } from "@/app/lib/mainsail/client.service";

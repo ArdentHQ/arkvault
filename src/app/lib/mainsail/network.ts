@@ -1,5 +1,5 @@
 import { get } from "@/app/lib/helpers";
-import { randomHost } from "./helpers";
+import { randomHost } from "./helpers/hosts";
 import {
 	CoinManifest,
 	ExpirationType,
@@ -9,7 +9,7 @@ import {
 	NetworkManifestToken,
 	VotingMethod,
 } from "./network.models";
-import { ConfigKey, ConfigRepository } from "./config";
+import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { Managers } from "@/app/lib/mainsail/crypto";
 

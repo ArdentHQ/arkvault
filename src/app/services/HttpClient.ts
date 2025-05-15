@@ -1,4 +1,4 @@
-import { Http } from "@/app/lib/sdk";
+import { Http } from "@/app/lib/mainsail";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./Cache";

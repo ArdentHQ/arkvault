@@ -1,7 +1,7 @@
-import { Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 import { BigNumber, get, has } from "@/app/lib/helpers";
-import { KeyValuePair } from "@/app/lib/sdk/contracts";
-import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/config";
+import { KeyValuePair } from "@/app/lib/mainsail/contracts";
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 
 export class WalletData {
 	protected data!: KeyValuePair;

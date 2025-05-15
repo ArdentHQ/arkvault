@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { HttpClient } from "@/app/services/HttpClient";
 import { addressIsValid as checkIfAddressIsValid, getServerHeight } from "@/utils/peers";
 import { DeepMap, FieldError } from "react-hook-form";

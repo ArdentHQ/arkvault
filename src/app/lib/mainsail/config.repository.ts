@@ -1,14 +1,15 @@
 import { get, has, set, unset, ValidatorSchema } from "@/app/lib/helpers";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { NetworkHostSelectorFactory } from "@/app/lib/profiles";
-import { Helpers, Networks } from ".";
+import { Networks } from ".";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+import { filterHostsFromConfig, randomHost } from "./helpers/hosts";
 
 export const hostSelector: NetworkHostSelectorFactory =
 	(profile: IProfile) => (configRepository: ConfigRepository, type?: Networks.NetworkHostType) => {
 		type ??= "full";
 
-		const defaultHosts = Helpers.filterHostsFromConfig(configRepository, type);
+		const defaultHosts = filterHostsFromConfig(configRepository, type);
 		const customHosts = profile
 			.hosts()
 			.allByNetwork(configRepository.get("network.id"))
@@ -16,23 +17,23 @@ export const hostSelector: NetworkHostSelectorFactory =
 			.filter(({ custom, enabled, type: hostType }) => custom && enabled && hostType === type);
 
 		if (customHosts.length === 0) {
-			return Helpers.randomHost(defaultHosts, type);
+			return randomHost(defaultHosts, type);
 		}
 
 		if (profile.settings().get(ProfileSetting.FallbackToDefaultNodes)) {
-			const customHost = Helpers.randomHost(customHosts, type);
+			const customHost = randomHost(customHosts, type);
 
 			if (!customHost.failedCount || customHost.failedCount < 3) {
 				return customHost;
 			}
 
-			return Helpers.randomHost(
+			return randomHost(
 				defaultHosts.filter(({ custom }) => !custom),
 				type,
 			);
 		}
 
-		return Helpers.randomHost(customHosts, type);
+		return randomHost(customHosts, type);
 	};
 
 export class ConfigRepository {
