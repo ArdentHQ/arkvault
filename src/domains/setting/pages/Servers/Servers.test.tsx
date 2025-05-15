@@ -91,7 +91,7 @@ const peerStatusErrorTestId = "CustomPeersPeer--statuserror";
 const peerDropdownMenuTestId = "-CustomPeers--dropdown";
 const serverDeleteConfirmationTestId = "ServersSettings--delete-confirmation";
 const customPeerListTestId = "CustomPeers--list";
-const networkAccordionIconTestId = "Accordion__toggle";
+const networkAccordionIconTestId = "mobile-table-element-header";
 const CustomPeersNetworkItem = "CustomPeers-network-item";
 const nodeStatusNodeItemTestId = "NodesStatus--node";
 const nodeStatusLoadingTestId = "NodeStatus--statusloading";
@@ -122,29 +122,26 @@ const fillServerForm = async ({
 
 	expect(nameField).toHaveValue(name);
 
-	const publicApiField = screen.getByTestId("ServerFormModal--publicApiEndpoint");
-	await userEvent.clear(publicApiField);
-	await userEvent.type(publicApiField, publicApiEndpoint);
+	const fillHost = async (fieldId:string, url:string) => {
+		const field = screen.getByTestId(fieldId);
+		await userEvent.clear(field);
+		await userEvent.type(field, url);
 
-	expect(publicApiField).toHaveValue(publicApiEndpoint);
+		expect(field).toHaveValue(url);
 
-	fireEvent.focusOut(publicApiField);
+		fireEvent.focusOut(field);
+	}
 
-	const txApiField = screen.getByTestId("ServerFormModal--transactionApiEndpoint");
-	await userEvent.clear(txApiField);
-	await userEvent.type(txApiField, txApiEndpoint);
+	await fillHost("ServerFormModal--publicApiEndpoint", publicApiEndpoint);
 
-	expect(txApiField).toHaveValue(txApiEndpoint);
+	console.log(txApiEndpoint, evmApiEndpoint);
+	if (txApiEndpoint) {
+		await fillHost("ServerFormModal--transactionApiEndpoint", txApiEndpoint);
+	}
 
-	fireEvent.focusOut(txApiField);
-
-	const evmApiField = screen.getByTestId("ServerFormModal--evmApiEndpoint");
-	await userEvent.clear(evmApiField);
-	await userEvent.type(evmApiField, evmApiEndpoint);
-
-	expect(evmApiField).toHaveValue(evmApiEndpoint);
-
-	fireEvent.focusOut(evmApiField);
+	if (evmApiEndpoint) {
+		await fillHost("ServerFormModal--evmApiEndpoint", evmApiEndpoint);
+	}
 };
 
 const waitUntilServerFormIsReady = async () => {
@@ -697,202 +694,105 @@ describe("Servers Settings", () => {
 
 			expect(asFragment()).toMatchSnapshot();
 		});
-		//
-		// 	it("shows an error if the server host already exists", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		expect(table).toBeInTheDocument();
-		//
-		// 		expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
-		//
-		// 		await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-		//
-		// 		await fillServerForm({
-		// 			address: musigHostTest,
-		// 		});
-		//
-		// 		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-		// 	});
-		//
-		// 	it("can fill the form and generate a name", async () => {
-		// 		const musigHost = "https://ark-test-musig2.arkvault.io";
-		//
-		// 		server.use(requestMock(musigHost, musigResponse));
-		//
-		// 		profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
-		//
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-		//
-		// 		const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
-		// 			"SelectDropdown__input",
-		// 		);
-		//
-		// 		expect(networkSelect).toBeInTheDocument();
-		//
-		// 		await userEvent.click(networkSelect);
-		//
-		// 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
-		//
-		// 		expect(firstOption).toBeVisible();
-		//
-		// 		await userEvent.click(firstOption);
-		//
-		// 		const addressField = screen.getByTestId("ServerFormModal--address");
-		// 		await userEvent.clear(addressField);
-		// 		await userEvent.type(addressField, musigHost);
-		//
-		// 		expect(addressField).toHaveValue(musigHost);
-		//
-		// 		fireEvent.focusOut(addressField);
-		//
-		// 		await waitUntilServerIsValidated();
-		//
-		// 		const nameField = screen.getByTestId("ServerFormModal--name");
-		//
-		// 		await waitFor(() => {
-		// 			expect(nameField).toHaveValue("ARK Musig #2");
-		// 		});
-		// 	});
-		//
-		// 	it("should fill the form and generate a name for peer", async () => {
-		// 		const peerHost = "https://ark-live2.arkvault.io";
-		//
-		// 		server.use(requestMock(peerHost, peerResponse));
-		//
-		// 		const networks: any = {
-		// 			ark: {
-		// 				mainnet: [
-		// 					{
-		// 						host: {
-		// 							custom: true,
-		// 							host: peerHostLive,
-		// 							type: "peer",
-		// 						},
-		// 						name: "ARK Peer #2",
-		// 					},
-		// 				],
-		// 			},
-		// 		};
-		//
-		// 		profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networks);
-		//
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-		//
-		// 		const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
-		// 			"SelectDropdown__input",
-		// 		);
-		//
-		// 		expect(networkSelect).toBeInTheDocument();
-		//
-		// 		await userEvent.click(networkSelect);
-		//
-		// 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
-		//
-		// 		expect(firstOption).toBeVisible();
-		//
-		// 		await userEvent.click(firstOption);
-		//
-		// 		const addressField = screen.getByTestId("ServerFormModal--address");
-		// 		await userEvent.clear(addressField);
-		// 		await userEvent.type(addressField, peerHost);
-		//
-		// 		expect(addressField).toHaveValue(peerHost);
-		//
-		// 		fireEvent.focusOut(addressField);
-		//
-		// 		await waitUntilServerIsValidated();
-		//
-		// 		const nameField = screen.getByTestId("ServerFormModal--name");
-		//
-		// 		expect(nameField).toHaveValue("ARK Peer #1");
-		// 	});
-		//
-		// 	it("should render customs servers in xs", () => {
-		// 		const { asFragment } = renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		expect(table).toBeInTheDocument();
-		//
-		// 		expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
-		//
-		// 		expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(3);
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
-		//
-		// 	it("can expand a custom servers accordion in xs", async () => {
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-		//
-		// 		expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
-		// 	});
-		//
-		// 	it("can expand a custom servers accordion in xs for peer", async () => {
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		// index 2 is a peer network
-		// 		await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[2]);
-		//
-		// 		expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
-		// 	});
-		//
+
+		it("shows an error if the server host already exists", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			expect(table).toBeInTheDocument();
+
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
+
+			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+			await fillServerForm({evmApiEndpoint: null, txApiEndpoint: null});
+
+			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+		});
+
+		it("can fill the form and generate a name", async () => {
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
+
+			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+			const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
+				"SelectDropdown__input",
+			);
+
+			expect(networkSelect).toBeInTheDocument();
+
+			await userEvent.click(networkSelect);
+
+			const firstOption = screen.getByTestId("SelectDropdown__option--0");
+
+			expect(firstOption).toBeVisible();
+
+			await userEvent.click(firstOption);
+
+			const nameField = screen.getByTestId("ServerFormModal--name");
+
+			await waitFor(() => {
+				expect(nameField).toHaveValue('Mainsail Devnet "Peer" #2');
+			});
+		});
+
+			it("should render customs servers in xs", () => {
+				const { asFragment } = renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const table = screen.getByTestId(customPeerListTestId);
+
+				expect(table).toBeInTheDocument();
+
+				expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
+
+				expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
+
+				expect(asFragment()).toMatchSnapshot();
+			});
+
+			it("can expand a custom servers accordion in xs", async () => {
+				renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const table = screen.getByTestId(customPeerListTestId);
+
+				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+				expect(screen.getAllByTestId("mobile-table-element-body")[0]).toBeInTheDocument();
+			});
+			
 		// 	it("can check servers accordion in mobile", async () => {
 		// 		renderResponsiveWithRoute(
 		// 			<Route path="/profiles/:profileId/settings/servers">
