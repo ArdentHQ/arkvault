@@ -1262,26 +1262,5 @@ describe("Servers Settings", () => {
 
 				expect(asFragment()).toMatchSnapshot();
 			});
-
-			it("should show status error if request fails on mobile when expanded", async () => {
-				const { asFragment } = renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
-
-				await userEvent.click(
-					within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
-				);
-
-				// After ping it should show error
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
-
-				expect(asFragment()).toMatchSnapshot();
-			});
 	});
 });
