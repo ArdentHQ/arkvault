@@ -1,5 +1,4 @@
 export * from "./address.contract";
-export * from "./big-number.service";
 export * from "./client.contract";
 export * from "./fee.contract";
 export * from "./key-pair.contract";
