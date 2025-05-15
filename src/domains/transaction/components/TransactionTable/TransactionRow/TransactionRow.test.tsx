@@ -70,7 +70,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render skeleton", () => {
-		const { asFragment } = render(
+		render(
 			<table>
 				<tbody>
 					<TransactionRow profile={profile} isLoading />

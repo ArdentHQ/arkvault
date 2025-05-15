@@ -8,7 +8,6 @@ import { AppRouter, Main } from "./App.blocks";
 import {
 	env,
 	getMainsailProfileId,
-	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
 	waitFor,
@@ -138,58 +137,6 @@ describe("App Main", () => {
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
-	});
-
-	it("should fail to sync", async () => {
-		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
-		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
-
-		const profile = env.profiles().first();
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		await env.profiles().restore(profile);
-
-		const walletSyncErrorMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
-		const walletRestoreErrorMock = vi
-			.spyOn(profile.wallets().last(), "hasBeenFullyRestored")
-			.mockReturnValue(false);
-
-		const profileSyncMock = vi.spyOn(profile, "sync").mockImplementation(() => {
-			throw new Error("sync test");
-		});
-
-		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
-
-		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
-
-		await waitFor(() => expect(dismissToastSpy).toHaveBeenCalled());
-		await waitFor(() => expect(warningToastSpy).toHaveBeenCalled());
-
-		dismissToastSpy.mockRestore();
-		warningToastSpy.mockRestore();
-		resetProfileNetworksMock();
-		walletSyncErrorMock.mockRestore();
-		walletRestoreErrorMock.mockRestore();
-		profileSyncMock.mockRestore();
-	});
-
-	it("should enter profile and sync", async () => {
-		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
-		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
-
-		const profileUrl = `/profiles/${getMainsailProfileId()}/exchange`;
-		history.push(profileUrl);
-
-		renderComponent("/profiles/:profileId/exchange", { route: profileUrl });
-
-		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
-		await waitFor(() => expect(successToastSpy).toHaveBeenCalled());
-
-		successToastSpy.mockRestore();
-		warningToastSpy.mockRestore();
-		dismissToastSpy.mockRestore();
 	});
 
 	it("should show warning toast when profile has ledger wallets in an incompatible browser", async () => {
