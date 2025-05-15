@@ -53,8 +53,6 @@ const isMusig = (body: object): boolean => {
 	return body["name"].endsWith("-musig-server");
 };
 
-const urlBelongsToNetwork = async (url: string, network: Networks.Network) => network.prober().evaluate(url);
-
 const pingServerAddress = async (address: string, type: NetworkHostType): Promise<boolean> => {
 	const baseUrl = getBaseUrl(address);
 
@@ -111,7 +109,6 @@ export {
 	getBaseUrl,
 	isPeer,
 	isMusig,
-	urlBelongsToNetwork,
 	pingServerAddress,
 	getServerHeight,
 };
