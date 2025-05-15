@@ -764,18 +764,18 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/transaction/components/[T-Z]*
 
-    #         - name: Test Hooks
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 93.61
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 89.79
-    #               COVERAGE_THRESHOLD_STATEMENTS: 91.61
-    #               COVERAGE_THRESHOLD_BRANCHES: 83.72
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 10
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/hooks
+            - name: Test Hooks
+              env:
+                  COVERAGE_THRESHOLD_LINES: 89.86
+                  COVERAGE_THRESHOLD_FUNCTIONS: 86
+                  COVERAGE_THRESHOLD_STATEMENTS: 87.19
+                  COVERAGE_THRESHOLD_BRANCHES: 67.27
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/hooks
     #
     #         - name: Test Pages
     #           env:
