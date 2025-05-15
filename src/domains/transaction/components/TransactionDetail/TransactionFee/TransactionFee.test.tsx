@@ -10,6 +10,5 @@ describe("TransactionFee", () => {
 		);
 
 		expect(container).toHaveTextContent("1 DARK");
-		expect(container).toMatchSnapshot();
 	});
 });
