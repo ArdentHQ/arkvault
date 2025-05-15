@@ -119,7 +119,7 @@ const fillServerForm = async ({
 
 	expect(nameField).toHaveValue(name);
 
-	const fillHost = async (fieldId: string, url: string) => {
+	const fillEndpoint = async (fieldId: string, url: string) => {
 		const field = screen.getByTestId(fieldId);
 		await userEvent.clear(field);
 		await userEvent.type(field, url);
@@ -129,14 +129,14 @@ const fillServerForm = async ({
 		fireEvent.focusOut(field);
 	};
 
-	await fillHost("ServerFormModal--publicApiEndpoint", publicApiEndpoint);
+	await fillEndpoint("ServerFormModal--publicApiEndpoint", publicApiEndpoint);
 
 	if (txApiEndpoint) {
-		await fillHost("ServerFormModal--transactionApiEndpoint", txApiEndpoint);
+		await fillEndpoint("ServerFormModal--transactionApiEndpoint", txApiEndpoint);
 	}
 
 	if (evmApiEndpoint) {
-		await fillHost("ServerFormModal--evmApiEndpoint", evmApiEndpoint);
+		await fillEndpoint("ServerFormModal--evmApiEndpoint", evmApiEndpoint);
 	}
 };
 
@@ -424,7 +424,7 @@ describe("Servers Settings", () => {
 		});
 
 		describe("with reachable server", () => {
-			it("can fill the form and store the new server for peer server", async () => {
+			it("can fill the form and store the new custom server", async () => {
 				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({
 					mainsail: [],
 				});
@@ -692,7 +692,7 @@ describe("Servers Settings", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("shows an error if the server host already exists", async () => {
+		it("should show an error if the server host already exists", async () => {
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
