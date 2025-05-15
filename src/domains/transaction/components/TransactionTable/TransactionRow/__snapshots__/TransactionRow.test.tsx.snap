@@ -1603,7 +1603,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 141px; height: 17px;"
+                    style="width: 127px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -1634,7 +1634,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 124px; height: 17px;"
+                    style="width: 148px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -1674,7 +1674,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 141px; height: 17px;"
+                  style="width: 127px; height: 17px;"
                 >
                   ‌
                 </span>
@@ -1699,7 +1699,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 112px; height: 14px;"
+                  style="width: 104px; height: 14px;"
                 >
                   ‌
                 </span>
@@ -1724,7 +1724,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 50px; height: 17px;"
+                  style="width: 46px; height: 17px;"
                 >
                   ‌
                 </span>
@@ -1744,7 +1744,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 112px; height: 15px;"
+                    style="width: 104px; height: 15px;"
                   >
                     ‌
                   </span>
