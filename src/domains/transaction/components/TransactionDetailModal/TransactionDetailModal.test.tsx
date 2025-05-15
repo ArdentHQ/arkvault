@@ -140,7 +140,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
-		vi.spyOn(env.validators(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
@@ -202,7 +202,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render an vote swap modal for signed transaction", () => {
-		vi.spyOn(env.validators(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore

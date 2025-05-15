@@ -1,4 +1,3 @@
-export * from "./container.models.js";
 export * as Contracts from "./contracts.js";
 export * as DTO from "./dto.js";
 export * from "./environment.js";

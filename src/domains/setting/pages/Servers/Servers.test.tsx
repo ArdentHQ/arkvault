@@ -137,7 +137,6 @@ const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse)
 const mockPeerHeight = () => server.use(requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight));
 
 describe("Servers Settings", () => {
-	let profileCoinSpy;
 	let coinSpy;
 	let coin;
 	let resetProfileNetworksMock: () => void;
@@ -157,12 +156,10 @@ describe("Servers Settings", () => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		coin = (profile.coins().all().ARK as any).ark.devnet;
 		coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(true);
-		profileCoinSpy = vi.spyOn(profile.coins(), "makeInstance").mockReturnValue(coin);
 	});
 
 	afterEach(() => {
 		coinSpy.mockRestore();
-		profileCoinSpy.mockRestore();
 		resetProfileNetworksMock();
 	});
 

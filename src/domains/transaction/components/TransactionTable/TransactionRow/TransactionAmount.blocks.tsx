@@ -116,7 +116,11 @@ export const TransactionFiatAmount = ({
 	profile?: Contracts.IProfile;
 }): JSX.Element => {
 	const currency = transaction.wallet().currency();
-	const { convert } = useExchangeRate({ exchangeTicker: exchangeCurrency, ticker: currency });
+	const { convert } = useExchangeRate({
+		exchangeTicker: exchangeCurrency,
+		profile: transaction.wallet().profile(),
+		ticker: currency,
+	});
 	const returnedAmount = calculateReturnedAmount(transaction);
 	const amount = transaction.total() - returnedAmount;
 

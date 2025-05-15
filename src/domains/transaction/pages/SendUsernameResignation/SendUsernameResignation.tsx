@@ -46,7 +46,7 @@ export const SendUsernameResignation = () => {
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
 
@@ -119,7 +119,7 @@ export const SendUsernameResignation = () => {
 		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
 
 		try {
-			httpClient.forgetWalletCache(env, activeWallet);
+			httpClient.forgetWalletCache(activeWallet);
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
