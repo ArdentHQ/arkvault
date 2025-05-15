@@ -258,7 +258,7 @@ describe("SendTransfer", () => {
 			expect(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN)).toBeInTheDocument();
 		}
 
-		await screen.findByTestId("Amount");
+		await expect(screen.findByTestId("Amount")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
