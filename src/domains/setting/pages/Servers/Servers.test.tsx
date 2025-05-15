@@ -1221,67 +1221,67 @@ describe("Servers Settings", () => {
 
 				expect(asFragment()).toMatchSnapshot();
 			});
-		//
-		// 	it("can check an offline server", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(3));
-		//
-		// 		await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-		//
-		// 		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
-		// 	});
-		//
-		// 	it("should show status error if request fails on mobile", async () => {
-		// 		const { asFragment } = renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-		//
-		// 		// After ping it should show error
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(3));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
-		//
-		// 	it("should show status error if request fails on mobile when expanded", async () => {
-		// 		const { asFragment } = renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		await userEvent.click(
-		// 			within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
-		// 		);
-		//
-		// 		// After ping it should show error
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
+
+			it("can check an offline server", async () => {
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				// Is loading initially
+				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+				// After ping it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
+
+				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+				await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
+			});
+
+			it("should show status error if request fails on mobile", async () => {
+				const { asFragment } = renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				// Is loading initially
+				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+				// After ping it should show error
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
+
+				expect(asFragment()).toMatchSnapshot();
+			});
+
+			it("should show status error if request fails on mobile when expanded", async () => {
+				const { asFragment } = renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(
+					within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+				);
+
+				// After ping it should show error
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
+
+				expect(asFragment()).toMatchSnapshot();
+			});
 	});
 });
