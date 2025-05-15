@@ -6,7 +6,7 @@ import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 import userEvent from "@testing-library/user-event";
 import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
-import { render, screen, renderResponsive, env, getDefaultProfileId } from "@/utils/testing-library";
+import { render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("TransactionAmount.blocks", () => {
 	let fixture;
