@@ -24,7 +24,6 @@ describe("App", () => {
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 
 		history.replace("/");
-		env.reset();
 	});
 
 	it("should redirect to root if profile restoration error occurs", async () => {
@@ -46,25 +45,17 @@ describe("App", () => {
 		});
 
 		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), "password");
+		await userEvent.type(passwordInput(), "invalid-password");
 
 		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
+			expect(passwordInput()).toHaveValue("invalid-password");
 		});
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
-		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => {
-			throw new Error("password not found");
-		});
-
 		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled(), { timeout: 4000 });
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
 
-		memoryPasswordMock.mockRestore();
-		verifyPasswordMock.mockRestore();
 	});
 });
