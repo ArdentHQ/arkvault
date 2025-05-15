@@ -182,7 +182,6 @@ const mockRequests = () => {
 	mockEvmEndpoint();
 };
 
-
 describe("Servers Settings", () => {
 	let resetProfileNetworksMock: () => void;
 
@@ -1185,82 +1184,80 @@ describe("Servers Settings", () => {
 		});
 	});
 	describe("with unreachable servers", () => {
-			let profileHostsSpy;
+		let profileHostsSpy;
 
-			beforeEach(() => {
-				profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+		beforeEach(() => {
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-				mockHeight();
-				mockTxEndpoint();
-				mockEvmEndpoint();
+			mockHeight();
+			mockTxEndpoint();
+			mockEvmEndpoint();
 
-				server.use(
-					requestMock(publicBaseUrl, undefined, { status: 404 }),
-				);
-			});
+			server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
+		});
 
-			afterEach(() => {
-				profileHostsSpy.mockRestore();
-			});
+		afterEach(() => {
+			profileHostsSpy.mockRestore();
+		});
 
-			it("should show status error if request fails", async () => {
-				const { asFragment } = render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+		it("should show status error if request fails", async () => {
+			const { asFragment } = render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
-				// Is loading initially
-				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
-				// After ping it should show error
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
+			// After ping it should show error
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
 
-				expect(asFragment()).toMatchSnapshot();
-			});
+			expect(asFragment()).toMatchSnapshot();
+		});
 
-			it("can check an offline server", async () => {
-				render(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+		it("can check an offline server", async () => {
+			render(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
-				// Is loading initially
-				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
-				// After ping it should show ok
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
+			// After ping it should show ok
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
 
-				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+			await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
 
-				await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
-			});
+			await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
+		});
 
-			it("should show status error if request fails on mobile", async () => {
-				const { asFragment } = renderResponsiveWithRoute(
-					<Route path="/profiles/:profileId/settings/servers">
-						<ServersSettings />
-					</Route>,
-					"xs",
-					{
-						route: `/profiles/${profile.id()}/settings/servers`,
-					},
-				);
+		it("should show status error if request fails on mobile", async () => {
+			const { asFragment } = renderResponsiveWithRoute(
+				<Route path="/profiles/:profileId/settings/servers">
+					<ServersSettings />
+				</Route>,
+				"xs",
+				{
+					route: `/profiles/${profile.id()}/settings/servers`,
+				},
+			);
 
-				// Is loading initially
-				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+			// Is loading initially
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
-				// After ping it should show error
-				await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
+			// After ping it should show error
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(1));
 
-				expect(asFragment()).toMatchSnapshot();
-			});
+			expect(asFragment()).toMatchSnapshot();
+		});
 	});
 });

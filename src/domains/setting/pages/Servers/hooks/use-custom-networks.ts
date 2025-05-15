@@ -1,4 +1,4 @@
-import { Contracts, } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useState } from "react";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { isSameNetwork } from "@/utils/peers";
