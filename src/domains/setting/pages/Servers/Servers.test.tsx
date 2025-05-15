@@ -885,205 +885,183 @@ describe("Servers Settings", () => {
 
 				refreshPersistMock.mockRestore();
 			});
-		//
-		// 	it("should not expand peer when clicking on status", async () => {
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(6));
-		//
-		// 		await userEvent.click(screen.getAllByTestId(peerStatusOkTestId)[0]);
-		//
-		// 		await waitFor(() =>
-		// 			expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument(),
-		// 		);
-		// 	});
-		//
-		// 	it("should show status ok after ping the servers", async () => {
-		// 		const { asFragment } = render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
-		//
-		// 	it("can check an online server", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-		//
-		// 		await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-		//
-		// 		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
-		// 	});
-		//
-		// 	it("should show status ok after ping the servers on mobile", async () => {
-		// 		const { asFragment } = renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(6));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
-		//
-		// 	it("should show status ok after ping the servers on mobile when expanded", async () => {
-		// 		const { asFragment } = renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		await userEvent.click(
-		// 			within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
-		// 		);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(5));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		// 	});
-		//
-		// 	it("should ping the servers in an interval", async () => {
-		// 		const originalSetInterval = global.setInterval;
-		//
-		// 		const intervalPingFunction: (() => void)[] = [];
-		//
-		// 		const setIntervalSpy = vi.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
-		// 			intervalPingFunction.push(intervalFunction);
-		// 			return originalSetInterval(intervalFunction, time);
-		// 		});
-		//
-		// 		const { asFragment } = render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		// Is loading initially
-		// 		expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-		//
-		// 		for (const item of intervalPingFunction) {
-		// 			item();
-		// 		}
-		//
-		// 		// After ping it should show ok
-		// 		await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
-		//
-		// 		expect(asFragment()).toMatchSnapshot();
-		//
-		// 		setIntervalSpy.mockRestore();
-		// 	});
-		//
-		// 	it("can delete a server", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-		//
-		// 		await userEvent.click(dropdown);
-		//
-		// 		const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-		// 			"dropdown__option--1",
-		// 		);
-		//
-		// 		expect(deleteButton).toBeInTheDocument();
-		//
-		// 		await userEvent.click(deleteButton);
-		//
-		// 		await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
-		//
-		// 		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
-		// 		await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item")).toHaveLength(2));
-		// 	});
-		//
-		// 	it("can cancel a server deletion", async () => {
-		// 		render(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
-		//
-		// 		await userEvent.click(dropdown);
-		//
-		// 		const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
-		// 			"dropdown__option--1",
-		// 		);
-		//
-		// 		expect(deleteButton).toBeInTheDocument();
-		//
-		// 		await userEvent.click(deleteButton);
-		//
-		// 		await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
-		//
-		// 		await userEvent.click(screen.getByTestId("DeleteResource__cancel-button"));
-		//
-		// 		expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
-		// 	});
+
+			it("should show status ok after ping the servers", async () => {
+				const { asFragment } = render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				// Is loading initially
+				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+				// After ping, it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+				expect(asFragment()).toMatchSnapshot();
+			});
+
+			it("can check an online server", async () => {
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				// Is loading initially
+				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+				// After ping it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+				await waitFor(() => expect(screen.getAllByTestId("CustomPeers-network-item--checked")).toHaveLength(1));
+			});
+
+			it("should show status ok after ping the servers on mobile", async () => {
+				const { asFragment } = renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				// Is loading initially
+				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+				// After ping, it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+				expect(asFragment()).toMatchSnapshot();
+			});
+
+			it("should show status ok after ping the servers on mobile when expanded", async () => {
+				const { asFragment } = renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(
+					within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+				);
+
+				// After ping it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+				expect(asFragment()).toMatchSnapshot();
+			});
+
+			it("should ping the servers in an interval", async () => {
+				const originalSetInterval = global.setInterval;
+
+				const intervalPingFunction: (() => void)[] = [];
+
+				const setIntervalSpy = vi.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
+					intervalPingFunction.push(intervalFunction);
+					return originalSetInterval(intervalFunction, time);
+				});
+
+				const { asFragment } = render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				// Is loading initially
+				expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+
+				// After ping it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+				act(() => {
+					for (const item of intervalPingFunction) {
+						item();
+					}
+				});
+
+				// After ping, it should show ok
+				await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+
+				expect(asFragment()).toMatchSnapshot();
+
+				setIntervalSpy.mockRestore();
+			});
+
+			it("can delete a server", async () => {
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+				await userEvent.click(dropdown);
+
+				const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+					"dropdown__option--1",
+				);
+
+				expect(deleteButton).toBeInTheDocument();
+
+				await userEvent.click(deleteButton);
+
+				await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+
+				await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+				await waitFor(() => expect(screen.queryByTestId("CustomPeers-network-item")).not.toBeInTheDocument());
+			});
+
+			it("can cancel a server deletion", async () => {
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const dropdown = screen.getAllByTestId("dropdown__toggle" + peerDropdownMenuTestId)[0];
+
+				await userEvent.click(dropdown);
+
+				const deleteButton = within(screen.getByTestId("dropdown__content" + peerDropdownMenuTestId)).getByTestId(
+					"dropdown__option--1",
+				);
+
+				expect(deleteButton).toBeInTheDocument();
+
+				await userEvent.click(deleteButton);
+
+				await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+
+				await userEvent.click(screen.getByTestId("DeleteResource__cancel-button"));
+
+				expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
+			});
 		//
 		// 	it("can close a server deletion", async () => {
 		// 		render(
