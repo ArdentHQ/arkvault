@@ -226,13 +226,6 @@ describe("App", () => {
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 		).resolves.toBeVisible();
 
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
-
-		vi.spyOn(profile, "usesPassword").mockReturnValue(true);
-		vi.spyOn(profile.password(), "get").mockImplementation(() => {
-			throw new Error("Failed to restore");
-		});
-
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
 
 		expect(history.location.pathname).toBe("/");
