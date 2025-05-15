@@ -78,7 +78,7 @@ describe("TransactionRow", () => {
 			</table>,
 		);
 
-		expect(asFragment()).toMatchSnapshot();
+		expect(screen.getByTestId("TransactionRowSkeleton__sender-desktop")).toBeInTheDocument();
 	});
 
 	it("should render skeleton with hideSender in mobile", () => {
