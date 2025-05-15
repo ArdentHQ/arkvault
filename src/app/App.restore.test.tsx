@@ -1,4 +1,3 @@
-import { Bcrypt } from "@ardenthq/arkvault-crypto";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";
@@ -50,8 +49,6 @@ describe("App", () => {
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("invalid-password");
 		});
-
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
