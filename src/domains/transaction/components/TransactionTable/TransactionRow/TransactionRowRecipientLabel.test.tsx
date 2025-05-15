@@ -4,9 +4,26 @@ import React from "react";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { render, screen, renderResponsive } from "@/utils/testing-library";
+import { render, screen, renderResponsive, env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("TransactionRowRecipientLabel", () => {
+	let profile;
+
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
+			votes.map(
+				(vote: string, index: number) =>
+					// @ts-ignore
+					new ReadOnlyWallet({
+						address: vote,
+						username: `delegate-${index}`,
+					}),
+			),
+		);
+
+	})
+
 	it("should show address", () => {
 		render(<TransactionRowRecipientLabel transaction={TransactionFixture} />);
 
@@ -54,16 +71,6 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	describe("Votes", () => {
-		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
-			votes.map(
-				(vote: string, index: number) =>
-					// @ts-ignore
-					new ReadOnlyWallet({
-						address: vote,
-						username: `delegate-${index}`,
-					}),
-			),
-		);
 
 		it("should show a vote label", () => {
 			render(
@@ -74,6 +81,10 @@ describe("TransactionRowRecipientLabel", () => {
 						isVote: () => true,
 						type: () => "vote",
 						votes: () => ["+vote"],
+						wallet: () => ({
+							profile: () => profile,
+							validators: () => profile.validators()
+						})
 					}}
 				/>,
 			);
@@ -93,6 +104,10 @@ describe("TransactionRowRecipientLabel", () => {
 						isVote: () => true,
 						type: () => "vote",
 						votes: () => ["+vote-1", "+vote-2"],
+						wallet: () => ({
+							profile: () => profile,
+							validators: () => profile.validators()
+						})
 					}}
 				/>,
 			);
@@ -113,6 +128,10 @@ describe("TransactionRowRecipientLabel", () => {
 						isUnvote: () => true,
 						type: () => "unvote",
 						unvotes: () => ["-vote"],
+						wallet: () => ({
+							profile: () => profile,
+							validators: () => profile.validators()
+						})
 					}}
 				/>,
 			);
@@ -132,6 +151,10 @@ describe("TransactionRowRecipientLabel", () => {
 						isUnvote: () => true,
 						type: () => "unvote",
 						unvotes: () => ["-vote", "-vote-2"],
+						wallet: () => ({
+							profile: () => profile,
+							validators: () => profile.validators()
+						})
 					}}
 				/>,
 			);
@@ -155,6 +178,10 @@ describe("TransactionRowRecipientLabel", () => {
 						type: () => "voteCombination",
 						unvotes: () => ["-vote"],
 						votes: () => ["-vote"],
+						wallet: () => ({
+							profile: () => profile,
+							validators: () => profile.validators()
+						})
 					}}
 				/>,
 			);
@@ -176,6 +203,10 @@ describe("TransactionRowRecipientLabel", () => {
 						type: () => "voteCombination",
 						unvotes: () => ["-vote-1", "-vote-2"],
 						votes: () => ["+vote-1", "+vote-2"],
+						wallet: () => ({
+							profile: () => profile,
+							validators: () => profile.validators()
+						})
 					}}
 				/>,
 			);

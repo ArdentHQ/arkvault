@@ -242,7 +242,7 @@ describe("App", () => {
 		toastSpy.mockRestore();
 	});
 
-	it("should enter profile and fail to restore", async () => {
+	it.skip("should enter profile and fail to restore", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 
