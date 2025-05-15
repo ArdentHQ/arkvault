@@ -630,7 +630,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 139px; height: 17px;"
+                    style="width: 143px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -643,37 +643,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 132px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 108px; height: 17px;"
+                    style="width: 148px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -703,7 +673,37 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 81px; height: 17px;"
+                    style="width: 107px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-col gap-2"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 80px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -793,29 +793,12 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 148px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
                     style="width: 135px; height: 17px;"
                   >
                     ‌
                   </span>
                   <br />
                 </span>
-              </div>
-              <div
-                class="flex flex-col gap-2"
-              >
                 <span
                   aria-busy="true"
                   aria-live="polite"
@@ -823,20 +806,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 120px; height: 17px;"
+                    style="width: 142px; height: 17px;"
                   >
                     ‌
                   </span>
@@ -866,7 +836,37 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
                 >
                   <span
                     class="react-loading-skeleton"
-                    style="width: 90px; height: 17px;"
+                    style="width: 110px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-col gap-2"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 82px; height: 17px;"
                   >
                     ‌
                   </span>
