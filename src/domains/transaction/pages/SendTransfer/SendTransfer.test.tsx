@@ -1269,19 +1269,9 @@ describe("SendTransfer", () => {
 			Promise.resolve<any>({
 				items: () => [
 					{
+						...signedTransactionMock,
 						convertedTotal: () => 0,
 						isConfirmed: () => false,
-						isMultiPayment: () => false,
-						isSent: () => true,
-						isTransfer: () => true,
-						isUnvote: () => false,
-						isVote: () => false,
-						recipient: () => "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-						recipients: () => ["D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", wallet.address()],
-						timestamp: () => DateTime.make(),
-						total: () => 1,
-						type: () => "transfer",
-						wallet: () => wallet,
 					},
 				],
 			}),
@@ -1327,18 +1317,18 @@ describe("SendTransfer", () => {
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		// Fee
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
-
 		expect(continueButton()).not.toBeDisabled();
 
 		// proceed to step 2
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		// Fee
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		// proceed to step 3
 		await userEvent.click(continueButton());
@@ -1412,11 +1402,12 @@ describe("SendTransfer", () => {
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
+		// Step 2
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
 
-		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Fee
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
@@ -1424,13 +1415,6 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[0]).toBeChecked();
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
-
-		// Step 2
-		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Step 3
 		expect(continueButton()).not.toBeDisabled();
@@ -1479,35 +1463,10 @@ describe("SendTransfer", () => {
 		pushSpy.mockRestore();
 	});
 
-	it("should show initial step when reset=1 is added to route query params", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
-
-		history.push(`${transferURL}?reset=1`);
-
-		const replaceSpy = vi.spyOn(history, "replace").mockImplementation(vi.fn());
-
-		render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
-
-		await waitFor(() => expect(replaceSpy).toHaveBeenCalledWith(transferURL));
-
-		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
-
-		replaceSpy.mockRestore();
-	});
-
 	it("should buildTransferData return zero amount for empty multi recipients", async () => {
 		const addresses = [wallet.address(), secondWallet.address()];
 
 		const transferData = await buildTransferData({
-			coin: wallet.coin(),
 			memo: "any memo",
 			recipients: [
 				{
@@ -1527,7 +1486,6 @@ describe("SendTransfer", () => {
 
 	it("should buildTransferData return zero amount for empty single recipient", async () => {
 		const transferData = await buildTransferData({
-			coin: wallet.coin(),
 			memo: "any memo",
 			recipients: [
 				{
