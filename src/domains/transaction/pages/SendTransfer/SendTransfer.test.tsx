@@ -10,9 +10,7 @@ import {
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	mockNanoXTransport,
-	mockProfileWithOnlyPublicNetworks,
 	mockProfileWithPublicAndTestNetworks,
-	queryElementForSvg,
 	render,
 	renderWithForm,
 	screen,
@@ -21,21 +19,19 @@ import {
 	within,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-import React, { memo, useEffect } from "react";
-import { StepsProvider, minVersionList } from "@/app/contexts";
+import React, { useEffect } from "react";
+import { StepsProvider } from "@/app/contexts";
 import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { FormStep } from "./FormStep";
-// import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { Route } from "react-router-dom";
 import { SendTransfer } from "./SendTransfer";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { createHashHistory } from "history";
 import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/devnet/node-fees.json";
-import { renderHook } from "@testing-library/react";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
@@ -162,7 +158,6 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const backButton = () => screen.getByTestId("StepNavigation__back-button");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
-const networkStepID = "SendTransfer__network-step";
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
 const sendAllID = "AddRecipient__send-all";
@@ -235,49 +230,6 @@ describe("SendTransfer", () => {
 		vi.restoreAllMocks();
 		resetProfileNetworksMock();
 	});
-
-	// it("should render network step with network cards", async () => {
-	// 	const { asFragment } = renderWithForm(
-	// 		<StepsProvider activeStep={1} steps={4}>
-	// 			<NetworkStep profile={profile} networks={profile.availableNetworks().slice(0, 2)} />
-	// 		</StepsProvider>,
-	// 		{
-	// 			registerCallback: defaultRegisterCallback,
-	// 			withProviders: true,
-	// 		},
-	// 	);
-
-	// 	expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
-
-	// 	await waitFor(() => expect(screen.queryByTestId("FormLabel")).not.toBeInTheDocument());
-
-	// 	expect(
-	// 		within(screen.getByTestId("SendTransfer__network-step__select")).getAllByTestId("NetworkOption"),
-	// 	).toHaveLength(2);
-
-	// 	expect(asFragment()).toMatchSnapshot();
-	// });
-
-	// it("should render network step with dropdown", () => {
-	// 	const { asFragment } = renderWithForm(
-	// 		<StepsProvider activeStep={1} steps={4}>
-	// 			<NetworkStep profile={profile} networks={profile.availableNetworks()} />
-	// 		</StepsProvider>,
-	// 		{
-	// 			registerCallback: defaultRegisterCallback,
-	// 			withProviders: true,
-	// 		},
-	// 	);
-
-	// 	expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
-	// 	expect(screen.getByTestId("FormLabel")).toBeInTheDocument();
-
-	// 	expect(
-	// 		within(screen.getByTestId("SendTransfer__network-step__select")).getByTestId("SelectDropdown"),
-	// 	).toBeInTheDocument();
-
-	// 	expect(asFragment()).toMatchSnapshot();
-	// });
 
 	it.each(["xs", "lg"])("should render form step (%s)", async (breakpoint) => {
 		const { asFragment } = renderWithForm(
