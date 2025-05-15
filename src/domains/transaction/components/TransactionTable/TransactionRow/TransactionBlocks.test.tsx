@@ -33,9 +33,7 @@ describe("TransactionAmount.blocks", () => {
 				profile: () => profile,
 			}),
 		};
-
-	})
-
+	});
 
 	it("should show hint and amount for multiPayment transaction", async () => {
 		const { result } = renderHook(() => useTranslation());

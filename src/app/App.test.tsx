@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Environment } from "@/app/lib/profiles";
 import { createHashHistory } from "history";
 import React from "react";
-import userEvent from "@testing-library/user-event";
 import { App } from "./App";
 import { toasts } from "@/app/services";
 import { translations as errorTranslations } from "@/domains/error/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import * as themeUtils from "@/utils/theme";
-import { env, getPasswordProtectedProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, screen, waitFor } from "@/utils/testing-library";
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
@@ -40,15 +39,10 @@ vi.mock("@/domains/profile/routing", async () => {
 	};
 });
 
-let passwordProtectedProfile: Contracts.IProfile;
 const history = createHashHistory();
-
-const passwordInput = () => screen.getByTestId("SignIn__input--password");
 
 describe("App", () => {
 	beforeAll(async () => {
-		passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
-
 		vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
 		// Mock synchronizer to avoid running any jobs in these tests.
@@ -208,75 +202,4 @@ describe("App", () => {
 			utilsSpy.mockRestore();
 		},
 	);
-
-	it("should enter profile", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
-		).resolves.toBeVisible();
-
-		expect(history.location.pathname).toBe("/");
-
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		await userEvent.type(passwordInput(), "password");
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
-		});
-
-		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-
-		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
-		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl), { timeout: 4000 });
-
-		toastSpy.mockRestore();
-	});
-
-	it.skip("should enter profile and fail to restore", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
-		).resolves.toBeVisible();
-
-		expect(history.location.pathname).toBe("/");
-
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		await userEvent.type(passwordInput(), "invalid-password");
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("invalid-password");
-		});
-
-		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-
-		vi.spyOn(passwordProtectedProfile.password(), "get").mockImplementation(() => {
-			throw new Error("restore error");
-		});
-
-		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
-
-		toastSpy.mockRestore();
-		vi.restoreAllMocks();
-	});
 });

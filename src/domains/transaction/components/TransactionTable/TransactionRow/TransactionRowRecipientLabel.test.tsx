@@ -21,8 +21,7 @@ describe("TransactionRowRecipientLabel", () => {
 					}),
 			),
 		);
-
-	})
+	});
 
 	it("should show address", () => {
 		render(<TransactionRowRecipientLabel transaction={TransactionFixture} />);
@@ -71,7 +70,6 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	describe("Votes", () => {
-
 		it("should show a vote label", () => {
 			render(
 				<TransactionRowRecipientLabel
@@ -83,8 +81,8 @@ describe("TransactionRowRecipientLabel", () => {
 						votes: () => ["+vote"],
 						wallet: () => ({
 							profile: () => profile,
-							validators: () => profile.validators()
-						})
+							validators: () => profile.validators(),
+						}),
 					}}
 				/>,
 			);
@@ -106,8 +104,8 @@ describe("TransactionRowRecipientLabel", () => {
 						votes: () => ["+vote-1", "+vote-2"],
 						wallet: () => ({
 							profile: () => profile,
-							validators: () => profile.validators()
-						})
+							validators: () => profile.validators(),
+						}),
 					}}
 				/>,
 			);
@@ -130,8 +128,8 @@ describe("TransactionRowRecipientLabel", () => {
 						unvotes: () => ["-vote"],
 						wallet: () => ({
 							profile: () => profile,
-							validators: () => profile.validators()
-						})
+							validators: () => profile.validators(),
+						}),
 					}}
 				/>,
 			);
@@ -153,8 +151,8 @@ describe("TransactionRowRecipientLabel", () => {
 						unvotes: () => ["-vote", "-vote-2"],
 						wallet: () => ({
 							profile: () => profile,
-							validators: () => profile.validators()
-						})
+							validators: () => profile.validators(),
+						}),
 					}}
 				/>,
 			);
@@ -180,8 +178,8 @@ describe("TransactionRowRecipientLabel", () => {
 						votes: () => ["-vote"],
 						wallet: () => ({
 							profile: () => profile,
-							validators: () => profile.validators()
-						})
+							validators: () => profile.validators(),
+						}),
 					}}
 				/>,
 			);
@@ -205,8 +203,8 @@ describe("TransactionRowRecipientLabel", () => {
 						votes: () => ["+vote-1", "+vote-2"],
 						wallet: () => ({
 							profile: () => profile,
-							validators: () => profile.validators()
-						})
+							validators: () => profile.validators(),
+						}),
 					}}
 				/>,
 			);
