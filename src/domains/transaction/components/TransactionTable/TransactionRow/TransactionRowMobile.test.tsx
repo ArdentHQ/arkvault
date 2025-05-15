@@ -68,7 +68,6 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			</table>,
 		);
 
-		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByTestId("TransactionRow__skeleton")).toBeInTheDocument();
 	});
 

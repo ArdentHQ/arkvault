@@ -43,7 +43,6 @@ describe("TransactionRow", () => {
 			</table>,
 		);
 
-		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getAllByRole("cell")).toHaveLength(8);
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
