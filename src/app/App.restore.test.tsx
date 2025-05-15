@@ -53,6 +53,5 @@ describe("App", () => {
 		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
-
 	});
 });
