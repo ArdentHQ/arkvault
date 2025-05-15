@@ -48,7 +48,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 	});
 
 	it("should render skeleton responsive", () => {
-		const { asFragment } = render(
+		render(
 			<table>
 				<tbody>
 					<TransactionRowMobile

@@ -30,7 +30,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = render(
+		render(
 			<table>
 				<tbody>
 					<TransactionRow
