@@ -31,35 +31,38 @@ const publicHost = "https://dwallets-evm.mainsailhq.com/api";
 const txHost = "https://dwallets-evm.mainsailhq.com/tx/api";
 const evmHost = "https://dwallets-evm.mainsailhq.com/evm/api";
 
+const customServerName = 'Mainsail Devnet "Peer" #1'
+
 const networksStub: any = {
 	mainsail: {
 		devnet: [
 			{
 				host: {
 					custom: true,
-					host: "",
-					type: "musig",
-				},
-				name: "ARK Devnet Musig #1",
-			},
-		],
-		mainnet: [
-			{
-				host: {
-					custom: true,
-					host: "",
-					type: "musig",
-				},
-				name: "ARK Musig #1",
-			},
-			{
-				host: {
-					custom: true,
-					height: 99_999,
-					host: `${peerHostLive}/api`,
+					height: 174_400,
+					host: publicHost,
+					id: customServerName,
 					type: "full",
 				},
-				name: "ARK #1",
+				name: customServerName,
+			},
+			{
+				host: {
+					custom: true,
+					host: txHost,
+					id: customServerName,
+					type: "tx",
+				},
+				name: customServerName,
+			},
+			{
+				host: {
+					custom: true,
+					host: evmHost,
+					id: customServerName,
+					type: "evm",
+				},
+				name: customServerName,
 			},
 		],
 	},
@@ -584,122 +587,112 @@ describe("Servers Settings", () => {
 
 				networkSpy.mockRestore();
 			});
-	//
-	// 		it("shows an error if the server is reachable but invalid json response", async () => {
-	// 			server.use(requestMock(musigHostTest, "invalid response"));
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: musigHostTest,
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
-	//
-	// 			expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
-	// 		});
-	//
-	// 		it("shows an error if the server is unreachable", async () => {
-	// 			server.use(requestMock(musigHostTest, undefined, { status: 500 }));
-	//
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address: musigHostTest,
-	// 			});
-	//
-	// 			await waitUntilServerIsValidated();
-	//
-	// 			await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
-	//
-	// 			expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
-	// 		});
-	//
-	// 		it.each([
-	// 			"2222-invalid-host", // Invalid URL
-	// 			"http://127.0.0.1", // Valid IP URL witouth /api path
-	// 			"http://127.0.0.1/api/", // Valid IP URL but ends with a slash
-	// 		])("invalidates the address field if invalid host passed", async (address) => {
-	// 			render(
-	// 				<Route path="/profiles/:profileId/settings/servers">
-	// 					<ServersSettings />
-	// 				</Route>,
-	// 				{
-	// 					route: `/profiles/${profile.id()}/settings/servers`,
-	// 				},
-	// 			);
-	//
-	// 			await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
-	//
-	// 			await fillServerForm({
-	// 				address,
-	// 			});
-	//
-	// 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-	//
-	// 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
-	// 				"data-errortext",
-	// 				translations.VALIDATION.HOST_FORMAT,
-	// 			);
-	// 		});
-	// 	});
+
+			it("shows an error if the server is reachable but invalid json response", async () => {
+				server.use(requestMock(publicHost, "invalid response"));
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
+			it("shows an error if the server is unreachable", async () => {
+				server.use(requestMock(publicHost, undefined, { status: 500 }));
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
+			it.each([
+				"2222-invalid-host", // Invalid URL
+				"http://127.0.0.1", // Valid IP URL without /api path
+				"http://127.0.0.1/api/", // Valid IP URL but ends with a slash
+			])("invalidates the address field if invalid host passed", async (address) => {
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({
+					publicApiEndpoint: address,
+				});
+
+				await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("Input__error")).toHaveAttribute(
+					"data-errortext",
+					translations.VALIDATION.HOST_FORMAT,
+				);
+			});
+		});
 	});
-	//
-	// describe("with servers", () => {
-	// 	let profileHostsSpy;
-	//
-	// 	beforeEach(() => {
-	// 		profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
-	//
-	// 		server.use(requestMock(musigHostTest, musigResponse), requestMock(musigHostLive, musigResponse));
-	//
-	// 		mockPeerNetwork();
-	// 	});
-	//
-	// 	afterEach(() => {
-	// 		profileHostsSpy.mockRestore();
-	// 	});
-	//
-	// 	it("should render custom servers", () => {
-	// 		const { asFragment } = render(
-	// 			<Route path="/profiles/:profileId/settings/servers">
-	// 				<ServersSettings />
-	// 			</Route>,
-	// 			{
-	// 				route: `/profiles/${profile.id()}/settings/servers`,
-	// 			},
-	// 		);
-	//
-	// 		const table = screen.getByTestId(customPeerListTestId);
-	//
-	// 		expect(table).toBeInTheDocument();
-	//
-	// 		expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
-	//
-	// 		expect(within(table).getAllByTestId(CustomPeersNetworkItem)).toHaveLength(3);
-	//
-	// 		expect(asFragment()).toMatchSnapshot();
-	// 	});
+
+	describe("with servers", () => {
+		let profileHostsSpy;
+
+		beforeEach(() => {
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+
+			mockRequests();
+		});
+
+		afterEach(() => {
+			profileHostsSpy.mockRestore();
+		});
+
+		it("should render custom servers", () => {
+			const { asFragment } = render(
+				<Route path="/profiles/:profileId/settings/servers">
+	 				<ServersSettings />
+	 			</Route>,
+	 			{
+	 				route: `/profiles/${profile.id()}/settings/servers`,
+	 			},
+	 		);
+
+			const table = screen.getByTestId(customPeerListTestId);
+
+			expect(table).toBeInTheDocument();
+
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
+
+			expect(within(table).getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
 	//
 	// 	it("shows an error if the server host already exists", async () => {
 	// 		render(
