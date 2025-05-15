@@ -3,12 +3,10 @@ import { Networks } from "@/app/lib/sdk";
 
 import { AppearanceService } from "./appearance.service.js";
 import { Authenticator } from "./authenticator.js";
-import { CoinService } from "./coin.service.js";
 import { ContactRepository } from "./contact.repository.js";
 import {
 	IAppearanceService,
 	IAuthenticator,
-	ICoinService,
 	IContactRepository,
 	ICountAggregate,
 	IDataRepository,
@@ -46,18 +44,21 @@ import { TransactionAggregate } from "./transaction.aggregate.js";
 import { WalletAggregate } from "./wallet.aggregate.js";
 import { WalletFactory } from "./wallet.factory.js";
 import { WalletRepository } from "./wallet.repository.js";
-import { Contracts } from "./index.js";
+import { Contracts, Environment } from "./index.js";
 import { UsernamesService } from "./usernames.service.js";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
+import { ValidatorService } from "./validator.service.js";
+import { KnownWalletService } from "./known-wallet.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 export class Profile implements IProfile {
 	/**
-	 * The coin service.
+	 * The known wallets service.
 	 *
-	 * @type {ICoinService}
+	 * @type {KnownWalletService}
 	 * @memberof Profile
 	 */
-	readonly #coinService: ICoinService;
+	readonly #knownWalletService: KnownWalletService;
 
 	/**
 	 * The contact repository.
@@ -164,6 +165,14 @@ export class Profile implements IProfile {
 	readonly #registrationAggregate: IRegistrationAggregate;
 
 	/**
+	 * The validators service.
+	 *
+	 * @type {ValidatorService}
+	 * @memberof Profile
+	 */
+	readonly #validators: ValidatorService;
+
+	/**
 	 * The transaction aggregate service.
 	 *
 	 * @type {ITransactionAggregate}
@@ -212,6 +221,14 @@ export class Profile implements IProfile {
 	readonly #usernameService: UsernamesService;
 
 	/**
+	 * The username service
+	 *
+	 * @type {UsernamesService}
+	 * @memberof Profile
+	 */
+	readonly #exchangeRateService: ExchangeRateService;
+
+	/**
 	 * The status service.
 	 *
 	 * @type {IProfileStatus}
@@ -219,9 +236,8 @@ export class Profile implements IProfile {
 	 */
 	readonly #status: IProfileStatus;
 
-	public constructor(data: IProfileInput) {
+	public constructor(data: IProfileInput, env: Environment) {
 		this.#attributes = new AttributeBag<IProfileInput>(data);
-		this.#coinService = new CoinService(this, new DataRepository());
 		this.#contactRepository = new ContactRepository(this);
 		this.#dataRepository = new DataRepository();
 		this.#hostRepository = new HostRepository(this);
@@ -237,9 +253,12 @@ export class Profile implements IProfile {
 		this.#transactionAggregate = new TransactionAggregate(this);
 		this.#walletAggregate = new WalletAggregate(this);
 		this.#authenticator = new Authenticator(this);
+		this.#validators = new ValidatorService();
 		this.#password = new PasswordManager();
 		this.#status = new ProfileStatus();
+		this.#knownWalletService = new KnownWalletService();
 		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
+		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -306,11 +325,6 @@ export class Profile implements IProfile {
 		}
 
 		new ProfileInitialiser(this).initialiseSettings(name);
-	}
-
-	/** {@inheritDoc IProfile.coins} */
-	public coins(): ICoinService {
-		return this.#coinService;
 	}
 
 	/** {@inheritDoc IProfile.contacts} */
@@ -454,6 +468,11 @@ export class Profile implements IProfile {
 		return this.#usernameService;
 	}
 
+	/** {@inheritDoc IProfile.ValidatorService} */
+	public validators(): ValidatorService {
+		return this.#validators;
+	}
+
 	/** {@inheritDoc IProfile.async} */
 	public async sync(options?: { networkId?: string; ttl?: number }): Promise<void> {
 		await this.wallets().restore(options);
@@ -489,5 +508,13 @@ export class Profile implements IProfile {
 
 	public ledger(): LedgerService {
 		return new LedgerService({ config: this.activeNetwork().config() });
+	}
+
+	public knownWallets(): KnownWalletService {
+		return this.#knownWalletService;
+	}
+
+	public exchangeRates(): ExchangeRateService {
+		return this.#exchangeRateService;
 	}
 }

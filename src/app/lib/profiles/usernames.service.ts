@@ -2,7 +2,7 @@ import { Collections, DTO, Networks } from "@/app/lib/sdk";
 
 import { IProfile, IUsernamesService } from "./contracts.js";
 import { ClientService } from "@/app/lib/mainsail/client.service.js";
-import { ConfigRepository } from "@/app/lib/sdk/coins.js";
+import { ConfigRepository } from "@/app/lib/sdk/config.js";
 
 type UsernameRegistry = Record<string, Collections.UsernameDataCollection>;
 
@@ -11,16 +11,17 @@ export class UsernamesService implements IUsernamesService {
 	#config: ConfigRepository;
 	#profile: IProfile;
 	#network: Networks.Network;
+	#client: ClientService;
 
 	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
 		this.#profile = profile;
 		this.#network = profile.activeNetwork();
+		this.#client = new ClientService({ config: this.#config, profile: this.#profile });
 	}
 
 	public async syncUsernames(addresses: string[]): Promise<void> {
-		const clientService = new ClientService({ config: this.#config, profile: this.#profile });
-		const collection = await clientService.usernames(addresses);
+		const collection = await this.#client.usernames(addresses);
 
 		if (this.#registry[this.#network.id()]) {
 			const existingCollection = this.#registry[this.#network.id()];

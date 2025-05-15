@@ -2,7 +2,7 @@ import { Http } from "@/app/lib/sdk";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
 import { Cache } from "./Cache";
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 type Primitive = null | undefined | string | number | boolean | symbol | bigint;
 
@@ -89,9 +89,8 @@ export class HttpClient extends Http.AbstractRequest {
 		return hash(`${method.toLowerCase()}.${url}.${JSON.stringify(normalizedData)}`).toString();
 	}
 
-	public forgetWalletCache(environment: Environment, wallet: Contracts.IReadWriteWallet) {
-		const selectHost = environment.hostSelector(wallet.profile());
-		const { host } = selectHost(wallet.network().config(), "full");
+	public forgetWalletCache(wallet: Contracts.IReadWriteWallet) {
+		const host = wallet.network().config().host("full", wallet.profile());
 
 		const cacheKey = this.buildCacheKey("get", `${host}/wallets/${wallet.address()}`, {});
 

@@ -1,3 +1,4 @@
+import { IProfile } from "@/app/lib/profiles/contracts";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 type RecipientListLabel = "TRANSACTION.MULTISIGNATURE.PARTICIPANT_#";
@@ -22,6 +23,7 @@ export interface RecipientListItemProperties {
 	ticker: string;
 	tooltipDisabled?: string;
 	variant?: "condensed";
+	profile: IProfile;
 }
 
 export interface RecipientListProperties {

@@ -7,6 +7,9 @@ interface WalletImportTypes {
 
 const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().identity();
 
+const syncRates = (profile: Contracts.IProfile, wallet: Contracts.IReadWriteWallet) =>
+	profile.exchangeRates().syncAll(profile, wallet.currency());
+
 export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 	const syncFees = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
@@ -18,18 +21,15 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 		}
 	};
 
-	const syncRates = (profile: Contracts.IProfile, wallet: Contracts.IReadWriteWallet) =>
-		env.exchangeRates().syncAll(profile, wallet.currency());
-
 	const syncVotes = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
 
 		if (network.allowsVoting()) {
 			try {
-				env.validators().all(network.coin(), network.id());
+				profile.validators().all(network.id());
 			} catch {
 				// Sync network validators for the first time
-				await env.validators().sync(profile, network.coin(), network.id());
+				await profile.validators().sync(profile, network.id());
 			}
 
 			if (wallet.hasSyncedWithNetwork()) {

@@ -37,7 +37,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 
 	const ticker = wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
-	const { convert } = useExchangeRate({ exchangeTicker, ticker });
+	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	const { common: commonValidation } = useValidation();
 

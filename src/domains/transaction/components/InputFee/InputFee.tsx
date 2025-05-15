@@ -50,7 +50,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const ticker = network.ticker();
 		const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
-		const { convert } = useExchangeRate({ exchangeTicker, ticker });
+		const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 		const showConvertedValues = network.isLive();
 

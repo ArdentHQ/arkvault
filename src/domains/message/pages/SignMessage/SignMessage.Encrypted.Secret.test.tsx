@@ -48,8 +48,6 @@ describe("SignMessage with encrypted secret", () => {
 
 		profile.wallets().push(wallet);
 
-		profile.coins().set("Mainsail", "mainsail.devnet");
-
 		await triggerMessageSignOnce(wallet);
 	});
 

@@ -123,7 +123,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should navigate to vote page", async () => {
 		const mockDelegateName = vi
-			.spyOn(env.validators(), "findByUsername")
+			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
@@ -196,7 +196,7 @@ describe("Welcome with deeplink", () => {
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const mockDelegateName = vi.spyOn(env.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi.spyOn(profile.validators(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		render(
 			<Route path="/">
@@ -594,7 +594,7 @@ describe("Welcome with deeplink", () => {
 
 	it("should not navigate when clicking multiple times", async () => {
 		const mockDelegateName = vi
-			.spyOn(env.validators(), "findByUsername")
+			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);

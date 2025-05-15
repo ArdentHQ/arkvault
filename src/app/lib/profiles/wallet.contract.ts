@@ -1,4 +1,4 @@
-import { Coins, Contracts, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/sdk";
 import { BigNumber } from "@/app/lib/helpers";
 
 import {
@@ -20,6 +20,11 @@ import { ClientService } from "@/app/lib/mainsail/client.service.js";
 import { AddressService } from "@/app/lib/mainsail/address.service.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
+import { ValidatorService } from "./validator.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
+import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
+import { Manifest } from "@/app/lib/sdk/manifest.js";
+import { WIFService } from "@/app/lib/mainsail/wif.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -48,13 +53,10 @@ export interface IReadWriteWalletAttributes {
 	initialState: IWalletData;
 	restorationState: { full: boolean; partial: boolean };
 	// Will be empty initially
-	coin: Coins.Coin;
 	wallet: Contracts.WalletData | undefined;
 	address: string;
 	publicKey: string | undefined;
 	avatar: string;
-	// Will be set when the client removes implementations
-	isMissingCoin: boolean;
 	isMissingNetwork: boolean;
 }
 
@@ -397,12 +399,20 @@ export interface IReadWriteWallet {
 	networkId(): string;
 
 	/**
-	 * Get the coin manifest.
+	 * Get the manifest.
 	 *
-	 * @return {Coins.Manifest}
+	 * @return {Manifest}
 	 * @memberof IReadWriteWallet
 	 */
-	manifest(): Coins.Manifest;
+	manifest(): Manifest;
+
+	/**
+	 * Get the profile validators service.
+	 *
+	 * @return {ValidatorService}
+	 * @memberof IReadWriteWallet
+	 */
+	validators(): ValidatorService;
 
 	/**
 	 * Get the client service instance.
@@ -411,6 +421,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	client(): ClientService;
+
+	/**
+	 * Get the identity service instance.
+	 *
+	 * @return {ExchangeRateService}
+	 * @memberof IReadWriteWallet
+	 */
+	exchangeRates(): ExchangeRateService;
 
 	/**
 	 * Get the identity service instance.
@@ -439,10 +457,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the identity service instance.
 	 *
-	 * @return {Services.IdentityService}
+	 * @return {WIFService}
 	 * @memberof IReadWriteWallet
 	 */
-	wifService(): Services.WIFService;
+	wifService(): WIFService;
 
 	/**
 	 * Get the ledger service instance.
@@ -474,7 +492,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.SignatoryService}
 	 * @memberof IReadWriteWallet
 	 */
-	signatory(): Services.SignatoryService;
+	signatory(): SignatoryService;
 
 	/**
 	 * Get the wallet transaction service instance.
@@ -537,14 +555,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	hasBeenPartiallyRestored(): boolean;
-
-	/**
-	 * Determine if the wallet is missing its coin.
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	isMissingCoin(): boolean;
 
 	/**
 	 * Mark the wallet as missing its network.

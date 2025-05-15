@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/sdk";
 
 import { useQueryParameters } from "@/app/hooks";
@@ -16,11 +16,9 @@ export const useVoteQueryParameters = () => {
 };
 
 export const useValidatorsFromURL = ({
-	env,
 	profile,
 	network,
 }: {
-	env: Environment;
 	profile: Contracts.IProfile;
 	network: Networks.Network;
 }) => {
@@ -36,15 +34,15 @@ export const useValidatorsFromURL = ({
 			setIsLoading(true);
 
 			try {
-				env.validators().all(network.coin(), network.id());
+				profile.validators().all(network.id());
 			} catch {
-				await env.validators().sync(profile, network.coin(), network.id());
+				await profile.validators().sync(profile, network.id());
 			}
 
 			if (unvoteValidators.length > 0 && unvotes.length === 0) {
 				const unvotesList: Contracts.VoteRegistryItem[] = unvoteValidators?.map((unvote) => ({
 					amount: unvote.amount,
-					wallet: env.validators().findByAddress(network.coin(), network.id(), unvote.validatorAddress),
+					wallet: profile.validators().findByAddress(network.id(), unvote.validatorAddress),
 				}));
 
 				setUnvotes(unvotesList);
@@ -53,7 +51,7 @@ export const useValidatorsFromURL = ({
 			if (voteValidators.length > 0 && votes.length === 0) {
 				const votesList: Contracts.VoteRegistryItem[] = voteValidators?.map((vote) => ({
 					amount: vote.amount,
-					wallet: env.validators().findByAddress(network.coin(), network.id(), vote.validatorAddress),
+					wallet: profile.validators().findByAddress(network.id(), vote.validatorAddress),
 				}));
 
 				setVotes(votesList);
@@ -63,7 +61,7 @@ export const useValidatorsFromURL = ({
 		};
 
 		updateValidators();
-	}, [env, voteValidators, votes, unvoteValidators, unvotes]);
+	}, [profile, voteValidators, votes, unvoteValidators, unvotes]);
 
 	return {
 		isLoading,

@@ -13,7 +13,7 @@ import { WalletData } from "./wallet.dto";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/sdk/transactions.collection";
 import { SignedTransactionData } from "./signed-transaction.dto";
-import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/config";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };

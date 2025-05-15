@@ -1,5 +1,5 @@
 import { AssertionError } from "assert";
-import { Coins, Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/sdk";
 import { Contracts, DTO, Wallet } from "@/app/lib/profiles";
 import { Profile } from "@/app/lib/profiles/profile";
 
@@ -23,14 +23,6 @@ export function assertReadOnlyWallet(wallet?: Contracts.IReadOnlyWallet): assert
 	if (typeof wallet?.governanceIdentifier !== "function") {
 		throw new AssertionError({
 			message: `Expected 'wallet' to be Contracts.IReadOnlyWallet, but received ${wallet}`,
-		});
-	}
-}
-
-export function assertCoin(coin?: Coins.Coin): asserts coin is Coins.Coin {
-	if (!(coin instanceof Coins.Coin)) {
-		throw new AssertionError({
-			message: `Expected 'coin' to be Coins.Coin, but received ${coin}`,
 		});
 	}
 }

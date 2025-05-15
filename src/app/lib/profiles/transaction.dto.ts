@@ -1,13 +1,11 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 
-import { Coins, Contracts } from "@/app/lib/sdk";
-import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
+import { Contracts } from "@/app/lib/sdk";
+import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import { Identifiers } from "./container.models.js";
-import { container } from "./container.js";
 import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
 
 export interface ExtendedTransactionRecipient {
@@ -280,8 +278,8 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 			return 0;
 		}
 
-		return container
-			.get<IExchangeRateService>(Identifiers.ExchangeRateService)
+		return this.wallet()
+			.exchangeRates()
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
 

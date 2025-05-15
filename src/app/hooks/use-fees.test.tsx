@@ -16,7 +16,7 @@ describe("useFees", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.wallets().syncByProfile(profile);
-		await env.validators().syncAll(profile);
+		await profile.validators().syncAll(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {
