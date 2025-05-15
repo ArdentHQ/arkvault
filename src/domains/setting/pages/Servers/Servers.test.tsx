@@ -792,99 +792,99 @@ describe("Servers Settings", () => {
 				expect(screen.getAllByTestId("mobile-table-element-body")[0]).toBeInTheDocument();
 			});
 
-		// 	it("can check servers accordion in mobile", async () => {
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-		//
-		// 		await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-		//
-		// 		await waitFor(() =>
-		// 			expect(screen.getAllByTestId("CustomPeers-network-item--mobile--checked")).toHaveLength(1),
-		// 		);
-		//
-		// 		await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
-		//
-		// 		expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(3);
-		// 	});
-		//
-		// 	it("can edit servers in mobile", async () => {
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-		//
-		// 		await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--edit")[0]);
-		//
-		// 		expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
-		// 	});
-		//
-		// 	it("can delete servers in mobile", async () => {
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-		//
-		// 		await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--delete")[0]);
-		//
-		// 		await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
-		// 	});
-		//
-		// 	it("can refresh servers in mobile", async () => {
-		// 		const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
-		//
-		// 		renderResponsiveWithRoute(
-		// 			<Route path="/profiles/:profileId/settings/servers">
-		// 				<ServersSettings />
-		// 			</Route>,
-		// 			"xs",
-		// 			{
-		// 				route: `/profiles/${profile.id()}/settings/servers`,
-		// 			},
-		// 		);
-		//
-		// 		const table = screen.getByTestId(customPeerListTestId);
-		//
-		// 		await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-		//
-		// 		await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
-		//
-		// 		await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--refresh")[0]);
-		//
-		// 		await waitFor(() => {
-		// 			expect(refreshPersistMock).toHaveBeenCalledOnce();
-		// 		});
-		//
-		// 		refreshPersistMock.mockRestore();
-		// 	});
+			it("can check servers accordion in mobile", async () => {
+				renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const table = screen.getByTestId(customPeerListTestId);
+
+				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+				await waitFor(() =>
+					expect(screen.getAllByTestId("CustomPeers-network-item--mobile--checked")).toHaveLength(1),
+				);
+
+				await userEvent.click(screen.getAllByTestId(customPeersToggleTestId)[0]);
+
+				expect(screen.getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(1);
+			});
+
+			it("can edit servers in mobile", async () => {
+				renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const table = screen.getByTestId(customPeerListTestId);
+
+				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+				await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--edit")[0]);
+
+				expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
+			});
+
+			it("can delete servers in mobile", async () => {
+				renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const table = screen.getByTestId(customPeerListTestId);
+
+				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+				await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--delete")[0]);
+
+				await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
+			});
+
+			it("can refresh servers in mobile", async () => {
+				const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
+
+				renderResponsiveWithRoute(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					"xs",
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				const table = screen.getByTestId(customPeerListTestId);
+
+				await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+
+				await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
+
+				await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--refresh")[0]);
+
+				await waitFor(() => {
+					expect(refreshPersistMock).toHaveBeenCalledOnce();
+				});
+
+				refreshPersistMock.mockRestore();
+			});
 		//
 		// 	it("should not expand peer when clicking on status", async () => {
 		// 		renderResponsiveWithRoute(
