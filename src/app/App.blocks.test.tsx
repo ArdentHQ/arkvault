@@ -5,14 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { Route, useHistory, Prompt } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { AppRouter, Main } from "./App.blocks";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	screen,
-	waitFor,
-	act,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor, act } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { ApplicationError } from "@/domains/error/pages";
