@@ -23,10 +23,11 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 	ticker,
 	tooltipDisabled,
 	variant,
+	profile,
 }) => {
 	const { t } = useTranslation();
 
-	const { convert } = useExchangeRate({ exchangeTicker, ticker });
+	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	const renderAmount = () => {
 		if (!showAmount || amount === undefined) {

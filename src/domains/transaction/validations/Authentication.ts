@@ -1,5 +1,4 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
-import { Coins } from "@/app/lib/sdk";
 import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";
@@ -76,46 +75,6 @@ export const authentication = (t: any) => {
 				}
 
 				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_WALLET");
-			},
-		}),
-		secondMnemonic: (coin: Coins.Coin, secondPublicKey: string) => ({
-			required: t(requiredFieldMessage, {
-				field: t("COMMON.SECOND_MNEMONIC"),
-			}),
-			validate: {
-				matchSenderPublicKey: async (mnemonic: string) => {
-					try {
-						const { publicKey } = await coin.publicKey().fromMnemonic(mnemonic);
-
-						if (publicKey === secondPublicKey) {
-							return true;
-						}
-
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
-					} catch {
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
-					}
-				},
-			},
-		}),
-		secondSecret: (coin: Coins.Coin, secondPublicKey: string) => ({
-			required: t(requiredFieldMessage, {
-				field: t("COMMON.SECOND_SECRET"),
-			}),
-			validate: {
-				matchSenderPublicKey: async (secret: string) => {
-					try {
-						const { publicKey } = await coin.publicKey().fromSecret(secret);
-
-						if (publicKey === secondPublicKey) {
-							return true;
-						}
-
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
-					} catch {
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
-					}
-				},
 			},
 		}),
 		secret: (wallet: Contracts.IReadWriteWallet) => ({

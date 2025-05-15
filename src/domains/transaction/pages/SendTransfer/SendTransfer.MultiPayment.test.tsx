@@ -44,7 +44,6 @@ describe("SendTransfer MultiPayment", () => {
 
 	it("should select two recipients", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
-		const profileSetCoinMock = vi.spyOn(profile.coins(), "set").mockReturnValue(wallet.coin());
 
 		history.push(transferURL);
 
@@ -95,6 +94,5 @@ describe("SendTransfer MultiPayment", () => {
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 
 		coinValidateMock.mockRestore();
-		profileSetCoinMock.mockRestore();
 	});
 });

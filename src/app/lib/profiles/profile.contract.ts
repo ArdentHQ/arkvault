@@ -3,7 +3,6 @@ import { Networks } from "@/app/lib/sdk";
 import {
 	IAppearanceService,
 	IAuthenticator,
-	ICoinService,
 	IContactRepository,
 	ICountAggregate,
 	IDataRepository,
@@ -25,6 +24,9 @@ import { IHostRepository } from "./host.repository.contract.js";
 import { INetworkRepository } from "./network.repository.contract.js";
 import { UsernamesService } from "./usernames.service.js";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service.js";
+import { ValidatorService } from "./validator.service.js";
+import { KnownWalletService } from "./known-wallet.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 /**
  *
@@ -136,14 +138,6 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	convertedBalance(): number;
-
-	/**
-	 * Get the coin service instance.
-	 *
-	 * @return {ICoinService}
-	 * @memberof IProfile
-	 */
-	coins(): ICoinService;
 
 	/**
 	 * Get the contact repository instance.
@@ -368,6 +362,14 @@ export interface IProfile {
 	status(): IProfileStatus;
 
 	/**
+	 * Get the profile validator service.
+	 *
+	 * @return {ValidatorService}
+	 * @memberof IProfile
+	 */
+	validators(): ValidatorService;
+
+	/**
 	 * Get the profile username service instance.
 	 *
 	 * @return {UsernamesService}
@@ -376,9 +378,24 @@ export interface IProfile {
 	usernames(): UsernamesService;
 
 	/**
+	 * Get the profile exchange service instance.
+	 *
+	 * @return {ExchangeRateService}
+	 * @memberof IProfile
+	 */
+	exchangeRates(): ExchangeRateService;
+
+	/**
 	 * Get the profile ledger service instance.
 	 *
 	 * @memberof IProfile
 	 */
 	ledger(): LedgerService;
+
+	/**
+	 * Get the profile known wallet service.
+	 *
+	 * @memberof IProfile
+	 */
+	knownWallets(): KnownWalletService;
 }

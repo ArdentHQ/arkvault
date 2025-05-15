@@ -1,5 +1,5 @@
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/coins";
+import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/config";
 
 export class ProberService {
 	readonly #config: ConfigRepository;

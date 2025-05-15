@@ -56,7 +56,6 @@ export const SendVote = () => {
 	const wallet = useActiveWalletWhenNeeded(false);
 
 	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useValidatorsFromURL({
-		env,
 		network: activeNetwork,
 		profile: activeProfile,
 	});

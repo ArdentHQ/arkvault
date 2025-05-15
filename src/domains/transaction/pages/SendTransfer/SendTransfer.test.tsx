@@ -160,8 +160,6 @@ describe("SendTransfer", () => {
 
 		firstWalletAddress = wallet.address();
 
-		profile.coins().set("ARK", "ark.devnet");
-
 		await syncFees(profile);
 	});
 
@@ -359,7 +357,6 @@ describe("SendTransfer", () => {
 	it("should render form step with deeplink values and handle case no coin returned", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		const profileCoinsSpy = vi.spyOn(profile.coins(), "get").mockReturnValueOnce(undefined);
 		const walletNetworkSpy = vi.spyOn(wallet.network(), "ticker");
 
 		history.push(transferURL);
@@ -389,7 +386,6 @@ describe("SendTransfer", () => {
 
 		await expect(walletNetworkSpy).toHaveBeenCalledWith();
 
-		profileCoinsSpy.mockRestore();
 		walletNetworkSpy.mockRestore();
 	});
 

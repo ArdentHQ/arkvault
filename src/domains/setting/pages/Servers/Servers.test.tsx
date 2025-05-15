@@ -792,7 +792,7 @@ describe("Servers Settings", () => {
 
 				expect(screen.getAllByTestId("mobile-table-element-body")[0]).toBeInTheDocument();
 			});
-			
+
 		// 	it("can check servers accordion in mobile", async () => {
 		// 		renderResponsiveWithRoute(
 		// 			<Route path="/profiles/:profileId/settings/servers">

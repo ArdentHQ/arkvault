@@ -31,10 +31,10 @@ const useWalletAlias = (): HookResult => {
 	const getWalletAlias = useCallback(
 		({ address, profile, network }: Properties) => {
 			try {
-				if (network && env.knownWallets().is(network.id(), address)) {
+				if (network && profile.knownWallets().is(network.id(), address)) {
 					return {
 						address,
-						alias: env.knownWallets().name(network.id(), address),
+						alias: profile.knownWallets().name(network.id(), address),
 						isContact: false,
 					};
 				}

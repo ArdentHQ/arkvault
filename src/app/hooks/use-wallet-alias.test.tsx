@@ -17,7 +17,7 @@ describe("useWalletAlias", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		await env.profiles().restore(profile);
-		await env.knownWallets().sync(profile, profile.activeNetwork());
+		await profile.knownWallets().sync(profile, profile.activeNetwork());
 		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 	});
 
@@ -32,6 +32,8 @@ describe("useWalletAlias", () => {
 
 	it("should return known wallet name", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+		vi.spyOn(wallet, "isCold").mockReturnValue(false);
+
 		expect(
 			result.current.getWalletAlias({
 				address: "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",

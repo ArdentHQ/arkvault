@@ -1,8 +1,8 @@
 import { Array_ } from "@/app/lib/helpers";
 
-import { ConfigRepository } from "./coins";
 import { NetworkHost, NetworkHostType } from "./networks";
 import { HostSet, HostMap } from "@/app/lib/profiles/host.repository.contract";
+import { ConfigRepository } from "./config";
 
 export const filterHosts = (hosts: NetworkHost[], type: NetworkHostType): NetworkHost[] =>
 	hosts.filter((host: NetworkHost) => host.type === type);

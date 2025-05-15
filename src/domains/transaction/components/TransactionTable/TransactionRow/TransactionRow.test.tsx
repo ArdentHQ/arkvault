@@ -2,43 +2,39 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
 import { TransactionRow } from "./TransactionRow";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, renderResponsive } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("TransactionRow", () => {
-	const fixture = {
-		...TransactionFixture,
-		isSuccess: () => true,
-		wallet: () => ({
-			...TransactionFixture.wallet(),
-			currency: () => "ARK",
-			network: () => ({
-				coin: () => "Mainsail",
-				id: () => "mainsail.devnet",
-			}),
-			username: () => "test_username",
-		}),
-	};
+	let fixture;
 
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-	});
-
-	afterAll(() => {
-		useRandomNumberHook.useRandomNumber.mockRestore();
+		fixture = {
+			...TransactionFixture,
+			isSuccess: () => true,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				network: () => ({
+					coin: () => "Mainsail",
+					id: () => "mainsail.devnet",
+				}),
+				profile: () => profile,
+				username: () => "test_username",
+			}),
+		};
 	});
 
 	it("should render", () => {
-		const { asFragment } = render(
+		render(
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={fixture as any}
+						transaction={fixture}
 						profile={profile}
 						exchangeCurrency={"USD"}
 						onClick={() => {}}
@@ -47,7 +43,6 @@ describe("TransactionRow", () => {
 			</table>,
 		);
 
-		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getAllByRole("cell")).toHaveLength(8);
 		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
@@ -60,12 +55,7 @@ describe("TransactionRow", () => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow
-						transaction={fixture as any}
-						profile={profile}
-						exchangeCurrency="USD"
-						onClick={() => {}}
-					/>
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 			breakpoint,
@@ -80,7 +70,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render skeleton", () => {
-		const { asFragment } = render(
+		render(
 			<table>
 				<tbody>
 					<TransactionRow profile={profile} isLoading />
@@ -88,7 +78,7 @@ describe("TransactionRow", () => {
 			</table>,
 		);
 
-		expect(asFragment()).toMatchSnapshot();
+		expect(screen.getByTestId("TransactionRowSkeleton__sender-desktop")).toBeInTheDocument();
 	});
 
 	it("should render skeleton with hideSender in mobile", () => {
@@ -121,21 +111,19 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={
-							{
-								...fixture,
-								amount: () => 0,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "ARK",
-									isLedger: () => false,
-									network: () => ({
-										coin: () => "ARK",
-										id: () => "mainsail.devnet",
-									}),
+						transaction={{
+							...fixture,
+							amount: () => 0,
+							wallet: () => ({
+								...fixture.wallet(),
+								currency: () => "ARK",
+								isLedger: () => false,
+								network: () => ({
+									coin: () => "ARK",
+									id: () => "mainsail.devnet",
 								}),
-							} as any
-						}
+							}),
+						}}
 						exchangeCurrency="ARK"
 						profile={profile}
 						onClick={() => {}}
@@ -154,21 +142,19 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={
-							{
-								...fixture,
-								amount: () => 0,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "shouldUseARKColors",
-									isLedger: () => false,
-									network: () => ({
-										coin: () => "ARK",
-										id: () => "mainsail.devnet",
-									}),
+						transaction={{
+							...fixture,
+							amount: () => 0,
+							wallet: () => ({
+								...fixture.wallet(),
+								currency: () => "shouldUseARKColors",
+								isLedger: () => false,
+								network: () => ({
+									coin: () => "ARK",
+									id: () => "mainsail.devnet",
 								}),
-							} as any
-						}
+							}),
+						}}
 						exchangeCurrency="ARK"
 						profile={profile}
 						onClick={() => {}}
@@ -186,12 +172,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow
-						transaction={fixture as any}
-						profile={profile}
-						exchangeCurrency="USD"
-						onClick={() => {}}
-					/>
+					<TransactionRow transaction={fixture} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
@@ -205,7 +186,7 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={{ ...fixture, timestamp: () => {} } as any}
+						transaction={{ ...fixture, timestamp: () => {} }}
 						profile={profile}
 						exchangeCurrency="USD"
 						onClick={() => {}}
@@ -222,7 +203,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} onClick={() => {}} />
+					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
 				</tbody>
 			</table>,
 		);

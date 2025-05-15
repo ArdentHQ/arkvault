@@ -1,42 +1,36 @@
-import { Coins, Networks } from "@/app/lib/sdk";
-import { sortBy } from "@/app/lib/helpers";
 import Joi from "joi";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
-import {
-	IDataRepository,
-	IValidatorService,
-	IExchangeRateService,
-	IFeeService,
-	IProfile,
-	IProfileRepository,
-	IWalletService,
-} from "./contracts.js";
-import { defaultHostSelector, DriverFactory } from "./driver.js";
-import { CoinList, EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
+import { IDataRepository, IFeeService, IProfileRepository, IWalletService } from "./contracts.js";
+import { EnvironmentOptions, Storage, StorageData } from "./environment.models.js";
 import { KnownWalletService } from "./known-wallet.service.js";
+import { StorageFactory } from "./factory.storage.js";
+import { DataRepository } from "./repositories.js";
+import { ProfileFeeService } from "./fee.service.js";
+import { ProfileRepository } from "./profile.repository.js";
+import { WalletService } from "./wallet.service.js";
 
 export class Environment {
-	#storage: StorageData | undefined;
-	#knownWalletService: KnownWalletService;
+	#storage!: Storage;
+	#knownWalletService!: KnownWalletService;
+	#data!: DataRepository;
+	#fees!: ProfileFeeService;
+	#profiles!: ProfileRepository;
+	#wallets!: WalletService;
+	#migrationVersion!: string;
+	#migrationSchemas!: object;
 
 	public constructor(options: EnvironmentOptions) {
-		DriverFactory.make(container, options);
-		this.#knownWalletService = new KnownWalletService();
+		this.reset(options);
 	}
 
 	/**
 	 * Verify the integrity of the storage.
 	 *
-	 * @param {StorageData} { data, profiles }
 	 * @returns {Promise<void>}
 	 * @memberof Environment
 	 */
-	public async verify(storage?: StorageData): Promise<void> {
-		if (storage === undefined) {
-			storage = await container.get<Storage>(Identifiers.Storage).all<StorageData>();
-		}
+	public async verify(storageData?: StorageData): Promise<void> {
+		const storage = storageData ?? (await this.#storage.all<StorageData>());
 
 		const data: object = storage.data || {};
 		const profiles: object = storage.profiles || {};
@@ -50,7 +44,8 @@ export class Environment {
 			throw new Error(`Terminating due to corrupted state: ${String(error)}`);
 		}
 
-		this.#storage = value;
+		this.#storage.set("data", value.data);
+		this.#storage.set("profiles", value.profiles);
 	}
 
 	/**
@@ -67,17 +62,14 @@ export class Environment {
 			throw new Error("Please call [verify] before booting the environment.");
 		}
 
-		if (Object.keys(this.#storage.data).length > 0) {
-			this.data().fill(this.#storage.data);
+		const storage = await this.#storage.all<StorageData>();
+
+		if (Object.keys(storage.data).length > 0) {
+			this.data().fill(storage.data);
 		}
 
-		if (Object.keys(this.#storage.profiles).length > 0) {
-			this.profiles().fill(this.#storage.profiles);
-		}
-
-		/* istanbul ignore next */
-		if (container.has(Identifiers.ExchangeRateService)) {
-			await container.get<IExchangeRateService>(Identifiers.ExchangeRateService).restore();
+		if (Object.keys(storage.profiles).length > 0) {
+			this.profiles().fill(storage.profiles);
 		}
 	}
 
@@ -91,15 +83,13 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public async persist(): Promise<void> {
-		const storage: Storage = container.get<Storage>(Identifiers.Storage);
-
 		for (const profile of this.profiles().values()) {
 			await this.profiles().persist(profile);
 		}
 
-		await storage.set("profiles", this.profiles().toObject());
+		await this.#storage.set("profiles", this.profiles().toObject());
 
-		await storage.set("data", this.data().all());
+		await this.#storage.set("data", this.data().all());
 	}
 
 	/**
@@ -109,27 +99,7 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public data(): IDataRepository {
-		return container.get(Identifiers.AppData);
-	}
-
-	/**
-	 *
-	 *
-	 * @returns {ValidatorService}
-	 * @memberof Environment
-	 */
-	public validators(): IValidatorService {
-		return container.get(Identifiers.ValidatorService);
-	}
-
-	/**
-	 * Access the exchange rate service.
-	 *
-	 * @returns {ExchangeRateService}
-	 * @memberof Environment
-	 */
-	public exchangeRates(): IExchangeRateService {
-		return container.get(Identifiers.ExchangeRateService);
+		return this.#data;
 	}
 
 	/**
@@ -139,7 +109,7 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public fees(): IFeeService {
-		return container.get(Identifiers.FeeService);
+		return this.#fees;
 	}
 
 	/**
@@ -159,7 +129,7 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public profiles(): IProfileRepository {
-		return container.get(Identifiers.ProfileRepository);
+		return this.#profiles;
 	}
 
 	/**
@@ -169,52 +139,7 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public wallets(): IWalletService {
-		return container.get(Identifiers.WalletService);
-	}
-
-	/**
-	 * Register a new coin implementation by its ticker, for example ARK or BTC.
-	 *
-	 * @param {string} coin
-	 * @param {Coins.CoinBundle} spec
-	 * @memberof Environment
-	 */
-	public registerCoin(coin: string, spec: Coins.CoinBundle): void {
-		if (container.get<CoinList>(Identifiers.Coins)[coin]) {
-			throw new Error(`The coin [${coin}] is already registered.`);
-		}
-
-		container.get<CoinList>(Identifiers.Coins)[coin] = spec;
-	}
-
-	/**
-	 * Deregister a coin implementation by its ticker, for example ARK or BTC.
-	 *
-	 * @param {string} name
-	 * @memberof Environment
-	 */
-	public deregisterCoin(name: string): void {
-		delete container.get<CoinList>(Identifiers.Coins)[name];
-	}
-
-	/**
-	 * Return a list of all available networks.
-	 *
-	 * @returns {Networks.Network[]}
-	 * @memberof Environment
-	 */
-	public availableNetworks(): Networks.Network[] {
-		const coins: CoinList = container.get<CoinList>(Identifiers.Coins);
-
-		const result: Networks.Network[] = [];
-
-		for (const coin of Object.values(coins)) {
-			for (const network of Object.values(coin.manifest.networks)) {
-				result.push(new Networks.Network(coin.manifest, network));
-			}
-		}
-
-		return sortBy(result, (network) => network.displayName());
+		return this.#wallets;
 	}
 
 	/**
@@ -223,10 +148,21 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public reset(options?: EnvironmentOptions): void {
-		container.flush();
+		this.#data = new DataRepository();
+		this.#fees = new ProfileFeeService();
+		this.#profiles = new ProfileRepository(this);
+		this.#knownWalletService = new KnownWalletService();
+		this.#wallets = new WalletService();
 
-		if (options !== undefined) {
-			DriverFactory.make(container, options);
+		if (!options) {
+			this.#storage = StorageFactory.make("indexeddb");
+			return;
+		}
+
+		if (typeof options.storage === "string") {
+			this.#storage = StorageFactory.make(options.storage || "indexeddb");
+		} else {
+			this.#storage = options.storage;
 		}
 	}
 
@@ -238,17 +174,30 @@ export class Environment {
 	 * @memberof Environment
 	 */
 	public setMigrations(schemas: object, version: string): void {
-		container.constant(Identifiers.MigrationSchemas, schemas);
-		container.constant(Identifiers.MigrationVersion, version);
+		this.#migrationSchemas = schemas;
+		this.#migrationVersion = version;
 	}
 
 	/**
-	 * Get the host selector function.
+	 * Get the latest migration version.
 	 *
-	 * @returns {Function}
+	 * @return string migration version
 	 * @memberof Environment
 	 */
-	public hostSelector(profile: IProfile): Networks.NetworkHostSelector {
-		return defaultHostSelector(profile);
+	public migrationVersion(): string | undefined {
+		return this.#migrationVersion;
+	}
+	/**
+	 * Get the migration schemas.
+	 *
+	 * @return object schemas
+	 * @memberof Environment
+	 */
+	public migrationSchemas(): object | undefined {
+		return this.#migrationSchemas;
+	}
+
+	public storage(): Storage {
+		return this.#storage;
 	}
 }

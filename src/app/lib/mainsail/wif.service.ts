@@ -1,11 +1,15 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Services } from "@/app/lib/sdk";
 
 import { Keys } from "./crypto/identities";
-import { ConfigKey, ConfigRepository } from "../sdk/coins";
 import { WIF } from "@ardenthq/arkvault-crypto";
 import { KeyPair } from "./crypto/identities/contracts";
+import { ConfigKey, ConfigRepository } from "../sdk/config";
+
+interface WIFDataTransferObject {
+	wif: string;
+	path?: string;
+}
 
 export class WIFService {
 	readonly #config!: ConfigRepository;
@@ -14,10 +18,7 @@ export class WIFService {
 		this.#config = config;
 	}
 
-	public async fromMnemonic(
-		mnemonic: string,
-		options?: Services.IdentityOptions,
-	): Promise<Services.WIFDataTransferObject> {
+	public async fromMnemonic(mnemonic: string): Promise<WIFDataTransferObject> {
 		const { compressed, privateKey }: KeyPair = Keys.fromPassphrase(mnemonic);
 
 		const wif = WIF.encode({
@@ -31,11 +32,11 @@ export class WIFService {
 		};
 	}
 
-	public async fromSecret(secret: string): Promise<Services.WIFDataTransferObject> {
+	public async fromSecret(secret: string): Promise<WIFDataTransferObject> {
 		return await this.fromMnemonic(secret);
 	}
 
-	public async fromPrivateKey(privateKey: string): Promise<Services.WIFDataTransferObject> {
+	public async fromPrivateKey(privateKey: string): Promise<WIFDataTransferObject> {
 		const wif = WIF.encode({
 			compressed: true,
 			privateKey: privateKey,

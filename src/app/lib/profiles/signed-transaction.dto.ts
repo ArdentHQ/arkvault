@@ -1,13 +1,11 @@
 /* istanbul ignore file */
 
 import { DTO } from "@/app/lib/sdk";
-import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
+import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
-import { Identifiers } from "./container.models.js";
-import { container } from "./container.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
 
 export class ExtendedSignedTransactionData {
@@ -255,8 +253,8 @@ export class ExtendedSignedTransactionData {
 			return 0;
 		}
 
-		return container
-			.get<IExchangeRateService>(Identifiers.ExchangeRateService)
+		return this.wallet()
+			.exchangeRates()
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
 }
