@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { App } from "./App";
 import { toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
-import { env, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
