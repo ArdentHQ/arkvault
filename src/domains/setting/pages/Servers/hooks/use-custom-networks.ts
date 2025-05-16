@@ -1,12 +1,12 @@
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useState } from "react";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { isSameNetwork } from "@/utils/peers";
 import { customNetworks, sortByName } from "@/utils/server-utils";
 
-export const useCustomNetworks = (env: Environment, profile: Contracts.IProfile) => {
+export const useCustomNetworks = (profile: Contracts.IProfile) => {
 	const [allCustomNetworks, setAllCustomNetworks] = useState<NormalizedNetwork[]>(
-		sortByName(customNetworks(env, profile)),
+		sortByName(customNetworks(profile)),
 	);
 
 	const updateNetwork = useCallback(
