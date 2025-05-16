@@ -54,7 +54,8 @@ describe("VotesFilter", () => {
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
-		await userEvent.click(screen.getByTestId("VotesFilter__option--all"));
+		const filterOptionAll = screen.getByTestId("VotesFilter__option--all");
+		await userEvent.click(filterOptionAll);
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 
@@ -62,5 +63,10 @@ describe("VotesFilter", () => {
 		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
+
+		filterOptionAll.focus();
+		await userEvent.keyboard("{space}");
+
+		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 	});
 });

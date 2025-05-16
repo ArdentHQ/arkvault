@@ -64,7 +64,6 @@ export const VotesFilter = ({
 								checked={selectedOption === "current"}
 								onChange={() => onChange?.("current")}
 								onKeyDown={(event) => {
-									/* istanbul ignore next -- @preserve */
 									if (event.key === "Enter" || event.key === " ") {
 										onChange?.("current");
 									}
