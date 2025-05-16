@@ -146,10 +146,7 @@ describe("Servers Settings", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		network = profile
-			.wallets()
-			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", arkDevnet)!
-			.network();
+		network = profile.activeNetwork();
 	});
 
 	beforeEach(() => {
