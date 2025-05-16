@@ -1,11 +1,11 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, Services } from "@/app/lib/sdk";
+import { Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { ConfigRepository } from "@/app/lib/sdk/config";
+import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 interface Fees {

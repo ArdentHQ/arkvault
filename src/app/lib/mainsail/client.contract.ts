@@ -2,9 +2,9 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
 import { ConfirmedTransactionDataCollection, UsernameDataCollection, WalletDataCollection } from "./collections";
-import { ConfirmedTransactionData } from "./confirmed-transaction.dto.contract";
 import { EvmCallData, EvmCallResponse, KeyValuePair, SignedTransactionData, WalletData } from "./contracts";
 import { TransactionType } from "./networks";
+import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 
 export type ClientPaginatorCursor = string | number | undefined;
 

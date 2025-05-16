@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { uniq } from "@/app/lib/helpers";
 
 export interface NodeConfigurationResponse {

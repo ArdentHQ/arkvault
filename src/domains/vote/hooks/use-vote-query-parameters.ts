@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 import { useQueryParameters } from "@/app/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";

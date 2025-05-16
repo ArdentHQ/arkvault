@@ -1,4 +1,4 @@
-import { Enums, Networks } from "@/app/lib/sdk";
+import { Enums, Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";

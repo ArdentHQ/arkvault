@@ -1,15 +1,14 @@
-import { Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 import { BigNumber, get, has } from "@/app/lib/helpers";
-import { KeyValuePair } from "@/app/lib/sdk/contracts";
-import { BigNumberService } from "@/app/lib/sdk/big-number.service";
-import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/config";
+import { KeyValuePair } from "@/app/lib/mainsail/contracts";
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 
 export class WalletData {
 	protected data!: KeyValuePair;
-	protected readonly bigNumberService: BigNumberService;
+	#config: ConfigRepository;
 
 	constructor({ config }: { config: ConfigRepository }) {
-		this.bigNumberService = new BigNumberService({ decimals: config.get(ConfigKey.CurrencyDecimals) });
+		this.#config = config;
 	}
 
 	public fill(data: KeyValuePair) {
@@ -32,9 +31,9 @@ export class WalletData {
 
 	public balance(): Contracts.WalletBalance {
 		return {
-			available: this.bigNumberService.make(this.data.balance ?? 0),
-			fees: this.bigNumberService.make(this.data.balance ?? 0),
-			total: this.bigNumberService.make(this.data.balance ?? 0),
+			available: BigNumber.make(this.data.balance ?? 0, this.#config.get(ConfigKey.CurrencyDecimals)),
+			fees: BigNumber.make(this.data.balance ?? 0, this.#config.get(ConfigKey.CurrencyDecimals)),
+			total: BigNumber.make(this.data.balance ?? 0, this.#config.get(ConfigKey.CurrencyDecimals)),
 		};
 	}
 

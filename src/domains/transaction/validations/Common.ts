@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";

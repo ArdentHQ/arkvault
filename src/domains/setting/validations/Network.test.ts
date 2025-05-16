@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { network } from "./Network";
 
 const testAddress1 = "https://test.com";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";

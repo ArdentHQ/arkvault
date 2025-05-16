@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
