@@ -1,6 +1,5 @@
-import { Networks, Services } from "@/app/lib/mainsail";
+import { Http, Networks, Services } from "@/app/lib/mainsail";
 
-import { HttpClient } from "@/app/services/HttpClient.js";
 import { ConfigKey } from "@/app/lib/mainsail";
 import { IProfile } from "./contracts";
 
@@ -11,7 +10,7 @@ export class KnownWalletService {
 
 	/** {@inheritDoc IKnownWalletService.sync} */
 	public async sync(profile: IProfile, network: Networks.Network): Promise<void> {
-		const client = new HttpClient(0);
+		const client = new Http.HttpClient(0);
 
 		try {
 			const url = network.config().get<string>(ConfigKey.KnownWallets);

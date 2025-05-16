@@ -1,4 +1,4 @@
-import { Cache } from "./Cache";
+import { Cache } from "./cache";
 
 let subject: Cache;
 
