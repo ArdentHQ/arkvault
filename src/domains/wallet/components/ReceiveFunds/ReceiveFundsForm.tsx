@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { FormField, FormHelperText, FormLabel } from "@/app/components/Form";
 import { InputCurrency } from "@/app/components/Input";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 export const ReceiveFundsForm = ({ network }: { network: Networks.Network }) => {
 	const { t } = useTranslation();

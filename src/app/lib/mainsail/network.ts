@@ -1,5 +1,5 @@
 import { get } from "@/app/lib/helpers";
-import { randomHost } from "./helpers";
+import { randomHost } from "./helpers/hosts";
 import {
 	CoinManifest,
 	ExpirationType,
@@ -9,10 +9,9 @@ import {
 	NetworkManifestToken,
 	VotingMethod,
 } from "./network.models";
-import { ConfigRepository } from "./config";
+import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { Managers } from "@/app/lib/mainsail/crypto";
-import { ProberService } from "@/app/lib/mainsail/prober.service";
 
 export class Network {
 	/**
@@ -392,10 +391,22 @@ export class Network {
 		return get(this.#network, "featureFlags.Ledger", []).length > 0;
 	}
 
+	/**
+	 * Returns the config repository of the network.
+	 *
+	 * @memberof Network
+	 * @returns {ConfigRepository}
+	 */
 	public config(): ConfigRepository {
 		return new ConfigRepository({ network: this.#network });
 	}
 
+	/**
+	 * Updates block number & crypto config from network.
+	 *
+	 * @memberof Network
+	 * @returns {Promise<void>}
+	 */
 	public async sync(): Promise<void> {
 		const host = this.#network.hosts.find((host) => host.type === "full");
 
@@ -414,7 +425,15 @@ export class Network {
 		Managers.configManager.setHeight(blockNumber);
 	}
 
-	public prober(): ProberService {
-		return new ProberService({ config: this.config() });
+	/**
+	 * Determines wether the url belongs to the network.
+	 *
+	 * @returns {Promise<boolean>}
+	 * @memberof Network
+	 */
+	public async evaluateUrl(host: string): Promise<boolean> {
+		const client = new ArkClient(host);
+		const { data } = await client.node().crypto();
+		return data.network.client.token === this.config().get(ConfigKey.CurrencyTicker);
 	}
 }

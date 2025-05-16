@@ -1,4 +1,4 @@
-import { MultiPaymentItem, MultiPaymentRecipient } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
+import { MultiPaymentItem, MultiPaymentRecipient } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
@@ -6,7 +6,7 @@ import { Hex } from "viem";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
-import { RawTransactionData, SignedTransactionObject } from "@/app/lib/sdk/signed-transaction.dto.contract";
+import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 import { Address } from "@arkecosystem/typescript-crypto";
 
 export class SignedTransactionData {

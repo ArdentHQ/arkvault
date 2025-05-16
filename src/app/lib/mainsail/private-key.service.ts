@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { PrivateKey as BasePrivateKey } from "./crypto/identities/private-key";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { abort_if, abort_unless } from "@/app/lib/helpers";

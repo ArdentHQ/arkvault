@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Exceptions } from "@/app/lib/sdk";
+import { Exceptions } from "@/app/lib/mainsail";
 import { FunctionSigs } from "@mainsail/evm-contracts";
 
 type TransactionData = Record<string, any>;

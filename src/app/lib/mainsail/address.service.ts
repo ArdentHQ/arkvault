@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { abort_if, abort_unless } from "@/app/lib/helpers";
