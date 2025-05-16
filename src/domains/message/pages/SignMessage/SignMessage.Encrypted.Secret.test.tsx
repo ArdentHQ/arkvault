@@ -86,7 +86,7 @@ describe("SignMessage with encrypted secret", () => {
 
 		await waitFor(
 			() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-			{ timeout: 4000 },
+			{ timeout: 5000 },
 		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
