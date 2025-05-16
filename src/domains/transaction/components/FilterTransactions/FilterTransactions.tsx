@@ -36,12 +36,6 @@ const FilterOption = ({
 			"font-semibold hover:text-theme-navy-600": isChecked,
 		})}
 		onClick={() => onChange?.(!isChecked)}
-		onKeyDown={(event) => {
-			/* istanbul ignore next -- @preserve */
-			if (event.key === "Enter" || event.key === " ") {
-				onChange?.(!isChecked);
-			}
-		}}
 	>
 		<Checkbox
 			checked={isChecked}
@@ -51,6 +45,12 @@ const FilterOption = ({
 				"group-hover:bg-theme-navy-700": isChecked,
 				"group-hover:border-theme-navy-600 dark:group-hover:border-theme-navy-600": !isChecked,
 			})}
+			onKeyDown={(event) => {
+				/* istanbul ignore next -- @preserve */
+				if (event.key === "Enter" || event.key === " ") {
+					onChange?.(!isChecked);
+				}
+			}}
 		/>
 		<span data-testid={`FilterOption__${label}`}>{label}</span>
 	</span>
