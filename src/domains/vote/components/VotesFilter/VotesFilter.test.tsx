@@ -3,6 +3,7 @@ import React from "react";
 
 import { VotesFilter } from "./VotesFilter";
 import { render, screen, waitFor } from "@/utils/testing-library";
+import { within } from "@testing-library/react";
 
 describe("VotesFilter", () => {
 	it("should render", () => {
@@ -58,14 +59,27 @@ describe("VotesFilter", () => {
 		await userEvent.click(filterOptionAll);
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
+	});
 
-		filterOptionCurrent.focus();
+	it("should emit onChange with keyboard", async () => {
+		const onChange = vi.fn();
+		render(<VotesFilter totalCurrentVotes={2} onChange={onChange} />);
+
+		await userEvent.click(screen.getByTestId("dropdown__toggle-VotesFilter"));
+
+		await expect(screen.findByTestId("dropdown__content-VotesFilter")).resolves.toBeVisible();
+
+		const currentOption= within(screen.getByTestId("VotesFilter__option--current")).getByRole('checkbox');
+
+		currentOption.focus();
 		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
-		filterOptionAll.focus();
-		await userEvent.keyboard("{space}");
+		const allOption= within(screen.getByTestId("VotesFilter__option--all")).getByRole('checkbox');
+		allOption.focus();
+
+		await userEvent.keyboard("{Spacebar}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 	});
