@@ -1,4 +1,4 @@
-import { Response } from "./http-response";
+import { HttpResponse } from "./http-response";
 
 export class Exception extends Error {
 	public constructor(message: string) {
@@ -19,7 +19,7 @@ export class Exception extends Error {
 }
 
 export class RequestException extends Error {
-	public constructor(response: Response, error?: Error) {
+	public constructor(response: HttpResponse, error?: Error) {
 		const message = error
 			? `HTTP request returned status code ${response.status()}: ${(error as any).message}`
 			: `HTTP request returned status code ${response.status()}.`;

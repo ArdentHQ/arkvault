@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { HttpClient } from "@/app/services/HttpClient";
-import { Networks } from "@/app/lib/mainsail";
+import { Http, Networks } from "@/app/lib/mainsail";
 import { Numeral } from "@/app/lib/intl";
 
 export const useBlockHeight = ({
@@ -13,7 +12,7 @@ export const useBlockHeight = ({
 	const [blockHeight, setBlockHeight] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
 	useEffect(() => {
-		const client = new HttpClient(0);
+		const client = new Http.HttpClient(0);
 
 		// @TODO: Fetch block info/height from sdk (not yet supported).
 		const fetchBlockHeight = async () => {

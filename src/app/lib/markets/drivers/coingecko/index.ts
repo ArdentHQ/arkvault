@@ -36,7 +36,7 @@ export class CoinGecko implements PriceTracker {
 	/**
 	 * The HTTP client instance.
 	 *
-	 * @type {HttpClient}
+	 * @type {Http.HttpClient}
 	 * @memberof PriceTracker
 	 */
 	readonly #httpClient: Http.HttpClient;
