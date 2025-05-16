@@ -38,11 +38,11 @@ const fixtureProfileId = getMainsailProfileId();
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		blockHash: () => transactionFixture.data.blockHash,
+		convertedAmount: () => BigNumber.make(10),
 		data: () => transactionFixture.data,
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
-		convertedAmount: () => BigNumber.make(10),
-		blockHash: () => transactionFixture.data.blockHash,
 		fee: () => +transactionFixture.data.fee / 1e18,
 		from: () => transactionFixture.data.from,
 		hash: () => transactionFixture.data.hash,
@@ -91,13 +91,13 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isConfirmed: () => true,
-		isValidatorRegistration: () => false,
-		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
 		isTransfer: () => false,
 		isUnvote: () => true,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
@@ -121,8 +121,8 @@ const votingMockImplementation = () => [
 			address: validatorData[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isValidator: true,
 			isResignedvalidator: false,
+			isValidator: true,
 			publicKey: validatorData[1].publicKey,
 			username: validatorData[1].username,
 		}),
@@ -144,8 +144,6 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
-		
-
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -196,7 +194,6 @@ describe("SendVote", () => {
 		resetProfileNetworksMock();
 	});
 
-	
 	it("should return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
@@ -341,7 +338,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it.only("should warning in toast if wallet is already voting the validator", async () => {
+	it("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -352,8 +349,8 @@ describe("SendVote", () => {
 					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isValidator: true,
 					isResignedvalidator: false,
+					isValidator: true,
 					publicKey: validatorData[0].publicKey,
 					rank: 1,
 					username: "arkx",
@@ -389,7 +386,9 @@ describe("SendVote", () => {
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(toastMock).toHaveBeenCalledWith('Mainsail Wallet 1 is already voting for 0xB8Be76b31E402a2D89294Aa107056484Bef94362..');
+			expect(toastMock).toHaveBeenCalledWith(
+				"Mainsail Wallet 1 is already voting for 0xB8Be76b31E402a2D89294Aa107056484Bef94362..",
+			);
 		});
 
 		votesMock.mockRestore();
@@ -434,18 +433,13 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
 		await userEvent.click(continueButton());
 
 		// AuthenticationStep
@@ -490,9 +484,8 @@ describe("SendVote", () => {
 			vi.advanceTimersByTime(1000);
 		});
 
-		setTimeout(() => {
-			votesMock.mockRestore();
-		}, 3000);
+		// reset the votes mock so it no longer returns that is voting
+		votesMock.mockRestore();
 
 		act(() => {
 			vi.runOnlyPendingTimers();
@@ -508,7 +501,8 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				fee: 0.01,
+				gasLimit: 200_000,
+				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			});
 		});
@@ -521,11 +515,12 @@ describe("SendVote", () => {
 					votes: [
 						{
 							amount: 10,
-							id: validatorData[0].publicKey,
+							id: validatorData[0].address,
 						},
 					],
 				},
-				fee: 0.01,
+				gasLimit: 200_000,
+				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			}),
 		);
@@ -792,8 +787,8 @@ describe("SendVote", () => {
 					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isValidator: true,
 					isResignedvalidator: false,
+					isValidator: true,
 					publicKey: validatorData[0].publicKey,
 					username: validatorData[0].username,
 				}),
@@ -804,8 +799,8 @@ describe("SendVote", () => {
 					address: validatorData[1].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isValidator: true,
 					isResignedvalidator: false,
+					isValidator: true,
 					publicKey: validatorData[1].publicKey,
 					username: validatorData[1].username,
 				}),
