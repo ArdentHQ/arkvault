@@ -84,8 +84,8 @@ describe("SignMessage with encrypted mnemonic", () => {
 
 		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
-		await waitFor(() =>
-			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+		await waitFor(
+			() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 			{ timeout: 8000 },
 		);
 
