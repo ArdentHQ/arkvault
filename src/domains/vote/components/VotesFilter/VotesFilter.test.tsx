@@ -72,14 +72,14 @@ describe("VotesFilter", () => {
 
 		await expect(screen.findByTestId(dropdownBody)).resolves.toBeVisible();
 
-		const currentOption= within(screen.getByTestId("VotesFilter__option--current")).getByRole('checkbox');
+		const currentOption = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
 
 		currentOption.focus();
 		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
-		const allOption= within(screen.getByTestId("VotesFilter__option--all")).getByRole('checkbox');
+		const allOption = within(screen.getByTestId("VotesFilter__option--all")).getByRole("checkbox");
 		allOption.focus();
 
 		await userEvent.keyboard("{Spacebar}");
