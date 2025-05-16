@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 import { IReadWriteWallet, IWalletMutator, WalletData, WalletImportMethod, WalletSetting } from "./contracts.js";

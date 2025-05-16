@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/no-null */
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
 import { env } from "@/utils/testing-library";

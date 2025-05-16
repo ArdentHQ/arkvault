@@ -1,4 +1,4 @@
-import { Networks, Contracts } from "@/app/lib/sdk";
+import { Networks, Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";

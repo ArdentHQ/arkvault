@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import cn from "classnames";
 import React from "react";
 

@@ -1,7 +1,7 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
 
-import { Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";

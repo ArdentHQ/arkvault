@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { assertNetwork } from "@/utils/assertions";

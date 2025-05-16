@@ -4,7 +4,7 @@
 import { Keys } from "./crypto/identities";
 import { WIF } from "@ardenthq/arkvault-crypto";
 import { KeyPair } from "./crypto/identities/contracts";
-import { ConfigKey, ConfigRepository } from "../sdk/config";
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 
 interface WIFDataTransferObject {
 	wif: string;

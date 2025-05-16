@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/require-await */
 
-import { Contracts, Services } from "@/app/lib/sdk";
+import { Contracts, Services } from "@/app/lib/mainsail";
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature } from "./ledger.service.types.js";
 import { AddressService } from "./address.service.js";
-import { Exceptions } from "@/app/lib/sdk";
+import { Exceptions } from "@/app/lib/mainsail";
 import { WalletData } from "./wallet.dto.js";
-import { ConfigKey, ConfigRepository } from "@/app/lib/sdk/config";
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 
 export class LedgerService {
