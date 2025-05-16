@@ -1,5 +1,5 @@
 import React from "react";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";

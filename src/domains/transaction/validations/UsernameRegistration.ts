@@ -2,7 +2,7 @@ import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
 import { Environment } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 class UsernameExistsError extends Error {

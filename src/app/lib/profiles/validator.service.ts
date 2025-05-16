@@ -1,4 +1,4 @@
-import { Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 
 import { IDataRepository, IValidatorService, IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 import { DataRepository } from "./data.repository";

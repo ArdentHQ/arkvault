@@ -1,6 +1,6 @@
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 

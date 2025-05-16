@@ -1,5 +1,5 @@
-import { Contracts, Exceptions } from "@/app/lib/sdk";
-import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/sdk/confirmed-transaction.dto.contract";
+import { Contracts, Exceptions } from "@/app/lib/mainsail";
+import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 

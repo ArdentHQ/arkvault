@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { TransactionFees } from "types";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 

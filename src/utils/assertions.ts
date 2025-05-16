@@ -1,5 +1,5 @@
 import { AssertionError } from "assert";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts, DTO, Wallet } from "@/app/lib/profiles";
 import { Profile } from "@/app/lib/profiles/profile";
 

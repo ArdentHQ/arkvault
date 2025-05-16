@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 
 import { IProfile, IReadWriteWallet, ITransactionAggregate } from "./contracts.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { useNetworks } from "./use-networks";
 import { networksAsOptions } from "@/utils/network-utils";
 

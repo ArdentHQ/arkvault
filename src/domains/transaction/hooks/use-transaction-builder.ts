@@ -1,6 +1,6 @@
 import { DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { upperFirst } from "@/app/lib/helpers";
 import { useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";

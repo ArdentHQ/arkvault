@@ -1,4 +1,4 @@
-import { Contracts, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import {
@@ -23,7 +23,7 @@ import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
-import { Manifest } from "@/app/lib/sdk/manifest.js";
+import { Manifest } from "@/app/lib/mainsail/manifest.class";
 import { WIFService } from "@/app/lib/mainsail/wif.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
