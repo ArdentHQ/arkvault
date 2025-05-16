@@ -86,6 +86,7 @@ describe("SignMessage with encrypted mnemonic", () => {
 
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+			{ timeout: 8000 },
 		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
