@@ -38,7 +38,7 @@ export const sendVote = (t: any) => ({
 
 			if (votingDelegates.some((delegate) => voteAddresses.has(delegate.wallet?.address()))) {
 				return t("TRANSACTION.VALIDATION.ALREADY_VOTING", {
-					validator: votes[0].wallet?.username(),
+					validator: votes[0].wallet?.username() ?? votes[0].wallet?.address(),
 					wallet: wallet?.displayName(),
 				});
 			}

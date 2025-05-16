@@ -41,6 +41,8 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		data: () => transactionFixture.data,
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+		convertedAmount: () => BigNumber.make(10),
+		blockHash: () => transactionFixture.data.blockHash,
 		fee: () => +transactionFixture.data.fee / 1e18,
 		from: () => transactionFixture.data.from,
 		hash: () => transactionFixture.data.hash,
@@ -142,10 +144,7 @@ describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
-		vi.useFakeTimers({
-			shouldAdvanceTime: true,
-			toFake: ["setInterval", "clearInterval"],
-		});
+		
 
 		profile = env.profiles().findById(getMainsailProfileId());
 
@@ -171,17 +170,24 @@ describe("SendVote", () => {
 	beforeEach(() => {
 		server.use(
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
+				"https://dwallets-evm.mainsailhq.com/api/transactions/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0a",
 				transactionFixture,
 			),
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
+				"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
 				transactionFixture,
+			),
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
+				{ data: {} }, // Basic mock for block data
 			),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers({ shouldAdvanceTime: true });
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -190,11 +196,8 @@ describe("SendVote", () => {
 		resetProfileNetworksMock();
 	});
 
-	afterAll(() => {
-		vi.useRealTimers();
-	});
-
-	it.only("should return to the select a validator page to unvote", async () => {
+	
+	it("should return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
@@ -242,8 +245,8 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
@@ -282,18 +285,13 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
 		await userEvent.click(continueButton());
 
 		// AuthenticationStep
@@ -330,10 +328,10 @@ describe("SendVote", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		// Go back to wallet
+		// Go back to dashboard
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		historySpy.mockRestore();
 
@@ -343,7 +341,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it("should warning in toast if wallet is already voting the validator", async () => {
+	it.only("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -388,10 +386,10 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(toastMock).toHaveBeenCalledWith("ARK Wallet 1 is already voting for arkx.");
+			expect(toastMock).toHaveBeenCalledWith('Mainsail Wallet 1 is already voting for 0xB8Be76b31E402a2D89294Aa107056484Bef94362..');
 		});
 
 		votesMock.mockRestore();
