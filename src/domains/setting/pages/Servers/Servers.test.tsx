@@ -564,7 +564,7 @@ describe("Servers Settings", () => {
 			it("shows an error if the server is valid but doesnt match the network", async () => {
 				mockPublicEndpoint();
 
-				const networkSpy = vi.spyOn(network.prober(), "evaluate").mockReturnValue(false);
+				const networkSpy = vi.spyOn(network, "evaluateUrl").mockReturnValue(false);
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
