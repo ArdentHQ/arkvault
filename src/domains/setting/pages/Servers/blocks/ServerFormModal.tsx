@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { useForm } from "react-hook-form";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";

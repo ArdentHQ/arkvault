@@ -1,5 +1,5 @@
 import { CURRENCIES, DateTime } from "@/app/lib/intl";
-import { Http } from "@/app/lib/sdk";
+import { Http } from "@/app/lib/mainsail";
 
 import {
 	CurrentPriceOptions,

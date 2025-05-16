@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { env, getDefaultProfileId } from "@/utils/testing-library";

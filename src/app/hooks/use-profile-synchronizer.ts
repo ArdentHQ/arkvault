@@ -11,7 +11,7 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 import { Contracts } from "@/app/lib/profiles";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { delay } from "@/utils/delay";
 import { isEqual } from "@/app/lib/helpers";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";

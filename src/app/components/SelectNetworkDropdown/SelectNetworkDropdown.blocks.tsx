@@ -1,5 +1,5 @@
 import React from "react";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";

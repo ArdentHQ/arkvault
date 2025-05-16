@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { Networks } from "@/app/lib/sdk";
-import { HttpClient } from "@/app/services/HttpClient";
-import { addressIsValid as checkIfAddressIsValid, urlBelongsToNetwork, getServerHeight } from "@/utils/peers";
+import { Http, Networks } from "@/app/lib/mainsail";
+import { addressIsValid as checkIfAddressIsValid, getServerHeight } from "@/utils/peers";
 import { DeepMap, FieldError } from "react-hook-form";
 import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useTranslation } from "react-i18next";
 
 export async function pingTransactionApi(endpoint: string, controller: AbortController): Promise<boolean> {
 	const { signal } = controller;
-	const client = new HttpClient(0).withOptions({ signal });
+	const client = new Http.HttpClient(0).withOptions({ signal });
 
 	const response = await client.get(`${endpoint}/configuration`);
 
@@ -19,7 +18,7 @@ export async function pingTransactionApi(endpoint: string, controller: AbortCont
 
 export async function pingEvmApi(endpoint: string, controller: AbortController): Promise<boolean> {
 	const { signal } = controller;
-	const client = new HttpClient(0).withOptions({ signal });
+	const client = new Http.HttpClient(0).withOptions({ signal });
 
 	const response = await client.post(endpoint, {
 		id: 1,
@@ -81,7 +80,7 @@ const useHandleServers = ({
 
 		setFetchingDetails(true);
 
-		if (await urlBelongsToNetwork(publicApiEndpoint, network!)) {
+		if (await network?.evaluateUrl(publicApiEndpoint)) {
 			setServerHeight(await getServerHeight(publicApiEndpoint));
 		} else {
 			setError("publicApiEndpoint", {

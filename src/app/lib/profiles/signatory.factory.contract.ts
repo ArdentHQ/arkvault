@@ -1,4 +1,4 @@
-import { Signatories } from "@/app/lib/sdk";
+import { Signatories } from "@/app/lib/mainsail";
 
 export interface SignatoryInput {
 	encryptionPassword?: string;

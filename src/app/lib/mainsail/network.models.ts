@@ -1,4 +1,4 @@
-import { ConfigRepository } from "./config";
+import { ConfigRepository } from "./config.repository";
 
 export type FeeType = "static" | "dynamic" | "gas" | "free" | "weight" | "size";
 

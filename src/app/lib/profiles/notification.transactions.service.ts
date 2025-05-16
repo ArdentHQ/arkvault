@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { sortByDesc } from "@/app/lib/helpers";
 
 import { INotificationTypes, IProfile, IProfileTransactionNotificationService, ProfileSetting } from "./contracts.js";

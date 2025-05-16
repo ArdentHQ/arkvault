@@ -5,7 +5,7 @@ import { MarketService } from "@/app/lib/markets";
 import { IExchangeRateService, IProfile, IReadWriteWallet, ProfileSetting } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { Storage } from "./environment.models.js";
-import { HttpClient } from "@/app/services/HttpClient.js";
+import { HttpClient } from "@/app/lib/mainsail/http-client.js";
 
 export class ExchangeRateService implements IExchangeRateService {
 	readonly #storageKey: string = "EXCHANGE_RATE_SERVICE";

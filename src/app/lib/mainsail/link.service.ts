@@ -1,8 +1,8 @@
 import { formatString } from "@/app/lib/helpers";
 import queryString from "query-string";
-import { ConfigRepository } from "@/app/lib/sdk/config";
+import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import { randomHost } from "@/app/lib/sdk/helpers";
+import { randomHost } from "@/app/lib/mainsail/helpers/hosts";
 
 export class LinkService {
 	#config: ConfigRepository;

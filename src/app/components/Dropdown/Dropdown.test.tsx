@@ -45,6 +45,20 @@ describe("Dropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render options with focus disabled", async () => {
+		const options = [{ disableFocus: true, label: "Option 1", value: "1" }];
+
+		render(<Dropdown options={options} />);
+
+		const dropdown = screen.getByTestId("dropdown__toggle");
+
+		await userEvent.click(dropdown);
+
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("dropdown__option--0")).toHaveAttribute("tabindex", "-1");
+	});
+
 	it("should render with custom icon classname", async () => {
 		const optionsWithIcon = [{ icon: "trash", iconClassName: "custom-class-name", label: "Option 1", value: "1" }];
 

@@ -1,4 +1,3 @@
-import { HttpResponse } from "./http-contracts";
 import { RequestException } from "./http-exceptions";
 
 interface ResponseInput {
@@ -7,7 +6,7 @@ interface ResponseInput {
 	statusCode: number;
 }
 
-export class Response implements HttpResponse {
+export class HttpResponse {
 	protected _response: ResponseInput;
 
 	protected _error: Error | undefined;
