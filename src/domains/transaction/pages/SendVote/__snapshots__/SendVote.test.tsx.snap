@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SendVote > should return to the select a validator page to unvote 1`] = `<div />`;

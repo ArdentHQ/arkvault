@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
-	getDefaultProfileId,
-	getDefaultWalletId,
+	getMainsailProfileId,
+	getDefaultMainsailWalletId,
 	getDefaultWalletMnemonic,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
@@ -28,60 +27,70 @@ import { Signatories } from "@/app/lib/mainsail";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { createHashHistory } from "history";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
-import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => voteFixture.data.amount / 1e8,
-		blockId: () => voteFixture.data.blockId,
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
-		fee: () => voteFixture.data.fee / 1e8,
-		id: () => voteFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
+		data: () => transactionFixture.data,
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+		fee: () => +transactionFixture.data.fee / 1e18,
+		from: () => transactionFixture.data.from,
+		hash: () => transactionFixture.data.hash,
+		isConfirmed: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isReturn: () => false,
+		isSecondSignature: () => false,
+		isSent: () => true,
+		isSuccess: () => true,
 		isTransfer: () => false,
 		isUnvote: () => false,
+		isUsernameRegistration: () => false,
+		isUsernameResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isVote: () => true,
 		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(158),
-		recipient: () => voteFixture.data.recipient,
-		sender: () => voteFixture.data.sender,
-		timestamp: () => DateTime.make(),
+		memo: () => transactionFixture.data.memo || undefined,
+		nonce: () => BigNumber.make(transactionFixture.data.nonce),
+		payments: () => [],
+		recipients: () => [],
+		sender: () => transactionFixture.data.sender,
+		timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+		to: () => transactionFixture.data.to,
+		total: () => {
+			const value = BigNumber.make(transactionFixture.data.value);
+			const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+			return value.plus(feeVal);
+		},
 		type: () => "vote",
 		usesMultiSignature: () => false,
+		value: () => +transactionFixture.data.value / 1e8,
 		wallet: () => wallet,
 	});
 
 const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => unvoteFixture.data.amount / 1e8,
-		blockId: () => unvoteFixture.data.blockId,
+		amount: () => transactionFixture.data.amount / 1e8,
+		blockId: () => transactionFixture.data.blockId,
 		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
-		fee: () => unvoteFixture.data.fee / 1e8,
-		id: () => unvoteFixture.data.id,
+		data: () => ({ data: () => transactionFixture.data }),
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+		fee: () => transactionFixture.data.fee / 1e8,
+		id: () => transactionFixture.data.id,
 		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
+		isValidatorRegistration: () => false,
+		isValidatorResignation: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -91,8 +100,8 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVoteCombination: () => false,
 		memo: () => null,
 		nonce: () => BigNumber.make(158),
-		recipient: () => unvoteFixture.data.recipient,
-		sender: () => unvoteFixture.data.sender,
+		recipient: () => transactionFixture.data.recipient,
+		sender: () => transactionFixture.data.sender,
 		timestamp: () => DateTime.make(),
 		type: () => "unvote",
 		usesMultiSignature: () => false,
@@ -107,13 +116,13 @@ const votingMockImplementation = () => [
 	{
 		amount: 10,
 		wallet: new ReadOnlyWallet({
-			address: delegateData[1].address,
+			address: validatorData[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
-			publicKey: delegateData[1].publicKey,
-			username: delegateData[1].username,
+			isValidator: true,
+			isResignedvalidator: false,
+			publicKey: validatorData[1].publicKey,
+			username: validatorData[1].username,
 		}),
 	},
 ];
@@ -138,22 +147,22 @@ describe("SendVote", () => {
 			toFake: ["setInterval", "clearInterval"],
 		});
 
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 		await wallet.synchroniser().identity();
 
-		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
 
 		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
+			profile.validators().findByAddress(wallet.networkId(), validatorData[index].address);
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
@@ -163,11 +172,11 @@ describe("SendVote", () => {
 		server.use(
 			requestMock(
 				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
-				voteFixture,
+				transactionFixture,
 			),
 			requestMock(
 				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
-				unvoteFixture,
+				transactionFixture,
 			),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
@@ -185,11 +194,11 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 	});
 
-	it("should return to the select a delegate page to unvote", async () => {
+	it.only("should return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
@@ -199,11 +208,11 @@ describe("SendVote", () => {
 			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[1].address));
 
-		// Back to select a delegate page
+		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
@@ -211,14 +220,14 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should return to the select a delegate page to unvote/vote", async () => {
+	it("should return to the select a validator page to unvote/vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[0].address }];
+		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
@@ -234,9 +243,9 @@ describe("SendVote", () => {
 		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
-		// Back to select a delegate page
+		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
@@ -255,7 +264,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -275,7 +284,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -292,10 +301,10 @@ describe("SendVote", () => {
 
 		const signVoteMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 		const broadcastVoteMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
-			.mockResolvedValue({ accepted: [voteFixture.data.id], errors: {}, rejected: [] });
+			.mockResolvedValue({ accepted: [transactionFixture.data.id], errors: {}, rejected: [] });
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
@@ -334,7 +343,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it("should warning in toast if wallet is already voting the delegate", async () => {
+	it("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -342,12 +351,12 @@ describe("SendVote", () => {
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[0].address,
+					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[0].publicKey,
+					isValidator: true,
+					isResignedvalidator: false,
+					publicKey: validatorData[0].publicKey,
 					rank: 1,
 					username: "arkx",
 				}),
@@ -361,7 +370,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -400,7 +409,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[1].address,
+				validatorAddress: validatorData[1].address,
 			},
 		];
 
@@ -409,7 +418,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -429,7 +438,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
@@ -446,18 +455,18 @@ describe("SendVote", () => {
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValueOnce(Promise.resolve(unvoteFixture.data.id))
-			.mockReturnValueOnce(Promise.resolve(voteFixture.data.id));
+			.mockReturnValueOnce(Promise.resolve(transactionFixture.data.id))
+			.mockReturnValueOnce(Promise.resolve(transactionFixture.data.id));
 
 		const broadcastMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
 			.mockResolvedValueOnce({
-				accepted: [unvoteFixture.data.id],
+				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			})
 			.mockResolvedValueOnce({
-				accepted: [voteFixture.data.id],
+				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
@@ -497,7 +506,7 @@ describe("SendVote", () => {
 					unvotes: [
 						{
 							amount: 10,
-							id: delegateData[1].address,
+							id: validatorData[1].address,
 						},
 					],
 				},
@@ -506,7 +515,7 @@ describe("SendVote", () => {
 			});
 		});
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(1, unvoteFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(1, transactionFixture.data.id));
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenNthCalledWith(2, {
@@ -514,7 +523,7 @@ describe("SendVote", () => {
 					votes: [
 						{
 							amount: 10,
-							id: delegateData[0].publicKey,
+							id: validatorData[0].publicKey,
 						},
 					],
 				},
@@ -523,7 +532,7 @@ describe("SendVote", () => {
 			}),
 		);
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, transactionFixture.data.id));
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -652,7 +661,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -672,7 +681,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -709,7 +718,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -729,7 +738,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -782,25 +791,25 @@ describe("SendVote", () => {
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[0].address,
+					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[0].publicKey,
-					username: delegateData[0].username,
+					isValidator: true,
+					isResignedvalidator: false,
+					publicKey: validatorData[0].publicKey,
+					username: validatorData[0].username,
 				}),
 			},
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[1].address,
+					address: validatorData[1].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[1].publicKey,
-					username: delegateData[1].username,
+					isValidator: true,
+					isResignedvalidator: false,
+					publicKey: validatorData[1].publicKey,
+					username: validatorData[1].username,
 				}),
 			},
 		]);
@@ -810,7 +819,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -830,7 +839,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -845,9 +854,9 @@ describe("SendVote", () => {
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -886,7 +895,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -906,7 +915,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		// Fee
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
@@ -942,7 +951,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -962,7 +971,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		// Fee
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
@@ -998,7 +1007,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1018,11 +1027,11 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1058,7 +1067,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1079,11 +1088,11 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1117,7 +1126,7 @@ describe("SendVote", () => {
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
+		const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${getDefaultMainsailWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
 
 		signMock.mockRestore();
@@ -1135,7 +1144,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[1].address,
+				validatorAddress: validatorData[1].address,
 			},
 		];
 
@@ -1155,7 +1164,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[1].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1165,9 +1174,9 @@ describe("SendVote", () => {
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -1211,12 +1220,12 @@ describe("SendVote", () => {
 
 		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -1227,7 +1236,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1247,7 +1256,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
@@ -1318,12 +1327,12 @@ describe("SendVote", () => {
 
 		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -1334,7 +1343,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1354,7 +1363,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
