@@ -25,8 +25,8 @@ export class WalletImportFormat implements IWalletImportFormat {
 
 	/** {@inheritDoc IWalletImportFormat.set} */
 	public async set(value: string, password: string): Promise<void> {
-		const encryptedValue = await PBKDF2.encrypt(value, password);
-		this.#wallet.data().set(this.#key, encryptedValue);
+		const encryptedKey = await PBKDF2.encrypt(value, password);
+		this.#wallet.data().set(this.#key, encryptedKey);
 		this.#wallet.profile().status().markAsDirty();
 	}
 
