@@ -15,9 +15,11 @@ import {
 	useRole,
 	useInteractions,
 	FloatingPortal,
+	FloatingFocusManager,
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
 import classNames from "classnames";
+import { isUnit } from "@/utils/test-helpers";
 
 export const Wrapper = ({ variant, ...props }: { variant?: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
 	<div
@@ -120,6 +122,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 
 			{isOpen && (
 				<FloatingPortal>
+					<FloatingFocusManager context={context} disabled={isUnit()}>
 					<div
 						ref={refs.setFloating}
 						className={twMerge(
@@ -151,6 +154,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 							{bottom}
 						</Wrapper>
 					</div>
+					</FloatingFocusManager>
 				</FloatingPortal>
 			)}
 		</>
