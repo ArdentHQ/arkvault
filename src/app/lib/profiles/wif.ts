@@ -14,24 +14,20 @@ export class WalletImportFormat implements IWalletImportFormat {
 
 	/** {@inheritDoc IWalletImportFormat.get} */
 	public async get(password: string): Promise<string> {
-		return new Promise((resolve, reject) => {
-			const encryptedKey: string | undefined = this.#wallet.data().get(this.#key);
+		const encryptedKey: string | undefined = this.#wallet.data().get(this.#key);
 
-			if (encryptedKey === undefined) {
-				return reject("This wallet does not use PBKDF2 encryption.");
-			}
+		if (encryptedKey === undefined) {
+			throw new Error("This wallet does not use PBKDF2 encryption.");
+		}
 
-			resolve(PBKDF2.decrypt(encryptedKey, password));
-		});
+		return await PBKDF2.decrypt(encryptedKey, password);
 	}
 
 	/** {@inheritDoc IWalletImportFormat.set} */
 	public async set(value: string, password: string): Promise<void> {
-		return new Promise((resolve) => {
-			this.#wallet.data().set(this.#key, PBKDF2.encrypt(value, password));
-			this.#wallet.profile().status().markAsDirty();
-			resolve();
-		});
+		const encryptedValue = await PBKDF2.encrypt(value, password);
+		this.#wallet.data().set(this.#key, encryptedValue);
+		this.#wallet.profile().status().markAsDirty();
 	}
 
 	/** {@inheritDoc IWalletImportFormat.exists} */
