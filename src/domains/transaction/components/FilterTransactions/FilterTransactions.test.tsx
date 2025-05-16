@@ -165,16 +165,18 @@ describe("FilterTransactions", () => {
 			["transfer"],
 		);
 
-		options.at(2).focus();
+		onSelect.mockClear();
+
+		options.at(1).focus();
 		await userEvent.keyboard("{Spacebar}");
 
 		expect(onSelect).toHaveBeenCalledWith(
 			{
-				label: expect.any(String),
-				value: expect.any(String),
+				label: "",
+				value: "",
 			},
 			undefined,
-			["vote"],
+			["transfer"],
 		);
 	});
 
