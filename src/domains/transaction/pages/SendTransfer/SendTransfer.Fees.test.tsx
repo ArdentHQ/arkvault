@@ -34,7 +34,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		amount: () => +transactionFixture.data.amount / 1e8,
 		blockId: () => transactionFixture.data.blockId,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
-		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
