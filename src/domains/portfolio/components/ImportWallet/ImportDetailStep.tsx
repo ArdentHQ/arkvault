@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-options";
 import { Input, InputAddress, InputPassword } from "@/app/components/Input";

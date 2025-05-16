@@ -1,5 +1,5 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { Trans, useTranslation } from "react-i18next";
 import { assertNetwork } from "@/utils/assertions";

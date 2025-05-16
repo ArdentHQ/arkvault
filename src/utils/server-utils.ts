@@ -1,7 +1,7 @@
-import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Contracts, Environment } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/mainsail";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { groupCustomHosts } from "@/app/lib/sdk/helpers";
+import { groupCustomHosts } from "@/app/lib/mainsail/helpers/hosts";
 import { Host } from "@/app/lib/profiles/host.repository.contract";
 
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));

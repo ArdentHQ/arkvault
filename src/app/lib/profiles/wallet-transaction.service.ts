@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-import { Exceptions, Services } from "@/app/lib/sdk";
+import { Exceptions, Services } from "@/app/lib/mainsail";
 import { IReadWriteWallet, ITransactionService, WalletData } from "./contracts";
 
 import { ExtendedSignedTransactionData } from "./signed-transaction.dto";

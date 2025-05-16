@@ -1,4 +1,4 @@
-import { Collections } from "@/app/lib/sdk";
+import { Collections } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet } from "./contracts.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";

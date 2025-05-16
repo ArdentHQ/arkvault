@@ -22,7 +22,7 @@ import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
-import { Signatories } from "@/app/lib/sdk";
+import { Signatories } from "@/app/lib/mainsail";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { createHashHistory } from "history";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";

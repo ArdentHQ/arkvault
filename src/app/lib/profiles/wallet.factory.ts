@@ -1,4 +1,4 @@
-import { Enums } from "@/app/lib/sdk";
+import { Enums } from "@/app/lib/mainsail";
 import { BIP38, BIP39, UUID } from "@ardenthq/arkvault-crypto";
 
 import {
