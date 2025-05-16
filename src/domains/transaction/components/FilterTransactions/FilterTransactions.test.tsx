@@ -143,7 +143,7 @@ describe("FilterTransactions", () => {
 		);
 	});
 
-	it("should toggle vote type with keyboard", async () => {
+	it("should toggle filter option with keyboard", async () => {
 		const onSelect = vi.fn();
 		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
 
