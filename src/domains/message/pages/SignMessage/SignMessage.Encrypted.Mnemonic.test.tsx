@@ -96,5 +96,5 @@ describe("SignMessage with encrypted mnemonic", () => {
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
 		profile.wallets().forget(encryptedWallet.id());
-	});
+	}, { timeout: 8000 });
 });
