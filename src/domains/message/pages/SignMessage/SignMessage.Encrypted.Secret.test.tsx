@@ -41,9 +41,7 @@ describe("SignMessage with encrypted secret", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic,
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -59,8 +57,6 @@ describe("SignMessage with encrypted secret", () => {
 		const secret = "secret";
 
 		const encryptedWallet = await profile.walletFactory().fromSecret({
-			coin: "Mainsail",
-			network: "mainsail.devnet",
 			secret,
 		});
 		await encryptedWallet.signingKey().set(secret, "password");
