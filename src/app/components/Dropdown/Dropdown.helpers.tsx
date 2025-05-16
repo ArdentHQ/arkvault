@@ -90,7 +90,7 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 					variant={variant}
 					isActive={!!option.active}
 					key={index}
-					data-testid={`dropdown__option--${key ? key + '-' : ""}${index}`}
+					data-testid={`dropdown__option--${key ? key + "-" : ""}${index}`}
 					onClick={(event) => onSelectItem(event, option)}
 					tabIndex={option.disableFocus ? -1 : 0}
 					onKeyDown={(event) => {
