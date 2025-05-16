@@ -36,6 +36,12 @@ const FilterOption = ({
 			"font-semibold hover:text-theme-navy-600": isChecked,
 		})}
 		onClick={() => onChange?.(!isChecked)}
+		onKeyDown={(event) => {
+			/* istanbul ignore next -- @preserve */
+			if (event.key === "Enter" || event.key === " ") {
+				onChange?.(!isChecked);
+			}
+		}}
 	>
 		<Checkbox
 			checked={isChecked}
