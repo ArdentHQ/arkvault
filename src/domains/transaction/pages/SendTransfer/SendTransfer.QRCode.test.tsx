@@ -6,7 +6,6 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { renderHook } from "@testing-library/react";
 import { Trans, useTranslation } from "react-i18next";
-
 import { within } from "@testing-library/react";
 import { SendTransfer } from "./SendTransfer";
 import {
@@ -82,7 +81,7 @@ describe("SendTransfer QRModal", () => {
 		vi.restoreAllMocks();
 	});
 
-	it.only("should read QR and apply transaction parameters", async () => {
+	it("should read QR and apply transaction parameters", async () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = vi.spyOn(toasts, "success");
@@ -175,9 +174,8 @@ describe("SendTransfer QRModal", () => {
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
 				<Trans
-					i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
+					i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS_OR_NETWORK_MISMATCH"
 					parent={expect.anything()}
-					values={{ coin: "ARK" }}
 				/>,
 			),
 		);
@@ -278,7 +276,7 @@ describe("SendTransfer QRModal", () => {
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
 		// upload QR image
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		// ensure overwrite modal is visible
 		await expect(screen.findByTestId("TransferOverwriteModal")).resolves.toBeInTheDocument();
@@ -297,7 +295,6 @@ describe("SendTransfer QRModal", () => {
 		expect(within(amountContainer).getByTestId("OverwriteDetail__Current")).toHaveTextContent("N/A");
 		expect(within(amountContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("10");
 
-		// confirm the Overwrite modal
 		await userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
 
 		await expectSuccessToast(toastSpy);
@@ -402,13 +399,13 @@ describe("SendTransfer QRModal", () => {
 		});
 
 		// open up a QR scan modal
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
+		await userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		// ensure scan modal is visible
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 
 		// upload QR image
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		// ensure overwrite modal is not visible
 		expect(screen.queryByTestId("TransferOverwriteModal")).not.toBeInTheDocument();
