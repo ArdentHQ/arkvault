@@ -52,7 +52,6 @@ export interface NetworkManifestTransactions {
 	utxo?: boolean;
 	multiPaymentRecipients?: number;
 	lockedBalance?: boolean;
-	defaultFees: Record<TransactionType, { min: string; max: string; avg: string }>;
 }
 
 export interface NetworkManifestFeatureFlags {
