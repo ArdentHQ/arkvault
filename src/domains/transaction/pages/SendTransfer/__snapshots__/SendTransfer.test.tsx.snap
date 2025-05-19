@@ -1356,7 +1356,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     <div
                                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      04.03.2025 8:08 AM
+                                      04.03.2025 2:08 PM
                                     </div>
                                   </div>
                                   <div
@@ -6070,7 +6070,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     <div
                                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      04.03.2025 8:08 AM
+                                      04.03.2025 2:08 PM
                                     </div>
                                   </div>
                                   <div
@@ -7652,7 +7652,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     <div
                                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      04.03.2025 8:08 AM
+                                      04.03.2025 2:08 PM
                                     </div>
                                   </div>
                                   <div
@@ -9234,7 +9234,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     <div
                                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      04.03.2025 8:08 AM
+                                      04.03.2025 2:08 PM
                                     </div>
                                   </div>
                                   <div
@@ -10692,7 +10692,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     <div
                                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      04.03.2025 8:08 AM
+                                      04.03.2025 2:08 PM
                                     </div>
                                   </div>
                                   <div
@@ -12150,7 +12150,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     <div
                                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      04.03.2025 8:08 AM
+                                      04.03.2025 2:08 PM
                                     </div>
                                   </div>
                                   <div
