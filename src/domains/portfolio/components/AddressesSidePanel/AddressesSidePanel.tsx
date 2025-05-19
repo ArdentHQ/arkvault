@@ -308,7 +308,7 @@ export const AddressesSidePanel = ({
 			>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
-						<Tab tabId={option.value} key={option.value}>
+						<Tab tabId={option.value} key={option.value} className="px-2.5 sm:px-3">
 							<span>{option.label}</span>
 						</Tab>
 					))}
