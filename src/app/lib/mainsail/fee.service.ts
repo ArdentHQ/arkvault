@@ -25,8 +25,7 @@ export class FeeService {
 
 	public async all(): Promise<Services.TransactionFees> {
 		const node = await this.#client.node().fees();
-		const dynamicFees: Fees = node.data.evmCall;
-		const fees = this.#transform(dynamicFees);
+		const fees = this.#transform(node.data.evmCall);
 
 		return {
 			validatorRegistration: fees,
@@ -47,13 +46,11 @@ export class FeeService {
 		return BigNumber.ZERO;
 	}
 
-	#transform(dynamicFees: Fees): Services.TransactionFee {
+	#transform(fees: Fees): Services.TransactionFee {
 		return {
-			avg: formatUnits(dynamicFees.avg ?? "0", "gwei"),
-			isDynamic: true,
-			max: formatUnits(dynamicFees.max ?? "0", "gwei"),
-			min: formatUnits(dynamicFees.min ?? "0", "gwei"),
-			static: BigNumber.make("0"),
+			avg: formatUnits(fees.avg ?? "0", "gwei"),
+			max: formatUnits(fees.max ?? "0", "gwei"),
+			min: formatUnits(fees.min ?? "0", "gwei"),
 		};
 	}
 }

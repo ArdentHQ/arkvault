@@ -49,11 +49,9 @@ export type NavbarVariant = "full" | "logo-only";
 export type Theme = "system" | "dark" | "light";
 
 export interface TransactionFees {
-	static: number;
 	max: number;
 	min: number;
 	avg: number;
-	isDynamic?: boolean;
 }
 export type ResponsiveButtonVariantStyles = {
 	[key in LayoutBreakpoint]?: string;
