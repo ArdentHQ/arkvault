@@ -123,9 +123,7 @@ describe("useWalletImport", () => {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
-		await expect(
-			current.importWallet({ network, type: "unknown", value: "value" }),
-		).rejects.toThrow();
+		await expect(current.importWallet({ network, type: "unknown", value: "value" })).rejects.toThrow();
 	});
 
 	it("should set imported wallet as the only selected wallet when view preference is set to single", async () => {
