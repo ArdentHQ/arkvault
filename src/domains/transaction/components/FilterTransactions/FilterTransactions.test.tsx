@@ -143,6 +143,43 @@ describe("FilterTransactions", () => {
 		);
 	});
 
+	it("should toggle filter option with keyboard", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		options.at(1).focus();
+		await userEvent.keyboard("{enter}");
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			["transfer"],
+		);
+
+		onSelect.mockClear();
+
+		options.at(1).focus();
+		await userEvent.keyboard("{Spacebar}");
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: "",
+				value: "",
+			},
+			undefined,
+			["transfer"],
+		);
+	});
+
 	it("should select multiPayment type", async () => {
 		const onSelect = vi.fn();
 		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
