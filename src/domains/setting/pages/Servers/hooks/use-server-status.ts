@@ -34,7 +34,12 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 	const syncPublicApiStatus = useCallback(async () => {
 		setPublicApiStatus(undefined);
 
-		const isOnline = await pingServerAddress(network.publicApiEndpoint, "full");
+		let isOnline: boolean;
+		try {
+			isOnline = await pingServerAddress(network.publicApiEndpoint, "full");
+		} catch {
+			isOnline = false;
+		}
 
 		setPublicApiStatus(isOnline);
 
@@ -51,17 +56,26 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 	const syncTxApiStatus = useCallback(async () => {
 		setTxApiStatus(undefined);
 
-		const isOnline = await pingTransactionApi(network.transactionApiEndpoint, new AbortController());
+		let isOnline: boolean;
+		try {
+			isOnline = await pingTransactionApi(network.transactionApiEndpoint, new AbortController());
+		} catch {
+			isOnline = false;
+		}
 
 		setTxApiStatus(isOnline);
-
 		updateConfiguration("transactionApi", network.transactionApiEndpoint, isOnline);
 	}, [profile, network]);
 
 	const syncEvmApiStatus = useCallback(async () => {
 		setEvmApiStatus(undefined);
 
-		const isOnline = await pingEvmApi(network.evmApiEndpoint, new AbortController());
+		let isOnline: boolean;
+		try {
+			isOnline = await pingEvmApi(network.evmApiEndpoint, new AbortController());
+		} catch {
+			isOnline = false;
+		}
 
 		setEvmApiStatus(isOnline);
 

@@ -5,9 +5,8 @@ import { DeepMap, FieldError } from "react-hook-form";
 import { CustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { useTranslation } from "react-i18next";
 
-export async function pingTransactionApi(endpoint: string, controller: AbortController): Promise<boolean> {
-	const { signal } = controller;
-	const client = new Http.HttpClient(0).withOptions({ signal });
+export async function pingTransactionApi(endpoint: string, controller?: AbortController): Promise<boolean> {
+	const client = new Http.HttpClient(0).withOptions({ signal: controller?.signal });
 
 	const response = await client.get(`${endpoint}/configuration`);
 
@@ -16,9 +15,8 @@ export async function pingTransactionApi(endpoint: string, controller: AbortCont
 	return !!body.data.height;
 }
 
-export async function pingEvmApi(endpoint: string, controller: AbortController): Promise<boolean> {
-	const { signal } = controller;
-	const client = new Http.HttpClient(0).withOptions({ signal });
+export async function pingEvmApi(endpoint: string, controller?: AbortController): Promise<boolean> {
+	const client = new Http.HttpClient(0).withOptions({ signal: controller?.signal });
 
 	const response = await client.post(endpoint, {
 		id: 1,
