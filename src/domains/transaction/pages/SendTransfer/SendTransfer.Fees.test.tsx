@@ -69,10 +69,6 @@ describe("SendTransfer Fee Handling", () => {
 		});
 		profile.wallets().push(arkMainnetWallet);
 
-		// server.use(
-		// 	// requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
-		// 	requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
-		// );
 		await syncFees(profile);
 	});
 
