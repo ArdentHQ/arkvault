@@ -24,6 +24,10 @@ describe("TransactionSuccessful", () => {
 				"https://dwallets-evm.mainsailhq.com/api/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
 				transactionsFixture,
 			),
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/api/blocks/*",
+				{ data: {} }, // Basic mock for block data
+			),
 		);
 	});
 
