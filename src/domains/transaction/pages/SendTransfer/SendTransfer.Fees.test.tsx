@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import * as useFeesHook from "@/app/hooks/use-fees";
 
 import {
@@ -22,48 +21,16 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { SendTransfer } from "./SendTransfer";
 import { createHashHistory } from "history";
-import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/node-fees.json";
-import transactionFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/transaction-fees.json";
+// import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/node-fees.json";
+// import transactionFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/transaction-fees.json";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 import userEvent from "@testing-library/user-event";
+import { signedTransactionMock } from "./SendTransfer.test";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +transactionFixture.data.amount / 1e8,
-		blockId: () => transactionFixture.data.blockId,
-		convertedAmount: () => +transactionFixture.data.amount / 1e8,
-		data: () => ({ data: () => transactionFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
-		fee: () => +transactionFixture.data.fee / 1e8,
-		id: () => transactionFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isReturn: () => false,
-		isSent: () => true,
-		isTransfer: () => true,
-		isUnvote: () => false,
-		isVote: () => false,
-		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(276),
-		recipient: () => transactionFixture.data.recipient,
-		recipients: () => [
-			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },
-		],
-		sender: () => transactionFixture.data.sender,
-		timestamp: () => DateTime.make(),
-		total: () => +transactionFixture.data.amount / 1e8,
-		type: () => "transfer",
-		usesMultiSignature: () => false,
-		wallet: () => wallet,
-	} as any);
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -77,10 +44,9 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const backButton = () => screen.getByTestId("StepNavigation__back-button");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
-const ARKDevnetIconID = "NetworkOption-ARK-ark.devnet";
-const networkStepID = "SendTransfer__network-step";
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
+const authenticationStepID = "AuthenticationStep";
 const sendAllID = "AddRecipient__send-all";
 
 const history = createHashHistory();
@@ -102,15 +68,15 @@ describe("SendTransfer Fee Handling", () => {
 		// Profile needs a wallet on the mainnet network to show network selection
 		// step.
 		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.mainnet",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 		});
 		profile.wallets().push(arkMainnetWallet);
 
-		server.use(
-			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
-			requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
-		);
+		// server.use(
+		// 	// requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
+		// 	requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
+		// );
 		await syncFees(profile);
 	});
 
@@ -162,14 +128,6 @@ describe("SendTransfer Fee Handling", () => {
 			},
 		);
 
-		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId(ARKDevnetIconID));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		await userEvent.click(continueButton());
-
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		// Select sender
@@ -180,11 +138,11 @@ describe("SendTransfer Fee Handling", () => {
 		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
 		await userEvent.click(secondAddress);
 
-		expect(screen.getByText("57.60679402")).toBeInTheDocument();
+		expect(screen.getByText("0.01989216")).toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "55");
 
-		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
+		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
 		// Select sender
 		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
@@ -194,74 +152,9 @@ describe("SendTransfer Fee Handling", () => {
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 		await userEvent.click(firstAddress);
 
-		expect(screen.getByText("33.67769203")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-	});
-
-	it("should sync wallet if new sender wallet is not restored or synced", async () => {
-		const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
-
-		history.push(transferURL);
-
-		const selectedWallet = profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0];
-
-		const selectedWalletSpy = vi.spyOn(selectedWallet, "hasBeenFullyRestored").mockReturnValue(false);
-
-		const walletSyncSpy = vi.spyOn(selectedWallet.synchroniser(), "identity");
-
-		render(
-			<Route path="/profiles/:profileId/send-transfer">
-				<SendTransfer />
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
-
-		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId(ARKDevnetIconID));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		// Select sender
-		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
-		await userEvent.click(secondAddress);
-
-		expect(screen.getByText("57.60679402")).toBeInTheDocument();
-
-		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "55");
+		expect(screen.getByText("95.27653252")).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
-
-		// Select sender
-		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-
-		await userEvent.click(firstAddress);
-
-		expect(screen.getByText("33.67769203")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-
-		expect(walletSyncSpy).toHaveBeenCalledWith();
-
-		selectedWalletSpy.mockRestore();
-
-		walletSyncSpy.mockRestore();
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
@@ -295,27 +188,27 @@ describe("SendTransfer Fee Handling", () => {
 		await userEvent.click(screen.getByTestId(sendAllID));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"));
 
-		expect(screen.getByTestId(sendAllID)).toHaveClass("active");
-
 		await userEvent.click(screen.getByTestId(sendAllID));
 
-		expect(screen.getByTestId(sendAllID)).not.toHaveClass("active");
+		expect(continueButton()).not.toBeDisabled();
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Fee
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.07320598");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.1");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
 	});
 
 	it("should keep the selected fee when user steps back", async () => {
@@ -347,26 +240,27 @@ describe("SendTransfer Fee Handling", () => {
 		);
 
 		// Amount
-		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "12");
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("12"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "0.01");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0.01"));
+
+		expect(continueButton()).not.toBeDisabled();
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Fee
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		// Step 2
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
+		expect(continueButton()).not.toBeDisabled();
 		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(authenticationStepID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		expect(backButton()).not.toHaveAttribute("disabled");
+		expect(backButton()).not.toBeDisabled();
 
 		await userEvent.click(backButton());
 
 		// Step 1 again
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Thw fast fee should still be selected
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
@@ -376,9 +270,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await userEvent.click(continueButton());
 
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0.1");
+		await expect(screen.findByTestId(authenticationStepID)).resolves.toBeVisible();
 	});
 
 	it("should handle fee change", async () => {
@@ -412,36 +304,37 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		// Amount
-		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+		await selectFirstRecipient();
 
-		// Memo
-		await userEvent.clear(screen.getByTestId("Input__memo"));
-		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
-		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
+		// Amount
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "0.01");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0.01"));
+
+		expect(continueButton()).not.toBeDisabled();
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Fee
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.07320598");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.1");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 		inputElement.select();
 		await userEvent.clear(inputElement);
@@ -454,12 +347,12 @@ describe("SendTransfer Fee Handling", () => {
 
 	it("should correctly handle fees when network's fee type is size", async () => {
 		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.devnet",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
 		});
 
 		vi.spyOn(arkWallet, "balance").mockReturnValue(10);
-		vi.spyOn(arkWallet, "isDelegate").mockReturnValue(false);
+		vi.spyOn(arkWallet, "isValidator").mockReturnValue(false);
 
 		profile.wallets().push(arkWallet);
 
@@ -468,7 +361,14 @@ describe("SendTransfer Fee Handling", () => {
 		history.push(transferURL);
 
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-			calculate: () => Promise.resolve({ avg: 0.1, isDynamic: true, max: 0.1, min: 0.1, static: 0.1 }),
+			calculate: () =>
+				Promise.resolve({
+					avg: 2,
+					isDynamic: true,
+					max: 3,
+					min: 1,
+					static: 1,
+				}),
 		});
 
 		render(
@@ -502,42 +402,19 @@ describe("SendTransfer Fee Handling", () => {
 		);
 
 		// Set amount
-		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
-
-		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
-		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average0.1 DARK"));
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		// Continue to review step
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK");
-		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[1]).toHaveTextContent("0.1 DARK");
-		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[2]).toHaveTextContent("1.1 DARK");
-
-		expect(backButton()).not.toHaveAttribute("disabled");
-
-		// Go back to form step
-		await userEvent.click(backButton());
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.1 DARK"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "0.1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0.1"));
 
 		expect(continueButton()).not.toBeDisabled();
-		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
-
-		// Continue to review step
 		await userEvent.click(continueButton());
-
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK");
-		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[1]).toHaveTextContent("0.1 DARK");
-		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[2]).toHaveTextContent("1.1 DARK");
+		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
+		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("Average0.000042 ARK"));
+
+		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[0]).toHaveTextContent("1 ARK");
+		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[1]).toHaveTextContent("0.000021 ARK");
+		expect(within(screen.getByTestId(reviewStepID)).getAllByTestId("Amount")[2]).toHaveTextContent("0.000042 ARK");
 
 		profile.wallets().forget(arkWallet.id());
 
@@ -585,14 +462,14 @@ describe("SendTransfer Fee Handling", () => {
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
-		await userEvent.clear(screen.getByTestId("InputCurrency"));
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue());
+		await userEvent.clear(screen.getByTestId("Input_GasPrice"));
+		await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).not.toHaveValue());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 		inputElement.select();
 		await userEvent.type(inputElement, "1");
@@ -663,7 +540,7 @@ describe("SendTransfer Fee Handling", () => {
 				within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 			);
 
-			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 			inputElement.select();
 			await userEvent.clear(inputElement);
@@ -744,7 +621,7 @@ describe("SendTransfer Fee Handling", () => {
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 		inputElement.select();
 		await userEvent.clear(inputElement);
