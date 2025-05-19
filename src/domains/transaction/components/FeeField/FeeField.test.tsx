@@ -4,8 +4,6 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { FormProvider, useForm } from "react-hook-form";
 import * as useFeesHook from "@/app/hooks/use-fees";
-import { translations } from "@/domains/transaction/i18n";
-import { BigNumber } from "@/app/lib/helpers";
 import { useValidation } from "@/app/hooks";
 import { FeeField, GasLimit, MIN_GAS_PRICE } from "@/domains/transaction/components/FeeField/FeeField";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
