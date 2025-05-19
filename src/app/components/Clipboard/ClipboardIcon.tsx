@@ -37,6 +37,10 @@ export const ClipboardIcon = ({
 					e.stopPropagation();
 					copy(data);
 				}}
+				onKeyPress={(e) => {
+					e.stopPropagation();
+					copy(data);
+				}}
 				data-ring-focus-margin="-m-1"
 			>
 				{children}
