@@ -183,13 +183,4 @@ export interface IWalletFactory {
 	 * @memberof IWalletFactory
 	 */
 	fromSecret(options: ISecretOptions): Promise<IReadWriteWallet>;
-
-	/**
-	 * Imports a wallet from a WIF.
-	 *
-	 * @param {IWifOptions} options
-	 * @return {Promise<IReadWriteWallet>}
-	 * @memberof IWalletFactory
-	 */
-	fromWIF(options: IWifOptions): Promise<IReadWriteWallet>;
 }

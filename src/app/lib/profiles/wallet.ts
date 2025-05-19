@@ -45,8 +45,6 @@ import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
-import { PrivateKeyService } from "@/app/lib/mainsail/private-key.service";
-import { WIFService } from "@/app/lib/mainsail/wif.service";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
@@ -399,21 +397,9 @@ export class Wallet implements IReadWriteWallet {
 		return new AddressService();
 	}
 
-	/** {@inheritDoc IReadWriteWallet.privateKeyService} */
-	public privateKeyService(): Services.PrivateKeyService {
-		return new PrivateKeyService();
-	}
-
 	/** {@inheritDoc IReadWriteWallet.publicKeyService} */
 	public publicKeyService(): PublicKeyService {
 		return new PublicKeyService();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.wifService} */
-	public wifService(): WIFService {
-		return new WIFService({
-			config: this.network().config(),
-		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
@@ -580,11 +566,6 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.actsWithPublicKey} */
 	public actsWithPublicKey(): boolean {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PublicKey;
-	}
-
-	/** {@inheritDoc IReadWriteWallet.actsWithPrivateKey} */
-	public actsWithPrivateKey(): boolean {
-		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PrivateKey;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */

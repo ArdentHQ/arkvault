@@ -11,11 +11,8 @@ export enum OptionsValue {
 	BIP44 = "bip44",
 	BIP49 = "bip49",
 	BIP84 = "bip84",
-	ENCRYPTED_WIF = "encryptedWif",
-	PRIVATE_KEY = "privateKey",
 	PUBLIC_KEY = "publicKey",
 	SECRET = "secret",
-	WIF = "wif",
 }
 
 export interface ImportOption {
@@ -31,14 +28,6 @@ interface ImportOptions {
 	defaultOption: ImportOption;
 	options: ImportOption[];
 }
-
-const convertMethodName = (methodName: string) => {
-	if (methodName === "bip38") {
-		return OptionsValue.ENCRYPTED_WIF;
-	}
-
-	return methodName;
-};
 
 export const useImportOptions = (methods: Networks.NetworkManifestImportMethods): ImportOptions => {
 	const { t } = useTranslation();
@@ -94,18 +83,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 				label: t("COMMON.PUBLIC_KEY"),
 				value: OptionsValue.PUBLIC_KEY,
 			},
-			{
-				label: t("COMMON.PRIVATE_KEY"),
-				value: OptionsValue.PRIVATE_KEY,
-			},
-			{
-				label: t("COMMON.WIF"),
-				value: OptionsValue.WIF,
-			},
-			{
-				label: t("COMMON.ENCRYPTED_WIF"),
-				value: OptionsValue.ENCRYPTED_WIF,
-			},
 		];
 
 		let defaultOption: ImportOption | undefined;
@@ -121,9 +98,7 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 		];
 
 		for (const option of allOptions) {
-			const methodName = Object.keys(methods).find(
-				(methodName) => convertMethodName(methodName) === option.value,
-			);
+			const methodName = Object.keys(methods).find((methodName) => methodName === option.value);
 
 			if (!methodName) {
 				continue;

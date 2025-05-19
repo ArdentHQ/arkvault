@@ -266,8 +266,6 @@ export const SendVote = () => {
 			senderAddress,
 			secondMnemonic,
 			encryptionPassword,
-			wif,
-			privateKey,
 			secret,
 			secondSecret,
 			gasPrice,
@@ -282,11 +280,9 @@ export const SendVote = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
-				wif,
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {

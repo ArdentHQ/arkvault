@@ -6,8 +6,6 @@ export interface SignatoryInput {
 	secondMnemonic?: string;
 	secret?: string;
 	secondSecret?: string;
-	wif?: string;
-	privateKey?: string;
 }
 
 export interface ISignatoryFactory {
