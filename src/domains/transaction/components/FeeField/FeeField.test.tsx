@@ -52,8 +52,6 @@ describe("FeeField", () => {
 
 	describe("when network's fee type is size", () => {
 		it("should override fee when it is lower than the minimum fees", async () => {
-			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
-
 			let useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 				calculate: () => Promise.resolve({ avg: 3, isDynamic: true, max: 5, min: 1, static: 3 }),
 			});
@@ -96,14 +94,12 @@ describe("FeeField", () => {
 
 			await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("3"), { timeout: 4000 });
 
-			feeTypeSpy.mockRestore();
 			useFeesSpy.mockRestore();
 		});
 
 		it.each(["transfer", "multiPayment", "vote", "validatorRegistration"])(
 			"should use env transaction fee when %s data is undefined",
 			async (transactionType) => {
-				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValue("size");
 
 				const envFeesSpy = vi.spyOn(env.fees(), "findByType").mockReturnValue({
 					avg: BigNumber.make(3),
@@ -123,7 +119,6 @@ describe("FeeField", () => {
 				expect(amounts[1]).toHaveTextContent(calculateGasFee(3, GasLimit[transactionType]) + " ARK");
 				expect(amounts[2]).toHaveTextContent(calculateGasFee(4, GasLimit[transactionType]) + " ARK");
 
-				feeTypeSpy.mockRestore();
 				envFeesSpy.mockRestore();
 			},
 		);
@@ -131,7 +126,6 @@ describe("FeeField", () => {
 		it.each(["transfer", "multiPayment", "vote", "validatorRegistration"])(
 			"should show 0 fee when %s data is not available yet",
 			async (transactionType) => {
-				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
 				render(<Component type={transactionType} network={networks} data={{}} />);
 
@@ -141,12 +135,10 @@ describe("FeeField", () => {
 				expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("0 ARK");
 				expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0 ARK");
 
-				feeTypeSpy.mockRestore();
 			},
 		);
 
 		it("should recalculate fees on data changes", async () => {
-			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 			const calculate = vi.fn().mockResolvedValue({ avg: 2, isDynamic: false, max: 2, min: 2, static: 2 });
 			const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
 
@@ -162,7 +154,6 @@ describe("FeeField", () => {
 
 			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("2 ARK"));
 
-			feeTypeSpy.mockRestore();
 			calculate.mockRestore();
 			useFeesMock.mockRestore();
 		});
