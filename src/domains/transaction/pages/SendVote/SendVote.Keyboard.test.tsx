@@ -89,6 +89,7 @@ describe("SendVote", () => {
 				"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
 				transactionFixture,
 			),
+			requestMock("https://dwallets-evm.mainsailhq.com/api/blocks/*", { data: {} }),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
