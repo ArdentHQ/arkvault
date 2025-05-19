@@ -3,11 +3,9 @@ import { BigNumber } from "@/app/lib/helpers";
 import { SignedTransactionData } from "./dto";
 
 export interface TransactionFee {
-	static: BigNumber;
 	max: BigNumber;
 	min: BigNumber;
 	avg: BigNumber;
-	isDynamic?: boolean;
 }
 
 export interface TransactionFees {

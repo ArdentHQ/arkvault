@@ -24,7 +24,7 @@ import {
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;
 
-const fees = { avg: 1.354, isDynamic: true, max: 10, min: 0, static: 0 };
+const fees = { avg: 1.354, max: 10, min: 0 };
 
 const renderComponent = (properties?: any) => {
 	let form: UseFormMethods | undefined;
