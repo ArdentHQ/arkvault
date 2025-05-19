@@ -14,15 +14,11 @@ import {
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
-import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
-import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendTransfer } from "./SendTransfer";
 import { createHashHistory } from "history";
-// import nodeFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/node-fees.json";
-// import transactionFeesFixture from "@/tests/fixtures/coins/mainsail/mainnet/transaction-fees.json";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
