@@ -116,8 +116,12 @@ describe("SendValidatorResignation", () => {
 
 			server.use(
 				requestMock(
-					"https://dwallets-evm.mainsailhq.com/api/transactions/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
+					"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
 					transactionFixture,
+				),
+				requestMock(
+					"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
+					{ data: {} }, // Basic mock for block data
 				),
 			);
 		});
