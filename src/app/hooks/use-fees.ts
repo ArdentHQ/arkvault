@@ -65,14 +65,12 @@ export const useFees = (profile: Contracts.IProfile) => {
 					avg: avg.toHuman(),
 					max: max.toHuman(),
 					min: min.toHuman(),
-					static: min.toHuman(),
 				};
 			} catch {
 				return {
 					avg: 0,
 					max: 0,
 					min: 0,
-					static: 0,
 				};
 			}
 		},
@@ -83,26 +81,21 @@ export const useFees = (profile: Contracts.IProfile) => {
 		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {
 			let transactionFees: Services.TransactionFee;
 
-			const activeNetwork = profile.activeNetwork();
-
 			await env.fees().sync(profile);
 			transactionFees = env.fees().findByType(network, type);
 
-			if (!!data && (activeNetwork.feeType() === "size" || type === "multiSignature")) {
+			if (!!data && type === "multiSignature") {
 				const feesBySize = await calculateBySize({ data, type });
 
 				return {
 					...feesBySize,
-					isDynamic: transactionFees.isDynamic,
 				};
 			}
 
 			return {
 				avg: transactionFees.avg.toNumber(),
-				isDynamic: transactionFees.isDynamic,
 				max: transactionFees.max.toNumber(),
 				min: transactionFees.min.toNumber(),
-				static: transactionFees.static.toNumber(),
 			};
 		},
 		[profile, calculateBySize, env],
