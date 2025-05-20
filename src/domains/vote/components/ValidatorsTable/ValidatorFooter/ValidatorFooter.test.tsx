@@ -25,7 +25,7 @@ describe("ValidatorFooter", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
+			isValidator: true,
 			isResignedDelegate: false,
 			publicKey: data[0].publicKey,
 			username: data[0].username,

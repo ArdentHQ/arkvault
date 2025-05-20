@@ -201,40 +201,12 @@ export const AuthenticationStep = ({
 	const requireMnemonic = wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey();
 	const requireEncryptionPassword =
 		wallet.actsWithMnemonicWithEncryption() ||
-		wallet.actsWithWifWithEncryption() ||
 		wallet.actsWithSecretWithEncryption();
 
 	const isTransaction = subject === "transaction";
 
 	return (
 		<div data-testid="AuthenticationStep" className="space-y-4">
-			{wallet.actsWithWif() && (
-				<>
-					{!noHeading && (
-						<StepHeader
-							titleIcon={
-								<Icon
-									name="Mnemonic"
-									data-testid="icon-mnemonic"
-									className="text-theme-primary-600"
-									dimensions={[24, 24]}
-								/>
-							}
-							title={title}
-							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")}
-						/>
-					)}
-
-					<FormField name="wif">
-						<FormLabel>{t("COMMON.WIF")}</FormLabel>
-						<InputPassword
-							data-testid="AuthenticationStep__wif"
-							ref={register(authentication.wif(wallet))}
-						/>
-					</FormField>
-				</>
-			)}
-
 			{wallet.actsWithSecret() && (
 				<>
 					{!noHeading && (

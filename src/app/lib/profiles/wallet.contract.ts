@@ -267,16 +267,6 @@ export interface IReadWriteWallet {
 	validatorPublicKey(): string | undefined;
 
 	/**
-	 * Determine if the wallet is a delegate.
-	 *
-	 * @deprecated
-	 *
-	 * @return {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	isDelegate(): boolean;
-
-	/**
 	 * Determine if the wallet is a resigned delegate.
 	 *
 	 * @deprecated
@@ -380,14 +370,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	toggleStarred(): void;
-
-	/**
-	 * Get the coin ID.
-	 *
-	 * @return {string}
-	 * @memberof IReadWriteWallet
-	 */
-	coinId(): string;
 
 	/**
 	 * Get the network ID.
@@ -673,22 +655,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	actsWithMnemonicWithEncryption(): boolean;
-
-	/**
-	 * Determines if the wallet has been imported with a wif.
-	 *
-	 * @return {*}  {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	actsWithWif(): boolean;
-
-	/**
-	 * Determines if the wallet has been imported with a wif with encryption.
-	 *
-	 * @return {*}  {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	actsWithWifWithEncryption(): boolean;
 
 	/**
 	 * Determines if the wallet has been imported with a secret.

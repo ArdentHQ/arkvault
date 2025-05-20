@@ -16,7 +16,7 @@ describe("VoteList", () => {
 					address: data[index].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
+					isValidator: true,
 					isResignedDelegate: false,
 					publicKey: data[index].publicKey,
 					username: data[index].username,
