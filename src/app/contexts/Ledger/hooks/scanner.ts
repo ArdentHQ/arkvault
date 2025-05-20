@@ -7,6 +7,7 @@ import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { WalletFactory } from "@/app/lib/profiles/wallet.factory";
 
 export const useLedgerScanner = (coin: string, network: string) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
@@ -67,11 +68,14 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		for (const [path, data] of Object.entries(allWallets)) {
 			const address = data.address();
 
+			const wallet = await profile.walletFactory().fromAddress({ address })
+			await wallet.synchroniser().identity();
+
 			/* istanbul ignore next -- @preserve */
 			if (!profile.wallets().findByAddressWithNetwork(address, network)) {
 				ledgerData.push({
 					address,
-					balance: data.balance().available.toHuman(),
+					balance: wallet.balance(),
 					path,
 				});
 			}
