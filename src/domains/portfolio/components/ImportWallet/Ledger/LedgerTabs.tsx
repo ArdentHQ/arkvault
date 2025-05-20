@@ -70,10 +70,10 @@ export const LedgerTabs = ({
 					),
 				);
 
-				await setSelectedAddresses(
-					[...selectedAddresses, ...importedWallets.map((wallet) => wallet.address())],
-					network,
-				);
+				await setSelectedAddresses([
+					...selectedAddresses,
+					...importedWallets.map((wallet) => wallet.address()),
+				]);
 			}
 		},
 		[activeProfile, activeNetwork, selectedAddresses, listenDevice],
@@ -180,14 +180,11 @@ export const LedgerTabs = ({
 
 				{[LedgerTabStep.LedgerScanStep, LedgerTabStep.LedgerImportStep].includes(activeTab) && (
 					<ImportActionToolbar
-						activeTab={activeTab - 2}
-						showSteps
 						showButtons={activeTab !== LedgerTabStep.LedgerImportStep}
 						onBack={handleBack}
 						isContinueDisabled={isNextDisabled || isSubmitting}
 						isLoading={isSubmitting}
 						onContinue={handleNext}
-						allSteps={["1", "2"]}
 						isSubmitDisabled={isSubmitting}
 						showPortfoliobutton={activeTab === LedgerTabStep.LedgerImportStep}
 						onSubmit={onSubmit}

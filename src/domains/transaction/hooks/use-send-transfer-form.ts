@@ -1,4 +1,4 @@
-import { Networks, Services } from "@/app/lib/sdk";
+import { Networks, Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -79,8 +79,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				recipients,
 				memo,
 				encryptionPassword,
-				wif,
-				privateKey,
 				secret,
 				secondSecret,
 				gasLimit,
@@ -90,15 +88,12 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
-				wif,
 			});
 
-			const data = await buildTransferData({
-				coin: wallet.coin(),
+			const data = buildTransferData({
 				isMultiSignature: false,
 				memo,
 				recipients,

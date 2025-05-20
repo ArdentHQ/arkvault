@@ -1,6 +1,6 @@
 import { explorer, featureFlags, importMethods, transactions } from "./shared";
 
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 const network: Networks.NetworkManifest = {
 	coin: "Mainsail",
@@ -41,7 +41,7 @@ const network: Networks.NetworkManifest = {
 	id: "mainsail.devnet",
 	importMethods,
 	knownWallets:
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extendedon",
+		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 	meta: {
 		chainId: 10_000,
 		// fastDelegateSync: true,

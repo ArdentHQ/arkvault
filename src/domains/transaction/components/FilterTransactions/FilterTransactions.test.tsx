@@ -9,10 +9,11 @@ let profile: Contracts.IProfile;
 
 describe("FilterTransactions", () => {
 	const allTypes = [
-		"delegateRegistration",
-		"delegateResignation",
+		"validatorRegistration",
+		"usernameRegistration",
+		"usernameResignation",
+		"validatorResignation",
 		"multiPayment",
-		"multiSignature",
 		"transfer",
 		"vote",
 	];
@@ -142,6 +143,43 @@ describe("FilterTransactions", () => {
 		);
 	});
 
+	it("should toggle filter option with keyboard", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		options.at(1).focus();
+		await userEvent.keyboard("{enter}");
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			["transfer"],
+		);
+
+		onSelect.mockClear();
+
+		options.at(1).focus();
+		await userEvent.keyboard("{Spacebar}");
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: "",
+				value: "",
+			},
+			undefined,
+			["transfer"],
+		);
+	});
+
 	it("should select multiPayment type", async () => {
 		const onSelect = vi.fn();
 		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
@@ -247,7 +285,7 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["delegateRegistration", "delegateResignation", "multiSignature"],
+			["validatorRegistration", "usernameRegistration", "usernameResignation", "validatorResignation"],
 		);
 	});
 
@@ -258,7 +296,12 @@ describe("FilterTransactions", () => {
 			<FilterTransactions
 				wallets={profile.wallets().values()}
 				onSelect={onSelect}
-				selectedTransactionTypes={["delegateRegistration", "delegateResignation", "multiSignature"]}
+				selectedTransactionTypes={[
+					"validatorRegistration",
+					"usernameRegistration",
+					"usernameResignation",
+					"validatorResignation",
+				]}
 			/>,
 		);
 

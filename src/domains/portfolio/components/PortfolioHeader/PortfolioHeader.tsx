@@ -73,12 +73,12 @@ export const PortfolioHeader = ({
 	const { persist } = useEnvironmentContext();
 
 	const [showHint, setShowHint] = useState<boolean>(false);
-	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("multiple-addresses-hint", undefined);
+	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
 
-		if (hasFocus && hintHasShown === undefined && selectedWallets.length > 1) {
+		if (hasFocus && hintHasShown === undefined && allWallets.length > 1 && mode === "single") {
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -87,13 +87,13 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, selectedWallets.length]);
+	}, [hasFocus, hintHasShown, mode, allWallets.length]);
 
 	const onDeleteAddress = async (address: string) => {
 		for (const wallet of profile.wallets().values()) {
 			if (address === wallet.address()) {
 				profile.wallets().forget(wallet.id());
-				await removeSelectedAddresses([wallet.address()], wallet.network());
+				await removeSelectedAddresses([wallet.address()]);
 				profile.notifications().transactions().forgetByRecipient(wallet.address());
 			}
 		}
@@ -116,8 +116,8 @@ export const PortfolioHeader = ({
 						interactive={true}
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
-								<div className="mb-2 block sm:mb-0 sm:inline">
-									<Trans i18nKey="WALLETS.MULTIPLE_ADDRESSES_HINT" />
+								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
 									size="xs"
@@ -211,7 +211,7 @@ export const PortfolioHeader = ({
 										<WalletIcons
 											wallet={wallet}
 											exclude={["isKnown", "isStarred", "isTestNetwork"]}
-											iconColor="text-theme-secondary-300 dark:text-theme-dark-700 !p-0"
+											iconColor="text-theme-secondary-500 dark:text-theme-dark-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 !p-0"
 										/>
 									</div>
 								</div>

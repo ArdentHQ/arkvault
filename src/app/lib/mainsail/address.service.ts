@@ -1,8 +1,12 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { Address, PrivateKey, PublicKey } from "@arkecosystem/typescript-crypto";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
+import { abort_if, abort_unless } from "@/app/lib/helpers";
 
 export class AddressService {
 	public fromMnemonic(mnemonic: string): Services.AddressDataTransferObject {
+		abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
+
 		return {
 			address: Address.fromPassphrase(mnemonic),
 			type: "bip39",
@@ -24,6 +28,8 @@ export class AddressService {
 	}
 
 	public fromSecret(secret: string): Services.AddressDataTransferObject {
+		abort_if(BIP39.compatible(secret), "The given value is BIP39 compliant. Please use [fromMnemonic] instead.");
+
 		const publicKey = PublicKey.fromPassphrase(secret);
 
 		return {

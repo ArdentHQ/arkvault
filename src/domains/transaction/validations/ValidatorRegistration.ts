@@ -1,10 +1,11 @@
-import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { Networks } from "@/app/lib/mainsail";
 import { debounceAsync } from "@/utils/debounce";
 import { ValidateResult } from "react-hook-form";
 
 export const validatorRegistration = (t: any) => ({
-	validatorPublicKey: (wallet: Contracts.IReadWriteWallet) => ({
+	validatorPublicKey: (profile: IProfile, network: Networks.Network) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),
@@ -17,8 +18,8 @@ export const validatorRegistration = (t: any) => ({
 		}),
 
 		validate: {
-			pattern: async (publicKey: string) => {
-				const isValid = await wallet.coin().publicKey().verifyPublicKeyWithBLS(publicKey);
+			pattern: (publicKey: string) => {
+				const isValid = new PublicKeyService().verifyPublicKeyWithBLS(publicKey);
 
 				if (!isValid) {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.INVALID_BLS_PUBLIC_KEY");
@@ -28,7 +29,7 @@ export const validatorRegistration = (t: any) => ({
 			},
 			unique: debounceAsync(async (publicKey: string) => {
 				try {
-					await publicKeyExists(wallet.network(), publicKey);
+					await publicKeyExists(network, profile, publicKey);
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
@@ -37,21 +38,21 @@ export const validatorRegistration = (t: any) => ({
 	}),
 });
 
-const publicKeyExists = async (network: Networks.Network, publicKey: string) => {
-	const endpoints = {
-		"mainsail.devnet": "https://dwallets-evm.mainsailhq.com/api/wallets/",
-		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
-	};
-
+const publicKeyExists = async (network: Networks.Network, profile: IProfile, publicKey: string) => {
 	if (publicKey.length === 0) {
 		return;
 	}
 
-	const response = await fetch(`${endpoints[network.id()]}?attributes.validatorPublicKey=${publicKey}`);
+	const publicApiEndpoint = network.config().host("full", profile);
+	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
 
-	const data = await response.json();
+	if (response.status !== 404) {
+		const data = await response.json();
 
-	if (data.meta.count > 0) {
-		throw new Error("Public key has been used already!");
+		if (data.meta?.count > 0) {
+			throw new Error("Public key has been used already!");
+		}
 	}
+
+	return true;
 };

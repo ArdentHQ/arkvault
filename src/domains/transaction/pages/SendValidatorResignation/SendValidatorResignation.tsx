@@ -46,7 +46,7 @@ export const SendValidatorResignation = () => {
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 
 	const activeProfile = useActiveProfile();
 
@@ -116,19 +116,17 @@ export const SendValidatorResignation = () => {
 	const handleSubmit = async () => {
 		assertWallet(activeWallet);
 
-		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
+		const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
 
 		try {
-			httpClient.forgetWalletCache(env, activeWallet);
+			httpClient.forgetWalletCache(activeWallet);
 
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
-				wif,
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({

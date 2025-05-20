@@ -68,7 +68,7 @@ export const Dashboard = ({
 				// Sync votes for all selected wallets
 				await Promise.all(
 					selectedWallets.map(async (wallet) => {
-						await env.validators().sync(activeProfile, wallet.coinId(), wallet.networkId());
+						await activeProfile.validators().sync(activeProfile, wallet.networkId());
 						await wallet.synchroniser().votes();
 					}),
 				);

@@ -39,6 +39,7 @@ describe("Add Recipient item", () => {
 				showExchangeAmount={false}
 				index={1}
 				onDelete={() => {}}
+				profile={profile}
 			/>,
 		);
 
@@ -57,6 +58,7 @@ describe("Add Recipient item", () => {
 				showExchangeAmount={true}
 				index={1}
 				onDelete={() => {}}
+				profile={profile}
 			/>,
 		);
 
@@ -77,6 +79,7 @@ describe("Add Recipient item", () => {
 				showExchangeAmount={false}
 				index={1}
 				onDelete={onDelete}
+				profile={profile}
 			/>,
 		);
 

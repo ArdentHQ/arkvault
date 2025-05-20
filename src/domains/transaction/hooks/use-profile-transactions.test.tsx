@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { act as hookAct, renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, syncValidators, waitFor } from "@/utils/testing-library";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -24,12 +23,12 @@ describe("useProfileTransactions", () => {
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const sent = await profile.transactionAggregate().all({ limit: 30 });
+		const sent = await profile.transactionAggregate().all({ limit: 10 });
 		const items = sent.items();
 
 		const mockIsConfirmed = vi.spyOn(items[0], "isConfirmed").mockReturnValue(false);
@@ -64,7 +63,7 @@ describe("useProfileTransactions", () => {
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -87,7 +86,7 @@ describe("useProfileTransactions", () => {
 
 		await hook.waitForNextUpdate();
 
-		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(30));
+		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(10));
 
 		mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -109,7 +108,7 @@ describe("useProfileTransactions", () => {
 				type: "address",
 				value: address,
 			})),
-			limit: 30,
+			limit: 10,
 		});
 
 		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(items.length));
@@ -138,33 +137,33 @@ describe("useProfileTransactions", () => {
 	it("#fetchTransactions", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const {
-			result: { current },
-		} = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), { wrapper });
+		const { result } = renderHook(
+			() => useProfileTransactions({ limit: 10, profile, wallets: profile.wallets().values() }),
+			{
+				wrapper,
+			},
+		);
 
-		const response = await current.fetchTransactions({
-			cursor: 1,
-			flush: true,
-			mode: "all",
-			wallets: profile.wallets().values(),
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "all" });
 		});
-		await waitFor(() => expect(response.items()).toHaveLength(30));
 
-		//@ts-ignore
-		const responseEmpty = await current.fetchTransactions({});
-		await waitFor(() => expect(responseEmpty.hasMorePages()).toBe(false));
-		await waitFor(() => expect(responseEmpty.items()).toHaveLength(0));
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		expect(result.current.transactions).toHaveLength(10);
+
+		expect(result.current.hasMore).toBe(false);
 	});
 
 	it("#updateFilters", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -188,7 +187,7 @@ describe("useProfileTransactions", () => {
 		});
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
-		await waitFor(() => expect(result.current.transactions).toHaveLength(30));
+		await waitFor(() => expect(result.current.transactions).toHaveLength(10));
 
 		const mockEmpty = vi.spyOn(profile.transactionAggregate(), "sent").mockResolvedValue({
 			hasMorePages: () => false,
@@ -208,7 +207,7 @@ describe("useProfileTransactions", () => {
 	it("#fetchMore", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -217,15 +216,17 @@ describe("useProfileTransactions", () => {
 			wrapper,
 		});
 
-		await waitFor(() =>
-			expect(result.current.fetchTransactions({ wallets: profile.wallets().values() })).resolves.toBeTruthy(),
-		);
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 
 		await hookAct(async () => {
 			await result.current.fetchMore();
 		});
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
+		await waitFor(() => expect(result.current.transactions).toHaveLength(20), { timeout: 4000 });
 
 		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
@@ -236,7 +237,7 @@ describe("useProfileTransactions", () => {
 			await result.current.fetchMore();
 		});
 
-		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
+		await waitFor(() => expect(result.current.transactions).toHaveLength(20), { timeout: 4000 });
 
 		mockTransactionsAggregate.mockRestore();
 	});

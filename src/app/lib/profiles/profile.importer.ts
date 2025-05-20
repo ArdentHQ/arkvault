@@ -1,33 +1,31 @@
-import { Coins } from "@/app/lib/sdk";
 import { Base64 } from "@ardenthq/arkvault-crypto";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
-import { IProfile, IProfileData, IProfileImporter, IProfileValidator, WalletData } from "./contracts.js";
+import { IProfile, IProfileData, IProfileImporter, IProfileValidator } from "./contracts.js";
 import { Migrator } from "./migrator.js";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
-
-const isRegistered = (coin: string) => !!container.get<Coins.CoinBundle>(Identifiers.Coins)[coin.toUpperCase()];
+import { Environment } from "./environment.js";
 
 export class ProfileImporter implements IProfileImporter {
 	readonly #profile: IProfile;
 	readonly #validator: IProfileValidator;
+	readonly #env: Environment;
 
-	public constructor(profile: IProfile) {
+	public constructor(profile: IProfile, env: Environment) {
 		this.#profile = profile;
 		this.#validator = new ProfileValidator();
+		this.#env = env;
 	}
 
 	/** {@inheritDoc IProfileImporter.import} */
 	public async import(password?: string): Promise<void> {
 		let data: IProfileData | undefined = await this.#unpack(password);
 
-		if (container.has(Identifiers.MigrationSchemas) && container.has(Identifiers.MigrationVersion)) {
-			await new Migrator(this.#profile, data).migrate(
-				container.get(Identifiers.MigrationSchemas),
-				container.get(Identifiers.MigrationVersion),
-			);
+		const schemas = this.#env.migrationSchemas();
+		const version = this.#env.migrationVersion();
+
+		if (!!schemas && !!version) {
+			await new Migrator(this.#profile, data).migrate(schemas, version);
 		}
 
 		data = this.#validator.validate(data);
@@ -44,13 +42,11 @@ export class ProfileImporter implements IProfileImporter {
 
 		this.#profile.settings().fill(data.settings);
 
-		this.#profile.coins().register();
-
-		await this.#profile.wallets().fill(data.wallets);
+		this.#profile.wallets().fill(data.wallets);
 
 		this.#profile.contacts().fill(data.contacts);
 
-		this.#gatherCoins(data);
+		this.#profile.exchangeRates().restore();
 	}
 
 	/**
@@ -81,21 +77,10 @@ export class ProfileImporter implements IProfileImporter {
 			throw new Error(`Failed to decode or decrypt the profile.${errorReason}`);
 		}
 
-		return data;
-	}
-
-	/**
-	 * Gather all known coins through wallets and contacts.
-	 *
-	 * @private
-	 * @param {IProfileData} data
-	 * @memberof ProfileImporter
-	 */
-	#gatherCoins(data: IProfileData): void {
-		for (const wallet of Object.values(data.wallets)) {
-			if (isRegistered(wallet.data[WalletData.Coin])) {
-				this.#profile.coins().set(wallet.data[WalletData.Coin], wallet.data[WalletData.Network]);
-			}
+		if (!data.data && !password) {
+			throw new Error("PasswordRequired");
 		}
+
+		return data;
 	}
 }

@@ -20,17 +20,8 @@ import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
-import { Header } from "@/app/components/Header";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { StepIndicator } from "@/app/components/StepIndicator";
 import classNames from "classnames";
-
-enum Step {
-	WalletOverviewStep = 1,
-	ConfirmPassphraseStep = 2,
-	EncryptPasswordStep = 3,
-	SuccessStep = 4,
-}
+import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
 
 export const CreateAddressesSidePanel = ({
 	open,
@@ -45,7 +36,7 @@ export const CreateAddressesSidePanel = ({
 	const history = useHistory();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const [activeTab, setActiveTab] = useState<Step>(Step.WalletOverviewStep);
+	const [activeTab, setActiveTab] = useState<CreateStep>(CreateStep.WalletOverviewStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
 
@@ -70,6 +61,7 @@ export const CreateAddressesSidePanel = ({
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 	const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 	const [isScrollable, setIsScrollable] = useState(false);
+	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
 
 	useEffect(() => {
 		if (!open) {
@@ -126,9 +118,7 @@ export const CreateAddressesSidePanel = ({
 		const locale = activeProfile.settings().get<string>(Contracts.ProfileSetting.Bip39Locale, "english");
 
 		return activeProfile.walletFactory().generate({
-			coin: network.coin(),
 			locale,
-			network: network.id(),
 			wordCount: network.wordCount(),
 		});
 	};
@@ -142,14 +132,14 @@ export const CreateAddressesSidePanel = ({
 			setSelectedAddresses([...selectedAddresses, wallet.address()]);
 			setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
 			setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
-			setActiveTab(Step.WalletOverviewStep);
+			setActiveTab(CreateStep.WalletOverviewStep);
 		} catch {
 			setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
 		}
 	};
 
 	const handleBack = () => {
-		if (activeTab === Step.WalletOverviewStep) {
+		if (activeTab === CreateStep.WalletOverviewStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -159,17 +149,17 @@ export const CreateAddressesSidePanel = ({
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
 		let newIndex = activeTab + 1;
 
-		if (newIndex === Step.EncryptPasswordStep && !useEncryption) {
+		if (newIndex === CreateStep.EncryptPasswordStep && !useEncryption) {
 			newIndex = newIndex + 1;
 		}
 
-		if (newIndex === Step.WalletOverviewStep) {
+		if (newIndex === CreateStep.WalletOverviewStep) {
 			void handleGenerateWallet();
 
 			return;
 		}
 
-		if (newIndex === Step.SuccessStep) {
+		if (newIndex === CreateStep.SuccessStep) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
 
 			let wallet = getValues("wallet");
@@ -183,31 +173,27 @@ export const CreateAddressesSidePanel = ({
 
 				try {
 					wallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
-						coin: network.coin(),
 						mnemonic,
-						network: network.id(),
 						password: parameters.encryptionPassword,
 					});
 				} catch {
-					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
-				} finally {
 					setIsGeneratingWallet(false);
+					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
+					return;
 				}
 			}
+
+			setIsGeneratingWallet(false);
 
 			assertWallet(wallet);
 			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			await importWallets({
-				encryptedWif: parameters.encryptionPassword,
-				networks: activeProfile.availableNetworks().filter((network) => network.id() !== wallet.network().id()),
 				type: "bip39",
 				value: mnemonic,
 			});
 
 			setValue("wallet", wallet);
-
-			activeProfile.wallets().push(wallet);
 
 			await persist();
 		}
@@ -258,40 +244,41 @@ export const CreateAddressesSidePanel = ({
 	}, [useEncryption, t]);
 
 	const isNextDisabled = useMemo(() => {
-		if (activeTab === Step.ConfirmPassphraseStep) {
+		if (activeTab === CreateStep.ConfirmPassphraseStep) {
 			return useEncryption && !acceptResponsibility;
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
 	return (
 		<SidePanel
-			header={<StepHeader step={activeTab} />}
+			title={title}
+			subtitle={subtitle}
+			titleIcon={titleIcon}
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
 			scrollRef={scrollContainerRef}
 			onMountChange={onMountChange}
+			hasSteps
+			totalSteps={allSteps.length}
+			activeStep={activeTab}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0">
 				<Tabs activeId={activeTab} className="pb-20">
-					<div className="mb-4 sm:hidden">
-						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-					</div>
-
 					<div>
-						<TabPanel tabId={Step.WalletOverviewStep}>
+						<TabPanel tabId={CreateStep.WalletOverviewStep}>
 							<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
 						</TabPanel>
 
-						<TabPanel tabId={Step.ConfirmPassphraseStep}>
+						<TabPanel tabId={CreateStep.ConfirmPassphraseStep}>
 							<ConfirmPassphraseStep />
 						</TabPanel>
 
-						<TabPanel tabId={Step.EncryptPasswordStep}>
+						<TabPanel tabId={CreateStep.EncryptPasswordStep}>
 							<EncryptPasswordStep />
 						</TabPanel>
 
-						<TabPanel tabId={Step.SuccessStep}>
+						<TabPanel tabId={CreateStep.SuccessStep}>
 							<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
 						</TabPanel>
 					</div>
@@ -300,18 +287,14 @@ export const CreateAddressesSidePanel = ({
 				<div
 					data-testid="CreateAddressSidePanel__footer"
 					className={classNames(
-						"fixed inset-x-0 bottom-0 mr-[5px] flex items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8",
+						"fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8",
 						{ "shadow-footer-side-panel": isScrollable },
 					)}
 				>
-					<div className="hidden min-w-[136px] sm:block">
-						<StepIndicator steps={allSteps} activeIndex={activeTab} showTitle={false} />
-					</div>
-
 					<div className="flex w-full gap-3 sm:justify-end [&>button]:flex-1 sm:[&>button]:flex-none">
-						{activeTab <= Step.EncryptPasswordStep && (
+						{activeTab <= CreateStep.EncryptPasswordStep && (
 							<>
-								{activeTab < Step.SuccessStep && activeTab !== Step.WalletOverviewStep && (
+								{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.WalletOverviewStep && (
 									<Button
 										data-testid="CreateWallet__back-button"
 										disabled={isGeneratingWallet}
@@ -322,7 +305,7 @@ export const CreateAddressesSidePanel = ({
 									</Button>
 								)}
 
-								{activeTab < Step.EncryptPasswordStep && (
+								{activeTab < CreateStep.EncryptPasswordStep && (
 									<Button
 										data-testid="CreateWallet__continue-button"
 										disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
@@ -333,7 +316,7 @@ export const CreateAddressesSidePanel = ({
 									</Button>
 								)}
 
-								{activeTab === Step.EncryptPasswordStep && (
+								{activeTab === CreateStep.EncryptPasswordStep && (
 									<Button
 										data-testid="CreateWallet__continue-encryption-button"
 										disabled={
@@ -351,7 +334,7 @@ export const CreateAddressesSidePanel = ({
 							</>
 						)}
 
-						{activeTab === Step.SuccessStep && (
+						{activeTab === CreateStep.SuccessStep && (
 							<Button disabled={isSubmitting} type="submit" data-testid="CreateWallet__finish-button">
 								{t("COMMON.CLOSE")}
 							</Button>
@@ -363,64 +346,4 @@ export const CreateAddressesSidePanel = ({
 			{renderUpdateWalletNameModal()}
 		</SidePanel>
 	);
-};
-
-const StepHeader = ({ step }: { step: Step }): JSX.Element => {
-	const { t } = useTranslation();
-
-	const headers: Record<Step, JSX.Element> = {
-		[Step.WalletOverviewStep]: (
-			<Header
-				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				titleIcon={
-					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
-				}
-				className="mt-px"
-			/>
-		),
-		[Step.ConfirmPassphraseStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
-				titleIcon={
-					<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
-				}
-				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
-				className="mt-px"
-			/>
-		),
-		[Step.EncryptPasswordStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
-				className="mt-px"
-				titleIcon={
-					<ThemeIcon
-						lightIcon="WalletEncryptionLight"
-						darkIcon="WalletEncryptionDark"
-						dimensions={[24, 24]}
-					/>
-				}
-			/>
-		),
-		[Step.SuccessStep]: (
-			<Header
-				titleClassName="text-lg md:text-2xl md:leading-[29px]"
-				title={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE")}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="Completed"
-						data-testid="icon-Completed"
-					/>
-				}
-				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
-				className="mt-px"
-			/>
-		),
-	};
-
-	return headers[step];
 };

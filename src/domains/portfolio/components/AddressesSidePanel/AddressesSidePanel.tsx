@@ -264,7 +264,6 @@ export const AddressesSidePanel = ({
 		}
 
 		const query = searchQuery.toLowerCase();
-
 		const { alias } = getWalletAlias({ address: wallet.address(), network: wallet.network(), profile });
 
 		return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
@@ -282,7 +281,7 @@ export const AddressesSidePanel = ({
 	return (
 		<SidePanel
 			className={cn({ "animate-shake": isAnimating })}
-			header={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
+			title={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
 			open={open}
 			onOpenChange={(open) => {
 				if (selectedAddresses.length === 0) {
@@ -309,7 +308,7 @@ export const AddressesSidePanel = ({
 			>
 				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
-						<Tab tabId={option.value} key={option.value}>
+						<Tab tabId={option.value} key={option.value} className="px-2.5 sm:px-3">
 							<span>{option.label}</span>
 						</Tab>
 					))}

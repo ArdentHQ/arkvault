@@ -8,7 +8,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { getFeeType } from "@/domains/transaction/pages/SendTransfer/utils";
@@ -37,7 +37,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 
 	const ticker = wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
-	const { convert } = useExchangeRate({ exchangeTicker, ticker });
+	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	const { common: commonValidation } = useValidation();
 
@@ -57,11 +57,9 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
-	const coin = profile.coins().get(network.coin(), network.id());
 	useEffect(() => {
-		const updateFeeTransactionData = async () => {
-			const transferData = await buildTransferData({
-				coin,
+		const updateFeeTransactionData = () => {
+			const transferData = buildTransferData({
 				recipients,
 			});
 
@@ -69,7 +67,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 		};
 
 		void updateFeeTransactionData();
-	}, [recipients, coin]);
+	}, [recipients]);
 
 	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 

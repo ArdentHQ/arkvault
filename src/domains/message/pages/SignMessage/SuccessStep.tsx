@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -67,7 +67,7 @@ export const SuccessStep = ({
 				}
 			/>
 
-			<div className="mt-4 space-y-4">
+			<div className="space-y-4">
 				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 
 				<div>

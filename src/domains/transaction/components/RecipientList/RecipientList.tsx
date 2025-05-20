@@ -42,6 +42,7 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 				ticker={ticker}
 				tooltipDisabled={tooltipDisabled}
 				variant={variant}
+				profile={profile}
 			/>
 		),
 		[

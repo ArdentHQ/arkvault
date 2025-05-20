@@ -1,30 +1,28 @@
-import { Services } from "@/app/lib/sdk";
+import { Http, Networks, Services } from "@/app/lib/mainsail";
 
-import { IKnownWalletService, IProfile } from "./contracts.js";
-import { pqueue } from "./helpers/queue.js";
+import { ConfigKey } from "@/app/lib/mainsail";
+import { IProfile } from "./contracts";
 
 type KnownWalletRegistry = Record<string, Services.KnownWallet[]>;
 
-export class KnownWalletService implements IKnownWalletService {
+export class KnownWalletService {
 	readonly #registry: KnownWalletRegistry = {};
 
-	/** {@inheritDoc IKnownWalletService.syncAll} */
-	public async syncAll(profile: IProfile): Promise<void> {
-		const promises: (() => Promise<void>)[] = [];
+	/** {@inheritDoc IKnownWalletService.sync} */
+	public async sync(profile: IProfile, network: Networks.Network): Promise<void> {
+		const client = new Http.HttpClient(0);
 
-		for (const [coin, networks] of profile.coins().entries()) {
-			for (const network of networks) {
-				promises.push(async () => {
-					try {
-						this.#registry[network] = await profile.coins().get(coin, network).knownWallet().all();
-					} catch {
-						// Do nothing if it fails. It's not critical functionality.
-					}
-				});
+		try {
+			const url = network.config().get<string>(ConfigKey.KnownWallets);
+			const response = await client.get(url);
+			const results = response.json();
+
+			if (Array.isArray(results)) {
+				this.#registry[network.id()] = results;
 			}
+		} catch {
+			// Do nothing if it fails. It's not critical functionality.
 		}
-
-		await pqueue(promises);
 	}
 
 	/** {@inheritDoc IKnownWalletService.network} */

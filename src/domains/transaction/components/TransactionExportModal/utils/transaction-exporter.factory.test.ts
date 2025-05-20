@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import { TransactionExporter } from "./transaction-exporter.factory";
-import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
+import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
@@ -12,7 +11,7 @@ describe("CsvFormatter", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
@@ -36,12 +35,12 @@ describe("CsvFormatter", () => {
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 
-		expect(exporter.transactions().items()).toHaveLength(15);
+		expect(exporter.transactions().items()).toHaveLength(10);
 	});
 
 	it("should sync received transactions", async () => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: [
 					transactionsFixture.data[0],
 					transactionsFixture.data[1],
@@ -119,7 +118,7 @@ describe("CsvFormatter", () => {
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() }, type: "sent" });
 
-		expect(exporter.transactions().items()).toHaveLength(15);
+		expect(exporter.transactions().items()).toHaveLength(10);
 	});
 
 	it("should abort sync", async () => {
@@ -138,7 +137,7 @@ describe("CsvFormatter", () => {
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 
-		expect(exporter.transactions().items()).toHaveLength(15);
+		expect(exporter.transactions().items()).toHaveLength(10);
 		expect(exporter.transactions().toCsv({}).length).toBeGreaterThan(0);
 	});
 });

@@ -55,7 +55,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "COIN_NOT_SUPPORTED", value: "CUSTOM" },
+			error: { type: "COIN_NOT_SUPPORTED", value: "custom" },
 		});
 	});
 
@@ -286,11 +286,11 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate vote", async () => {
 		const mockFindDelegateByName = vi
-			.spyOn(env.delegates(), "findByUsername")
+			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams(
-			"coin=mainsail&network=mainsail.devnet&method=vote&delegate=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			"coin=mainsail&network=mainsail.devnet&method=vote&validator=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -302,7 +302,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should find delegate by public key", async () => {
 		const mockFindDelegateByPublicKey = vi
-			.spyOn(env.delegates(), "findByPublicKey")
+			.spyOn(profile.validators(), "findByPublicKey")
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1");
@@ -326,7 +326,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should fail to find delegate by public key", async () => {
+	it("should fail to find validator by public key", async () => {
 		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -336,9 +336,9 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should not allow both delegate name and public keys in the url", async () => {
+	it("should not allow both validator name and public keys in the url", async () => {
 		const parameters = new URLSearchParams(
-			"coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1&delegate=test",
+			"coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1&validator=test",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -348,8 +348,8 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should fail to validate delegate address", async () => {
-		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet&method=vote&delegate=custom");
+	it("should fail to validate validator address", async () => {
+		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet&method=vote&validator=custom");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -379,24 +379,24 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should fail if delegate is resigned", async () => {
-		const delegateWallet = new ReadOnlyWallet({
+		const validatorWallet = new ReadOnlyWallet({
 			address: profile.wallets().first().address(),
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
+			isResignedValidator: false,
+			isValidator: true,
 			publicKey: profile.wallets().first().publicKey(),
 			rank: 52,
 			username: "testi",
 		});
 		const mockFindDelegateByPublicKey = vi
-			.spyOn(env.delegates(), "findByPublicKey")
-			.mockReturnValue(delegateWallet);
+			.spyOn(profile.validators(), "findByPublicKey")
+			.mockReturnValue(validatorWallet);
 
-		const resignedMock = vi.spyOn(delegateWallet, "isResignedDelegate").mockReturnValue(true);
+		const resignedMock = vi.spyOn(validatorWallet, "isResignedValidator").mockReturnValue(true);
 
 		const parameters = new URLSearchParams(
-			`coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=${delegateWallet.publicKey()}`,
+			`coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=${validatorWallet.publicKey()}`,
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -404,7 +404,7 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
 			error: {
 				type: "VALIDATOR_RESIGNED",
-				value: truncate(delegateWallet.publicKey(), { length: 20, omissionPosition: "middle" }),
+				value: truncate(validatorWallet.publicKey(), { length: 20, omissionPosition: "middle" }),
 			},
 		});
 

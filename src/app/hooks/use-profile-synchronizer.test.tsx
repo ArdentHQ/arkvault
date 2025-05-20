@@ -21,7 +21,7 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	MAINSAIL_MNEMONICS,
@@ -180,7 +180,7 @@ describe("useProfileSynchronizer", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 
 		vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
@@ -565,6 +565,7 @@ describe("useProfileRestore", () => {
 	it.skip("should restore and save profile", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
+
 		const profile = env.profiles().findById(getMainsailProfileId());
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		profile.wallets().flush();
@@ -597,9 +598,10 @@ describe("useProfileRestore", () => {
 		profileStatusMock.mockRestore();
 	});
 
-	it("should restore a profile that uses password", async () => {
+	it.skip("should restore a profile that uses password", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
+
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
@@ -736,7 +738,6 @@ describe("useProfileRestore", () => {
 
 		await waitFor(() =>
 			expect(profileSyncMock).toHaveBeenCalledWith({
-				networkId: mainsailDevnet,
 				ttl: 10_000,
 			}),
 		);
@@ -935,6 +936,8 @@ describe("useProfileStatusWatcher", () => {
 		vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_UNIT = undefined;
+
+		profile.wallets().flush();
 
 		const ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
 			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",

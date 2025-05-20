@@ -25,11 +25,11 @@ import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/Gene
 export const ServersSettings = () => {
 	const { t } = useTranslation();
 
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const { syncServerStatus } = useProfileJobs(profile);
 	const { updateNetworks } = useHosts({ profile });
-	const { allCustomNetworks, updateNetwork, removeNetwork, addNetwork } = useCustomNetworks(env, profile);
+	const { allCustomNetworks, updateNetwork, removeNetwork, addNetwork } = useCustomNetworks(profile);
 	const [showServerFormModal, setShowServerFormModal] = useState(false);
 	const [networkToDelete, setNetworkToDelete] = useState<NormalizedNetwork | undefined>(undefined);
 	const [networkToUpdate, setNetworkToUpdate] = useState<NormalizedNetwork | undefined>(undefined);

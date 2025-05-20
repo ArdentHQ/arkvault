@@ -21,8 +21,12 @@ describe("TransactionSuccessful", () => {
 
 		server.use(
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+				"https://dwallets-evm.mainsailhq.com/api/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
 				transactionsFixture,
+			),
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/api/blocks/*",
+				{ data: {} }, // Basic mock for block data
 			),
 		);
 	});
@@ -94,69 +98,6 @@ describe("TransactionSuccessful", () => {
 		);
 
 		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
-
-		vi.restoreAllMocks();
-	});
-
-	it("should render successfull screen if it's a multisignature registration", async () => {
-		const transaction = {
-			...TransactionFixture,
-			get: () => ({
-				min: 2,
-				publicKeys: [
-					"03af2feb4fc97301e16d6a877d5b135417e8f284d40fac0f84c09ca37f82886c51",
-					"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
-				],
-			}),
-			isConfirmed: () => true,
-			isMultiSignatureRegistration: () => true,
-			type: () => "multiSignature",
-			wallet: () => wallet,
-		};
-
-		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
-			transactionMockImplementation(attribute, transaction),
-		);
-
-		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
-
-		await expect(screen.findByText("Participants")).resolves.toBeVisible();
-
-		vi.restoreAllMocks();
-	});
-
-	it("should render successfull screen if it uses multisignature", async () => {
-		const transaction = {
-			...TransactionFixture,
-			isConfirmed: () => true,
-			isMultiSignatureRegistration: () => true,
-			type: () => "multiSignature",
-			wallet: () => wallet,
-		};
-
-		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
-			transactionMockImplementation(attribute, transaction),
-		);
-
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(true);
-
-		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
-
-		await expect(screen.findByText("Participants")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});

@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 export const transactions: Networks.NetworkManifestTransactions = {
 	expirationType: "height",

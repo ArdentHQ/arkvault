@@ -1,47 +1,65 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Networks } from "@/app/lib/sdk";
-import { useTranslation } from "react-i18next";
+import { Networks } from "@/app/lib/mainsail";
+import { Trans, useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { useConfiguration } from "@/app/contexts";
 import { pingServerAddress } from "@/utils/peers";
 import { useActiveProfile } from "@/app/hooks";
+import { NetworkIcon } from "@/app/components/NetworkIcon";
+import { pingEvmApi, pingTransactionApi } from "@/domains/setting/hooks/use-handle-servers";
 
 const NodeStatusNode: React.VFC<{
 	network: Networks.Network;
-	host: Networks.NetworkHost;
-}> = ({ network, host }) => {
+	hosts: HostGroup;
+}> = ({ network, hosts }) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();
+
+	const [publicHost, txHost, evmHost] = hosts;
 
 	const { setConfiguration, getProfileConfiguration } = useConfiguration();
 
 	const { serverStatus } = getProfileConfiguration(profile.id());
 
-	const [isOnline, setIsOnline] = useState<boolean | undefined>(undefined);
+	const [isPublicHostOnline, setIsPublicHostOnline] = useState<boolean | undefined>(undefined);
+	const [isTxHostOnline, setIsTxHostOnline] = useState<boolean | undefined>(undefined);
+	const [isEvmHostOnline, setIsEvmHostOnline] = useState<boolean | undefined>(undefined);
 
 	const checkNetworkStatus = useCallback(async () => {
-		setIsOnline(undefined);
+		setIsPublicHostOnline(undefined);
+		setIsTxHostOnline(undefined);
+		setIsEvmHostOnline(undefined);
 
-		const promises = [pingServerAddress(host.host, host.type)];
+		const results = await Promise.allSettled([
+			pingServerAddress(publicHost.host, "full"),
+			pingTransactionApi(txHost.host),
+			pingEvmApi(evmHost.host),
+		]);
 
-		const [result] = await Promise.allSettled(promises);
+		const [publicHostStatus, txHostStatus, evmHostStatus] = results.map(
+			(result) => result.status === "fulfilled" && result.value === true,
+		);
 
+		setIsPublicHostOnline(publicHostStatus);
+		setIsTxHostOnline(txHostStatus);
+		setIsEvmHostOnline(evmHostStatus);
+
+		const networkId = network.id();
 		const updatedServerStatus = { ...serverStatus };
 
 		/* istanbul ignore next -- @preserve */
-		if (updatedServerStatus[network.id()] === undefined) {
-			updatedServerStatus[network.id()] = {};
+		if (updatedServerStatus[networkId] === undefined) {
+			updatedServerStatus[networkId] = {};
 		}
 
-		updatedServerStatus[network.id()][host.host] = result.status === "fulfilled" && result.value === true;
-
-		setIsOnline(updatedServerStatus[network.id()][host.host]);
+		updatedServerStatus[networkId][publicHost.host] = publicHostStatus;
+		updatedServerStatus[networkId][txHost.host] = txHostStatus;
+		updatedServerStatus[networkId][evmHost.host] = evmHostStatus;
 
 		setConfiguration(profile.id(), {
 			serverStatus: updatedServerStatus,
@@ -56,14 +74,66 @@ const NodeStatusNode: React.VFC<{
 		return () => clearInterval(interval);
 	}, []);
 
-	const renderDisplayName = () => {
-		let name = networkDisplayName(network);
+	const results = [isPublicHostOnline, isTxHostOnline, isEvmHostOnline];
 
-		if (host.type === "musig") {
-			name = `${name} ${t("COMMON.MULTISIG")}`;
+	const renderUnresponsiveMessage = () => {
+		const unresponsiveEndpointsCount = results.filter((r) => r === false).length;
+
+		if (unresponsiveEndpointsCount === 0) {
+			return null;
 		}
 
-		return name;
+		// if all are failing
+		if (unresponsiveEndpointsCount === 3) {
+			return (
+				<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
+					<div data-testid="NodeStatus--statuserror">
+						<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
+					</div>
+				</Tooltip>
+			);
+		}
+
+		const translations = [
+			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.PUBLIC_API"),
+			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.TX_API"),
+			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.EVM_API"),
+		];
+
+		const messages: Record<string, string> = {};
+
+		let key = 0;
+
+		for (const [index, value] of results.entries()) {
+			if (value === false) {
+				messages[`host${key}`] = translations[index];
+				key++;
+			}
+		}
+
+		// if two of them are failing
+		if (unresponsiveEndpointsCount === 2) {
+			return (
+				<Tooltip
+					maxWidth={350}
+					content={<Trans i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_2" values={messages} />}
+				>
+					<div data-testid="NodeStatus--statuserror">
+						<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
+					</div>
+				</Tooltip>
+			);
+		}
+
+		return (
+			<Tooltip
+				content={<Trans i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_1" values={messages} />}
+			>
+				<div data-testid="NodeStatus--statuserror">
+					<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
+				</div>
+			</Tooltip>
+		);
 	};
 
 	return (
@@ -75,10 +145,10 @@ const NodeStatusNode: React.VFC<{
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="flex-grow font-semibold">{renderDisplayName()}</div>
+			<div className="flex-grow font-semibold">{networkDisplayName(network)}</div>
 
 			<div className="cursor-pointer">
-				{isOnline === true && (
+				{results.every((r) => r === true) && (
 					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.HEALTHY")}>
 						<div data-testid="NodeStatus--statusok">
 							<Icon
@@ -89,14 +159,10 @@ const NodeStatusNode: React.VFC<{
 						</div>
 					</Tooltip>
 				)}
-				{isOnline === false && (
-					<Tooltip content={t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES")}>
-						<div data-testid="NodeStatus--statuserror">
-							<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
-						</div>
-					</Tooltip>
-				)}
-				{isOnline === undefined && (
+
+				{renderUnresponsiveMessage()}
+
+				{results.includes(undefined) && (
 					<div data-testid="NodeStatus--statusloading">
 						<Spinner size="sm" />
 					</div>
@@ -109,7 +175,7 @@ const NodeStatusNode: React.VFC<{
 				<button
 					type="button"
 					onClick={checkNetworkStatus}
-					disabled={isOnline === undefined}
+					disabled={results.includes(undefined)}
 					className="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
 				>
 					<Icon name="ArrowRotateLeft" size="md" />
@@ -119,28 +185,30 @@ const NodeStatusNode: React.VFC<{
 	);
 };
 
+type HostGroup = [Networks.NetworkHost, Networks.NetworkHost, Networks.NetworkHost];
+
 const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) => {
-	const hostGroups: { network: Networks.Network; hosts: Networks.NetworkHost[] }[] = [];
+	const hostGroups: Record<string, { network: Networks.Network; hosts: HostGroup }> = {};
 
 	for (const network of networks) {
-		const networkHosts = network.toObject().hosts.filter((host) => host.type === "full" || host.type === "musig");
+		const hosts = network.toObject().hosts;
+		const publicHost = hosts.find((host) => host.type === "full");
+		const txHost = hosts.find((host) => host.type === "tx");
+		const evmHost = hosts.find((host) => host.type === "evm");
 
-		if (networkHosts.length > 0) {
-			hostGroups.push({ hosts: networkHosts, network });
+		if (publicHost && txHost && evmHost) {
+			hostGroups[network.id()] = {
+				hosts: [publicHost, txHost, evmHost],
+				network,
+			};
 		}
 	}
 
 	return (
 		<div data-testid="NodesStatus" className="mt-3 grid gap-3 md:grid-cols-2">
-			{hostGroups.map((hostGroup) =>
-				hostGroup.hosts.map((host) => (
-					<NodeStatusNode
-						key={`${hostGroup.network.id()}-${host.type}`}
-						network={hostGroup.network}
-						host={host}
-					/>
-				)),
-			)}
+			{Object.values(hostGroups).map((hostGroup) => (
+				<NodeStatusNode key={`${hostGroup.network.id()}`} network={hostGroup.network} hosts={hostGroup.hosts} />
+			))}
 		</div>
 	);
 };

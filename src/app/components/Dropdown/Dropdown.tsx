@@ -15,9 +15,11 @@ import {
 	useRole,
 	useInteractions,
 	FloatingPortal,
+	FloatingFocusManager,
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
 import classNames from "classnames";
+import { isUnit } from "@/utils/test-helpers";
 
 export const Wrapper = ({ variant, ...props }: { variant?: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
 	<div
@@ -120,37 +122,39 @@ export const Dropdown: FC<DropdownProperties> = ({
 
 			{isOpen && (
 				<FloatingPortal>
-					<div
-						ref={refs.setFloating}
-						className={twMerge(
-							"z-40 w-full sm:w-auto",
-							classNames({
-								"min-w-52": variant === "options",
-								"px-5 sm:px-0": variant !== "navbar",
-								"rounded-none sm:mt-2": variant === "navbar",
-							}),
-							wrapperClass,
-						)}
-						style={floatingStyles}
-						{...getFloatingProps()}
-						data-testid={"dropdown__content" + testIdSuffix}
-					>
-						<Wrapper
-							variant={options && variant === undefined ? "options" : variant}
-							className={cn(
-								"dropdown-body overflow-hidden bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900",
-								{
-									rounded: variant !== "options",
-									"rounded-xl": variant === "options",
-								},
+					<FloatingFocusManager context={context} disabled={isUnit()}>
+						<div
+							ref={refs.setFloating}
+							className={twMerge(
+								"z-40 w-full sm:w-auto",
+								classNames({
+									"min-w-52": variant === "options",
+									"px-5 sm:px-0": variant !== "navbar",
+									"rounded-none sm:mt-2": variant === "navbar",
+								}),
+								wrapperClass,
 							)}
+							style={floatingStyles}
+							{...getFloatingProps()}
+							data-testid={"dropdown__content" + testIdSuffix}
 						>
-							{top}
-							{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}
-							{clonedElement && <div>{clonedElement}</div>}
-							{bottom}
-						</Wrapper>
-					</div>
+							<Wrapper
+								variant={options && variant === undefined ? "options" : variant}
+								className={cn(
+									"dropdown-body overflow-hidden bg-white p-1 shadow-xl outline-none dark:bg-theme-dark-900",
+									{
+										rounded: variant !== "options",
+										"rounded-xl": variant === "options",
+									},
+								)}
+							>
+								{top}
+								{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}
+								{clonedElement && <div>{clonedElement}</div>}
+								{bottom}
+							</Wrapper>
+						</div>
+					</FloatingFocusManager>
 				</FloatingPortal>
 			)}
 		</>

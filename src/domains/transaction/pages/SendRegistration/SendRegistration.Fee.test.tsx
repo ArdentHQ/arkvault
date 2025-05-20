@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { SendRegistration } from "./SendRegistration";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -13,7 +12,7 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 	within,
@@ -21,7 +20,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
+import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0x8A3117649655714c296cd816691e01C5148922ed.json";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -72,7 +71,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 
-const reviewStepID = "ValidatorRegistrationForm__review-step";
+const reviewStepID = "DelegateRegistrationForm__review-step";
 
 describe("Registration Fee", () => {
 	beforeAll(async () => {
@@ -94,13 +93,13 @@ describe("Registration Fee", () => {
 		);
 
 		getVersionSpy = vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
+			.spyOn(wallet.ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 	});
 
@@ -114,6 +113,9 @@ describe("Registration Fee", () => {
 				"https://ark-test-musig.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
 				walletFixture,
 			),
+			requestMock("https://dwallets-evm.mainsailhq.com/api?attributes.validatorPublicKey=*", {
+				result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" },
+			}),
 			requestMock(
 				"https://ark-test-musig.arkvault.io",
 				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
@@ -123,14 +125,25 @@ describe("Registration Fee", () => {
 	});
 
 	it("should set fee", async () => {
+		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
+
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet);
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await waitFor(() => {
-			expect(screen.getByTestId("InputFee")).toBeInTheDocument();
-		});
+		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
+		await waitFor(() =>
+			expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"),
+		);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		// Step 2
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),

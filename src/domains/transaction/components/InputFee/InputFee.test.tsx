@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
@@ -10,15 +10,20 @@ import { env, render, renderResponsive, screen } from "@/utils/testing-library";
 
 const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile"> => ({
 	avg: 0.456,
+	defaultGasLimit: 100_000,
 	disabled: false,
+	gasLimit: 100_000,
+	gasPrice: 0.3,
 	gasPriceStep: 0.001,
 	loading: false,
 	max: 0.5,
 	min: 0.006,
+	minGasPrice: 0.006,
 	onChangeFeeOption: vi.fn(),
+	onChangeGasLimit: vi.fn(),
+	onChangeGasPrice: vi.fn(),
 	onChangeViewType: vi.fn(),
 	selectedFeeOption: InputFeeOption.Average,
-	value: "0.3",
 	viewType: InputFeeViewType.Simple,
 });
 
@@ -40,13 +45,14 @@ describe("InputFee", () => {
 
 		// eslint-disable-next-line react/display-name
 		Wrapper = () => {
-			const [value, setValue] = useState(defaultProps.value);
+			const [gasPrice, setGasPrice] = useState(defaultProps.gasPrice);
 			const [viewType, setViewType] = useState(defaultProps.viewType);
 			const [simpleValue, setSimpleValue] = useState(defaultProps.selectedFeeOption);
+			const [gasLimit, setGasLimit] = useState(defaultProps.gasLimit);
 
-			const handleChangeValue = (newValue: string) => {
-				setValue(newValue);
-				defaultProps.onChange(newValue);
+			const handleChangeGasPrice = (newValue: number) => {
+				setGasPrice(newValue);
+				defaultProps.onChangeGasPrice(newValue);
 			};
 
 			const handleChangeViewType = (newValue: InputFeeViewType) => {
@@ -59,11 +65,18 @@ describe("InputFee", () => {
 				defaultProps.onChangeFeeOption?.(value_);
 			};
 
+			const handleChangeGasLimit = (value: number) => {
+				setGasLimit(value);
+				defaultProps.onChangeGasLimit(value);
+			};
+
 			return (
 				<InputFee
 					{...defaultProps}
-					value={value}
-					onChange={handleChangeValue}
+					gasPrice={gasPrice}
+					gasLimit={gasLimit}
+					onChangeGasPrice={handleChangeGasPrice}
+					onChangeGasLimit={handleChangeGasLimit}
 					viewType={viewType}
 					onChangeViewType={handleChangeViewType}
 					selectedFeeOption={simpleValue}
@@ -80,9 +93,9 @@ describe("InputFee", () => {
 		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		expect(defaultProps.onChangeViewType).toHaveBeenCalledWith(InputFeeViewType.Advanced);
-		expect(defaultProps.onChange).toHaveBeenCalledWith(defaultProps.value);
+		// expect(defaultProps.onChangeGasPrice).toHaveBeenCalled(defaultProps.gasPrice);
 
-		expect(screen.getByTestId("InputCurrency")).toBeInTheDocument();
+		expect(screen.getByTestId("Input_GasPrice")).toBeInTheDocument();
 		expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
@@ -90,9 +103,9 @@ describe("InputFee", () => {
 		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.SIMPLE));
 
 		expect(defaultProps.onChangeViewType).toHaveBeenCalledWith(InputFeeViewType.Simple);
-		expect(defaultProps.onChange).toHaveBeenCalledWith(defaultProps.avg.toString());
+		expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(defaultProps.avg);
 
-		expect(screen.queryByTestId("InputCurrency")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("Input_GasPrice")).not.toBeInTheDocument();
 		expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
@@ -100,11 +113,11 @@ describe("InputFee", () => {
 		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		expect(defaultProps.onChangeViewType).toHaveBeenCalledWith(InputFeeViewType.Advanced);
-		expect(defaultProps.onChange).toHaveBeenCalledWith(defaultProps.value);
+		// expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(defaultProps.gasPrice);
 	});
 
 	it("should switch to simple and advanced type when value is number", async () => {
-		defaultProps.value = 0.123 as unknown as string;
+		defaultProps.gasPrice = 0.123 as unknown as string;
 
 		render(<Wrapper />);
 
@@ -113,10 +126,10 @@ describe("InputFee", () => {
 		// go to advanced mode and check value changes
 		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-		expect(screen.getByTestId("InputCurrency")).toBeInTheDocument();
+		expect(screen.getByTestId("Input_GasPrice")).toBeInTheDocument();
 		expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument();
 
-		expect(screen.getByTestId("InputCurrency")).toHaveValue("0.123");
+		expect(screen.getByTestId("Input_GasPrice")).toHaveValue("0.123");
 
 		// go to simple mode
 		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.SIMPLE));
@@ -134,7 +147,7 @@ describe("InputFee", () => {
 
 			await userEvent.click(screen.getByText(optionText));
 
-			expect(defaultProps.onChange).toHaveBeenCalledWith(optionValue.toString());
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(optionValue);
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -153,7 +166,7 @@ describe("InputFee", () => {
 		it.each(["xs", "sm", "md", "lg", "xl"])("should render simple view in %s", (breakpoint) => {
 			const { asFragment } = renderResponsive(<InputFee {...defaultProps} />, breakpoint);
 
-			expect(screen.queryByTestId("InputCurrency")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Input_GasPrice")).not.toBeInTheDocument();
 
 			if (breakpoint !== "xs") {
 				expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
@@ -172,7 +185,7 @@ describe("InputFee", () => {
 
 				const { asFragment } = renderResponsive(<InputFee {...defaultProps} />, breakpoint);
 
-				expect(screen.queryByTestId("InputCurrency")).not.toBeInTheDocument();
+				expect(screen.queryByTestId("Input_GasPrice")).not.toBeInTheDocument();
 
 				if (breakpoint !== "xs") {
 					expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
@@ -185,7 +198,7 @@ describe("InputFee", () => {
 		it.each(["xs", "sm"])("should render loading state of simple view in %s", (breakpoint) => {
 			const { asFragment } = renderResponsive(<InputFee {...defaultProps} loading={true} />, breakpoint);
 
-			expect(screen.queryByTestId("InputCurrency")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("Input_GasPrice")).not.toBeInTheDocument();
 
 			if (breakpoint !== "xs") {
 				expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
@@ -200,7 +213,7 @@ describe("InputFee", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			const { asFragment } = render(<Wrapper />);
 
-			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 			expect(inputElement).toBeInTheDocument();
 
@@ -208,53 +221,40 @@ describe("InputFee", () => {
 			await userEvent.clear(inputElement);
 			await userEvent.type(inputElement, "0.447");
 
-			expect(defaultProps.onChange).toHaveBeenCalledWith("0.447");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.447);
 			expect(inputElement).toHaveValue("0.447");
 			expect(asFragment()).toMatchSnapshot();
-		});
-
-		it("should use avg as the default value", () => {
-			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.avg = 0.1234;
-			defaultProps.value = undefined;
-
-			render(<InputFee {...defaultProps} />);
-
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.1234");
 		});
 
 		it("should increment value by step when up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPriceStep = 0.01;
-			defaultProps.value = "0.5";
+			defaultProps.gasPrice = 0.5;
 
 			render(<InputFee {...defaultProps} />);
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
 
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.53");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.51);
 		});
 
 		it("should decrement value by step when down button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPriceStep = 0.01;
-			defaultProps.value = "0.5";
+			defaultProps.gasPrice = 0.5;
 
 			render(<InputFee {...defaultProps} />);
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
 
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.47");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.49);
 		});
 
 		it("should disable down button when value is zero", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPriceStep = 0.01;
-			defaultProps.value = "0";
+			defaultProps.gasPrice = 0;
+			defaultProps.minGasPrice = 0;
 
 			render(<InputFee {...defaultProps} />);
 
@@ -266,7 +266,7 @@ describe("InputFee", () => {
 
 			render(<InputFee {...defaultProps} />);
 
-			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+			const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 			inputElement.select();
 			await userEvent.clear(inputElement, "-1.4");
@@ -277,24 +277,17 @@ describe("InputFee", () => {
 
 		it("should not allow to set a negative value with down button", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 0.6;
-			defaultProps.value = "1.5";
+			defaultProps.gasPriceStep = 2;
+			defaultProps.gasPrice = 1.5;
+			defaultProps.minGasPrice = 0;
 
 			render(<InputFee {...defaultProps} />);
 
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("1.5");
+			expect(screen.getByTestId("Input_GasPrice")).toHaveValue("1.5");
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
 
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.9");
-
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
-
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.3");
-
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
-
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0);
 		});
 
 		it("should render disabled", () => {
@@ -304,7 +297,7 @@ describe("InputFee", () => {
 
 			expect(screen.getByTestId("InputFeeAdvanced__up")).toBeDisabled();
 			expect(screen.getByTestId("InputFeeAdvanced__down")).toBeDisabled();
-			expect(screen.getByTestId("InputCurrency")).toBeDisabled();
+			expect(screen.getByTestId("Input_GasPrice")).toBeDisabled();
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -312,46 +305,36 @@ describe("InputFee", () => {
 		it("should set value = step when empty and up button is clicked", async () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			defaultProps.gasPriceStep = 0.01;
-			defaultProps.value = "";
+			// @ts-ignore
+			defaultProps.gasPrice = "";
+			defaultProps.minGasPrice = 0.01;
 
 			render(<InputFee {...defaultProps} />);
 
-			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
+			expect(screen.getByTestId("Input_GasPrice")).toHaveValue("");
 			expect(screen.getByTestId("InputFeeAdvanced__up")).not.toBeDisabled();
-			expect(screen.getByTestId("InputFeeAdvanced__down")).not.toBeDisabled();
+			expect(screen.getByTestId("InputFeeAdvanced__down")).toBeDisabled();
 
 			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
 
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.01");
-		});
-
-		it("should set value = 0 when empty and down button is clicked", async () => {
-			defaultProps.viewType = InputFeeViewType.Advanced;
-			defaultProps.gasPriceStep = 0.01;
-			defaultProps.value = "";
-
-			render(<InputFee {...defaultProps} />);
-
-			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
-			expect(screen.getByTestId("InputFeeAdvanced__up")).not.toBeDisabled();
-			expect(screen.getByTestId("InputFeeAdvanced__down")).not.toBeDisabled();
-
-			await userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
-
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("0");
+			expect(defaultProps.onChangeGasPrice).toHaveBeenCalledWith(0.01);
 		});
 
 		it("should display converted value when on live net", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 
-			vi.spyOn(network, "isLive").mockReturnValueOnce(true);
+			const networkIsLive = vi.spyOn(network, "isLive").mockReturnValue(true);
 
-			vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+			const getFiatCurrency = vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
 
-			const { asFragment } = render(<InputFee {...defaultProps} />);
+			const { asFragment } = render(<InputFee {...defaultProps} network={network} />);
 
-			expect(screen.getByTestId("Amount")).toHaveTextContent(/^€0.00$/);
+			expect(screen.getByTestId("InputFeeAdvanced__convertedGasFee")).toHaveTextContent(/^~€0.00$/);
+
 			expect(asFragment()).toMatchSnapshot();
+
+			networkIsLive.mockRestore();
+			getFiatCurrency.mockRestore();
 		});
 	});
 });

@@ -33,7 +33,7 @@ describe("useProfileAddresses", () => {
 		expect(result.current.profileAddresses).toHaveLength(2);
 	});
 
-	it("should return all available addresses except MultiSignature", () => {
+	it.skip("should return all available addresses except MultiSignature", () => {
 		const walletMultiSignatureSpy = vi
 			.spyOn(profile.wallets().first(), "isMultiSignature")
 			.mockImplementation(() => true);

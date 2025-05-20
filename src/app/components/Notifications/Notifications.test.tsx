@@ -49,7 +49,7 @@ describe("Notifications", () => {
 		await profile.notifications().transactions().sync();
 	});
 
-	it("should render with transactions and plugins", async () => {
+	it("should render with transactions", async () => {
 		const { container } = render(<Notifications profile={profile} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));

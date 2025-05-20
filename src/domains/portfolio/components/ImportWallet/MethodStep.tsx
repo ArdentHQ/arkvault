@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import React from "react";
 
 import { ImportOption, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
@@ -22,7 +22,7 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 
 	return (
 		<section data-testid="ImportWallet__method-step">
-			<div className="mt-4 space-y-2">
+			<div className="space-y-2">
 				{options.map((option, index) => (
 					<Option onSelect={onOptionSelect} option={option} key={index} />
 				))}
@@ -32,10 +32,9 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 };
 
 const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option: ImportOption) => void }) => (
-	<div
+	<button
 		onClick={() => onSelect(option)}
-		tabIndex={0}
-		className="group cursor-pointer space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
+		className="group flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
 	>
 		<div className="flex items-center space-x-2">
 			{option.icon && (
@@ -52,5 +51,5 @@ const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option:
 				{option.description}
 			</div>
 		)}
-	</div>
+	</button>
 );

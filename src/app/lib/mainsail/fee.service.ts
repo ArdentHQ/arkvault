@@ -1,10 +1,12 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, IoC, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
+import { ConfigRepository } from "@/app/lib/mainsail";
+import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 interface Fees {
 	min: string;
@@ -12,22 +14,19 @@ interface Fees {
 	max: string;
 }
 
-export class FeeService extends Services.AbstractFeeService {
+export class FeeService {
 	readonly #client: ArkClient;
+	#config: ConfigRepository;
 
-	public constructor(container: IoC.IContainer) {
-		super(container);
-
-		const hostSelector = container.get<Networks.NetworkHostSelector>(IoC.BindingType.NetworkHostSelector);
-		const host = hostSelector(container.get(IoC.BindingType.ConfigRepository));
-
-		this.#client = new ArkClient(host.host);
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+		this.#config = config;
+		this.#client = new ArkClient(this.#config.host("full", profile));
 	}
 
-	public override async all(): Promise<Services.TransactionFees> {
+	public async all(): Promise<Services.TransactionFees> {
 		const node = await this.#client.node().fees();
-		const dynamicFees: Fees = node.data.evmCall;
-		const fees = this.#transform(dynamicFees);
+		const fees = this.#transform(node.data.evmCall);
+
 		return {
 			validatorRegistration: fees,
 			validatorResignation: fees,
@@ -40,20 +39,18 @@ export class FeeService extends Services.AbstractFeeService {
 		};
 	}
 
-	public override async calculate(
+	public async calculate(
 		transaction: Contracts.RawTransactionData,
 		options?: Services.TransactionFeeOptions,
 	): Promise<BigNumber> {
 		return BigNumber.ZERO;
 	}
 
-	#transform(dynamicFees: Fees): Services.TransactionFee {
+	#transform(fees: Fees): Services.TransactionFee {
 		return {
-			avg: formatUnits(dynamicFees.avg ?? "0", "gwei"),
-			isDynamic: true,
-			max: formatUnits(dynamicFees.max ?? "0", "gwei"),
-			min: formatUnits(dynamicFees.min ?? "0", "gwei"),
-			static: BigNumber.make("0"),
+			avg: formatUnits(fees.avg ?? "0", "gwei"),
+			max: formatUnits(fees.max ?? "0", "gwei"),
+			min: formatUnits(fees.min ?? "0", "gwei"),
 		};
 	}
 }

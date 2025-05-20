@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { Enums } from "@/app/lib/sdk";
+import { Enums } from "@/app/lib/mainsail";
 
 export const WalletCapabilities = (wallet: Contracts.IReadWriteWallet) => ({
 	/**

@@ -1,18 +1,17 @@
-/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import {
 	act,
 	env,
-	getDefaultProfileId,
-	getDefaultWalletId,
+	getMainsailProfileId,
+	getDefaultMainsailWalletId,
 	getDefaultWalletMnemonic,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 	within,
@@ -24,79 +23,70 @@ import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
-import { Signatories } from "@/app/lib/sdk";
+import { Signatories } from "@/app/lib/mainsail";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { createHashHistory } from "history";
-import { data as delegateData } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
 import userEvent from "@testing-library/user-event";
-import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 
-const fixtureProfileId = getDefaultProfileId();
+const fixtureProfileId = getMainsailProfileId();
 
+const transactionMethodsFixture = {
+	blockHash: () => transactionFixture.data.blockHash,
+	convertedAmount: () => BigNumber.make(10),
+	data: () => transactionFixture.data,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+	fee: () => +transactionFixture.data.fee / 1e18,
+	from: () => transactionFixture.data.from,
+	hash: () => transactionFixture.data.hash,
+	isConfirmed: () => false,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isReturn: () => false,
+	isSecondSignature: () => false,
+	isSent: () => true,
+	isSuccess: () => true,
+	isTransfer: () => false,
+	isUnvote: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => false,
+	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => transactionFixture.data.memo || undefined,
+	nonce: () => BigNumber.make(transactionFixture.data.nonce),
+	payments: () => [],
+	recipients: () => [],
+	sender: () => transactionFixture.data.sender,
+	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+	to: () => transactionFixture.data.to,
+	total: () => {
+		const value = BigNumber.make(transactionFixture.data.value);
+		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+		return value.plus(feeVal);
+	},
+	usesMultiSignature: () => false,
+	value: () => +transactionFixture.data.value / 1e8,
+	wallet: () => wallet,
+};
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => voteFixture.data.amount / 1e8,
-		blockId: () => voteFixture.data.blockId,
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
-		fee: () => voteFixture.data.fee / 1e8,
-		id: () => voteFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isTransfer: () => false,
-		isUnvote: () => false,
-		isVote: () => true,
-		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(158),
-		recipient: () => voteFixture.data.recipient,
-		sender: () => voteFixture.data.sender,
-		timestamp: () => DateTime.make(),
-		type: () => "vote",
-		usesMultiSignature: () => false,
-		wallet: () => wallet,
-	});
+	vi
+		.spyOn(wallet.transaction(), "transaction")
+		.mockReturnValue({ ...transactionMethodsFixture, isVote: () => true, type: () => "vote" });
 
 const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => unvoteFixture.data.amount / 1e8,
-		blockId: () => unvoteFixture.data.blockId,
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
-		fee: () => unvoteFixture.data.fee / 1e8,
-		id: () => unvoteFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isTransfer: () => false,
+		...transactionMethodsFixture,
 		isUnvote: () => true,
-		isVote: () => false,
-		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(158),
-		recipient: () => unvoteFixture.data.recipient,
-		sender: () => unvoteFixture.data.sender,
-		timestamp: () => DateTime.make(),
 		type: () => "unvote",
-		usesMultiSignature: () => false,
-		wallet: () => wallet,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
@@ -107,13 +97,13 @@ const votingMockImplementation = () => [
 	{
 		amount: 10,
 		wallet: new ReadOnlyWallet({
-			address: delegateData[1].address,
+			address: validatorData[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
-			publicKey: delegateData[1].publicKey,
-			username: delegateData[1].username,
+			isResignedvalidator: false,
+			isValidator: true,
+			publicKey: validatorData[1].publicKey,
+			username: validatorData[1].username,
 		}),
 	},
 ];
@@ -128,32 +118,28 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
+const authenticationStepID = "AuthenticationStep";
 
 describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
-		vi.useFakeTimers({
-			shouldAdvanceTime: true,
-			toFake: ["setInterval", "clearInterval"],
-		});
-
-		profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		wallet = profile.wallets().findById(getDefaultMainsailWalletId());
 		await wallet.synchroniser().identity();
 
-		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
+			profile.validators().findByAddress(wallet.networkId(), validatorData[index].address);
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
@@ -162,17 +148,24 @@ describe("SendVote", () => {
 	beforeEach(() => {
 		server.use(
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
-				voteFixture,
+				"https://dwallets-evm.mainsailhq.com/api/transactions/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0a",
+				transactionFixture,
 			),
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
-				unvoteFixture,
+				"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
+				transactionFixture,
+			),
+			requestMock(
+				"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
+				{ data: {} }, // Basic mock for block data
 			),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers({ shouldAdvanceTime: true });
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval"],
+		});
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -181,15 +174,11 @@ describe("SendVote", () => {
 		resetProfileNetworksMock();
 	});
 
-	afterAll(() => {
-		vi.useRealTimers();
-	});
-
-	it("should return to the select a delegate page to unvote", async () => {
+	it("should return to the select a validator page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
@@ -199,11 +188,11 @@ describe("SendVote", () => {
 			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[1].address));
 
-		// Back to select a delegate page
+		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
@@ -211,14 +200,14 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should return to the select a delegate page to unvote/vote", async () => {
+	it("should return to the select a validator page to unvote/vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[1].address }];
+		const unvotes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: delegateData[0].address }];
+		const votes: VoteValidatorProperties[] = [{ amount: 10, validatorAddress: validatorData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
@@ -233,10 +222,10 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
-		// Back to select a delegate page
+		// Back to select a validator page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
 		await userEvent.click(backButton());
@@ -255,7 +244,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -273,29 +262,24 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
 		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		const signVoteMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 		const broadcastVoteMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
-			.mockResolvedValue({ accepted: [voteFixture.data.id], errors: {}, rejected: [] });
+			.mockResolvedValue({ accepted: [transactionFixture.data.id], errors: {}, rejected: [] });
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
@@ -321,10 +305,10 @@ describe("SendVote", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		// Go back to wallet
+		// Go back to dashboard
 		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		historySpy.mockRestore();
 
@@ -334,7 +318,7 @@ describe("SendVote", () => {
 		votingMock.mockRestore();
 	});
 
-	it("should warning in toast if wallet is already voting the delegate", async () => {
+	it("should warning in toast if wallet is already voting the validator", async () => {
 		await wallet.synchroniser().votes();
 
 		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
@@ -342,12 +326,12 @@ describe("SendVote", () => {
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[0].address,
+					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[0].publicKey,
+					isResignedvalidator: false,
+					isValidator: true,
+					publicKey: validatorData[0].publicKey,
 					rank: 1,
 					username: "arkx",
 				}),
@@ -361,7 +345,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -379,10 +363,12 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(toastMock).toHaveBeenCalledWith("ARK Wallet 1 is already voting for arkx.");
+			expect(toastMock).toHaveBeenCalledWith(
+				"Mainsail Wallet 1 is already voting for 0xB8Be76b31E402a2D89294Aa107056484Bef94362.",
+			);
 		});
 
 		votesMock.mockRestore();
@@ -400,7 +386,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[1].address,
+				validatorAddress: validatorData[1].address,
 			},
 		];
 
@@ -409,7 +395,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -427,37 +413,32 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
 		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValueOnce(Promise.resolve(unvoteFixture.data.id))
-			.mockReturnValueOnce(Promise.resolve(voteFixture.data.id));
+			.mockReturnValueOnce(Promise.resolve(transactionFixture.data.id))
+			.mockReturnValueOnce(Promise.resolve(transactionFixture.data.id));
 
 		const broadcastMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
 			.mockResolvedValueOnce({
-				accepted: [unvoteFixture.data.id],
+				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			})
 			.mockResolvedValueOnce({
-				accepted: [voteFixture.data.id],
+				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
@@ -483,9 +464,8 @@ describe("SendVote", () => {
 			vi.advanceTimersByTime(1000);
 		});
 
-		setTimeout(() => {
-			votesMock.mockRestore();
-		}, 3000);
+		// reset the votes mock so it no longer returns that is voting
+		votesMock.mockRestore();
 
 		act(() => {
 			vi.runOnlyPendingTimers();
@@ -497,16 +477,17 @@ describe("SendVote", () => {
 					unvotes: [
 						{
 							amount: 10,
-							id: delegateData[1].address,
+							id: validatorData[1].address,
 						},
 					],
 				},
-				fee: 0.01,
+				gasLimit: 200_000,
+				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			});
 		});
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(1, unvoteFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(1, transactionFixture.data.id));
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenNthCalledWith(2, {
@@ -514,16 +495,17 @@ describe("SendVote", () => {
 					votes: [
 						{
 							amount: 10,
-							id: delegateData[0].publicKey,
+							id: validatorData[0].address,
 						},
 					],
 				},
-				fee: 0.01,
+				gasLimit: 200_000,
+				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			}),
 		);
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, transactionFixture.data.id));
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -652,7 +634,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -670,36 +652,34 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 		inputElement.select();
 		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "0.02");
+		await userEvent.type(inputElement, "20");
 
-		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
+		await waitFor(() => expect(inputElement).toHaveValue("20"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+		// AuthenticationStep
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		// Back to form
 		await userEvent.click(backButton());
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("0.02"));
+		await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("20"));
 
-		// Back to review step
+		// Back to AuthenticationStep
 		await userEvent.click(continueButton());
 
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		expect(screen.getAllByTestId("Amount")[3]).toHaveTextContent("0.02");
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 	});
 
 	it("should move back and forth between steps", async () => {
@@ -709,7 +689,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -727,39 +707,31 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+		const inputElement: HTMLInputElement = screen.getByTestId("Input_GasPrice");
 
 		inputElement.select();
 		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "0.02");
+		await userEvent.type(inputElement, "20");
 
-		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
+		await waitFor(() => expect(inputElement).toHaveValue("20"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
 		// Back to form
 		await userEvent.click(backButton());
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("0.02"));
+		await waitFor(() => expect(screen.getByTestId("Input_GasPrice")).toHaveValue("20"));
 
 		// Back to review step
 		await userEvent.click(continueButton());
 
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
-		// Authentication Step
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		await userEvent.click(backButton());
 
@@ -769,7 +741,7 @@ describe("SendVote", () => {
 		await userEvent.click(continueButton());
 
 		// Back to AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
 		await userEvent.clear(passwordInput);
@@ -782,25 +754,25 @@ describe("SendVote", () => {
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[0].address,
+					address: validatorData[0].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[0].publicKey,
-					username: delegateData[0].username,
+					isResignedvalidator: false,
+					isValidator: true,
+					publicKey: validatorData[0].publicKey,
+					username: validatorData[0].username,
 				}),
 			},
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
-					address: delegateData[1].address,
+					address: validatorData[1].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[1].publicKey,
-					username: delegateData[1].username,
+					isResignedvalidator: false,
+					isValidator: true,
+					publicKey: validatorData[1].publicKey,
+					username: validatorData[1].username,
 				}),
 			},
 		]);
@@ -810,7 +782,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -828,26 +800,21 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
 		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -879,118 +846,6 @@ describe("SendVote", () => {
 		votesMock.mockRestore();
 	});
 
-	it("should return to form step by cancelling fee warning", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const votes: VoteValidatorProperties[] = [
-			{
-				amount: 10,
-				validatorAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		// Fee
-		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "5");
-
-		await waitFor(() => expect(inputElement).toHaveValue("5"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
-		// Fee warning
-		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-	});
-
-	it("should proceed to authentication step by confirming fee warning", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const votes: VoteValidatorProperties[] = [
-			{
-				amount: 10,
-				validatorAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		// Fee
-		await userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "10");
-
-		await waitFor(() => expect(inputElement).toHaveValue("10"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
-		// Fee warning
-		expect(screen.getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-	});
-
 	it("should show error if wrong mnemonic", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
@@ -998,7 +853,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1016,24 +871,15 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
 		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
 		await userEvent.clear(passwordInput);
@@ -1058,7 +904,7 @@ describe("SendVote", () => {
 		const votes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1077,24 +923,15 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		await userEvent.click(continueButton());
-
 		// AuthenticationStep
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		await expect(screen.findByTestId(authenticationStepID)).resolves.toBeVisible();
 
 		const signMock = vi.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
 			throw new Error("broadcast error");
@@ -1117,88 +954,10 @@ describe("SendVote", () => {
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+		const dashboardPage = `/profiles/${getMainsailProfileId()}/dashboard`;
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(dashboardPage));
 
 		signMock.mockRestore();
-	});
-
-	it("should send a unvote transaction with a multisignature wallet", async () => {
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const multisignatureSpy = vi
-			.spyOn(wallet.multiSignature(), "all")
-			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
-
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const unvotes: VoteValidatorProperties[] = [
-			{
-				amount: 10,
-				validatorAddress: delegateData[1].address,
-			},
-		];
-
-		appendParameters(parameters, "unvote", unvotes);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<SendVote />
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createUnvoteTransactionMock(wallet);
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		await act(async () => {
-			await userEvent.click(continueButton());
-		});
-
-		act(() => {
-			vi.advanceTimersByTime(1000);
-		});
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(signMock).toHaveBeenCalledWith(
-			expect.objectContaining({
-				data: expect.anything(),
-				fee: expect.any(Number),
-				signatory: expect.any(Object),
-			}),
-		);
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-
-		isMultiSignatureSpy.mockRestore();
-		multisignatureSpy.mockRestore();
 	});
 
 	it("should send a vote transaction with a ledger wallet", async () => {
@@ -1206,17 +965,17 @@ describe("SendVote", () => {
 		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
 		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -1227,7 +986,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1245,15 +1004,9 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
 
 		const address = wallet.address();
 		const balance = wallet.balance();
@@ -1313,17 +1066,17 @@ describe("SendVote", () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 
 		const getPublicKeySpy = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
 		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
+			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
@@ -1334,7 +1087,7 @@ describe("SendVote", () => {
 		const unvotes: VoteValidatorProperties[] = [
 			{
 				amount: 10,
-				validatorAddress: delegateData[0].address,
+				validatorAddress: validatorData[0].address,
 			},
 		];
 
@@ -1352,18 +1105,13 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		await userEvent.click(continueButton());
-
-		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
+
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockRestore();

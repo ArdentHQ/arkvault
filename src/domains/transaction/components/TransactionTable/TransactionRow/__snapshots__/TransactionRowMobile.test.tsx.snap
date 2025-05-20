@@ -100,19 +100,17 @@ exports[`TransactionRowMobile > should render 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -176,19 +174,17 @@ exports[`TransactionRowMobile > should render 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -241,7 +237,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount (DARK)
+                  Amount (ARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -382,19 +378,17 @@ exports[`TransactionRowMobile > should render 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -458,19 +452,17 @@ exports[`TransactionRowMobile > should render 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -523,7 +515,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
-                  Amount (DARK)
+                  Amount (ARK)
                 </span>
                 <div
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -554,332 +546,6 @@ exports[`TransactionRowMobile > should render 2`] = `
                     0
                   </span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
-        data-testid="TableRow"
-      >
-        <td
-          data-testid="TransactionRow__skeleton"
-        >
-          <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
-          >
-            <div
-              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 70px; height: 17px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-              <div
-                data-testid="TransactionRow__skeleton-sender"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
-            <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
-            >
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 0px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group !border-b-0"
-        data-testid="TableRow"
-      >
-        <td
-          data-testid="TransactionRow__skeleton"
-        >
-          <div
-            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background mb-3"
-          >
-            <div
-              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 70px; height: 17px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-              <div
-                data-testid="TransactionRow__skeleton-sender"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
-            <div
-              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
-            >
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-              <div
-                class="flex flex-col gap-2"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 70px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 0px; height: 17px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
               </div>
             </div>
           </div>
@@ -997,7 +663,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                               </span>
                               <span>
                                  
@@ -1066,19 +732,17 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button
@@ -1279,7 +943,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                               </span>
                               <span>
                                  
@@ -1348,19 +1012,17 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
-                            <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                            <span
+                              class="font-semibold text-sm text-theme-text"
+                              data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                                class="no-ligatures transition-colors duration-200"
+                                data-testid="TruncateEnd"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                Mainsail Wallet …
                               </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
                         <button

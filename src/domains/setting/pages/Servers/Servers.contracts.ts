@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { OptionProperties } from "@/app/components/SelectDropdown";
 
 interface ServersSettingsState {

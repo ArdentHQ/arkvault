@@ -11,7 +11,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { Button } from "@/app/components/Button";
 import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import { Modal } from "@/app/components/Modal";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
@@ -104,8 +104,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 	useEffect(() => {
 		const calculateFee = async () => {
-			const data = await buildTransferData({
-				coin: profile.coins().get(network.coin(), network.id()),
+			const data = buildTransferData({
 				recipients,
 			});
 

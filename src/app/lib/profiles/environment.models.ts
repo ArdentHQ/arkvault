@@ -1,8 +1,6 @@
-import { Coins, Http, Networks, Services } from "@/app/lib/sdk";
+import { Http, Networks, Services } from "@/app/lib/mainsail";
 
 import { IProfile } from "./profile.contract.js";
-
-export type CoinList = Record<string, Coins.CoinBundle>;
 
 export interface CoinType {
 	coin: string;
@@ -14,7 +12,6 @@ export interface CoinType {
 export type NetworkHostSelectorFactory = (profile: IProfile) => Networks.NetworkHostSelector;
 
 export interface EnvironmentOptions {
-	coins: CoinList;
 	storage: string | Storage;
 	hostSelector?: NetworkHostSelectorFactory;
 	httpClient: Http.HttpClient;

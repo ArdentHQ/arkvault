@@ -1,6 +1,6 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Signatories } from "@/app/lib/sdk";
+import { Signatories } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet, WalletData } from "./contracts.js";
 import { ISignatoryFactory, SignatoryInput } from "./signatory.factory.contract.js";
@@ -18,8 +18,6 @@ export class SignatoryFactory implements ISignatoryFactory {
 		secondMnemonic,
 		secret,
 		secondSecret,
-		wif,
-		privateKey,
 	}: SignatoryInput): Promise<Signatories.Signatory> {
 		if (mnemonic && secondMnemonic) {
 			return this.#wallet.signatory().confirmationMnemonic(mnemonic, secondMnemonic);
@@ -63,14 +61,6 @@ export class SignatoryFactory implements ISignatoryFactory {
 			}
 
 			return this.#wallet.signatory().ledger(derivationPath);
-		}
-
-		if (wif) {
-			return this.#wallet.signatory().wif(wif);
-		}
-
-		if (privateKey) {
-			return this.#wallet.signatory().privateKey(privateKey);
 		}
 
 		if (secret && secondSecret) {

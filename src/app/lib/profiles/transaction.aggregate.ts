@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 
 import { IProfile, IReadWriteWallet, ITransactionAggregate } from "./contracts.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
@@ -125,7 +125,10 @@ export class TransactionAggregate implements ITransactionAggregate {
 					const identifier = query.from ?? query.to;
 
 					if (typeof identifier === "string") {
-						return [wallet.address(), wallet.publicKey()].includes(identifier);
+						// identifier contains comma separated values
+						const identifiers = identifier.split(",");
+
+						return identifiers.some((id) => [wallet.address(), wallet.publicKey()].includes(id));
 					}
 				}
 

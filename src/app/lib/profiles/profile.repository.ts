@@ -8,18 +8,21 @@ import { ProfileFactory } from "./profile.factory.js";
 import { ProfileImporter } from "./profile.importer";
 import { ProfileInitialiser } from "./profile.initialiser";
 import { Profile } from "./profile.js";
+import { Environment } from "./environment.js";
 
 export class ProfileRepository implements IProfileRepository {
 	readonly #data: DataRepository;
+	readonly #env: Environment;
 
-	public constructor() {
+	public constructor(env: Environment) {
 		this.#data = new DataRepository();
+		this.#env = env;
 	}
 
 	/** {@inheritDoc IProfileRepository.fill} */
 	public fill(profiles: object): void {
 		for (const [id, profile] of Object.entries(profiles)) {
-			this.#data.set(id, new Profile(profile));
+			this.#data.set(id, new Profile(profile, this.#env));
 		}
 	}
 
@@ -73,7 +76,7 @@ export class ProfileRepository implements IProfileRepository {
 			throw new Error(`The profile [${name}] already exists.`);
 		}
 
-		const result: IProfile = ProfileFactory.fromName(name);
+		const result: IProfile = ProfileFactory.fromName(name, this.#env);
 
 		this.push(result);
 
@@ -88,14 +91,17 @@ export class ProfileRepository implements IProfileRepository {
 
 	/** {@inheritDoc IProfileRepository.import} */
 	public async import(data: string, password?: string): Promise<Profile> {
-		const result = new Profile({
-			data,
-			id: UUID.random(),
-			name: "",
-			password,
-		});
+		const result = new Profile(
+			{
+				data,
+				id: UUID.random(),
+				name: "",
+				password,
+			},
+			this.#env,
+		);
 
-		await new ProfileImporter(result).import(password);
+		await new ProfileImporter(result, this.#env).import(password);
 
 		return result;
 	}
@@ -107,7 +113,7 @@ export class ProfileRepository implements IProfileRepository {
 
 	/** {@inheritDoc IProfileRepository.restore} */
 	public async restore(profile: IProfile, password?: string): Promise<void> {
-		await new ProfileImporter(profile).import(password);
+		await new ProfileImporter(profile, this.#env).import(password);
 
 		profile.status().markAsRestored();
 	}

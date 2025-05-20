@@ -197,7 +197,7 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId(secretInputID), "secret.111");
+		await userEvent.clear(screen.getByTestId(secretInputID));
 		await userEvent.type(screen.getByTestId(secretInputID), "secret.111");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
@@ -407,7 +407,7 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
-		const findAdressSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
+		const findAdressSpy = vi.spyOn(profile.wallets(), "findByPublicKey").mockReturnValue({} as any);
 
 		await userEvent.clear(publicKeyInput());
 		await userEvent.type(publicKeyInput(), randomPublicKey);

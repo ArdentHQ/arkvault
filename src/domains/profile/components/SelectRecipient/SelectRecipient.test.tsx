@@ -42,13 +42,13 @@ describe("SelectRecipient", () => {
 	it("should update internal state when prop changes", () => {
 		const { container, rerender } = render(<SelectRecipient profile={profile} />);
 
-		rerender(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
+		rerender(<SelectRecipient profile={profile} address="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open and close contacts modal", async () => {
-		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
+		render(<SelectRecipient profile={profile} address="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -108,7 +108,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should select address from contacts modal", async () => {
-		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
+		render(<SelectRecipient profile={profile} address="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -136,7 +136,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should not open contacts modal if disabled", async () => {
-		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" disabled />);
+		render(<SelectRecipient profile={profile} address="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" disabled />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -146,7 +146,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should call onChange prop when entered address in input", async () => {
-		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";
+		const address = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 		const onChange = vi.fn();
@@ -174,7 +174,7 @@ describe("SelectRecipient", () => {
 			<SelectRecipient
 				profile={profile}
 				onChange={onChange}
-				address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
+				address="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
 			/>,
 		);
 
@@ -236,8 +236,8 @@ describe("SelectRecipient", () => {
 			<SelectRecipient
 				profile={profile}
 				onChange={function_}
-				address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
-				network={wallet.coin().network()}
+				address="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+				network={wallet.network()}
 			/>,
 		);
 

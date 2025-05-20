@@ -1,8 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { Networks } from "@/app/lib/sdk";
-import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
 
@@ -27,13 +25,7 @@ function Balance({ wallets }: { wallets: Contracts.IReadWriteWallet[] }) {
 	};
 }
 
-export function SelectedAddresses({
-	profile,
-	activeNetwork,
-}: {
-	profile: Contracts.IProfile;
-	activeNetwork: Networks.Network;
-}) {
+export function SelectedAddresses({ profile }: { profile: Contracts.IProfile }) {
 	return {
 		/**
 		 * Returns all the selected profile selected addresses.
@@ -41,23 +33,20 @@ export function SelectedAddresses({
 		 * @returns {string[]}
 		 */
 		all(): string[] {
-			const nethash = activeNetwork.meta().nethash;
-
 			const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {
 				selectedAddresses: [],
-				selectedAddressesByActiveNetwork: { [nethash]: [] },
 			}) as unknown as DashboardConfiguration;
 
-			if (!config.selectedAddressesByNetwork || !config.selectedAddressesByNetwork[nethash]) {
+			if (!config.selectedAddresses) {
 				return [];
 			}
 
-			const selectedAddresses = config.selectedAddressesByNetwork[nethash];
+			const selectedAddresses = config.selectedAddresses;
 
 			const profileAddresses = new Set(
 				profile
 					.wallets()
-					.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
+					.values()
 					.map((wallet) => wallet.address()),
 			);
 
@@ -109,10 +98,8 @@ export function SelectedAddresses({
 		 * @param {string[]} selectedAddresses
 		 * @returns {Promise<void>}
 		 */
-		set(selectedAddresses: string[], network?: Networks.Network): void {
-			const defaultConfig = { selectedAddressesByNetwork: { [activeNetwork.meta().nethash]: [] } };
-			const actingNetwork = network ?? activeNetwork;
-			const nethash = actingNetwork.meta().nethash;
+		set(selectedAddresses: string[]): void {
+			const defaultConfig = { selectedAddresses: [] };
 
 			const config = profile
 				.settings()
@@ -121,11 +108,11 @@ export function SelectedAddresses({
 					defaultConfig,
 				) as unknown as DashboardConfiguration;
 
-			if (!config.selectedAddressesByNetwork) {
-				config.selectedAddressesByNetwork = { [nethash]: [] };
+			if (!config.selectedAddresses) {
+				config.selectedAddresses = [];
 			}
 
-			config.selectedAddressesByNetwork[nethash] = selectedAddresses;
+			config.selectedAddresses = selectedAddresses;
 
 			profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, config);
 		},
@@ -147,7 +134,7 @@ export function SelectedAddresses({
 
 			return profile
 				.wallets()
-				.findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
+				.values()
 				.filter((wallet) => selected.includes(wallet.address()));
 		},
 	};
@@ -155,24 +142,23 @@ export function SelectedAddresses({
 
 export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { persist } = useEnvironmentContext();
-	const { activeNetwork } = useActiveNetwork({ profile });
-	const addresses = SelectedAddresses({ activeNetwork, profile });
+	const addresses = SelectedAddresses({ profile });
 	const wallets = addresses.toWallets();
 	const balance = Balance({ wallets });
 
 	return {
-		allWallets: profile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id()),
+		allWallets: profile.wallets().values(),
 		balance,
 		mode: addresses.mode(),
-		removeSelectedAddresses: async (selectedAddresses: string[], network: Networks.Network) => {
-			const selected = SelectedAddresses({ activeNetwork: network, profile });
+		removeSelectedAddresses: async (selectedAddresses: string[]) => {
+			const selected = SelectedAddresses({ profile });
 
 			const updated = selected.all().filter((address) => !selectedAddresses.includes(address));
 
-			addresses.set(updated, network);
+			addresses.set(updated);
 
 			if (!addresses.hasSelected() && profile.wallets().first()) {
-				addresses.set([profile.wallets().first().address()], network);
+				addresses.set([profile.wallets().first().address()]);
 			}
 
 			await persist();
@@ -184,11 +170,11 @@ export const usePortfolio = ({ profile }: { profile: Contracts.IProfile }) => {
 			addresses.setMode(mode);
 			await persist();
 		},
-		setSelectedAddresses: async (selectedAddresses: string[], network?: Networks.Network) => {
-			addresses.set(selectedAddresses, network);
+		setSelectedAddresses: async (selectedAddresses: string[]) => {
+			addresses.set(selectedAddresses);
 
 			if (!addresses.hasSelected() && profile.wallets().first()) {
-				addresses.set([profile.wallets().first().address()], network);
+				addresses.set([profile.wallets().first().address()]);
 			}
 
 			await persist();

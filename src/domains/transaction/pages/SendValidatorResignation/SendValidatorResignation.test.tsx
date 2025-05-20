@@ -5,16 +5,14 @@ import {
 	getMainsailProfileId,
 	render,
 	screen,
-	syncDelegates,
+	syncValidators,
 	syncFees,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
-
-import { BigNumber } from "@/app/lib/helpers";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 import { Contracts } from "@/app/lib/profiles";
-import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendValidatorResignation } from "./SendValidatorResignation";
@@ -23,6 +21,7 @@ import { expect } from "vitest";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
+import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -51,41 +50,10 @@ const renderPage = () => {
 };
 
 const transactionResponse = {
-	amount: () => +transactionFixture.data.amount / 1e18,
-	blockId: () => "1",
-	confirmations: () => 154_178,
-	convertedAmount: () => BigNumber.make(10),
-	data: () => ({ data: () => transactionFixture.data }),
-	explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${transactionFixture.data.id}`,
-	explorerLinkForBlock: () => `https://mainsail-explorer.ihost.org/block/${transactionFixture.data.blockId}`,
-	fee: () => BigNumber.make(0.000_106_4),
-	id: () => transactionFixture.data.id,
-	isConfirmed: () => true,
-	isDelegateRegistration: () => false,
-	isDelegateResignation: () => true,
-	isIpfs: () => false,
-	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
-	isReturn: () => false,
-	isSent: () => true,
-	isSuccess: () => true,
+	...signedTransactionMock,
 	isTransfer: () => false,
-	isUnvote: () => false,
-	isUsernameRegistration: () => false,
-	isUsernameResignation: () => false,
-	isValidatorRegistration: () => false,
 	isValidatorResignation: () => true,
-	isVote: () => false,
-	isVoteCombination: () => false,
-	memo: () => null,
-	nonce: () => BigNumber.make(1),
-	recipient: () => transactionFixture.data.recipient,
-	sender: () => transactionFixture.data.senderAddress,
-	timestamp: () => DateTime.make(),
-	total: () => +transactionFixture.data.amount / 1e8,
 	type: () => "validatorResignation",
-	usesMultiSignature: () => false,
-	wallet: () => wallet,
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -120,7 +88,6 @@ describe("SendValidatorResignation", () => {
 
 		vi.spyOn(wallet, "balance").mockReturnValue(1200);
 		vi.spyOn(wallet, "validatorPublicKey").mockReturnValue("validator-public-key");
-		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => false);
 
 		const config = profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration, {});
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, {
@@ -130,7 +97,7 @@ describe("SendValidatorResignation", () => {
 
 		await wallet.synchroniser().identity();
 
-		await syncDelegates(profile);
+		await syncValidators(profile);
 		await syncFees(profile);
 	});
 
@@ -144,13 +111,17 @@ describe("SendValidatorResignation", () => {
 			history.push(resignationUrl);
 
 			mnemonicMock = vi
-				.spyOn(wallet.coin().address(), "fromMnemonic")
-				.mockResolvedValue({ address: wallet.address() });
+				.spyOn(AddressService.prototype, "fromMnemonic")
+				.mockReturnValue({ address: wallet.address() });
 
 			server.use(
 				requestMock(
 					"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
 					transactionFixture,
+				),
+				requestMock(
+					"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
+					{ data: {} }, // Basic mock for block data
 				),
 			);
 		});
@@ -283,7 +254,7 @@ describe("SendValidatorResignation", () => {
 		it("should show error step and go back", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
 				throw new Error("broadcast error");
@@ -334,10 +305,10 @@ describe("SendValidatorResignation", () => {
 		it("should successfully sign and submit resignation transaction", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -380,10 +351,10 @@ describe("SendValidatorResignation", () => {
 		it("should successfully sign and submit resignation transaction with keyboard", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -424,10 +395,10 @@ describe("SendValidatorResignation", () => {
 		it("should click back button after successful submission", async () => {
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});
@@ -487,10 +458,10 @@ describe("SendValidatorResignation", () => {
 			const secondPublicKeyMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 			const signMock = vi
 				.spyOn(wallet.transaction(), "signValidatorResignation")
-				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+				.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-				accepted: [transactionFixture.data.id],
+				accepted: [transactionFixture.data.hash],
 				errors: {},
 				rejected: [],
 			});

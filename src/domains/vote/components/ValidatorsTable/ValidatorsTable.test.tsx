@@ -6,13 +6,13 @@ import { ValidatorsTable } from "./ValidatorsTable";
 import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
-import { data } from "@/tests/fixtures/coins/mainsail/devnet/delegates.json";
+import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
 let wallet: Contracts.IReadWriteWallet;
-let delegates: Contracts.IReadOnlyWallet[];
+let validators: Contracts.IReadOnlyWallet[];
 let votes: Contracts.VoteRegistryItem[];
 
 const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
@@ -27,23 +27,23 @@ describe("ValidatorsTable", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 
-		delegates = [0, 1, 2].map(
+		validators = [0, 1, 2].map(
 			(index) =>
 				new ReadOnlyWallet({
 					address: data[index].address,
 					explorerLink: "",
 					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
+					isResignedValidator: false,
+					isValidator: true,
 					publicKey: data[index].publicKey,
-					username: data[index].username,
+					username: data[index].attributes.username,
 				}),
 		);
 
 		votes = [
 			{
 				amount: 0,
-				wallet: delegates[0],
+				wallet: validators[0],
 			},
 		];
 	});
@@ -55,7 +55,7 @@ describe("ValidatorsTable", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -71,7 +71,7 @@ describe("ValidatorsTable", () => {
 	it("should render mobile view in XS screen", () => {
 		renderResponsive(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -89,7 +89,7 @@ describe("ValidatorsTable", () => {
 
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -105,7 +105,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	describe.each(["base", "requiresAmount"])("loading state for %s", (voteType) => {
-		it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+		it("should render when isCompact = %s", () => {
 			const votesAmountMinimumMock = vi
 				.spyOn(wallet.network(), "votesAmountMinimum")
 				.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
@@ -119,7 +119,6 @@ describe("ValidatorsTable", () => {
 					unvoteValidators={[]}
 					selectedWallet={wallet}
 					maxVotes={wallet.network().maximumVotesPerTransaction()}
-					isCompact={isCompact}
 				/>,
 			);
 
@@ -149,7 +148,7 @@ describe("ValidatorsTable", () => {
 	it("should render with subtitle", () => {
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -167,7 +166,7 @@ describe("ValidatorsTable", () => {
 	it("should select a validator to vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -190,7 +189,7 @@ describe("ValidatorsTable", () => {
 	it("should unselect a validator to vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -214,7 +213,7 @@ describe("ValidatorsTable", () => {
 	it("should select a validator to unvote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -240,13 +239,13 @@ describe("ValidatorsTable", () => {
 		const votes: Contracts.VoteRegistryItem[] = [
 			{
 				amount: 10,
-				wallet: delegates[0],
+				wallet: validators[0],
 			},
 		];
 
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -275,13 +274,13 @@ describe("ValidatorsTable", () => {
 		const votes: Contracts.VoteRegistryItem[] = [
 			{
 				amount: 20,
-				wallet: delegates[0],
+				wallet: validators[0],
 			},
 		];
 
 		const Table = () => (
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -343,7 +342,7 @@ describe("ValidatorsTable", () => {
 	it("should unselect a validator to unvote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -371,7 +370,7 @@ describe("ValidatorsTable", () => {
 	it("should select a validator to unvote/vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -393,10 +392,10 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select multiple delegates to unvote/vote", async () => {
+	it("should select multiple validators to unvote/vote", async () => {
 		const { asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -420,14 +419,14 @@ describe("ValidatorsTable", () => {
 		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegates[0].address(),
+				validatorAddress: validators[0].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				onContinue={onContinue}
 				voteValidators={[]}
@@ -452,20 +451,20 @@ describe("ValidatorsTable", () => {
 		const resignedDelegates: Contracts.VoteRegistryItem[] = [
 			{
 				amount: 0,
-				wallet: delegates[1],
+				wallet: validators[1],
 			},
 		];
 		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegates[1].address(),
+				validatorAddress: validators[1].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { asFragment, rerender } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				resignedValidatorVotes={resignedDelegates}
 				voteValidators={[]}
@@ -481,7 +480,7 @@ describe("ValidatorsTable", () => {
 
 		rerender(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				resignedValidatorVotes={resignedDelegates}
 				voteValidators={[]}
@@ -500,14 +499,14 @@ describe("ValidatorsTable", () => {
 		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegates[0].address(),
+				validatorAddress: validators[0].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={[]}
 				voteValidators={voteDelegates}
 				unvoteValidators={[]}
@@ -530,14 +529,14 @@ describe("ValidatorsTable", () => {
 		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegates[0].address(),
+				validatorAddress: validators[0].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				voteValidators={[]}
 				votes={[]}
 				unvoteValidators={unvoteDelegates}
@@ -560,20 +559,20 @@ describe("ValidatorsTable", () => {
 		const unvoteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegates[0].address(),
+				validatorAddress: validators[0].address(),
 			},
 		];
 		const voteDelegates: VoteValidatorProperties[] = [
 			{
 				amount: 0,
-				validatorAddress: delegates[1].address(),
+				validatorAddress: validators[1].address(),
 			},
 		];
 
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={voteDelegates}
 				unvoteValidators={unvoteDelegates}
@@ -605,7 +604,7 @@ describe("ValidatorsTable", () => {
 		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -627,7 +626,7 @@ describe("ValidatorsTable", () => {
 	});
 
 	it("should navigate to the next and previous pages according", async () => {
-		const delegatesList = Array.from({ length: 55 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+		const delegatesList = Array.from({ length: 55 }).fill(validators[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
 			<ValidatorsTable
@@ -654,13 +653,13 @@ describe("ValidatorsTable", () => {
 	});
 
 	it("should change pagination size from network validator count", async () => {
-		const delegateCountSpy = vi.spyOn(wallet.network(), "delegateCount").mockReturnValue(10);
+		const delegateCountSpy = vi.spyOn(wallet.network(), "validatorCount").mockReturnValue(10);
 
-		const delegatesList = Array.from({ length: 12 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+		const validatorsList = Array.from({ length: 12 }).fill(validators[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
 			<ValidatorsTable
-				validators={delegatesList}
+				validators={validatorsList}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
@@ -687,7 +686,7 @@ describe("ValidatorsTable", () => {
 	it("should not show pagination", () => {
 		render(
 			<ValidatorsTable
-				validators={delegates}
+				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}

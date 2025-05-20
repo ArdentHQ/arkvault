@@ -1,13 +1,12 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
-import { assertProfile, assertString } from "@/utils/assertions";
 
 interface Properties {
 	address: string;
 	network?: Networks.Network;
-	profile?: Contracts.IProfile;
+	profile: Contracts.IProfile;
 }
 
 interface WalletAliasResult {
@@ -32,13 +31,10 @@ const useWalletAlias = (): HookResult => {
 	const getWalletAlias = useCallback(
 		({ address, profile, network }: Properties) => {
 			try {
-				assertProfile(profile);
-				assertString(address);
-
-				if (network && env.knownWallets().is(network.id(), address)) {
+				if (network && profile.knownWallets().is(network.id(), address)) {
 					return {
 						address,
-						alias: env.knownWallets().name(network.id(), address),
+						alias: profile.knownWallets().name(network.id(), address),
 						isContact: false,
 					};
 				}
@@ -51,7 +47,7 @@ const useWalletAlias = (): HookResult => {
 
 				if (network) {
 					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-					onChainUsername = env.usernames().username(network.id(), address);
+					onChainUsername = profile.usernames().username(network.id(), address);
 				}
 
 				const localName = wallet ? wallet.displayName() : undefined;
@@ -81,20 +77,8 @@ const useWalletAlias = (): HookResult => {
 	);
 
 	const syncOnChainUsernames = useCallback(
-		async ({
-			profile,
-			networks,
-			addresses,
-		}: {
-			profile: Contracts.IProfile;
-			networks: Networks.Network[];
-			addresses: string[];
-		}) => {
-			for (const network of networks) {
-				const coin = profile.coins().get(network.coin(), network.id());
-				await coin.__construct();
-				await env.usernames().syncUsernames(profile, network.coin(), network.id(), addresses);
-			}
+		async ({ profile, addresses }: { profile: Contracts.IProfile; addresses: string[] }) => {
+			await profile.usernames().syncUsernames(addresses);
 		},
 		[env],
 	);

@@ -3,6 +3,7 @@ import { Base64 } from "@ardenthq/arkvault-crypto";
 
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
+import { manifest } from "@/app/lib/mainsail";
 
 export const bootEnvironmentWithProfileFixtures = async ({
 	env,
@@ -20,6 +21,7 @@ export const bootEnvironmentWithProfileFixtures = async ({
 		const password: string = TestingPasswords?.profiles[id]?.password;
 
 		const profileData = { id, ...fixtureProfiles[id] };
+		profileData.networks = manifest.networks;
 		let data = Base64.encode(JSON.stringify(profileData));
 
 		if (password) {

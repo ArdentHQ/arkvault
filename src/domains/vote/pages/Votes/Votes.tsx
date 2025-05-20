@@ -108,7 +108,7 @@ export const Votes: FC = () => {
 	useEffect(() => {
 		const syncVotes = async () => {
 			if (selectedWallet) {
-				await env.validators().sync(activeProfile, selectedWallet.coinId(), selectedWallet.networkId());
+				await activeProfile.validators().sync(activeProfile, selectedWallet.networkId());
 				await selectedWallet.synchroniser().votes();
 			}
 		};

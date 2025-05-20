@@ -1,4 +1,4 @@
-import { Services, Signatories } from "@/app/lib/sdk";
+import { Services, Signatories } from "@/app/lib/mainsail";
 import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {
@@ -7,7 +7,7 @@ const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWri
 	let signatory = wallet.publicKey();
 
 	if (!signatory) {
-		signatory = await wallet.coin().ledger().getPublicKey(path!);
+		signatory = await wallet.ledger().getPublicKey(path!);
 	}
 
 	const signature = await wallet.ledger().signMessage(path!, message);

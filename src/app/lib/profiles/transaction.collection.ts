@@ -1,8 +1,7 @@
-import { Collections } from "@/app/lib/sdk";
-
+import { Paginator } from "@/app/lib/mainsail/collections.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 
-export class ExtendedConfirmedTransactionDataCollection extends Collections.Paginator<ExtendedConfirmedTransactionData> {
+export class ExtendedConfirmedTransactionDataCollection extends Paginator<ExtendedConfirmedTransactionData> {
 	public findById(hash: string): ExtendedConfirmedTransactionData | undefined {
 		return this.#find("hash", hash);
 	}
