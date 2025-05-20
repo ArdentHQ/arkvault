@@ -472,10 +472,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 67.14
-                  COVERAGE_THRESHOLD_FUNCTIONS: 59.3
-                  COVERAGE_THRESHOLD_STATEMENTS: 66.78
-                  COVERAGE_THRESHOLD_BRANCHES: 61.04
+                  COVERAGE_THRESHOLD_LINES: 85.71
+                  COVERAGE_THRESHOLD_FUNCTIONS: 85.29
+                  COVERAGE_THRESHOLD_STATEMENTS: 85.66
+                  COVERAGE_THRESHOLD_BRANCHES: 77.14
                   COVERAGE_INCLUDE_PATH: src/domains/portfolio
               with:
                   timeout_minutes: 10
