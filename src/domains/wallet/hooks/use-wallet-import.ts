@@ -1,6 +1,5 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import { useTranslation } from "react-i18next";
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias, getLedgerDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -26,7 +25,6 @@ type ImportOptionsType = {
 };
 
 export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { t } = useTranslation();
 	const { env, persist } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const { setSelectedAddresses, selectedAddresses } = usePortfolio({ profile });
@@ -37,13 +35,11 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		network,
 		type,
 		value,
-		encryptedWif,
 		ledgerOptions,
 	}: {
 		network: Networks.Network;
 		type: string;
 		value: WalletGenerationInput;
-		encryptedWif?: string;
 		ledgerOptions?: {
 			deviceId: string;
 			path: string;
@@ -118,48 +114,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 						publicKey: value,
 					}),
 				),
-			[OptionsValue.PRIVATE_KEY]: async () =>
-				profile.wallets().push(
-					await profile.walletFactory().fromPrivateKey({
-						...defaultOptions,
-						privateKey: value,
-					}),
-				),
-			[OptionsValue.WIF]: async () =>
-				profile.wallets().push(
-					await profile.walletFactory().fromWIF({
-						...defaultOptions,
-						wif: value,
-					}),
-				),
-			[OptionsValue.ENCRYPTED_WIF]: async () =>
-				new Promise((resolve, reject) => {
-					// `setTimeout` being used here to avoid blocking the thread
-					// as the decryption is a expensive calculation
-					setTimeout(() => {
-						profile
-							.walletFactory()
-							.fromWIF({
-								...defaultOptions,
-								password: value,
-								wif: encryptedWif!,
-							})
-							.then((wallet) => {
-								profile.wallets().push(wallet);
-								return resolve(wallet);
-							})
-							.catch((error) => {
-								/* istanbul ignore next -- @preserve */
-								if (error.code === "ERR_ASSERTION") {
-									return reject(
-										new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.DECRYPT_WIF_ASSERTION")),
-									);
-								}
-
-								reject(error);
-							});
-					}, 0);
-				}),
 			[OptionsValue.SECRET]: async () =>
 				profile.wallets().push(
 					await profile.walletFactory().fromSecret({
@@ -178,20 +132,17 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		network,
 		value,
 		type,
-		encryptedWif,
 		ledgerOptions,
 	}: {
 		value: WalletGenerationInput;
 		network: Networks.Network;
 		type: string;
-		encryptedWif?: string;
 		ledgerOptions?: {
 			deviceId: string;
 			path: string;
 		};
 	}): Promise<Contracts.IReadWriteWallet> => {
 		const wallet = await importWalletByType({
-			encryptedWif,
 			ledgerOptions,
 			network,
 			type,
@@ -216,12 +167,10 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	const importWallets = async ({
 		value,
 		type,
-		encryptedWif,
 		ledgerOptions,
 	}: {
 		value: WalletGenerationInput;
 		type: string;
-		encryptedWif?: string;
 		ledgerOptions?: {
 			deviceId: string;
 			path: string;
@@ -230,7 +179,6 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
 		const wallet = await importWallet({
-			encryptedWif,
 			ledgerOptions,
 			network: profile.activeNetwork(),
 			type,

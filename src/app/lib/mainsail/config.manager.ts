@@ -1,8 +1,7 @@
 import deepmerge from "deepmerge";
 
-import { IMilestone } from "@/app/lib/mainsail/crypto/interfaces/index";
-import { NetworkConfig } from "@/app/lib/mainsail/crypto/interfaces/networks";
 import { assocPath, path } from "rambda";
+import { NetworkConfig, IMilestone } from "./contracts";
 
 export interface MilestoneSearchResult {
 	found: boolean;

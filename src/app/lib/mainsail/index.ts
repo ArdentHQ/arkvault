@@ -1,4 +1,4 @@
-export { configManager } from "./crypto/managers/config.js";
+export { configManager } from "./config.manager";
 export * from "./helpers/format-units";
 export * from "./helpers/parse-units";
 export { manifest } from "./manifest";

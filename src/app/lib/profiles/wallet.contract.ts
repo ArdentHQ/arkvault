@@ -24,7 +24,6 @@ import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { Manifest } from "@/app/lib/mainsail/manifest.class";
-import { WIFService } from "@/app/lib/mainsail/wif.service.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -444,23 +443,7 @@ export interface IReadWriteWallet {
 	 * @return {Services.IdentityService}
 	 * @memberof IReadWriteWallet
 	 */
-	privateKeyService(): Services.PrivateKeyService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {Services.IdentityService}
-	 * @memberof IReadWriteWallet
-	 */
 	publicKeyService(): PublicKeyService;
-
-	/**
-	 * Get the identity service instance.
-	 *
-	 * @return {WIFService}
-	 * @memberof IReadWriteWallet
-	 */
-	wifService(): WIFService;
 
 	/**
 	 * Get the ledger service instance.
@@ -674,14 +657,6 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	actsWithPublicKey(): boolean;
-
-	/**
-	 * Determines if the wallet has been imported with a private key.
-	 *
-	 * @return {*}  {boolean}
-	 * @memberof IReadWriteWallet
-	 */
-	actsWithPrivateKey(): boolean;
 
 	/**
 	 * Determines if the wallet has been imported with an address with a derivation path.
