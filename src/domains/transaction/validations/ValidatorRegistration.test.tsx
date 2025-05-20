@@ -42,8 +42,14 @@ describe("Register validator validation", () => {
 		// Emulate public key hasn't used
 		server.use(
 			requestMock(
-				`https://dwallets-evm.mainsailhq.com/api?attributes.validatorPublicKey=a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118`,
+				"https://dwallets-evm.mainsailhq.com/api",
 				{ meta: { count: 0 } },
+				{
+					query: {
+						"attributes.validatorPublicKey":
+							"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
+					},
+				},
 			),
 		);
 
@@ -60,8 +66,14 @@ describe("Register validator validation", () => {
 		// Emulate public key has used
 		server.use(
 			requestMock(
-				`https://dwallets-evm.mainsailhq.com/api?attributes.validatorPublicKey=a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118`,
+				"https://dwallets-evm.mainsailhq.com/api",
 				{ meta: { count: 1 } },
+				{
+					query: {
+						"attributes.validatorPublicKey":
+							"a08058db53e2665c84a40f5152e76dd2b652125a6079130d4c315e728bcf4dd1dfb44ac26e82302331d61977d3141118",
+					},
+				},
 			),
 		);
 
