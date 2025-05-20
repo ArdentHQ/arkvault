@@ -49,18 +49,21 @@ const NodeStatusNode: React.VFC<{
 		setIsTxHostOnline(txHostStatus);
 		setIsEvmHostOnline(evmHostStatus);
 
+		const networkId = network.id();
 		const updatedServerStatus = { ...serverStatus };
 
 		/* istanbul ignore next -- @preserve */
-		if (updatedServerStatus[network.id()] === undefined) {
-			updatedServerStatus[network.id()] = {};
+		if (updatedServerStatus[networkId] === undefined) {
+			updatedServerStatus[networkId] = {};
 		}
 
-		// updatedServerStatus[network.id()][host.host] = result.status === "fulfilled" && result.value === true;
-		//
-		// setConfiguration(profile.id(), {
-		// 	serverStatus: updatedServerStatus,
-		// });
+		updatedServerStatus[networkId][publicHost.host] = publicHostStatus;
+		updatedServerStatus[networkId][txHost.host] = txHostStatus;
+		updatedServerStatus[networkId][evmHost.host] = evmHostStatus;
+
+		setConfiguration(profile.id(), {
+			serverStatus: updatedServerStatus,
+		});
 	}, [network]);
 
 	useEffect(() => {

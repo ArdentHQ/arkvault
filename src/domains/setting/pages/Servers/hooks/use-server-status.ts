@@ -16,7 +16,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 
 	const { serverStatus: serverStatusByNetwork } = getProfileConfiguration(profile.id());
 
-	const updateConfiguration = (key: string, endpoint: string, isOnline: boolean) => {
+	const updateConfiguration = (endpoint: string, isOnline: boolean) => {
 		const updatedServerStatus = { ...serverStatusByNetwork };
 
 		/* istanbul ignore next -- @preserve */
@@ -27,7 +27,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 		updatedServerStatus[network.network.id()][endpoint] = isOnline;
 
 		setConfiguration(profile.id(), {
-			[key]: updatedServerStatus,
+			serverStatus: updatedServerStatus,
 		});
 	};
 
@@ -50,7 +50,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 			});
 		}
 
-		updateConfiguration("publicApi", network.publicApiEndpoint, isOnline);
+		updateConfiguration(network.publicApiEndpoint, isOnline);
 	}, [profile, network]);
 
 	const syncTxApiStatus = useCallback(async () => {
@@ -64,7 +64,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 		}
 
 		setTxApiStatus(isOnline);
-		updateConfiguration("transactionApi", network.transactionApiEndpoint, isOnline);
+		updateConfiguration(network.transactionApiEndpoint, isOnline);
 	}, [profile, network]);
 
 	const syncEvmApiStatus = useCallback(async () => {
@@ -79,7 +79,7 @@ export const useServerStatus = ({ profile, network }: { profile: Contracts.IProf
 
 		setEvmApiStatus(isOnline);
 
-		updateConfiguration("evmApi", network.evmApiEndpoint, isOnline);
+		updateConfiguration(network.evmApiEndpoint, isOnline);
 	}, [profile, network]);
 
 	return {
