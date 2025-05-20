@@ -390,7 +390,11 @@ describe("Servers Settings", () => {
 
 				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
 
-				expect(screen.getByText(/The Public API is experiencing issues, please check on socials for more information/)).toBeInTheDocument();
+				expect(
+					screen.getByText(
+						/The Public API is experiencing issues, please check on socials for more information/,
+					),
+				).toBeInTheDocument();
 			});
 
 			it("should display error message when 2 hosts are failing", async () => {
@@ -418,7 +422,11 @@ describe("Servers Settings", () => {
 
 				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
 
-				expect(screen.getByText(/The Public API and EVM API are experiencing issues, please check on socials for more information/)).toBeInTheDocument();
+				expect(
+					screen.getByText(
+						/The Public API and EVM API are experiencing issues, please check on socials for more information/,
+					),
+				).toBeInTheDocument();
 			});
 
 			it("should display error message when all hosts are failing", async () => {
@@ -446,7 +454,11 @@ describe("Servers Settings", () => {
 
 				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
 
-				expect(screen.getByText(/Default nodes are experiencing issues, please check on socials for more information/)).toBeInTheDocument();
+				expect(
+					screen.getByText(
+						/Default nodes are experiencing issues, please check on socials for more information/,
+					),
+				).toBeInTheDocument();
 			});
 
 			it("should load the node statuses with error if the response is invalid json", async () => {
