@@ -31,7 +31,7 @@ describe("LedgerTabs", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let ledgerWallet: Contracts.IReadWriteWallet;
 	let onClickEditWalletName: vi.Mock;
-	let getVersionSpy: vi.SpyInstance | null = null;
+	let getVersionSpy: vi.SpyInstance;
 
 	let publicKeyPaths = new Map<string, string>();
 
@@ -43,17 +43,17 @@ describe("LedgerTabs", () => {
 		wallet = profile.wallets().first();
 
 		const mockLedger = {
-			getVersion: vi.fn().mockResolvedValue(minVersionList[wallet.network().coin]),
+			__construct: vi.fn(),
 			getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()),
 			getPublicKey: vi.fn(),
+			getVersion: vi.fn().mockResolvedValue(minVersionList[wallet.network().coin]),
 			scan: vi.fn(),
-			__construct: vi.fn()
 		};
 
 		if (!wallet.coin) {
 			wallet.coin = {};
 		}
-		
+
 		wallet.coin.ledger = () => mockLedger;
 
 		ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
@@ -104,7 +104,7 @@ describe("LedgerTabs", () => {
 
 		try {
 			const result = mockProfileWithPublicAndTestNetworks(profile);
-			if (typeof result === 'function') {
+			if (typeof result === "function") {
 				resetProfileNetworksMock = result;
 			}
 		} catch (error) {

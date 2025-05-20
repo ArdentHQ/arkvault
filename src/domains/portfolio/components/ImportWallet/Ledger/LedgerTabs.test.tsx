@@ -27,9 +27,9 @@ vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
 }));
 
-const nextSelector = () => screen.queryByTestId("ImportWallet__continue-button")
-const backSelector = () => screen.queryByTestId("ImportWallet__back-button")
-const finishSelector = () => screen.queryByTestId("ImportWallet__finish-button")
+const nextSelector = () => screen.queryByTestId("ImportWallet__continue-button");
+const backSelector = () => screen.queryByTestId("ImportWallet__back-button");
+const accessorErrorMessage = "Invalid coin accessor structure";
 
 let resetProfileNetworksMock = () => {};
 
@@ -41,16 +41,8 @@ describe("LedgerTabs", () => {
 	let getVersionSpy: vi.SpyInstance;
 
 	let publicKeyPaths = new Map<string, string>();
-	let mockFindWallet: vi.SpyInstance;
 
-	beforeAll(async () => {
-		process.env.MOCK_AVAILABLE_NETWORKS = "false";
-		profile = env.profiles().findById(getDefaultProfileId());
-		await env.profiles().restore(profile);
-		await profile.sync();
-
-		wallet = profile.wallets().first();
-
+	const setupLedgerWallet = async () => {
 		ledgerWallet = await profile.walletFactory().fromAddressWithDerivationPath({
 			address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
 			coin: "ARK",
@@ -69,73 +61,59 @@ describe("LedgerTabs", () => {
 		);
 
 		await ledgerWallet.synchroniser().identity();
+	};
 
+	const setupGetVersionSpy = () => {
 		try {
-			if (typeof wallet.coin === 'function') {
-				if (wallet.coin().ledger && typeof wallet.coin().ledger === 'function') {
-					getVersionSpy = vi
+			if (typeof wallet.coin === "function") {
+				if (wallet.coin().ledger && typeof wallet.coin().ledger === "function") {
+					return vi
 						.spyOn(wallet.coin().ledger(), "getVersion")
 						.mockResolvedValue(minVersionList[wallet.network().coin()]);
 				}
-			} else if (wallet.coin && wallet.coin.ledger && typeof wallet.coin.ledger === 'function') {
-				getVersionSpy = vi
+			} else if (wallet.coin && wallet.coin.ledger && typeof wallet.coin.ledger === "function") {
+				return vi
 					.spyOn(wallet.coin.ledger(), "getVersion")
 					.mockResolvedValue(minVersionList[wallet.network().coin()]);
 			}
 		} catch (error) {
 			console.error("Failed to set up getVersionSpy:", error);
-			getVersionSpy = vi.fn();
 		}
+		return vi.fn();
+	};
 
-		await wallet.synchroniser().identity();
-
-		onClickEditWalletName = vi.fn();
-
-		publicKeyPaths = new Map([
-			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
-			["m/44'/1'/0'/0/1", "03d3fdad9c5b25bf8880e6b519eb3611a5c0b331adebc8455f0e096175b28321aff"],
-			["m/44'/1'/0'/0/2", "025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca"],
-			["m/44'/1'/0'/0/3", "024d5eacc5e05e1b05c476b367b7d072857826d9b271e07d3a3327224db8892a21"],
-			["m/44'/1'/0'/0/4", ledgerWallet.publicKey()!],
-
-			["m/44'/1'/1'/0/0", wallet.publicKey()!],
-			["m/44'/1'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
-			["m/44'/1'/3'/0/0", "033a5474f68f92f254691e93c06a2f22efaf7d66b543a53efcece021819653a200"],
-			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
-		]);
-
-		let coinAccessor;
+	const setupCoinAccessor = () => {
 		try {
-			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+			const coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
+			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
+				throw new Error(accessorErrorMessage);
 			}
-		} catch (error) {
-			console.error("Failed to access coin:", error);
-			coinAccessor = {
-				ledger: () => ({ 
-					getPublicKey: vi.fn().mockResolvedValue(""),
+			return coinAccessor;
+		} catch {
+			return {
+				__construct: vi.fn(),
+				ledger: () => ({
 					getExtendedPublicKey: vi.fn().mockResolvedValue(""),
+					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					})
+					}),
 				}),
-				__construct: vi.fn()
 			};
 		}
-		
-		vi.spyOn(coinAccessor, "__construct").mockImplementation(vi.fn());
-		
+	};
+
+	const setupLedgerObj = (coinAccessor: any) => {
 		const ledgerObj = coinAccessor.ledger();
-		
-		if (typeof ledgerObj.getExtendedPublicKey === 'function') {
+
+		if (typeof ledgerObj.getExtendedPublicKey === "function") {
 			vi.spyOn(ledgerObj, "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 		} else {
 			ledgerObj.getExtendedPublicKey = vi.fn().mockResolvedValue(wallet.publicKey()!);
 		}
-		
-		if (typeof ledgerObj.scan === 'function') {
+
+		if (typeof ledgerObj.scan === "function") {
 			vi.spyOn(ledgerObj, "scan").mockImplementation(({ onProgress }) => {
 				onProgress(wallet);
 				return {
@@ -150,10 +128,39 @@ describe("LedgerTabs", () => {
 				};
 			});
 		}
+	};
+
+	beforeAll(async () => {
+		process.env.MOCK_AVAILABLE_NETWORKS = "false";
+		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		wallet = profile.wallets().first();
+		await setupLedgerWallet();
+		getVersionSpy = setupGetVersionSpy();
+		await wallet.synchroniser().identity();
+		onClickEditWalletName = vi.fn();
+
+		publicKeyPaths = new Map([
+			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
+			["m/44'/1'/0'/0/1", "03d3fdad9c5b25bf8880e6b519eb3611a5c0b331adebc8455f0e096175b28321aff"],
+			["m/44'/1'/0'/0/2", "025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca"],
+			["m/44'/1'/0'/0/3", "024d5eacc5e05e1b05c476b367b7d072857826d9b271e07d3a3327224db8892a21"],
+			["m/44'/1'/0'/0/4", ledgerWallet.publicKey()!],
+			["m/44'/1'/1'/0/0", wallet.publicKey()!],
+			["m/44'/1'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
+			["m/44'/1'/3'/0/0", "033a5474f68f92f254691e93c06a2f22efaf7d66b543a53efcece021819653a200"],
+			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
+		]);
+
+		const coinAccessor = setupCoinAccessor();
+		vi.spyOn(coinAccessor, "__construct").mockImplementation(vi.fn());
+		setupLedgerObj(coinAccessor);
 
 		try {
 			resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-			if (typeof resetProfileNetworksMock !== 'function') {
+			if (typeof resetProfileNetworksMock !== "function") {
 				console.warn("mockProfileWithPublicAndTestNetworks did not return a function");
 				resetProfileNetworksMock = () => {};
 			}
@@ -183,11 +190,11 @@ describe("LedgerTabs", () => {
 	});
 
 	afterAll(() => {
-		if (getVersionSpy && typeof getVersionSpy.mockRestore === 'function') {
+		if (getVersionSpy && typeof getVersionSpy.mockRestore === "function") {
 			getVersionSpy.mockRestore();
 		}
-		
-		if (typeof resetProfileNetworksMock === 'function') {
+
+		if (typeof resetProfileNetworksMock === "function") {
 			resetProfileNetworksMock();
 		} else {
 			console.warn("resetProfileNetworksMock is not a function");
@@ -230,108 +237,113 @@ describe("LedgerTabs", () => {
 
 	it("should load more address", async () => {
 		const mockLedgerObj = {
-		  getPublicKey: vi.fn().mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || "")),
-		  getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
-		  scan: vi.fn().mockImplementation(({ onProgress }) => {
-			onProgress && onProgress(wallet);
-			return { "m/44'/1'/0'/0/0": wallet.toData() };
-		  })
+			getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
+			getPublicKey: vi.fn().mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || "")),
+			scan: vi.fn().mockImplementation(({ onProgress }) => {
+				onProgress && onProgress(wallet);
+				return { "m/44'/1'/0'/0/0": wallet.toData() };
+			}),
 		};
-		
+
 		const mockCoinAccessor = {
-		  ledger: () => mockLedgerObj,
-		  __construct: vi.fn()
+			__construct: vi.fn(),
+			ledger: () => mockLedgerObj,
 		};
-		
+
 		const scanSpy = vi.spyOn(mockLedgerObj, "scan");
-		
+
 		let originalCoin;
-		if (typeof wallet.coin === 'function') {
-		  originalCoin = wallet.coin;
-		  wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
+		if (typeof wallet.coin === "function") {
+			originalCoin = wallet.coin;
+			wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
 		} else {
-		  originalCoin = wallet.coin;
-		  wallet.coin = mockCoinAccessor;
+			originalCoin = wallet.coin;
+			wallet.coin = mockCoinAccessor;
 		}
-		
+
 		const ledgerTransportMock = mockNanoXTransport();
-		
+
 		await mockLedgerObj.scan({ onProgress: () => {} });
-		
-		render(<Component activeIndex={2} />, { 
-		  route: `/profiles/${profile.id()}` 
+
+		render(<Component activeIndex={2} />, {
+			route: `/profiles/${profile.id()}`,
 		});
-	  
-		await waitFor(() => {
-		  expect(screen.queryByTestId("LedgerTabs")).not.toBeNull();
-		}, { timeout: 2000 });
-	  
+
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("LedgerTabs")).toBeInTheDocument();
+			},
+			{ timeout: 2000 },
+		);
+
 		if (scanSpy.mock.calls.length > 0) {
-		  expect(scanSpy).toHaveBeenCalled();
+			expect(scanSpy).toHaveBeenCalled();
 		} else {
-		  console.log("Scan was not called by component, skipping assertion");
+			console.log("Scan was not called by component, skipping assertion");
 		}
-	  
-		const scanMoreButton = screen.queryByTestId("LedgerScanStep__scan-more") || 
-							  screen.queryByTestId("LedgerConnectionStep__retry-button");
-		
+
+		const scanMoreButton =
+			screen.queryByTestId("LedgerScanStep__scan-more") ||
+			screen.queryByTestId("LedgerConnectionStep__retry-button");
+
 		if (scanMoreButton) {
-		  await userEvent.click(scanMoreButton);
+			await userEvent.click(scanMoreButton);
 		}
-	  
+
 		if (scanSpy.mock.calls.length > 1) {
-		  expect(scanSpy).toHaveBeenCalled();
+			expect(scanSpy).toHaveBeenCalled();
 		}
-	  
+
 		if (originalCoin) {
-		  wallet.coin = originalCoin;
+			wallet.coin = originalCoin;
 		}
-		
+
 		ledgerTransportMock.mockRestore();
-	  });
+	});
 
 	it("should render scan step", async () => {
 		let coinAccessor;
 		try {
-			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
+			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
+				throw new Error(accessorErrorMessage);
 			}
-		} catch (error) {
-			console.error("Failed to access coin in test:", error);
+		} catch {
 			coinAccessor = {
-				ledger: () => ({ 
+				ledger: () => ({
 					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}) 
-				})
+					}),
+				}),
 			};
 		}
-		
+
 		const ledgerObj = coinAccessor.ledger();
-		
+
 		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === 'function') {
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey")
+		if (typeof ledgerObj.getPublicKey === "function") {
+			getPublicKeySpy = vi
+				.spyOn(ledgerObj, "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 		} else {
-			ledgerObj.getPublicKey = vi.fn()
+			ledgerObj.getPublicKey = vi
+				.fn()
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
 		}
 
 		const ledgerTransportMock = mockNanoXTransport();
-		const { container } = render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		await waitFor(() => {
-			const componentExists = 
+			const componentExists =
 				screen.queryByTestId("SelectNetwork") ||
 				screen.queryByTestId("NetworkStep") ||
 				screen.queryByTestId("LedgerConnectionStep") ||
 				screen.queryByTestId("LedgerScanStep");
-			
+
 			expect(componentExists).not.toBeNull();
 		});
 
@@ -341,10 +353,8 @@ describe("LedgerTabs", () => {
 		}
 
 		await waitFor(() => {
-			const step = 
-				screen.queryByTestId("LedgerScanStep") || 
-				screen.queryByTestId("LedgerConnectionStep");
-				
+			const step = screen.queryByTestId("LedgerScanStep") || screen.queryByTestId("LedgerConnectionStep");
+
 			expect(step).not.toBeNull();
 		});
 
@@ -355,31 +365,32 @@ describe("LedgerTabs", () => {
 	it("should filter unallowed network", async () => {
 		let coinAccessor;
 		try {
-			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
+			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
+				throw new Error(accessorErrorMessage);
 			}
-		} catch (error) {
-			console.error("Failed to access coin in test:", error);
+		} catch {
 			coinAccessor = {
-				ledger: () => ({ 
+				ledger: () => ({
 					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}) 
-				})
+					}),
+				}),
 			};
 		}
-		
+
 		const ledgerObj = coinAccessor.ledger();
-		
+
 		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === 'function') {
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey")
+		if (typeof ledgerObj.getPublicKey === "function") {
+			getPublicKeySpy = vi
+				.spyOn(ledgerObj, "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 		} else {
-			ledgerObj.getPublicKey = vi.fn()
+			ledgerObj.getPublicKey = vi
+				.fn()
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
 		}
@@ -393,15 +404,11 @@ describe("LedgerTabs", () => {
 
 		const ledgerTransportMock = mockNanoXTransport();
 
-		await act(async () => {
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-		});
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		try {
-			await expect(
-				screen.findByTestId("NetworkOption", {}, { timeout: 1000 })
-			).rejects.toThrow(/Unable to find/);
-		} catch (error) {
+			await expect(screen.findByTestId("NetworkOption", {}, { timeout: 1000 })).rejects.toThrow(/Unable to find/);
+		} catch {
 			const networkOptionElement = screen.queryByTestId("NetworkOption");
 			expect(networkOptionElement).toBeNull();
 		}
@@ -415,31 +422,32 @@ describe("LedgerTabs", () => {
 	it("should render connection step", async () => {
 		let coinAccessor;
 		try {
-			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
+			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
+				throw new Error(accessorErrorMessage);
 			}
-		} catch (error) {
-			console.error("Failed to access coin in test:", error);
+		} catch {
 			coinAccessor = {
-				ledger: () => ({ 
+				ledger: () => ({
 					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}) 
-				})
+					}),
+				}),
 			};
 		}
-		
+
 		const ledgerObj = coinAccessor.ledger();
-		
+
 		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === 'function') {
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey")
+		if (typeof ledgerObj.getPublicKey === "function") {
+			getPublicKeySpy = vi
+				.spyOn(ledgerObj, "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 		} else {
-			ledgerObj.getPublicKey = vi.fn()
+			ledgerObj.getPublicKey = vi
+				.fn()
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
 		}
@@ -469,11 +477,11 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => {
 			const anyStepVisible = [
-				screen.queryByTestId("SelectNetwork"), 
+				screen.queryByTestId("SelectNetwork"),
 				screen.queryByTestId("NetworkStep"),
-				screen.queryByTestId("LedgerConnectionStep")
-			].some(el => el !== null);
-			
+				screen.queryByTestId("LedgerConnectionStep"),
+			].some((el) => el !== null);
+
 			expect(anyStepVisible).toBeTruthy();
 		});
 
@@ -514,11 +522,11 @@ describe("LedgerTabs", () => {
 		}
 
 		await waitFor(() => {
-			const step = 
-				screen.queryByTestId("LedgerScanStep") || 
+			const step =
+				screen.queryByTestId("LedgerScanStep") ||
 				screen.queryByTestId("LedgerConnectionStep") ||
 				screen.queryByTestId("NetworkStep");
-				
+
 			expect(step).not.toBeNull();
 		});
 
@@ -536,7 +544,7 @@ describe("LedgerTabs", () => {
 		try {
 			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
 			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+				throw new Error(accessorErrorMessage);
 			}
 		} catch (error) {
 			console.error("Failed to access coin in test:", error);
@@ -617,92 +625,102 @@ describe("LedgerTabs", () => {
 	it("should go back and render disconnected state", async () => {
 		const ledgerTransportMock = mockLedgerTransportError();
 
-		const { container } = render(<Component activeIndex={1} />, {
+		render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
 		});
 
 		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
-		
+
 		ledgerTransportMock.mockRestore();
 	});
 
 	it("should render scan step with failing fetch", async () => {
 		const scanError = new Error("Scan Failed");
-		
+
 		const mockLedgerObj = {
-		  getPublicKey: vi.fn().mockResolvedValue(publicKeyPaths.values().next().value || ""),
-		  getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
-		  scan: vi.fn().mockRejectedValue(scanError)
+			getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
+			getPublicKey: vi.fn().mockResolvedValue(publicKeyPaths.values().next().value || ""),
+			scan: vi.fn().mockRejectedValue(scanError),
 		};
-		
+
 		const mockCoinAccessor = {
-		  ledger: () => mockLedgerObj,
-		  __construct: vi.fn()
+			__construct: vi.fn(),
+			ledger: () => mockLedgerObj,
 		};
-		
+
 		let originalCoin;
-		if (typeof wallet.coin === 'function') {
-		  originalCoin = wallet.coin;
-		  wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
+		if (typeof wallet.coin === "function") {
+			originalCoin = wallet.coin;
+			wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
 		} else {
-		  originalCoin = wallet.coin;
-		  wallet.coin = mockCoinAccessor;
+			originalCoin = wallet.coin;
+			wallet.coin = mockCoinAccessor;
 		}
-		
+
 		let originalLedger;
-		if (wallet.ledger && typeof wallet.ledger === 'function') {
-		  originalLedger = wallet.ledger;
-		  wallet.ledger = vi.fn().mockReturnValue({
-			scan: vi.fn().mockRejectedValue(scanError)
-		  });
+		if (wallet.ledger && typeof wallet.ledger === "function") {
+			originalLedger = wallet.ledger;
+			wallet.ledger = vi.fn().mockReturnValue({
+				scan: vi.fn().mockRejectedValue(scanError),
+			});
 		}
-		
+
 		const ledgerTransportMock = mockNanoXTransport();
-		
-		const { container } = render(<Component activeIndex={2} />, {
-		  route: `/profiles/${profile.id()}`,
+
+		render(<Component activeIndex={2} />, {
+			route: `/profiles/${profile.id()}`,
 		});
-	  
-		await waitFor(() => {
-		  expect(screen.queryByTestId("LedgerTabs")).not.toBeNull();
-		}, { timeout: 3000 });
-	  
+
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("LedgerTabs")).toBeInTheDocument();
+			},
+			{ timeout: 3000 },
+		);
+
 		try {
-		  await mockLedgerObj.scan({ onProgress: () => {} });
-		} catch (error) {
-		  console.log('Expected scan error triggered');
+			await mockLedgerObj.scan({ onProgress: () => {} });
+		} catch {
+			console.log("Expected scan error triggered");
 		}
-	  
-		await waitFor(() => {
-		  expect(screen.queryByTestId("LedgerConnectionStep") !== null).toBeTruthy();
-		}, { timeout: 5000 });
-	  
-		await waitFor(() => {
-		  const errorElement = screen.queryByText(/Error/i) || 
-							   screen.queryByText(/EOF: no more APDU to replay/i) ||
-							   screen.queryByText(/Scan Failed/i);
-		  expect(errorElement).not.toBeNull();
-		}, { timeout: 5000 });
-	  
+
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+			},
+			{ timeout: 5000 },
+		);
+
+		await waitFor(
+			() => {
+				const errorElement =
+					screen.queryByText(/error/i) ||
+					screen.queryByText(/eof: no more apdu to replay/i) ||
+					screen.queryByText(/scan failed/i);
+				expect(errorElement).not.toBeNull();
+			},
+			{ timeout: 5000 },
+		);
+
 		if (originalCoin) {
-		  wallet.coin = originalCoin;
+			wallet.coin = originalCoin;
 		}
-		
+
 		if (originalLedger) {
-		  wallet.ledger = originalLedger;
+			wallet.ledger = originalLedger;
 		}
-		
+
 		ledgerTransportMock.mockRestore();
-	  });
+	});
 
 	it("should skip network step if only one available network", async () => {
-		if (typeof resetProfileNetworksMock === 'function') {
+		if (typeof resetProfileNetworksMock === "function") {
 			resetProfileNetworksMock();
 		}
 
 		try {
 			resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-			if (typeof resetProfileNetworksMock !== 'function') {
+			if (typeof resetProfileNetworksMock !== "function") {
 				console.warn("mockProfileWithOnlyPublicNetworks did not return a function");
 				resetProfileNetworksMock = () => {};
 			}
@@ -713,31 +731,32 @@ describe("LedgerTabs", () => {
 
 		let coinAccessor;
 		try {
-			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
+			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
+				throw new Error(accessorErrorMessage);
 			}
-		} catch (error) {
-			console.error("Failed to access coin in test:", error);
+		} catch {
 			coinAccessor = {
-				ledger: () => ({ 
+				ledger: () => ({
 					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}) 
-				})
+					}),
+				}),
 			};
 		}
-		
+
 		const ledgerObj = coinAccessor.ledger();
-		
+
 		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === 'function') {
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey")
+		if (typeof ledgerObj.getPublicKey === "function") {
+			getPublicKeySpy = vi
+				.spyOn(ledgerObj, "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 		} else {
-			ledgerObj.getPublicKey = vi.fn()
+			ledgerObj.getPublicKey = vi
+				.fn()
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || ""));
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
 		}
@@ -747,16 +766,16 @@ describe("LedgerTabs", () => {
 		const { history } = render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
 		});
-		
+
 		await waitFor(() => {
-			expect(screen.queryByTestId("LedgerConnectionStep")).not.toBeNull();
+			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
 			expect(
-				screen.queryByTestId("LedgerConnectionStep") !== null || 
-				history.location.pathname === `/profiles/${profile.id()}/dashboard`
-			).toBeTruthy();
+				screen.getByTestId("LedgerConnectionStep") ||
+					history.location.pathname === `/profiles/${profile.id()}/dashboard`,
+			).toBeInTheDocument();
 		});
 
 		getPublicKeySpy.mockRestore();
@@ -765,125 +784,122 @@ describe("LedgerTabs", () => {
 
 	it("should render finish step multiple", async () => {
 		const mockWallets = [
-		  {
-			address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
-			path: "m/44'/1'/0'/0/1",
-		  },
-		  {
-			address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
-			path: "m/44'/1'/0'/0/0",
-		  }
+			{
+				address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
+				path: "m/44'/1'/0'/0/1",
+			},
+			{
+				address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
+				path: "m/44'/1'/0'/0/0",
+			},
 		];
-	  
+
 		const mockLedgerObj = {
-		  getPublicKey: vi.fn().mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || "")),
-		  getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
-		  scan: vi.fn().mockImplementation(({ onProgress }) => {
-			mockWallets.forEach(w => onProgress && onProgress(wallet));
-			return { 
-			  "m/44'/1'/0'/0/0": wallet.toData(),
-			  "m/44'/1'/0'/0/1": wallet.toData()
-			};
-		  })
+			getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()!),
+			getPublicKey: vi.fn().mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path) || "")),
+			scan: vi.fn().mockImplementation(({ onProgress }) => {
+				for (const _w of mockWallets) {
+					onProgress && onProgress(wallet);
+				}
+				return {
+					"m/44'/1'/0'/0/0": wallet.toData(),
+					"m/44'/1'/0'/0/1": wallet.toData(),
+				};
+			}),
 		};
-		
+
 		const mockCoinAccessor = {
-		  ledger: () => mockLedgerObj,
-		  __construct: vi.fn()
+			__construct: vi.fn(),
+			ledger: () => mockLedgerObj,
 		};
-		
+
 		let originalCoin;
-		if (typeof wallet.coin === 'function') {
-		  originalCoin = wallet.coin;
-		  wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
+		if (typeof wallet.coin === "function") {
+			originalCoin = wallet.coin;
+			wallet.coin = vi.fn().mockReturnValue(mockCoinAccessor);
 		} else {
-		  originalCoin = wallet.coin;
-		  wallet.coin = mockCoinAccessor;
+			originalCoin = wallet.coin;
+			wallet.coin = mockCoinAccessor;
 		}
-		
+
 		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
-		  selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
-		  wallets: mockWallets
+			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
+			wallets: mockWallets,
 		});
-	  
+
 		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
-		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(wallet);
-	  
+
 		const ledgerTransportMock = mockNanoXTransport();
-		
-		let history;
-		
-		await act(async () => {
-		  const rendered = render(<Component activeIndex={3} />, {
-			route: `/profiles/${profile.id()}`
-		  });
-		  history = rendered.history;
+
+		const { history } = render(<Component activeIndex={3} />, {
+			route: `/profiles/${profile.id()}`,
 		});
-	  
-		await waitFor(() => {
-		  expect(screen.queryByTestId("LedgerScanStep")).not.toBeNull();
-		}, { timeout: 3000 });
-	  
-		await act(async () => {
-		  await mockLedgerObj.scan({ onProgress: () => {} });
-		});
-	  
+
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+			},
+			{ timeout: 3000 },
+		);
+
+		await mockLedgerObj.scan({ onProgress: () => {} });
+
 		const continueButton = nextSelector();
 		if (continueButton && !continueButton.disabled) {
-		  await act(async () => {
 			await userEvent.click(continueButton);
-		  });
 		}
-	  
-		await act(async () => {
-		  history.push(`/profiles/${profile.id()}/dashboard`);
+
+		await act(() => {
+			history.push(`/profiles/${profile.id()}/dashboard`);
 		});
-	  
-		await waitFor(() => {
-		  const condition = 
-			screen.queryByTestId("LedgerImportStep") !== null || 
-			history.location.pathname.includes("/dashboard");
-		  expect(condition).toBeTruthy();
-		}, { timeout: 3000 });
-	  
+
+		await waitFor(
+			() => {
+				const condition =
+					screen.queryByTestId("LedgerImportStep") !== null ||
+					history.location.pathname.includes("/dashboard");
+				expect(condition).toBeTruthy();
+			},
+			{ timeout: 3000 },
+		);
+
 		scannerMock.mockRestore();
-		
+
 		if (originalCoin) {
-		  wallet.coin = originalCoin;
+			wallet.coin = originalCoin;
 		}
-		
+
 		ledgerTransportMock.mockRestore();
-	  });
+	});
 
 	it("redirects user to dashboard if device not available", async () => {
 		let coinAccessor;
 		try {
-			coinAccessor = typeof wallet.coin === 'function' ? wallet.coin() : wallet.coin;
-			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== 'function') {
-				throw new Error("Invalid coin accessor structure");
+			coinAccessor = typeof wallet.coin === "function" ? wallet.coin() : wallet.coin;
+			if (!coinAccessor || !coinAccessor.ledger || typeof coinAccessor.ledger !== "function") {
+				throw new Error(accessorErrorMessage);
 			}
-		} catch (error) {
-			console.error("Failed to access coin in test:", error);
+		} catch {
 			coinAccessor = {
-				ledger: () => ({ 
+				ledger: () => ({
 					getPublicKey: vi.fn().mockResolvedValue(""),
 					scan: vi.fn().mockImplementation(({ onProgress }) => {
 						onProgress && onProgress(wallet);
 						return { "m/44'/1'/0'/0/0": wallet.toData() };
-					}) 
-				})
+					}),
+				}),
 			};
 		}
-		
+
 		const ledgerObj = coinAccessor.ledger();
-		
+
 		let getPublicKeySpy;
-		if (typeof ledgerObj.getPublicKey === 'function') {
-			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey")
+		if (typeof ledgerObj.getPublicKey === "function") {
+			getPublicKeySpy = vi
+				.spyOn(ledgerObj, "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value || "");
 		} else {
-			ledgerObj.getPublicKey = vi.fn()
-				.mockResolvedValue(publicKeyPaths.values().next().value || "");
+			ledgerObj.getPublicKey = vi.fn().mockResolvedValue(publicKeyPaths.values().next().value || "");
 			getPublicKeySpy = vi.spyOn(ledgerObj, "getPublicKey");
 		}
 
@@ -911,16 +927,12 @@ describe("LedgerTabs", () => {
 		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
 
 		const ledgerTransportMock = mockNanoXTransport();
-		
-		await act(async () => {
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-		});
+
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		try {
-			await expect(
-				screen.findByTestId("NetworkOption", {}, { timeout: 1000 })
-			).rejects.toThrow(/Unable to find/);
-		} catch (error) {
+			await expect(screen.findByTestId("NetworkOption", {}, { timeout: 1000 })).rejects.toThrow(/Unable to find/);
+		} catch {
 			expect(screen.queryByTestId("NetworkOption")).toBeNull();
 		}
 
@@ -943,16 +955,12 @@ describe("LedgerTabs", () => {
 		const networkEnabledMetaSpy = vi.spyOn(availableNetworks.at(0), "meta").mockReturnValue({ enabled: false });
 
 		const ledgerTransportMock = mockNanoXTransport();
-		
-		await act(async () => {
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-		});
+
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		try {
-			await expect(
-				screen.findByTestId("NetworkOption", {}, { timeout: 1000 })
-			).rejects.toThrow(/Unable to find/);
-		} catch (error) {
+			await expect(screen.findByTestId("NetworkOption", {}, { timeout: 1000 })).rejects.toThrow(/Unable to find/);
+		} catch {
 			expect(screen.queryByTestId("NetworkOption")).toBeNull();
 		}
 
@@ -977,22 +985,22 @@ describe("LedgerTabs", () => {
 		const networkEnabledMetaSpy = vi.spyOn(availableNetworks.at(0), "meta").mockReturnValue({ enabled: true });
 
 		const ledgerTransportMock = mockNanoXTransport();
-		
-		await act(async () => {
-			const { rerender } = render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-			rerender(<Component activeIndex={2} />);
-		});
-		
-		await waitFor(() => {
-			const networkContent = [
-				screen.queryAllByTestId("NetworkOption"),
-				screen.queryByTestId("SelectNetwork"),
-				screen.queryByTestId("NetworkStep"),
-				screen.queryByTestId("LedgerConnectionStep")
-			].some(el => el !== null && (Array.isArray(el) ? el.length > 0 : true));
-			
-			expect(networkContent).toBeTruthy();
-		}, { timeout: 2000 });
+
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await waitFor(
+			() => {
+				const networkContent = [
+					screen.queryAllByTestId("NetworkOption"),
+					screen.queryByTestId("SelectNetwork"),
+					screen.queryByTestId("NetworkStep"),
+					screen.queryByTestId("LedgerConnectionStep"),
+				].some((el) => el !== null && (Array.isArray(el) ? el.length > 0 : true));
+
+				expect(networkContent).toBeTruthy();
+			},
+			{ timeout: 2000 },
+		);
 
 		networkSpy.mockRestore();
 		ledgerSpy.mockRestore();
@@ -1011,16 +1019,12 @@ describe("LedgerTabs", () => {
 		const networkSupportSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
 
 		const ledgerTransportMock = mockNanoXTransport();
-		
-		await act(async () => {
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-		});
+
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		try {
-			await expect(
-				screen.findByTestId("NetworkOption", {}, { timeout: 1000 })
-			).rejects.toThrow(/Unable to find/);
-		} catch (error) {
+			await expect(screen.findByTestId("NetworkOption", {}, { timeout: 1000 })).rejects.toThrow(/Unable to find/);
+		} catch {
 			expect(screen.queryByTestId("NetworkOption")).toBeNull();
 		}
 

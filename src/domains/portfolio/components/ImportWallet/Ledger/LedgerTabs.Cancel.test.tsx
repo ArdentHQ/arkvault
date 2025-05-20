@@ -1,7 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act } from "@testing-library/react";
 
 import { minVersionList } from "@/app/contexts";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
@@ -10,9 +9,7 @@ import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 describe("LedgerTabs", () => {
 	let profile;
 	let wallet;
-	let onClickEditWalletName;
 	let getVersionSpy;
-	let publicKeyPaths;
 
 	beforeAll(async () => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -23,25 +20,17 @@ describe("LedgerTabs", () => {
 		wallet = profile.wallets().first();
 
 		wallet.coin = vi.fn().mockReturnValue({
+			__construct: vi.fn(),
 			ledger: vi.fn().mockReturnValue({
-				getVersion: vi.fn().mockResolvedValue(minVersionList[wallet.network().coin()]),
 				getExtendedPublicKey: vi.fn().mockResolvedValue(wallet.publicKey() || "mock-public-key"),
-				getPublicKey: vi.fn()
+				getPublicKey: vi.fn(),
+				getVersion: vi.fn().mockResolvedValue(minVersionList[wallet.network().coin()]),
 			}),
-			__construct: vi.fn()
 		});
 
 		getVersionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion");
 
 		await wallet.synchroniser().identity();
-
-		onClickEditWalletName = vi.fn();
-
-		publicKeyPaths = new Map([
-			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
-			["m/44'/1'/0'/0/1", "03d3fdad9c5b25bf8880e6b519eb3611a5c0b31adebc8455f0e096175b28321aff"],
-			["m/44'/1'/1'/0/0", wallet.publicKey()]
-		]);
 	});
 
 	beforeEach(() => {
@@ -70,16 +59,16 @@ describe("LedgerTabs", () => {
 				supportedTransport: vi.fn().mockResolvedValue({
 					create: vi.fn().mockResolvedValue({
 						close: vi.fn(),
-						on: vi.fn(),
-						off: vi.fn(),
-						send: vi.fn(),
 						exchange: vi.fn().mockResolvedValue(Buffer.from("mock response")),
+						off: vi.fn(),
+						on: vi.fn(),
+						send: vi.fn(),
 					}),
 					listen: vi.fn().mockImplementation((observer) => {
 						setTimeout(() => {
 							observer.next({
-								type: "add",
 								descriptor: { id: "mock" },
+								type: "add",
 							});
 						}, 100);
 						return { unsubscribe: vi.fn() };
@@ -87,14 +76,14 @@ describe("LedgerTabs", () => {
 				}),
 			},
 		}));
-		
+
 		vi.mock("@/app/contexts/Ledger/transport", () => ({
+			closeDevices: vi.fn().mockResolvedValue(undefined),
 			supportedTransport: vi.fn().mockResolvedValue({
 				create: vi.fn().mockResolvedValue({
 					close: vi.fn(),
 				}),
 			}),
-			closeDevices: vi.fn().mockResolvedValue(undefined),
 		}));
 	});
 
@@ -105,37 +94,33 @@ describe("LedgerTabs", () => {
 		vi.restoreAllMocks();
 	});
 
-	const TestWrapper = ({ activeIndex = 0 }) => {
-		return (
-			<Route path="/profiles/:profileId">
-				<div data-testid="LedgerTabs">
-					{activeIndex === 0 && <div data-testid="SelectNetwork" />}
-					{activeIndex === 1 && <div data-testid="LedgerAuthStep" />}
-					{activeIndex === 2 && (
-						<div>
-							<div data-testid="LedgerConnectionStep" />
-							<button data-testid="Paginator__back-button" />
-							<button data-testid="Paginator__continue-button" />
-						</div>
-					)}
-					{activeIndex === 3 && (
-						<div>
-							<div data-testid="LedgerScanStep" />
-							<button data-testid="Paginator__back-button" />
-							<button data-testid="Paginator__continue-button" />
-						</div>
-					)}
-				</div>
-				<div data-testid="LedgerConnected" />
-				<div data-testid="DisconnectDevice" />
-			</Route>
-		);
-	};
+	const TestWrapper = ({ activeIndex = 0 }) => (
+		<Route path="/profiles/:profileId">
+			<div data-testid="LedgerTabs">
+				{activeIndex === 0 && <div data-testid="SelectNetwork" />}
+				{activeIndex === 1 && <div data-testid="LedgerAuthStep" />}
+				{activeIndex === 2 && (
+					<div>
+						<div data-testid="LedgerConnectionStep" />
+						<button data-testid="Paginator__back-button" />
+						<button data-testid="Paginator__continue-button" />
+					</div>
+				)}
+				{activeIndex === 3 && (
+					<div>
+						<div data-testid="LedgerScanStep" />
+						<button data-testid="Paginator__back-button" />
+						<button data-testid="Paginator__continue-button" />
+					</div>
+				)}
+			</div>
+			<div data-testid="LedgerConnected" />
+			<div data-testid="DisconnectDevice" />
+		</Route>
+	);
 
 	it("should render the network selection step by default", async () => {
-		await act(async () => {
-			render(<TestWrapper activeIndex={0} />, { route: `/profiles/${profile.id}` });
-		});
+		render(<TestWrapper activeIndex={0} />, { route: `/profiles/${profile.id}` });
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectNetwork")).toBeInTheDocument();
@@ -143,9 +128,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render the Ledger auth step when activeIndex is 1", async () => {
-		await act(async () => {
-			render(<TestWrapper activeIndex={1} />, { route: `/profiles/${profile.id}` });
-		});
+		render(<TestWrapper activeIndex={1} />, { route: `/profiles/${profile.id}` });
 
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
@@ -153,31 +136,23 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render the connection step and be able to go back", async () => {
-		await act(async () => {
-			render(<TestWrapper activeIndex={2} />, { route: `/profiles/${profile.id}` });
-		});
+		render(<TestWrapper activeIndex={2} />, { route: `/profiles/${profile.id}` });
 
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 		});
 
-		await act(async () => {
-			await userEvent.click(screen.getByTestId("Paginator__back-button"));
-		});
+		await userEvent.click(screen.getByTestId("Paginator__back-button"));
 	});
 
 	it("should render the scan step and be able to disconnect", async () => {
-		await act(async () => {
-			render(<TestWrapper activeIndex={3} />, { route: `/profiles/${profile.id}` });
-		});
+		render(<TestWrapper activeIndex={3} />, { route: `/profiles/${profile.id}` });
 
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
 		});
 
-		await act(async () => {
-			await userEvent.click(screen.getByTestId("DisconnectDevice"));
-		});
+		await userEvent.click(screen.getByTestId("DisconnectDevice"));
 
 		expect(screen.getByTestId("LedgerConnected")).toBeInTheDocument();
 	});
