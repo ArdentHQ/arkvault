@@ -362,7 +362,9 @@ describe("Servers Settings", () => {
 				setIntervalSpy.mockRestore();
 			});
 
-			it("should load the node status with error", async () => {
+			it("should display error message when 1 host is failing", async () => {
+				mockTxEndpoint();
+				mockEvmEndpoint();
 				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
 
 				const { container } = render(
@@ -384,6 +386,66 @@ describe("Servers Settings", () => {
 				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
 
 				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+
+				await userEvent.hover(screen.getByTestId("NodeStatus--statuserror"));
+
+				expect(screen.getByText(/The Public API is experiencing issues, please check on socials for more information/)).toBeTruthy();
+			});
+
+			it("should display error message when 2 hosts are failing", async () => {
+				mockTxEndpoint();
+				server.use(requestMock(evmApiUrl, undefined, { status: 404 }));
+				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+
+				// Loading initially
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+
+				await userEvent.hover(screen.getByTestId("NodeStatus--statuserror"));
+
+				expect(screen.getByText(/The Public API and EVM API are experiencing issues, please check on socials for more information/)).toBeTruthy();
+			});
+
+			it("should display error message when all hosts are failing", async () => {
+				server.use(requestMock(publicBaseUrl, undefined, { status: 404 }));
+				server.use(requestMock(txApiUrl, undefined, { status: 404 }));
+				server.use(requestMock(evmApiUrl, undefined, { status: 404 }));
+
+				render(
+					<Route path="/profiles/:profileId/settings/servers">
+						<ServersSettings />
+					</Route>,
+					{
+						route: `/profiles/${profile.id()}/settings/servers`,
+					},
+				);
+
+				expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+
+				expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
+
+				// Loading initially
+				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
+
+				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+
+				await userEvent.hover(screen.getByTestId("NodeStatus--statuserror"));
+
+				expect(screen.getByText(/Default nodes are experiencing issues, please check on socials for more information/)).toBeTruthy();
 			});
 
 			it("should load the node statuses with error if the response is invalid json", async () => {
