@@ -1,5 +1,5 @@
 import { Enums } from "@/app/lib/mainsail";
-import { BIP38, BIP39, UUID } from "@ardenthq/arkvault-crypto";
+import { BIP39, UUID } from "@ardenthq/arkvault-crypto";
 
 import {
 	IAddressOptions,
@@ -11,7 +11,6 @@ import {
 	IPublicKeyOptions,
 	IReadWriteWallet,
 	IWalletFactory,
-	IWifOptions,
 	WalletData,
 	WalletImportMethod,
 } from "./contracts.js";
@@ -20,7 +19,6 @@ import { IMnemonicDerivativeOptions, ISecretOptions } from "./wallet.factory.con
 import { Wallet } from "./wallet.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { WIFService } from "@/app/lib/mainsail/wif.service";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -177,37 +175,6 @@ export class WalletFactory implements IWalletFactory {
 			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.SECRET_WITH_ENCRYPTION);
 
 			await wallet.signingKey().set(secret, password);
-		}
-
-		return wallet;
-	}
-
-	/** {@inheritDoc IWalletFactory.fromWIF} */
-	public async fromWIF({ wif, password }: IWifOptions): Promise<IReadWriteWallet> {
-		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
-
-		wallet.data().set(WalletData.Status, WalletFlag.Cold);
-
-		if (password) {
-			const { compressed, privateKey } = BIP38.decrypt(wif, password);
-
-			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIFWithEncryption);
-			wallet.data().set(WalletData.EncryptedSigningKey, BIP38.encrypt(privateKey, password, compressed));
-
-			await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
-
-			const unencryptedWifData = await new WIFService({ config: wallet.network().config() }).fromPrivateKey(
-				privateKey,
-			);
-			const { publicKey } = await new PublicKeyService().fromWIF(unencryptedWifData.wif);
-			wallet.data().set(WalletData.PublicKey, publicKey);
-		} else {
-			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.WIF);
-
-			await wallet.mutator().address(new AddressService().fromWIF(wif));
-
-			const { publicKey } = await new PublicKeyService().fromWIF(wif);
-			wallet.data().set(WalletData.PublicKey, publicKey);
 		}
 
 		return wallet;

@@ -12,7 +12,6 @@ import {
 } from "@arkecosystem/typescript-crypto";
 
 import { applyCryptoConfiguration } from "./config.js";
-import { Interfaces, Managers } from "./crypto/index.js";
 import { parseUnits } from "./helpers/parse-units.js";
 import { AddressService } from "./address.service.js";
 import { SignedTransactionData } from "./signed-transaction.dto";
@@ -20,6 +19,8 @@ import { ClientService } from "./client.service.js";
 import { LedgerService } from "./ledger.service.js";
 import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
+import { NetworkConfig } from "./contracts.js";
+import { configManager } from "./config.manager.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: number;
@@ -37,7 +38,7 @@ export class TransactionService {
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
 
-	#configCrypto!: { crypto: Interfaces.NetworkConfig; height: number };
+	#configCrypto!: { crypto: NetworkConfig; height: number };
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#ledgerService = new LedgerService({ config });
@@ -45,8 +46,8 @@ export class TransactionService {
 		this.#clientService = new ClientService({ config, profile });
 
 		this.#configCrypto = {
-			crypto: Managers.configManager.all() as Interfaces.NetworkConfig,
-			height: Managers.configManager.getHeight() as number,
+			crypto: configManager.all() as NetworkConfig,
+			height: configManager.getHeight() as number,
 		};
 	}
 

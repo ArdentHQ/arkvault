@@ -8,7 +8,6 @@ import { ConfirmationWIFSignatory } from "./confirmation-wif.signatory";
 import { ForbiddenMethodCallException } from "./exceptions";
 import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
-import { PrivateKeySignatory } from "./private-key.signatory";
 import { SecretSignatory } from "./secret.signatory";
 import { IdentityOptions } from "./services";
 import { WIFSignatory } from "./wif.signatory";
@@ -19,7 +18,6 @@ type SignatoryType =
 	| ConfirmationWIFSignatory
 	| LedgerSignatory
 	| MnemonicSignatory
-	| PrivateKeySignatory
 	| SecretSignatory
 	| WIFSignatory;
 
@@ -61,10 +59,6 @@ export class Signatory {
 			return this.#signatory.address();
 		}
 
-		if (this.#signatory instanceof PrivateKeySignatory) {
-			return this.#signatory.address();
-		}
-
 		throw new ForbiddenMethodCallException(this.constructor.name, this.address.name);
 	}
 
@@ -81,23 +75,6 @@ export class Signatory {
 		throw new ForbiddenMethodCallException(this.constructor.name, this.publicKey.name);
 	}
 
-	public privateKey(): string {
-		// @TODO: deduplicate this
-		if (this.#signatory instanceof AbstractSignatory) {
-			return this.#signatory.privateKey();
-		}
-
-		if (this.#signatory instanceof AbstractDoubleSignatory) {
-			return this.#signatory.privateKey();
-		}
-
-		if (this.#signatory instanceof PrivateKeySignatory) {
-			return this.#signatory.privateKey();
-		}
-
-		throw new ForbiddenMethodCallException(this.constructor.name, this.privateKey.name);
-	}
-
 	public path(): string {
 		if (this.#signatory instanceof LedgerSignatory) {
 			return this.#signatory.signingKey();
@@ -108,10 +85,6 @@ export class Signatory {
 
 	public options(): IdentityOptions | undefined {
 		if (this.#signatory instanceof AbstractSignatory) {
-			return this.#signatory.options();
-		}
-
-		if (this.#signatory instanceof PrivateKeySignatory) {
 			return this.#signatory.options();
 		}
 
@@ -136,10 +109,6 @@ export class Signatory {
 
 	public actsWithConfirmationWIF(): boolean {
 		return this.#signatory instanceof ConfirmationWIFSignatory;
-	}
-
-	public actsWithPrivateKey(): boolean {
-		return this.#signatory instanceof PrivateKeySignatory;
 	}
 
 	public actsWithLedger(): boolean {

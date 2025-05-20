@@ -79,8 +79,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				recipients,
 				memo,
 				encryptionPassword,
-				wif,
-				privateKey,
 				secret,
 				secondSecret,
 				gasLimit,
@@ -90,11 +88,9 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
-				wif,
 			});
 
 			const data = buildTransferData({

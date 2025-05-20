@@ -18,8 +18,6 @@ export class SignatoryFactory implements ISignatoryFactory {
 		secondMnemonic,
 		secret,
 		secondSecret,
-		wif,
-		privateKey,
 	}: SignatoryInput): Promise<Signatories.Signatory> {
 		if (mnemonic && secondMnemonic) {
 			return this.#wallet.signatory().confirmationMnemonic(mnemonic, secondMnemonic);
@@ -63,14 +61,6 @@ export class SignatoryFactory implements ISignatoryFactory {
 			}
 
 			return this.#wallet.signatory().ledger(derivationPath);
-		}
-
-		if (wif) {
-			return this.#wallet.signatory().wif(wif);
-		}
-
-		if (privateKey) {
-			return this.#wallet.signatory().privateKey(privateKey);
 		}
 
 		if (secret && secondSecret) {

@@ -117,9 +117,9 @@ describe("SignMessage", () => {
 		it("should sign message with mnemonic", async () => {
 			const signedMessage = {
 				message: signMessage,
-				signatory: "033007be09f5bf01d8a441e6b97f5607899b65a24aa70b7d144d53986a3f50eb91",
+				signatory: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
 				signature:
-					"1cf3d536c4ab197966e12b7a01717c9ede6f3485afdad96f0726df1f31608e067dacf59471ccbccda8be2ab9a2f15585d5e38016362df3aca81f718c5f1605cd1b",
+					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec9591b",
 			};
 
 			render(
