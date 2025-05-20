@@ -292,7 +292,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses", async () => {
-				mockPublicEndpoint();
+				mockRequests();
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -316,7 +316,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses in an interval", async () => {
-				mockPublicEndpoint();
+				mockRequests();
 
 				const originalSetInterval = global.setInterval;
 				let intervalPingFunction: () => void;
