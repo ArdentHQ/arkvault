@@ -92,6 +92,7 @@ const networkAccordionIconTestId = "mobile-table-element-header";
 const CustomPeersNetworkItem = "CustomPeers-network-item";
 const nodeStatusNodeItemTestId = "NodesStatus--node";
 const nodeStatusLoadingTestId = "NodeStatus--statusloading";
+const nodeStatusErrorTestId = "NodeStatus--error";
 const customPeersToggleTestId = "CustomPeers-toggle";
 const modalAlertTestId = "ServerFormModal-alert";
 
@@ -385,9 +386,9 @@ describe("Servers Settings", () => {
 				// Loading initially
 				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId(nodeStatusErrorTestId)).toHaveLength(1));
 
-				await userEvent.hover(screen.getByTestId("NodeStatus--statuserror"));
+				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
 
 				expect(screen.getByText(/The Public API is experiencing issues, please check on socials for more information/)).toBeTruthy();
 			});
@@ -413,9 +414,9 @@ describe("Servers Settings", () => {
 				// Loading initially
 				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId(nodeStatusErrorTestId)).toHaveLength(1));
 
-				await userEvent.hover(screen.getByTestId("NodeStatus--statuserror"));
+				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
 
 				expect(screen.getByText(/The Public API and EVM API are experiencing issues, please check on socials for more information/)).toBeTruthy();
 			});
@@ -441,9 +442,9 @@ describe("Servers Settings", () => {
 				// Loading initially
 				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId(nodeStatusErrorTestId)).toHaveLength(1));
 
-				await userEvent.hover(screen.getByTestId("NodeStatus--statuserror"));
+				await userEvent.hover(screen.getByTestId(nodeStatusErrorTestId));
 
 				expect(screen.getByText(/Default nodes are experiencing issues, please check on socials for more information/)).toBeTruthy();
 			});
@@ -469,7 +470,7 @@ describe("Servers Settings", () => {
 				// Loading initially
 				expect(screen.getAllByTestId(nodeStatusLoadingTestId)).toHaveLength(1);
 
-				await waitFor(() => expect(screen.getAllByTestId("NodeStatus--statuserror")).toHaveLength(1));
+				await waitFor(() => expect(screen.getAllByTestId(nodeStatusErrorTestId)).toHaveLength(1));
 			});
 		});
 	});
