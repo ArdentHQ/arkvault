@@ -97,7 +97,7 @@ const NodeStatusNode: React.VFC<{
 		const translations = [
 			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.PUBLIC_API"),
 			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.TX_API"),
-			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.EVM_API")
+			t("SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.EVM_API"),
 		];
 
 		const messages: Record<string, string> = {};
@@ -116,12 +116,7 @@ const NodeStatusNode: React.VFC<{
 			return (
 				<Tooltip
 					maxWidth={350}
-					content={
-						<Trans
-							i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_2"
-							values={messages}
-						/>
-					}
+					content={<Trans i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_2" values={messages} />}
 				>
 					<div data-testid="NodeStatus--statuserror">
 						<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
@@ -132,9 +127,7 @@ const NodeStatusNode: React.VFC<{
 
 		return (
 			<Tooltip
-				content={
-					<Trans i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_1" values={messages} />
-				}
+				content={<Trans i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_1" values={messages} />}
 			>
 				<div data-testid="NodeStatus--statuserror">
 					<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
