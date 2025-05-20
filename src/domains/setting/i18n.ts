@@ -183,8 +183,14 @@ export const translations = {
 		EVM: "EVM",
 		MENU_ITEM: "Servers",
 		NODE_STATUS_TOOLTIPS: {
+			EVM_API: "EVM API",
 			HEALTHY: "Default nodes are healthy.",
+			PUBLIC_API: "Public API",
+			TX_API: "Tx API",
 			WITH_ISSUES: "Default nodes are experiencing issues, please check on socials for more information.",
+			WITH_ISSUES_1: "The {{host0}} is experiencing issues, please check on socials for more information.",
+			WITH_ISSUES_2:
+				"The {{host0}} and {{host1}} are experiencing issues, \nplease check on socials for more information.",
 		},
 		OPTIONS: {
 			CUSTOM_PEERS: {
