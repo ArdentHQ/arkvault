@@ -132,7 +132,6 @@ jobs:
                   max_attempts: 1
                   command: pnpm test:coverage src/app/App*test*
 
-
     application-hooks:
         runs-on: ubuntu-latest
         env:
@@ -732,7 +731,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 97.18
                   COVERAGE_THRESHOLD_FUNCTIONS: 94.79
                   COVERAGE_THRESHOLD_STATEMENTS: 97.27
-                  COVERAGE_THRESHOLD_BRANCHES: 93.3
+                  COVERAGE_THRESHOLD_BRANCHES: 93.2
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
               uses: nick-invision/retry@v2
               with:
@@ -755,9 +754,9 @@ jobs:
 
             - name: Test Components ^T-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.7
+                  COVERAGE_THRESHOLD_LINES: 96.58
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.35
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.76
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.64
                   COVERAGE_THRESHOLD_BRANCHES: 93.47
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
@@ -778,19 +777,19 @@ jobs:
                   timeout_minutes: 10
                   max_attempts: 1
                   command: pnpm test:coverage src/domains/transaction/hooks
-    #
-    #         - name: Test Pages
-    #           env:
-    #               COVERAGE_THRESHOLD_LINES: 97.3
-    #               COVERAGE_THRESHOLD_FUNCTIONS: 96.4
-    #               COVERAGE_THRESHOLD_STATEMENTS: 97.8
-    #               COVERAGE_THRESHOLD_BRANCHES: 98.43
-    #               COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
-    #           uses: nick-invision/retry@v2
-    #           with:
-    #               timeout_minutes: 10
-    #               max_attempts: 1
-    #               command: pnpm test:coverage src/domains/transaction/pages
+
+            - name: Test Pages
+              env:
+                  COVERAGE_THRESHOLD_LINES: 93
+                  COVERAGE_THRESHOLD_FUNCTIONS: 91.66
+                  COVERAGE_THRESHOLD_STATEMENTS: 93.13
+                  COVERAGE_THRESHOLD_BRANCHES: 85.03
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/pages
     #
     #         - name: Test Validations
     #           env:

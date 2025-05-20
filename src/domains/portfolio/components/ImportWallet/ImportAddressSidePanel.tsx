@@ -160,9 +160,8 @@ export const ImportAddressesSidePanel = ({
 	};
 
 	const importWallet = async () => {
-		const { importOption, encryptedWif, value } = getValues();
+		const { importOption, value } = getValues();
 		const wallets = await importWallets({
-			encryptedWif,
 			type: importOption.value,
 			value,
 		});

@@ -43,7 +43,6 @@ describe("useWalletImport", () => {
 		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const wallet = await current.importWallet({
-			encryptedWif: "",
 			network,
 			type: OptionsValue.BIP39,
 			value: MAINSAIL_MNEMONICS[0],
@@ -67,7 +66,6 @@ describe("useWalletImport", () => {
 
 			await expect(
 				current.importWallet({
-					encryptedWif: "",
 					network,
 					type: mnemonicType,
 					value: "mnemonic",
@@ -78,7 +76,7 @@ describe("useWalletImport", () => {
 		},
 	);
 
-	it.each([OptionsValue.ADDRESS, OptionsValue.PUBLIC_KEY, OptionsValue.PRIVATE_KEY])(
+	it.each([OptionsValue.ADDRESS, OptionsValue.PUBLIC_KEY])(
 		"should reject import wallet from %s",
 		async (importType) => {
 			const {
@@ -86,73 +84,21 @@ describe("useWalletImport", () => {
 			} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 			const methodName = `from${importType.charAt(0).toUpperCase()}${importType.slice(1)}` as never;
-			const mockEncryptedWif = vi.spyOn(profile.walletFactory(), methodName).mockImplementation(() => {
+			const mockEncrypted = vi.spyOn(profile.walletFactory(), methodName).mockImplementation(() => {
 				throw new Error("error");
 			});
 
 			await expect(
 				current.importWallet({
-					encryptedWif: "",
 					network,
 					type: importType,
 					value: importType,
 				}),
 			).rejects.toThrow("error");
 
-			mockEncryptedWif.mockRestore();
+			mockEncrypted.mockRestore();
 		},
 	);
-
-	it("should reject import wallet from WIF", async () => {
-		const {
-			result: { current },
-		} = renderHook(() => useWalletImport({ profile }), { wrapper });
-
-		const mockEncryptedWif = vi.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
-			throw new Error("error");
-		});
-
-		await expect(
-			current.importWallet({
-				encryptedWif: "",
-				network,
-				type: OptionsValue.WIF,
-				value: "WIF",
-			}),
-		).rejects.toThrow("error");
-
-		mockEncryptedWif.mockRestore();
-	});
-
-	it("should import wallet from encryptedWif", async () => {
-		const {
-			result: { current },
-		} = renderHook(() => useWalletImport({ profile }), { wrapper });
-
-		const { wallet: newWallet } = await profile.walletFactory().generate({
-			coin: network.coin(),
-			network: network.id(),
-		});
-
-		const countBefore = profile.wallets().count();
-
-		const mockEncryptedWif = vi
-			.spyOn(profile.walletFactory(), "fromWIF")
-			.mockImplementation(() => Promise.resolve(newWallet));
-
-		await expect(
-			current.importWallet({
-				encryptedWif: "wif",
-				network,
-				type: OptionsValue.ENCRYPTED_WIF,
-				value: "password",
-			}),
-		).resolves.toBeInstanceOf(Wallet);
-
-		expect(profile.wallets().count()).toBe(countBefore + 1);
-
-		mockEncryptedWif.mockRestore();
-	});
 
 	it("should import wallet from secret", async () => {
 		const {
@@ -163,7 +109,6 @@ describe("useWalletImport", () => {
 
 		await expect(
 			current.importWallet({
-				encryptedWif: "",
 				network,
 				type: OptionsValue.SECRET,
 				value: "secret",
@@ -173,35 +118,12 @@ describe("useWalletImport", () => {
 		expect(profile.wallets().count()).toBe(countBefore + 1);
 	});
 
-	it("should reject import wallet from encryptedWif", async () => {
-		const {
-			result: { current },
-		} = renderHook(() => useWalletImport({ profile }), { wrapper });
-
-		const mockEncryptedWif = vi
-			.spyOn(profile.walletFactory(), "fromWIF")
-			.mockImplementation(() => Promise.reject(new Error("error")));
-
-		await expect(
-			current.importWallet({
-				encryptedWif: "wif",
-				network,
-				type: OptionsValue.ENCRYPTED_WIF,
-				value: "password",
-			}),
-		).rejects.toThrow("error");
-
-		mockEncryptedWif.mockRestore();
-	});
-
 	it("should return undefined for type unknown", async () => {
 		const {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }), { wrapper });
 
-		await expect(
-			current.importWallet({ encryptedWif: "", network, type: "unknown", value: "value" }),
-		).rejects.toThrow();
+		await expect(current.importWallet({ network, type: "unknown", value: "value" })).rejects.toThrow();
 	});
 
 	it("should set imported wallet as the only selected wallet when view preference is set to single", async () => {
@@ -210,7 +132,6 @@ describe("useWalletImport", () => {
 		const wallets = await act(
 			async () =>
 				await walletImport.current.importWallets({
-					encryptedWif: "",
 					networks: [network],
 					type: OptionsValue.BIP39,
 					value: MAINSAIL_MNEMONICS[1],
@@ -232,7 +153,6 @@ describe("useWalletImport", () => {
 		const wallets = await act(
 			async () =>
 				await walletImport.current.importWallets({
-					encryptedWif: "",
 					networks: [network],
 					type: OptionsValue.BIP39,
 					value: MAINSAIL_MNEMONICS[2],

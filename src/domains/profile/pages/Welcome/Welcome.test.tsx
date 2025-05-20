@@ -243,7 +243,7 @@ describe("Welcome with deeplink", () => {
 
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "DOGE" }));
+		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "doge" }));
 	});
 
 	it("should ignore multiple clicks", async () => {

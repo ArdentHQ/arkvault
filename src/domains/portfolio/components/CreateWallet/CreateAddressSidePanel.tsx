@@ -189,7 +189,6 @@ export const CreateAddressesSidePanel = ({
 			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			await importWallets({
-				encryptedWif: parameters.encryptionPassword,
 				type: "bip39",
 				value: mnemonic,
 			});

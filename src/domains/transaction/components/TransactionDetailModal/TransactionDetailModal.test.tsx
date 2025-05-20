@@ -2,7 +2,7 @@ import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
+import { requestMock, server } from "@/tests/mocks/server";
 import { TransactionDetailModal } from "./TransactionDetailModal";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -28,6 +28,13 @@ describe("TransactionDetailModal", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().first();
+
+		server.use(
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/blocks/*`,
+				{ data: {} }, // Basic mock for block data
+			),
+		);
 	});
 
 	it("should not render if not open", () => {
