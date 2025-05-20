@@ -55,7 +55,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "COIN_NOT_SUPPORTED", value: "CUSTOM" },
+			error: { type: "COIN_NOT_SUPPORTED", value: "custom" },
 		});
 	});
 

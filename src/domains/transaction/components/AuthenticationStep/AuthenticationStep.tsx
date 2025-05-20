@@ -235,33 +235,6 @@ export const AuthenticationStep = ({
 				</>
 			)}
 
-			{wallet.actsWithPrivateKey() && (
-				<>
-					{!noHeading && (
-						<StepHeader
-							titleIcon={
-								<Icon
-									name="Mnemonic"
-									data-testid="icon-mnemonic"
-									className="text-theme-primary-600"
-									dimensions={[24, 24]}
-								/>
-							}
-							title={title}
-							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")}
-						/>
-					)}
-
-					<FormField name="privateKey">
-						<FormLabel>{t("COMMON.PRIVATE_KEY")}</FormLabel>
-						<InputPassword
-							data-testid="AuthenticationStep__private-key"
-							ref={register(authentication.privateKey(wallet))}
-						/>
-					</FormField>
-				</>
-			)}
-
 			{wallet.actsWithSecret() && (
 				<>
 					{!noHeading && (

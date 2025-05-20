@@ -233,7 +233,7 @@ export const useSearchParametersValidation = () => {
 		requiredParameters?: RequiredParameters,
 	) => {
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-		const coin = parameters.get("coin")?.toUpperCase() || "Mainsail";
+		const coin = parameters.get("coin")?.toLowerCase() || "mainsail";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
@@ -246,7 +246,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.MissingMethod } };
 		}
 
-		if (requiredParameters?.coin && coin !== requiredParameters.coin) {
+		if (requiredParameters?.coin && coin !== requiredParameters.coin.toLowerCase()) {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 

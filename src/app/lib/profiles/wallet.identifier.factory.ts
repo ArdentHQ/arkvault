@@ -24,10 +24,6 @@ export class WalletIdentifierFactory {
 			return this.#addressOrPublicKey(wallet);
 		}
 
-		if (wallet.actsWithPrivateKey()) {
-			return this.#addressOrPublicKey(wallet);
-		}
-
 		if (wallet.actsWithWifWithEncryption()) {
 			return this.#addressOrPublicKey(wallet);
 		}

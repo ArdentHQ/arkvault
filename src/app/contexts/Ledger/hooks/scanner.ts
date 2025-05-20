@@ -67,11 +67,14 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		for (const [path, data] of Object.entries(allWallets)) {
 			const address = data.address();
 
+			const wallet = await profile.walletFactory().fromAddress({ address });
+			await wallet.synchroniser().identity();
+
 			/* istanbul ignore next -- @preserve */
 			if (!profile.wallets().findByAddressWithNetwork(address, network)) {
 				ledgerData.push({
 					address,
-					balance: data.balance().available.toHuman(),
+					balance: wallet.balance(),
 					path,
 				});
 			}

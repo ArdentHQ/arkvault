@@ -10,7 +10,7 @@ import {
 } from "./network.models";
 import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { Managers } from "@/app/lib/mainsail/crypto";
+import { configManager } from "./config.manager";
 
 export class Network {
 	/**
@@ -370,8 +370,8 @@ export class Network {
 		const { blockNumber } = status.data;
 
 		// Set network configuration globally.
-		Managers.configManager.setConfig(dataCrypto);
-		Managers.configManager.setHeight(blockNumber);
+		configManager.setConfig(dataCrypto);
+		configManager.setHeight(blockNumber);
 	}
 
 	/**

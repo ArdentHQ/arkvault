@@ -116,7 +116,7 @@ export const SendUsernameResignation = () => {
 	const handleSubmit = async () => {
 		assertWallet(activeWallet);
 
-		const { mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret, secondSecret } = getValues();
+		const { mnemonic, secondMnemonic, encryptionPassword, secret, secondSecret } = getValues();
 
 		try {
 			httpClient.forgetWalletCache(activeWallet);
@@ -124,11 +124,9 @@ export const SendUsernameResignation = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
-				wif,
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signUsernameResignation({

@@ -165,7 +165,6 @@ const ImportInputField = ({
 	network: Networks.Network;
 }) => {
 	const { t } = useTranslation();
-	const { register } = useFormContext();
 
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
@@ -216,86 +215,6 @@ const ImportInputField = ({
 
 	if (type === OptionsValue.PUBLIC_KEY) {
 		return <PublicKeyField profile={profile} />;
-	}
-
-	if (type === OptionsValue.PRIVATE_KEY) {
-		return (
-			<MnemonicField
-				profile={profile}
-				label={t("COMMON.PRIVATE_KEY")}
-				data-testid="ImportWallet__privatekey-input"
-				findAddress={async (privateKey) => {
-					try {
-						const wallet = await profile.walletFactory().fromPrivateKey({ privateKey });
-						const isValid = new AddressService().validate(wallet.address());
-
-						if (!isValid) {
-							throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
-						}
-
-						return wallet.address();
-					} catch {
-						/* istanbul ignore next -- @preserve */
-						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
-					}
-				}}
-				network={network}
-			/>
-		);
-	}
-
-	if (type === OptionsValue.WIF) {
-		return (
-			<MnemonicField
-				profile={profile}
-				label={t("COMMON.WIF")}
-				data-testid="ImportWallet__wif-input"
-				findAddress={async (wif) => {
-					try {
-						const wallet = await profile.walletFactory().fromWIF({ wif });
-						const isValid = new AddressService().validate(wallet.address());
-
-						if (!isValid) {
-							throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
-						}
-
-						return wallet.address();
-					} catch {
-						/* istanbul ignore next -- @preserve */
-						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
-					}
-				}}
-				network={network}
-			/>
-		);
-	}
-
-	if (type === OptionsValue.ENCRYPTED_WIF) {
-		return (
-			<>
-				<FormField name="encryptedWif">
-					<FormLabel label={t("COMMON.ENCRYPTED_WIF")} />
-					<div className="relative">
-						<Input
-							ref={register({
-								required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-									field: t("COMMON.ENCRYPTED_WIF"),
-								}).toString(),
-							})}
-							data-testid="ImportWallet__encryptedWif-input"
-						/>
-					</div>
-				</FormField>
-
-				<MnemonicField
-					profile={profile}
-					label={t("COMMON.PASSWORD")}
-					data-testid="ImportWallet__encryptedWif__password-input"
-					findAddress={(value) => Promise.resolve(value)}
-					network={network}
-				/>
-			</>
-		);
 	}
 
 	// Default: type === OptionsValue.SECRET

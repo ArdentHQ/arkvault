@@ -141,7 +141,7 @@ export const SendRegistration = () => {
 		assertWallet(activeWallet);
 
 		try {
-			const { mnemonic, encryptionPassword, wif, privateKey, secret } = getValues();
+			const { mnemonic, encryptionPassword, secret } = getValues();
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
@@ -150,9 +150,7 @@ export const SendRegistration = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secret,
-				wif,
 			});
 
 			if (registrationType === "validatorRegistration") {

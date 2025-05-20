@@ -133,39 +133,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should request private key if wallet was imported using private key", async () => {
-		wallet = await profile.walletFactory().fromPrivateKey({
-			coin: "Mainsail",
-			network: MainsailDevnet,
-			privateKey: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712",
-		});
-
-		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
-			withProviders: true,
-		});
-
-		expect(screen.getByTestId("AuthenticationStep__private-key")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	// Wif is not implemented
-	it.skip("should request WIF if wallet was imported using WIF", async () => {
-		wallet = await profile.walletFactory().fromWIF({
-			coin: "Mainsail",
-			network: MainsailDevnet,
-			wif: "UWt7nB947BtUCYSHcDpdTRSu6HcvQVSUnbyArs8ZC5cBaFvQhVN9",
-		});
-
-		vi.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
-
-		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
-			withProviders: true,
-		});
-
-		expect(screen.getByTestId("AuthenticationStep__wif")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should show only ledger confirmation", async () => {
 		mockNanoXTransport();
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
