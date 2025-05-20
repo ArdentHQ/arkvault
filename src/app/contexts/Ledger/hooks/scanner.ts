@@ -67,7 +67,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		for (const [path, data] of Object.entries(allWallets)) {
 			const address = data.address();
 
-			const wallet = await profile.walletFactory().fromAddress({ address })
+			const wallet = await profile.walletFactory().fromAddress({ address });
 			await wallet.synchroniser().identity();
 
 			/* istanbul ignore next -- @preserve */
