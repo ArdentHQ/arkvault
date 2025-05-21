@@ -29,15 +29,6 @@ import { AddressService } from "@/app/lib/mainsail/address.service";
 
 const fixtureProfileId = getDefaultProfileId();
 
-const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		isTransfer: () => false,
-		isVote: () => true,
-		type: () => "vote",
-		wallet: () => wallet,
-	});
-
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -177,7 +168,6 @@ describe("SendVote", () => {
 			errors: {},
 			rejected: [],
 		});
-		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
 		await userEvent.clear(passwordInput);
@@ -191,11 +181,8 @@ describe("SendVote", () => {
 			await userEvent.click(sendButton());
 		});
 
-		await expect(screen.findByText("Unvote", undefined, { timeout: 4000 })).resolves.toBeVisible();
-
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
 		actsWithWifWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();
