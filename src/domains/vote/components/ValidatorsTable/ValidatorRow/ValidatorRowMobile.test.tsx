@@ -19,8 +19,8 @@ describe("ValidatorRowMobile", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isValidator: true,
 			isResignedDelegate: false,
+			isValidator: true,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
 		});
@@ -106,8 +106,8 @@ describe("ValidatorRowMobile", () => {
 			address: data[1].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isValidator: true,
 			isResignedDelegate: false,
+			isValidator: true,
 			publicKey: data[1].publicKey,
 			username: data[1].username,
 		});
@@ -116,8 +116,8 @@ describe("ValidatorRowMobile", () => {
 			address: data[2].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isValidator: true,
 			isResignedDelegate: false,
+			isValidator: true,
 			publicKey: data[2].publicKey,
 			username: data[2].username,
 		});
