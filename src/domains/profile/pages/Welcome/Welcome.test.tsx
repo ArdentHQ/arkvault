@@ -226,26 +226,6 @@ describe("Welcome with deeplink", () => {
 		mockPasswordGetter.mockRestore();
 	}); */
 
-	it("should show a warning if the coin is not supported", async () => {
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: "/?method=transfer&coin=doge&network=ark.mainnet",
-			},
-		);
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "doge" }));
-	});
-
 	it("should ignore multiple clicks", async () => {
 		const { container } = render(
 			<Route path="/">
@@ -387,7 +367,7 @@ describe("Welcome with deeplink", () => {
 			</Route>,
 			{
 				history,
-				route: `/?method=transfer&coin=mainsail&nethash=${nethash}`,
+				route: `/?method=transfer&nethash=${nethash}`,
 			},
 		);
 
