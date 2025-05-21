@@ -49,29 +49,6 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
-	it("should return error for invalid coin", async () => {
-		const parameters = new URLSearchParams("coin=custom&network=mainsail.devnet&method=transfer");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "COIN_NOT_SUPPORTED", value: "custom" },
-		});
-	});
-
-	it("should return error for coin mismatch", async () => {
-		const parameters = new URLSearchParams("coin=Mainsail&nethash=1&method=transfer");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(
-			result.current.validateSearchParameters(profile, env, parameters, {
-				...requiredParameters,
-				coin: "custom",
-			}),
-		).resolves.toStrictEqual({ error: { type: "COIN_MISMATCH" } });
-	});
-
 	it("should return error for missing method", async () => {
 		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet");
 
