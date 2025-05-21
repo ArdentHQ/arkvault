@@ -5,9 +5,11 @@ import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { TransactionFees } from "@/types";
 import { FeeService } from "@/app/lib/mainsail/fee.service";
-import { encodeFunctionData, EncodeFunctionDataReturnType } from "viem";
+import { encodeFunctionData, numberToHex } from "viem";
 import { MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { ContractAddresses } from "@arkecosystem/typescript-crypto";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface CreateStubTransactionProperties {
 	getData: () => Record<string, any>;
@@ -32,16 +34,10 @@ interface CalculateProperties {
 	type: string;
 }
 
-interface EstimateGasParams {
-	from: string;
-	to: string;
-	data?: EncodeFunctionDataReturnType;
-}
-
-function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasParams {
+function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
 	const {senderAddress, recipientAddress, recipients: recipientList, username } = formData;
 
-	const paramBuilders: Record<string, () => Omit<EstimateGasParams, "from">> = {
+	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
 		multiPayment: () => {
 			const recipients: string[] = [];
 			const amounts: string[] = [];
@@ -51,13 +47,15 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 				amounts.push(parseUnits(payment.amount, "ark").toString());
 			}
 
+			const value = numberToHex(BigNumber.sum(amounts).toBigInt());
+
 			const data = encodeFunctionData({
 				abi: MultiPaymentAbi.abi,
 				args: [recipients, amounts],
 				functionName: "pay",
 			});
 
-			return { data, to: ContractAddresses.MULTIPAYMENT }
+			return { data, to: ContractAddresses.MULTIPAYMENT, value }
 		},
 		transfer: () => ({to: recipientAddress as string}),
 		unvote: () => {},
@@ -137,8 +135,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 
 	const estimateGas = async ({ type, data: formData }: EstimateGasProperties) => {
 		const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-		const { from, to, data } = getEstimateGasParams(formData, type);
-		return await fees.estimateGas(from, to, data);
+		return await fees.estimateGas(getEstimateGasParams(formData, type));
 	}
 
 	const calculate = useCallback(

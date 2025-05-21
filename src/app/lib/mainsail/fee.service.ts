@@ -6,6 +6,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 
 interface Fees {
 	min: string;
@@ -40,17 +41,7 @@ export class FeeService {
 		};
 	}
 
-	public async estimateGas(from: string, to: string, data?: string) {
-		const payload = {
-			from,
-			to,
-			gasPrice: "0x0",
-		};
-
-		if (data) {
-			payload.data = data;
-		}
-
+	public async estimateGas(payload: EstimateGasPayload) {
 		return await this.#client.evm().estimateGas(payload);
 	}
 
