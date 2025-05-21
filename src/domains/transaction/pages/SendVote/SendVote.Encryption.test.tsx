@@ -22,7 +22,6 @@ import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { renderHook } from "@testing-library/react";
-import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import userEvent from "@testing-library/user-event";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
@@ -33,7 +32,6 @@ const fixtureProfileId = getDefaultProfileId();
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		...signedTransactionMock,
 		isTransfer: () => false,
 		isVote: () => true,
 		type: () => "vote",
@@ -116,7 +114,7 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 
 		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
 		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;

@@ -28,9 +28,8 @@ import { DateTime } from "@/app/lib/intl";
 
 const fixtureProfileId = getDefaultProfileId();
 
-
 export const signedTransactionMock = {
-	blockHash: () => { },
+	blockHash: () => {},
 	confirmations: () => Bignu.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,
 	convertedFee: () => {
@@ -40,7 +39,7 @@ export const signedTransactionMock = {
 	convertedTotal: () => BigNumber.ZERO,
 	data: () => transactionFixture.data,
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
-	explorerLinkForBlock: () => { },
+	explorerLinkForBlock: () => {},
 	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
 	from: () => transactionFixture.data.from,
 	hash: () => transactionFixture.data.hash,
