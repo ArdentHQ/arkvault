@@ -445,12 +445,14 @@ export const SendVote = () => {
 									unvotes={unvotes}
 									votes={votes}
 									wallet={activeWallet}
+									network={activeNetwork}
 								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
 								{activeWallet && (
 									<ReviewStep
+										network={activeWallet.network()}
 										unvotes={unvotes}
 										votes={votes}
 										wallet={activeWallet}
@@ -469,6 +471,7 @@ export const SendVote = () => {
 												wallet={activeWallet}
 												votes={votes}
 												unvotes={unvotes}
+												network={activeWallet.network()}
 											/>
 										}
 										ledgerIsAwaitingDevice={!hasDeviceAvailable}
