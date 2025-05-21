@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { BigNumber } from "@/app/lib/helpers";
@@ -22,21 +21,21 @@ describe("Send transfer validations", () => {
 	it("recipientAddress", async () => {
 		const withoutNetwork = sendTransfer(translationMock).recipientAddress(profile, undefined, [], false);
 
-		await expect(withoutNetwork.validate.valid("")).resolves.toBe(false);
+		await expect(withoutNetwork.validate.valid("")).toBe(false);
 
 		const noAddressWithRecipients = sendTransfer(translationMock).recipientAddress(profile, network, [{}], false);
 
-		await expect(noAddressWithRecipients.validate.valid("")).resolves.toBe(true);
+		await expect(noAddressWithRecipients.validate.valid("")).toBe(true);
 
 		const noAddressWithoutRecipients = sendTransfer(translationMock).recipientAddress(profile, network, [], false);
 
-		await expect(noAddressWithoutRecipients.validate.valid("")).resolves.toBe("COMMON.VALIDATION.FIELD_REQUIRED");
+		await expect(noAddressWithoutRecipients.validate.valid("")).toBe("COMMON.VALIDATION.FIELD_REQUIRED");
 	});
 
 	it("recipientAddres - invalid", async () => {
 		const invalidAddress = sendTransfer(translationMock).recipientAddress(profile, network, [], false);
 
-		await expect(invalidAddress.validate.valid("invalid")).resolves.toBe("COMMON.VALIDATION.RECIPIENT_INVALID");
+		await expect(invalidAddress.validate.valid("invalid")).toBe("COMMON.VALIDATION.RECIPIENT_INVALID");
 	});
 
 	it("amount", () => {
