@@ -280,7 +280,7 @@ export class ConfirmedTransactionData {
 
 		for (const index in recipients) {
 			payments[index] = {
-				amount: formatUnits(amounts[index], "ark"),
+				amount: BigNumber.make(UnitConverter.formatUnits(amounts[index], "ark")),
 				recipientId: recipients[index],
 			};
 		}

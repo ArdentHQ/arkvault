@@ -55,14 +55,6 @@ export const SignMessage: React.VFC = () => {
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
-	const wallets = useMemo(
-		() =>
-			activeNetwork
-				? activeProfile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
-				: [],
-		[activeNetwork, activeProfile],
-	);
-
 	const initialState: Services.SignedMessage = {
 		message: queryParameters.get("message") || "",
 		signatory: "",
@@ -169,7 +161,7 @@ export const SignMessage: React.VFC = () => {
 									<FormStep
 										disabled={false}
 										profile={activeProfile}
-										wallets={wallets}
+										wallets={activeProfile.wallets().values()}
 										disableMessageInput={false}
 										maxLength={signMessage.message().maxLength.value}
 										wallet={selectedWallet}
