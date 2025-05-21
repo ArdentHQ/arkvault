@@ -97,7 +97,7 @@ export const SendVote = () => {
 		register("suppressWarning");
 
 		for (const network of networks) {
-			if (network.coin() === activeWallet?.coinId() && network.id() === activeWallet.networkId()) {
+			if (network.id() === activeWallet?.networkId()) {
 				setValue("network", network, { shouldDirty: true, shouldValidate: true });
 
 				break;
@@ -388,17 +388,17 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-									unvotes: unvotes.map((unvote) => ({
-										amount: unvote.amount,
-										id: unvote.wallet?.address(),
-									})),
-								}
+								unvotes: unvotes.map((unvote) => ({
+									amount: unvote.amount,
+									id: unvote.wallet?.address(),
+								})),
+							}
 							: {
-									votes: votes.map((vote) => ({
-										amount: vote.amount,
-										id: vote.wallet?.address(),
-									})),
-								},
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.address(),
+								})),
+							},
 					},
 					senderWallet,
 					{ abortSignal },

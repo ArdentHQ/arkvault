@@ -91,7 +91,7 @@ export const SendTransfer = () => {
 
 	const connectLedger = useCallback(async () => {
 		if (wallet) {
-			await connect(activeProfile, wallet.coinId(), wallet.networkId());
+			await connect(activeProfile, wallet.networkId());
 			void handleSubmit(() => submit(true))();
 		}
 	}, [wallet, activeProfile, connect]);

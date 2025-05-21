@@ -43,12 +43,12 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 						wallet={
 							wallet
 								? {
-										address: wallet.address(),
-										network: wallet.network(),
-									}
+									address: wallet.address(),
+									network: wallet.network(),
+								}
 								: undefined
 						}
-						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
+						wallets={profile.wallets().values()}
 						profile={profile}
 						onChange={(address: string) =>
 							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })

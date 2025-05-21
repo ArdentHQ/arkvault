@@ -103,7 +103,7 @@ export const SignMessage: React.VFC = () => {
 	const { sign } = useMessageSigner();
 
 	const connectLedger = useCallback(async () => {
-		await connect(activeProfile, selectedWallet!.coinId(), selectedWallet!.networkId());
+		await connect(activeProfile, selectedWallet!.networkId());
 		handleSubmit(submitForm)();
 	}, [selectedWallet, activeProfile, connect]);
 
