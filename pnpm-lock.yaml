@@ -18,7 +18,7 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3
       '@arkecosystem/typescript-crypto':
-        specifier: 0.0.6
+        specifier: ^0.0.6
         version: 0.0.6
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
@@ -36,8 +36,8 @@ importers:
         specifier: ^6.29.4
         version: 6.29.4
       '@mainsail/evm-contracts':
-        specifier: 0.0.1-evm.14
-        version: 0.0.1-evm.14
+        specifier: 0.0.1-evm.18
+        version: 0.0.1-evm.18
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.4)
@@ -1932,8 +1932,8 @@ packages:
   '@ledgerhq/types-live@6.61.0':
     resolution: {integrity: sha512-pC8N+fccrsnUF77HWNwEF14ZahvRpJHf/d5LiFxZnzU7Bmy2pj7YQbeUrNwwTukjbzYIjedIuUXL0mffM1hLzg==}
 
-  '@mainsail/evm-contracts@0.0.1-evm.14':
-    resolution: {integrity: sha512-acA7cCAIwR7uWB7Rdct8YO+7dZazev7Yf2cLam8DZQ1vAv/O8fuOY4hrtprQlaKf3DtsZiqi7Iwei5wGIJ5ftA==}
+  '@mainsail/evm-contracts@0.0.1-evm.18':
+    resolution: {integrity: sha512-WrNJc0SwZYhOSYGkFCP10GmSorKDNPpZMCYbI+iRT/20uZjbJ6YYmuRHHUEqIBB4Kpc0T7feZ4O0oOnAefm7hQ==}
     engines: {node: '>=20.x'}
 
   '@miherlosev/esm@3.2.26':
@@ -3994,8 +3994,8 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  ethers@6.13.7:
-    resolution: {integrity: sha512-qbaJ0uIrjh+huP1Lad2f2QtzW5dcqSVjIzVH6yWB4dKoMuj2WqYz5aMeeQTCNpAKgTJBM5J9vcc2cYJ23UAimQ==}
+  ethers@6.14.1:
+    resolution: {integrity: sha512-JnFiPFi3sK2Z6y7jZ3qrafDMwiXmU+6cNZ0M+kPq+mTy9skqEzwqAdFW3nb/em2xjlIVXX6Lz8ID6i3LmS4+fQ==}
     engines: {node: '>=14.0.0'}
 
   eventemitter3@5.0.1:
@@ -7883,7 +7883,7 @@ snapshots:
     dependencies:
       '@noble/secp256k1': 2.2.3
       bignumber.js: 9.1.2
-      ethers: 6.13.7
+      ethers: 6.14.1
       wif: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -9728,7 +9728,7 @@ snapshots:
       bignumber.js: 9.1.2
       rxjs: 7.8.2
 
-  '@mainsail/evm-contracts@0.0.1-evm.14': {}
+  '@mainsail/evm-contracts@0.0.1-evm.18': {}
 
   '@miherlosev/esm@3.2.26': {}
 
@@ -12126,7 +12126,7 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  ethers@6.13.7:
+  ethers@6.14.1:
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.2.0
