@@ -157,6 +157,7 @@ describe("SendExchangeTransfer", () => {
 			};
 		});
 
+		vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
 		vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 		mockNanoXTransport();
 
