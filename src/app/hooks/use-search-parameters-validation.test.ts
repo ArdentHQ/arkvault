@@ -183,7 +183,8 @@ describe("useSearchParametersValidation", () => {
 					searchParameters: parameters,
 				}),
 			).toBe(
-				`/profiles/${profile.id()}/verify-message?coin=Mainsail&nethash=${profile.wallets().first().network().meta().nethash
+				`/profiles/${profile.id()}/verify-message?coin=Mainsail&nethash=${
+					profile.wallets().first().network().meta().nethash
 				}&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d`,
 			);
 		});
@@ -254,7 +255,8 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/sign-message?coin=Mainsail&nethash=${profile.wallets().first().network().meta().nethash
+			`/profiles/${profile.id()}/sign-message?coin=Mainsail&nethash=${
+				profile.wallets().first().network().meta().nethash
 			}&method=sign&message=test`,
 		);
 	});
@@ -402,7 +404,8 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-transfer?coin=mainsail&method=transfer&nethash=${profile.wallets().first().network().meta().nethash
+			`/profiles/${profile.id()}/send-transfer?coin=mainsail&method=transfer&nethash=${
+				profile.wallets().first().network().meta().nethash
 			}`,
 		);
 	});
@@ -422,14 +425,15 @@ describe("useSearchParametersValidation", () => {
 				searchParameters: parameters,
 			}),
 		).toBe(
-			`/profiles/${profile.id()}/send-vote?coin=mainsail&method=vote&nethash=${profile.wallets().first().network().meta().nethash
+			`/profiles/${profile.id()}/send-vote?coin=mainsail&method=vote&nethash=${
+				profile.wallets().first().network().meta().nethash
 			}&delegate=test&vote=undefined`,
 		);
 	});
 
 	it("should return error if no available wallets found in network (with network)", async () => {
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
-		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0)
+		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
 
 		const parameters = new URLSearchParams(
 			"amount=10&coin=mainsail&method=transfer&network=mainsail.devnet&recipient=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
@@ -442,10 +446,11 @@ describe("useSearchParametersValidation", () => {
 		});
 
 		mockAvailableWallets.mockRestore();
+		walletCountMock.mockRestore();
 	});
 
 	it("should return error if no available wallets found in network (with nethash)", async () => {
-		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0)
+		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
 		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
@@ -462,6 +467,7 @@ describe("useSearchParametersValidation", () => {
 		});
 
 		mockAvailableWallets.mockRestore();
+		walletCountMock.mockRestore();
 	});
 
 	it("should build uri error message", () => {
@@ -478,7 +484,8 @@ describe("useSearchParametersValidation", () => {
 	it("should build qr error message", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		expect(result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true))
-			.toMatchInlineSnapshot(`<WrapperURI />`);
+		expect(
+			result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true),
+		).toMatchInlineSnapshot(`<WrapperURI />`);
 	});
 });

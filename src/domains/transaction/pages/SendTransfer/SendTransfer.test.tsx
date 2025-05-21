@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/require-await */
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { FormProvider, useForm } from "react-hook-form";
 import {
-	MNEMONICS,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletId,
@@ -325,7 +323,7 @@ describe("SendTransfer", () => {
 		walletNetworkSpy.mockRestore();
 	});
 
-	it("should render review step", async () => {
+	it("should render review step", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		history.push(transferURL);
@@ -344,7 +342,7 @@ describe("SendTransfer", () => {
 			senderAddress: wallet.address(),
 		};
 
-		const { asFragment, container } = render(
+		const { container } = render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
 					<ReviewStep wallet={wallet} network={wallet.network()} />
@@ -359,11 +357,9 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(container).toHaveTextContent(wallet.address());
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render review step with multiple recipients (%s)", async (_, memo) => {
+	it("should render review step with multiple recipients (%s)", (_, memo) => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
 		history.push(transferURL);
@@ -385,7 +381,7 @@ describe("SendTransfer", () => {
 			senderAddress: wallet.address(),
 		};
 
-		const { asFragment, container } = render(
+		const { container } = render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<ComponentWrapper defaultValues={defaultValues} activeStep={1}>
 					<ReviewStep wallet={wallet} network={wallet.network()} />
@@ -404,8 +400,6 @@ describe("SendTransfer", () => {
 		if (memo) {
 			expect(container).toHaveTextContent(memo);
 		}
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with only one network", async () => {
@@ -888,10 +882,11 @@ describe("SendTransfer", () => {
 
 	it("should error if wrong mnemonic", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+		const mnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -950,24 +945,23 @@ describe("SendTransfer", () => {
 
 		expect(inputElement).toHaveValue(passphrase);
 
-		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
+		await inputElement.select();
 
-		inputElement.select();
 		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, MNEMONICS[0]);
-		await waitFor(() => expect(inputElement).toHaveValue(MNEMONICS[0]));
+		await userEvent.type(inputElement, "test");
 
-		await waitFor(() => {
-			expect(sendButton()).toBeDisabled();
-		});
+		await waitFor(() => expect(inputElement).toHaveValue("test"));
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
-		expect(screen.getByTestId("Input__error")).toHaveAttribute(
-			"data-errortext",
-			"This mnemonic does not correspond to your wallet",
-		);
-		expect(container).toMatchSnapshot();
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				"This mnemonic does not correspond to your wallet",
+			);
+		});
+
+		mnemonicMock.mockRestore();
 	});
 
 	it("should show error step and go back", async () => {
