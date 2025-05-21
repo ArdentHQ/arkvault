@@ -13,7 +13,6 @@ import { AddressService } from "@/app/lib/mainsail/address.service";
 
 interface RequiredParameters {
 	network?: string;
-	coin?: string;
 	nethash?: string;
 }
 
@@ -33,8 +32,6 @@ interface PathProperties {
 
 enum SearchParametersError {
 	AmbiguousValidator = "AMBIGUOUS_VALIDATOR",
-	CoinMismatch = "COIN_MISMATCH",
-	CoinNotSupported = "COIN_NOT_SUPPORTED",
 	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
 	MethodNotSupported = "METHOD_NOT_SUPPORTED",
 	MissingValidator = "MISSING_VALIDATOR",
@@ -233,7 +230,6 @@ export const useSearchParametersValidation = () => {
 		requiredParameters?: RequiredParameters,
 	) => {
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-		const coin = parameters.get("coin")?.toLowerCase() || "mainsail";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
@@ -244,14 +240,6 @@ export const useSearchParametersValidation = () => {
 
 		if (!method) {
 			return { error: { type: SearchParametersError.MissingMethod } };
-		}
-
-		if (requiredParameters?.coin && coin !== requiredParameters.coin.toLowerCase()) {
-			return { error: { type: SearchParametersError.CoinMismatch } };
-		}
-
-		if (!allEnabledNetworks.some((item) => item.coin().toLowerCase() === coin.toLowerCase())) {
-			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 
 		if (!Object.keys(methods).includes(method)) {
@@ -336,20 +324,6 @@ export const useSearchParametersValidation = () => {
 
 		if (type === SearchParametersError.AmbiguousValidator) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_OR_PUBLICKEY" />;
-		}
-
-		if (type === SearchParametersError.CoinMismatch) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.COIN_MISMATCH" />;
-		}
-
-		if (type === SearchParametersError.CoinNotSupported) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
-					values={{ coin: value }}
-				/>
-			);
 		}
 
 		if (type === SearchParametersError.ValidatorNotFound) {
