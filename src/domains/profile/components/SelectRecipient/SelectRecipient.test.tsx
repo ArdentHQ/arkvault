@@ -230,7 +230,7 @@ describe("SelectRecipient", () => {
 	it("should filter recipients list by network if provided", async () => {
 		const function_ = vi.fn();
 
-		const [wallet] = profile.wallets().findByCoinWithNetwork("Mainsail", "mainsail.devnet");
+		const wallet = profile.wallets().first();
 
 		render(
 			<SelectRecipient

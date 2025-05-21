@@ -455,7 +455,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if no available wallets found in network (with network)", async () => {
-		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
+		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
 			"amount=10&coin=mainsail&method=transfer&network=mainsail.devnet&recipient=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
@@ -471,7 +471,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if no available wallets found in network (with nethash)", async () => {
-		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
+		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
 			"coin=mainsail&method=transfer&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
