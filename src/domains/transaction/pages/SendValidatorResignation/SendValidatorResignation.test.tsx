@@ -53,7 +53,7 @@ const renderPage = () => {
 };
 
 const signedTransactionMock = {
-	blockHash: () => { },
+	blockHash: () => {},
 	confirmations: () => BigNumber.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,
 	convertedFee: () => {
@@ -63,7 +63,7 @@ const signedTransactionMock = {
 	convertedTotal: () => BigNumber.ZERO,
 	data: () => transactionFixture.data,
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
-	explorerLinkForBlock: () => { },
+	explorerLinkForBlock: () => {},
 	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
 	from: () => transactionFixture.data.from,
 	hash: () => transactionFixture.data.hash,
@@ -507,7 +507,9 @@ describe("SendValidatorResignation", () => {
 
 		it("should successfully sign and submit resignation transaction using encryption password", async () => {
 			const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-			const actsWithSecretWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
+			const actsWithSecretWithEncryptionMock = vi
+				.spyOn(wallet, "actsWithMnemonicWithEncryption")
+				.mockReturnValue(true);
 			const passphraseMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 			const secondPublicKeyMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
