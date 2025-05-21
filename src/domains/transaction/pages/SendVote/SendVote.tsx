@@ -388,17 +388,17 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-								unvotes: unvotes.map((unvote) => ({
-									amount: unvote.amount,
-									id: unvote.wallet?.address(),
-								})),
-							}
+									unvotes: unvotes.map((unvote) => ({
+										amount: unvote.amount,
+										id: unvote.wallet?.address(),
+									})),
+								}
 							: {
-								votes: votes.map((vote) => ({
-									amount: vote.amount,
-									id: vote.wallet?.address(),
-								})),
-							},
+									votes: votes.map((vote) => ({
+										amount: vote.amount,
+										id: vote.wallet?.address(),
+									})),
+								},
 					},
 					senderWallet,
 					{ abortSignal },
@@ -445,14 +445,12 @@ export const SendVote = () => {
 									unvotes={unvotes}
 									votes={votes}
 									wallet={activeWallet}
-									network={activeNetwork}
 								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
 								{activeWallet && (
 									<ReviewStep
-										network={activeWallet.network()}
 										unvotes={unvotes}
 										votes={votes}
 										wallet={activeWallet}
@@ -471,7 +469,6 @@ export const SendVote = () => {
 												wallet={activeWallet}
 												votes={votes}
 												unvotes={unvotes}
-												network={activeWallet.network()}
 											/>
 										}
 										ledgerIsAwaitingDevice={!hasDeviceAvailable}

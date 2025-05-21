@@ -16,7 +16,7 @@ type FormStepProperties = {
 	isWalletFieldDisabled?: boolean;
 } & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { setValue } = useFormContext();
@@ -43,9 +43,9 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 						wallet={
 							wallet
 								? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+										address: wallet.address(),
+										network: wallet.network(),
+									}
 								: undefined
 						}
 						wallets={profile.wallets().values()}

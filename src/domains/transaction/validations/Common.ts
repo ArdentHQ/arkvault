@@ -105,10 +105,12 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const maximumGasPrice = BigNumber.make(UnitConverter.formatUnits(
-					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
-					"gwei",
-				));
+				const maximumGasPrice = BigNumber.make(
+					UnitConverter.formatUnits(
+						BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
+						"gwei",
+					),
+				);
 
 				if (maximumGasPrice.isLessThan(gasPrice ?? 0)) {
 					return t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_HIGH", {

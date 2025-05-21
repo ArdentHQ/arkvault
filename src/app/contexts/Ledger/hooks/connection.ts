@@ -100,42 +100,39 @@ export const useLedgerConnection = () => {
 
 	const isAttemptingConnect = useRef(false);
 
-	const connect = useCallback(
-		async (profile: Contracts.IProfile, string, retryOptions?: Options) => {
-			if (isAttemptingConnect.current) {
-				return;
-			}
+	const connect = useCallback(async (profile: Contracts.IProfile, string, retryOptions?: Options) => {
+		if (isAttemptingConnect.current) {
+			return;
+		}
 
-			isAttemptingConnect.current = true;
+		isAttemptingConnect.current = true;
 
-			if (!isLedgerTransportSupported()) {
-				handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, profile);
-				return;
-			}
+		if (!isLedgerTransportSupported()) {
+			handleLedgerConnectionError({ message: "COMPATIBILITY_ERROR" }, profile);
+			return;
+		}
 
-			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+		const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 
-			await resetConnectionState();
+		await resetConnectionState();
 
-			dispatch({ type: "waiting" });
-			abortRetryReference.current = false;
+		dispatch({ type: "waiting" });
+		abortRetryReference.current = false;
 
-			try {
-				await persistLedgerConnection({
-					hasRequestedAbort: () => abortRetryReference.current,
-					ledgerService: profile.ledger(),
-					options,
-				});
+		try {
+			await persistLedgerConnection({
+				hasRequestedAbort: () => abortRetryReference.current,
+				ledgerService: profile.ledger(),
+				options,
+			});
 
-				dispatch({ type: "connected" });
-			} catch (connectError) {
-				handleLedgerConnectionError(connectError, profile);
-			}
+			dispatch({ type: "connected" });
+		} catch (connectError) {
+			handleLedgerConnectionError(connectError, profile);
+		}
 
-			isAttemptingConnect.current = false;
-		},
-		[],
-	);
+		isAttemptingConnect.current = false;
+	}, []);
 
 	const setBusy = useCallback(() => dispatch({ type: "busy" }), []);
 	const setIdle = useCallback(() => dispatch({ type: "connected" }), []);
