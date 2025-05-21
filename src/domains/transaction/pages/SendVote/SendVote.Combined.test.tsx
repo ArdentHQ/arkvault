@@ -28,7 +28,7 @@ import { DateTime } from "@/app/lib/intl";
 
 const fixtureProfileId = getDefaultProfileId();
 
-export const signedTransactionMock = {
+const signedTransactionMock = {
 	blockHash: () => {},
 	confirmations: () => Bignu.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,

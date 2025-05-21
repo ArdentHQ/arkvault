@@ -43,7 +43,7 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-export const signedTransactionMock = {
+const signedTransactionMock = {
 	blockHash: () => {},
 	confirmations: () => BigNumber.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,
