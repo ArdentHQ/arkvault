@@ -18,7 +18,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-build-and-upload
@@ -65,7 +65,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-vote
@@ -131,7 +131,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-transaction
@@ -197,7 +197,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-contact
@@ -263,7 +263,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-dashboard
@@ -329,7 +329,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-profile
@@ -395,7 +395,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-message
@@ -461,7 +461,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-wallet
@@ -527,7 +527,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [20.12.2]
+                node-version: [22]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-settings
