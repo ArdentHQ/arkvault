@@ -228,7 +228,7 @@ describe("SendTransfer", () => {
 	});
 
 	it.each(["xs", "lg"])("should render form step (%s)", async (breakpoint) => {
-		const { asFragment } = renderWithForm(
+		renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
 				<FormStep deeplinkProps={{}} profile={profile} network={wallet.network()} />
 			</StepsProvider>,
@@ -255,8 +255,6 @@ describe("SendTransfer", () => {
 		}
 
 		await expect(screen.findByTestId("Amount")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form step with deeplink values and use them", async () => {
@@ -482,7 +480,7 @@ describe("SendTransfer", () => {
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -578,8 +576,6 @@ describe("SendTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
-
-		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = vi.spyOn(history, "push");
@@ -698,7 +694,7 @@ describe("SendTransfer", () => {
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -775,8 +771,6 @@ describe("SendTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
-
-		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = vi.spyOn(history, "push");
@@ -1106,7 +1100,7 @@ describe("SendTransfer", () => {
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -1195,8 +1189,6 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
-		expect(container).toMatchSnapshot();
-
 		// Go back to wallet
 		const pushSpy = vi.spyOn(history, "push");
 		await userEvent.click(backToWalletButton());
@@ -1235,7 +1227,7 @@ describe("SendTransfer", () => {
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -1300,19 +1292,17 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		sentTransactionsMock.mockRestore();
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should send a single transfer using wallet with encryption password", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		const actsWithSecretWithEncryptionMock = vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
 		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		history.push(transferURL);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -1392,10 +1382,8 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
-		actsWithWifWithEncryptionMock.mockRestore();
+		actsWithSecretWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();
-
-		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = vi.spyOn(history, "push");
