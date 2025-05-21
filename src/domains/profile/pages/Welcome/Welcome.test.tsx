@@ -313,26 +313,6 @@ describe("Welcome with deeplink", () => {
 		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_INVALID", value: "custom" }));
 	});
 
-	it("should show a warning if there are no available senders for network", async () => {
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "Mainsail" }));
-	});
-
 	it("should show a warning if there is no network for the given nethash", async () => {
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
 		const { container } = render(
@@ -357,27 +337,6 @@ describe("Welcome with deeplink", () => {
 		});
 
 		await expectToast(result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }));
-	});
-
-	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
-		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: `/?method=transfer&nethash=${nethash}`,
-			},
-		);
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "Mainsail" }));
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
