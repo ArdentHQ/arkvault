@@ -86,6 +86,7 @@ describe("SendExchangeTransfer", () => {
 			}
 		});
 
+		const profileWalletsCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
 		const profileWalletsMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 
 		const ledgerGetPublicKeyMock = vi
@@ -113,6 +114,7 @@ describe("SendExchangeTransfer", () => {
 		renderComponent();
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 		profileWalletsMock.mockRestore();
+		profileWalletsCountMock.mockRestore();
 		versionMock.mockRestore();
 		connectMock.mockRestore();
 		mockWalletData.mockRestore();
@@ -127,6 +129,7 @@ describe("SendExchangeTransfer", () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
 		const ledgerErrorMock = mockLedgerTransportError("Access denied to use Ledger device");
+		const profileWalletsCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
 		const profileWalletsMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([wallet]);
 
 		renderComponent();
@@ -137,6 +140,7 @@ describe("SendExchangeTransfer", () => {
 		ledgerErrorMock.mockRestore();
 		isLedgerMock.mockRestore();
 		profileWalletsMock.mockRestore();
+		profileWalletsCountMock.mockRestore();
 	});
 
 	it("should show browser compatibility error ledger is not supported", async () => {
