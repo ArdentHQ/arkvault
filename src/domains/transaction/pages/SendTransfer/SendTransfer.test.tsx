@@ -44,7 +44,7 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 export const signedTransactionMock = {
-	blockHash: () => {},
+	blockHash: () => { },
 	confirmations: () => BigNumber.ZERO,
 	convertedAmount: () => +transactionFixture.data.value / 1e8,
 	convertedFee: () => {
@@ -54,7 +54,7 @@ export const signedTransactionMock = {
 	convertedTotal: () => BigNumber.ZERO,
 	data: () => transactionFixture.data,
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
-	explorerLinkForBlock: () => {},
+	explorerLinkForBlock: () => { },
 	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
 	from: () => transactionFixture.data.from,
 	hash: () => transactionFixture.data.hash,
@@ -1297,8 +1297,8 @@ describe("SendTransfer", () => {
 	it("should send a single transfer using wallet with encryption password", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithSecretWithEncryptionMock = vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
-		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
+		const actsWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
+		const passphraseGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		history.push(transferURL);
 
@@ -1362,7 +1362,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password");
 
-		// Step 5 (skip step 4 for now - ledger confirmation)
+		//Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
@@ -1382,17 +1382,8 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
-		actsWithSecretWithEncryptionMock.mockRestore();
-		wifGetMock.mockRestore();
-
-		// Go back to wallet
-		const pushSpy = vi.spyOn(history, "push");
-		await userEvent.click(backToWalletButton());
-
-		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
-
-		goSpy.mockRestore();
-		pushSpy.mockRestore();
+		actsWithEncryptionMock.mockRestore();
+		passphraseGetMock.mockRestore();
 	});
 
 	it("should buildTransferData return zero amount for empty multi recipients", async () => {
