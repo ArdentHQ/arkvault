@@ -35,9 +35,10 @@ export const GasLimit: Record<Properties["type"], number> = {
 export const MIN_GAS_PRICE = 5;
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
-	const { calculate } = useFees(profile);
+	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
+	const [estimatedGas, setEstimatedGas] = useState(false);
 
 	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
@@ -46,6 +47,15 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasLimit = getValues("gasLimit") as number;
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
+
+	useEffect(() => {
+		const estimate = async () => {
+			const gasLimit = await estimateGas({ data: getValues(), type });
+			console.log("Estimated Gas", gasLimit);
+		}
+
+		void estimate();
+	}, []);
 
 	useEffect(() => {
 		const recalculateFee = async () => {

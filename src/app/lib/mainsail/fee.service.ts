@@ -1,11 +1,10 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, Services } from "@/app/lib/mainsail";
+import { ConfigRepository, Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 
 interface Fees {
@@ -20,7 +19,9 @@ export class FeeService {
 
 	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
-		this.#client = new ArkClient(this.#config.host("full", profile));
+		const api = this.#config.host("full", profile);
+		const evm = this.#config.host("evm", profile);
+		this.#client = new ArkClient({ api, evm });
 	}
 
 	public async all(): Promise<Services.TransactionFees> {
@@ -37,6 +38,20 @@ export class FeeService {
 			usernameResignation: fees,
 			vote: fees,
 		};
+	}
+
+	public async estimateGas(from: string, to: string, data?: string) {
+		const payload = {
+			from,
+			to,
+			gasPrice: "0x0",
+		};
+
+		if (data) {
+			payload.data = data;
+		}
+
+		return await this.#client.evm().estimateGas(payload);
 	}
 
 	public async calculate(
