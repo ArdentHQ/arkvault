@@ -34,7 +34,7 @@ interface CalculateProperties {
 	type: string;
 }
 
-function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
+export function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
 	const {
 		senderAddress,
 		recipientAddress,

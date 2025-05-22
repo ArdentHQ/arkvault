@@ -7,7 +7,8 @@ import React from "react";
 import { StubStorage } from "@/tests/mocks";
 import { httpClient } from "@/app/services";
 import { renderHook } from "@testing-library/react";
-import { useFees } from "./use-fees";
+import { getEstimateGasParams, useFees } from "./use-fees";
+import { Contracts } from "@/app/lib/profiles";
 
 const MainsailDevnet = "mainsail.devnet";
 
@@ -331,4 +332,128 @@ describe("useFees", () => {
 		feeTypeSpy.mockRestore();
 		transferMock.mockRestore();
 	});
+
+	it("should return estimated gas", async () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		await env.wallets().syncByProfile(profile);
+
+		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
+
+		const {
+			result: { current },
+		} = renderHook(() => useFees(profile), {wrapper});
+
+		await expect(
+			current.estimateGas({
+				data: {
+					recipientAddress: wallet.address(),
+					senderAddress: wallet.address(),
+				},
+				type: "transfer"
+			}),
+		).resolves.toStrictEqual(21_000);
+	});
 });
+
+describe("getEstimateGasParams", () => {
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
+
+	beforeAll(() => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		wallet = profile.wallets().first();
+	})
+
+	it("should return params for transfer", () => {
+		const result = getEstimateGasParams({
+			recipientAddress: wallet.address(),
+			senderAddress: wallet.address(),
+		}, "transfer");
+
+		expect(result).toEqual({
+			from: wallet.address(),
+			to: wallet.address(),
+		})
+	});
+
+	it("should return params for vote", () => {
+		const result = getEstimateGasParams({
+			senderAddress: wallet.address(),
+			voteAddresses: [wallet.address()],
+		}, "vote");
+
+		expect(result).toEqual({
+			data: expect.stringMatching(/^0x/),
+			from: wallet.address(),
+			to: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
+		})
+	});
+
+	it("should return params for validatorRegistration", () => {
+		const result = getEstimateGasParams({
+			senderAddress: wallet.address(),
+			validatorPublicKey: "bls-key",
+		}, "validatorRegistration");
+
+		expect(result).toEqual({
+			data: expect.stringMatching(/^0x/),
+			from: wallet.address(),
+			to: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
+		})
+	});
+
+	it("should return params for validatorResignation", () => {
+		const result = getEstimateGasParams({
+			senderAddress: wallet.address(),
+		}, "validatorResignation");
+
+		expect(result).toEqual({
+			data: expect.stringMatching(/^0x/),
+			from: wallet.address(),
+			to: "0x535B3D7A252fa034Ed71F0C53ec0C6F784cB64E1",
+		})
+	});
+
+	it("should return params for usernameRegistration", () => {
+		const result = getEstimateGasParams({
+			senderAddress: wallet.address(),
+		}, "usernameRegistration");
+
+		expect(result).toEqual({
+			data: expect.stringMatching(/^0x/),
+			from: wallet.address(),
+			to: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
+		})
+	});
+
+	it("should return params for usernameResignation", () => {
+		const result = getEstimateGasParams({
+			senderAddress: wallet.address(),
+		}, "usernameResignation");
+
+		expect(result).toEqual({
+			data: expect.stringMatching(/^0x/),
+			from: wallet.address(),
+			to: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
+		})
+	});
+
+	it("should return params for multiPayment", () => {
+		const result = getEstimateGasParams({
+			recipients: [
+				{ address: wallet.address(), amount: 5 },
+				{ address: wallet.address(), amount: 10 },
+			],
+			senderAddress: wallet.address()
+		}, "multiPayment");
+
+		expect(result).toEqual({
+			data: expect.stringMatching(/^0x/),
+			from: wallet.address(),
+			to: "0x00EFd0D4639191C49908A7BddbB9A11A994A8527",
+			value: "0xd02ab486cedc0000",
+		})
+	});
+})
