@@ -48,7 +48,7 @@ exports[`FeeField > should render 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="0"
+        aria-label="0.000105"
         class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -72,7 +72,7 @@ exports[`FeeField > should render 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 ARK
+                0.000105 ARK
               </span>
             </div>
           </div>
@@ -90,7 +90,7 @@ exports[`FeeField > should render 1`] = `
       </button>
       <button
         aria-checked="true"
-        aria-label="0"
+        aria-label="0.00010640072625"
         class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -114,7 +114,7 @@ exports[`FeeField > should render 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500"
                 data-testid="Amount"
               >
-                0 ARK
+                0.0001064 ARK
               </span>
             </div>
           </div>
@@ -132,7 +132,7 @@ exports[`FeeField > should render 1`] = `
       </button>
       <button
         aria-checked="false"
-        aria-label="0"
+        aria-label="0.000126"
         class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 dark:aria-checked:cursor-default dark:aria-checked:text-theme-dark-50 rounded group p-0 dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -156,7 +156,7 @@ exports[`FeeField > should render 1`] = `
                 class="whitespace-nowrap hidden text-xs leading-[15px] transition-all sm:block sm:text-theme-secondary-500 dark:group-hover:text-theme-dark-200 sm:dark:text-theme-dark-500"
                 data-testid="Amount"
               >
-                0 ARK
+                0.000126 ARK
               </span>
             </div>
           </div>
