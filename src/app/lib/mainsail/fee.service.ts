@@ -42,7 +42,11 @@ export class FeeService {
 	}
 
 	public async estimateGas(payload: EstimateGasPayload) {
-		return await this.#client.evm().estimateGas(payload);
+		return await this.#client.evm().ethCall({
+			id: "1",
+			method: "eth_estimateGas",
+			params: [payload]
+		});
 	}
 
 	public async calculate(
