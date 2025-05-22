@@ -12,7 +12,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -26,10 +26,10 @@ exports[`SuccessStep > should render (lg) 1`] = `
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
-              class="flex justify-between items-center mb-3 w-full leading-5 sm:justify-start sm:mb-0"
+              class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -93,7 +93,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -107,10 +107,10 @@ exports[`SuccessStep > should render (lg) 1`] = `
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
-              class="flex justify-between items-center w-full sm:justify-start"
+              class="flex w-full items-center justify-between sm:justify-start"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -118,7 +118,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                  Name
               </div>
               <div
-                class="flex justify-end items-center w-full min-w-0 font-semibold sm:justify-between sm:leading-5 leading-[17px]"
+                class="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5"
               >
                 <div
                   class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
@@ -126,14 +126,14 @@ exports[`SuccessStep > should render (lg) 1`] = `
                    Mainsail Wallet 1 
                 </div>
                 <div
-                  class="flex items-center h-5 sm:hidden"
+                  class="flex h-5 items-center sm:hidden"
                 >
                   <div
                     class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <button
-                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none py-0 px-0 space-x-0 text-theme-navy-600"
+                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 space-x-0 px-0 py-0"
                   data-testid="CreateWallet__edit-alias"
                   type="button"
                 >
@@ -165,7 +165,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                       </div>
                     </div>
                     <span
-                      class="sm:leading-5 leading-[17px]"
+                      class="leading-[17px] sm:leading-5"
                     >
                       Edit
                     </span>
@@ -193,7 +193,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -207,10 +207,10 @@ exports[`SuccessStep > should render (xs) 1`] = `
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
-              class="flex justify-between items-center mb-3 w-full leading-5 sm:justify-start sm:mb-0"
+              class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -274,7 +274,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -288,10 +288,10 @@ exports[`SuccessStep > should render (xs) 1`] = `
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
-              class="flex justify-between items-center w-full sm:justify-start"
+              class="flex w-full items-center justify-between sm:justify-start"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -299,7 +299,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                  Name
               </div>
               <div
-                class="flex justify-end items-center w-full min-w-0 font-semibold sm:justify-between sm:leading-5 leading-[17px]"
+                class="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5"
               >
                 <div
                   class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
@@ -307,14 +307,14 @@ exports[`SuccessStep > should render (xs) 1`] = `
                    Mainsail Wallet 1 
                 </div>
                 <div
-                  class="flex items-center h-5 sm:hidden"
+                  class="flex h-5 items-center sm:hidden"
                 >
                   <div
                     class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <button
-                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none py-0 px-0 space-x-0 text-theme-navy-600"
+                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 space-x-0 px-0 py-0"
                   data-testid="CreateWallet__edit-alias"
                   type="button"
                 >
@@ -346,7 +346,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                       </div>
                     </div>
                     <span
-                      class="sm:leading-5 leading-[17px]"
+                      class="leading-[17px] sm:leading-5"
                     >
                       Edit
                     </span>

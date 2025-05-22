@@ -7,23 +7,23 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -5894,17 +5894,17 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -5913,7 +5913,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -5921,7 +5921,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5950,13 +5950,13 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -5971,7 +5971,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -5981,7 +5981,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -5999,7 +5999,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -6009,7 +6009,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -6027,7 +6027,7 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -6038,13 +6038,13 @@ exports[`ValidatorsTable > loading state for base > should render when isCompact
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -6076,23 +6076,23 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -6328,13 +6328,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                             class=""
                           >
                             <div
-                              class="flex items-center px-3 space-x-3"
+                              class="flex items-center space-x-3 px-3"
                             >
                               <p>
                                 Vote Amount
                               </p>
                               <span
-                                class="p-1 rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                                class="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1"
                               >
                                 <div>
                                   <div
@@ -13129,17 +13129,17 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto pr-5"
@@ -13148,7 +13148,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto w-36"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -13156,7 +13156,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -13184,7 +13184,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
               </div>
             </div>
             <div
-              class="flex flex-row px-6 space-x-2"
+              class="flex flex-row space-x-2 px-6"
               data-testid="DelegateTable__available-balance"
             >
               <div
@@ -13205,13 +13205,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -13226,7 +13226,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -13236,7 +13236,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -13254,7 +13254,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -13264,7 +13264,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -13282,7 +13282,7 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -13293,13 +13293,13 @@ exports[`ValidatorsTable > loading state for requiresAmount > should render when
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -13331,23 +13331,23 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -13966,17 +13966,17 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -13985,7 +13985,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -13993,7 +13993,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14022,13 +14022,13 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -14043,7 +14043,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -14053,7 +14053,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -14071,7 +14071,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -14081,7 +14081,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -14099,7 +14099,7 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -14110,13 +14110,13 @@ exports[`ValidatorsTable > should add resigned validator to the unvote list 1`] 
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -14147,23 +14147,23 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -14782,17 +14782,17 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -14801,7 +14801,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -14809,7 +14809,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -14838,13 +14838,13 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -14859,7 +14859,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -14869,7 +14869,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -14887,7 +14887,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -14897,7 +14897,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -14915,7 +14915,7 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -14926,13 +14926,13 @@ exports[`ValidatorsTable > should emit action on continue button to unvote 1`] =
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -14963,23 +14963,23 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -15598,17 +15598,17 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -15617,7 +15617,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -15625,7 +15625,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -15654,13 +15654,13 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -15675,7 +15675,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -15685,7 +15685,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -15703,7 +15703,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -15713,7 +15713,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -15731,7 +15731,7 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -15742,13 +15742,13 @@ exports[`ValidatorsTable > should emit action on continue button to vote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -15779,23 +15779,23 @@ exports[`ValidatorsTable > should render 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -16414,17 +16414,17 @@ exports[`ValidatorsTable > should render 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -16433,7 +16433,7 @@ exports[`ValidatorsTable > should render 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -16441,7 +16441,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -16470,13 +16470,13 @@ exports[`ValidatorsTable > should render 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -16491,7 +16491,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -16501,7 +16501,7 @@ exports[`ValidatorsTable > should render 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -16519,7 +16519,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -16529,7 +16529,7 @@ exports[`ValidatorsTable > should render 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -16547,7 +16547,7 @@ exports[`ValidatorsTable > should render 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -16558,13 +16558,13 @@ exports[`ValidatorsTable > should render 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -16596,23 +16596,23 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -16848,13 +16848,13 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center px-3 space-x-3"
+                              class="flex items-center space-x-3 px-3"
                             >
                               <p>
                                 Vote Amount
                               </p>
                               <span
-                                class="p-1 rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                                class="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1"
                               >
                                 <div>
                                   <div
@@ -17422,17 +17422,17 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto pr-5"
@@ -17441,7 +17441,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto w-36"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -17449,7 +17449,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -17477,7 +17477,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-row px-6 space-x-2"
+              class="flex flex-row space-x-2 px-6"
               data-testid="DelegateTable__available-balance"
             >
               <div
@@ -17498,13 +17498,13 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -17519,7 +17519,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -17529,7 +17529,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -17547,7 +17547,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -17557,7 +17557,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -17575,7 +17575,7 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -17586,13 +17586,13 @@ exports[`ValidatorsTable > should render vote amount column 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -17624,23 +17624,23 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -18259,17 +18259,17 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -18278,7 +18278,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -18286,7 +18286,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -18315,13 +18315,13 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -18336,7 +18336,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -18346,7 +18346,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -18364,7 +18364,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -18374,7 +18374,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -18392,7 +18392,7 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -18403,13 +18403,13 @@ exports[`ValidatorsTable > should render with a validator to unvote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -18440,23 +18440,23 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -19080,17 +19080,17 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -19099,7 +19099,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -19107,7 +19107,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -19136,13 +19136,13 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -19157,7 +19157,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -19167,7 +19167,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -19185,7 +19185,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -19195,7 +19195,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -19213,7 +19213,7 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -19224,13 +19224,13 @@ exports[`ValidatorsTable > should render with a validator to unvote/vote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -19261,23 +19261,23 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -19896,17 +19896,17 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -19915,7 +19915,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -19923,7 +19923,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -19952,13 +19952,13 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -19973,7 +19973,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -19983,7 +19983,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -20001,7 +20001,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -20011,7 +20011,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -20029,7 +20029,7 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -20040,13 +20040,13 @@ exports[`ValidatorsTable > should render with a validator to vote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -20077,23 +20077,23 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -20339,23 +20339,23 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                   />
                   <tfoot>
                     <tr
-                      class="border-solid md:border-b-4 border-theme-secondary-200 dark:border-theme-secondary-800"
+                      class="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
                       data-testid="EmptyResults"
                     >
                       <td
-                        class="pb-4 pt-[11px]"
+                        class="pt-[11px] pb-4"
                         colspan="5"
                       >
                         <div
-                          class="flex flex-col justify-center items-center"
+                          class="flex flex-col items-center justify-center"
                         >
                           <h3
-                            class="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                            class="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold"
                           >
                             No Results
                           </h3>
                           <p
-                            class="text-sm text-theme-secondary-700 dark:text-theme-secondary-600"
+                            class="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm"
                           >
                             No results found. Refine your search and try again.
                           </p>
@@ -20371,17 +20371,17 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -20390,7 +20390,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -20398,7 +20398,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -20427,13 +20427,13 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -20448,7 +20448,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -20458,7 +20458,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -20476,7 +20476,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -20486,7 +20486,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -20504,7 +20504,7 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -20515,13 +20515,13 @@ exports[`ValidatorsTable > should render with empty list 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -20556,23 +20556,23 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
       test
     </p>
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -21191,17 +21191,17 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -21210,7 +21210,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -21218,7 +21218,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -21247,13 +21247,13 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -21268,7 +21268,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -21278,7 +21278,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -21296,7 +21296,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -21306,7 +21306,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -21324,7 +21324,7 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -21335,13 +21335,13 @@ exports[`ValidatorsTable > should render with subtitle 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -21373,23 +21373,23 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -21625,13 +21625,13 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center px-3 space-x-3"
+                              class="flex items-center space-x-3 px-3"
                             >
                               <p>
                                 Vote Amount
                               </p>
                               <span
-                                class="p-1 rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                                class="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1"
                               >
                                 <div>
                                   <div
@@ -22198,17 +22198,17 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto pr-5"
@@ -22217,7 +22217,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto w-36"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -22225,7 +22225,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -22253,7 +22253,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-row px-6 space-x-2"
+              class="flex flex-row space-x-2 px-6"
               data-testid="DelegateTable__available-balance"
             >
               <div
@@ -22274,13 +22274,13 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -22295,7 +22295,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -22305,7 +22305,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -22323,7 +22323,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -22333,7 +22333,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -22351,7 +22351,7 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -22362,13 +22362,13 @@ exports[`ValidatorsTable > should select a changed validator to unvote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -22400,23 +22400,23 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -23035,17 +23035,17 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -23054,7 +23054,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -23062,7 +23062,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -23091,13 +23091,13 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -23112,7 +23112,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -23122,7 +23122,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -23140,7 +23140,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -23150,7 +23150,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -23168,7 +23168,7 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -23179,13 +23179,13 @@ exports[`ValidatorsTable > should select a validator to unvote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -23217,23 +23217,23 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -23857,17 +23857,17 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -23876,7 +23876,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -23884,7 +23884,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -23913,13 +23913,13 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -23934,7 +23934,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -23944,7 +23944,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -23962,7 +23962,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -23972,7 +23972,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -23990,7 +23990,7 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1/1
@@ -24001,13 +24001,13 @@ exports[`ValidatorsTable > should select a validator to unvote/vote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -24038,23 +24038,23 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -24673,17 +24673,17 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -24692,7 +24692,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -24700,7 +24700,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -24729,13 +24729,13 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -24750,7 +24750,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -24760,7 +24760,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -24778,7 +24778,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -24788,7 +24788,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -24806,7 +24806,7 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -24817,13 +24817,13 @@ exports[`ValidatorsTable > should select a validator to vote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -24855,23 +24855,23 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -25107,13 +25107,13 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                             class=""
                           >
                             <div
-                              class="flex items-center px-3 space-x-3"
+                              class="flex items-center space-x-3 px-3"
                             >
                               <p>
                                 Vote Amount
                               </p>
                               <span
-                                class="p-1 rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                                class="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1"
                               >
                                 <div>
                                   <div
@@ -25680,17 +25680,17 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto pr-5"
@@ -25699,7 +25699,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto w-36"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -25707,7 +25707,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -25735,7 +25735,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
               </div>
             </div>
             <div
-              class="flex flex-row px-6 space-x-2"
+              class="flex flex-row space-x-2 px-6"
               data-testid="DelegateTable__available-balance"
             >
               <div
@@ -25756,13 +25756,13 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -25777,7 +25777,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -25787,7 +25787,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -25805,7 +25805,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -25815,7 +25815,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -25833,7 +25833,7 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -25844,13 +25844,13 @@ exports[`ValidatorsTable > should select a validator with vote amount and make i
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -25882,23 +25882,23 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -26517,17 +26517,17 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -26536,7 +26536,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -26544,7 +26544,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -26573,13 +26573,13 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -26594,7 +26594,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         2
@@ -26604,7 +26604,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -26622,7 +26622,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         1
@@ -26632,7 +26632,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -26650,7 +26650,7 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         3/10
@@ -26661,13 +26661,13 @@ exports[`ValidatorsTable > should select multiple validators to unvote/vote 1`] 
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -26698,23 +26698,23 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -27333,17 +27333,17 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -27352,7 +27352,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -27360,7 +27360,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -27389,13 +27389,13 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -27410,7 +27410,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -27420,7 +27420,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -27438,7 +27438,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -27448,7 +27448,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -27466,7 +27466,7 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -27477,13 +27477,13 @@ exports[`ValidatorsTable > should unselect a validator to unvote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
@@ -27515,23 +27515,23 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
     data-testid="ValidatorsTable"
   >
     <div
-      class="w-full last:pb-8 py-0 pt-0 mt-4 md:mt-0 first:pt-1"
+      class="w-full last:pb-8 mt-4 py-0 pt-0 first:pt-1 md:mt-0"
     >
       <div
         class="mx-auto px-6 md:px-10 lg:container"
       >
         <div
-          class="md:overflow-hidden md:rounded-xl md:border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 md:overflow-hidden md:rounded-xl md:border"
         >
           <div
             class="flex flex-col"
           >
             <div
-              class="flex overflow-hidden relative items-center rounded border border-b md:rounded-none md:border-t-0 border-theme-secondary-300 md:border-x-0 dark:border-theme-secondary-800"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center overflow-hidden rounded border border-b md:rounded-none md:border-x-0 md:border-t-0"
               data-testid="SearchableTableWrapper__search-input"
             >
               <div
-                class="absolute left-0 items-center pl-6 pointer-events-none"
+                class="pointer-events-none absolute left-0 items-center pl-6"
               >
                 <div
                   class="text-theme-secondary-500"
@@ -28150,17 +28150,17 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
       </div>
     </div>
     <div
-      class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+      class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
       data-testid="DelegateTable__footer"
     >
       <div
-        class="px-8 mx-auto md:px-10 lg:container"
+        class="mx-auto px-8 md:px-10 lg:container"
       >
         <div
           class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
         >
           <div
-            class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+            class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
           >
             <div
               class="flex grow overflow-x-auto"
@@ -28169,7 +28169,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                 class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
               >
                 <div
-                  class="flex overflow-hidden items-center space-x-2"
+                  class="flex items-center space-x-2 overflow-hidden"
                 >
                   <div
                     class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -28177,7 +28177,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     Voting Address:
                   </div>
                   <div
-                    class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                    class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -28206,13 +28206,13 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+            class="flex flex-1 flex-col items-center justify-center sm:flex-row"
           >
             <div
-              class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+              class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
             >
               <div
-                class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+                class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
               >
                 <div
                   class="flex flex-row items-center space-x-2"
@@ -28227,7 +28227,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--votes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -28237,7 +28237,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
               />
               <div
                 class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -28255,7 +28255,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--unvotes"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0
@@ -28265,7 +28265,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                 </div>
               </div>
               <span
-                class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
               />
               <div
                 class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -28283,7 +28283,7 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
                     data-testid="DelegateTable__footer--total"
                   >
                     <div
-                      class="flex justify-start items-center md:justify-end"
+                      class="flex items-center justify-start md:justify-end"
                     >
                       <div>
                         0/1
@@ -28294,13 +28294,13 @@ exports[`ValidatorsTable > should unselect a validator to vote 1`] = `
               </div>
             </div>
             <div
-              class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+              class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
             >
               <span
-                class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
               />
               <span
-                class="sm:pl-6 sm:ml-auto"
+                class="sm:ml-auto sm:pl-6"
                 data-testid="DelegateTable__continue--wrapper"
               >
                 <button
