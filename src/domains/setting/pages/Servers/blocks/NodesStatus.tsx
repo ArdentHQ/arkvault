@@ -169,14 +169,14 @@ const NodeStatusNode: React.VFC<{
 				)}
 			</div>
 
-				<Divider type="vertical" />
+			<Divider type="vertical" />
 
 			<div className="flex items-center">
 				<button
 					type="button"
 					onClick={checkNetworkStatus}
 					disabled={results.includes(undefined)}
-					className="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+					className="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
 				>
 					<Icon name="ArrowRotateLeft" size="md" />
 				</button>

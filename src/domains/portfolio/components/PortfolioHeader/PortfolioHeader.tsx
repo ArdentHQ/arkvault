@@ -115,7 +115,7 @@ export const PortfolioHeader = ({
 						visible={showHint}
 						interactive={true}
 						content={
-							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pb-px sm:pt-px">
+							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
 								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
 									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
@@ -138,7 +138,7 @@ export const PortfolioHeader = ({
 					>
 						<div
 							className={cn("flex h-fit flex-row items-center gap-1", {
-								"rounded ring-3 ring-theme-primary-400 ring-offset-4 ring-offset-transparent dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 dark:sm:ring-offset-transparent":
+								"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
 									showHint,
 							})}
 						>
@@ -192,7 +192,7 @@ export const PortfolioHeader = ({
 				</div>
 
 				<div className="flex flex-col gap-0.5">
-					<div className="flex w-full flex-col gap-3 rounded bg-white p-4 dark:bg-theme-dark-900 md:rounded-b-sm md:rounded-t-lg">
+					<div className="dark:bg-theme-dark-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
 						<div className="flex w-full flex-row items-center justify-between">
 							{selectedWallets.length === 1 && (
 								<div className="flex flex-row items-center gap-1.5">

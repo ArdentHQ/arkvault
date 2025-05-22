@@ -2,8 +2,8 @@ import path from "path";
 import { mergeConfig } from "vite";
 import { defineConfig } from "vitest/config";
 import viteConfig from "./vite.config";
-import svgr from 'vite-plugin-svgr';
-import { VitePWA } from 'vite-plugin-pwa';
+import svgr from "vite-plugin-svgr";
+import { VitePWA } from "vite-plugin-pwa";
 
 const coverageThresholdLines = Number(process.env.COVERAGE_THRESHOLD_LINES || 100);
 const coverageThresholdFunctions = Number(process.env.COVERAGE_THRESHOLD_FUNCTIONS || 100);
@@ -70,7 +70,7 @@ export default defineConfig(async (env) => {
 					"identity-obj-proxy": require.resolve("identity-obj-proxy"),
 				},
 			},
-			plugins: [tailwindcss(), svgr(), VitePWA({ registerType: 'autoUpdate' })],
+			plugins: [tailwindcss(), svgr(), VitePWA({ registerType: "autoUpdate" })],
 		}),
 	);
 });

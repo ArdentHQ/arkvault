@@ -401,7 +401,7 @@ export const AddressesSidePanel = ({
 								className={cn(
 									"text-theme-primary-600 dark:text-theme-primary-400 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5",
 									{
-										"ring-3 ring-theme-primary-400 ring-offset-4 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
+										"ring-theme-primary-400 ring-offset-theme-secondary-100 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 ring-3 ring-offset-4 sm:ring-offset-transparent dark:sm:ring-offset-transparent":
 											showManageHint,
 									},
 								)}
@@ -430,8 +430,8 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="my-2 flex flex-col overflow-hidden rounded bg-theme-info-50 dark:bg-theme-dark-800 sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
-					<div className="flex w-full items-center space-x-2 bg-theme-info-100 px-4 py-2 dark:bg-theme-info-600 sm:w-auto sm:space-x-0 sm:py-4.5">
+				<div className="bg-theme-info-50 dark:bg-theme-dark-800 my-2 flex flex-col overflow-hidden rounded sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+					<div className="bg-theme-info-100 dark:bg-theme-info-600 flex w-full items-center space-x-2 px-4 py-2 sm:w-auto sm:space-x-0 sm:py-4.5">
 						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
 						<span className="text-theme-info-700 text-sm leading-[17px] font-semibold sm:hidden dark:text-white">
 							{t("COMMON.INFORMATION")}

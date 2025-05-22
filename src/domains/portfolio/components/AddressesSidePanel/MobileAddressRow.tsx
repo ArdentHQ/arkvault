@@ -56,7 +56,7 @@ export const MobileAddressRow = ({
 						)}
 
 						<div
-							className={cn("truncate text-sm font-semibold leading-[17px]", {
+							className={cn("truncate text-sm leading-[17px] font-semibold", {
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200": !isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50": isSelected && !usesDeleteMode,
 							})}
@@ -69,7 +69,7 @@ export const MobileAddressRow = ({
 								onClick={() => onDelete(wallet.address())}
 								data-testid={`AddressRow--delete-${wallet.address()}`}
 								size="icon"
-								className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
+								className="text-theme-secondary-700 hover:bg-theme-danger-400 dark:text-theme-secondary-500 p-1 hover:text-white dark:hover:text-white"
 								variant="transparent"
 							>
 								<Icon name="Trash" dimensions={[16, 16]} />

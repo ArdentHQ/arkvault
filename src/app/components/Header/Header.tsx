@@ -19,7 +19,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 		<>
 			{subtitle && (
 				<div
-					className="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+					className="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
 					data-testid="header__subtitle"
 				>
 					{subtitle}

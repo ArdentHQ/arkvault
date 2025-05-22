@@ -34,7 +34,7 @@ export const MethodStep = ({ network, onSelect }: { network: Networks.Network; o
 const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option: ImportOption) => void }) => (
 	<button
 		onClick={() => onSelect(option)}
-		className="group flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border border-theme-primary-200 p-4 hover:bg-theme-primary-200 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 sm:p-6"
+		className="group border-theme-primary-200 hover:bg-theme-primary-200 focus:ring-theme-primary-400 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border p-4 focus:ring-2 focus:outline-hidden focus:ring-inset sm:p-6"
 	>
 		<div className="flex items-center space-x-2">
 			{option.icon && (

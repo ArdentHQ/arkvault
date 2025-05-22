@@ -31,7 +31,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 			</div>
 
 			{variant === "loading" && (
-				<Spinner className="h-6! w-6! border-[3px]! dark:border-theme-secondary-800! dark:border-l-theme-primary-600!" />
+				<Spinner className="dark:border-theme-secondary-800! dark:border-l-theme-primary-600! h-6! w-6! border-[3px]!" />
 			)}
 
 			{variant === "danger" && (

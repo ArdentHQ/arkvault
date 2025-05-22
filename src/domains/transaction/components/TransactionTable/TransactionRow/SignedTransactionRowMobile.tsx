@@ -48,7 +48,7 @@ export const SignedTransactionRowMobile = ({
 					<div className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black">
 						<div className="text-sm font-semibold">
 							<TruncateMiddle
-								className="cursor-pointer text-theme-primary-600"
+								className="text-theme-primary-600 cursor-pointer"
 								text={transaction.hash()}
 								maxChars={14}
 								data-testid="SignedTransactionRowMobile__transaction-id"

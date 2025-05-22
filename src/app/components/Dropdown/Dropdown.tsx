@@ -141,7 +141,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 							<Wrapper
 								variant={options && variant === undefined ? "options" : variant}
 								className={cn(
-									"dropdown-body overflow-hidden bg-white p-1 shadow-xl outline-hidden dark:bg-theme-dark-900",
+									"dropdown-body dark:bg-theme-dark-900 overflow-hidden bg-white p-1 shadow-xl outline-hidden",
 									{
 										rounded: variant !== "options",
 										"rounded-xl": variant === "options",

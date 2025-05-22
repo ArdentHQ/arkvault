@@ -31,7 +31,7 @@ export const PendingTransferRow = ({
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
-							className="cursor-pointer text-theme-primary-600"
+							className="text-theme-primary-600 cursor-pointer"
 							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
@@ -71,7 +71,7 @@ export const PendingTransferRow = ({
 				</Label>
 				<span className="text-sm">
 					<TruncateMiddle
-						className="cursor-pointer font-semibold text-theme-primary-600"
+						className="text-theme-primary-600 cursor-pointer font-semibold"
 						text={transaction.to() || ""}
 						maxChars={14}
 						data-testid="PendingTransactionRowRecipientLabel"

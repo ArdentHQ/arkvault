@@ -75,7 +75,7 @@ export const DashboardSetupAddressCard = ({
 }) => (
 	<button
 		className={cn(
-			"group rounded border border-theme-secondary-300 bg-white p-4 transition-all hover:border-theme-primary-50 hover:bg-theme-primary-50 dark:border-theme-dark-700 dark:bg-theme-dark-900 dark:hover:border-theme-dark-950 dark:hover:bg-theme-dark-950 md:rounded-xl md:p-8",
+			"group border-theme-secondary-300 hover:border-theme-primary-50 hover:bg-theme-primary-50 dark:border-theme-dark-700 dark:bg-theme-dark-900 dark:hover:border-theme-dark-950 dark:hover:bg-theme-dark-950 rounded border bg-white p-4 transition-all md:rounded-xl md:p-8",
 		)}
 		type="button"
 		onClick={onClick}
@@ -93,7 +93,7 @@ export const DashboardSetupAddressCard = ({
 		<div className="mx-auto my-6 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
-		<div className="w-full rounded bg-theme-primary-100 py-3 text-base font-semibold leading-5 text-theme-primary-600 transition-all duration-100 ease-linear group-hover:bg-theme-primary-800 group-hover:text-white dark:border dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700">
+		<div className="bg-theme-primary-100 text-theme-primary-600 group-hover:bg-theme-primary-800 dark:border-theme-dark-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:group-hover:border-theme-dark-navy-700 dark:group-hover:bg-theme-dark-navy-700 w-full rounded py-3 text-base leading-5 font-semibold transition-all duration-100 ease-linear group-hover:text-white dark:border">
 			{buttonText}
 		</div>
 	</button>
