@@ -248,8 +248,6 @@ export const useValidatorRow = ({
 	};
 };
 
-
-
 export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; className?: string }) => {
 	const { t } = useTranslation();
 
@@ -264,7 +262,10 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 		<Tooltip content={tooltipContent}>
 			<div
 				data-testid={testId}
-				className={twMerge("inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200 group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent", className)}
+				className={twMerge(
+					"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 group-hover:bg-theme-secondary-300 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200 dark:group-hover:bg-transparent",
+					className,
+				)}
 			>
 				{statusText}
 			</div>
