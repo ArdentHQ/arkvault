@@ -94,10 +94,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -141,10 +141,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -188,10 +188,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -235,10 +235,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -282,10 +282,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -329,10 +329,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -376,10 +376,10 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -829,10 +829,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -876,10 +876,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -923,10 +923,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -970,10 +970,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -1017,10 +1017,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -1064,10 +1064,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -1111,10 +1111,10 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -1659,10 +1659,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -1706,10 +1706,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -1753,10 +1753,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -1800,10 +1800,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -1847,10 +1847,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -1894,10 +1894,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -1941,10 +1941,10 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -2489,10 +2489,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -2536,10 +2536,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -2583,10 +2583,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -2630,10 +2630,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -2677,10 +2677,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -2724,10 +2724,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -2771,10 +2771,10 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -3319,10 +3319,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -3366,10 +3366,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -3413,10 +3413,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -3460,10 +3460,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -3507,10 +3507,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -3554,10 +3554,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -3601,10 +3601,10 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -4149,10 +4149,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -4196,10 +4196,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -4243,10 +4243,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -4290,10 +4290,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -4337,10 +4337,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -4384,10 +4384,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -4431,10 +4431,10 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -4979,10 +4979,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -5026,10 +5026,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -5073,10 +5073,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -5120,10 +5120,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -5167,10 +5167,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -5214,10 +5214,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -5261,10 +5261,10 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -5714,10 +5714,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -5761,10 +5761,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -5808,10 +5808,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -5855,10 +5855,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -5902,10 +5902,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -5949,10 +5949,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -5996,10 +5996,10 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -6544,10 +6544,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -6591,10 +6591,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -6638,10 +6638,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -6685,10 +6685,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
@@ -6732,10 +6732,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Easy Access to Your Digital Assets
                             </h3>
@@ -6779,10 +6779,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Integrated Exchanges
                             </h3>
@@ -6826,10 +6826,10 @@ exports[`Welcome > should render without profiles 1`] = `
                           class="flex w-full flex-row md:w-auto lg:flex-col"
                         >
                           <div
-                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                            class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                           >
                             <h3
-                              class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                             >
                               Fully Customizable
                             </h3>
