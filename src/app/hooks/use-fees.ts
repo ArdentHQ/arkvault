@@ -180,7 +180,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 			return await fees.estimateGas(getEstimateGasParams(formData, type));
 		},
 		[profile],
-	)
+	);
 
 	const calculate = useCallback(
 		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {
