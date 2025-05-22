@@ -42,7 +42,7 @@ exports[`SelectAddress > should render disabled 1`] = `
           class=""
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -124,7 +124,7 @@ exports[`SelectAddress > should render empty 1`] = `
           class=""
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -251,7 +251,7 @@ exports[`SelectAddress > should render invalid 1`] = `
           class="pl-3"
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -351,7 +351,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           class=""
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div

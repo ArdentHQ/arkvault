@@ -17,10 +17,10 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -58,7 +58,7 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -66,7 +66,7 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
             Welcome to ARK Vault
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <svg
               class="my-8"
@@ -331,17 +331,17 @@ exports[`WelcomeModal > should render a modal if user hasnt completed the tutori
               class="w-full"
             >
               <div
-                class="text-base leading-7 text-theme-secondary-text"
+                class="text-theme-secondary-text text-base leading-7"
               >
                 <p>
                   Start a quick tour to learn how to get the most out of ARK Vault, or skip it to go directly to your profile.
                 </p>
               </div>
               <div
-                class="flex justify-between items-center sm:space-x-3"
+                class="flex items-center justify-between sm:space-x-3"
               >
                 <label
-                  class="inline-flex items-center mt-8 space-x-3 text-sm cursor-pointer text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700 mt-8 inline-flex cursor-pointer items-center space-x-3 text-sm"
                 >
                   <input
                     class="custom-checkbox focus:ring-theme-primary-400! h-5! w-5! cursor-pointer rounded! border-2! transition duration-150 ease-in-out focus:ring-offset-0! not-checked:border-theme-secondary-300 not-checked:bg-white! dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900! disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:checked:border-theme-secondary-300 disabled:checked:bg-theme-secondary-200 disabled:checked:text-theme-secondary-300 dark:disabled:border-theme-dark-600 dark:disabled:bg-theme-dark-800 dark:disabled:checked:border-theme-dark-600 dark:disabled:checked:bg-theme-dark-800 dark:disabled:checked:text-theme-dark-600 disabled:cursor-not-allowed checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600 not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500"
