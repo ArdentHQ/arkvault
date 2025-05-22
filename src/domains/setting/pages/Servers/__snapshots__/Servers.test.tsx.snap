@@ -775,7 +775,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -1084,7 +1084,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     disabled=""
                                     type="button"
                                   >
@@ -2116,7 +2116,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -2456,7 +2456,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     type="button"
                                   >
                                     <div>
@@ -2621,18 +2621,18 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                       class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="relative flex h-20 w-full flex-col md-lg:overflow-hidden"
+                                        class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
                                       >
                                         <div
-                                          class="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full"
+                                          class="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col"
                                         >
                                           <span
-                                            class="truncate cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer truncate text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-28 lg:max-w-56 xl:max-w-64"
                                           >
                                             Mainsail Devnet "Peer" #1
                                           </span>
                                           <div
-                                            class="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dark:text-theme-dark-500"
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 mt-[2px] text-xs leading-[15px] font-semibold"
                                           >
                                             Mainsail Devnet
                                           </div>
@@ -2651,12 +2651,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             API:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/api
                                           </span>
@@ -2665,12 +2665,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             Tx:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/tx/api
                                           </span>
@@ -2679,12 +2679,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             EVM:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/evm/api
                                           </span>
@@ -2836,7 +2836,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                       class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="flex h-20 items-start text-theme-secondary-900 dark:text-theme-dark-50"
+                                        class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
                                       >
                                         <span
                                           class="text-sm font-semibold"
@@ -2854,7 +2854,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                         class="flex h-20 items-start"
                                       >
                                         <div
-                                          class="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                                          class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-px flex items-start border-r pr-3"
                                         >
                                           <label
                                             class="flex items-center cursor-pointer h-4"
@@ -2879,7 +2879,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
-                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 -mt-3 -mr-3"
                                             type="button"
                                           >
                                             <div
@@ -3797,7 +3797,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -4105,7 +4105,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     disabled=""
                                     type="button"
                                   >
@@ -4271,18 +4271,18 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                       class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="relative flex h-20 w-full flex-col md-lg:overflow-hidden"
+                                        class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
                                       >
                                         <div
-                                          class="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full"
+                                          class="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col"
                                         >
                                           <span
-                                            class="truncate cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer truncate text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-28 lg:max-w-56 xl:max-w-64"
                                           >
                                             Mainsail Devnet "Peer" #1
                                           </span>
                                           <div
-                                            class="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dark:text-theme-dark-500"
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 mt-[2px] text-xs leading-[15px] font-semibold"
                                           >
                                             Mainsail Devnet
                                           </div>
@@ -4301,12 +4301,12 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             API:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/api
                                           </span>
@@ -4315,12 +4315,12 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             Tx:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/tx/api
                                           </span>
@@ -4329,12 +4329,12 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             EVM:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/evm/api
                                           </span>
@@ -4390,7 +4390,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                       class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="flex h-20 items-start text-theme-secondary-900 dark:text-theme-dark-50"
+                                        class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
                                       >
                                         <span
                                           class="text-sm font-semibold"
@@ -4408,7 +4408,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                         class="flex h-20 items-start"
                                       >
                                         <div
-                                          class="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                                          class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-px flex items-start border-r pr-3"
                                         >
                                           <label
                                             class="flex items-center cursor-pointer h-4"
@@ -4433,7 +4433,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                           data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
-                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 -mt-3 -mr-3"
                                             type="button"
                                           >
                                             <div
@@ -5592,7 +5592,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     disabled=""
                                     type="button"
                                   >
@@ -5812,12 +5812,12 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:shrink-0"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold sm:shrink-0"
                                                   >
                                                     API:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/api
                                                   </span>
@@ -5841,12 +5841,12 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     Tx:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/tx/api
                                                   </span>
@@ -5870,12 +5870,12 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     EVM:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/evm/api
                                                   </span>
@@ -5905,7 +5905,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           </div>
                                           <div>
                                             <div
-                                              class="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold"
                                             >
                                               Mainsail Devnet
                                             </div>
@@ -5921,14 +5921,14 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           </div>
                                           <div>
                                             <span
-                                              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 text-sm font-semibold"
                                             >
                                               174400
                                             </span>
                                           </div>
                                         </div>
                                         <div
-                                          class="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden"
+                                          class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
                                             class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
@@ -6907,7 +6907,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -7247,7 +7247,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     type="button"
                                   >
                                     <div>
@@ -7412,18 +7412,18 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="relative flex h-20 w-full flex-col md-lg:overflow-hidden"
+                                        class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
                                       >
                                         <div
-                                          class="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full"
+                                          class="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col"
                                         >
                                           <span
-                                            class="truncate cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer truncate text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-28 lg:max-w-56 xl:max-w-64"
                                           >
                                             Mainsail Devnet "Peer" #1
                                           </span>
                                           <div
-                                            class="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dark:text-theme-dark-500"
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 mt-[2px] text-xs leading-[15px] font-semibold"
                                           >
                                             Mainsail Devnet
                                           </div>
@@ -7442,12 +7442,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             API:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/api
                                           </span>
@@ -7456,12 +7456,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             Tx:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/tx/api
                                           </span>
@@ -7470,12 +7470,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             EVM:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/evm/api
                                           </span>
@@ -7627,7 +7627,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                       class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="flex h-20 items-start text-theme-secondary-900 dark:text-theme-dark-50"
+                                        class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
                                       >
                                         <span
                                           class="text-sm font-semibold"
@@ -7645,7 +7645,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         class="flex h-20 items-start"
                                       >
                                         <div
-                                          class="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                                          class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-px flex items-start border-r pr-3"
                                         >
                                           <label
                                             class="flex items-center cursor-pointer h-4"
@@ -7670,7 +7670,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
-                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 -mt-3 -mr-3"
                                             type="button"
                                           >
                                             <div
@@ -8861,7 +8861,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     type="button"
                                   >
                                     <div>
@@ -9080,12 +9080,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:shrink-0"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold sm:shrink-0"
                                                   >
                                                     API:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/api
                                                   </span>
@@ -9141,12 +9141,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     Tx:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/tx/api
                                                   </span>
@@ -9202,12 +9202,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     EVM:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/evm/api
                                                   </span>
@@ -9269,7 +9269,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           </div>
                                           <div>
                                             <div
-                                              class="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold"
                                             >
                                               Mainsail Devnet
                                             </div>
@@ -9285,14 +9285,14 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           </div>
                                           <div>
                                             <span
-                                              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 text-sm font-semibold"
                                             >
                                               174400
                                             </span>
                                           </div>
                                         </div>
                                         <div
-                                          class="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden"
+                                          class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
                                             class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
@@ -10544,7 +10544,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     type="button"
                                   >
                                     <div>
@@ -10763,12 +10763,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:shrink-0"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold sm:shrink-0"
                                                   >
                                                     API:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/api
                                                   </span>
@@ -10824,12 +10824,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     Tx:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/tx/api
                                                   </span>
@@ -10885,12 +10885,12 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     EVM:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/evm/api
                                                   </span>
@@ -10952,7 +10952,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           </div>
                                           <div>
                                             <div
-                                              class="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold"
                                             >
                                               Mainsail Devnet
                                             </div>
@@ -10968,14 +10968,14 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                           </div>
                                           <div>
                                             <span
-                                              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 text-sm font-semibold"
                                             >
                                               174400
                                             </span>
                                           </div>
                                         </div>
                                         <div
-                                          class="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden"
+                                          class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
                                             class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
@@ -11954,7 +11954,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -12291,7 +12291,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     type="button"
                                   >
                                     <div>
@@ -12456,18 +12456,18 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="relative flex h-20 w-full flex-col md-lg:overflow-hidden"
+                                        class="md-lg:overflow-hidden relative flex h-20 w-full flex-col"
                                       >
                                         <div
-                                          class="flex max-w-72 flex-col md-lg:absolute md-lg:inset-0 md-lg:max-w-full"
+                                          class="md-lg:absolute md-lg:inset-0 md-lg:max-w-full flex max-w-72 flex-col"
                                         >
                                           <span
-                                            class="truncate cursor-pointer truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-28 lg:max-w-56 xl:max-w-64"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 cursor-pointer truncate text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-28 lg:max-w-56 xl:max-w-64"
                                           >
                                             Mainsail Devnet "Peer" #1
                                           </span>
                                           <div
-                                            class="mt-[2px] text-xs font-semibold leading-[15px] text-theme-secondary-500 dark:text-theme-dark-500"
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 mt-[2px] text-xs leading-[15px] font-semibold"
                                           >
                                             Mainsail Devnet
                                           </div>
@@ -12486,12 +12486,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             API:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/api
                                           </span>
@@ -12500,12 +12500,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             Tx:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/tx/api
                                           </span>
@@ -12514,12 +12514,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           class="flex items-center space-x-5"
                                         >
                                           <div
-                                            class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold"
                                           >
                                             EVM:
                                           </div>
                                           <span
-                                            class="truncate cursor-pointer text-sm font-semibold leading-[17px] text-theme-secondary-900 transition-colors duration-100 dark:text-theme-dark-50 md:max-w-40 md-lg:max-w-72 lg:max-w-44 xl:max-w-72"
+                                            class="truncate text-theme-secondary-900 dark:text-theme-dark-50 md-lg:max-w-72 cursor-pointer text-sm leading-[17px] font-semibold transition-colors duration-100 md:max-w-40 lg:max-w-44 xl:max-w-72"
                                           >
                                             https://dwallets-evm.mainsailhq.com/evm/api
                                           </span>
@@ -12668,7 +12668,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                       class="px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]"
                                     >
                                       <div
-                                        class="flex h-20 items-start text-theme-secondary-900 dark:text-theme-dark-50"
+                                        class="text-theme-secondary-900 dark:text-theme-dark-50 flex h-20 items-start"
                                       >
                                         <span
                                           class="text-sm font-semibold"
@@ -12686,7 +12686,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         class="flex h-20 items-start"
                                       >
                                         <div
-                                          class="mt-px flex items-start border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                                          class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-px flex items-start border-r pr-3"
                                         >
                                           <label
                                             class="flex items-center cursor-pointer h-4"
@@ -12711,7 +12711,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
-                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 -mt-3 text-theme-secondary-700 dark:text-theme-dark-200"
+                                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 -mt-3 -mr-3"
                                             type="button"
                                           >
                                             <div
@@ -13899,7 +13899,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   class="flex items-center"
                                 >
                                   <button
-                                    class="transition-colors hover:text-theme-primary-700 dark:hover:text-theme-dark-50"
+                                    class="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
                                     type="button"
                                   >
                                     <div>
@@ -14118,12 +14118,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:shrink-0"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 text-sm leading-[17px] font-semibold sm:shrink-0"
                                                   >
                                                     API:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/api
                                                   </span>
@@ -14176,12 +14176,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     Tx:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/tx/api
                                                   </span>
@@ -14237,12 +14237,12 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                                   class="flex min-w-0 flex-1 items-center space-x-5"
                                                 >
                                                   <div
-                                                    class="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                                                    class="text-theme-secondary-700 dark:text-theme-dark-200 w-9 shrink-0 text-sm leading-[17px] font-semibold"
                                                   >
                                                     EVM:
                                                   </div>
                                                   <span
-                                                    class="truncate block text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50 sm:max-w-52"
+                                                    class="truncate text-theme-secondary-900 dark:text-theme-dark-50 block text-sm font-semibold sm:max-w-52"
                                                   >
                                                     https://dwallets-evm.mainsailhq.com/evm/api
                                                   </span>
@@ -14304,7 +14304,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           </div>
                                           <div>
                                             <div
-                                              class="flex items-center space-x-3 text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 flex items-center space-x-3 text-sm font-semibold"
                                             >
                                               Mainsail Devnet
                                             </div>
@@ -14320,14 +14320,14 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                           </div>
                                           <div>
                                             <span
-                                              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-dark-50"
+                                              class="text-theme-secondary-900 dark:text-theme-dark-50 text-sm font-semibold"
                                             >
                                               174400
                                             </span>
                                           </div>
                                         </div>
                                         <div
-                                          class="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden"
+                                          class="border-theme-secondary-300 dark:border-theme-dark-700 grid grid-cols-3 gap-2 border-t border-dashed pt-4 sm:hidden"
                                         >
                                           <button
                                             class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
