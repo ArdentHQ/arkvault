@@ -71,14 +71,14 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
           role="rowgroup"
         >
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -96,7 +96,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #1
@@ -131,7 +131,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="recipient-list__remove-recipient"
                   disabled=""
                   type="button"
@@ -176,14 +176,14 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -201,7 +201,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #2
@@ -236,7 +236,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -280,14 +280,14 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -305,7 +305,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #3
@@ -340,7 +340,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -384,14 +384,14 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -409,7 +409,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #4
@@ -433,7 +433,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -554,7 +554,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
           role="rowgroup"
         >
           <tr
-            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
@@ -564,7 +564,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -607,7 +607,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -626,7 +626,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
             />
           </tr>
           <tr
-            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
@@ -636,7 +636,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -679,7 +679,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -698,7 +698,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
             />
           </tr>
           <tr
-            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
@@ -708,7 +708,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -751,7 +751,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -770,7 +770,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
             />
           </tr>
           <tr
-            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
@@ -780,7 +780,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -812,7 +812,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="ml-2 table-cell md:hidden"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -908,14 +908,14 @@ exports[`RecipientList > should render editable 1`] = `
           role="rowgroup"
         >
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -933,7 +933,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #1
@@ -968,7 +968,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1012,14 +1012,14 @@ exports[`RecipientList > should render editable 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1037,7 +1037,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #2
@@ -1072,7 +1072,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1116,14 +1116,14 @@ exports[`RecipientList > should render editable 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1141,7 +1141,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #3
@@ -1176,7 +1176,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1220,14 +1220,14 @@ exports[`RecipientList > should render editable 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1245,7 +1245,7 @@ exports[`RecipientList > should render editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #4
@@ -1269,7 +1269,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1374,14 +1374,14 @@ exports[`RecipientList > should render non-editable 1`] = `
           role="rowgroup"
         >
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1399,7 +1399,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #1
@@ -1429,14 +1429,14 @@ exports[`RecipientList > should render non-editable 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1454,7 +1454,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #2
@@ -1484,14 +1484,14 @@ exports[`RecipientList > should render non-editable 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1509,7 +1509,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #3
@@ -1539,14 +1539,14 @@ exports[`RecipientList > should render non-editable 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1564,7 +1564,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #4
@@ -1660,14 +1660,14 @@ exports[`RecipientList > should render without amount column 1`] = `
           role="rowgroup"
         >
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1685,7 +1685,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #1
@@ -1717,7 +1717,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-1 shrink-0 py-6 pl-3 text-right"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Amount
@@ -1736,14 +1736,14 @@ exports[`RecipientList > should render without amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1761,7 +1761,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #2
@@ -1793,7 +1793,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-1 shrink-0 py-6 pl-3 text-right"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Amount
@@ -1812,14 +1812,14 @@ exports[`RecipientList > should render without amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1837,7 +1837,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #3
@@ -1869,7 +1869,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-1 shrink-0 py-6 pl-3 text-right"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Amount
@@ -1888,14 +1888,14 @@ exports[`RecipientList > should render without amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="flex border-b border-dashed border-theme-secondary-300 last:border-b-0 dark:border-theme-secondary-800"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
             data-testid="recipient-list__recipient-list-item"
           >
             <td
               class="flex-none py-6"
             >
               <div
-                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1913,7 +1913,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="ml-5 w-28 flex-1 py-6"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Recipient #4
@@ -1934,7 +1934,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-1 shrink-0 py-6 pl-3 text-right"
             >
               <div
-                class="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold"
               >
                 <span>
                   Amount
