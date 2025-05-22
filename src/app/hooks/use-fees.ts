@@ -35,14 +35,13 @@ interface CalculateProperties {
 }
 
 function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
-	console.log(formData, type);
 	const {
 		senderAddress,
 		recipientAddress,
 		recipients: recipientList,
 		username,
 		validatorPublicKey,
-		votes,
+		voteAddresses,
 	} = formData;
 
 	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
@@ -103,12 +102,12 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 			return { data, to: ContractAddresses.CONSENSUS };
 		},
 		vote: () => {
-			const vote = (votes as { id: string }[]).at(0);
+			const vote = (voteAddresses as string[]).at(0);
 			const isVote = !!vote;
 
 			const data = encodeFunctionData({
 				abi: ConsensusAbi.abi,
-				args: isVote ? [vote.id] : [],
+				args: isVote ? [vote] : [],
 				functionName: isVote ? "vote" : "unvote",
 			});
 
@@ -175,10 +174,13 @@ export const useFees = (profile: Contracts.IProfile) => {
 		[createStubTransaction],
 	);
 
-	const estimateGas = async ({ type, data: formData }: EstimateGasProperties) => {
-		const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
-		return await fees.estimateGas(getEstimateGasParams(formData, type));
-	};
+	const estimateGas = useCallback(
+		async ({ type, data: formData }: EstimateGasProperties) => {
+			const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
+			return await fees.estimateGas(getEstimateGasParams(formData, type));
+		},
+		[profile],
+	)
 
 	const calculate = useCallback(
 		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {

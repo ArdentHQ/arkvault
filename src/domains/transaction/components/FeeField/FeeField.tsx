@@ -25,7 +25,7 @@ export const GasLimit: Record<Properties["type"], number> = {
 	multiPayment: 21_000,
 	multiSignature: 21_000,
 	transfer: 21_000,
-	usernameRegistration: 200_000,
+	usernameRegistration: 10_000,
 	usernameResignation: 200_000,
 	validatorRegistration: 500_000,
 	validatorResignation: 150_000,
@@ -38,7 +38,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
-	// const [estimatedGas, setEstimatedGas] = useState(false);
 
 	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
@@ -49,13 +48,25 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
 	useEffect(() => {
+		/* istanbul ignore else -- @preserve */
+		const isMultiPayment = type === "multiPayment";
+		const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
+		const defaultGasLimit = isMultiPayment ? GasLimit.multiPayment * recipientsCount : GasLimit[type];
+
 		const estimate = async () => {
-			const gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
-			console.log("Estimated Gas", gasLimit);
+			let gasLimit = defaultGasLimit;
+
+			try {
+				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
+			} catch (error) {
+				console.warn(error);
+			}
+
+			setValue("gasLimit", gasLimit, { shouldDirty: true, shouldValidate: true });
 		};
 
 		void estimate();
-	}, []);
+	}, [estimateGas, getValues, setValue, type]);
 
 	useEffect(() => {
 		const recalculateFee = async () => {
@@ -68,16 +79,10 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				type,
 			});
 
-			/* istanbul ignore else -- @preserve */
-			const isMultiPayment = type === "multiPayment";
-			const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
-			const defaultGasLimit = isMultiPayment ? GasLimit.multiPayment * recipientsCount : GasLimit[type];
-
 			if (getValues("gasPrice") === undefined) {
 				setValue("gasPrice", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
 			}
 
-			setValue("gasLimit", defaultGasLimit, { shouldDirty: true, shouldValidate: true });
 			setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
 			setIsLoadingFee(false);
 		};
@@ -93,11 +98,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			loading={!fees || isLoadingFee}
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
-			defaultGasLimit={
-				type === "multiPayment" && Array.isArray(data?.payments)
-					? GasLimit.multiPayment * data.payments.length
-					: GasLimit[type]
-			}
+			defaultGasLimit={gasLimit ?? 0}
 			minGasPrice={MIN_GAS_PRICE}
 			gasPriceStep={1}
 			network={network}

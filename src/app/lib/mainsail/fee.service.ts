@@ -7,6 +7,7 @@ import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { hexToNumber } from "viem";
 
 interface Fees {
 	min: string;
@@ -42,11 +43,13 @@ export class FeeService {
 	}
 
 	public async estimateGas(payload: EstimateGasPayload) {
-		return await this.#client.evm().ethCall({
+		const gasResponse = await this.#client.evm().ethCall({
 			id: "1",
 			method: "eth_estimateGas",
 			params: [payload],
 		});
+
+		return hexToNumber(gasResponse.result);
 	}
 
 	public async calculate(
