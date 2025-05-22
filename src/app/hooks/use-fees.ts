@@ -6,7 +6,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { TransactionFees } from "@/types";
 import { FeeService } from "@/app/lib/mainsail/fee.service";
 import { encodeFunctionData, numberToHex } from "viem";
-import { MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
+import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
 import { ContractAddresses } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { BigNumber } from "@/app/lib/helpers";
@@ -35,7 +35,8 @@ interface CalculateProperties {
 }
 
 function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
-	const {senderAddress, recipientAddress, recipients: recipientList, username } = formData;
+	console.log(formData, type);
+	const { senderAddress, recipientAddress, recipients: recipientList, username, validatorPublicKey } = formData;
 
 	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
 		multiPayment: () => {
@@ -55,9 +56,9 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 				functionName: "pay",
 			});
 
-			return { data, to: ContractAddresses.MULTIPAYMENT, value }
+			return { data, to: ContractAddresses.MULTIPAYMENT, value };
 		},
-		transfer: () => ({to: recipientAddress as string}),
+		transfer: () => ({ to: recipientAddress as string }),
 		unvote: () => {},
 		usernameRegistration: () => {
 			const data = encodeFunctionData({
@@ -66,18 +67,42 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 				functionName: "registerUsername",
 			});
 
-			return { data, to: ContractAddresses.USERNAMES }
+			return { data, to: ContractAddresses.USERNAMES };
 		},
-		usernameResignation: () => {},
-		validatorRegistration: () => {},
-		validatorResignation: () => {},
+		usernameResignation: () => {
+			const data = encodeFunctionData({
+				abi: UsernamesAbi.abi,
+				args: [],
+				functionName: "resignUsername",
+			});
+
+			return { data, to: ContractAddresses.USERNAMES };
+		},
+		validatorRegistration: () => {
+			const data = encodeFunctionData({
+				abi: ConsensusAbi.abi,
+				args: [`0x${validatorPublicKey}`],
+				functionName: "registerValidator",
+			});
+
+			return { data, to: ContractAddresses.CONSENSUS };
+		},
+		validatorResignation: () => {
+			const data = encodeFunctionData({
+				abi: ConsensusAbi.abi,
+				args: [],
+				functionName: "resignValidator",
+			});
+
+			return { data, to: ContractAddresses.CONSENSUS };
+		},
 		vote: () => {},
-	}
+	};
 
 	return {
 		from: senderAddress,
 		...paramBuilders[type](),
-	}
+	};
 }
 
 export const useFees = (profile: Contracts.IProfile) => {
@@ -136,7 +161,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 	const estimateGas = async ({ type, data: formData }: EstimateGasProperties) => {
 		const fees = new FeeService({ config: profile.activeNetwork().config(), profile });
 		return await fees.estimateGas(getEstimateGasParams(formData, type));
-	}
+	};
 
 	const calculate = useCallback(
 		async ({ network, type, data }: CalculateProperties): Promise<TransactionFees> => {

@@ -45,7 +45,7 @@
 	"dependencies": {
 		"@ardenthq/arkvault-crypto": "^0.0.7",
 		"@ardenthq/arkvault-url": "^1.2.0",
-		"@arkecosystem/typescript-client": "^0.0.3",
+		"@arkecosystem/typescript-client": "^0.0.4",
 		"@arkecosystem/typescript-crypto": "^0.0.6",
 		"@faustbrian/node-haveibeenpwned": "^1.1.0",
 		"@floating-ui/react": "^0.26.25",

@@ -38,7 +38,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
-	const [estimatedGas, setEstimatedGas] = useState(false);
+	// const [estimatedGas, setEstimatedGas] = useState(false);
 
 	const { watch, setValue, getValues } = useFormContext();
 	const { fees, inputFeeSettings = {} } = watch(["fees", "inputFeeSettings"]);
@@ -50,9 +50,9 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	useEffect(() => {
 		const estimate = async () => {
-			const gasLimit = await estimateGas({ data: getValues(), type });
+			const gasLimit = await estimateGas({ data: { ...getValues(), ...data}, type });
 			console.log("Estimated Gas", gasLimit);
-		}
+		};
 
 		void estimate();
 	}, []);
