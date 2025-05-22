@@ -3,7 +3,7 @@
 exports[`ListDividedItem > should render an ListDividedItem 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   />
 </DocumentFragment>
@@ -12,11 +12,11 @@ exports[`ListDividedItem > should render an ListDividedItem 1`] = `
 exports[`ListDividedItem > should render as floating label 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   >
     <div
-      class="flex flex-col justify-between items-start"
+      class="flex justify-between flex-col items-start"
       data-testid="list-divided-item__inner-wrapper"
     >
       <div
@@ -26,7 +26,7 @@ exports[`ListDividedItem > should render as floating label 1`] = `
           class="flex justify-between items-center space-x-5"
         >
           <span
-            class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -41,7 +41,7 @@ exports[`ListDividedItem > should render as floating label 1`] = `
 exports[`ListDividedItem > should render the content 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   >
     <div
@@ -57,7 +57,7 @@ exports[`ListDividedItem > should render the content 1`] = `
 exports[`ListDividedItem > should render the label 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   >
     <div
@@ -71,7 +71,7 @@ exports[`ListDividedItem > should render the label 1`] = `
           class="flex justify-between items-center space-x-5"
         >
           <span
-            class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -86,7 +86,7 @@ exports[`ListDividedItem > should render the label 1`] = `
 exports[`ListDividedItem > should render the labelDescription 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   >
     <div
@@ -100,14 +100,14 @@ exports[`ListDividedItem > should render the labelDescription 1`] = `
           class="flex justify-between items-center space-x-5"
         >
           <span
-            class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
           </span>
         </div>
         <span
-          class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
           data-testid="list-divided-item__label--description"
         >
           Label Desc
@@ -121,7 +121,7 @@ exports[`ListDividedItem > should render the labelDescription 1`] = `
 exports[`ListDividedItem > should render the value 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   >
     <div
@@ -135,7 +135,7 @@ exports[`ListDividedItem > should render the value 1`] = `
           class="flex justify-between items-center space-x-5"
         >
           <span
-            class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label
@@ -157,7 +157,7 @@ exports[`ListDividedItem > should render the value 1`] = `
 exports[`ListDividedItem > should render with labelAddon 1`] = `
 <DocumentFragment>
   <li
-    class="flex flex-col w-full"
+    class="flex w-full flex-col"
     data-testid="list-divided-item__wrapper"
   >
     <div
@@ -171,7 +171,7 @@ exports[`ListDividedItem > should render with labelAddon 1`] = `
           class="flex justify-between items-center space-x-5"
         >
           <span
-            class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
             data-testid="list-divided-item__label"
           >
             Label

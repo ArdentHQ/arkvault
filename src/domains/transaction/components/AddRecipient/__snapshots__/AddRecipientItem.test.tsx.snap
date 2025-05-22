@@ -3,17 +3,17 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-hidden mb-3 bg-white rounded border sm:pt-3 sm:bg-transparent sm:rounded-none sm:border-b-0 sm:border-dashed last:mb-0 border-theme-secondary-300 sm:border-x-0 sm:dark:bg-transparent dark:border-theme-dark-700 dark:bg-theme-dark-900"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
     >
       <div
-        class="flex flex-col flex-1 w-full min-w-0 sm:items-start sm:space-y-1 sm:space-x-0 sm:w-auto"
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
       >
         <div
-          class="flex flex-row flex-1 justify-between items-center py-3 px-4 w-full sm:p-0 sm:bg-transparent bg-theme-secondary-100 dark:bg-theme-dark-950 dark:sm:bg-transparent"
+          class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
             class="flex justify-between items-center w-full"
@@ -24,7 +24,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               Recipient #2
             </div>
             <button
-              class="inline-flex relative justify-center items-center p-0 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer sm:hidden focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-500 focus:outline-hidden focus:ring-theme-primary-400"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 sm:hidden text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="AddRecipientItem--deleteButton_mobile"
               type="button"
             >
@@ -63,28 +63,28 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
           </div>
         </div>
         <div
-          class="px-4 pt-3 pb-4 sm:p-0 sm:w-full"
+          class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
         >
           <div>
             <div
               class="hidden mt-1 leading-5 sm:block"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold leading-5"
+                  class="font-semibold text-base leading-5"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Mainsail Wallet …
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold leading-5 no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -101,21 +101,21 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                   Address
                 </div>
                 <div
-                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="text-sm text-base font-semibold leading-[17px]"
+                    class="font-semibold text-base leading-[17px] text-sm"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="transition-colors duration-200 no-ligatures"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="overflow-hidden min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
+                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -129,7 +129,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                   Value
                 </div>
                 <span
-                  class="text-sm font-semibold whitespace-nowrap text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
+                  class="whitespace-nowrap text-sm font-semibold text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
                   data-testid="Amount"
                 >
                   1 DARK
@@ -156,7 +156,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                 data-testid="AddRecipientItem--exchangeAmount"
               >
                 <span
-                  class="text-sm whitespace-nowrap leading-[17px]"
+                  class="whitespace-nowrap text-sm leading-[17px]"
                   data-testid="Amount"
                 >
                   $0.00
@@ -164,14 +164,14 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               </span>
             </div>
             <span
-              class="font-semibold leading-5 whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
               data-testid="Amount"
             >
               1 DARK
             </span>
           </div>
           <button
-            class="inline-flex relative justify-center items-center p-2.5 space-x-3 w-11 h-11 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-2.5 w-11 h-11"
             data-testid="AddRecipientItem--deleteButton"
             type="button"
           >
@@ -217,17 +217,17 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-hidden mb-3 bg-white rounded border sm:pt-3 sm:bg-transparent sm:rounded-none sm:border-b-0 sm:border-dashed last:mb-0 border-theme-secondary-300 sm:border-x-0 sm:dark:bg-transparent dark:border-theme-dark-700 dark:bg-theme-dark-900"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
     >
       <div
-        class="flex flex-col flex-1 w-full min-w-0 sm:items-start sm:space-y-1 sm:space-x-0 sm:w-auto"
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
       >
         <div
-          class="flex flex-row flex-1 justify-between items-center py-3 px-4 w-full sm:p-0 sm:bg-transparent bg-theme-secondary-100 dark:bg-theme-dark-950 dark:sm:bg-transparent"
+          class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
             class="flex justify-between items-center w-full"
@@ -238,7 +238,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               Recipient #2
             </div>
             <button
-              class="inline-flex relative justify-center items-center p-0 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer sm:hidden focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-500 focus:outline-hidden focus:ring-theme-primary-400"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 sm:hidden text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="AddRecipientItem--deleteButton_mobile"
               type="button"
             >
@@ -277,28 +277,28 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
           </div>
         </div>
         <div
-          class="px-4 pt-3 pb-4 sm:p-0 sm:w-full"
+          class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
         >
           <div>
             <div
               class="hidden mt-1 leading-5 sm:block"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold leading-5"
+                  class="font-semibold text-base leading-5"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Mainsail Wallet …
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold leading-5 no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -315,21 +315,21 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
                   Address
                 </div>
                 <div
-                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <span
-                    class="text-sm text-base font-semibold leading-[17px]"
+                    class="font-semibold text-base leading-[17px] text-sm"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="transition-colors duration-200 no-ligatures"
+                      class="no-ligatures transition-colors duration-200"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="overflow-hidden min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
+                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                     data-testid="Address__address"
                   >
                     0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -343,7 +343,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
                   Value
                 </div>
                 <span
-                  class="text-sm font-semibold whitespace-nowrap text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
+                  class="whitespace-nowrap text-sm font-semibold text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
                   data-testid="Amount"
                 >
                   1 DARK
@@ -372,14 +372,14 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               </span>
             </div>
             <span
-              class="font-semibold leading-5 whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
               data-testid="Amount"
             >
               1 DARK
             </span>
           </div>
           <button
-            class="inline-flex relative justify-center items-center p-2.5 space-x-3 w-11 h-11 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-2.5 w-11 h-11"
             data-testid="AddRecipientItem--deleteButton"
             type="button"
           >

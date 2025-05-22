@@ -16,14 +16,14 @@ exports[`SuccessStep > should render (lg) 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Addressing
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -32,7 +32,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
               class="flex justify-between items-center mb-3 w-full leading-5 sm:justify-start sm:mb-0"
             >
               <div
-                class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
               >
                  Address 
               </div>
@@ -40,13 +40,13 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full!"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold sm:leading-5 no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="relative cursor-pointer ring-focus focus:outline-hidden"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -97,14 +97,14 @@ exports[`SuccessStep > should render (lg) 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Address Name
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -113,7 +113,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
               class="flex justify-between items-center w-full sm:justify-start"
             >
               <div
-                class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
               >
                  Name
               </div>
@@ -129,11 +129,11 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   class="flex items-center h-5 sm:hidden"
                 >
                   <div
-                    class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <button
-                  class="inline-flex relative justify-center items-center py-0 px-0 space-x-0 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none py-0 px-0 space-x-0 text-theme-navy-600"
                   data-testid="CreateWallet__edit-alias"
                   type="button"
                 >
@@ -197,14 +197,14 @@ exports[`SuccessStep > should render (xs) 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Addressing
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -213,7 +213,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
               class="flex justify-between items-center mb-3 w-full leading-5 sm:justify-start sm:mb-0"
             >
               <div
-                class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
               >
                  Address 
               </div>
@@ -221,13 +221,13 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full w-max! sm:w-full!"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold sm:leading-5 no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="relative cursor-pointer ring-focus focus:outline-hidden"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -278,14 +278,14 @@ exports[`SuccessStep > should render (xs) 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Address Name
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -294,7 +294,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
               class="flex justify-between items-center w-full sm:justify-start"
             >
               <div
-                class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
               >
                  Name
               </div>
@@ -310,11 +310,11 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   class="flex items-center h-5 sm:hidden"
                 >
                   <div
-                    class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <button
-                  class="inline-flex relative justify-center items-center py-0 px-0 space-x-0 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none py-0 px-0 space-x-0 text-theme-navy-600"
                   data-testid="CreateWallet__edit-alias"
                   type="button"
                 >

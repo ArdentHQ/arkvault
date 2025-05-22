@@ -13,14 +13,14 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
         </div>
       </div>
       <div
-        class="flex overflow-hidden flex-col gap-3 mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
       >
         <div
           class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -29,29 +29,29 @@ exports[`TransferLedgerReview > should render 1`] = `
             class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
             >
               From
             </div>
             <div
-              class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
-                class="text-sm text-base font-semibold sm:text-base sm:leading-5 text-theme-text leading-[17px]"
+                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
                 <span
-                  class="transition-colors duration-200 no-ligatures"
+                  class="no-ligatures transition-colors duration-200"
                   data-testid="TruncateEnd"
                 >
                   Mainsail Wallet …
                 </span>
               </span>
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-3/4 w-full min-w-0 text-sm text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -61,7 +61,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 </span>
               </div>
               <button
-                class="relative cursor-pointer ring-focus focus:outline-hidden"
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -112,7 +112,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -157,7 +157,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         </div>
       </div>
       <div
-        class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
       >
         <div
           class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -177,14 +177,14 @@ exports[`TransferLedgerReview > should render 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -197,7 +197,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 data-testid="AmountSection"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Amount
                 </div>
@@ -205,7 +205,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -216,7 +216,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Fee
                 </div>
@@ -224,7 +224,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -235,7 +235,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Total
                 </div>
@@ -243,7 +243,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -290,14 +290,14 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
         </div>
       </div>
       <div
-        class="flex overflow-hidden flex-col gap-3 mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
       >
         <div
           class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -306,29 +306,29 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
             >
               From
             </div>
             <div
-              class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
-                class="text-sm text-base font-semibold sm:text-base sm:leading-5 text-theme-text leading-[17px]"
+                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
                 <span
-                  class="transition-colors duration-200 no-ligatures"
+                  class="no-ligatures transition-colors duration-200"
                   data-testid="TruncateEnd"
                 >
                   Mainsail Wallet …
                 </span>
               </span>
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-3/4 w-full min-w-0 text-sm text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -338,7 +338,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 </span>
               </div>
               <button
-                class="relative cursor-pointer ring-focus focus:outline-hidden"
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -389,7 +389,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -434,7 +434,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         </div>
       </div>
       <div
-        class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
       >
         <div
           class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -446,7 +446,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -471,14 +471,14 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -491,7 +491,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 data-testid="AmountSection"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Amount
                 </div>
@@ -499,7 +499,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -510,7 +510,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Fee
                 </div>
@@ -518,7 +518,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -529,7 +529,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Total
                 </div>
@@ -537,7 +537,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -584,14 +584,14 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
         </div>
       </div>
       <div
-        class="flex overflow-hidden flex-col gap-3 mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
       >
         <div
           class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -600,29 +600,29 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] dark:text-theme-secondary-500"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
             >
               From
             </div>
             <div
-              class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
-                class="text-sm text-base font-semibold sm:text-base sm:leading-5 text-theme-text leading-[17px]"
+                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
                 <span
-                  class="transition-colors duration-200 no-ligatures"
+                  class="no-ligatures transition-colors duration-200"
                   data-testid="TruncateEnd"
                 >
                   Mainsail Wallet …
                 </span>
               </span>
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-3/4 w-full min-w-0 text-sm text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -632,7 +632,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 </span>
               </div>
               <button
-                class="relative cursor-pointer ring-focus focus:outline-hidden"
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -683,7 +683,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+          class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -728,7 +728,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+        class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
       >
         <div
           class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -748,14 +748,14 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="font-semibold leading-5 no-ligatures text-theme-secondary-700 min-w-24 text-md dark:text-theme-secondary-500"
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
             data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
         </div>
         <div
-          class="overflow-hidden mt-0 rounded-xl sm:mt-2 sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+          class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
         >
           <div
             class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
@@ -768,7 +768,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 data-testid="AmountSection"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Amount
                 </div>
@@ -776,7 +776,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -787,7 +787,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Fee
                 </div>
@@ -795,7 +795,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK
@@ -806,7 +806,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-700 shrink-0 leading-[17px] sm:min-w-36 dark:text-theme-secondary-500"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
                 >
                   Total
                 </div>
@@ -814,7 +814,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                   class="flex flex-row gap-2 items-center"
                 >
                   <span
-                    class="font-semibold whitespace-nowrap"
+                    class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
                   >
                     0 ARK

@@ -7,7 +7,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
     data-testid="LedgerAuthStep"
   >
     <div
-      class="flex justify-between items-end bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -167,7 +167,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
       class="inline-flex justify-center items-center space-x-3 w-full"
     >
       <div
-        class="w-8 h-8 rounded-full animate-spin dark:border-black border-[5px] shrink-0 border-theme-secondary-200 border-l-theme-primary-600 dark:border-l-theme-primary-600"
+        class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
         class="font-semibold animate-pulse text-theme-secondary-text"
@@ -187,7 +187,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
     data-testid="LedgerAuthStep"
   >
     <div
-      class="flex justify-between items-end bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -347,7 +347,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
       class="inline-flex justify-center items-center space-x-3 w-full"
     >
       <div
-        class="w-8 h-8 rounded-full animate-spin dark:border-black border-[5px] shrink-0 border-theme-secondary-200 border-l-theme-primary-600 dark:border-l-theme-primary-600"
+        class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
         class="font-semibold animate-pulse text-theme-secondary-text"

@@ -3,14 +3,14 @@
 exports[`AmountLabel > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -23,14 +23,14 @@ exports[`AmountLabel > should render 1`] = `
 exports[`AmountLabel > should render compact 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -43,15 +43,15 @@ exports[`AmountLabel > should render compact 1`] = `
 exports[`AmountLabel > should render compact with hint 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center pr-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded pr-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <div
         aria-describedby="tippy-2"
-        class="flex justify-center items-center self-stretch w-5 bg-theme-success-200 text-theme-success-700 dark:bg-theme-success-700 dark:text-white/70 dark:bg-theme-success-700"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
         data-testid="AmountLabel__hint"
       >
         <div
@@ -88,7 +88,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
         </div>
       </div>
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -101,14 +101,14 @@ exports[`AmountLabel > should render compact with hint 1`] = `
 exports[`AmountLabel > should render negative 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full w-fit items-center justify-center rounded px-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         - 10 ARK
@@ -121,15 +121,15 @@ exports[`AmountLabel > should render negative 1`] = `
 exports[`AmountLabel > should render with hint 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center pr-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded pr-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <div
         aria-describedby="tippy-1"
-        class="flex justify-center items-center px-2 -ml-1.5 bg-theme-success-200 text-theme-success-700 dark:bg-theme-success-700 dark:text-white/70 dark:bg-theme-success-700"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
         data-testid="AmountLabel__hint"
       >
         <div
@@ -166,7 +166,7 @@ exports[`AmountLabel > should render with hint 1`] = `
         </div>
       </div>
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -179,14 +179,14 @@ exports[`AmountLabel > should render with hint 1`] = `
 exports[`AmountLabel > should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 w-fit dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:group-hover:bg-transparent group-hover:bg-theme-secondary-300"
+    class="font-semibold overflow-hidden no-ligatures text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex h-full w-fit items-center justify-center rounded px-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         0 ARK

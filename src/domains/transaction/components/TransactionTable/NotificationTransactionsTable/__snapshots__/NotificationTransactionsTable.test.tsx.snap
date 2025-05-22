@@ -14,7 +14,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
         role="rowgroup"
       >
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -32,7 +32,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -54,7 +54,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -68,7 +68,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -86,7 +86,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -108,7 +108,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -122,7 +122,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -140,7 +140,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -162,7 +162,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -176,7 +176,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -194,7 +194,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -216,7 +216,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -230,7 +230,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -248,7 +248,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -270,7 +270,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -284,7 +284,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -302,7 +302,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -324,7 +324,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -338,7 +338,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -356,7 +356,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -378,7 +378,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -392,7 +392,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -410,7 +410,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -432,7 +432,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -446,7 +446,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -464,7 +464,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -486,7 +486,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -500,7 +500,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
+          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
           data-testid="TableRow"
         >
           <td
@@ -518,7 +518,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -540,7 +540,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"

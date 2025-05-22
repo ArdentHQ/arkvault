@@ -18,13 +18,13 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
             role="row"
           >
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -34,13 +34,13 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -50,13 +50,13 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -78,11 +78,11 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -103,21 +103,21 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -131,7 +131,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="recipient-list__remove-recipient"
                   disabled=""
                   type="button"
@@ -183,11 +183,11 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -208,21 +208,21 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -236,7 +236,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -287,11 +287,11 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -312,21 +312,21 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -340,7 +340,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -391,11 +391,11 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -416,10 +416,10 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -433,7 +433,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -501,13 +501,13 @@ exports[`RecipientList > should render condensed variant 1`] = `
             role="row"
           >
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -517,13 +517,13 @@ exports[`RecipientList > should render condensed variant 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -533,13 +533,13 @@ exports[`RecipientList > should render condensed variant 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -564,11 +564,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -582,21 +582,21 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="flex-1 justify-end w-28 md:ml-4"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -607,11 +607,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="table-cell ml-2 md:hidden"
             >
               <div
-                class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -636,11 +636,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -654,21 +654,21 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="flex-1 justify-end w-28 md:ml-4"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -679,11 +679,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="table-cell ml-2 md:hidden"
             >
               <div
-                class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -708,11 +708,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -726,21 +726,21 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="flex-1 justify-end w-28 md:ml-4"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -751,11 +751,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="table-cell ml-2 md:hidden"
             >
               <div
-                class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -780,11 +780,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -798,10 +798,10 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="flex-1 justify-end w-28 md:ml-4"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -812,11 +812,11 @@ exports[`RecipientList > should render condensed variant 1`] = `
               class="table-cell ml-2 md:hidden"
             >
               <div
-                class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -855,13 +855,13 @@ exports[`RecipientList > should render editable 1`] = `
             role="row"
           >
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -871,13 +871,13 @@ exports[`RecipientList > should render editable 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -887,13 +887,13 @@ exports[`RecipientList > should render editable 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -915,11 +915,11 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -940,21 +940,21 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -968,7 +968,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1019,11 +1019,11 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1044,21 +1044,21 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1072,7 +1072,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1123,11 +1123,11 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1148,21 +1148,21 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1176,7 +1176,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1227,11 +1227,11 @@ exports[`RecipientList > should render editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1252,10 +1252,10 @@ exports[`RecipientList > should render editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1269,7 +1269,7 @@ exports[`RecipientList > should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1337,13 +1337,13 @@ exports[`RecipientList > should render non-editable 1`] = `
             role="row"
           >
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -1353,13 +1353,13 @@ exports[`RecipientList > should render non-editable 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -1381,11 +1381,11 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1406,21 +1406,21 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1436,11 +1436,11 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1461,21 +1461,21 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1491,11 +1491,11 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1516,21 +1516,21 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1546,11 +1546,11 @@ exports[`RecipientList > should render non-editable 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1571,10 +1571,10 @@ exports[`RecipientList > should render non-editable 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1607,13 +1607,13 @@ exports[`RecipientList > should render without amount column 1`] = `
             role="row"
           >
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -1623,13 +1623,13 @@ exports[`RecipientList > should render without amount column 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -1639,13 +1639,13 @@ exports[`RecipientList > should render without amount column 1`] = `
               </div>
             </th>
             <th
-              class="relative p-3 m-0 text-sm font-semibold text-left select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
             >
               <div
-                class="flex hidden align-top flex-inline"
+                class="flex flex-inline align-top hidden"
               >
                 <div
                   class=""
@@ -1667,11 +1667,11 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1692,21 +1692,21 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 1
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1743,11 +1743,11 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1768,21 +1768,21 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 2
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1819,11 +1819,11 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1844,21 +1844,21 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="text-base font-semibold text-theme-text"
+                  class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
                   <span
-                    class="transition-colors duration-200 no-ligatures"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     Recipient 3
                   </span>
                 </span>
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
@@ -1895,11 +1895,11 @@ exports[`RecipientList > should render without amount column 1`] = `
               class="flex-none py-6"
             >
               <div
-                class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                 >
                   <img
                     alt="FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ"
@@ -1920,10 +1920,10 @@ exports[`RecipientList > should render without amount column 1`] = `
                 </span>
               </div>
               <div
-                class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ

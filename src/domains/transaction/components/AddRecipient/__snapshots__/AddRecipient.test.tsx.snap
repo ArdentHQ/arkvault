@@ -21,28 +21,28 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -89,7 +89,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -101,10 +101,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -134,10 +134,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -155,14 +155,14 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -214,7 +214,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -271,7 +271,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -295,10 +295,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -311,14 +311,14 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     />
                   </div>
                   <div
-                    class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                    class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                     data-testid="Input__addon-end"
                   >
                     <div
                       class=""
                     >
                       <span
-                        class="text-sm font-semibold whitespace-nowrap whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
+                        class="whitespace-nowrap text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
                         data-testid="Amount"
                       >
                         0 BTC
@@ -357,28 +357,28 @@ exports[`AddRecipient > should render 1`] = `
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -425,7 +425,7 @@ exports[`AddRecipient > should render 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -437,10 +437,10 @@ exports[`AddRecipient > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -470,10 +470,10 @@ exports[`AddRecipient > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -491,14 +491,14 @@ exports[`AddRecipient > should render 1`] = `
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -550,7 +550,7 @@ exports[`AddRecipient > should render 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -607,7 +607,7 @@ exports[`AddRecipient > should render 1`] = `
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -631,10 +631,10 @@ exports[`AddRecipient > should render 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -678,28 +678,28 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -746,7 +746,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -758,10 +758,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -791,10 +791,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -812,14 +812,14 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -871,7 +871,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -928,7 +928,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -952,10 +952,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -999,28 +999,28 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -1067,7 +1067,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -1079,10 +1079,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -1112,10 +1112,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -1133,14 +1133,14 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -1192,7 +1192,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1249,7 +1249,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1273,10 +1273,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -1320,28 +1320,28 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -1388,7 +1388,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -1400,10 +1400,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -1439,10 +1439,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         …
                       </div>
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -1459,7 +1459,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                             value="0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54"
                           />
                           <span
-                            class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
+                            class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                             data-testid="Input__suggestion"
                           >
                             <span
@@ -1470,14 +1470,14 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -1529,7 +1529,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1586,7 +1586,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1610,10 +1610,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -1657,7 +1657,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -1669,10 +1669,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -1702,10 +1702,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -1723,14 +1723,14 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -1782,7 +1782,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1839,7 +1839,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1863,10 +1863,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -1910,28 +1910,28 @@ exports[`AddRecipient > should set available amount 1`] = `
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -1978,7 +1978,7 @@ exports[`AddRecipient > should set available amount 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -1990,10 +1990,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -2023,10 +2023,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -2044,14 +2044,14 @@ exports[`AddRecipient > should set available amount 1`] = `
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -2103,7 +2103,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -2160,7 +2160,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -2184,10 +2184,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
@@ -2231,28 +2231,28 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             class="flex items-center"
           >
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200"
               type="button"
             >
               Single
             </button>
             <label
-              class="flex items-center h-3 cursor-pointer"
+              class="flex items-center cursor-pointer h-3"
             >
               <input
-                class="sr-only toggle-input"
+                class="toggle-input sr-only"
                 type="checkbox"
               />
               <div
-                class="inline-flex relative w-6 rounded-full toggle-handle bg-theme-primary-100 h-[5px] dark:bg-theme-secondary-800"
+                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-6"
               >
                 <span
-                  class="absolute top-1/2 w-3 h-3 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
+                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-3 w-3 handle-inner"
                 />
               </div>
             </label>
             <button
-              class="text-sm font-semibold select-none first:mr-2 last:ml-2 text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-sm first:mr-2 last:ml-2"
               type="button"
             >
               Multiple
@@ -2299,7 +2299,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
         >
           <div>
             <div
@@ -2311,10 +2311,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -2344,10 +2344,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
-                          class="flex relative flex-1 h-full"
+                          class="relative flex h-full flex-1"
                         >
                           <input
                             aria-autocomplete="list"
@@ -2365,14 +2365,14 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                           />
                         </div>
                         <div
-                          class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                           data-testid="Input__addon-end"
                         >
                           <div
                             class=""
                           >
                             <div
-                              class="flex items-center p-1 bg-transparent rounded transition-colors cursor-pointer text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div>
@@ -2424,7 +2424,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex flex-col min-w-0"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -2460,7 +2460,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   class="inline-flex"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-navy-600 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -2484,10 +2484,10 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="true"
@@ -2501,7 +2501,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     />
                   </div>
                   <div
-                    class="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
+                    class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
                     data-testid="Input__addon-end"
                   >
                     <span

@@ -3,7 +3,7 @@
 exports[`CollapseToggleButton > should render disabled 1`] = `
 <div>
   <button
-    class="flex items-center space-x-2 font-semibold rounded text-theme-secondary-500 focus:outline-hidden"
+    class="flex items-center space-x-2 font-semibold focus:outline-hidden text-theme-secondary-500 rounded"
     data-testid="CollapseToggleButton"
     disabled=""
     type="button"
@@ -14,7 +14,7 @@ exports[`CollapseToggleButton > should render disabled 1`] = `
       Hide
     </span>
     <span
-      class="inline-flex justify-center items-center rounded-full transition duration-200 rotate-180 text-theme-secondary-400 md:bg-theme-secondary-200 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+      class="inline-flex items-center justify-center rounded-full transition duration-200 rotate-180 text-theme-secondary-400 dark:text-theme-secondary-700 md:bg-theme-secondary-200 md:dark:bg-theme-secondary-800"
     >
       <div
         class="p-1"

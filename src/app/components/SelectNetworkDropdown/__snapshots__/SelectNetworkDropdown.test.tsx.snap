@@ -7,10 +7,10 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
     >
       <div
-        class="flex relative flex-1 h-full"
+        class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
@@ -44,10 +44,10 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
             …
           </div>
           <div
-            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
           >
             <div
-              class="flex relative flex-1 h-full"
+              class="relative flex h-full flex-1"
             >
               <input
                 aria-autocomplete="list"
@@ -62,7 +62,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                 value="Mainsail Devnet"
               />
               <span
-                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
+                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -73,7 +73,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
               </span>
             </div>
             <div
-              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -141,10 +141,10 @@ exports[`SelectNetworkDropdown > should render 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
     >
       <div
-        class="flex relative flex-1 h-full"
+        class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
@@ -172,10 +172,10 @@ exports[`SelectNetworkDropdown > should render 1`] = `
             id="downshift-0-label"
           />
           <div
-            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
           >
             <div
-              class="flex relative flex-1 h-full"
+              class="relative flex h-full flex-1"
             >
               <input
                 aria-autocomplete="list"
@@ -191,7 +191,7 @@ exports[`SelectNetworkDropdown > should render 1`] = `
               />
             </div>
             <div
-              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -257,10 +257,10 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
     >
       <div
-        class="flex relative flex-1 h-full"
+        class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
@@ -288,10 +288,10 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
             id="downshift-2-label"
           />
           <div
-            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
           >
             <div
-              class="flex relative flex-1 h-full"
+              class="relative flex h-full flex-1"
             >
               <input
                 aria-autocomplete="list"
@@ -307,7 +307,7 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
               />
             </div>
             <div
-              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div

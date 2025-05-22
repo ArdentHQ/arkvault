@@ -7,7 +7,7 @@ exports[`HeaderSearchInput > should render 1`] = `
     data-testid="HeaderSearchInput"
   >
     <div
-      class="flex overflow-hidden items-center px-4 text-base rounded-lg border dark:border xs:[min-width:300px] border-theme-secondary-400 bg-theme-background sm:[min-width:448px] dark:border-theme-secondary-800 dark:border-theme-secondary-700"
+      class="dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px] dark:border flex overflow-hidden items-center px-4 text-base rounded-lg border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700"
       data-testid="HeaderSearchInput__input"
     >
       <button
@@ -16,7 +16,7 @@ exports[`HeaderSearchInput > should render 1`] = `
         type="button"
       >
         <div
-          class="w-0 transition-all duration-300 text-theme-text"
+          class="text-theme-text transition-all duration-300 w-0"
         >
           <div
             style="height: 16px; width: 16px;"
@@ -49,10 +49,10 @@ exports[`HeaderSearchInput > should render 1`] = `
         class="flex-1"
       >
         <div
-          class="flex overflow-hidden items-center px-4 -ml-4 space-x-2 w-full h-12 rounded transition-colors duration-200 appearance-none sm:h-14 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-12 overflow-hidden sm:h-14 -ml-4"
         >
           <div
-            class="flex relative flex-1 h-full"
+            class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"

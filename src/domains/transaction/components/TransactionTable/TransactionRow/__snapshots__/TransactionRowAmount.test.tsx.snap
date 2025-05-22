@@ -3,14 +3,14 @@
 exports[`TransactionRowAmount > should show as received 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1 h-full"
+      class="flex h-full items-center space-x-1"
     >
       <span
-        class="text-sm whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 121 ARK
