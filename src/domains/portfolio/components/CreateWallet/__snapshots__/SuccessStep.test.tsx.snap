@@ -46,7 +46,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -118,7 +118,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                  Name
               </div>
               <div
-                class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
+                class="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5"
               >
                 <div
                   class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
@@ -227,7 +227,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -299,7 +299,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                  Name
               </div>
               <div
-                class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
+                class="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5"
               >
                 <div
                   class="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none"
