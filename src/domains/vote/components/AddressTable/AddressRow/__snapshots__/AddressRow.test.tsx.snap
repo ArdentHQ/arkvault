@@ -38,7 +38,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -236,7 +236,7 @@ exports[`AddressRow > should render 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -434,7 +434,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -633,7 +633,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -781,7 +781,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -983,7 +983,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1185,7 +1185,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1363,7 +1363,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   0x659A76be283644AEc2003aa8ba26485047fd1BFB
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1506,7 +1506,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1684,7 +1684,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   0x7F9d7FdA68521c09Bd2749a36514e514abB0866F
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1827,7 +1827,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2025,7 +2025,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2225,7 +2225,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"

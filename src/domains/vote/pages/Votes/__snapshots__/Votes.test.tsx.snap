@@ -2058,7 +2058,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Manage your cryptoasset staking.
@@ -2884,7 +2884,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Manage your cryptoasset staking.
