@@ -169,7 +169,7 @@ export class ClientService {
 	public async evmCall(callData: Contracts.EvmCallData): Promise<Contracts.EvmCallResponse> {
 		try {
 			// @ts-ignore
-			const response = await this.#client.evm().ethCall({
+			const response = await this.#client.evm().call({
 				id: 1,
 				method: "eth_call",
 				params: [callData, "latest"],

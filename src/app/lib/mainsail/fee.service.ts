@@ -43,7 +43,7 @@ export class FeeService {
 	}
 
 	public async estimateGas(payload: EstimateGasPayload) {
-		const gasResponse = await this.#client.evm().ethCall({
+		const gasResponse = await this.#client.evm().call({
 			id: "1",
 			method: "eth_estimateGas",
 			params: [payload],
