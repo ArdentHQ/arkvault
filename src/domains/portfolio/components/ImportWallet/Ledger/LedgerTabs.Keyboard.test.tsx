@@ -181,10 +181,13 @@ describe("LedgerTabs", () => {
 			const ledgerTransportMock = mockNanoXTransport();
 
 			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-		
-			await waitFor(() => {
-				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
-			}, { timeout: 5000 }); 
+
+			await waitFor(
+				() => {
+					expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+				},
+				{ timeout: 5000 },
+			);
 
 			await userEvent.keyboard("{enter}");
 
