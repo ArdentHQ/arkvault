@@ -57,7 +57,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 			onClose={onClose}
 		>
 			<div
-				className="py-4 px-6 rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border px-6 py-4"
 				data-testid="ReceiveFunds__Name_Address"
 			>
 				<Address
@@ -92,7 +92,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 				{image && (
 					<img
 						src={image}
-						className="p-3 w-full h-auto rounded-xl border border-theme-secondary-200 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
+						className="border-theme-secondary-200 dark:border-theme-secondary-800 dark:bg-theme-secondary-200 h-auto w-full rounded-xl border p-3"
 						alt={t("COMMON.QR_CODE")}
 						data-testid="ReceiveFunds__qrcode"
 					/>
@@ -103,7 +103,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 				{image && (
 					<Button
 						variant="secondary"
-						className="flex space-x-2 w-full"
+						className="flex w-full space-x-2"
 						onClick={() => handleQRDownload(image)}
 						data-testid="ReceiveFunds__download-qr"
 					>
@@ -115,24 +115,24 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 
 			{isFormOpen && (
 				<>
-					<div className="mx-auto mt-4 max-w-sm text-center text-theme-secondary-600">
+					<div className="text-theme-secondary-600 mx-auto mt-4 max-w-sm text-center">
 						{t("COMMON.QR_CODE_HELP_TEXT")}
 					</div>
 
 					<div className="relative mt-4 h-14 border border-transparent">
 						<div
-							className="flex overflow-auto absolute max-w-full font-medium rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+							className="border-theme-secondary-300 dark:border-theme-secondary-800 absolute flex max-w-full overflow-auto rounded-lg border font-medium"
 							data-testid="ReceiveFundsForm__uri"
 						>
-							<div className="px-4 leading-5 bg-theme-secondary-200 py-4.5 dark:bg-theme-secondary-800">
+							<div className="bg-theme-secondary-200 dark:bg-theme-secondary-800 px-4 py-4.5 leading-5">
 								<span className="text-theme-secondary-text">{t("COMMON.QR_SHORT")}</span>
 							</div>
 
-							<div className="flex overflow-auto justify-between items-center pr-5 pl-6 space-x-4 bg-theme-secondary-100 grow dark:bg-theme-background">
+							<div className="bg-theme-secondary-100 dark:bg-theme-background flex grow items-center justify-between space-x-4 overflow-auto pr-5 pl-6">
 								{!!uri && (
 									<>
-										<span className="leading-5 truncate">{uri}</span>
-										<span className="flex text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-primary-700">
+										<span className="truncate leading-5">{uri}</span>
+										<span className="text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-primary-700 flex">
 											<Clipboard variant="icon" data={uri}>
 												<Icon name="Copy" className="p-1" />
 											</Clipboard>

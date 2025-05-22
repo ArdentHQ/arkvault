@@ -5,14 +5,14 @@ import { useTranslation } from "react-i18next";
 
 const Slide = ({ title, description, image }: { title: string; description: string; image: string }) => (
 	<div className="p-4 md:p-8">
-		<div className="flex justify-center my-2 mx-auto md:max-w-full max-w-56">
+		<div className="mx-auto my-2 flex max-w-56 justify-center md:max-w-full">
 			<Image name={image} />
 		</div>
 		<div className="text-center">
-			<h3 className="mb-2 text-lg font-semibold leading-4 md:text-2xl text-theme-secondary-900 md:leading-7.5 dark:text-theme-dark-50">
+			<h3 className="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-lg leading-4 font-semibold md:text-2xl md:leading-7.5">
 				{title}
 			</h3>
-			<p className="mb-6 text-xs leading-5 text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
+			<p className="text-theme-secondary-700 dark:text-theme-dark-200 mb-6 text-xs leading-5">{description}</p>
 		</div>
 	</div>
 );
@@ -30,7 +30,7 @@ export const DashboardSetupAddressSlider = (): JSX.Element => {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		customPaging: () => (
-			<button className="w-3 h-3 rounded-full border-2 hover:border-transparent border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 dark:hover:border-transparent hover:bg-theme-navy-700" />
+			<button className="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots absolute top-0 left-0 mx-auto max-w-8 right-0",

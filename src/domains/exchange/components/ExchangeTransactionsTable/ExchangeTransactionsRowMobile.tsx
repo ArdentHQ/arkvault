@@ -98,7 +98,7 @@ const ExchangeTransactionsRowStatusIcon: React.VFC<ExchangeTransactionsRowStatus
 }: ExchangeTransactionsRowStatusProperties) => {
 	const { name, color } = getIcon(status);
 	return (
-		<span className="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200">
+		<span className="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2">
 			<Icon name={name} size="lg" className={color} />
 		</span>
 	);
@@ -129,7 +129,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 			<td>
 				<MobileCard className="mb-3">
 					<div
-						className="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+						className="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
 						data-testid="TableRow__mobile"
 					>
 						<div className="text-sm font-semibold">
@@ -147,7 +147,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 						</div>
 
 						<div className="flex flex-row items-center">
-							<span className="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500">
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block">
 								<TimeAgo
 									date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()}
 								/>
@@ -165,7 +165,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 						</div>
 					</div>
 
-					<div className="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3">
+					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3">
 						<MobileSection title={t("COMMON.AGE")} className="sm:hidden">
 							<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 						</MobileSection>

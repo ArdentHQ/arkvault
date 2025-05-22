@@ -43,7 +43,7 @@ export const ViewingAddressInfo = ({
 	}
 
 	return (
-		<div className="text-sm font-semibold sm:text-base sm:leading-5 text-theme-primary-600 leading-[17px] dark:textdark-theme-dark-navy-400">
+		<div className="text-theme-primary-600 dark:textdark-theme-dark-navy-400 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 			{t("COMMON.MULTIPLE_ADDRESSES", {
 				count: wallets.length,
 			})}

@@ -359,7 +359,7 @@ const ExchangeForm = ({
 											data-testid="ExchangeForm__manual_transfer"
 											onClick={() => handleNext({ bypassSignStep: true })}
 											disabled={isSubmitting || !isValid}
-											className="text-sm sm:pl-0 text-theme-primary-600 leading-[17px]"
+											className="text-theme-primary-600 text-sm leading-[17px] sm:pl-0"
 										>
 											{t("EXCHANGE.MANUAL_TRANSFER")}
 										</Button>
@@ -390,7 +390,7 @@ const ExchangeForm = ({
 									)}
 
 									{activeTab === Step.ConfirmationStep && (
-										<div className="flex flex-col gap-3 w-full sm:flex-row-reverse">
+										<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
 											<Button
 												data-testid="ExchangeForm__finish-button"
 												onClick={() =>

@@ -98,7 +98,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 					)}
 
 					<div className="flex flex-col pb-1 sm:flex-row">
-						<FormField className="flex flex-col flex-1" name="currency">
+						<FormField className="flex flex-1 flex-col" name="currency">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 							<Select
 								id="ProfileForm__currency"
@@ -118,7 +118,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							/>
 						</FormField>
 
-						<div className="mt-4 sm:pl-4 sm:mt-0 sm:ml-4 sm:border-l border-theme-secondary-300 dark:border-theme-secondary-800">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mt-4 sm:mt-0 sm:ml-4 sm:border-l sm:pl-4">
 							<FormField name="viewingMode">
 								<FormLabel label={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")} />
 								<ButtonGroup className="space-x-2">
@@ -135,7 +135,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 											value={value}
 											variant="modern"
 										>
-											<div className="flex items-center px-1.5 space-x-2 sm:px-0.5">
+											<div className="flex items-center space-x-2 px-1.5 sm:px-0.5">
 												<Icon size="lg" name={icon} className="dark:text-theme-secondary-600" />
 												<span className="hidden sm:inline-block">{name}</span>
 											</div>
@@ -149,9 +149,9 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 				<Divider />
 
-				<div className="py-1 mb-8">
+				<div className="mb-8 py-1">
 					<FormField name="disclaimer">
-						<label className="flex items-center space-x-3 cursor-pointer">
+						<label className="flex cursor-pointer items-center space-x-3">
 							<Checkbox
 								data-testid="ProfileForm__disclaimer-checkbox"
 								name="disclaimer"
@@ -163,7 +163,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 									})
 								}
 							/>
-							<span className="text-sm whitespace-pre-line text-theme-secondary-500 dark:text-theme-secondary-700">
+							<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm whitespace-pre-line">
 								<Trans
 									i18nKey="PROFILE.PAGE_CREATE_PROFILE.DISCLAIMER"
 									components={{

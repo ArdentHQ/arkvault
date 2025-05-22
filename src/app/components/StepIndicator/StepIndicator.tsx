@@ -50,7 +50,7 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	return (
 		<div className="flex flex-col">
 			{showTitle && (
-				<span className="inline-block mx-auto mb-2 font-semibold sm:hidden text-theme-secondary-text">
+				<span className="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden">
 					{title}
 				</span>
 			)}

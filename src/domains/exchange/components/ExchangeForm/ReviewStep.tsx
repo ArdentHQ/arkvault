@@ -21,9 +21,9 @@ export const ReviewStep = () => {
 
 	return (
 		<div data-testid="ExchangeForm__review-step" className="space-y-4">
-			<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="flex flex-col gap-2 py-5 px-6">
-					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex flex-col rounded-xl border">
+				<div className="flex flex-col gap-2 px-6 py-5">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
 					<Amount value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
@@ -32,26 +32,26 @@ export const ReviewStep = () => {
 					</span>
 				</div>
 
-				<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
-					<div className="flex absolute right-6 top-1/2 justify-center items-center w-11 h-11 rounded-full border -translate-y-1/2 border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
-						<Icon name="DoubleArrowDashed" className="dark:text-white text-theme-secondary-900" size="lg" />
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 relative border-t">
+					<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border">
+						<Icon name="DoubleArrowDashed" className="text-theme-secondary-900 dark:text-white" size="lg" />
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-2 py-5 px-6">
-					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+				<div className="flex flex-col gap-2 px-6 py-5">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
 					<span className="pb-1 text-lg font-semibold">
 						≈ <Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
 					</span>
-					<TruncateMiddleDynamic value={recipientWallet} className="text-xs font-semibold no-ligatures" />
+					<TruncateMiddleDynamic value={recipientWallet} className="no-ligatures text-xs font-semibold" />
 				</div>
 			</div>
 
 			{estimatedTime && (
 				<div className="flex flex-col">
-					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_ARRIVAL")}
 					</span>
 					<span className="text-lg font-semibold">
@@ -62,7 +62,7 @@ export const ReviewStep = () => {
 
 			<div>
 				<FormField name="hasAgreedToTerms" className="sm:pt-2">
-					<label className="flex items-center space-x-3 cursor-pointer">
+					<label className="flex cursor-pointer items-center space-x-3">
 						<Checkbox name="hasAgreedToTerms" ref={register({ required: true })} />
 						<span className="text-sm leading-5">
 							<Trans

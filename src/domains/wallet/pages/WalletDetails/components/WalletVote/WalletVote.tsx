@@ -29,7 +29,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		if (wallets.length > 1) {
 			return (
 				<div className="w-full">
-					<p className="pb-4 text-base font-semibold text-center md:px-0 md:pb-0 md:mt-0 md:text-left text-theme-secondary-700 px-[22px] dark:text-theme-dark-200">
+					<p className="text-theme-secondary-700 dark:text-theme-dark-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
 						{t("WALLETS.PAGE_WALLET_DETAILS.MANAGE_VOTES_FOR_YOUR_ADDRESSES")}
 					</p>
 				</div>
@@ -46,7 +46,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 	return (
 		<div
 			data-testid="WalletVote"
-			className="flex flex-col items-center -mt-4 w-full md:flex-row md:items-center md:mt-0"
+			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
 		>
 			{renderVotes()}
 
@@ -57,7 +57,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 							<Button
 								data-testid="WalletMyVotes__button"
 								variant="secondary-icon"
-								className="hidden mt-4 space-x-2 w-full whitespace-nowrap md:flex md:px-2 md:mt-0 md:w-auto disabled:bg-transparent text-theme-primary-600 md:py-[3px] dark:text-theme-dark-navy-400 dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -67,7 +67,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 							<Button
 								data-testid="WalletMyVotes__button_mobile"
 								variant="secondary"
-								className="w-full md:hidden dark:text-white disabled:bg-transparent text-theme-primary-600 dark:disabled:bg-transparent"
+								className="text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -88,7 +88,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 									!isLedgerWalletCompatible(wallet)
 								}
 								variant="secondary-icon"
-								className="hidden mt-4 space-x-2 w-full md:flex md:px-2 md:mt-0 md:w-auto disabled:bg-transparent text-theme-primary-600 md:py-[3px] dark:text-theme-dark-navy-400 dark:disabled:bg-transparent"
+								className="text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />
@@ -106,7 +106,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 									!isLedgerWalletCompatible(wallet)
 								}
 								variant="secondary"
-								className="w-full md:hidden dark:text-white disabled:bg-transparent text-theme-primary-600 dark:disabled:bg-transparent"
+								className="text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
 								onClick={() => onButtonClick()}
 							>
 								<Icon name="Vote" />

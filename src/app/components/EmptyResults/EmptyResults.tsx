@@ -16,7 +16,7 @@ export const EmptyResults = ({ className, title, subtitle }: EmptyResultsPropert
 	>
 		<div>
 			{title && <div className="mb-4 text-lg font-bold">{title}</div>}
-			{subtitle && <div className="mb-8 text-md">{subtitle}</div>}
+			{subtitle && <div className="text-md mb-8">{subtitle}</div>}
 			<div className="mx-auto w-full max-w-lg">
 				<Image name="NoResults" />
 			</div>

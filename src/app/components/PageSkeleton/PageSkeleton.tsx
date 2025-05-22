@@ -12,7 +12,7 @@ export const PageSkeleton = () => {
 		<div data-testid="PageSkeleton">
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
 				<Section
-					className="flex flex-1 -mt-5 md:mt-0 xl:px-10"
+					className="-mt-5 flex flex-1 md:mt-0 xl:px-10"
 					innerClassName="w-full lg:max-w-screen-xl"
 					data-testid="PageSkeleton"
 				>
@@ -20,9 +20,9 @@ export const PageSkeleton = () => {
 						<div className="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]">
 							<WelcomeSlider />
 						</div>
-						<div className="min-w-0 rounded-xl sm:p-6 sm:border border-theme-navy-100 basis-1/2 dark:border-theme-secondary-800">
-							<div className="flex flex-col mx-auto sm:h-full h-[calc(100vh_-_160px)] max-w-[400px]">
-								<div className="flex flex-col flex-1 justify-center items-center">
+						<div className="border-theme-navy-100 dark:border-theme-secondary-800 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6">
+							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
+								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
 										<ThemeIcon
 											darkIcon="PersonDark"
@@ -31,11 +31,11 @@ export const PageSkeleton = () => {
 										/>
 									</div>
 
-									<div className="flex flex-col justify-center items-center mt-4 space-y-4 w-full">
+									<div className="mt-4 flex w-full flex-col items-center justify-center space-y-4">
 										<Skeleton className="h-8" width={140} />
 										<Skeleton className="block h-4" width={240} />
 										<Skeleton className="block h-4" width={160} />
-										<div className="space-y-3 w-full">
+										<div className="w-full space-y-3">
 											<ProfileRowSkeleton />
 											<ProfileRowSkeleton />
 										</div>
@@ -44,7 +44,7 @@ export const PageSkeleton = () => {
 
 								<div className="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0">
 									<div className="h-6">
-										<Skeleton className="w-3/5 h-3" />
+										<Skeleton className="h-3 w-3/5" />
 									</div>
 								</div>
 							</div>

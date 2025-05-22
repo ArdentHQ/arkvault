@@ -73,7 +73,7 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 			onClick={onClick}
 			{...properties}
 		>
-			<div className="flex flex-row items-center grow">{children}</div>
+			<div className="flex grow flex-row items-center">{children}</div>
 
 			{!!onClick && (
 				<div
@@ -113,13 +113,13 @@ export const AccordionHeaderSkeletonWrapper: React.VFC<AccordionHeaderSkeletonWr
 }) => (
 	<div
 		data-testid="AccordionHeaderSkeletonWrapper"
-		className="flex items-center py-4 px-8 h-20 md:px-4"
+		className="flex h-20 items-center px-8 py-4 md:px-4"
 		{...properties}
 	>
 		{children}
 
-		<div className="flex items-center pl-4 h-full border-theme-secondary-300 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700">
-			<div className="flex justify-center content-center items-center w-8 h-8 rounded-lg ring-1 bg-theme-background text-theme-secondary-500 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800">
+		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 flex h-full items-center pl-4">
+			<div className="bg-theme-background text-theme-secondary-500 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 flex h-8 w-8 content-center items-center justify-center rounded-lg ring-1">
 				<Icon name="ChevronDownSmall" size="sm" />
 			</div>
 		</div>

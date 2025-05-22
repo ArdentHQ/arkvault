@@ -14,7 +14,7 @@ export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyPropert
 
 	return (
 		<EmptyBlock>
-			<div className="flex flex-col justify-between items-center space-y-4 space-x-3 md:flex-row md:space-y-0">
+			<div className="flex flex-col items-center justify-between space-y-4 space-x-3 md:flex-row md:space-y-0">
 				<span className="text-center md:text-left">
 					<Trans
 						i18nKey="VOTE.VOTES_PAGE.EMPTY_MESSAGE"
@@ -26,7 +26,7 @@ export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyPropert
 					/>
 				</span>
 
-				<div className="flex items-center -m-3 space-x-3 w-full sm:w-auto">
+				<div className="-m-3 flex w-full items-center space-x-3 sm:w-auto">
 					<Button onClick={onImportWallet} variant="secondary" className="w-full sm:w-auto">
 						<div className="flex items-center space-x-2">
 							<Icon name="ArrowTurnDownBracket" />

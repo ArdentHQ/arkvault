@@ -36,15 +36,15 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 		if (variant === "condensed") {
 			return (
-				<td className="flex-1 pl-3 text-right shrink-0">
+				<td className="flex-1 shrink-0 pl-3 text-right">
 					<Amount ticker={ticker} value={amount} />
 				</td>
 			);
 		}
 
 		return (
-			<td className="flex-1 py-6 pl-3 text-right shrink-0">
-				<div className="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+			<td className="flex-1 shrink-0 py-6 pl-3 text-right">
+				<div className="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold">
 					{showExchangeAmount ? (
 						<Amount ticker={exchangeTicker} value={convert(amount)} />
 					) : (
@@ -61,20 +61,20 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 	if (variant === "condensed") {
 		return (
 			<tr
-				className="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
 				data-testid="recipient-list__recipient-list-item"
 			>
-				<td className="table-cell mr-3 md:hidden">{renderAmount()}</td>
+				<td className="mr-3 table-cell md:hidden">{renderAmount()}</td>
 
 				<td className="hidden md:table-cell">
 					<Avatar size="sm" address={address} />
 				</td>
 
-				<td className="flex-1 justify-end w-28 md:ml-4">
+				<td className="w-28 flex-1 justify-end md:ml-4">
 					<Address address={address} walletName={alias} />
 				</td>
 
-				<td className="table-cell ml-2 md:hidden">
+				<td className="ml-2 table-cell md:hidden">
 					<Avatar size="xs" address={address} />
 				</td>
 
@@ -87,15 +87,15 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 	return (
 		<tr
-			className="flex border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+			className="border-theme-secondary-300 dark:border-theme-secondary-800 flex border-b border-dashed last:border-b-0"
 			data-testid="recipient-list__recipient-list-item"
 		>
 			<td className="flex-none py-6">
 				<Avatar address={address} size="lg" />
 			</td>
 
-			<td className="flex-1 py-6 ml-5 w-28">
-				<div className="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+			<td className="ml-5 w-28 flex-1 py-6">
+				<div className="text-theme-secondary-500 dark:text-theme-secondary-700 mb-1 text-sm font-semibold">
 					<span>{t(label ?? "COMMON.RECIPIENT_#", { count: listIndex + 1 })}</span>
 				</div>
 				<Address address={address} walletName={alias} />
@@ -104,7 +104,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 			{renderAmount()}
 
 			{isEditable && (
-				<td className="flex-none py-6 ml-3">
+				<td className="ml-3 flex-none py-6">
 					<Tooltip content={tooltipDisabled} disabled={!isButtonDisabled}>
 						<span className="inline-block">
 							<Button

@@ -62,7 +62,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<TransactionRowId transaction={transaction} />
-						<span className="text-xs xl:hidden text-theme-secondary-700">
+						<span className="text-theme-secondary-700 text-xs xl:hidden">
 							{timeStamp ? (
 								<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 							) : (
@@ -101,7 +101,7 @@ export const TransactionRow = memo(
 						color="secondary"
 						size="xs"
 						noBorder
-						className="px-1 whitespace-nowrap rounded dark:border max-w-40 truncate py-[3px]"
+						className="max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
 						data-testid="TransactionRow__type"
 					>
 						{getLabel(transaction.type())}
@@ -116,7 +116,7 @@ export const TransactionRow = memo(
 						"min-h-16 my-1 py-2": !hideSender,
 					})}
 				>
-					<div className="flex flex-col gap-2 grow">
+					<div className="flex grow flex-col gap-2">
 						<TransactionRowAddressing
 							transaction={transaction}
 							profile={profile}
@@ -166,10 +166,10 @@ export const TransactionRow = memo(
 						"lg:w-34 xl:w-auto": !hideSender,
 					})}
 				>
-					<div className="flex flex-col gap-1 items-end">
+					<div className="flex flex-col items-end gap-1">
 						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} profile={profile} />
 						<span
-							className="text-xs font-semibold lg:hidden text-theme-secondary-700"
+							className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
 						>
 							<TransactionFiatAmount
@@ -199,14 +199,14 @@ export const TransactionRow = memo(
 							profile={profile}
 						/>
 					) : (
-						<div className="flex flex-col gap-1 items-end w-40">
+						<div className="flex w-40 flex-col items-end gap-1">
 							<TransactionTotalLabel
 								transaction={transaction}
 								hideStyles={!hideSender}
 								profile={profile}
 							/>
 							<span
-								className="text-xs font-semibold lg:hidden text-theme-secondary-700"
+								className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
 								data-testid="TransactionRow__exchange-currency"
 							>
 								<TransactionFiatAmount

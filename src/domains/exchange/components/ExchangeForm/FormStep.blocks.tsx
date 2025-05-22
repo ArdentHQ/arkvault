@@ -24,8 +24,8 @@ const CurrencyIcon = ({ image, ticker }: CurrencyIconProperties) => {
 	}
 
 	return (
-		<div className="flex justify-center items-center w-8 h-8">
-			<img src={image} alt={`${ticker?.toUpperCase()} Icon`} className="w-full h-full" />
+		<div className="flex h-8 w-8 items-center justify-center">
+			<img src={image} alt={`${ticker?.toUpperCase()} Icon`} className="h-full w-full" />
 		</div>
 	);
 };
@@ -55,7 +55,7 @@ const FormDivider = ({
 	const renderExchangeRate = () => {
 		if (isLoading) {
 			return (
-				<div className="flex items-center h-5">
+				<div className="flex h-5 items-center">
 					<Skeleton width={200} height={14} />
 				</div>
 			);
@@ -75,13 +75,13 @@ const FormDivider = ({
 
 	return (
 		<div className="flex space-x-4 sm:ml-8 sm:space-x-8">
-			<div className="relative my-1 h-20 border-l border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="absolute top-1/2 w-2 h-2 rounded-full border -translate-x-1/2 -translate-y-1/2 border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800" />
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 relative my-1 h-20 border-l">
+				<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border" />
 			</div>
 
 			<div className="flex flex-1 items-center">
 				<div className="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2">
-					<span className="mt-px mr-auto font-semibold border-b border-dashed border-theme-primary-600 text-theme-primary-600">
+					<span className="border-theme-primary-600 text-theme-primary-600 mt-px mr-auto border-b border-dashed font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
 					</span>
 					{renderExchangeRate()}

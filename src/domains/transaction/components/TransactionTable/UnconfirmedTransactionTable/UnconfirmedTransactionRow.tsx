@@ -21,18 +21,18 @@ export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties 
 	if (isXs || isSm) {
 		return (
 			<TableRow {...properties}>
-				<td data-testid="TableRow__mobile" className="flex-col py-4 space-y-4">
+				<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 
-						<div className="flex overflow-hidden flex-row-reverse flex-1 justify-end items-center space-x-4 w-0">
+						<div className="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden">
 							<TransactionRowRecipient transaction={transaction} profile={profile} />
 						</div>
 					</RowWrapper>
 
 					<RowWrapper>
 						<RowLabel>{t("COMMON.DATE")}</RowLabel>
-						<div className="whitespace-nowrap text-theme-secondary-500">
+						<div className="text-theme-secondary-500 whitespace-nowrap">
 							<TimeAgo date={transaction.timestamp()?.toString() as string} />
 						</div>
 					</RowWrapper>

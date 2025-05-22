@@ -29,7 +29,7 @@ export const TransactionExportProgress = ({ count, file, onCancel }: Transaction
 
 	return (
 		<div>
-			<Image name="Info" className="hidden mx-auto mb-6 md:block h-26" />
+			<Image name="Info" className="mx-auto mb-6 hidden h-26 md:block" />
 
 			{renderAlert()}
 

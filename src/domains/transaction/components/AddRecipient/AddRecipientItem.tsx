@@ -34,15 +34,15 @@ export const AddRecipientItem: React.FC<{
 		<MultiEntryItem
 			dataTestId="AddRecipientItem"
 			titleSlot={
-				<div className="flex justify-between items-center w-full">
-					<div className="text-sm font-semibold whitespace-nowrap text-theme-secondary-700 leading-[17px] dark:text-theme-secondary-500">
+				<div className="flex w-full items-center justify-between">
+					<div className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
 					<Button
 						onClick={() => onDelete(index)}
 						data-testid="AddRecipientItem--deleteButton_mobile"
 						size="icon"
-						className="p-0 sm:hidden text-theme-secondary-700 dark:text-theme-secondary-500"
+						className="text-theme-secondary-700 dark:text-theme-secondary-500 p-0 sm:hidden"
 						variant="transparent"
 					>
 						<Icon name="Trash" size="lg" />
@@ -51,7 +51,7 @@ export const AddRecipientItem: React.FC<{
 			}
 			bodySlot={
 				<div>
-					<div className="hidden mt-1 leading-5 sm:block">
+					<div className="mt-1 hidden leading-5 sm:block">
 						<Address
 							address={address}
 							walletName={alias}
@@ -77,7 +77,7 @@ export const AddRecipientItem: React.FC<{
 								<Amount
 									ticker={ticker}
 									value={amount!}
-									className="text-sm font-semibold text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
+									className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
 								/>
 							}
 						/>
@@ -85,9 +85,9 @@ export const AddRecipientItem: React.FC<{
 				</div>
 			}
 			rightSlot={
-				<div className="flex gap-3 items-center">
+				<div className="flex items-center gap-3">
 					<div className="flex flex-col items-end space-y-2">
-						<div className="font-semibold whitespace-nowrap text-theme-secondary-700 leading-[17px] dark:text-theme-secondary-500">
+						<div className="text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold whitespace-nowrap">
 							{showExchangeAmount ? (
 								<span data-testid="AddRecipientItem--exchangeAmount" className="hidden sm:inline">
 									<Amount
@@ -103,14 +103,14 @@ export const AddRecipientItem: React.FC<{
 						<Amount
 							ticker={ticker}
 							value={amount!}
-							className="font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+							className="text-theme-secondary-900 dark:text-theme-secondary-200 leading-5 font-semibold"
 						/>
 					</div>
 					<Button
 						variant="danger"
 						onClick={() => onDelete(index)}
 						data-testid="AddRecipientItem--deleteButton"
-						className="p-2.5 w-11 h-11"
+						className="h-11 w-11 p-2.5"
 					>
 						<Icon name="Trash" />
 					</Button>

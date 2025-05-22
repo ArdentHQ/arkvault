@@ -102,17 +102,17 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet, network })
 						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
 							<div className="flex flex-col gap-3">
 								<div
-									className="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+									className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 									data-testid="AmountSection"
 								>
-									<DetailTitle className="w-auto sm:pr-6 sm:min-w-[85px]">
+									<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
 										{t("COMMON.AMOUNT")}
 									</DetailTitle>
 
-									<div className="flex flex-row gap-2 items-center">
+									<div className="flex flex-row items-center gap-2">
 										<Amount ticker={ticker} value={amount} className="font-semibold" />
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
-											<div className="font-semibold text-theme-secondary-700">
+											<div className="text-theme-secondary-700 font-semibold">
 												(~
 												<Amount ticker={exchangeTicker} value={convertedAmount} />)
 											</div>

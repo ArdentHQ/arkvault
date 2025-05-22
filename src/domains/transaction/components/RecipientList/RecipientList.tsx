@@ -60,7 +60,7 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 	);
 
 	return (
-		<div className="w-full recipient-list">
+		<div className="recipient-list w-full">
 			<Table columns={columns} data={recipients}>
 				{renderTableRow}
 			</Table>

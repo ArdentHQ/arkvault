@@ -59,9 +59,9 @@ const SettingsGroupHeader = ({
 		)}
 		{...properties}
 	>
-		<h2 className="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{children}</h2>
+		<h2 className="text-theme-secondary-700 dark:text-theme-dark-200 mb-0 text-base font-semibold">{children}</h2>
 
-		{description && <p className="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>}
+		{description && <p className="text-theme-secondary-700 dark:text-theme-dark-200 mt-1 text-sm">{description}</p>}
 	</div>
 );
 
@@ -100,7 +100,7 @@ export const ViewingMode = ({
 				>
 					<div className="flex items-center px-2">
 						<Icon size="lg" name={icon} />
-						<span className="hidden ml-2 sm:inline">{name}</span>
+						<span className="ml-2 hidden sm:inline">{name}</span>
 					</div>
 				</ButtonGroupOption>
 			))}

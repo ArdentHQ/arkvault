@@ -234,7 +234,7 @@ export const GeneralSettings: React.FC = () => {
 				<Button
 					onClick={() => setIsResetProfileOpen(true)}
 					variant="danger"
-					className="w-full sm:w-auto bg-theme-danger-50"
+					className="bg-theme-danger-50 w-full sm:w-auto"
 				>
 					<Icon name="ArrowRotateLeft" />
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
@@ -297,13 +297,13 @@ export const GeneralSettings: React.FC = () => {
 		<SettingsWrapper profile={profile} activeSettings="general">
 			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
-					<div className="space-y-2 group">
-						<span className="text-sm font-semibold transition-colors duration-100 cursor-default text-theme-secondary-text group-hover:text-theme-primary-600">
+					<div className="group space-y-2">
+						<span className="text-theme-secondary-text group-hover:text-theme-primary-600 cursor-default text-sm font-semibold transition-colors duration-100">
 							{t("SETTINGS.GENERAL.PERSONAL.PROFILE_IMAGE")}
 						</span>
 
-						<div className="flex relative flex-row sm:space-x-3">
-							<div className="hidden justify-center items-center px-4 rounded-lg sm:flex bg-theme-primary-50 h-[92px] min-w-[226px] dark:bg-theme-dark-950">
+						<div className="relative flex flex-row sm:space-x-3">
+							<div className="bg-theme-primary-50 dark:bg-theme-dark-950 hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg px-4 sm:flex">
 								<Image
 									className="hidden lg:block"
 									name={isDarkMode ? "ProfileImageExampleDark" : "ProfileImageExampleLight"}
@@ -338,7 +338,7 @@ export const GeneralSettings: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="flex flex-col justify-between mt-5 w-full sm:flex-row">
+					<div className="mt-5 flex w-full flex-col justify-between sm:flex-row">
 						<div className="flex flex-col sm:w-2/4">
 							<FormField name="name">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
@@ -413,7 +413,7 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 						</div>
 
-						<div className="flex flex-col mt-5 sm:mt-0 sm:ml-5 sm:w-2/4">
+						<div className="mt-5 flex flex-col sm:mt-0 sm:ml-5 sm:w-2/4">
 							<FormField name="locale">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.LANGUAGE")} />
 								<Select

@@ -9,9 +9,9 @@ export const LedgerCancelling = () => {
 		<div className="space-y-8" data-testid="LedgerCancellingScreen">
 			<Image name="ErrorTransactionLedgerBanner" domain="transaction" className="mx-auto max-w-full" />
 
-			<div className="inline-flex justify-center items-center space-x-3 w-full">
+			<div className="inline-flex w-full items-center justify-center space-x-3">
 				<Spinner />
-				<span className="font-semibold animate-pulse text-theme-secondary-text">
+				<span className="text-theme-secondary-text animate-pulse font-semibold">
 					{t("WALLETS.PAGE_IMPORT_WALLET.CANCELLING_STATE.TITLE")}
 				</span>
 			</div>

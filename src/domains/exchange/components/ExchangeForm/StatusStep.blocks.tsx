@@ -19,7 +19,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 			return (
 				<div
 					data-testid="StatusIcon__check-mark"
-					className="flex justify-center items-center w-6 h-6 rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+					className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded-full"
 				>
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
@@ -37,13 +37,13 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		return (
 			<div
 				data-testid="StatusIcon__empty"
-				className="w-6 h-6 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 h-6 w-6 rounded-full border-2"
 			/>
 		);
 	};
 
 	return (
-		<div className="flex flex-col items-center space-y-2 w-6">
+		<div className="flex w-6 flex-col items-center space-y-2">
 			{renderIcon()}
 			<span
 				className={cn(
@@ -60,7 +60,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 };
 
 const StatusSpacer = ({ isActive }: { isActive: boolean }) => (
-	<div className="flex flex-1 items-center px-2 h-6">
+	<div className="flex h-6 flex-1 items-center px-2">
 		<div
 			className={cn(
 				"h-0.5 w-full rounded-l rounded-r",
@@ -109,7 +109,7 @@ const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contract
 	const status = exchangeTransaction.status();
 
 	return (
-		<div className="flex justify-center px-10 my-6 sm:px-20 items-top">
+		<div className="items-top my-6 flex justify-center px-10 sm:px-20">
 			<StatusIcon
 				label={t("EXCHANGE.TRANSACTION_STATUS.AWAITING_DEPOSIT")}
 				isDone={status > Contracts.ExchangeTransactionStatus.Confirming}

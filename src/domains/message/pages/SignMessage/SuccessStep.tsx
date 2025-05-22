@@ -21,7 +21,7 @@ export const SigningMessageInfo = ({
 	return (
 		<div className="space-y-4">
 			<DetailWrapper label={t("COMMON.SIGNING_WALLET")}>
-				<div className="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0">
+				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
 					<Address
 						truncateOnTable
@@ -74,7 +74,7 @@ export const SuccessStep = ({
 					<FormField name="json-signature">
 						<DetailLabel>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabel>
 						<TextArea
-							className="py-4 mt-2"
+							className="mt-2 py-4"
 							wrap="hard"
 							ref={messageReference}
 							defaultValue={JSON.stringify(signedMessage)}

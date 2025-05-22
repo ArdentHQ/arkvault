@@ -31,7 +31,7 @@ const ToastIcon = ({ variant }: { variant: string }) => {
 };
 
 export const Toast = ({ variant = "warning", children }: ToastProperties) => (
-	<div className="flex overflow-hidden items-stretch md:rounded-xl">
+	<div className="flex items-stretch overflow-hidden md:rounded-xl">
 		<ToastIconWrapper variant={variant}>
 			<ToastIcon variant={variant} />
 		</ToastIconWrapper>

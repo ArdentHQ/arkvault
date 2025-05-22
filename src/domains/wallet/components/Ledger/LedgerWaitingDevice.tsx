@@ -20,10 +20,10 @@ export const LedgerWaitingDeviceContent = ({ subtitle, noHeading }: { subtitle?:
 
 			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
 
-			<div className="inline-flex justify-center items-center space-x-3 w-full">
+			<div className="inline-flex w-full items-center justify-center space-x-3">
 				<Spinner />
 				<span
-					className="font-semibold animate-pulse text-theme-secondary-text"
+					className="text-theme-secondary-text animate-pulse font-semibold"
 					data-testid="LedgerWaitingDevice-loading_message"
 				>
 					{t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}

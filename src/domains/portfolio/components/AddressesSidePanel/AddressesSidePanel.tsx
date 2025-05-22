@@ -306,7 +306,7 @@ export const AddressesSidePanel = ({
 				onChange={activeModeChangeHandler}
 				disabled={isDeleteMode}
 			>
-				<TabList className="grid grid-cols-2 w-full h-10">
+				<TabList className="grid h-10 w-full grid-cols-2">
 					{tabOptions.map((option) => (
 						<Tab tabId={option.value} key={option.value} className="px-2.5 sm:px-3">
 							<span>{option.label}</span>
@@ -328,7 +328,7 @@ export const AddressesSidePanel = ({
 				}}
 			/>
 
-			<div className="py-2.5 px-3 my-3 -mx-3 rounded-r-sm border-l-2 sm:p-0 sm:mx-0 sm:bg-transparent sm:border-none border-theme-info-400 bg-theme-secondary-100 sm:dark:bg-transparent dark:bg-theme-dark-950">
+			<div className="border-theme-info-400 bg-theme-secondary-100 dark:bg-theme-dark-950 -mx-3 my-3 rounded-r-sm border-l-2 px-3 py-2.5 sm:mx-0 sm:border-none sm:bg-transparent sm:p-0 sm:dark:bg-transparent">
 				<div
 					className={cn("flex sm:px-4", {
 						"justify-between": activeMode === AddressViewSelection.multiple,
@@ -373,15 +373,15 @@ export const AddressesSidePanel = ({
 							/* istanbul ignore next -- @preserve */
 							maxWidth={isXs ? 264 : "none"}
 							content={
-								<div className="pb-1.5 text-sm leading-5 sm:pt-px sm:pb-px sm:space-x-4 px-[3px]">
-									<span className="block mb-2 sm:inline sm:mb-0">
+								<div className="px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pt-px sm:pb-px">
+									<span className="mb-2 block sm:mb-0 sm:inline">
 										{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}
 									</span>
 									<Button
 										size="xs"
 										variant="transparent"
 										data-testid="HideManageHint"
-										className="py-1.5 px-4 w-full sm:w-auto bg-theme-primary-500"
+										className="bg-theme-primary-500 w-full px-4 py-1.5 sm:w-auto"
 										onClick={() => {
 											persistManageHint(true);
 											setShowManageHint(false);
@@ -413,13 +413,13 @@ export const AddressesSidePanel = ({
 					)}
 
 					{isDeleteMode && (
-						<div className="flex items-center px-2 space-x-2 sm:leading-5 leading-[18px]">
+						<div className="flex items-center space-x-2 px-2 leading-[18px] sm:leading-5">
 							<Button
 								data-testid="BackManage"
 								size="icon"
 								variant="primary-transparent"
 								onClick={resetDeleteState}
-								className="p-2 text-sm sm:text-base sm:leading-5 text-theme-primary-600 py-[3px] leading-[18px] dark:text-theme-primary-400"
+								className="text-theme-primary-600 dark:text-theme-primary-400 p-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
 							>
 								<Icon name="Back" dimensions={[16, 16]} />
 								<span>{t("COMMON.BACK")}</span>
@@ -430,14 +430,14 @@ export const AddressesSidePanel = ({
 			</div>
 
 			{isDeleteMode && (
-				<div className="flex overflow-hidden flex-col my-2 rounded sm:flex-row sm:items-center sm:my-3 sm:rounded-xl bg-theme-info-50 dark:bg-theme-dark-800">
-					<div className="flex items-center py-2 px-4 space-x-2 w-full sm:space-x-0 sm:w-auto bg-theme-info-100 sm:py-4.5 dark:bg-theme-info-600">
-						<Icon name="CircleInfo" className="dark:text-white text-theme-info-700" dimensions={[16, 16]} />
-						<span className="text-sm font-semibold sm:hidden dark:text-white text-theme-info-700 leading-[17px]">
+				<div className="bg-theme-info-50 dark:bg-theme-dark-800 my-2 flex flex-col overflow-hidden rounded sm:my-3 sm:flex-row sm:items-center sm:rounded-xl">
+					<div className="bg-theme-info-100 dark:bg-theme-info-600 flex w-full items-center space-x-2 px-4 py-2 sm:w-auto sm:space-x-0 sm:py-4.5">
+						<Icon name="CircleInfo" className="text-theme-info-700 dark:text-white" dimensions={[16, 16]} />
+						<span className="text-theme-info-700 text-sm leading-[17px] font-semibold sm:hidden dark:text-white">
 							{t("COMMON.INFORMATION")}
 						</span>
 					</div>
-					<div className="p-4 text-sm text-theme-secondary-900 dark:text-theme-dark-50">
+					<div className="text-theme-secondary-900 dark:text-theme-dark-50 p-4 text-sm">
 						{t("WALLETS.ADDRESSES_SIDE_PANEL.DELETE_INFO")}
 					</div>
 				</div>

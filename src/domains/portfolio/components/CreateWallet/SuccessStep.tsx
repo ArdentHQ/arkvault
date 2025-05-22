@@ -28,7 +28,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 		<section data-testid="CreateWallet__SuccessStep">
 			<div className="space-y-4">
 				<DetailWrapper label={t("COMMON.ADDRESSING")}>
-					<div className="flex justify-between items-center mb-3 w-full leading-5 sm:justify-start sm:mb-0">
+					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
 						<Address
 							address={wallet.address()}
@@ -40,15 +40,15 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 				</DetailWrapper>
 
 				<DetailWrapper label={t("COMMON.ADDRESS_NAME")}>
-					<div className="flex justify-between items-center w-full sm:justify-start">
+					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
-						<div className="flex justify-end items-center w-full min-w-0 font-semibold sm:justify-between sm:leading-5 leading-[17px]">
+						<div className="flex w-full min-w-0 items-center justify-end leading-[17px] font-semibold sm:justify-between sm:leading-5">
 							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none">
 								{" "}
 								{wallet.alias()}{" "}
 							</div>
 
-							<div className="flex items-center h-5 sm:hidden">
+							<div className="flex h-5 items-center sm:hidden">
 								<Divider type="vertical" size="md" />
 							</div>
 
@@ -57,11 +57,11 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 								data-testid="CreateWallet__edit-alias"
 								type="button"
 								variant="transparent"
-								className="py-0 px-0 space-x-0 text-theme-navy-600"
+								className="text-theme-navy-600 space-x-0 px-0 py-0"
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" />
-								<span className="sm:leading-5 leading-[17px]">{t("COMMON.EDIT")}</span>
+								<span className="leading-[17px] sm:leading-5">{t("COMMON.EDIT")}</span>
 							</Button>
 						</div>
 					</div>

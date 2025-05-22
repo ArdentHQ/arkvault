@@ -52,8 +52,8 @@ export const CreateProfile = () => {
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 			wrapperClassName="pb-32 sm:pb-0"
 		>
-			<div className="flex sm:items-center min-h-page" data-testid="CreateProfile">
-				<div className="px-6 mx-auto max-w-172">
+			<div className="min-h-page flex sm:items-center" data-testid="CreateProfile">
+				<div className="mx-auto max-w-172 px-6">
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"
@@ -62,7 +62,7 @@ export const CreateProfile = () => {
 						className="block"
 					/>
 
-					<div className="pt-1 mt-4 mb-16 rounded-lg sm:p-6 sm:mb-0 sm:border border-theme-secondary-300 bg-theme-background md:w-172 dark:border-theme-secondary-800">
+					<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 mt-4 mb-16 rounded-lg pt-1 sm:mb-0 sm:border sm:p-6 md:w-172">
 						<ProfileForm
 							defaultValues={{
 								currency: defaultCurrency,

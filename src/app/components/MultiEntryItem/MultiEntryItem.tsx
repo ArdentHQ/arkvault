@@ -79,7 +79,7 @@ export const MultiEntryItem = ({
 
 export const InfoDetail = ({ label, body }: { label: ReactNode; body: ReactNode }): JSX.Element => (
 	<div>
-		<div className="mb-2 text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-secondary-500">
+		<div className="text-theme-secondary-700 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold">
 			{label}
 		</div>
 		{body}

@@ -20,9 +20,9 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 	}, []);
 
 	return (
-		<div className="w-full sm:w-[35rem] dark:bg-theme-dark-900" data-testid="NotificationsWrapper">
-			<div className="flex justify-between items-center py-4 px-6 rounded-t-xl dark:bg-black bg-theme-secondary-100">
-				<div className="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200">
+		<div className="dark:bg-theme-dark-900 w-full sm:w-[35rem]" data-testid="NotificationsWrapper">
+			<div className="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black">
+				<div className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold">
 					Notification
 				</div>
 			</div>
@@ -40,7 +40,7 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 
 			{transactions.length > 0 && (
 				<div
-					className="overflow-y-hidden overscroll-y-none w-full max-h-[36rem]"
+					className="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
 					data-testid="NotificationsWrapper"
 				>
 					{transactions.length > 0 && (

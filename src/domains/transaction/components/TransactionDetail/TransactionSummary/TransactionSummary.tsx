@@ -26,7 +26,7 @@ export const TransactionSummary = ({
 			<div className="space-y-3 sm:space-y-0">
 				{!BigNumber.make(transaction.value()).isZero() && (
 					<>
-						<div className="flex justify-between w-full sm:justify-start">
+						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
 							<TransactionAmountLabel transaction={transaction} profile={profile} />
 						</div>
@@ -35,12 +35,12 @@ export const TransactionSummary = ({
 					</>
 				)}
 
-				<div className="flex justify-between w-full sm:justify-start">
+				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.currency()}
 						value={transaction.fee()}
-						className="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]"
+						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance
 						profile={profile}
 					/>
@@ -48,12 +48,12 @@ export const TransactionSummary = ({
 
 				<DetailDivider />
 
-				<div className="flex justify-between w-full sm:justify-start">
+				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}
-						className="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]"
+						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance
 						profile={profile}
 					/>

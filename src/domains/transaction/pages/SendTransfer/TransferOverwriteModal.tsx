@@ -19,22 +19,22 @@ interface TransferOverwriteModalProperties {
 }
 
 const DetailLabel = ({ label }: { label: string }) => (
-	<div className="mb-2 text-sm font-semibold text-theme-secondary-500">{label}</div>
+	<div className="text-theme-secondary-500 mb-2 text-sm font-semibold">{label}</div>
 );
 
 const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; newNode: ReactNode }) => (
-	<div className="flex rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-		<div className="flex-1 min-w-0 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
+	<div className="border-theme-secondary-300 dark:border-theme-secondary-800 flex rounded-xl border">
+		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 min-w-0 flex-1 border-r">
 			<div
-				className="py-2.5 px-3 border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 border-b px-3 py-2.5"
 				data-testid="OverwriteDetail__Current"
 			>
 				<DetailLabel label="Current value" />
-				<div className="flex flex-1 w-full">{currentNode}</div>
+				<div className="flex w-full flex-1">{currentNode}</div>
 			</div>
-			<div className="py-2.5 px-3" data-testid="OverwriteDetail__New">
+			<div className="px-3 py-2.5" data-testid="OverwriteDetail__New">
 				<DetailLabel label="New value" />
-				<div className="flex flex-1 w-full">{newNode}</div>
+				<div className="flex w-full flex-1">{newNode}</div>
 			</div>
 		</div>
 		<div className="flex items-center px-3.5">
@@ -44,13 +44,13 @@ const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; new
 );
 
 const AvailableValue = ({ value }: { value: string }) => (
-	<div className="font-medium text-theme-secondary-900 truncate dark:text-theme-secondary-200">{value}</div>
+	<div className="text-theme-secondary-900 dark:text-theme-secondary-200 truncate font-medium">{value}</div>
 );
 
 const UnavailableValue = () => {
 	const { t } = useTranslation();
 
-	return <div className="font-medium text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</div>;
+	return <div className="text-theme-secondary-500 font-medium">{t("COMMON.NOT_AVAILABLE")}</div>;
 };
 
 const DetailText = ({ value }: { value: string | null }) =>
@@ -81,7 +81,7 @@ export const TransferOverwriteModal = ({
 		>
 			<Alert className="mt-2.5">{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
 
-			<div className="pt-4 space-y-4">
+			<div className="space-y-4 pt-4">
 				{(currentRecipient || newRecipient) && (
 					<div data-testid="OverwriteModal__Recipient">
 						<DetailLabel label={t("COMMON.RECIPIENT")} />
@@ -132,7 +132,7 @@ export const TransferOverwriteModal = ({
 				)}
 			</div>
 
-			<label className="inline-flex items-center pb-10 mt-4 space-x-3 cursor-pointer md:pb-0 text-theme-secondary-text">
+			<label className="text-theme-secondary-text mt-4 inline-flex cursor-pointer items-center space-x-3 pb-10 md:pb-0">
 				<Checkbox
 					data-testid="OverwriteModal__clear_prefilled"
 					checked={clearPrefilled}

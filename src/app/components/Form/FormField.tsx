@@ -55,7 +55,7 @@ export const FormField: React.FC<FormFieldProperties> = ({
 	return (
 		<FormFieldStyled
 			isInvalid={isInvalid}
-			className="flex flex-col min-w-0"
+			className="flex min-w-0 flex-col"
 			disableHover={disableHover}
 			disableStateHints={disableStateHints}
 			{...properties}

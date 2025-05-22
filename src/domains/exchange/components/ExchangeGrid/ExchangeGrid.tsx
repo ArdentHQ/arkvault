@@ -17,7 +17,7 @@ export const ExchangeGrid = ({ exchanges, isLoading, onClick }: ExchangeGridProp
 	if (isLoading) {
 		return (
 			<div data-testid="ExchangeGrid">
-				<div className="grid gap-3 w-full md:grid-cols-2">
+				<div className="grid w-full gap-3 md:grid-cols-2">
 					{Array.from({ length: 2 }).map((_, index) => (
 						<ExchangeCardSkeleton key={index} />
 					))}
@@ -35,7 +35,7 @@ export const ExchangeGrid = ({ exchanges, isLoading, onClick }: ExchangeGridProp
 	}
 
 	return (
-		<div data-testid="ExchangeGrid" className="grid gap-3 w-full md:grid-cols-2">
+		<div data-testid="ExchangeGrid" className="grid w-full gap-3 md:grid-cols-2">
 			{exchanges.map((exchange: Exchange) => (
 				<ExchangeCard key={exchange.slug} exchange={exchange} onClick={() => onClick(exchange.slug)} />
 			))}

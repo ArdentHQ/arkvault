@@ -8,6 +8,6 @@ export const Dot = ({ className }: { className?: string }) => (
 			className,
 		)}
 	>
-		<div className="w-1.5 h-1.5 rounded-full bg-theme-danger-500" />
+		<div className="bg-theme-danger-500 h-1.5 w-1.5 rounded-full" />
 	</div>
 );

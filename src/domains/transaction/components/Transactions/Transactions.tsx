@@ -171,14 +171,14 @@ export const Transactions = memo(function Transactions({
 	return (
 		<>
 			{title && (
-				<div className="hidden relative justify-between md:flex">
+				<div className="relative hidden justify-between md:flex">
 					<h2 className="mb-3 text-2xl font-bold">{title}</h2>
 				</div>
 			)}
 
 			{showTabs && (
 				<>
-					<Tabs className="hidden mb-3 md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
+					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
 						<TabList className="h-10">
 							{filterOptions.map((option) => (
 								<Tab tabId={option.value} key={option.value} className="">
@@ -188,7 +188,7 @@ export const Transactions = memo(function Transactions({
 						</TabList>
 					</Tabs>
 
-					<div className="flex flex-col my-3 space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden">
+					<div className="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden">
 						<div className="flex-1">
 							<Dropdown
 								data-testid="Transactions--filter-dropdown"
@@ -196,8 +196,8 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="flex overflow-hidden justify-between items-center p-3 space-x-4 w-full h-11 rounded border cursor-pointer sm:py-3 sm:px-4 border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50">
-										<span className="text-base font-semibold leading-tight">
+									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
+										<span className="text-base leading-tight font-semibold">
 											{selectedFilterLabel}
 										</span>
 										<Icon
@@ -223,9 +223,9 @@ export const Transactions = memo(function Transactions({
 			)}
 
 			<TableWrapper className={cn({ "rounded-b-none! border-none": showMore })}>
-				<div className="flex flex-col gap-3 justify-between items-start pt-3 pb-4 w-full border-b-0 sm:flex-row md:items-center md:py-4 md:px-6 md:border-b border-b-theme-secondary-300 dark:border-b-theme-secondary-800">
+				<div className="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					{!isLoadingTransactions && (
-						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold">
 							{t("COMMON.SHOWING_RESULTS", {
 								count: selectedTransactionTypes?.length ? transactions.length : 0,
 							})}
@@ -234,17 +234,17 @@ export const Transactions = memo(function Transactions({
 
 					{isLoadingTransactions && (
 						<div className="flex items-center space-x-1.5">
-							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold">
 								{t("COMMON.SHOWING")}
 							</span>
 							<Skeleton width={40} height={20} />
-							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold">
 								{t("COMMON.RESULTS").toLowerCase()}
 							</span>
 						</div>
 					)}
 					<FilterTransactions
-						className="w-full md:my-auto sm:w-fit"
+						className="w-full sm:w-fit md:my-auto"
 						wallets={wallets}
 						onSelect={filterChangeHandler}
 						selectedTransactionTypes={selectedTransactionTypes}
@@ -269,7 +269,7 @@ export const Transactions = memo(function Transactions({
 						{selectedTransactionTypes?.length ? (
 							<div
 								data-testid="Transactions__no-results"
-								className="px-6 mt-3 mb-1 leading-5 text-center md:px-6 text-theme-secondary-text dark:border-theme-secondary-800"
+								className="text-theme-secondary-text dark:border-theme-secondary-800 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
 							>
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
@@ -282,7 +282,7 @@ export const Transactions = memo(function Transactions({
 						) : (
 							<div
 								data-testid="Transactions__no-filters-selected"
-								className="px-6 mt-3 mb-1 leading-5 text-center md:px-6 text-theme-secondary-text dark:border-theme-secondary-800"
+								className="text-theme-secondary-text dark:border-theme-secondary-800 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
 							>
 								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 							</div>
@@ -301,11 +301,11 @@ export const Transactions = memo(function Transactions({
 			</TableWrapper>
 
 			{showMore && (
-				<div className="py-4 px-6 -mx-6 -mt-1 rounded-b-xl border-t md:-mx-px md:mt-0 md:border md:border-t-0 border-theme-secondary-300 dark:border-theme-secondary-800">
+				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-6 -mt-1 rounded-b-xl border-t px-6 py-4 md:-mx-px md:mt-0 md:border md:border-t-0">
 					<Button
 						data-testid="transactions__fetch-more-button"
 						variant="secondary"
-						className="py-1.5 w-full leading-5"
+						className="w-full py-1.5 leading-5"
 						disabled={isLoadingMore}
 						onClick={() => fetchMore()}
 					>

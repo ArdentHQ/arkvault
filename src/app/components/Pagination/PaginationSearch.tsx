@@ -129,7 +129,7 @@ export const PaginationSearch = ({
 
 				<span
 					data-testid="PaginationSearchButton__search"
-					className="flex absolute top-0 right-0 bottom-0 left-0 invisible justify-center items-center group-hover:visible"
+					className="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
 				>
 					<Icon name="MagnifyingGlass" />
 				</span>

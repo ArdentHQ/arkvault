@@ -37,7 +37,7 @@ export function MnemonicVerification({ mnemonic, handleComplete }: Properties) {
 	}, [isCompleted]);
 
 	return (
-		<div className="grid gap-3 mt-4 w-full sm:grid-cols-3">
+		<div className="mt-4 grid w-full gap-3 sm:grid-cols-3">
 			{positions.map((position) => (
 				<MnemonicVerificationInput
 					key={position}

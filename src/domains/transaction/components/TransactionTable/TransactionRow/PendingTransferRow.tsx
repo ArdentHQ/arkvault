@@ -31,14 +31,14 @@ export const PendingTransferRow = ({
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
-							className="cursor-pointer text-theme-primary-600"
+							className="text-theme-primary-600 cursor-pointer"
 							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
 							data-testid="PendingTransactionRow__transaction-id"
 						/>
 					</span>
-					<span className="text-xs xl:hidden text-theme-secondary-700">
+					<span className="text-theme-secondary-700 text-xs xl:hidden">
 						{timeStamp ? (
 							<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 						) : (
@@ -60,18 +60,18 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="items-start xl:min-h-11 my-1 pt-3 min-h-14 xl:min-h-11">
-				<Label color="secondary" size="xs" noBorder className="px-1 rounded dark:border">
+				<Label color="secondary" size="xs" noBorder className="rounded px-1 dark:border">
 					{getLabel(transaction.type())}
 				</Label>
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-11 my-1 pt-3 min-h-14 xl:min-h-11">
-				<Label color="danger-bg" size="xs" noBorder className="py-1 rounded px-[11px]">
+				<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-1">
 					{t("COMMON.TO")}
 				</Label>
 				<span className="text-sm">
 					<TruncateMiddle
-						className="font-semibold cursor-pointer text-theme-primary-600"
+						className="text-theme-primary-600 cursor-pointer font-semibold"
 						text={transaction.to() || ""}
 						maxChars={14}
 						data-testid="PendingTransactionRowRecipientLabel"
@@ -103,7 +103,7 @@ export const PendingTransferRow = ({
 
 			<TableCell
 				innerClassName="items-start my-1 pt-2 min-h-14 xl:min-h-11"
-				className="text-sm text-theme-secondary-500"
+				className="text-theme-secondary-500 text-sm"
 				variant="end"
 			>
 				<div className="flex flex-row items-center">{t("TRANSACTION.WAITING")}...</div>

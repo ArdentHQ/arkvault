@@ -26,13 +26,13 @@ export const TransactionRecipientsMobile: React.FC<TransactionRecipientsProperti
 
 			{recipients.map((recipient, key: number) => (
 				<TransactionDetail data-testid="TransactionRecipient" borderPosition="bottom" key={key} {...properties}>
-					<div className="flex-col space-y-4 w-full">
+					<div className="w-full flex-col space-y-4">
 						<RowWrapper>
 							<RowLabel>
 								<div className="whitespace-nowrap">{`#${key + 1}`}</div>
 							</RowLabel>
-							<div className="flex items-center space-x-2 w-full text-right">
-								<div className="overflow-auto flex-1 w-0 text-right md:text-left">
+							<div className="flex w-full items-center space-x-2 text-right">
+								<div className="w-0 flex-1 overflow-auto text-right md:text-left">
 									<Address
 										address={recipient.address}
 										walletName={recipient.alias}

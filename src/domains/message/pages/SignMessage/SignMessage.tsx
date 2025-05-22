@@ -259,7 +259,7 @@ export const SignMessage: React.VFC = () => {
 										buttonClassName="bg-theme-primary-600 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
 									>
 										<div
-											className="inline-flex relative items-center space-x-3 rounded"
+											className="relative inline-flex items-center space-x-3 rounded"
 											data-testid="SignMessage__back-to-wallet-button"
 										>
 											<Icon name="Copy" />

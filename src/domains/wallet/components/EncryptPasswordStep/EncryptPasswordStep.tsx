@@ -83,7 +83,7 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 				<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.WARNING" />
 			</Alert>
 
-			<div className="pt-4 space-y-4">
+			<div className="space-y-4 pt-4">
 				{renderSecondInputField()}
 
 				<PasswordValidation

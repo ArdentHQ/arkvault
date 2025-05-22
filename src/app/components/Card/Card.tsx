@@ -48,7 +48,7 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 			tabIndex={onClick ? undefined : -1}
 		>
 			{children}
-			<div className="flex absolute -top-1 -right-1 items-center m-4 space-x-1">
+			<div className="absolute -top-1 -right-1 m-4 flex items-center space-x-1">
 				{addonIcons}
 				{actions && actions.length > 0 && (
 					<Dropdown
@@ -56,10 +56,10 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 						options={actions}
 						onSelect={onSelect}
 						toggleContent={
-							<div className="flex overflow-hidden justify-center w-4">
+							<div className="flex w-4 justify-center overflow-hidden">
 								<Icon
 									name="EllipsisVertical"
-									className="p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 hover:text-theme-primary-400"
+									className="text-theme-primary-300 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 hover:text-theme-primary-400 cursor-pointer p-1 transition-colors duration-200"
 									size="md"
 								/>
 							</div>

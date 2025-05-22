@@ -17,14 +17,14 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 	const { t } = useTranslation();
 
 	return (
-		<div className="p-4 -mx-4 text-center rounded-b-lg sm:p-6 sm:-mx-6 sm:text-left bg-theme-secondary-100 dark:bg-theme-dark-950">
-			<span className="text-base font-semibold sm:text-lg text-theme-secondary-900 leading-[21px] dark:text-theme-dark-50">
+		<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 -mx-4 rounded-b-lg p-4 text-center sm:-mx-6 sm:p-6 sm:text-left">
+			<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-[21px] font-semibold sm:text-lg">
 				{title}
 			</span>
 
-			<p className="mt-2 mb-3 text-sm text-theme-secondary-700 dark:text-theme-dark-200">{description}</p>
+			<p className="text-theme-secondary-700 dark:text-theme-dark-200 mt-2 mb-3 text-sm">{description}</p>
 
-			<div className="flex justify-center items-center space-x-1 sm:justify-start">
+			<div className="flex items-center justify-center space-x-1 sm:justify-start">
 				<Clipboard data={copyData} data-testid="CopyOrDownload__copy" variant="icon">
 					<div
 						className={cn("flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold", {

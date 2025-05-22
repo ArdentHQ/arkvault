@@ -73,10 +73,10 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 					<div className="space-y-3 sm:space-y-0">
-						<div className="flex gap-4 justify-between items-center w-full sm:justify-start">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-[162px]">{t("COMMON.CATEGORY")}</DetailTitle>
-							<div className="flex items-center px-1 rounded dark:bg-transparent dark:border bg-theme-secondary-200 py-[3px] dark:border-theme-secondary-800">
-								<span className="font-semibold text-theme-secondary-700 text-[12px] leading-[15px] dark:text-theme-secondary-500">
+							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
+								<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-[12px] leading-[15px] font-semibold">
 									{t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION")}
 								</span>
 							</div>
@@ -85,15 +85,15 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 						<div className="hidden sm:block">
 							<Divider
 								dashed
-								className="h-px border-theme-secondary-300 dark:border-theme-secondary-800"
+								className="border-theme-secondary-300 dark:border-theme-secondary-800 h-px"
 							/>
 						</div>
 
-						<div className="flex gap-4 justify-between items-center w-full sm:justify-start">
+						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-[162px]">
 								{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
 							</DetailTitle>
-							<div className="text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-900 truncate leading-[17px] dark:text-theme-secondary-200">
+							<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 								{senderWallet && senderWallet.validatorPublicKey()}
 							</div>
 						</div>

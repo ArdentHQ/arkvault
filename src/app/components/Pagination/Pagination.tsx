@@ -45,7 +45,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = 1))}
 					disabled={!showPrevious}
-					className="py-1.5 px-4"
+					className="px-4 py-1.5"
 				>
 					<span>{t("COMMON.FIRST")}</span>
 				</Button>
@@ -55,13 +55,13 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage -= 1))}
 					disabled={!showPrevious}
-					className="p-2.5 w-8 h-8"
+					className="h-8 w-8 p-2.5"
 				>
 					<Icon name="ChevronLeftSmall" size="sm" />
 				</Button>
 			</SmAndAbove>
 
-			<div className="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800">
+			<div className="bg-theme-primary-100 dark:bg-theme-secondary-800 flex rounded">
 				<PaginationSearch
 					onClick={() => setButtonsDisabled(true)}
 					onSelectPage={handleSelectPage}
@@ -80,7 +80,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage += 1))}
 					disabled={!showNext}
-					className="p-2.5 w-8 h-8"
+					className="h-8 w-8 p-2.5"
 				>
 					<Icon name="ChevronRightSmall" size="sm" />
 				</Button>
@@ -90,14 +90,14 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = totalPages))}
 					disabled={!showNext}
-					className="py-1.5 px-4"
+					className="px-4 py-1.5"
 				>
 					<span>{t("COMMON.LAST")}</span>
 				</Button>
 			</SmAndAbove>
 
 			<Xs>
-				<div className="flex mt-2 space-x-2">
+				<div className="mt-2 flex space-x-2">
 					<Button
 						data-testid="Pagination__first"
 						variant="secondary"

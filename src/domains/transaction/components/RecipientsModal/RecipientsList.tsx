@@ -16,8 +16,8 @@ export const RecipientsList = ({ recipients, ticker }: RecipientsProperties): JS
 					size="md"
 					dataTestId="RecipientsListItem"
 					titleSlot={
-						<div className="flex justify-between items-center w-full">
-							<div className="text-sm font-semibold whitespace-nowrap text-theme-secondary-700 leading-[17px] dark:text-theme-secondary-500">
+						<div className="flex w-full items-center justify-between">
+							<div className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] font-semibold whitespace-nowrap">
 								{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 							</div>
 						</div>
@@ -42,7 +42,7 @@ export const RecipientsList = ({ recipients, ticker }: RecipientsProperties): JS
 									<Amount
 										ticker={ticker}
 										value={recipient.amount as number}
-										className="text-sm font-semibold text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
+										className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
 									/>
 								}
 							/>

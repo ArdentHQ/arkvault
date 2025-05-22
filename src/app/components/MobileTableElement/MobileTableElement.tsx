@@ -30,7 +30,7 @@ export const MobileTableElementRow = ({
 	...properties
 }: MobileTableElementRowProperties) => (
 	<div className={twMerge("grid grid-cols-1 gap-2", className)} {...properties}>
-		<div className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200">{title}</div>
+		<div className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold">{title}</div>
 
 		<div className={bodyClassName}>{children}</div>
 	</div>
@@ -72,7 +72,7 @@ export const MobileTableElement = ({
 			})}
 			onClick={onHeaderClick}
 		>
-			<span className="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text">
+			<span className="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold">
 				{title}
 			</span>
 

@@ -19,7 +19,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 		<>
 			{subtitle && (
 				<div
-					className="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+					className="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
 					data-testid="header__subtitle"
 				>
 					{subtitle}
@@ -46,7 +46,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 	return (
 		<div className={cn("bg-theme-background flex items-end justify-between", className)}>
 			<div className="space-y-2">
-				<div className="flex gap-3 items-center">
+				<div className="flex items-center gap-3">
 					{titleIcon ?? undefined}
 					{isPageHeader ? (
 						<div className="flex flex-col gap-2">
@@ -82,11 +82,11 @@ export const PageHeader = ({
 	}
 
 	return (
-		<section className="flex justify-between items-center py-6 px-8 w-full dark:bg-black bg-theme-secondary-100 h-13">
+		<section className="bg-theme-secondary-100 flex h-13 w-full items-center justify-between px-8 py-6 dark:bg-black">
 			<div className="flex flex-col gap-2">
 				<h1 className="mb-0 text-lg font-semibold">{title}</h1>
 				{subtitle && (
-					<div className="flex items-center text-sm leading-5 text-theme-secondary-text">{subtitle}</div>
+					<div className="text-theme-secondary-text flex items-center text-sm leading-5">{subtitle}</div>
 				)}
 			</div>
 			{extra}

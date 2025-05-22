@@ -27,8 +27,8 @@ export const ListDividedItem: React.VFC<ListDividedItemProperties> = ({
 				})}
 				data-testid="list-divided-item__inner-wrapper"
 			>
-				<div className="flex flex-col space-y-2 w-full">
-					<div className="flex justify-between items-center space-x-5">
+				<div className="flex w-full flex-col space-y-2">
+					<div className="flex items-center justify-between space-x-5">
 						<span
 							className={labelClass || "text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"}
 							data-testid="list-divided-item__label"

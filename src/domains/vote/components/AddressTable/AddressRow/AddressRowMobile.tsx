@@ -27,7 +27,7 @@ export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 	}
 
 	return (
-		<div className="flex items-center w-full">
+		<div className="flex w-full items-center">
 			<TruncateMiddle text={name} maxChars={is2Xs ? 50 : 19} />
 		</div>
 	);
@@ -79,7 +79,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
 			return (
-				<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
+				<span className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold">
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
 			);
@@ -89,7 +89,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 			return (
 				<span
 					data-testid="AddressRowMobile--nowallet"
-					className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+					className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
 				>
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
@@ -101,7 +101,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 			<>
 				{votes[0].wallet && (
 					<div className="flex items-center">
-						<div className="flex overflow-hidden flex-1 justify-end">
+						<div className="flex flex-1 justify-end overflow-hidden">
 							<Link
 								isExternal
 								to={votes[0].wallet.explorerLink()}
@@ -122,7 +122,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 				<MobileTableElement
 					title={alias}
 					titleExtra={
-						<div className="flex gap-3 items-center">
+						<div className="flex items-center gap-3">
 							<WalletStatus
 								dataTestId={`AddressRowMobile__wallet-status-${index}`}
 								className="sm:hidden"
@@ -131,7 +131,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							/>
 
 							{votes[0]?.wallet && (
-								<span className="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800" />
+								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden" />
 							)}
 
 							<Button
@@ -142,7 +142,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 									onSelect?.(wallet.address());
 								}}
 								data-testid={`AddressRowMobile__select-${index}`}
-								className="p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+								className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
 							>
 								{t("COMMON.VOTE")}
 							</Button>
@@ -166,7 +166,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							wallet={votes[0]?.wallet}
 							activeValidators={wallet.network().validatorCount()}
 							fallback={
-								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
+								<span className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold">
 									{t("COMMON.NOT_AVAILABLE")}
 								</span>
 							}

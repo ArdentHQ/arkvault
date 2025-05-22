@@ -71,8 +71,8 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const convertedGasPrice = useMemo(() => convert(+gasPrice), [convert, gasPrice]);
 
 	return (
-		<div className="overflow-hidden -mx-4 rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-700">
-			<div className="p-4 space-y-4">
+		<div className="border-theme-secondary-300 dark:border-theme-secondary-700 -mx-4 overflow-hidden rounded-xl border">
+			<div className="space-y-4 p-4">
 				<FormField name="gasPrice">
 					<FormLabel
 						id="fee"
@@ -137,7 +137,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					/>
 				</FormField>
 			</div>
-			<div className="flex flex-col py-3 px-4 space-y-2 text-xs font-semibold sm:flex-row sm:justify-between sm:items-center sm:py-2 sm:space-y-0 bg-theme-secondary-200 text-theme-secondary-700 leading-[15px] dark:bg-theme-dark-700 dark:text-theme-dark-200">
+			<div className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 flex flex-col space-y-2 px-4 py-3 text-xs leading-[15px] font-semibold sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2">
 				<div>
 					<span>Max Fee </span>
 					<Amount ticker={network.ticker()} value={gasFee} />
