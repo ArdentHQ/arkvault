@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@/app/lib/sdk";
+import { DTO } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
@@ -35,7 +35,7 @@ export const TransactionDetails = ({
 		}
 
 		const refreshTransaction = async () => {
-			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.hash());
+			const confirmedTransaction = await transactionWallet.client().transaction(transaction.hash());
 			setTransaction(confirmedTransaction);
 		};
 
@@ -68,7 +68,7 @@ export const TransactionDetails = ({
 					{transaction.blockHash() && (
 						<Link
 							isExternal
-							to={transactionWallet.coin().link().block(transaction.blockHash())}
+							to={transactionWallet.link().block(transaction.blockHash())}
 							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
 						>
 							{blockHeight}

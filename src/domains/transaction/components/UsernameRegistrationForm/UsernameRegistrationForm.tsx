@@ -60,7 +60,7 @@ export const signUsernameRegistration = async ({ env, form, profile, signatory }
 	const { network, senderAddress, username, gasLimit, gasPrice } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
-	httpClient.forgetWalletCache(env, senderWallet);
+	httpClient.forgetWalletCache(senderWallet);
 
 	const transactionId = await senderWallet.transaction().signUsernameRegistration({
 		data: {

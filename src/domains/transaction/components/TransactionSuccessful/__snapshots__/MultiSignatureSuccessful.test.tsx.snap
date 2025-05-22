@@ -423,7 +423,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -620,7 +620,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="ring-focus relative focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -1284,7 +1284,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1481,7 +1481,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="ring-focus relative focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -2148,7 +2148,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -2353,7 +2353,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                   </div>
                 </div>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -2933,7 +2933,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -3130,7 +3130,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="ring-focus relative focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -3797,7 +3797,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                   class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                 >
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -4002,7 +4002,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                   </div>
                 </div>
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -4582,7 +4582,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -4779,7 +4779,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                 </div>
               </div>
               <button
-                class="ring-focus relative focus:outline-none"
+                class="ring-focus relative focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -5443,7 +5443,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -6124,7 +6124,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
               >
                 <button
-                  class="ring-focus relative focus:outline-none"
+                  class="ring-focus relative focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"

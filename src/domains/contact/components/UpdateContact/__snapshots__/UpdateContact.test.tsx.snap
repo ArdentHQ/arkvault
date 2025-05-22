@@ -122,6 +122,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                         data-testid="contact-form__address-input"
                         name="address"
+                        profile="[object Object]"
                         type="text"
                         value=""
                       />
@@ -290,6 +291,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                         data-testid="contact-form__address-input"
                         name="address"
+                        profile="[object Object]"
                         type="text"
                         value=""
                       />
@@ -503,6 +505,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                         class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none text-sm! sm:text-base!"
                         data-testid="contact-form__address-input"
                         name="address"
+                        profile="[object Object]"
                         type="text"
                         value=""
                       />

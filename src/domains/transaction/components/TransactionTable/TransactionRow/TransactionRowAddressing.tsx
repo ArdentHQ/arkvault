@@ -2,7 +2,7 @@ import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useTheme, useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
-import { DTO } from "@/app/lib/sdk";
+import { DTO } from "@/app/lib/mainsail";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
@@ -95,7 +95,7 @@ const ContractAddressing = ({
 
 			<div className="flex w-full items-center justify-between space-x-4">
 				<Link
-					to={transaction.wallet().coin().link().wallet(address)}
+					to={transaction.wallet().link().wallet(address)}
 					isExternal
 					showExternalIcon={false}
 					className="text-sm font-semibold whitespace-nowrap"
@@ -238,7 +238,7 @@ export const TransactionRowAddressing = ({
 					<TransactionRowLabel direction="sent" style="return" />
 					<div className="flex w-full items-center justify-between space-x-4">
 						<Link
-							to={transaction.wallet().coin().link().wallet(recipientAddress)}
+							to={transaction.wallet().link().wallet(recipientAddress)}
 							isExternal
 							showExternalIcon={false}
 							className="text-sm font-semibold whitespace-nowrap"

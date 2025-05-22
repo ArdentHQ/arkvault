@@ -84,13 +84,9 @@ export class ContactAddressRepository implements IContactAddressRepository {
 	}
 
 	/** {@inheritDoc IContactAddressRepository.exists} */
-	public exists({ address, coin }: IContactAddressInput): boolean {
-		const value = [address, coin].join("");
-
+	public exists({ address }: IContactAddressInput): boolean {
 		for (const item of this.values()) {
-			const compareValue = [item.address(), item.coin()].join("");
-
-			if (value === compareValue) {
+			if (address === item.address()) {
 				return true;
 			}
 		}

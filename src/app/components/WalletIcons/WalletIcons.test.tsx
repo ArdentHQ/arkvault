@@ -97,4 +97,16 @@ describe("WalletIcons", () => {
 		const { asFragment } = render(<WalletIconsSkeleton />);
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render the username icon", async () => {
+		vi.spyOn(wallet, "username").mockReturnValue("test");
+
+		render(<WalletIcons wallet={wallet} />);
+
+		expect(screen.getByTestId("WalletIcon__Username")).toBeInTheDocument();
+
+		await userEvent.hover(screen.getByTestId("WalletIcon__Username"));
+
+		expect(screen.getByRole("tooltip")).toHaveTextContent("Username: test");
+	});
 });

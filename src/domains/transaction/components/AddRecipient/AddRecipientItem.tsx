@@ -8,6 +8,7 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { Amount } from "@/app/components/Amount";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { MultiEntryItem, InfoDetail } from "@/app/components/MultiEntryItem/MultiEntryItem";
+import { IProfile } from "@/app/lib/profiles/contracts";
 
 export const AddRecipientItem: React.FC<{
 	index: number;
@@ -15,10 +16,19 @@ export const AddRecipientItem: React.FC<{
 	ticker: string;
 	exchangeTicker: string;
 	showExchangeAmount: boolean;
+	profile: IProfile;
 	onDelete: (index: number) => void;
-}> = ({ recipient: { address, alias, amount }, index, onDelete, ticker, exchangeTicker, showExchangeAmount }) => {
+}> = ({
+	recipient: { address, alias, amount },
+	index,
+	onDelete,
+	ticker,
+	exchangeTicker,
+	showExchangeAmount,
+	profile,
+}) => {
 	const { t } = useTranslation();
-	const { convert } = useExchangeRate({ exchangeTicker, ticker });
+	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
 	return (
 		<MultiEntryItem

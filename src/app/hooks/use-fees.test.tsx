@@ -1,6 +1,6 @@
 import { env, getMainsailProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
 
-import { Mainsail } from "@/app/lib/mainsail";
+import * as Mainsail from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 import { EnvironmentProvider } from "@/app/contexts";
 import React from "react";
@@ -16,7 +16,7 @@ describe("useFees", () => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.wallets().syncByProfile(profile);
-		await env.validators().syncAll(profile);
+		await profile.validators().syncAll(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {

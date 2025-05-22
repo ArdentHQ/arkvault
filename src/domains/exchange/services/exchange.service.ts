@@ -7,8 +7,8 @@ import {
 } from "@/domains/exchange/exchange.contracts";
 
 import { Contracts } from "@/app/lib/profiles";
-import { HttpClient } from "@/app/services/HttpClient";
 import { upperFirst } from "@/app/lib/helpers";
+import { Http } from "@/app/lib/mainsail";
 
 // export const exchangeHost = "http://exchange-server.test/api";
 export const exchangeHost = "https://exchanges.arkvault.io/api";
@@ -34,7 +34,7 @@ export class ExchangeService {
 	 * @type {HttpClient}
 	 * @memberof ExchangeService
 	 */
-	readonly #httpClient: HttpClient;
+	readonly #httpClient: Http.HttpClient;
 
 	/**
 	 * The host of the Exchange API.
@@ -47,10 +47,10 @@ export class ExchangeService {
 	/**
 	 * Creates an instance of ExchangeService.
 	 *
-	 * @param {HttpClient} httpClient
+	 * @param {Http.HttpClient} httpClient
 	 * @memberof ExchangeService
 	 */
-	public constructor(provider: string, httpClient: HttpClient) {
+	public constructor(provider: string, httpClient: Http.HttpClient) {
 		this.#provider = provider;
 		this.#httpClient = httpClient;
 	}

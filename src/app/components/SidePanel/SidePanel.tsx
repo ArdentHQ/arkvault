@@ -14,27 +14,38 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
+import { SidePanelStyledStep } from "./SidePanelStyledStep";
 
 interface SidePanelProps {
 	children: React.ReactNode;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	header?: React.ReactNode | string;
+	title: string;
+	titleIcon?: React.ReactNode;
+	subtitle?: string;
 	dataTestId?: string;
 	className?: string;
 	scrollRef?: React.RefObject<HTMLDivElement>;
 	onMountChange?: (mounted: boolean) => void;
+	hasSteps?: boolean;
+	totalSteps?: number;
+	activeStep?: number;
 }
 
 export const SidePanel = ({
 	children,
 	open,
 	onOpenChange,
-	header,
+	title,
+	titleIcon,
+	subtitle,
 	dataTestId,
 	className,
 	scrollRef,
 	onMountChange,
+	hasSteps = false,
+	totalSteps = 0,
+	activeStep = 0,
 }: SidePanelProps): JSX.Element => {
 	const { refs, context } = useFloating({
 		onOpenChange,
@@ -93,30 +104,67 @@ export const SidePanel = ({
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
-											className="custom-scroll bg-theme-background text-theme-text h-dvh w-full overflow-y-scroll p-4 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] sm:p-6 md:p-8"
+											className="navy-scroll h-dvh w-full overflow-y-scroll bg-theme-background pt-14 text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
 											ref={scrollRef}
 										>
-											<div className="relative mb-4 flex items-start justify-between">
-												{typeof header === "string" ? (
-													<h2 className="mb-0 text-lg font-bold md:pt-0 md:text-2xl md:leading-[29px]">
-														{header}
-													</h2>
-												) : (
-													<>{header}</>
-												)}
-												<div className="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 h-8 w-8 rounded transition-all duration-100 ease-linear hover:text-white dark:hover:text-white">
-													<Button
-														data-testid="SidePanel__close-button"
-														variant="transparent"
-														size="icon"
-														onClick={() => onOpenChange(false)}
-														className="h-8 w-8"
-													>
-														<Icon name="Cross" />
-													</Button>
+											<div className="relative">
+												<div className="fixed left-0 right-0 top-0 z-10 w-full bg-theme-background">
+													<div className="relative flex flex-col">
+														<div
+															className={cn(
+																"flex items-start justify-between px-6 py-4",
+																{
+																	"border-b border-b-theme-secondary-300 dark:border-b-theme-secondary-800":
+																		!hasSteps,
+																},
+															)}
+														>
+															<div className="flex items-center gap-2">
+																{titleIcon && (
+																	<div className="shrink-0 text-theme-primary-600 dark:text-theme-navy-500">
+																		{titleIcon}
+																	</div>
+																)}
+																<h2 className="mb-0 text-lg font-semibold leading-[21px] md:pt-0">
+																	{title}
+																</h2>
+															</div>
+
+															<div className="h-6 w-6 rounded bg-transparent text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white dark:bg-transparent dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white">
+																<Button
+																	data-testid="SidePanel__close-button"
+																	variant="transparent"
+																	size="md"
+																	onClick={() => onOpenChange(false)}
+																	className="h-6 w-6 p-0"
+																>
+																	<Icon name="Cross" />
+																</Button>
+															</div>
+														</div>
+
+														{hasSteps && (
+															<ul className="flex w-full flex-row">
+																{Array.from({ length: totalSteps }).map((_, index) => (
+																	<SidePanelStyledStep
+																		key={index}
+																		isActive={index < activeStep}
+																	/>
+																))}
+															</ul>
+														)}
+													</div>
 												</div>
 											</div>
-											<div>{children}</div>
+
+											<div className="flex flex-col gap-4 px-6 py-4">
+												{subtitle && (
+													<div className="text-sm font-normal leading-5 text-theme-secondary-text md:text-base">
+														{subtitle}
+													</div>
+												)}
+												<div className="flex flex-col">{children}</div>
+											</div>
 										</div>
 									</div>
 								</div>

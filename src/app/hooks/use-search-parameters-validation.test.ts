@@ -55,7 +55,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "COIN_NOT_SUPPORTED", value: "CUSTOM" },
+			error: { type: "COIN_NOT_SUPPORTED", value: "custom" },
 		});
 	});
 
@@ -286,7 +286,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate vote", async () => {
 		const mockFindDelegateByName = vi
-			.spyOn(env.validators(), "findByUsername")
+			.spyOn(profile.validators(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams(
@@ -302,7 +302,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should find delegate by public key", async () => {
 		const mockFindDelegateByPublicKey = vi
-			.spyOn(env.validators(), "findByPublicKey")
+			.spyOn(profile.validators(), "findByPublicKey")
 			.mockReturnValue(profile.wallets().first());
 
 		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet&method=vote&publicKey=1");
@@ -390,7 +390,7 @@ describe("useSearchParametersValidation", () => {
 			username: "testi",
 		});
 		const mockFindDelegateByPublicKey = vi
-			.spyOn(env.validators(), "findByPublicKey")
+			.spyOn(profile.validators(), "findByPublicKey")
 			.mockReturnValue(validatorWallet);
 
 		const resignedMock = vi.spyOn(validatorWallet, "isResignedValidator").mockReturnValue(true);

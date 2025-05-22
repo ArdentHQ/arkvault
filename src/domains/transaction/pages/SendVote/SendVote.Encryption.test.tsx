@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 
 import { FormProvider, useForm } from "react-hook-form";
@@ -16,51 +15,28 @@ import {
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
-import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
-import { DateTime } from "@/app/lib/intl";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { renderHook } from "@testing-library/react";
-import unvoteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unvote.json";
+import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
+import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import userEvent from "@testing-library/user-event";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import voteFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/vote.json";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 const fixtureProfileId = getDefaultProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => voteFixture.data.amount / 1e8,
-		blockId: () => "1",
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
-		fee: () => voteFixture.data.fee / 1e8,
-		id: () => voteFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isSent: () => true,
+		...signedTransactionMock,
 		isTransfer: () => false,
-		isUnvote: () => false,
 		isVote: () => true,
-		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(1),
-		recipient: () => voteFixture.data.recipient,
-		sender: () => voteFixture.data.sender,
-		timestamp: () => DateTime.make(),
 		type: () => "vote",
-		usesMultiSignature: () => false,
 		wallet: () => wallet,
 	});
 
@@ -72,7 +48,7 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 const reviewStepID = "SendVote__review-step";
-const formStepID = "SendVote__form-step";
+const authenticationStepID = "AuthenticationStep";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -98,17 +74,17 @@ describe("SendVote", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		wallet = profile.wallets().findById("ee02b13f-8dbf-4191-a9dc-08d2ab72ec28");
 		await wallet.synchroniser().identity();
 
-		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
 
 		await syncValidators(profile);
 		await syncFees(profile);
 
 		for (const index of [0, 1]) {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
-			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), validatorData[index].address);
+			profile.validators().findByAddress(wallet.networkId(), validatorData[index].address);
 		}
 
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
@@ -117,12 +93,12 @@ describe("SendVote", () => {
 	beforeEach(() => {
 		server.use(
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
-				voteFixture,
+				"https://dwallets-evm.mainsailhq.com/api/transactions/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0a",
+				transactionFixture,
 			),
 			requestMock(
-				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
-				unvoteFixture,
+				"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
+				transactionFixture,
 			),
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
@@ -146,9 +122,9 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const fromMnemonicMock = vi
-			.spyOn(wallet.coin().address(), "fromMnemonic")
-			.mockResolvedValue({ address: wallet.address() });
+		const fromMnemonicMock = vi.spyOn(AddressService.prototype, "fromMnemonic").mockReturnValue({
+			address: wallet.address(),
+		});
 
 		const votes: VoteValidatorProperties[] = [
 			{
@@ -159,7 +135,6 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		// eslint-disable-next-line sonarjs/no-identical-functions
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
@@ -182,26 +157,25 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(validatorData[0].username));
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+
+		await waitFor(() => {
+			expect(screen.getAllByRole("radio")[1]).toBeChecked();
+		});
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		await userEvent.click(continueButton());
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		await userEvent.click(continueButton());
-
 		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
+			accepted: [transactionFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});

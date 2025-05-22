@@ -8,7 +8,7 @@ import { assertExchangeService, isUnavailablePairError } from "@/domains/exchang
 
 import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { Spinner } from "@/app/components/Spinner";
 import cn from "classnames";

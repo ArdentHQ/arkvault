@@ -1,6 +1,6 @@
-import { Contracts } from "@/app/lib/sdk";
 import { isUnit } from "@/utils/test-helpers";
 import { LedgerTransportFactory } from "@/app/contexts/Ledger";
+import { Contracts } from "@/app/lib/mainsail";
 
 export const supportedTransport = async () => await new LedgerTransportFactory().supportedTransport();
 

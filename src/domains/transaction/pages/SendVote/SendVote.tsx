@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -56,7 +56,6 @@ export const SendVote = () => {
 	const wallet = useActiveWalletWhenNeeded(false);
 
 	const { votes, unvotes, voteValidators, unvoteValidators, setUnvotes, isLoading } = useValidatorsFromURL({
-		env,
 		network: activeNetwork,
 		profile: activeProfile,
 	});
@@ -267,8 +266,6 @@ export const SendVote = () => {
 			senderAddress,
 			secondMnemonic,
 			encryptionPassword,
-			wif,
-			privateKey,
 			secret,
 			secondSecret,
 			gasPrice,
@@ -283,11 +280,9 @@ export const SendVote = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
-				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
-				wif,
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {

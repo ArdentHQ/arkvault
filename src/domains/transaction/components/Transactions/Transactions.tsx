@@ -280,7 +280,10 @@ export const Transactions = memo(function Transactions({
 								/>
 							</div>
 						) : (
-							<div className="text-theme-secondary-text dark:border-theme-secondary-800 mt-3 mb-1 px-6 text-center leading-5 md:px-6">
+							<div
+								data-testid="Transactions__no-filters-selected"
+								className="mb-1 mt-3 px-6 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 md:px-6"
+							>
 								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 							</div>
 						)}

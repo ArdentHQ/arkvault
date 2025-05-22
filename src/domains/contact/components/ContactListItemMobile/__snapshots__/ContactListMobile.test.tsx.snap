@@ -14,10 +14,10 @@ exports[`ContactListMobile > should render 1`] = `
         data-testid="AccordionHeader"
       >
         <div
-          class="flex flex-grow flex-row items-center"
+          class="flex grow flex-row items-center"
         >
           <div
-            class="flex w-0 flex-grow items-center justify-between space-x-3"
+            class="flex w-0 grow items-center justify-between space-x-3"
           >
             <span
               class="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -79,7 +79,7 @@ exports[`ContactListMobile > should render 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
+          class="ml-4 flex shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
         >
           <div
             class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
@@ -141,7 +141,7 @@ exports[`ContactListMobile > should render 1`] = `
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
                   </span>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"

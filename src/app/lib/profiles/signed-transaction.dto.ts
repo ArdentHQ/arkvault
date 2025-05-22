@@ -1,24 +1,23 @@
 /* istanbul ignore file */
 
-import { Contracts, DTO } from "@/app/lib/sdk";
-import { IExchangeRateService, IReadWriteWallet } from "./contracts.js";
+import { DTO } from "@/app/lib/mainsail";
+import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
-import { Identifiers } from "./container.models.js";
-import { container } from "./container.js";
+import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
 
 export class ExtendedSignedTransactionData {
-	readonly #data: Contracts.SignedTransactionData;
+	readonly #data: SignedTransactionData;
 	readonly #wallet: IReadWriteWallet;
 
-	public constructor(data: Contracts.SignedTransactionData, wallet: IReadWriteWallet) {
+	public constructor(data: SignedTransactionData, wallet: IReadWriteWallet) {
 		this.#data = data;
 		this.#wallet = wallet;
 	}
 
-	public data(): Contracts.SignedTransactionData {
+	public data(): SignedTransactionData {
 		return this.#data;
 	}
 
@@ -128,7 +127,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public isMultiSignatureRegistration(): boolean {
-		return this.#data.isMultiSignatureRegistration();
+		return false;
 	}
 
 	public isMultiPayment(): boolean {
@@ -143,10 +142,6 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isValidatorResignation();
 	}
 
-	public usesMultiSignature(): boolean {
-		return this.#data.usesMultiSignature();
-	}
-
 	public total(): number {
 		if (this.isReturn()) {
 			return this.value() - this.fee();
@@ -155,7 +150,7 @@ export class ExtendedSignedTransactionData {
 		// We want to return amount + fee for the transactions using multi-signature
 		// because the total should be calculated from the sender perspective.
 		// This is specific for signed - unconfirmed transactions only.
-		if (this.isSent() || this.usesMultiSignature()) {
+		if (this.isSent()) {
 			return this.value() + this.fee();
 		}
 
@@ -228,7 +223,7 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public explorerLink(): string {
-		return this.#wallet.coin().link().transaction(this.hash());
+		return this.#wallet.link().transaction(this.hash());
 	}
 
 	public explorerLinkForBlock(): string | undefined {
@@ -258,8 +253,8 @@ export class ExtendedSignedTransactionData {
 			return 0;
 		}
 
-		return container
-			.get<IExchangeRateService>(Identifiers.ExchangeRateService)
+		return this.wallet()
+			.exchangeRates()
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
 	}
 }

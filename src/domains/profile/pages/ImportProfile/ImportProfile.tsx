@@ -37,7 +37,7 @@ export const ImportProfile = () => {
 	const handleProfileSave = async (submittedProfile) => {
 		const availableNetworks = submittedProfile.availableNetworks();
 		for (const network of availableNetworks) {
-			const selectedAddresses = SelectedAddresses({ activeNetwork: network, profile: submittedProfile });
+			const selectedAddresses = SelectedAddresses({ profile: submittedProfile });
 			// If imported profile doesn't have selected addresses, mark them all as selected.
 			if (!selectedAddresses.hasSelected()) {
 				await selectedAddresses.set(

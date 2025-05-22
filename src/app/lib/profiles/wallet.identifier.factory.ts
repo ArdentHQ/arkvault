@@ -1,4 +1,4 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet } from "./wallet.contract.js";
 
@@ -21,10 +21,6 @@ export class WalletIdentifierFactory {
 		}
 
 		if (wallet.actsWithMnemonicWithEncryption()) {
-			return this.#addressOrPublicKey(wallet);
-		}
-
-		if (wallet.actsWithPrivateKey()) {
 			return this.#addressOrPublicKey(wallet);
 		}
 

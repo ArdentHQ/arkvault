@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -160,7 +160,7 @@ describe("AddRecipient", () => {
 
 	it("should set amount", async () => {
 		const onChange = vi.fn();
-		const findDelegateSpy = vi.spyOn(env, "usernames").mockImplementation(
+		const findDelegateSpy = vi.spyOn(profile, "usernames").mockImplementation(
 			() =>
 				({
 					username: () => "delegate username",

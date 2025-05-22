@@ -1,21 +1,23 @@
-import { Coins, Contracts } from "@/app/lib/sdk";
+import { Contracts } from "@/app/lib/mainsail";
 
 import { IDataRepository, IValidatorService, IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { IValidatorSyncer, ParallelValidatorSyncer, SerialValidatorSyncer } from "./validator-syncer.service.js";
 import { pqueueSettled } from "./helpers/queue.js";
 import { ReadOnlyWallet } from "./read-only-wallet.js";
+import { ClientService } from "@/app/lib/mainsail/client.service.js";
+import { LinkService } from "@/app/lib/mainsail/link.service.js";
 
 export class ValidatorService implements IValidatorService {
 	readonly #dataRepository: IDataRepository = new DataRepository();
 
 	/** {@inheritDoc IValidatorService.all} */
-	public all(coin: string, network: string): IReadOnlyWallet[] {
-		const result: any[] | undefined = this.#dataRepository.get(`${coin}.${network}.validators`);
+	public all(network: string): IReadOnlyWallet[] {
+		const result: any[] | undefined = this.#dataRepository.get(`${network}.validators`);
 
 		if (result === undefined) {
 			throw new Error(
-				`The validators for [${coin}.${network}] have not been synchronized yet. Please call [syncValidators] before using this method.`,
+				`The validators for [${network}] have not been synchronized yet. Please call [syncValidators] before using this method.`,
 			);
 		}
 
@@ -23,41 +25,37 @@ export class ValidatorService implements IValidatorService {
 	}
 
 	/** {@inheritDoc IValidatorService.findByAddress} */
-	public findByAddress(coin: string, network: string, address: string): IReadOnlyWallet {
-		return this.#findValidatorByAttribute(coin, network, "address", address);
+	public findByAddress(network: string, address: string): IReadOnlyWallet {
+		return this.#findValidatorByAttribute(network, "address", address);
 	}
 
 	/** {@inheritDoc IValidatorService.findByPublicKey} */
-	public findByPublicKey(coin: string, network: string, publicKey: string): IReadOnlyWallet {
-		return this.#findValidatorByAttribute(coin, network, "publicKey", publicKey);
+	public findByPublicKey(network: string, publicKey: string): IReadOnlyWallet {
+		return this.#findValidatorByAttribute(network, "publicKey", publicKey);
 	}
 
 	/** {@inheritDoc IValidatorService.findByUsername} */
-	public findByUsername(coin: string, network: string, username: string): IReadOnlyWallet {
-		return this.#findValidatorByAttribute(coin, network, "username", username);
+	public findByUsername(network: string, username: string): IReadOnlyWallet {
+		return this.#findValidatorByAttribute(network, "username", username);
 	}
 
 	/** {@inheritDoc IValidatorService.sync} */
-	public async sync(profile: IProfile, coin: string, network: string): Promise<void> {
-		const instance: Coins.Coin = profile.coins().set(coin, network);
-
-		if (!instance.hasBeenSynchronized()) {
-			await instance.__construct();
-		}
-
-		// TODO injection here based on coin config would be awesome
-		const syncer: IValidatorSyncer = instance.network().meta().fastValidatorSync
-			? new ParallelValidatorSyncer(instance.client())
-			: new SerialValidatorSyncer(instance.client());
+	public async sync(profile: IProfile, network: string): Promise<void> {
+		const clientService = new ClientService({ config: profile.activeNetwork().config(), profile });
+		const syncer: IValidatorSyncer = profile.activeNetwork().meta().fastValidatorSync
+			? new ParallelValidatorSyncer(clientService)
+			: new SerialValidatorSyncer(clientService);
 
 		const result: Contracts.WalletData[] = await syncer.sync();
 
 		this.#dataRepository.set(
-			`${coin}.${network}.validators`,
+			`${network}.validators`,
 			result.map((validator: Contracts.WalletData) => ({
 				...validator.toObject(),
-				explorerLink: instance.link().wallet(validator.address()),
-				governanceIdentifier: instance.network().validatorIdentifier(),
+				explorerLink: new LinkService({ config: profile.activeNetwork().config(), profile }).wallet(
+					validator.address(),
+				),
+				governanceIdentifier: profile.activeNetwork().validatorIdentifier(),
 			})),
 		);
 	}
@@ -66,10 +64,8 @@ export class ValidatorService implements IValidatorService {
 	public async syncAll(profile: IProfile): Promise<void> {
 		const promises: (() => Promise<void>)[] = [];
 
-		for (const [coin, networks] of profile.coins().entries()) {
-			for (const network of networks) {
-				promises.push(() => this.sync(profile, coin, network));
-			}
+		for (const network of profile.availableNetworks()) {
+			promises.push(() => this.sync(profile, network.id()));
 		}
 
 		await pqueueSettled(promises);
@@ -92,9 +88,9 @@ export class ValidatorService implements IValidatorService {
 			let validator: IReadOnlyWallet | undefined;
 
 			try {
-				validator = this.findByPublicKey(wallet.coinId(), wallet.networkId(), identifier);
+				validator = this.findByPublicKey(wallet.networkId(), identifier);
 			} catch {
-				validator = this.findByAddress(wallet.coinId(), wallet.networkId(), identifier);
+				validator = this.findByAddress(wallet.networkId(), identifier);
 			}
 
 			return new ReadOnlyWallet({
@@ -112,8 +108,8 @@ export class ValidatorService implements IValidatorService {
 		}
 	}
 
-	#findValidatorByAttribute(coin: string, network: string, key: string, value: string): IReadOnlyWallet {
-		const result = this.all(coin, network).find((validator) => validator[key]() === value);
+	#findValidatorByAttribute(network: string, key: string, value: string): IReadOnlyWallet {
+		const result = this.all(network).find((validator) => validator[key]() === value);
 
 		if (result === undefined) {
 			throw new Error(`No validator for ${key} with value ${value} could be found.`);

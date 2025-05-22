@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
+import { AddressService } from "@/app/lib/mainsail/address.service";
 import { SendTransfer } from "./SendTransfer";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
@@ -35,6 +35,8 @@ describe("SendTransfer MultiPayment", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
+		vi.spyOn(AddressService.prototype, "validate").mockReturnValue(true);
+
 		mockProfileNetworkReset = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -44,7 +46,6 @@ describe("SendTransfer MultiPayment", () => {
 
 	it("should select two recipients", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
-		const profileSetCoinMock = vi.spyOn(profile.coins(), "set").mockReturnValue(wallet.coin());
 
 		history.push(transferURL);
 
@@ -57,8 +58,6 @@ describe("SendTransfer MultiPayment", () => {
 				route: transferURL,
 			},
 		);
-
-		const coinValidateMock = vi.spyOn(wallet.coin().address(), "validate").mockResolvedValue(true);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -93,8 +92,5 @@ describe("SendTransfer MultiPayment", () => {
 		await userEvent.click(screen.getByTestId(recipientAddButton));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
-
-		coinValidateMock.mockRestore();
-		profileSetCoinMock.mockRestore();
 	});
 });

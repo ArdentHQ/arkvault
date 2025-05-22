@@ -1,14 +1,15 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import { Coins, Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { Trans, useTranslation } from "react-i18next";
-import { assertNetwork, assertProfile } from "@/utils/assertions";
+import { assertNetwork } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 
 import { ProfilePaths } from "@/router/paths";
 import React from "react";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@/app/lib/helpers";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 interface RequiredParameters {
 	network?: string;
@@ -53,31 +54,23 @@ enum SearchParametersError {
 }
 
 const defaultNetworks = {
-	"ark.devnet": {
-		displayName: "ARK Devnet",
-		nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-	},
-	"ark.mainnet": {
-		displayName: "ARK",
-		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
-	},
 	"mainsail.devnet": {
 		displayName: "Mainsail Devnet",
 		nethash: "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
 	},
 	"mainsail.mainnet": {
 		displayName: "Mainsail",
-		nethash: "d481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
 	},
 };
 
-const validatorFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
+const validatorFromSearchParameters = ({ profile, network, searchParameters }: PathProperties) => {
 	const validatorName = searchParameters.get("validator");
 	const validatorPublicKey = searchParameters.get("publicKey");
 
 	if (validatorName) {
 		try {
-			return env.validators().findByUsername(network.coin(), network.id(), validatorName);
+			return profile.validators().findByUsername(network.id(), validatorName);
 		} catch {
 			//
 		}
@@ -85,7 +78,7 @@ const validatorFromSearchParameters = ({ env, network, searchParameters }: PathP
 
 	if (validatorPublicKey) {
 		try {
-			return env.validators().findByPublicKey(network.coin(), network.id(), validatorPublicKey);
+			return profile.validators().findByPublicKey(network.id(), validatorPublicKey);
 		} catch {
 			//
 		}
@@ -122,10 +115,7 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
-	const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-	await coin.__construct();
-
-	await env.validators().sync(profile, network.coin(), network.id());
+	await profile.validators().sync(profile, network.id());
 
 	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
 
@@ -145,15 +135,11 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 	}
 };
 
-const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
+const validateTransfer = ({ parameters }: ValidateParameters) => {
 	const recipient = parameters.get("recipient");
 
 	if (recipient) {
-		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-
-		await coin.__construct();
-
-		const isValid = await coin.address().validate(recipient);
+		const isValid = new AddressService().validate(recipient);
 
 		if (!isValid) {
 			return { error: { type: SearchParametersError.InvalidAddress } };
@@ -161,7 +147,7 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 	}
 };
 
-const validateSign = async ({ parameters, profile, network }: ValidateParameters) => {
+const validateSign = ({ parameters }: ValidateParameters) => {
 	const message = parameters.get("message");
 	const address = parameters.get("address");
 
@@ -170,11 +156,7 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 	}
 
 	if (address) {
-		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-
-		await coin.__construct();
-
-		const isValid = await coin.address().validate(address);
+		const isValid = new AddressService().validate(address);
 
 		if (!isValid) {
 			return { error: { type: SearchParametersError.InvalidAddress } };
@@ -250,11 +232,8 @@ export const useSearchParametersValidation = () => {
 		parameters: URLSearchParams,
 		requiredParameters?: RequiredParameters,
 	) => {
-		assertProfile(profile);
-
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
-
-		const coin = parameters.get("coin")?.toUpperCase() || "Mainsail";
+		const coin = parameters.get("coin")?.toLowerCase() || "mainsail";
 		const method = parameters.get("method")?.toLowerCase() as string;
 		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
@@ -267,7 +246,7 @@ export const useSearchParametersValidation = () => {
 			return { error: { type: SearchParametersError.MissingMethod } };
 		}
 
-		if (requiredParameters?.coin && coin !== requiredParameters.coin) {
+		if (requiredParameters?.coin && coin !== requiredParameters.coin.toLowerCase()) {
 			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 

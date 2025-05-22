@@ -26,6 +26,7 @@ let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
+const secondMnemonic = MAINSAIL_MNEMONICS[1];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
@@ -52,23 +53,16 @@ describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
-		// wallet = profile.wallets().first();
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic,
-			network: "mainsail.devnet",
 		});
 
 		wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
-			mnemonic,
-			network: "mainsail.mainnet",
+			mnemonic: secondMnemonic,
 		});
 
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
-
-		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -125,7 +119,7 @@ describe("SignMessage", () => {
 				message: signMessage,
 				signatory: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
 				signature:
-					"345bc9b6111d11432032f6005391a98fb2d21b0358800406f3dcd05b5477730ab300c9f5707597903f1e9fa1b4f3db2a67f2c98fed09160cb4212080e82e21be",
+					"c7d8b526b6c0f3b17b045149424476802ff44d3636446c6394475fd2193f12a06f8b771387ab986c19c39ff42808be6b06cb871c6fbe17b50d1af194576ec9591b",
 			};
 
 			render(
@@ -180,17 +174,8 @@ describe("SignMessage", () => {
 		});
 
 		it("should sign message with secret", async () => {
-			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(false);
-			const walletHasSigningKey = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
-			const walletActsWithSecret = vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
-			const walletActsWithMnemonic = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-			const walletActsWithWithEncryption = vi
-				.spyOn(wallet, "actsWithMnemonicWithEncryption")
-				.mockReturnValue(false);
-			const fromSecret = vi.spyOn(wallet.coin().address(), "fromSecret").mockResolvedValue({
-				address: wallet.address(),
-				type: "bip39",
-			});
+			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "secret" });
+			profile.wallets().push(walletWithSecret);
 
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
@@ -198,7 +183,7 @@ describe("SignMessage", () => {
 				</Route>,
 				{
 					history,
-					route: walletUrl(wallet.id()),
+					route: walletUrl(walletWithSecret.id()),
 				},
 			);
 
@@ -209,7 +194,6 @@ describe("SignMessage", () => {
 			).toBeInTheDocument();
 
 			await userEvent.type(messageInput(), signMessage);
-
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
 			await waitFor(() => {
@@ -220,27 +204,11 @@ describe("SignMessage", () => {
 			await userEvent.click(continueButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
-
-			isLedgerMock.mockRestore();
-			walletHasSigningKey.mockRestore();
-			walletActsWithSecret.mockRestore();
-			walletActsWithMnemonic.mockRestore();
-			walletActsWithWithEncryption.mockRestore();
-			fromSecret.mockRestore();
 		});
 
 		it("should error and go back", async () => {
-			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(false);
-			const walletHasSigningKey = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
-			const walletActsWithSecret = vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
-			const walletActsWithMnemonic = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-			const walletActsWithWithEncryption = vi
-				.spyOn(wallet, "actsWithMnemonicWithEncryption")
-				.mockReturnValue(false);
-			const fromSecret = vi.spyOn(wallet.coin().address(), "fromSecret").mockResolvedValue({
-				address: wallet.address(),
-				type: "bip39",
-			});
+			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
+			profile.wallets().push(walletWithSecret);
 
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
@@ -248,7 +216,7 @@ describe("SignMessage", () => {
 				</Route>,
 				{
 					history,
-					route: walletUrl(wallet.id()),
+					route: walletUrl(walletWithSecret.id()),
 				},
 			);
 
@@ -259,32 +227,21 @@ describe("SignMessage", () => {
 			).toBeInTheDocument();
 
 			await userEvent.type(messageInput(), signMessage);
-
-			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
+			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "123");
 
 			await waitFor(() => {
-				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret");
+				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("123");
+			});
+
+			vi.spyOn(walletWithSecret.message(), "sign").mockImplementation(() => {
+				throw new Error("failed to sign");
 			});
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			vi.spyOn(wallet.message(), "sign").mockImplementation(() => {
-				throw new Error("error");
-			});
-
 			await userEvent.click(continueButton());
-
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE);
 
 			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			isLedgerMock.mockRestore();
-			walletHasSigningKey.mockRestore();
-			walletActsWithSecret.mockRestore();
-			walletActsWithMnemonic.mockRestore();
-			walletActsWithWithEncryption.mockRestore();
-			fromSecret.mockRestore();
 		});
 	});
 });

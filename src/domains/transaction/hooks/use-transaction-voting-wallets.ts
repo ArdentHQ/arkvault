@@ -1,5 +1,4 @@
-import { useEnvironmentContext } from "@/app/contexts";
-import { Networks, DTO } from "@/app/lib/sdk";
+import { Networks, DTO } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useEffect, useState } from "react";
 
@@ -13,27 +12,26 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 	const [isLoading, setIsLoading] = useState(false);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
 		const updateValidators = async () => {
 			setIsLoading(true);
 
 			try {
-				env.validators().all(network.coin(), network.id());
+				profile.validators().all(network.id());
 			} catch {
-				await env.validators().sync(profile, network.coin(), network.id());
+				await profile.validators().sync(profile, network.id());
 			}
 
 			try {
 				const votesList = transaction.votes().map((address: string) => ({
 					amount: transaction.value(),
-					wallet: env.validators().findByAddress(network.coin(), network.id(), address),
+					wallet: profile.validators().findByAddress(network.id(), address),
 				}));
 
 				const unvotesList = transaction.unvotes().map((address: string) => ({
 					amount: transaction.value(),
-					wallet: env.validators().findByAddress(network.coin(), network.id(), address),
+					wallet: profile.validators().findByAddress(network.id(), address),
 				}));
 
 				setVotes(votesList);

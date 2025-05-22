@@ -6,7 +6,6 @@ import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 import "jest-styled-components";
-import { Hash } from "@ardenthq/arkvault-crypto";
 import { server } from "./src/tests/mocks/server";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
@@ -53,24 +52,6 @@ vi.mock("@/app/hooks/use-synchronizer", async () => {
 			}
 
 			return useSynchronizer(jobs);
-		},
-	};
-});
-
-vi.mock("@ardenthq/sdk-mainsail", async () => {
-	const { ...original } = await vi.importActual("@ardenthq/sdk-mainsail");
-
-	return {
-		...original,
-		configManager: {
-			getMilestone: vi.fn(() => ({
-				gas: {
-					maximumGasLimit: 2_000_000,
-					maximumGasPrice: 10_000_000_000_000,
-					minimumGasLimit: 21_000,
-					minimumGasPrice: 5_000_000_000,
-				},
-			})),
 		},
 	};
 });

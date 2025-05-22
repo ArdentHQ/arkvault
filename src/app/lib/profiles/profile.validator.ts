@@ -20,7 +20,6 @@ export class ProfileValidator implements IProfileValidator {
 						.items(
 							Joi.object({
 								address: Joi.string().required(),
-								coin: Joi.string().required(),
 								id: Joi.string().required(),
 							}),
 						),

@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -10,7 +12,7 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
 	getDefaultProfileId,
-	MNEMONICS,
+	MAINSAIL_MNEMONICS,
 	render,
 	renderResponsiveWithRoute,
 	screen,
@@ -18,7 +20,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { server, requestMock } from "@/tests/mocks/server";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
 const history = createHashHistory();
@@ -54,7 +56,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
@@ -70,7 +72,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
@@ -92,9 +94,9 @@ describe("Transactions", () => {
 		const emptyProfile = await env.profiles().create("test2");
 
 		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[2],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[2],
+			network: "mainsail.devnet",
 		});
 
 		emptyProfile.wallets().push(wallet);
@@ -110,7 +112,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -120,7 +122,7 @@ describe("Transactions", () => {
 		expect(button).not.toBeDisabled();
 
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: [],
 				meta: transactionsFixture.meta,
 			}),
@@ -132,7 +134,7 @@ describe("Transactions", () => {
 
 		await userEvent.click(options.at(0));
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 	});
 
 	it("should filter by type", async () => {
@@ -147,7 +149,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -163,7 +165,7 @@ describe("Transactions", () => {
 		await userEvent.click(options.at(1));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
@@ -180,7 +182,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		const button = within(screen.getByTestId("FilterTransactions--Mobile")).getByTestId("CollapseToggleButton");
@@ -196,7 +198,7 @@ describe("Transactions", () => {
 		await userEvent.click(options.at(1));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 	});
 
@@ -204,9 +206,9 @@ describe("Transactions", () => {
 		const emptyProfile = await env.profiles().create("test9");
 
 		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[2],
-			network: "ark.devnet",
+			coin: "Mainsail",
+			mnemonic: MAINSAIL_MNEMONICS[2],
+			network: "mainsail.devnet",
 		});
 
 		emptyProfile.wallets().push(wallet);
@@ -221,7 +223,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
 		expect(button).toBeDisabled();
@@ -239,7 +241,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(15),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		let button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -249,7 +251,7 @@ describe("Transactions", () => {
 		expect(button).not.toBeDisabled();
 
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
 				data: [],
 				meta: transactionsFixture.meta,
 			}),
@@ -261,7 +263,7 @@ describe("Transactions", () => {
 
 		await userEvent.click(options.at(-1));
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-results")).resolves.toBeVisible();
 
 		button = screen.getAllByRole("button", { name: /Type/ })[0];
 		expect(button).not.toBeDisabled();
@@ -282,7 +284,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
@@ -302,6 +304,23 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
+		// Paginated result
+		server.use(
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				// transaction.data only has 10 items, create 5 items more
+				data: [...transactionsFixture.data, ...transactionsFixture.data, ...transactionsFixture.data].slice(
+					0,
+					30,
+				),
+				meta: {
+					...transactionsFixture.meta,
+					count: 15,
+					next: "/transactions?limit=30&orderBy=timestamp%3Adesc&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&fullReceipt=false&transform=true&page=2",
+					totalCount: 63,
+				},
+			}),
+		);
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
@@ -311,6 +330,8 @@ describe("Transactions", () => {
 				route: dashboardURL,
 			},
 		);
+
+		await expect(screen.findByTestId("transactions__fetch-more-button")).resolves.toBeVisible();
 
 		const fetchMoreButtonHasContent = (content) =>
 			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(content);
@@ -349,7 +370,7 @@ describe("Transactions", () => {
 		});
 
 		await waitFor(() => {
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -376,12 +397,12 @@ describe("Transactions", () => {
 
 	it("should abort previous request", async () => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: transactionsFixture.data.slice(0, 4),
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data,
 				meta: transactionsFixture.meta,
 			}),
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: transactionsFixture.data.slice(0, 1),
+			requestMock("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data.slice(0, 5),
 				meta: transactionsFixture.meta,
 			}),
 		);
@@ -396,15 +417,26 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(30), { timeout: 500 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(10), { timeout: 500 });
 
 		await userEvent.click(screen.getByTestId("tabs__tab-button-received"));
-		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
+		await userEvent.click(screen.getByTestId("tabs__tab-button-all"));
 
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(8), { timeout: 1000 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(5), { timeout: 1000 });
 	});
 
 	it("should filter by mode", async () => {
+		server.use(
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data,
+				meta: transactionsFixture.meta,
+			}),
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data.slice(0, 8),
+				meta: transactionsFixture.meta,
+			}),
+		);
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
@@ -416,7 +448,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
 		);
 
 		await userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
@@ -427,6 +459,17 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by mode on mobile", async () => {
+		server.use(
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data,
+				meta: transactionsFixture.meta,
+			}),
+			requestMockOnce("https://dwallets-evm.mainsailhq.com/api/transactions", {
+				data: transactionsFixture.data.slice(0, 8),
+				meta: transactionsFixture.meta,
+			}),
+		);
+
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
@@ -439,7 +482,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(10),
 		);
 
 		const button = screen.getByTestId("dropdown__toggle-Transactions--filter-dropdown");
@@ -499,7 +542,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 	});
 
 	it("should update wallet filters", async () => {
@@ -513,7 +556,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

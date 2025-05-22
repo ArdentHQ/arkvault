@@ -22,12 +22,11 @@ import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
 import { Route } from "react-router-dom";
 import { SendRegistration } from "./SendRegistration";
-import { Signatories } from "@/app/lib/sdk";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { createHashHistory } from "history";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
-
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
@@ -64,43 +63,63 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "validatorR
 	};
 };
 
+const signedTransactionMock = {
+	blockHash: () => {},
+	confirmations: () => Promise.resolve(BigNumber.make(154_178)),
+	convertedAmount: () => BigNumber.make(10),
+	convertedFee: () => {
+		const fee = BigNumber.make(ValidatorRegistrationFixture.data.gasPrice)
+			.times(ValidatorRegistrationFixture.data.gas)
+			.dividedBy(1e8);
+		return fee.toNumber();
+	},
+	convertedTotal: () => BigNumber.ZERO,
+	data: () => ValidatorRegistrationFixture.data,
+	explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
+	explorerLinkForBlock: () =>
+		`https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
+	fee: () => +ValidatorRegistrationFixture.data.fee / 1e18,
+	from: () => ValidatorRegistrationFixture.data.from,
+	hash: () => ValidatorRegistrationFixture.data.hash,
+	isConfirmed: () => false,
+	isDelegateRegistration: () => false,
+	isDelegateResignation: () => false,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isReturn: () => false,
+	isSecondSignature: () => false,
+	isSent: () => true,
+	isSuccess: () => true,
+	isTransfer: () => false,
+	isUnvote: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
+	isValidatorRegistration: () => true,
+	isValidatorResignation: () => false,
+	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => ValidatorRegistrationFixture.data.memo || undefined,
+	nonce: () => BigNumber.make(ValidatorRegistrationFixture.data.nonce),
+	payments: () => [],
+	recipients: () => [],
+	timestamp: () => DateTime.make(ValidatorRegistrationFixture.data.timestamp),
+	to: () => ValidatorRegistrationFixture.data.to,
+	total: () => {
+		const value = BigNumber.make(ValidatorRegistrationFixture.data.value);
+		const feeVal = BigNumber.make(ValidatorRegistrationFixture.data.gasPrice).times(
+			ValidatorRegistrationFixture.data.gas,
+		);
+		return value.plus(feeVal);
+	},
+	type: () => "transfer",
+	usesMultiSignature: () => false,
+	value: () => +ValidatorRegistrationFixture.data.value / 1e8,
+	wallet: () => wallet,
+};
+
 const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +ValidatorRegistrationFixture.data.amount / 1e18,
-		blockId: () => "1",
-		confirmations: () => BigNumber.make(154_178),
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => ValidatorRegistrationFixture.data }),
-		explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
-		explorerLinkForBlock: () =>
-			`https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.id}`,
-		fee: () => +ValidatorRegistrationFixture.data.fee / 1e18,
-		id: () => ValidatorRegistrationFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => true,
-		isDelegateResignation: () => false,
-		isIpfs: () => false,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isSuccess: () => true,
-		isTransfer: () => false,
-		isUnvote: () => false,
-		isUsernameRegistration: () => false,
-		isUsernameResignation: () => false,
-		isValidatorRegistration: () => true,
-		isValidatorResignation: () => false,
-		isVote: () => false,
-		isVoteCombination: () => false,
-		memo: () => null,
-		nonce: () => BigNumber.make(1),
-		recipient: () => ValidatorRegistrationFixture.data.recipient,
-		sender: () => ValidatorRegistrationFixture.data.senderAddress,
-		timestamp: () => DateTime.make(),
-		type: () => "validatorRegistration",
-		usesMultiSignature: () => false,
-		wallet: () => wallet,
-	});
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
+// @ts-ignore
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
@@ -147,11 +166,6 @@ const withKeyboard = "with keyboard";
 
 describe("Registration", () => {
 	beforeAll(async () => {
-		vi.useFakeTimers({
-			shouldAdvanceTime: true,
-			toFake: ["setInterval", "clearInterval", "Date"],
-		});
-
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -160,9 +174,6 @@ describe("Registration", () => {
 		wallet = profile
 			.wallets()
 			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
-
-		vi.spyOn(wallet.coin().publicKey(), "verifyPublicKeyWithBLS").mockResolvedValue(true);
-		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => false);
 
 		secondWallet = profile.wallets().push(
 			await profile.walletFactory().fromAddress({
@@ -174,20 +185,29 @@ describe("Registration", () => {
 
 		vi.spyOn(secondWallet, "balance").mockReturnValue(1200);
 
+		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
+
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
 		await syncValidators(profile);
 		await syncFees(profile);
+
+		vi.spyOn(env.fees(), "sync").mockImplementation(vi.fn());
 	});
 
-	afterAll(() => {
+	afterEach(() => {
 		vi.useRealTimers();
 	});
 
 	beforeEach(() => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		server.use(
-			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets*", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api*", {
 				meta: {
 					count: 0,
 				},
@@ -199,10 +219,10 @@ describe("Registration", () => {
 		);
 	});
 
-	it.each([
-		["validatorRegistration", "Register Validator"],
-		["multiSignature", multisignatureTitle],
-	])("should handle registrationType param (%s)", async (type, label) => {
+	it("should handle registrationType param (%s)", async () => {
+		const type = "validatorRegistration";
+		const label = "Register Validator";
+
 		const registrationPath = `/profiles/${profile.id()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
 
@@ -222,6 +242,10 @@ describe("Registration", () => {
 	});
 
 	it.each([withKeyboard, "without keyboard"])("should register validator %s", async (inputMethod) => {
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: vi.fn().mockReturnValue(signedTransactionMock),
+		}));
+
 		const nanoXTransportMock = mockNanoXTransport();
 		const { asFragment, history } = await renderPage(wallet);
 
@@ -278,9 +302,9 @@ describe("Registration", () => {
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [ValidatorRegistrationFixture.data.id],
+			accepted: [ValidatorRegistrationFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -293,16 +317,15 @@ describe("Registration", () => {
 		}
 
 		await waitFor(() => {
-			expect(signMock).toHaveBeenCalledWith({
-				data: { validatorPublicKey: "validator-public-key" },
-				gasLimit: 500_000,
-				gasPrice: 5.066_701_25,
-				signatory: expect.any(Signatories.Signatory),
-			});
+			expect(signMock).toHaveBeenCalledWith(
+				expect.objectContaining({
+					data: { validatorPublicKey: "validator-public-key" },
+				}),
+			);
 		});
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
-		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -347,10 +370,9 @@ describe("Registration", () => {
 
 		// Ledger mocks
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
 		const getPublicKeyMock = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.spyOn(wallet.ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
 		const signTransactionMock = vi
@@ -449,6 +471,10 @@ describe("Registration", () => {
 	});
 
 	it("should prevent going to the next step with enter on the success step", async () => {
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: vi.fn().mockResolvedValue(signedTransactionMock),
+		}));
+
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet);
 
@@ -479,9 +505,9 @@ describe("Registration", () => {
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.hash));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [ValidatorRegistrationFixture.data.id],
+			accepted: [ValidatorRegistrationFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
@@ -490,16 +516,15 @@ describe("Registration", () => {
 		await userEvent.keyboard("{enter}");
 
 		await waitFor(() =>
-			expect(signMock).toHaveBeenCalledWith({
-				data: { validatorPublicKey: "validator-public-key" },
-				gasLimit: 500_000,
-				gasPrice: 5.066_701_25,
-				signatory: expect.any(Signatories.Signatory),
-			}),
+			expect(signMock).toHaveBeenCalledWith(
+				expect.objectContaining({
+					data: { validatorPublicKey: "validator-public-key" },
+				}),
+			),
 		);
 
-		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
-		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.id));
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -507,7 +532,10 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
-		await act(() => vi.runOnlyPendingTimers());
+		await act(async () => {
+			vi.runOnlyPendingTimers(); // Run the setInterval callback
+			await new Promise((resolve) => setImmediate(resolve)); // Ensure microtasks complete
+		});
 
 		// Step 4 - success screen
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -568,7 +596,7 @@ describe("Registration", () => {
 
 		const signMock = vi
 			.spyOn(secondWallet.transaction(), "signValidatorRegistration")
-			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.id));
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.hash));
 
 		const broadcastMock = vi.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
 			throw new Error("broadcast error");

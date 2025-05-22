@@ -2,7 +2,7 @@
 
 /* eslint-disable testing-library/no-unnecessary-act */
 
-import { Mainsail } from "@/app/lib/mainsail";
+import * as Mainsail from "@/app/lib/mainsail";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

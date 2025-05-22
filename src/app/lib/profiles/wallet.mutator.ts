@@ -1,8 +1,9 @@
-import { Services } from "@/app/lib/sdk";
+import { Services } from "@/app/lib/mainsail";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 import { IReadWriteWallet, IWalletMutator, WalletData, WalletImportMethod, WalletSetting } from "./contracts.js";
 import { Avatar } from "./helpers/avatar.js";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 export class WalletMutator implements IWalletMutator {
 	readonly #wallet: IReadWriteWallet;
@@ -11,45 +12,9 @@ export class WalletMutator implements IWalletMutator {
 		this.#wallet = wallet;
 	}
 
-	/** {@inheritDoc IWalletMutator.coin} */
-	public async coin(coin: string, network: string, options: { sync: boolean }): Promise<void> {
-		const { sync = true } = options ?? { sync: true };
-
-		try {
-			// Ensure that we set the coin & network IDs
-			this.#wallet.data().set(WalletData.Coin, coin);
-			this.#wallet.data().set(WalletData.Network, network);
-
-			// Ensure that we set the coin instance. This only exists in-memory for the lifetime of the client.
-			const instance = this.#wallet.profile().coins().set(coin, network);
-			this.#wallet.getAttributes().set("coin", instance);
-
-			/**
-			 * If we fail to construct the coin it means we are having networking
-			 * issues or there is a bug in the coin package. This could also mean
-			 * bad error handling inside the coin package which needs fixing asap.
-			 */
-			if (instance.hasBeenSynchronized()) {
-				this.#wallet.markAsFullyRestored();
-			} else {
-				if (sync) {
-					await instance.__construct();
-
-					this.#wallet.markAsFullyRestored();
-				} else {
-					this.#wallet.markAsPartiallyRestored();
-				}
-			}
-
-			this.#wallet.profile().status().markAsDirty();
-		} catch {
-			this.#wallet.markAsPartiallyRestored();
-		}
-	}
-
 	/** {@inheritDoc IWalletMutator.identity} */
-	public async identity(mnemonic: string, options?: Services.IdentityOptions): Promise<void> {
-		const { type, address, path } = await this.#wallet.coin().address().fromMnemonic(mnemonic, options);
+	public async identity(mnemonic: string): Promise<void> {
+		const { type, address, path } = new AddressService().fromMnemonic(mnemonic);
 
 		/* istanbul ignore next */
 		if (type) {
@@ -148,10 +113,10 @@ export class WalletMutator implements IWalletMutator {
 			let address: string;
 
 			if (BIP39.validate(wif)) {
-				const data = await this.#wallet.coin().address().fromMnemonic(wif);
+				const data = new AddressService().fromMnemonic(wif);
 				address = data.address;
 			} else {
-				const data = await this.#wallet.coin().address().fromSecret(wif);
+				const data = new AddressService().fromSecret(wif);
 				address = data.address;
 			}
 

@@ -1,6 +1,6 @@
-import { Managers } from "./crypto/index.js";
+import { configManager } from "./config.manager";
 
 export const applyCryptoConfiguration = ({ crypto, height }): void => {
-	Managers.configManager.setConfig(crypto);
-	Managers.configManager.setHeight(height);
+	configManager.setConfig(crypto);
+	configManager.setHeight(height);
 };

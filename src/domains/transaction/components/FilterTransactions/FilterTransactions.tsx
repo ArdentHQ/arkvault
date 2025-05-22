@@ -45,6 +45,12 @@ const FilterOption = ({
 				"group-hover:bg-theme-navy-700": isChecked,
 				"group-hover:border-theme-navy-600 dark:group-hover:border-theme-navy-600": !isChecked,
 			})}
+			onKeyDown={(event) => {
+				/* istanbul ignore next -- @preserve */
+				if (event.key === "Enter" || event.key === " ") {
+					onChange?.(!isChecked);
+				}
+			}}
 		/>
 		<span data-testid={`FilterOption__${label}`}>{label}</span>
 	</span>
@@ -75,6 +81,7 @@ export const FilterTransactions = memo(
 				key: "all",
 				options: [
 					{
+						disableFocus: true,
 						element: (
 							<FilterOption
 								label={t("COMMON.SELECT_ALL")}
@@ -92,6 +99,7 @@ export const FilterTransactions = memo(
 				key: "others",
 				options: [
 					{
+						disableFocus: true,
 						element: (
 							<FilterOption
 								label={t("COMMON.TRANSFERS")}
@@ -103,6 +111,7 @@ export const FilterTransactions = memo(
 						value: "transfer",
 					},
 					{
+						disableFocus: true,
 						element: (
 							<FilterOption
 								label={t("COMMON.VOTES")}
@@ -114,6 +123,7 @@ export const FilterTransactions = memo(
 						value: "vote",
 					},
 					{
+						disableFocus: true,
 						element: (
 							<FilterOption
 								label={t("COMMON.MULTIPAYMENTS")}
@@ -125,6 +135,7 @@ export const FilterTransactions = memo(
 						value: "transfer",
 					},
 					{
+						disableFocus: true,
 						element: (
 							<FilterOption
 								label={t("COMMON.OTHERS")}

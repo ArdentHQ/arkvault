@@ -1,7 +1,5 @@
-import { Contracts } from "@/app/lib/profiles";
-import { Networks, Coins } from "@/app/lib/sdk";
+import { Http } from "@/app/lib/mainsail";
 import { isValidUrl } from "./url-validation";
-import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 // Valid host @see https://www.rfc-editor.org/rfc/rfc952
@@ -54,16 +52,10 @@ const isMusig = (body: object): boolean => {
 	return body["name"].endsWith("-musig-server");
 };
 
-const urlBelongsToNetwork = async (profile: Contracts.IProfile, url: string, network: Networks.Network) => {
-	const coin: Coins.Coin = profile.coins().makeInstance(network.coin(), network.id());
-	await coin.__construct();
-	return coin.prober().evaluate(url);
-};
-
 const pingServerAddress = async (address: string, type: NetworkHostType): Promise<boolean> => {
 	const baseUrl = getBaseUrl(address);
 
-	const client = new HttpClient(0);
+	const client = new Http.HttpClient(0);
 
 	const pingServer = async () => {
 		try {
@@ -85,7 +77,7 @@ const pingServerAddress = async (address: string, type: NetworkHostType): Promis
 };
 
 const getServerHeight = async (address: string): Promise<number | undefined> => {
-	const client = new HttpClient(0);
+	const client = new Http.HttpClient(0);
 
 	const baseUrl = getBaseUrl(address);
 
@@ -116,7 +108,6 @@ export {
 	getBaseUrl,
 	isPeer,
 	isMusig,
-	urlBelongsToNetwork,
 	pingServerAddress,
 	getServerHeight,
 };

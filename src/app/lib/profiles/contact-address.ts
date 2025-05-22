@@ -15,11 +15,6 @@ export class ContactAddress implements IContactAddress {
 		return this.#data.id;
 	}
 
-	/** {@inheritDoc IContactAddress.coin} */
-	public coin(): string {
-		return this.#data.coin;
-	}
-
 	/** {@inheritDoc IContactAddress.address} */
 	public address(): string {
 		return this.#data.address;
@@ -34,7 +29,6 @@ export class ContactAddress implements IContactAddress {
 	public toObject(): IContactAddressData {
 		return {
 			address: this.address(),
-			coin: this.coin(),
 			id: this.id(),
 		};
 	}

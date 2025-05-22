@@ -600,7 +600,7 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
 </DocumentFragment>
 `;
 
-exports[`WalletVote > should render skelethon if loading 1`] = `
+exports[`WalletVote > should render skeleton if loading 1`] = `
 <DocumentFragment>
   <div
     class="border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-800 flex flex-col rounded-xl border md:border-0 md:bg-transparent dark:bg-black md:dark:bg-transparent"
@@ -1197,7 +1197,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
 </DocumentFragment>
 `;
 
-exports[`WalletVote > single vote networks > should render a vote for an active delegate 1`] = `
+exports[`WalletVote > single vote networks > should render a vote for an active validator 1`] = `
 <DocumentFragment>
   <div
     class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"

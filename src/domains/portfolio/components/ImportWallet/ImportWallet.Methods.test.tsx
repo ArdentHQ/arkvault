@@ -407,7 +407,7 @@ describe("ImportAddress Methods", () => {
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
-		const findAdressSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
+		const findAdressSpy = vi.spyOn(profile.wallets(), "findByPublicKey").mockReturnValue({} as any);
 
 		await userEvent.clear(publicKeyInput());
 		await userEvent.type(publicKeyInput(), randomPublicKey);

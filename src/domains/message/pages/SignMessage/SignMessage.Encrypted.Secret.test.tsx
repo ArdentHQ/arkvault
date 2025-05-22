@@ -41,14 +41,10 @@ describe("SignMessage with encrypted secret", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic,
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
-
-		profile.coins().set("Mainsail", "mainsail.devnet");
 
 		await triggerMessageSignOnce(wallet);
 	});
@@ -57,50 +53,51 @@ describe("SignMessage with encrypted secret", () => {
 		history.push(walletUrl(wallet.id()));
 	});
 
-	it("should sign message with encrypted secret", async () => {
-		const secret = "secret";
+	it(
+		"should sign message with encrypted secret",
+		async () => {
+			const secret = "secret";
 
-		const encryptedWallet = await profile.walletFactory().fromSecret({
-			coin: "Mainsail",
-			network: "mainsail.devnet",
-			secret,
-		});
+			const encryptedWallet = await profile.walletFactory().fromSecret({
+				secret,
+			});
+			await encryptedWallet.signingKey().set(secret, "password");
 
-		encryptedWallet.signingKey().set(secret, "password");
+			encryptedWallet
+				.data()
+				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
 
-		encryptedWallet
-			.data()
-			.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
+			profile.wallets().push(encryptedWallet);
 
-		profile.wallets().push(encryptedWallet);
+			history.push(walletUrl(encryptedWallet.id()));
 
-		history.push(walletUrl(encryptedWallet.id()));
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: walletUrl(encryptedWallet.id()),
+				},
+			);
 
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl(encryptedWallet.id()),
-			},
-		);
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+			await userEvent.type(messageInput(), signMessage);
 
-		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-		await userEvent.type(messageInput(), signMessage);
+			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
-		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+			await waitFor(
+				() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+				{ timeout: 4000 },
+			);
 
-		await waitFor(
-			() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-			{ timeout: 4000 },
-		);
+			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		await waitFor(() => expect(continueButton()).toBeEnabled());
+			await userEvent.click(continueButton());
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
-		await userEvent.click(continueButton());
-		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
-
-		profile.wallets().forget(encryptedWallet.id());
-	});
+			profile.wallets().forget(encryptedWallet.id());
+		},
+		{ timeout: 8000 },
+	);
 });

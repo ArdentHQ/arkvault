@@ -1,4 +1,4 @@
-import { Networks } from "@/app/lib/sdk";
+import { Networks } from "@/app/lib/mainsail";
 
 import { explorer, featureFlags, importMethods, transactions } from "./shared.js";
 

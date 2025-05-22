@@ -377,7 +377,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
 </div>
 `;
 
-exports[`Notifications > should render with transactions and plugins 1`] = `
+exports[`Notifications > should render with transactions 1`] = `
 <div>
   <div
     class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"

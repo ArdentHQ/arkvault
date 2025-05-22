@@ -1,13 +1,9 @@
-import { Coins, Contracts, Exceptions, Networks, Services } from "@/app/lib/sdk";
+import { Contracts, Networks, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 
-import { container } from "./container.js";
-import { Identifiers } from "./container.models.js";
 import {
 	IDataRepository,
-	IExchangeRateService,
-	IKnownWalletService,
 	IProfile,
 	IReadWriteWallet,
 	IReadWriteWalletAttributes,
@@ -29,7 +25,6 @@ import {
 } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { AttributeBag } from "./helpers/attribute-bag.js";
-import { KnownWalletService } from "./known-wallet.service.js";
 import { WalletSerialiser } from "./serialiser.js";
 import { SettingRepository } from "./setting.repository";
 import { SignatoryFactory } from "./signatory.factory.js";
@@ -40,8 +35,20 @@ import { WalletLedgerModel } from "./wallet.enum";
 import { WalletGate } from "./wallet.gate";
 import { WalletMutator } from "./wallet.mutator";
 import { WalletSynchroniser } from "./wallet.synchroniser";
-import { TransactionService } from "./wallet-transaction.service.js";
+import { TransactionService as WalletTransactionService } from "./wallet-transaction.service";
 import { WalletImportFormat } from "./wif.js";
+import { LinkService } from "@/app/lib/mainsail/link.service";
+import { MessageService } from "@/app/lib/mainsail/message.service";
+import { Manifest } from "@/app/lib/mainsail/manifest.class";
+import { manifest } from "@/app/lib/mainsail/index";
+import { LedgerService } from "@/app/lib/mainsail/ledger.service";
+import { ClientService } from "@/app/lib/mainsail/client.service";
+import { AddressService } from "@/app/lib/mainsail/address.service";
+import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
+import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
+import { ValidatorService } from "./validator.service.js";
+import { ExchangeRateService } from "./exchange-rate.service.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -60,6 +67,7 @@ export class Wallet implements IReadWriteWallet {
 	readonly #signingKey: IWalletImportFormat;
 	readonly #confirmKey: IWalletImportFormat;
 	readonly #signatoryFactory: ISignatoryFactory;
+	readonly #messageService: MessageService;
 
 	public constructor(id: string, initialState: any, profile: IProfile) {
 		this.#profile = profile;
@@ -71,7 +79,7 @@ export class Wallet implements IReadWriteWallet {
 
 		this.#dataRepository = new DataRepository();
 		this.#settingRepository = new SettingRepository(profile, Object.values(WalletSetting));
-		this.#transactionService = new TransactionService(this);
+		this.#transactionService = new WalletTransactionService(this);
 		this.#walletGate = new WalletGate(this);
 		this.#walletSynchroniser = new WalletSynchroniser(this);
 		this.#walletMutator = new WalletMutator(this);
@@ -80,6 +88,7 @@ export class Wallet implements IReadWriteWallet {
 		this.#signingKey = new WalletImportFormat(this, WalletData.EncryptedSigningKey);
 		this.#confirmKey = new WalletImportFormat(this, WalletData.EncryptedConfirmKey);
 		this.#signatoryFactory = new SignatoryFactory(this);
+		this.#messageService = new MessageService();
 
 		this.#restore();
 	}
@@ -94,14 +103,9 @@ export class Wallet implements IReadWriteWallet {
 		return this.#attributes.get("id");
 	}
 
-	/** {@inheritDoc IReadWriteWallet.coin} */
-	public coin(): Coins.Coin {
-		return this.#attributes.get<Coins.Coin>("coin");
-	}
-
 	/** {@inheritDoc IReadWriteWallet.network} */
 	public network(): Networks.Network {
-		return this.coin().network();
+		return this.profile().activeNetwork();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.currency} */
@@ -170,9 +174,12 @@ export class Wallet implements IReadWriteWallet {
 			return 0;
 		}
 
-		return +container
-			.get<IExchangeRateService>(Identifiers.ExchangeRateService)
-			.exchange(this.currency(), this.exchangeCurrency(), DateTime.make(), this.balance(type));
+		return this.exchangeRates().exchange(
+			this.currency(),
+			this.exchangeCurrency(),
+			DateTime.make(),
+			this.balance(type),
+		);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.nonce} */
@@ -195,20 +202,6 @@ export class Wallet implements IReadWriteWallet {
 		}
 
 		return this.#attributes.get<string>("avatar");
-	}
-
-	/** {@inheritDoc IReadWriteWallet.connect} */
-	public async connect(): Promise<void> {
-		if (!this.hasCoin()) {
-			throw new Exceptions.BadVariableDependencyException(this.constructor.name, this.connect.name, "coin");
-		}
-
-		await this.#attributes.get<Coins.Coin>("coin").__construct();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.hasCoin} */
-	public hasCoin(): boolean {
-		return this.#attributes.hasStrict("coin");
 	}
 
 	/** {@inheritDoc IReadWriteWallet.hasSyncedWithNetwork} */
@@ -248,7 +241,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.knownName} */
 	public knownName(): string | undefined {
-		return container.get<KnownWalletService>(Identifiers.KnownWalletService).name(this.networkId(), this.address());
+		return this.#profile.knownWallets().name(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.secondPublicKey} */
@@ -262,11 +255,17 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.username} */
 	public username(): string | undefined {
-		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
+		if (this.isCold()) {
+			return;
+		}
+
+		const attributes = this.#attributes.get<Contracts.WalletData>("wallet");
+
+		if (!attributes) {
 			throw new Error(ERR_NOT_SYNCED);
 		}
 
-		return this.#attributes.get<Contracts.WalletData>("wallet").username();
+		return attributes.username();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.validatorPublicKey} */
@@ -316,21 +315,17 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.isKnown} */
 	public isKnown(): boolean {
-		return container.get<IKnownWalletService>(Identifiers.KnownWalletService).is(this.networkId(), this.address());
+		return this.#profile.knownWallets().is(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isOwnedByExchange} */
 	public isOwnedByExchange(): boolean {
-		return container
-			.get<IKnownWalletService>(Identifiers.KnownWalletService)
-			.isExchange(this.networkId(), this.address());
+		return this.#profile.knownWallets().isExchange(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isOwnedByTeam} */
 	public isOwnedByTeam(): boolean {
-		return container
-			.get<IKnownWalletService>(Identifiers.KnownWalletService)
-			.isTeam(this.networkId(), this.address());
+		return this.#profile.knownWallets().isTeam(this.networkId(), this.address());
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
@@ -376,7 +371,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.coinId} */
 	public coinId(): string {
-		return this.manifest().get<string>("name");
+		return this.manifest().get("name");
 	}
 
 	/** {@inheritDoc IReadWriteWallet.networkId} */
@@ -385,73 +380,51 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.manifest} */
-	public manifest(): Coins.Manifest {
-		return this.#attributes.get<Coins.Coin>("coin").manifest();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.config} */
-	public config(): Coins.ConfigRepository {
-		return this.#attributes.get<Coins.Coin>("coin").config();
+	public manifest(): Manifest {
+		return new Manifest(manifest);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.client} */
-	public client(): Services.ClientService {
-		return this.#attributes.get<Coins.Coin>("coin").client();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.dataTransferObject} */
-	public dataTransferObject(): Services.DataTransferObjectService {
-		return this.#attributes.get<Coins.Coin>("coin").dataTransferObject();
+	public client(): ClientService {
+		return new ClientService({
+			config: this.network().config(),
+			profile: this.profile(),
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.addressService} */
-	public addressService(): Services.AddressService {
-		return this.#attributes.get<Coins.Coin>("coin").address();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.extendedAddressService} */
-	public extendedAddressService(): Services.ExtendedAddressService {
-		return this.#attributes.get<Coins.Coin>("coin").extendedAddress();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.keyPairService} */
-	public keyPairService(): Services.KeyPairService {
-		return this.#attributes.get<Coins.Coin>("coin").keyPair();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.privateKeyService} */
-	public privateKeyService(): Services.PrivateKeyService {
-		return this.#attributes.get<Coins.Coin>("coin").privateKey();
+	public addressService(): AddressService {
+		return new AddressService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.publicKeyService} */
-	public publicKeyService(): Services.PublicKeyService {
-		return this.#attributes.get<Coins.Coin>("coin").publicKey();
-	}
-
-	/** {@inheritDoc IReadWriteWallet.wifService} */
-	public wifService(): Services.WIFService {
-		return this.#attributes.get<Coins.Coin>("coin").wif();
+	public publicKeyService(): PublicKeyService {
+		return new PublicKeyService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.ledger} */
-	public ledger(): Services.LedgerService {
-		return this.#attributes.get<Coins.Coin>("coin").ledger();
+	public ledger(): LedgerService {
+		return new LedgerService({
+			config: this.network().config(),
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.link} */
 	public link(): Services.LinkService {
-		return this.#attributes.get<Coins.Coin>("coin").link();
+		return new LinkService({
+			config: this.network().config(),
+			profile: this.#profile,
+		});
 	}
 
 	/** {@inheritDoc IReadWriteWallet.message} */
-	public message(): Services.MessageService {
-		return this.#attributes.get<Coins.Coin>("coin").message();
+	public message(): MessageService {
+		return this.#messageService;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.signatory} */
-	public signatory(): Services.SignatoryService {
-		return this.#attributes.get<Coins.Coin>("coin").signatory();
+	public signatory(): SignatoryService {
+		return new SignatoryService();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.transaction} */
@@ -459,9 +432,17 @@ export class Wallet implements IReadWriteWallet {
 		return this.#transactionService;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.transactionService} */
+	public transactionService(): TransactionService {
+		return new TransactionService({
+			config: this.network().config(),
+			profile: this.profile(),
+		});
+	}
+
 	/** {@inheritDoc IReadWriteWallet.transactionTypes} */
 	public transactionTypes(): Networks.TransactionType[] {
-		const manifest: Networks.NetworkManifest = this.coin().manifest().get<object>("networks")[this.networkId()];
+		const manifest: Networks.NetworkManifest = this.manifest().get<object>("networks")[this.networkId()];
 
 		return manifest.transactions.types;
 	}
@@ -508,7 +489,6 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.markAsFullyRestored} */
 	public markAsFullyRestored(): void {
-		this.#attributes.forget("isMissingCoin");
 		this.#attributes.forget("isMissingNetwork");
 
 		this.#attributes.set("restorationState", {
@@ -533,16 +513,6 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.hasBeenPartiallyRestored} */
 	public hasBeenPartiallyRestored(): boolean {
 		return this.#attributes.get("restorationState").partial;
-	}
-
-	/** {@inheritDoc IReadWriteWallet.markAsMissingCoin} */
-	public markAsMissingCoin(): void {
-		this.#attributes.set("isMissingCoin", true);
-	}
-
-	/** {@inheritDoc IReadWriteWallet.isMissingCoin} */
-	public isMissingCoin(): boolean {
-		return this.#attributes.has("isMissingCoin");
 	}
 
 	/** {@inheritDoc IReadWriteWallet.markAsMissingNetwork} */
@@ -596,11 +566,6 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.actsWithPublicKey} */
 	public actsWithPublicKey(): boolean {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PublicKey;
-	}
-
-	/** {@inheritDoc IReadWriteWallet.actsWithPrivateKey} */
-	public actsWithPrivateKey(): boolean {
-		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PrivateKey;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */
@@ -657,6 +622,11 @@ export class Wallet implements IReadWriteWallet {
 		return this.#signatoryFactory;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.validators} */
+	public validators(): ValidatorService {
+		return this.#profile.validators();
+	}
+
 	#restore(): void {
 		const balance: Contracts.WalletBalance | undefined = this.data().get<Contracts.WalletBalance>(
 			WalletData.Balance,
@@ -676,10 +646,14 @@ export class Wallet implements IReadWriteWallet {
 
 	#decimals(): number {
 		try {
-			const manifest: Networks.NetworkManifest = this.coin().manifest().get<object>("networks")[this.networkId()];
+			const manifest: Networks.NetworkManifest = this.manifest().get<object>("networks")[this.networkId()];
 			return manifest.currency.decimals ?? 18;
 		} catch {
 			return 18;
 		}
+	}
+
+	public exchangeRates(): ExchangeRateService {
+		return this.#profile.exchangeRates();
 	}
 }

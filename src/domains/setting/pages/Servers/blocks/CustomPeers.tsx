@@ -315,7 +315,7 @@ const CustomPeersPeer: React.VFC<{
 							<div className="space-y-3">
 								<div className="flex items-center space-x-5">
 									<div className="flex min-w-0 flex-1 items-center space-x-5">
-										<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:flex-shrink-0">
+										<div className="w-9 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 sm:shrink-0">
 											{t("SETTINGS.SERVERS.API")}:
 										</div>
 										<TruncatedWithTooltip
@@ -328,7 +328,7 @@ const CustomPeersPeer: React.VFC<{
 
 								<div className="flex items-center space-x-5">
 									<div className="flex min-w-0 flex-1 items-center space-x-5">
-										<div className="w-9 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+										<div className="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
 											{t("SETTINGS.SERVERS.TX")}:
 										</div>
 										<TruncatedWithTooltip
@@ -341,7 +341,7 @@ const CustomPeersPeer: React.VFC<{
 
 								<div className="flex items-center space-x-5">
 									<div className="flex min-w-0 flex-1 items-center space-x-5">
-										<div className="w-9 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
+										<div className="w-9 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200">
 											{t("SETTINGS.SERVERS.EVM")}:
 										</div>
 										<TruncatedWithTooltip
@@ -367,7 +367,12 @@ const CustomPeersPeer: React.VFC<{
 						</MobileTableElementRow>
 
 						<div className="grid grid-cols-3 gap-2 border-t border-dashed border-theme-secondary-300 pt-4 dark:border-theme-dark-700 sm:hidden">
-							<Button variant="secondary" size="sm" onClick={() => handleSelectOption({ value: "edit" })}>
+							<Button
+								variant="secondary"
+								size="sm"
+								onClick={() => handleSelectOption({ value: "edit" })}
+								data-testid="CustomPeers-network-item--mobile--edit"
+							>
 								<Icon name="Pencil" />
 							</Button>
 
@@ -375,11 +380,17 @@ const CustomPeersPeer: React.VFC<{
 								variant="secondary"
 								size="sm"
 								onClick={() => handleSelectOption({ value: "refresh" })}
+								data-testid="CustomPeers-network-item--mobile--refresh"
 							>
 								<Icon name="ArrowRotateLeft" />
 							</Button>
 
-							<Button variant="danger" size="sm" onClick={() => handleSelectOption({ value: "delete" })}>
+							<Button
+								variant="danger"
+								size="sm"
+								onClick={() => handleSelectOption({ value: "delete" })}
+								data-testid="CustomPeers-network-item--mobile--delete"
+							>
 								<Icon name="Trash" />
 							</Button>
 						</div>

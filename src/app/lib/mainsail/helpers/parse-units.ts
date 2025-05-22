@@ -1,6 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 
-import { ARK_MULTIPLIER, GWEI_MULTIPLIER, WEI_MULTIPLIER } from "@/app/lib/mainsail/crypto/constants";
+import { ARK_MULTIPLIER, GWEI_MULTIPLIER, WEI_MULTIPLIER } from "./constants";
 
 export const parseUnits = (value: number | string, unit = "ark"): BigNumber => {
 	switch (unit.toLowerCase()) {
