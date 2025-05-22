@@ -805,7 +805,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Manage your frequent Contacts.
@@ -1176,7 +1176,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
                             >
                               <button
-                                class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
@@ -1362,7 +1362,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
                             >
                               <button
-                                class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
@@ -2529,7 +2529,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                           0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
                                         </span>
                                         <button
-                                          class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                          class="ring-focus relative cursor-pointer focus:outline-hidden"
                                           data-ring-focus-margin="-m-1"
                                           data-testid="clipboard-icon__wrapper"
                                           type="button"
@@ -2685,7 +2685,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                           0x0000000000000000000000000000000000000000
                                         </span>
                                         <button
-                                          class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                          class="ring-focus relative cursor-pointer focus:outline-hidden"
                                           data-ring-focus-margin="-m-1"
                                           data-testid="clipboard-icon__wrapper"
                                           type="button"
@@ -3550,7 +3550,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Manage your frequent Contacts.
@@ -3921,7 +3921,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
                             >
                               <button
-                                class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
@@ -4107,7 +4107,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
                             >
                               <button
-                                class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                class="ring-focus relative cursor-pointer focus:outline-hidden"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
@@ -5054,7 +5054,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   </h1>
                    
                   <div
-                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Manage your frequent Contacts.

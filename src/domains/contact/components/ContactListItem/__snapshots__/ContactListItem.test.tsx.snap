@@ -62,7 +62,7 @@ exports[`ContactListItem > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -257,7 +257,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -452,7 +452,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -626,7 +626,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -797,7 +797,7 @@ exports[`ContactListItem > should render options 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -989,7 +989,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -1163,7 +1163,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -1334,7 +1334,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 space-x-4 justify-center"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
