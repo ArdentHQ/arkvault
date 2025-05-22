@@ -113,7 +113,7 @@ exports[`InputDate > should render 1`] = `
               class="react-datepicker__month-container"
             >
               <div
-                class="react-datepicker__header"
+                class="react-datepicker__header "
               >
                 <h2
                   class="react-datepicker__current-month"
