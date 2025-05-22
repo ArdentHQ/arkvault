@@ -97,10 +97,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
@@ -144,10 +144,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
@@ -191,10 +191,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
@@ -238,10 +238,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
@@ -285,10 +285,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
@@ -332,10 +332,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
@@ -379,10 +379,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
                             >
                               <h3
-                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
