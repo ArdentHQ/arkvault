@@ -184,8 +184,8 @@ describe("LedgerTabs", () => {
 		
 			await waitFor(() => {
 				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
-			}, { timeout: 5000 }); // Increase timeout
-		
+			}, { timeout: 5000 }); 
+
 			await userEvent.keyboard("{enter}");
 		
 			await waitFor(() => {
