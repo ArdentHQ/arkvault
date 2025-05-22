@@ -31,7 +31,7 @@ const ConnectionContent = ({
 
 	return (
 		<div className="space-y-4">
-			<div className="inline-flex w-full items-center justify-center space-x-3">
+			<div className="inline-flex justify-center items-center space-x-3 w-full">
 				<Loader text={t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })} />
 			</div>
 			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto w-full max-w-[400px]" />

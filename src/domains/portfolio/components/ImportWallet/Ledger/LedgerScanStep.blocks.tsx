@@ -50,14 +50,14 @@ export const LedgerMobileItem = ({
 		return (
 			<div className="relative">
 				<div
-					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 w-full overflow-hidden rounded border bg-white"
+					className="overflow-hidden w-full bg-white rounded border border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
 					data-testid="LedgerMobileItem__skeleton"
 				>
-					<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
+					<div className="pt-3 pl-4 w-full h-11 dark:bg-black bg-theme-secondary-100">
 						<Skeleton width={20} height={20} />
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
+					<div className="flex flex-col gap-4 px-4 pt-2.5 pb-4 w-full">
 						<div className="flex flex-col gap-2">
 							<Skeleton height={16} width={126} />
 							<Skeleton height={16} width={amountWidth} />
@@ -85,11 +85,11 @@ export const LedgerMobileItem = ({
 
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
-			<div className="bg-theme-secondary-100 h-11 w-full pt-3 pl-4 dark:bg-black">
+			<div className="pt-3 pl-4 w-full h-11 dark:bg-black bg-theme-secondary-100">
 				<Checkbox checked={isSelected} onChange={handleClick} data-testid="LedgerMobileItem__checkbox" />
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
+			<div className="flex flex-col gap-4 px-4 pt-2.5 pb-4 w-full">
 				<MobileSection title={t("COMMON.ADDRESS")}>
 					<Address
 						address={address}
@@ -115,7 +115,7 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 				className,
 			)}
 		/>
-		<div className="text-theme-secondary-700 absolute inset-0 flex h-full w-full items-center justify-center space-x-3 dark:text-white">
+		<div className="flex absolute inset-0 justify-center items-center space-x-3 w-full h-full dark:text-white text-theme-secondary-700">
 			{children && (
 				<div>
 					<Spinner size="sm" width={3} />

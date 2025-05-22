@@ -3,11 +3,11 @@
 exports[`CreateWallet > should show an error message if wallet generation failed 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    class="flex relative flex-col pb-32 sm:pb-0 sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -15,10 +15,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
         data-testid="NavigationBar__buttons-separator"
       />
       <div
-        class="flex h-14 items-center justify-center space-x-4"
+        class="flex justify-center items-center space-x-4 h-14"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-not-allowed focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-500 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -56,10 +56,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -93,10 +93,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-not-allowed focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-500 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -134,16 +134,16 @@ exports[`CreateWallet > should show an error message if wallet generation failed
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
     >
       <div
-        class="relative flex h-12 flex-row"
+        class="flex relative flex-row h-12"
       >
         <div
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:rounded focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-dark-50 hover:dark:bg-theme-dark-700"
+            class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 hover:dark:bg-theme-dark-700 focus:outline-hidden focus:ring-theme-primary-400"
           >
             <div
               class="mx-auto"
@@ -174,16 +174,16 @@ exports[`CreateWallet > should show an error message if wallet generation failed
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 justify-between items-center px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row gap-6 items-center"
           >
             <div
-              class="my-auto flex h-16 items-center sm:h-21"
+              class="flex items-center my-auto h-16 sm:h-21"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-hidden focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6"
+                class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:outline-hidden focus:ring-theme-primary-400"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -209,14 +209,14 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               </button>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden items-center h-12 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus h-fit leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                   title="Portfolio"
                 >
@@ -227,7 +227,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus h-fit leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                   title="Exchange"
                 >
@@ -238,7 +238,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus h-fit leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                   title="Contacts"
                 >
@@ -249,7 +249,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus h-fit leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                   title="Votes"
                 >
@@ -258,7 +258,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               </li>
             </ul>
             <div
-              class="mr-auto flex content-center items-center xl:hidden"
+              class="flex content-center items-center mr-auto xl:hidden"
               data-testid="NavigationBar__menu-toggle"
             >
               <div
@@ -267,7 +267,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="cursor-pointer rounded py-2 text-theme-secondary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="py-2 rounded cursor-pointer focus:ring-2 text-theme-secondary-700 dark:text-theme-dark-200 focus:outline-hidden focus:ring-theme-primary-400"
                   type="button"
                 >
                   <div>
@@ -296,7 +296,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row gap-4 justify-center items-center sm:gap-5"
           >
             <div>
               <div
@@ -308,7 +308,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -345,10 +345,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
                         />
                       </div>
                     </div>
@@ -357,7 +357,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div>
               <div
@@ -369,7 +369,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -399,10 +399,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -411,7 +411,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -421,7 +421,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -464,7 +464,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -474,7 +474,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -514,16 +514,16 @@ exports[`CreateWallet > should show an error message if wallet generation failed
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
-              class="flex items-center gap-2"
+              class="flex gap-2 items-center"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="inline-flex relative justify-center items-center p-0 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 focus:outline-hidden focus:ring-theme-primary-400"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -571,10 +571,10 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-2 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="flex gap-2 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 >
                   <div
-                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                    class="hidden text-xs font-semibold leading-[17px] text-theme-secondary-700 md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -584,15 +584,15 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     </span>
                   </div>
                   <div
-                    class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                    class="relative justify-center items-center align-middle rounded-full cursor-pointer"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded-full ring-0 transition-all duration-100 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
                       >
                         <img
                           alt="Profile Avatar"
@@ -614,13 +614,13 @@ exports[`CreateWallet > should show an error message if wallet generation failed
       </div>
     </nav>
     <div
-      class="flex flex-1 flex-col"
+      class="flex flex-col flex-1"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
+        class="flex-1 py-4 w-full first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="px-6 mx-auto md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -631,7 +631,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                 class="flex flex-col"
               >
                 <span
-                  class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
+                  class="inline-block mx-auto mb-2 font-semibold sm:hidden text-theme-secondary-text"
                 >
                   Select a Cryptoasset
                 </span>
@@ -639,16 +639,16 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="flex space-x-3"
                 >
                   <li
-                    class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
+                    class="flex-1 h-0.5 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                   />
                   <li
-                    class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                    class="flex-1 h-0.5 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                   />
                   <li
-                    class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                    class="flex-1 h-0.5 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                   />
                   <li
-                    class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                    class="flex-1 h-0.5 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                   />
                 </ul>
               </div>
@@ -662,13 +662,13 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     data-testid="NetworkStep"
                   >
                     <div
-                      class="flex items-end justify-between bg-theme-background hidden sm:block"
+                      class="flex hidden justify-between items-end sm:block bg-theme-background"
                     >
                       <div
                         class="space-y-2"
                       >
                         <div
-                          class="flex items-center gap-3"
+                          class="flex gap-3 items-center"
                         >
                           <div
                             data-testid="icon-SelectNetworkLight"
@@ -775,13 +775,13 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       </div>
                     </div>
                     <div
-                      class="-mb-2 mt-6"
+                      class="mt-6 -mb-2"
                     >
                       <div
-                        class="flex flex-col overflow-hidden rounded-xl"
+                        class="flex overflow-hidden flex-col rounded-xl"
                       >
                         <div
-                          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+                          class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
                         >
                           <div>
                             <div
@@ -821,7 +821,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                           </span>
                         </div>
                         <div
-                          class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
+                          class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-danger-50 dark:bg-theme-secondary-800"
                         >
                           An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.
                         </div>
@@ -834,16 +834,16 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                         data-testid="SelectNetwork"
                       >
                         <div
-                          class="flex-col space-x-0 space-y-3 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
+                          class="flex-col space-y-3 space-x-0 sm:flex sm:flex-row sm:space-y-0 sm:space-x-3"
                           data-testid="NetworkOptions"
                         >
                           <li
-                            class="flex h-18 w-full cursor-pointer cursor-not-allowed"
+                            class="flex w-full cursor-pointer cursor-not-allowed h-18"
                             data-testid="NetworkOption"
                           >
                             <div
                               aria-label="ARK"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex justify-between items-center pr-6 pl-4 space-x-4 w-full h-full rounded-xl border-2 transition-colors text-theme-secondary-500 border-theme-primary-100 dark:hover:border-theme-primary-600 dark:text-theme-secondary-800 dark:border-theme-secondary-800 hover:border-theme-primary-500"
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
@@ -851,7 +851,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                  class="inline-flex justify-center items-center w-5 h-5 text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
@@ -886,12 +886,12 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                             </div>
                           </li>
                           <li
-                            class="flex h-18 w-full cursor-pointer cursor-not-allowed"
+                            class="flex w-full cursor-pointer cursor-not-allowed h-18"
                             data-testid="NetworkOption"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                              class="flex justify-between items-center pr-6 pl-4 space-x-4 w-full h-full rounded-xl border-2 transition-colors border-theme-primary-500 bg-theme-primary-100 text-theme-secondary-600 dark:border-theme-primary-600 dark:bg-theme-primary-900 dark:text-theme-secondary-200"
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
@@ -899,7 +899,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  class="inline-flex justify-center items-center w-5 h-5 text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -965,7 +965,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       </div>
                     </fieldset>
                     <div
-                      class="h-4 border-t border-solid clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="flex clear-both my-4 w-full min-w-full h-4 border-t border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                   </section>
                 </div>
@@ -973,7 +973,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                    class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
                     data-testid="CreateWallet__back-button"
                     disabled=""
                     type="button"
@@ -985,7 +985,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     </div>
                   </button>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                    class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
                     data-testid="CreateWallet__continue-button"
                     disabled=""
                     type="button"
@@ -997,15 +997,15 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                         class="flex items-center"
                       >
                         <span
-                          class="invisible flex items-center space-x-2"
+                          class="flex invisible items-center space-x-2"
                         >
                           Continue
                         </span>
                         <div
-                          class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+                          class="flex absolute top-0 left-0 justify-center items-center w-full h-full"
                         >
                           <div
-                            class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"
+                            class="w-6 h-6 rounded-full border-4 animate-spin border-theme-primary-700 border-l-white"
                           />
                         </div>
                       </div>

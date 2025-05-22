@@ -39,7 +39,7 @@ export const TransactionAddresses = ({
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")} className="flex flex-col gap-3">
-			<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
 				<Address
 					truncateOnTable
@@ -55,7 +55,7 @@ export const TransactionAddresses = ({
 			</div>
 
 			{interactedWith && (
-				<div className="mt-3 flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+				<div className="flex justify-between items-center mt-3 space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle className={labelClassName}>{t("COMMON.CONTRACT")}</DetailTitle>
 					<Address
 						truncateOnTable

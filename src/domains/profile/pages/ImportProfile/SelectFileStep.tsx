@@ -49,7 +49,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 
 			{fileFormat === ".wwe" && (
 				<p
-					className="text-theme-secondary-text mt-4 text-center text-base"
+					className="mt-4 text-base text-center text-theme-secondary-text"
 					data-testid="SelectFileStep__WweImport"
 				>
 					<span>{t("PROFILE.IMPORT.SELECT_FILE_STEP.LEGACY_IMPORT")} </span>
@@ -58,7 +58,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 						onClick={() => onFileFormatChange(".json")}
 						title={t("PROFILE.IMPORT.SELECT_FILE_STEP.CLICK_HERE")}
 						data-testid="SelectFileStep__change-file"
-						className="link ring-focus relative cursor-pointer font-semibold focus:outline-hidden"
+						className="relative font-semibold cursor-pointer link ring-focus focus:outline-hidden"
 						data-ring-focus-margin="-m-1"
 					>
 						{t("PROFILE.IMPORT.SELECT_FILE_STEP.CLICK_HERE")}

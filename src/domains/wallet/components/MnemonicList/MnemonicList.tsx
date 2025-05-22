@@ -12,17 +12,17 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 	mnemonicWords = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
 
 	return (
-		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4">
+		<ul className="grid grid-cols-1 gap-y-2 gap-x-3 sm:grid-cols-3 sm:gap-y-4">
 			{mnemonicWords.map((word, index) => (
 				<li
 					data-testid="MnemonicList__item"
 					key={index}
-					className="border-theme-secondary-400 dark:border-theme-dark-500 relative flex items-center rounded border p-[3px]"
+					className="flex relative items-center rounded border border-theme-secondary-400 p-[3px] dark:border-theme-dark-500"
 				>
-					<div className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold">
+					<div className="p-2 mr-2 w-8 text-sm font-semibold text-center rounded bg-theme-secondary-200 text-theme-secondary-700 leading-[17px] dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
 					</div>
-					<div className="sm:text-md text-sm">{word}</div>
+					<div className="text-sm sm:text-md">{word}</div>
 				</li>
 			))}
 		</ul>
@@ -41,14 +41,14 @@ export const MnemonicListSkeleton: React.VFC = () => {
 	);
 
 	return (
-		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-3 sm:gap-y-4">
+		<ul className="grid grid-cols-1 gap-y-2 gap-x-3 sm:grid-cols-3 sm:gap-y-4">
 			{skeletons.map((width, index) => (
 				<li
 					data-testid="MnemonicList__item_skeleton"
 					key={index}
-					className="dark:border-theme-dark-00 border-theme-secondary-400 relative flex items-center rounded border p-[3px]"
+					className="flex relative items-center rounded border border-theme-secondary-400 p-[3px] dark:border-theme-dark-00"
 				>
-					<div className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 mr-2 w-8 rounded p-2 text-center text-sm leading-[17px] font-semibold">
+					<div className="p-2 mr-2 w-8 text-sm font-semibold text-center rounded bg-theme-secondary-200 text-theme-secondary-700 leading-[17px] dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{index + 1}
 					</div>
 					<div>

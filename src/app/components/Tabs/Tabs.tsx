@@ -91,8 +91,8 @@ const TabScrollScroll = ({ ...properties }: React.HTMLProps<HTMLDivElement>) => 
 
 export const TabScroll = ({ children }) => (
 	<div data-testid="TabScroll" className="relative z-0">
-		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5">
-			<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
+		<div className="px-5 bg-theme-secondary-200 dark:bg-theme-dark-950">
+			<TabScrollScroll className="overflow-x-auto relative z-0 mx-auto">{children}</TabScrollScroll>
 		</div>
 	</div>
 );
@@ -132,7 +132,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			{properties.count !== undefined && (
 				<span
 					data-testid={`tabs__tab-button-${properties.tabId}-count`}
-					className="bg-theme-primary-100 dark:bg-theme-secondary-900 ml-2 rounded px-1.5 py-0.5 text-sm font-semibold"
+					className="py-0.5 px-1.5 ml-2 text-sm font-semibold rounded bg-theme-primary-100 dark:bg-theme-secondary-900"
 				>
 					{properties.count}
 				</span>

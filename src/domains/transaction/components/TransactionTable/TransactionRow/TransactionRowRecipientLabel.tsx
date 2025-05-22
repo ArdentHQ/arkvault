@@ -16,7 +16,7 @@ interface Properties {
 const RecipientLabel = ({ type }: { type: string }) => {
 	const { getLabel } = useTransactionTypes();
 	return (
-		<span data-testid="TransactionRowRecipientLabel" className="text-theme-text font-semibold">
+		<span data-testid="TransactionRowRecipientLabel" className="font-semibold text-theme-text">
 			{getLabel(type)}
 		</span>
 	);
@@ -42,7 +42,7 @@ const VoteCombinationLabel = ({
 				<span className="inline-flex max-w-72">
 					<RecipientLabel type="vote" />
 					{votes.length > 1 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+						<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 							{votes.length}
 						</span>
 					)}
@@ -53,7 +53,7 @@ const VoteCombinationLabel = ({
 				<span>
 					<RecipientLabel type="unvote" />
 					{unvotes.length > 1 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+						<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 							{unvotes.length}
 						</span>
 					)}
@@ -64,7 +64,7 @@ const VoteCombinationLabel = ({
 );
 
 const DelegateLabel = ({ username, count }: { username?: string; count?: number }) => (
-	<span className="border-theme-secondary-300 text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700 ml-2 truncate border-l pl-2 font-semibold">
+	<span className="pl-2 ml-2 font-semibold border-l border-theme-secondary-300 text-theme-secondary-500 truncate dark:border-theme-secondary-800 dark:text-theme-secondary-700">
 		{username}
 		{count !== undefined && count > 1 && <span className="ml-1">+{count - 1}</span>}
 	</span>
@@ -118,7 +118,7 @@ export const BaseTransactionRowRecipientLabel = ({
 		return (
 			<span>
 				<RecipientLabel type="multiPayment" />
-				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold">
+				<span className="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 					{transaction.recipients().length}
 				</span>
 			</span>

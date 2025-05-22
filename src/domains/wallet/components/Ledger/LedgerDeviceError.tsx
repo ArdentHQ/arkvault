@@ -49,10 +49,10 @@ export const LedgerDeviceErrorContent = ({
 				/>
 			</Alert>
 
-			<div className="inline-flex w-full items-center justify-center space-x-3">
+			<div className="inline-flex justify-center items-center space-x-3 w-full">
 				<Spinner />
 				<span
-					className="text-theme-secondary-text animate-pulse font-semibold"
+					className="font-semibold animate-pulse text-theme-secondary-text"
 					data-testid="LedgerWaitingDevice-loading_message"
 				>
 					{t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}

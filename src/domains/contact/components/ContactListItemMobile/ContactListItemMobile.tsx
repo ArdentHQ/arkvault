@@ -50,7 +50,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 				<MobileTableElement
 					title={contact.name()}
 					titleExtra={
-						<div className="flex items-center gap-3">
+						<div className="flex gap-3 items-center">
 							<Tooltip content={hasBalance ? "" : t("CONTACTS.VALIDATION.NO_BALANCE")}>
 								<Button
 									disabled={sendIsDisabled}
@@ -59,18 +59,18 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 										e.stopPropagation();
 										onSend(contact.addresses().first());
 									}}
-									className="text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 p-0 text-sm hover:underline"
+									className="p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
 									data-testid="ContactListItemMobileAddress__send-button"
 								>
 									{t("COMMON.SEND")}
 								</Button>
 							</Tooltip>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px" />
+							<span className="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 
 							<Dropdown
 								toggleContent={
-									<button type="button" className="text-theme-secondary-700 flex">
+									<button type="button" className="flex text-theme-secondary-700">
 										<Icon name="EllipsisVerticalFilled" size="md" />
 									</button>
 								}
@@ -81,7 +81,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 					}
 				>
 					<MobileTableElementRow title={t("COMMON.ADDRESS")}>
-						<div data-testid="ContactListItemMobile__addresses" className="w-full space-y-3">
+						<div data-testid="ContactListItemMobile__addresses" className="space-y-3 w-full">
 							{contact
 								.addresses()
 								.values()

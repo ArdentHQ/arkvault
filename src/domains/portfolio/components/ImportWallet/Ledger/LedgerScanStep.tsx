@@ -112,7 +112,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 					</TableCell>
 
 					<TableCell className="w-2/5" innerClassName="space-x-4">
-						<div className="flex w-32 flex-1">
+						<div className="flex flex-1 w-32">
 							<Address address={wallet.address} showCopyButton />
 						</div>
 						<span className="hidden">{wallet.path}</span>
@@ -135,7 +135,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 relative hidden rounded-xl border border-transparent sm:block">
+			<div className="hidden relative rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
 				<div>
 					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
 						{renderTableRow}
@@ -188,8 +188,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			</div>
 
 			<div className="sm:hidden">
-				<div className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3">
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-base font-semibold">
+				<div className="flex flex-row justify-between items-center px-3 mb-3 w-full h-9 border-l-2 border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800">
+					<span className="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 						{t("COMMON.ADDRESS")}
 					</span>
 					<label

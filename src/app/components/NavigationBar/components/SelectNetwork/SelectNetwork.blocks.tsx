@@ -11,11 +11,11 @@ export enum NetworkOption {
 
 export const MainnetOption = () => (
 	<>
-		<span className="border-theme-primary-300 bg-theme-primary-50 text-theme-primary-600 dark:border-theme-primary-500 dark:bg-theme-dark-900 rounded border-2 p-[3px]">
+		<span className="rounded border-2 border-theme-primary-300 bg-theme-primary-50 text-theme-primary-600 p-[3px] dark:border-theme-primary-500 dark:bg-theme-dark-900">
 			<Icon name="Mainnet" width={14} height={14} />
 		</span>
 
-		<span className="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm">
+		<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900">
 			Mainnet
 		</span>
 	</>
@@ -23,11 +23,11 @@ export const MainnetOption = () => (
 
 export const TestnetOption = () => (
 	<>
-		<span className="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent">
+		<span className="rounded border-2 dark:bg-transparent border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 p-[3px] dark:border-theme-danger-info-border dark:text-theme-danger-info-text">
 			<Icon name="Testnet" width={14} height={14} />
 		</span>
 
-		<span className="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm">
+		<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900">
 			Testnet
 		</span>
 	</>
@@ -44,7 +44,7 @@ export const NetworkDropdownOption = ({ isSelected, children }: { isSelected?: b
 export const SelectNetworkToggleButton = ({ isOpen, isMainnet }: { isOpen?: boolean; isMainnet?: boolean }) => (
 	<div className="group">
 		<Button
-			className="text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
+			className="p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
 			data-testid="NavigationBar__buttons--network"
 			size="icon"
 			variant="transparent"

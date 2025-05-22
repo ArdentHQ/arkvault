@@ -21,11 +21,11 @@ export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: Ledg
 
 				<div
 					data-testid="LedgerConfirmation-loading_message"
-					className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
+					className="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
 				>
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
-					<p className="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold">
+					<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
 						{t("TRANSACTION.PENDING.STATUS_TEXT")}
 					</p>
 				</div>

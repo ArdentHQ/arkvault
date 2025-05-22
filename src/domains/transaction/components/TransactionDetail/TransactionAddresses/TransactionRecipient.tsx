@@ -19,7 +19,7 @@ const ContractLabel = () => {
 			color="neutral"
 			size="xs"
 			noBorder
-			className="max-w-40 truncate rounded px-1 py-[2px] whitespace-nowrap dark:border"
+			className="px-1 whitespace-nowrap rounded dark:border max-w-40 truncate py-[2px]"
 			data-testid="TransactionRow__type"
 		>
 			<div className="flex items-center space-x-1.5">
@@ -43,7 +43,7 @@ export const TransactionRecipient = ({
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="flex justify-between items-center mt-3 space-x-2 w-full sm:justify-start sm:space-x-0">
 				<DetailTitle
 					className={cn(labelClassName, {
 						invisible: !showLabel,
@@ -98,24 +98,24 @@ export const TransactionRecipients = ({
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="flex justify-between items-center mt-3 space-x-2 w-full sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+					<span className="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 							({recipients.length}){" "}
 						</span>
 					</span>
-					<div className="hidden h-5 leading-[17px] sm:block sm:leading-5">
+					<div className="hidden h-5 sm:block sm:leading-5 leading-[17px]">
 						<Divider type="vertical" size="md" />
 					</div>
 
 					<Link
 						to={explorerLink}
 						isExternal
-						className="hidden h-5 text-sm leading-[17px] sm:block sm:text-base sm:leading-5"
+						className="hidden h-5 text-sm sm:block sm:text-base sm:leading-5 leading-[17px]"
 					>
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
 					</Link>
@@ -148,11 +148,11 @@ export const TransactionRecipientsModal = ({
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="flex justify-between items-center mt-3 space-x-2 w-full sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="inline-flex items-center gap-1 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+					<span className="inline-flex gap-1 items-center text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span
 							className="text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -169,7 +169,7 @@ export const TransactionRecipientsModal = ({
 						onClick={() => setShowModal(true)}
 						variant="transparent"
 						data-testid="TransactionRecipientsModal--ShowList"
-						className="text-theme-navy-600 decoration-theme-navy-600 p-0 text-sm leading-[17px] underline decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+						className="p-0 text-sm underline sm:text-base sm:leading-5 text-theme-navy-600 decoration-theme-navy-600 leading-[17px] decoration-dashed decoration-1 underline-offset-4"
 					>
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
 					</Button>

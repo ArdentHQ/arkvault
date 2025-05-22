@@ -53,7 +53,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 			<SearchBarInputWrapper
 				data-testid="HeaderSearchInput__input"
 				ref={reference}
-				className="border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 flex items-center overflow-hidden rounded-lg border px-4 text-base"
+				className="flex overflow-hidden items-center px-4 text-base rounded-lg border border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700"
 			>
 				<button
 					data-testid="HeaderSearchInput__input__reset"

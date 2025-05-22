@@ -3,7 +3,7 @@
 exports[`EmptyResults > should render with custom title and subtitle 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex h-full flex-col justify-center text-center"
+    class="flex flex-col justify-center h-full text-center bg-theme-background"
     data-testid="EmptyResults"
   >
     <div>
@@ -13,7 +13,7 @@ exports[`EmptyResults > should render with custom title and subtitle 1`] = `
         No results
       </div>
       <div
-        class="text-md mb-8"
+        class="mb-8 text-md"
       >
         No results found. Refine your search and try again.
       </div>
@@ -172,7 +172,7 @@ exports[`EmptyResults > should render with custom title and subtitle 1`] = `
 exports[`EmptyResults > should render with no texts 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex h-full flex-col justify-center text-center"
+    class="flex flex-col justify-center h-full text-center bg-theme-background"
     data-testid="EmptyResults"
   >
     <div>

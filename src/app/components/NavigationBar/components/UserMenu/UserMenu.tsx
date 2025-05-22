@@ -32,9 +32,9 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const renderAvatarSection = useCallback(
 		(isOpen: boolean) => (
-			<button className="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5">
+			<button className="flex gap-6 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200">
 				<div
-					className="relative cursor-pointer items-center justify-center rounded align-middle"
+					className="relative justify-center items-center align-middle rounded cursor-pointer"
 					data-testid="UserMenu"
 				>
 					<Avatar size="avatarMobile" highlight={isOpen}>
@@ -44,14 +44,14 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 									alt="Profile Avatar"
 									src={`data:image/svg+xml;utf8,${encodeURIComponent(avatarImage)}`}
 								/>
-								<span className="text-theme-background dark:text-theme-text absolute text-xs font-semibold">
+								<span className="absolute text-xs font-semibold text-theme-background dark:text-theme-text">
 									{userInitials}
 								</span>
 							</>
 						) : (
 							<img
 								alt="Profile Avatar"
-								className="h-6 w-6 rounded bg-cover bg-center bg-no-repeat object-cover"
+								className="object-cover w-6 h-6 bg-center bg-no-repeat bg-cover rounded"
 								src={avatarImage}
 							/>
 						)}
@@ -70,9 +70,9 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 			options={userMenuActions}
 			toggleContent={renderAvatarSection}
 			top={
-				<div className="bg-theme-secondary-100 text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden flex items-center justify-between px-6 py-3 text-sm leading-[17px] font-semibold">
+				<div className="flex justify-between items-center py-3 px-6 text-sm font-semibold bg-theme-secondary-100 text-theme-secondary-700 leading-[17px] md-lg:hidden dark:bg-theme-dark-950 dark:text-theme-dark-200">
 					<p>{t("COMMON.BALANCE")}:</p>
-					<div className="flex items-center gap-2">
+					<div className="flex gap-2 items-center">
 						<HideBalance className="md-lg:hidden" profile={profile} />
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>

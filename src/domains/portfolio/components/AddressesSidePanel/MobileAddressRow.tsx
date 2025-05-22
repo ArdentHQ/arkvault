@@ -69,7 +69,7 @@ export const MobileAddressRow = ({
 								onClick={() => onDelete(wallet.address())}
 								data-testid={`AddressRow--delete-${wallet.address()}`}
 								size="icon"
-								className="text-theme-secondary-700 hover:bg-theme-danger-400 dark:text-theme-secondary-500 p-1 hover:text-white dark:hover:text-white"
+								className="p-1 hover:text-white text-theme-secondary-700 dark:text-theme-secondary-500 dark:hover:text-white hover:bg-theme-danger-400"
 								variant="transparent"
 							>
 								<Icon name="Trash" dimensions={[16, 16]} />
@@ -81,14 +81,14 @@ export const MobileAddressRow = ({
 								data-testid="icon-MarkedTrash"
 								name="MarkedTrash"
 								dimensions={[16, 16]}
-								className="text-theme-secondary-500 dark:text-theme-dark-500 p-1"
+								className="p-1 text-theme-secondary-500 dark:text-theme-dark-500"
 							/>
 						)}
 					</div>
 				}
 			>
 				<div className={cn("sm:w-full sm:p-0")}>
-					<div className="space-y-4 px-4 pt-3 pb-4 sm:hidden">
+					<div className="px-4 pt-3 pb-4 space-y-4 sm:hidden">
 						<InfoDetail
 							label="Address"
 							body={
@@ -105,21 +105,21 @@ export const MobileAddressRow = ({
 								<Amount
 									ticker={wallet.network().ticker()}
 									value={wallet.balance()}
-									className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
+									className="text-sm font-semibold text-theme-secondary-900 leading-[17px] dark:text-theme-secondary-200"
 								/>
 							}
 						/>
 					</div>
 					{!!errorMessage && (
-						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 flex space-x-4 rounded-b-sm px-4 py-3">
-							<div className="mx-[2px] mt-1 flex w-5 justify-center">
+						<div className="flex py-3 px-4 space-x-4 rounded-b-sm bg-theme-danger-50 dark:bg-theme-dark-800">
+							<div className="flex justify-center mt-1 w-5 mx-[2px]">
 								<Icon
 									name="CircleCross"
 									className="text-theme-danger-700 dark:text-theme-danger-400"
 									size="md"
 								/>
 							</div>
-							<p className="text-theme-secondary-700 dark:text-theme-dark-50 max-w-60 text-sm">
+							<p className="text-sm text-theme-secondary-700 max-w-60 dark:text-theme-dark-50">
 								{errorMessage}
 							</p>
 						</div>

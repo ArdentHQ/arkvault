@@ -28,7 +28,7 @@ export const TransactionType = ({
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3 sm:space-y-0">
-					<div className="flex w-full justify-between sm:justify-start">
+					<div className="flex justify-between w-full sm:justify-start">
 						<DetailLabelText>{t("COMMON.METHOD")}</DetailLabelText>
 						<Label color="neutral" size="xs">
 							{getLabel(transaction.type())}
@@ -39,10 +39,10 @@ export const TransactionType = ({
 						<>
 							<DetailDivider />
 
-							<div className="flex w-full justify-between sm:justify-start">
+							<div className="flex justify-between w-full sm:justify-start">
 								<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
-								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
+								<div className="min-w-0 font-semibold leading-5 no-ligatures truncate">
 									{transaction.username()}
 								</div>
 							</div>
@@ -53,10 +53,10 @@ export const TransactionType = ({
 						<>
 							<DetailDivider />
 
-							<div className="flex w-full justify-between sm:justify-start">
+							<div className="flex justify-between w-full sm:justify-start">
 								<DetailLabelText>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
-								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
+								<div className="min-w-0 font-semibold leading-5 no-ligatures truncate">
 									{validatorPublickey(transaction)}
 								</div>
 							</div>

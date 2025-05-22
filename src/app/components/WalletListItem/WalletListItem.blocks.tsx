@@ -61,12 +61,12 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 			tabIndex={onClick ? 0 : -1}
 			onClick={onClick}
 		>
-			<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
+			<div className="flex flex-col gap-1.5 justify-center items-start p-4 w-full h-full">
 				<div className="flex flex-row gap-1.5">
-					<span className="text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm font-semibold">
+					<span className="text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-secondary-200">
 						<TruncateEnd text={name} maxChars={maxCharacters} showTooltip={name.length > maxCharacters} />
 					</span>
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold">
+					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 						({type})
 					</span>
 				</div>
@@ -117,17 +117,17 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 			onClick={onClick}
 		>
 			<div className="flex flex-col gap-2 pt-2 pl-2">
-				<span className="text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 w-full max-w-48 truncate text-sm font-semibold sm:max-w-128">
+				<span className="w-full text-sm font-semibold text-theme-secondary-900 xs:max-w-80 max-w-48 truncate sm:max-w-128 dark:text-theme-secondary-200">
 					{name}
 				</span>
-				<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-xs font-semibold">
+				<span className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 					{address}
 				</span>
 			</div>
 
-			<div className="bg-theme-primary-500 flex flex-row items-center justify-between overflow-hidden rounded-lg text-sm font-semibold text-white">
+			<div className="flex overflow-hidden flex-row justify-between items-center text-sm font-semibold text-white rounded-lg bg-theme-primary-500">
 				<div className="pl-2">{balance}</div>
-				<button className="bg-theme-primary-600 flex h-full items-center justify-center px-5 py-3">
+				<button className="flex justify-center items-center py-3 px-5 h-full bg-theme-primary-600">
 					{t("COMMON.SELECT")}
 				</button>
 			</div>

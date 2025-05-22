@@ -10,17 +10,17 @@ interface SlideProperties {
 }
 
 const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => (
-	<div className="flex w-full flex-row md:w-auto lg:flex-col">
-		<div className="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]">
-			<h3 className="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]">
+	<div className="flex flex-row w-full md:w-auto lg:flex-col">
+		<div className="p-4 w-full sm:p-6 md:pr-0 md:pb-0 sm:shrink-0 md:w-[360px] lg:w-[450px]">
+			<h3 className="mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl xs:leading-5 lg:leading-[29px]">
 				{title}
 			</h3>
-			<p className="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7">
+			<p className="mb-0 text-sm md:mb-4 lg:text-base lg:leading-7 text-theme-secondary-700 dark:text-theme-secondary-500">
 				{subtitle}
 			</p>
 		</div>
-		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">
-			<div className="hidden aspect-[1.097] h-full w-full lg:block">
+		<div className="hidden overflow-hidden flex-1 justify-end md:flex rounded-ee-xl">
+			<div className="hidden w-full h-full lg:block aspect-[1.097]">
 				<Image name={imageName} alt={title} domain="profile" />
 			</div>
 			<Image
@@ -44,7 +44,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		customPaging: () => (
-			<button className="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
+			<button className="w-3 h-3 rounded-full border-2 hover:border-transparent border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 dark:hover:border-transparent hover:bg-theme-navy-700" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6",

@@ -15,8 +15,8 @@ import { FormButtons } from "@/app/components/Form";
 const Banner = ({ step }: { step: WelcomeModalStep }) => {
 	if (step > WelcomeModalStep.Introduction) {
 		return (
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-10 my-8 border-t border-b">
-				<Image name={`WelcomeModalStep${step - 1}`} domain="profile" className="h-auto w-full" />
+			<div className="my-8 -mx-10 border-t border-b border-theme-secondary-300 dark:border-theme-secondary-800">
+				<Image name={`WelcomeModalStep${step - 1}`} domain="profile" className="w-full h-auto" />
 			</div>
 		);
 	}
@@ -38,18 +38,18 @@ export const WelcomeModal = ({ environment, profile }: { environment: Environmen
 			onClose={onClose}
 		>
 			<div className="w-full">
-				<div className="text-theme-secondary-text text-base leading-7">
+				<div className="text-base leading-7 text-theme-secondary-text">
 					<p>{t(`PROFILE.MODAL_WELCOME.STEP_${step}.DESCRIPTION`)}</p>
 				</div>
 
-				<div className="flex items-center justify-between sm:space-x-3">
+				<div className="flex justify-between items-center sm:space-x-3">
 					{step === WelcomeModalStep.Introduction ? (
-						<label className="text-theme-secondary-500 dark:text-theme-secondary-700 mt-8 inline-flex cursor-pointer items-center space-x-3 text-sm">
+						<label className="inline-flex items-center mt-8 space-x-3 text-sm cursor-pointer text-theme-secondary-500 dark:text-theme-secondary-700">
 							<Checkbox checked={!showAgain} onChange={toggleShowAgain} />
 							<span>{t("PROFILE.MODAL_WELCOME.DONT_SHOW_CHECKBOX_LABEL")}</span>
 						</label>
 					) : (
-						<div className="mt-8 hidden sm:flex">
+						<div className="hidden mt-8 sm:flex">
 							<DotNavigation
 								size={WelcomeModalStep.StepLast - 1}
 								activeIndex={step - 2}

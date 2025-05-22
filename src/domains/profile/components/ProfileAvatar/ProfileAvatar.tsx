@@ -25,7 +25,7 @@ export const ProfileAvatar = ({ profile, size = "lg" }: ProfileAvatarProperties)
 			<img
 				data-testid="ProfileAvatar__image"
 				src={profile.avatar()}
-				className="h-20 w-20 rounded bg-cover bg-center bg-no-repeat object-cover"
+				className="object-cover w-20 h-20 bg-center bg-no-repeat bg-cover rounded"
 				title={profile.name()}
 				alt={profile.name()}
 			/>

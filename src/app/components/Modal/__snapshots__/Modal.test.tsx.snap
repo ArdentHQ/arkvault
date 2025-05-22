@@ -3,22 +3,22 @@
 exports[`Modal > should closed by the Esc key 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -56,7 +56,7 @@ exports[`Modal > should closed by the Esc key 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -64,7 +64,7 @@ exports[`Modal > should closed by the Esc key 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -78,22 +78,22 @@ exports[`Modal > should not render if not open 1`] = `<DocumentFragment />`;
 exports[`Modal > should render a 3x large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-3xl"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-3xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -131,7 +131,7 @@ exports[`Modal > should render a 3x large one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -139,7 +139,7 @@ exports[`Modal > should render a 3x large one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -151,22 +151,22 @@ exports[`Modal > should render a 3x large one 1`] = `
 exports[`Modal > should render a 4x large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-4xl"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-4xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -204,7 +204,7 @@ exports[`Modal > should render a 4x large one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -212,7 +212,7 @@ exports[`Modal > should render a 4x large one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -224,22 +224,22 @@ exports[`Modal > should render a 4x large one 1`] = `
 exports[`Modal > should render a 5x large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-5xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -277,7 +277,7 @@ exports[`Modal > should render a 5x large one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -285,7 +285,7 @@ exports[`Modal > should render a 5x large one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -297,22 +297,22 @@ exports[`Modal > should render a 5x large one 1`] = `
 exports[`Modal > should render a large one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-lg"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-lg"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -350,7 +350,7 @@ exports[`Modal > should render a large one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -358,7 +358,7 @@ exports[`Modal > should render a large one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -370,22 +370,22 @@ exports[`Modal > should render a large one 1`] = `
 exports[`Modal > should render a medium one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-md"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-md"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -423,7 +423,7 @@ exports[`Modal > should render a medium one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -431,7 +431,7 @@ exports[`Modal > should render a medium one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -443,22 +443,22 @@ exports[`Modal > should render a medium one 1`] = `
 exports[`Modal > should render a modal with banner 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -496,23 +496,23 @@ exports[`Modal > should render a modal with banner 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <div
-            class="relative -mx-10 -mt-10 mb-10 h-56"
+            class="relative -mx-10 mb-10 -mt-10 h-56"
           >
             <div
               class="absolute bottom-0 left-0 mb-10 ml-10"
             >
               <h2
-                class="m-0 text-4xl leading-tight font-extrabold text-theme-text"
+                class="m-0 text-4xl font-extrabold leading-tight text-theme-text"
               >
                 ark
               </h2>
             </div>
           </div>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>
@@ -526,22 +526,22 @@ exports[`Modal > should render a modal with banner 1`] = `
 exports[`Modal > should render a modal with content 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -579,7 +579,7 @@ exports[`Modal > should render a modal with content 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -587,7 +587,7 @@ exports[`Modal > should render a modal with content 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>
@@ -601,22 +601,22 @@ exports[`Modal > should render a modal with content 1`] = `
 exports[`Modal > should render a modal with description 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -654,7 +654,7 @@ exports[`Modal > should render a modal with description 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -662,10 +662,10 @@ exports[`Modal > should render a modal with description 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             <div
-              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
+              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
             >
               This is the Modal description
             </div>
@@ -680,22 +680,22 @@ exports[`Modal > should render a modal with description 1`] = `
 exports[`Modal > should render a modal with overlay 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -733,7 +733,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -741,7 +741,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>
@@ -755,22 +755,22 @@ exports[`Modal > should render a modal with overlay 1`] = `
 exports[`Modal > should render a modal with overlay 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -808,7 +808,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -816,7 +816,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>
@@ -830,22 +830,22 @@ exports[`Modal > should render a modal with overlay 2`] = `
 exports[`Modal > should render a small one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-sm"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-sm"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -883,7 +883,7 @@ exports[`Modal > should render a small one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -891,7 +891,7 @@ exports[`Modal > should render a small one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -903,22 +903,22 @@ exports[`Modal > should render a small one 1`] = `
 exports[`Modal > should render a xlarge one 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-xl"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -956,7 +956,7 @@ exports[`Modal > should render a xlarge one 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -964,7 +964,7 @@ exports[`Modal > should render a xlarge one 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           />
         </div>
       </div>
@@ -976,22 +976,22 @@ exports[`Modal > should render a xlarge one 1`] = `
 exports[`Modal > should render with scrollbar if it exceeds window height 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-auto fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1029,7 +1029,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -1037,7 +1037,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>
@@ -1051,19 +1051,19 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
 exports[`Modal > should render without close button 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -1071,7 +1071,7 @@ exports[`Modal > should render without close button 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>
@@ -1085,22 +1085,22 @@ exports[`Modal > should render without close button 1`] = `
 exports[`Modal > should render without offset for buttons 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
+    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
     data-testid="Modal__overlay"
   >
     <div
-      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
+      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
       tabindex="-1"
     >
       <div
-        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8 pb-24"
+        class="flex overflow-hidden relative flex-col px-6 pt-4 pb-24 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
         data-testid="Modal__inner"
       >
         <div
-          class="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
+          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
+            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1138,7 +1138,7 @@ exports[`Modal > should render without offset for buttons 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-1.5"
+          class="flex relative flex-col flex-1 space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -1146,7 +1146,7 @@ exports[`Modal > should render without offset for buttons 1`] = `
             ark
           </h2>
           <div
-            class="flex flex-1 flex-col"
+            class="flex flex-col flex-1"
           >
             This is the Modal content
           </div>

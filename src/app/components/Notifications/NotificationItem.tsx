@@ -24,7 +24,7 @@ export const NotificationItem = ({
 			containment={containmentRef?.current}
 		>
 			<div>
-				<span className="text-md text-theme-secondary-600 font-bold">{name}</span>
+				<span className="font-bold text-md text-theme-secondary-600">{name}</span>
 				<span className="text-md text-theme-secondary-600"> {body}</span>
 			</div>
 		</VisibilitySensor>
@@ -32,15 +32,15 @@ export const NotificationItem = ({
 
 	return (
 		<tr data-testid="NotificationItem">
-			<td className="h-8 w-8">
-				<div className="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white" />
+			<td className="w-8 h-8">
+				<div className="flex justify-center items-center my-2 mr-4 w-8 h-8 text-white align-middle rounded-lg bg-logo" />
 			</td>
 			<td>{renderVisibilitySensor()}</td>
 			<td>
 				{action && action.label && (
 					<div
 						data-testid="NotificationItem__action"
-						className="text-md text-theme-primary-500 cursor-pointer text-right font-bold"
+						className="font-bold text-right cursor-pointer text-md text-theme-primary-500"
 						onClick={() => onAction?.(id)}
 					>
 						{action.label}

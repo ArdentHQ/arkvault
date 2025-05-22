@@ -4,13 +4,13 @@ exports[`Card > should handle click 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
+      class="relative p-5 w-full h-full text-left rounded-lg border-2 duration-200 cursor-pointer border-theme-primary-100 bg-theme-background transition-colors-shadow outline-hidden dark:border-theme-secondary-800 focus-visible:border-theme-primary-400 focus-visible:outline-hidden"
       data-testid="Card"
       type="button"
     >
       Test
       <div
-        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+        class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
       />
     </button>
   </div>
@@ -21,13 +21,13 @@ exports[`Card > should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
+      class="relative p-5 w-full h-full text-left rounded-lg border-2 duration-200 cursor-pointer border-theme-primary-100 bg-theme-background transition-colors-shadow outline-hidden dark:border-theme-secondary-800 focus-visible:border-theme-primary-400 focus-visible:outline-hidden"
       data-testid="Card"
       tabindex="-1"
       type="button"
     >
       <div
-        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+        class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
       />
     </button>
   </div>
@@ -38,13 +38,13 @@ exports[`Card > should render with custom options 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
+      class="relative p-5 w-full h-full text-left rounded-lg border-2 duration-200 cursor-pointer border-theme-primary-100 bg-theme-background transition-colors-shadow outline-hidden dark:border-theme-secondary-800 focus-visible:border-theme-primary-400 focus-visible:outline-hidden"
       data-testid="Card"
       type="button"
     >
       Test
       <div
-        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+        class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
       >
         <div
           aria-controls=":r0:"
@@ -53,10 +53,10 @@ exports[`Card > should render with custom options 1`] = `
           data-testid="dropdown__toggle"
         >
           <div
-            class="flex w-4 justify-center overflow-hidden"
+            class="flex overflow-hidden justify-center w-4"
           >
             <div
-              class="text-theme-primary-300 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 cursor-pointer p-1 transition-colors duration-200"
+              class="p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 hover:text-theme-primary-400"
             >
               <div
                 style="height: 16px; width: 16px;"

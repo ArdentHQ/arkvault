@@ -31,10 +31,10 @@ export const NotificationTransactionItemMobile = ({
 	return (
 		<VisibilitySensor scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<td className="flex-col space-y-4 px-6 py-4" data-testid="NotificationTransactionItemMobile">
+				<td className="flex-col py-4 px-6 space-y-4" data-testid="NotificationTransactionItemMobile">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
-						<div className="xs:w-50 w-40 min-[480px]:w-2/3">
+						<div className="w-40 xs:w-50 min-[480px]:w-2/3">
 							<Address address={transaction.from()} walletName={alias} />
 						</div>
 					</RowWrapper>

@@ -9,7 +9,7 @@ interface QRCameraReaderProperties {
 
 export const QRCameraReader = ({ onError, onRead, onReady }: QRCameraReaderProperties) => (
 	<QrReader
-		className="h-full w-full"
+		className="w-full h-full"
 		videoContainerStyle={{ height: "100%", paddingTop: 0, width: "100%" }}
 		videoStyle={{ objectFit: "cover" }}
 		constraints={{ facingMode: "environment" }}

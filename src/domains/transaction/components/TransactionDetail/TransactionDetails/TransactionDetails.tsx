@@ -56,27 +56,27 @@ export const TransactionDetails = ({
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
 			<div className="space-y-3 sm:space-y-0">
-				<div className="flex w-full justify-between sm:justify-start">
+				<div className="flex justify-between w-full sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
-					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">{timestamp}</div>
+					<div className="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]">{timestamp}</div>
 				</div>
 
 				<DetailDivider />
 
-				<div className="flex w-full justify-between sm:justify-start">
+				<div className="flex justify-between w-full sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
 					{transaction.blockHash() && (
 						<Link
 							isExternal
 							to={transactionWallet.link().block(transaction.blockHash())}
-							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+							className="h-5 text-sm sm:text-base sm:leading-5 leading-[17px]"
 						>
 							{blockHeight}
 						</Link>
 					)}
 
 					{!transaction.blockHash() && (
-						<p className="text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5">
+						<p className="text-sm sm:text-base sm:leading-5 text-theme-secondary-500 leading-[17px]">
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>
 					)}
@@ -84,9 +84,9 @@ export const TransactionDetails = ({
 
 				<DetailDivider />
 
-				<div className="flex w-full justify-between sm:justify-start">
+				<div className="flex justify-between w-full sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+					<div className="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]">
 						{transaction.nonce().toString()}
 					</div>
 				</div>

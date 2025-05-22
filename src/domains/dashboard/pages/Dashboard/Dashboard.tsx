@@ -97,7 +97,7 @@ export const Dashboard = ({
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
-			<Section className="pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
+			<Section className="pb-0 md:px-0 md:pb-4 xl:mx-auto first:pt-0" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
 				{activeProfile.wallets().count() > 0 && (
 					<PortfolioHeader
 						profile={activeProfile}

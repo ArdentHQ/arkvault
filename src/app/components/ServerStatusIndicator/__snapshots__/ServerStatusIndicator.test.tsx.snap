@@ -12,7 +12,7 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -20,7 +20,7 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -42,10 +42,10 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-warning-600"
+                class="w-1.5 h-1.5 rounded-full bg-theme-warning-600"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -76,7 +76,7 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -98,10 +98,10 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -132,7 +132,7 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -154,10 +154,10 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
               />
             </div>
           </div>
@@ -180,7 +180,7 @@ exports[`Server Status Indicator > should render default 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -188,7 +188,7 @@ exports[`Server Status Indicator > should render default 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -210,10 +210,10 @@ exports[`Server Status Indicator > should render default 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-gray-100"
+                class="w-1.5 h-1.5 rounded-full bg-theme-gray-100"
               />
             </div>
           </div>
@@ -236,7 +236,7 @@ exports[`Server Status Indicator > should render in lg 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -244,7 +244,7 @@ exports[`Server Status Indicator > should render in lg 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -266,10 +266,10 @@ exports[`Server Status Indicator > should render in lg 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
               />
             </div>
           </div>
@@ -292,7 +292,7 @@ exports[`Server Status Indicator > should render in md 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -300,7 +300,7 @@ exports[`Server Status Indicator > should render in md 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -322,10 +322,10 @@ exports[`Server Status Indicator > should render in md 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
               />
             </div>
           </div>
@@ -348,7 +348,7 @@ exports[`Server Status Indicator > should render in sm 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -356,7 +356,7 @@ exports[`Server Status Indicator > should render in sm 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -378,10 +378,10 @@ exports[`Server Status Indicator > should render in sm 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
               />
             </div>
           </div>
@@ -404,7 +404,7 @@ exports[`Server Status Indicator > should render in xl 1`] = `
         class="custom-button-nav-wrapper group"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons--server-status"
           type="button"
         >
@@ -412,7 +412,7 @@ exports[`Server Status Indicator > should render in xl 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="m-0 p-1"
+              class="p-1 m-0"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -434,10 +434,10 @@ exports[`Server Status Indicator > should render in xl 1`] = `
               </div>
             </div>
             <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+              class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
             >
               <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
               />
             </div>
           </div>

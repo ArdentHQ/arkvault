@@ -27,7 +27,7 @@ const ExplorerLink = ({ value, explorerMask }: ExplorerLinkProperties) => {
 
 	if (explorerMask) {
 		return (
-			<span data-testid="ExplorerLink" ref={reference} className="w-full overflow-hidden">
+			<span data-testid="ExplorerLink" ref={reference} className="overflow-hidden w-full">
 				<Link to={explorerUrl(value, explorerMask)} isExternal>
 					<TruncateMiddleDynamic
 						value={value}
@@ -57,7 +57,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 		<div className="flex items-center space-x-2 text-lg font-semibold whitespace-nowrap">
 			<ExplorerLink value={address} explorerMask={explorerMask} />
 
-			<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
+			<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 				<Clipboard variant="icon" data={address}>
 					<Icon name="Copy" />
 				</Clipboard>
@@ -74,7 +74,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 			<div className="flex items-center space-x-2 text-lg font-semibold whitespace-nowrap">
 				<ExplorerLink value={hash} explorerMask={explorerMask} />
 
-				<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
+				<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 					<Clipboard variant="icon" data={hash}>
 						<Icon name="Copy" />
 					</Clipboard>
@@ -85,10 +85,10 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 	return (
 		<div data-testid="ExchangeForm__confirmation-step" className="flex flex-col">
-			<div className="mx-auto mb-8 hidden items-center space-x-3 sm:flex">
+			<div className="hidden items-center mx-auto mb-8 space-x-3 sm:flex">
 				<ThemeIcon lightIcon="CircleCompletedLight" darkIcon="CircleCompletedDark" dimensions={[32, 32]} />
 
-				<h2 className="m-0 text-2xl leading-[29px] font-bold">
+				<h2 className="m-0 text-2xl font-bold leading-[29px]">
 					{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_COMPLETED")}
 				</h2>
 			</div>
@@ -96,7 +96,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 			<div className="space-y-6 sm:space-y-8">
 				<div className="flex flex-col space-y-4 sm:space-y-5">
 					<div className="flex items-center space-x-3">
-						<span className="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold">
+						<span className="flex justify-center items-center w-6 h-6 text-sm font-semibold rounded bg-theme-navy-100 leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 							1
 						</span>
 						<h3 className="m-0 text-lg font-bold">
@@ -107,13 +107,13 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 					</div>
 
 					<div className="flex sm:space-x-6">
-						<div className="bg-theme-secondary-200 hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl sm:flex dark:bg-black">
+						<div className="hidden justify-center items-center w-24 h-24 rounded-xl sm:flex dark:bg-black bg-theme-secondary-200 shrink-0">
 							<Image name="Wallet" domain="exchange" className="w-12" />
 						</div>
 
-						<div className="flex flex-1 flex-col space-y-4 overflow-hidden">
+						<div className="flex overflow-hidden flex-col flex-1 space-y-4">
 							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{t("EXCHANGE.EXCHANGE_FORM.INPUT_TRANSACTION_ID")}
 								</span>
 
@@ -121,7 +121,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 							</div>
 
 							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_ADDRESS", {
 										currency: toCurrency?.coin.toUpperCase(),
 									})}
@@ -131,13 +131,13 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 							</div>
 
 							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{t("EXCHANGE.EXCHANGE_FORM.AMOUNT_SENT")}
 								</span>
 
 								<Label color="danger" className="mr-auto whitespace-nowrap">
 									<Amount
-										className="leading-5 font-semibold"
+										className="font-semibold leading-5"
 										value={exchangeTransaction.input().amount}
 										ticker={exchangeTransaction.input().ticker}
 										isNegative
@@ -149,11 +149,11 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 					</div>
 				</div>
 
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-10 border-t border-dashed px-10" />
+				<div className="px-10 -mx-10 border-t border-dashed border-theme-secondary-300 dark:border-theme-secondary-800" />
 
 				<div className="flex flex-col space-y-4 sm:space-y-5">
 					<div className="flex items-center space-x-3">
-						<span className="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold">
+						<span className="flex justify-center items-center w-6 h-6 text-sm font-semibold rounded bg-theme-navy-100 leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 							2
 						</span>
 						<h3 className="m-0 text-lg font-bold">
@@ -164,13 +164,13 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 					</div>
 
 					<div className="flex sm:space-x-6">
-						<div className="bg-theme-secondary-200 hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl sm:flex dark:bg-black">
+						<div className="hidden justify-center items-center w-24 h-24 rounded-xl sm:flex dark:bg-black bg-theme-secondary-200 shrink-0">
 							<Image name="Exchange" domain="exchange" className="w-12" />
 						</div>
 
-						<div className="flex flex-1 flex-col space-y-4 overflow-hidden">
-							<div className="flex w-full flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+						<div className="flex overflow-hidden flex-col flex-1 space-y-4">
+							<div className="flex flex-col space-y-2 w-full">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{t("EXCHANGE.EXCHANGE_FORM.OUTPUT_TRANSACTION_ID")}
 								</span>
 
@@ -178,7 +178,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 							</div>
 
 							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{t("EXCHANGE.EXCHANGE_FORM.YOUR_ADDRESS", {
 										currency: toCurrency?.coin.toUpperCase(),
 									})}
@@ -188,13 +188,13 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 							</div>
 
 							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{t("EXCHANGE.EXCHANGE_FORM.AMOUNT_RECEIVED")}
 								</span>
 
 								<Label color="success" className="mr-auto whitespace-nowrap">
 									<Amount
-										className="leading-5 font-semibold"
+										className="font-semibold leading-5"
 										value={exchangeTransaction.output().amount}
 										ticker={exchangeTransaction.output().ticker}
 										showSign

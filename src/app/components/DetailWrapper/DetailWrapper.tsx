@@ -27,7 +27,7 @@ export const DetailLabelText = ({
 export const DetailLabel = ({ children }: { children: ReactNode }) => (
 	<div
 		data-testid="DetailLabel"
-		className="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+		className="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
 	>
 		<DetailLabelText isHeader>{children}</DetailLabelText>
 	</div>
@@ -55,10 +55,10 @@ export const DetailWrapper = ({
 				},
 			)}
 		>
-			<div className="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">{children}</div>
+			<div className="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4">{children}</div>
 
 			{footer && (
-				<div className="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3">
+				<div className="flex flex-col py-3 px-6 w-full bg-theme-secondary-300 dark:bg-theme-secondary-800">
 					{footer}
 				</div>
 			)}
@@ -88,18 +88,18 @@ export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNo
 );
 
 export const DetailDivider = (): ReactNode => (
-	<div className="hidden h-8 w-full items-center in-[.condensed]:h-3 in-[.condensed]:leading-3 sm:flex">
-		<div className="h-full w-full in-[.condensed]:hidden">
+	<div className="hidden items-center w-full h-8 sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3">
+		<div className="w-full h-full in-[.condensed]:hidden">
 			<Divider dashed />
 		</div>
 	</div>
 );
 
 export const DetailPadded = ({ children }: { children: React.ReactNode }) => (
-	<div className="group flex">
-		<div className="hidden sm:ml-3 sm:flex">
-			<div className="min-w-9 flex-row pr-3">
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2" />
+	<div className="flex group">
+		<div className="hidden sm:flex sm:ml-3">
+			<div className="flex-row pr-3 min-w-9">
+				<div className="-mt-2 w-full h-6 rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800" />
 				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden" />
 			</div>
 		</div>

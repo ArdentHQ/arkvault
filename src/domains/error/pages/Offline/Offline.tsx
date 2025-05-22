@@ -15,7 +15,7 @@ export const Offline = () => {
 			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
 			<Section className="flex flex-1 flex-col justify-center pt-0! text-center">
-				<div className="mx-auto flex w-full max-w-xs justify-center">
+				<div className="flex justify-center mx-auto w-full max-w-xs">
 					<Image name="ConnectionError" domain="error" />
 				</div>
 

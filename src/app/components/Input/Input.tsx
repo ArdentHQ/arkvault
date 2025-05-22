@@ -146,7 +146,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 		return (
 			<>
 				{suggestion && (
-					<div ref={hiddenReference} className="invisible fixed w-auto whitespace-nowrap">
+					<div ref={hiddenReference} className="fixed invisible w-auto whitespace-nowrap">
 						{value}…
 					</div>
 				)}

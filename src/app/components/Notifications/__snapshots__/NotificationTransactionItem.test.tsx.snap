@@ -6,40 +6,40 @@ exports[`Notifications > should render in xs 1`] = `
     <tbody>
       <div>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group"
+          class="table-row border-b border-dashed transition-colors duration-100 cursor-pointer last:border-b-0 border-theme-secondary-300 table-row-unselected group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="NotificationTransactionItemMobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <div
-                class="xs:w-50 w-40 min-[480px]:w-2/3"
+                class="w-40 xs:w-50 min-[480px]:w-2/3"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text"
+                    class="text-base font-semibold text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Address__address"
                   >
                     0x93485b57ff3DeD81430D08579142fAe8234c6A17
@@ -48,22 +48,22 @@ exports[`Notifications > should render in xs 1`] = `
               </div>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <div
-                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex h-full items-center space-x-1"
+                  class="flex items-center space-x-1 h-full"
                 >
                   <span
-                    class="whitespace-nowrap text-sm"
+                    class="text-sm whitespace-nowrap"
                     data-testid="Amount"
                   >
                     + 2 ARK
@@ -85,40 +85,40 @@ exports[`Notifications > should render in xs 2`] = `
     <tbody>
       <div>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group"
+          class="table-row border-b border-dashed transition-colors duration-100 cursor-pointer last:border-b-0 border-theme-secondary-300 table-row-unselected group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="NotificationTransactionItemMobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <div
-                class="xs:w-50 w-40 min-[480px]:w-2/3"
+                class="w-40 xs:w-50 min-[480px]:w-2/3"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text"
+                    class="text-base font-semibold text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Address__address"
                   >
                     0x93485b57ff3DeD81430D08579142fAe8234c6A17
@@ -127,22 +127,22 @@ exports[`Notifications > should render in xs 2`] = `
               </div>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <div
-                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex h-full items-center space-x-1"
+                  class="flex items-center space-x-1 h-full"
                 >
                   <span
-                    class="whitespace-nowrap text-sm"
+                    class="text-sm whitespace-nowrap"
                     data-testid="Amount"
                   >
                     + 2 ARK
@@ -164,41 +164,41 @@ exports[`Notifications > should render in xs 3`] = `
     <tbody>
       <div>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+          class="table-row relative border-b border-dashed transition-colors duration-100 cursor-pointer last:border-b-0 border-theme-secondary-300 table-row-unselected group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+              class="flex static items-center px-3 pl-6 my-1 mx-0 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
-                class="absolute top-0 bottom-0 left-2 flex items-center"
+                class="flex absolute top-0 bottom-0 left-2 items-center"
               >
                 <div
-                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
+                  class="w-2 h-2 rounded-full bg-theme-danger-400"
                 />
               </div>
               <div
-                class="w-20 flex-1"
+                class="flex-1 w-20"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text"
+                    class="text-base font-semibold text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Address__address"
                   >
                     0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -209,7 +209,7 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+              class="flex justify-end items-center px-3 my-1 font-semibold whitespace-nowrap transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:group-hover:bg-theme-dark-950 dark:text-theme-secondary-500 group-hover:bg-theme-secondary-200"
             >
               <span
                 data-testid="TimeAgo"
@@ -220,20 +220,20 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+              class="flex static justify-end items-center px-3 pr-6 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
                 class="h-5"
               >
                 <div
-                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                  class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex h-full items-center space-x-1"
+                    class="flex items-center space-x-1 h-full"
                   >
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       + 2 ARK
@@ -241,7 +241,7 @@ exports[`Notifications > should render in xs 3`] = `
                   </div>
                 </div>
                 <div
-                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                  class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
                 />
               </div>
             </div>
@@ -259,41 +259,41 @@ exports[`Notifications > should render in xs 4`] = `
     <tbody>
       <div>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+          class="table-row relative border-b border-dashed transition-colors duration-100 cursor-pointer last:border-b-0 border-theme-secondary-300 table-row-unselected group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+              class="flex static items-center px-3 pl-6 my-1 mx-0 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
-                class="absolute top-0 bottom-0 left-2 flex items-center"
+                class="flex absolute top-0 bottom-0 left-2 items-center"
               >
                 <div
-                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
+                  class="w-2 h-2 rounded-full bg-theme-danger-400"
                 />
               </div>
               <div
-                class="w-20 flex-1"
+                class="flex-1 w-20"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text"
+                    class="text-base font-semibold text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Address__address"
                   >
                     0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -304,7 +304,7 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+              class="flex justify-end items-center px-3 my-1 font-semibold whitespace-nowrap transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:group-hover:bg-theme-dark-950 dark:text-theme-secondary-500 group-hover:bg-theme-secondary-200"
             >
               <span
                 data-testid="TimeAgo"
@@ -315,20 +315,20 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+              class="flex static justify-end items-center px-3 pr-6 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
                 class="h-5"
               >
                 <div
-                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                  class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex h-full items-center space-x-1"
+                    class="flex items-center space-x-1 h-full"
                   >
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       + 2 ARK
@@ -336,7 +336,7 @@ exports[`Notifications > should render in xs 4`] = `
                   </div>
                 </div>
                 <div
-                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                  class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
                 />
               </div>
             </div>
@@ -354,41 +354,41 @@ exports[`Notifications > should render in xs 5`] = `
     <tbody>
       <div>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+          class="table-row relative border-b border-dashed transition-colors duration-100 cursor-pointer last:border-b-0 border-theme-secondary-300 table-row-unselected group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+              class="flex static items-center px-3 pl-6 my-1 mx-0 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
-                class="absolute top-0 bottom-0 left-2 flex items-center"
+                class="flex absolute top-0 bottom-0 left-2 items-center"
               >
                 <div
-                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
+                  class="w-2 h-2 rounded-full bg-theme-danger-400"
                 />
               </div>
               <div
-                class="w-20 flex-1"
+                class="flex-1 w-20"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text"
+                    class="text-base font-semibold text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Address__address"
                   >
                     0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -399,7 +399,7 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+              class="flex justify-end items-center px-3 my-1 font-semibold whitespace-nowrap transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:group-hover:bg-theme-dark-950 dark:text-theme-secondary-500 group-hover:bg-theme-secondary-200"
             >
               <span
                 data-testid="TimeAgo"
@@ -410,20 +410,20 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+              class="flex static justify-end items-center px-3 pr-6 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
                 class="h-5"
               >
                 <div
-                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                  class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex h-full items-center space-x-1"
+                    class="flex items-center space-x-1 h-full"
                   >
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       + 2 ARK
@@ -431,7 +431,7 @@ exports[`Notifications > should render in xs 5`] = `
                   </div>
                 </div>
                 <div
-                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                  class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
                 />
               </div>
             </div>
@@ -449,41 +449,41 @@ exports[`Notifications > should render notification item 1`] = `
     <tbody>
       <div>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
+          class="table-row relative border-b border-dashed transition-colors duration-100 cursor-pointer last:border-b-0 border-theme-secondary-300 table-row-unselected group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
             class="w-2/5"
           >
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
+              class="flex static items-center px-3 pl-6 my-1 mx-0 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
-                class="absolute top-0 bottom-0 left-2 flex items-center"
+                class="flex absolute top-0 bottom-0 left-2 items-center"
               >
                 <div
-                  class="bg-theme-danger-400 h-2 w-2 rounded-full"
+                  class="w-2 h-2 rounded-full bg-theme-danger-400"
                 />
               </div>
               <div
-                class="w-20 flex-1"
+                class="flex-1 w-20"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text"
+                    class="text-base font-semibold text-theme-text"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       Mainsail Wallet …
                     </span>
                   </span>
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="Address__address"
                   >
                     0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -494,7 +494,7 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+              class="flex justify-end items-center px-3 my-1 font-semibold whitespace-nowrap transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:group-hover:bg-theme-dark-950 dark:text-theme-secondary-500 group-hover:bg-theme-secondary-200"
             >
               <span
                 data-testid="TimeAgo"
@@ -505,20 +505,20 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-6 static"
+              class="flex static justify-end items-center px-3 pr-6 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
             >
               <div
                 class="h-5"
               >
                 <div
-                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full w-fit items-center justify-center rounded px-1.5"
+                  class="flex overflow-hidden justify-center items-center px-1.5 h-full text-base font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex h-full items-center space-x-1"
+                    class="flex items-center space-x-1 h-full"
                   >
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       + 2 ARK
@@ -526,7 +526,7 @@ exports[`Notifications > should render notification item 1`] = `
                   </div>
                 </div>
                 <div
-                  class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
+                  class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
                 />
               </div>
             </div>

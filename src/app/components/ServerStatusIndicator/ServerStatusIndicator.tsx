@@ -47,10 +47,10 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 								variant="transparent"
 								size="icon"
 								data-testid="NavigationBar__buttons--server-status"
-								className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
 							>
-								<Icon name="Cloud" size="lg" className="m-0 p-1" />
-								<div className="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear">
+								<Icon name="Cloud" size="lg" className="p-1 m-0" />
+								<div className="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear">
 									<StatusDot status={status.value} />
 								</div>
 							</Button>
@@ -59,16 +59,16 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 				}
 			>
 				<div className="w-full sm:w-128">
-					<div className="bg-theme-secondary-100 flex w-full items-center justify-between rounded-t-xl px-8 py-4 dark:bg-black">
-						<div className="text-theme-secondary-500 text-sm font-semibold">
+					<div className="flex justify-between items-center py-4 px-8 w-full rounded-t-xl dark:bg-black bg-theme-secondary-100">
+						<div className="text-sm font-semibold text-theme-secondary-500">
 							{t("COMMON.NETWORK_STATUS")}
 						</div>
 						<Link to={`/profiles/${profile.id()}/settings/servers`}>
 							<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
 						</Link>
 					</div>
-					<div className="text-theme-text flex items-start space-x-2 px-8 py-4">
-						<div className="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 mt-1 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear">
+					<div className="flex items-start py-4 px-8 space-x-2 text-theme-text">
+						<div className="flex justify-center items-center p-1 mt-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100">
 							<StatusDot status={status.value} />
 						</div>
 						<div>{status.label}</div>

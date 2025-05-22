@@ -10,7 +10,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -18,13 +18,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -37,14 +37,14 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
             >
               <div>
                 <div
-                  class="inline-flex w-full items-center space-x-2"
+                  class="inline-flex items-center space-x-2 w-full"
                   data-testid="ButtonGroup"
                   role="radiogroup"
                 >
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -58,7 +58,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -72,7 +72,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -90,7 +90,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -98,13 +98,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -124,7 +124,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -136,7 +136,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                       />
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -183,7 +183,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -191,13 +191,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -209,18 +209,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -229,7 +229,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -237,13 +237,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -263,7 +263,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -271,18 +271,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                       class="flex items-center space-x-1"
                     >
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         (
                       </span>
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         )
                       </span>
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -329,7 +329,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -337,13 +337,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -355,18 +355,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -375,7 +375,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -383,13 +383,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -401,18 +401,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -421,7 +421,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -429,13 +429,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -447,18 +447,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -467,7 +467,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -475,13 +475,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -493,18 +493,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -513,7 +513,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -521,13 +521,13 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Fiat Amount
@@ -539,18 +539,18 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-fiat-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -563,7 +563,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExportForm__cancel-button"
         type="button"
       >
@@ -574,7 +574,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExport__submit-button"
         type="submit"
       >
@@ -599,7 +599,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -607,13 +607,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -626,14 +626,14 @@ exports[`TransactionExportForm > should render in lg 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex w-full items-center space-x-2"
+                  class="inline-flex items-center space-x-2 w-full"
                   data-testid="ButtonGroup"
                   role="radiogroup"
                 >
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -647,7 +647,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -661,7 +661,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -679,7 +679,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -687,13 +687,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -713,7 +713,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -725,7 +725,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                       />
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -772,7 +772,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -780,13 +780,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -798,18 +798,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -818,7 +818,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -826,13 +826,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -852,7 +852,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -860,18 +860,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                       class="flex items-center space-x-1"
                     >
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         (
                       </span>
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         )
                       </span>
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -918,7 +918,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -926,13 +926,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -944,18 +944,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -964,7 +964,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -972,13 +972,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -990,18 +990,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1010,7 +1010,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1018,13 +1018,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -1036,18 +1036,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1056,7 +1056,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1064,13 +1064,13 @@ exports[`TransactionExportForm > should render in lg 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -1082,18 +1082,18 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1106,7 +1106,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExportForm__cancel-button"
         type="button"
       >
@@ -1117,7 +1117,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExport__submit-button"
         type="submit"
       >
@@ -1142,7 +1142,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1150,13 +1150,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -1169,14 +1169,14 @@ exports[`TransactionExportForm > should render in md 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex w-full items-center space-x-2"
+                  class="inline-flex items-center space-x-2 w-full"
                   data-testid="ButtonGroup"
                   role="radiogroup"
                 >
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1190,7 +1190,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1204,7 +1204,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1222,7 +1222,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1230,13 +1230,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -1256,7 +1256,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -1268,7 +1268,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                       />
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -1315,7 +1315,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1323,13 +1323,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -1341,18 +1341,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1361,7 +1361,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1369,13 +1369,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -1395,7 +1395,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -1403,18 +1403,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
                       class="flex items-center space-x-1"
                     >
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         (
                       </span>
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         )
                       </span>
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -1461,7 +1461,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1469,13 +1469,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -1487,18 +1487,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1507,7 +1507,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1515,13 +1515,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -1533,18 +1533,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1553,7 +1553,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1561,13 +1561,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -1579,18 +1579,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1599,7 +1599,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1607,13 +1607,13 @@ exports[`TransactionExportForm > should render in md 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -1625,18 +1625,18 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1649,7 +1649,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExportForm__cancel-button"
         type="button"
       >
@@ -1660,7 +1660,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExport__submit-button"
         type="submit"
       >
@@ -1685,7 +1685,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1693,13 +1693,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -1712,14 +1712,14 @@ exports[`TransactionExportForm > should render in sm 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex w-full items-center space-x-2"
+                  class="inline-flex items-center space-x-2 w-full"
                   data-testid="ButtonGroup"
                   role="radiogroup"
                 >
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1733,7 +1733,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1747,7 +1747,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -1765,7 +1765,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1773,13 +1773,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -1799,7 +1799,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -1811,7 +1811,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                       />
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -1858,7 +1858,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1866,13 +1866,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -1884,18 +1884,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -1904,7 +1904,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -1912,13 +1912,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -1938,7 +1938,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -1946,18 +1946,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                       class="flex items-center space-x-1"
                     >
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         (
                       </span>
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         )
                       </span>
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -2004,7 +2004,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2012,13 +2012,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -2030,18 +2030,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2050,7 +2050,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2058,13 +2058,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -2076,18 +2076,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2096,7 +2096,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2104,13 +2104,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -2122,18 +2122,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2142,7 +2142,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2150,13 +2150,13 @@ exports[`TransactionExportForm > should render in sm 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -2168,18 +2168,18 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2192,7 +2192,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExportForm__cancel-button"
         type="button"
       >
@@ -2203,7 +2203,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExport__submit-button"
         type="submit"
       >
@@ -2228,7 +2228,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2236,13 +2236,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -2255,14 +2255,14 @@ exports[`TransactionExportForm > should render in xl 1`] = `
             >
               <div>
                 <div
-                  class="inline-flex w-full items-center space-x-2"
+                  class="inline-flex items-center space-x-2 w-full"
                   data-testid="ButtonGroup"
                   role="radiogroup"
                 >
                   <button
                     aria-checked="false"
                     aria-label="Incoming"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2276,7 +2276,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="Outgoing"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2290,7 +2290,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="All"
-                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -2308,7 +2308,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2316,13 +2316,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -2342,7 +2342,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -2354,7 +2354,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                       />
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -2401,7 +2401,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2409,13 +2409,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -2427,18 +2427,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2447,7 +2447,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2455,13 +2455,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -2481,7 +2481,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -2489,18 +2489,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                       class="flex items-center space-x-1"
                     >
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         (
                       </span>
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         )
                       </span>
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -2547,7 +2547,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2555,13 +2555,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -2573,18 +2573,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2593,7 +2593,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2601,13 +2601,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -2619,18 +2619,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2639,7 +2639,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2647,13 +2647,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -2665,18 +2665,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2685,7 +2685,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2693,13 +2693,13 @@ exports[`TransactionExportForm > should render in xl 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -2711,18 +2711,18 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2735,7 +2735,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExportForm__cancel-button"
         type="button"
       >
@@ -2746,7 +2746,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExport__submit-button"
         type="submit"
       >
@@ -2771,7 +2771,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2779,13 +2779,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transactions
@@ -2799,14 +2799,14 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         >
           <div>
             <div
-              class="inline-flex w-full items-center mt-4 flex flex-col space-y-2"
+              class="flex inline-flex flex-col items-center mt-4 space-y-2 w-full"
               data-testid="ButtonGroup"
               role="radiogroup"
             >
               <button
                 aria-checked="false"
                 aria-label="Incoming"
-                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2820,7 +2820,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="Outgoing"
-                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2834,7 +2834,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               <button
                 aria-checked="false"
                 aria-label="All"
-                class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
                 data-testid="ButtonGroupOption"
                 role="radio"
                 type="button"
@@ -2850,7 +2850,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2858,13 +2858,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Date Range
@@ -2884,7 +2884,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -2896,7 +2896,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                       />
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -2943,7 +2943,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2951,13 +2951,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Include Header Row
@@ -2969,18 +2969,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -2989,7 +2989,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -2997,13 +2997,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Delimiter
@@ -3023,7 +3023,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
                   <button
-                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    class="flex overflow-hidden justify-between items-center space-x-2 space-x-4 w-full font-semibold cursor-pointer focus:outline-hidden"
                     data-testid="CollapseToggleButton"
                     type="button"
                   >
@@ -3031,18 +3031,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                       class="flex items-center space-x-1"
                     >
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         (
                       </span>
                       <span
-                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
                         )
                       </span>
                     </span>
                     <span
-                      class="text-theme-primary-600 dark:text-theme-secondary-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 inline-flex items-center justify-center rounded-full transition duration-200"
+                      class="inline-flex justify-center items-center rounded-full transition duration-200 text-theme-primary-600 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
                     >
                       <div
                         class="p-1"
@@ -3089,7 +3089,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       data-testid="list-divided__items"
     >
       <li
-        class="flex w-full flex-col pb-4"
+        class="flex flex-col pb-4 w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -3097,13 +3097,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction ID
@@ -3115,18 +3115,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -3135,7 +3135,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -3143,13 +3143,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Transaction Date
@@ -3161,18 +3161,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -3181,7 +3181,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -3189,13 +3189,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Sender / Recipient
@@ -3207,18 +3207,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -3227,7 +3227,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </li>
       <li
-        class="flex w-full flex-col"
+        class="flex flex-col w-full"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -3235,13 +3235,13 @@ exports[`TransactionExportForm > should render in xs 1`] = `
           data-testid="list-divided-item__inner-wrapper"
         >
           <div
-            class="flex w-full flex-col space-y-2"
+            class="flex flex-col space-y-2 w-full"
           >
             <div
-              class="flex items-center justify-between space-x-5"
+              class="flex justify-between items-center space-x-5"
             >
               <span
-                class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
+                class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
                 data-testid="list-divided-item__label"
               >
                 Crypto Amount
@@ -3253,18 +3253,18 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <label
-                class="flex items-center cursor-pointer h-4"
+                class="flex items-center h-4 cursor-pointer"
               >
                 <input
-                  class="toggle-input sr-only"
+                  class="sr-only toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
                   type="checkbox"
                 />
                 <div
-                  class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                  class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
+                    class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
                   />
                 </div>
               </label>
@@ -3277,7 +3277,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExportForm__cancel-button"
         type="button"
       >
@@ -3288,7 +3288,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
         </div>
       </button>
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="TransactionExport__submit-button"
         type="submit"
       >

@@ -3,7 +3,7 @@
 exports[`VotesFilter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="mr-6 hidden md:block"
+    class="hidden mr-6 md:block"
   >
     <div
       aria-expanded="false"
@@ -11,7 +11,7 @@ exports[`VotesFilter > should render 1`] = `
       data-testid="dropdown__toggle-VotesFilter"
     >
       <button
-        class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8"
+        class="inline-flex relative justify-center items-center py-2 px-3 space-x-2 h-8 text-sm font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         type="button"
       >
         <div
@@ -69,7 +69,7 @@ exports[`VotesFilter > should render 1`] = `
 exports[`VotesFilter > should render default 1`] = `
 <DocumentFragment>
   <div
-    class="mr-6 hidden md:block"
+    class="hidden mr-6 md:block"
   >
     <div
       aria-controls=":r2:"
@@ -78,7 +78,7 @@ exports[`VotesFilter > should render default 1`] = `
       data-testid="dropdown__toggle-VotesFilter"
     >
       <button
-        class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8"
+        class="inline-flex relative justify-center items-center py-2 px-3 space-x-2 h-8 text-sm font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         type="button"
       >
         <div
@@ -136,7 +136,7 @@ exports[`VotesFilter > should render default 1`] = `
 exports[`VotesFilter > should render with current option selected 1`] = `
 <DocumentFragment>
   <div
-    class="mr-6 hidden md:block"
+    class="hidden mr-6 md:block"
   >
     <div
       aria-controls=":r5:"
@@ -145,7 +145,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
       data-testid="dropdown__toggle-VotesFilter"
     >
       <button
-        class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8"
+        class="inline-flex relative justify-center items-center py-2 px-3 space-x-2 h-8 text-sm font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         type="button"
       >
         <div
@@ -203,7 +203,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
 exports[`VotesFilter > should render with disabled current option 1`] = `
 <DocumentFragment>
   <div
-    class="mr-6 hidden md:block"
+    class="hidden mr-6 md:block"
   >
     <div
       aria-controls=":r8:"
@@ -212,7 +212,7 @@ exports[`VotesFilter > should render with disabled current option 1`] = `
       data-testid="dropdown__toggle-VotesFilter"
     >
       <button
-        class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 h-8"
+        class="inline-flex relative justify-center items-center py-2 px-3 space-x-2 h-8 text-sm font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         type="button"
       >
         <div

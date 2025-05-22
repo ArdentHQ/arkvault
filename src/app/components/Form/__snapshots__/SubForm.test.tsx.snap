@@ -3,7 +3,7 @@
 exports[`SubForm > should render 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
+    class="p-4 -mx-4 space-y-4 rounded-lg bg-theme-secondary-background"
   >
     <span>
       Hello

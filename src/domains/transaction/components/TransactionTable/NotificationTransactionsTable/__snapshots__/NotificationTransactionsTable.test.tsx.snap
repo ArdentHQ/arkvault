@@ -14,25 +14,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
         role="rowgroup"
       >
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -44,17 +44,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -68,25 +68,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -98,17 +98,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -122,25 +122,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -152,17 +152,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -176,25 +176,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -206,17 +206,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -230,25 +230,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -260,17 +260,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -284,25 +284,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -314,17 +314,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -338,25 +338,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -368,17 +368,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -392,25 +392,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -422,17 +422,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -446,25 +446,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -476,17 +476,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -500,25 +500,25 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
           </td>
         </tr>
         <tr
-          class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group group"
+          class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group dark:border-theme-secondary-800"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 px-6 py-4"
+            class="flex-col py-4 px-6 space-y-4"
             data-testid="TransactionRow__skeleton__mobile"
           >
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Address
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -530,17 +530,17 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </span>
             </div>
             <div
-              class="flex items-center justify-between space-x-4"
+              class="flex justify-between items-center space-x-4"
             >
               <div
-                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
                 Amount
               </div>
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
                   class="react-loading-skeleton"

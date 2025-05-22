@@ -12,12 +12,12 @@ interface ExchangeCardProperties {
 export const ExchangeCard = ({ exchange, onClick }: ExchangeCardProperties) => (
 	<div data-testid={`ExchangeCard--${exchange.slug}`}>
 		<Card onClick={exchange.isActive ? onClick : undefined}>
-			<div className="flex flex-col items-center gap-3 md:flex-row">
-				<div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg">
+			<div className="flex flex-col gap-3 items-center md:flex-row">
+				<div className="overflow-hidden w-11 h-11 rounded-lg shrink-0">
 					<img
 						src={exchange.logo.thumbnail}
 						alt={`${exchange.name} Logo`}
-						className="h-full w-full object-cover"
+						className="object-cover w-full h-full"
 					/>
 				</div>
 

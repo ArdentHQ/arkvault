@@ -3,51 +3,51 @@
 exports[`ValidatorFooter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="dark:bg-dark-700 border-theme-secondary-300 bg-theme-background dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
+    class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
     data-testid="DelegateTable__footer"
   >
     <div
-      class="mx-auto px-8 md:px-10 lg:container"
+      class="px-8 mx-auto md:px-10 lg:container"
     >
       <div
         class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
       >
         <div
-          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
+          class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
         >
           <div
-            class="flex grow overflow-x-auto"
+            class="flex overflow-x-auto grow"
           >
             <div
-              class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
+              class="flex overflow-x-auto flex-row flex-1 items-center h-full grow"
             >
               <div
-                class="flex items-center space-x-2 overflow-hidden"
+                class="flex overflow-hidden items-center space-x-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
+                  class="hidden text-sm whitespace-nowrap sm:block sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Voting Address:
                 </div>
                 <div
-                  class="lg:text flex w-full overflow-x-auto xl:-mt-px"
+                  class="flex overflow-x-auto w-full xl:-mt-px lg:text"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                   >
                     <span
-                      class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
+                      class="text-xs text-base font-semibold sm:text-base sm:leading-5 leading-[17px] text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures transition-colors duration-200"
+                        class="transition-colors duration-200 no-ligatures"
                         data-testid="TruncateEnd"
                       >
                         Mainsail Wallet …
                       </span>
                     </span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
+                      class="overflow-hidden min-w-0 text-xs text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -59,19 +59,19 @@ exports[`ValidatorFooter > should render 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-1 flex-col items-center justify-center sm:flex-row"
+          class="flex flex-col flex-1 justify-center items-center sm:flex-row"
         >
           <div
-            class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
+            class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
           >
             <div
-              class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
+              class="flex pr-4 pl-0 space-x-3 lg:pl-4 first:pl-0 last:pr-6 md:first:pl-6"
             >
               <div
                 class="flex flex-row items-center space-x-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base"
+                  class="text-sm sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Votes
                 </div>
@@ -80,7 +80,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   data-testid="DelegateTable__footer--votes"
                 >
                   <div
-                    class="flex items-center justify-start md:justify-end"
+                    class="flex justify-start items-center md:justify-end"
                   >
                     <div>
                       0
@@ -90,16 +90,16 @@ exports[`ValidatorFooter > should render 1`] = `
               </div>
             </div>
             <span
-              class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
+              class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
             />
             <div
-              class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
+              class="flex pr-4 pl-4 space-x-3 first:pl-6 last:pr-6"
             >
               <div
                 class="flex flex-row items-center space-x-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base"
+                  class="text-sm sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Unvotes
                 </div>
@@ -108,7 +108,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   data-testid="DelegateTable__footer--unvotes"
                 >
                   <div
-                    class="flex items-center justify-start md:justify-end"
+                    class="flex justify-start items-center md:justify-end"
                   >
                     <div>
                       0
@@ -118,16 +118,16 @@ exports[`ValidatorFooter > should render 1`] = `
               </div>
             </div>
             <span
-              class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
+              class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
             />
             <div
-              class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
+              class="flex pr-4 pl-4 space-x-3 md:hidden lg:flex first:pl-6 last:pr-6"
             >
               <div
                 class="flex flex-row items-center space-x-2"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base"
+                  class="text-sm sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
                 >
                   Total
                 </div>
@@ -136,7 +136,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   data-testid="DelegateTable__footer--total"
                 >
                   <div
-                    class="flex items-center justify-start md:justify-end"
+                    class="flex justify-start items-center md:justify-end"
                   >
                     <div>
                       0/1
@@ -147,17 +147,17 @@ exports[`ValidatorFooter > should render 1`] = `
             </div>
           </div>
           <div
-            class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
+            class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
           >
             <span
-              class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
+              class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
             />
             <span
-              class="sm:ml-auto sm:pl-6"
+              class="sm:pl-6 sm:ml-auto"
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
+                class="inline-flex relative justify-center items-center py-2 px-3 space-x-2 w-full text-sm font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer sm:w-auto focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"

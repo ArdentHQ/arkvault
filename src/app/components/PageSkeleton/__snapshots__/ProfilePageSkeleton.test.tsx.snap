@@ -3,20 +3,20 @@
 exports[`ProfilePageSkeleton > should render without profile 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col"
+    class="flex relative flex-col min-h-screen"
     data-testid="ProfilePageSkeleton"
   >
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 sticky inset-x-0 top-0 border-b"
+      class="sticky inset-x-0 top-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="relative flex h-12 items-center"
+        class="flex relative items-center h-12"
       >
         <div
-          class="flex flex-1 justify-between px-6 sm:ml-7 sm:px-8"
+          class="flex flex-1 justify-between px-6 sm:px-8 sm:ml-7"
         >
           <div
-            class="bg-theme-primary-600 my-auto flex h-6 w-6 items-center justify-center rounded-md text-white"
+            class="flex justify-center items-center my-auto w-6 h-6 text-white rounded-md bg-theme-primary-600"
           >
             <span
               class="relative"
@@ -42,13 +42,13 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
             class="flex"
           >
             <div
-              class="my-auto flex items-center space-x-4 sm:hidden"
+              class="flex items-center my-auto space-x-4 sm:hidden"
             >
               <div>
                 <span
                   aria-busy="true"
                   aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                 >
                   <span
                     class="react-loading-skeleton"
@@ -60,19 +60,19 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 </span>
               </div>
               <div
-                class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r"
+                class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700"
               />
             </div>
             <div
-              class="my-auto ml-4 hidden items-center space-x-4 sm:flex"
+              class="hidden items-center my-auto ml-4 space-x-4 sm:flex"
             >
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
-                  class="react-loading-skeleton hidden sm:flex"
+                  class="hidden sm:flex react-loading-skeleton"
                   style="width: 28px; height: 28px;"
                 >
                   ‌
@@ -80,15 +80,15 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
-                  class="react-loading-skeleton hidden sm:flex"
+                  class="hidden sm:flex react-loading-skeleton"
                   style="width: 28px; height: 28px;"
                 >
                   ‌
@@ -96,15 +96,15 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
-                  class="react-loading-skeleton hidden sm:flex"
+                  class="hidden sm:flex react-loading-skeleton"
                   style="width: 28px; height: 28px;"
                 >
                   ‌
@@ -112,15 +112,15 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
               >
                 <span
-                  class="react-loading-skeleton hidden sm:flex"
+                  class="hidden sm:flex react-loading-skeleton"
                   style="width: 28px; height: 28px;"
                 >
                   ‌
@@ -128,20 +128,20 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
+                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
             </div>
             <div
-              class="my-auto ml-4 flex items-center"
+              class="flex items-center my-auto ml-4"
             >
               <div
-                class="mx-4 hidden space-y-2 md:block"
+                class="hidden mx-4 space-y-2 md:block"
               >
                 <p>
                   <span
                     aria-busy="true"
                     aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                   >
                     <span
                       class="react-loading-skeleton"
@@ -156,7 +156,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                   <span
                     aria-busy="true"
                     aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                   >
                     <span
                       class="react-loading-skeleton"
@@ -172,7 +172,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <span
                   aria-busy="true"
                   aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                 >
                   <span
                     class="react-loading-skeleton"
@@ -189,13 +189,13 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-1 flex-col"
+      class="flex flex-col flex-1"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8"
+        class="py-4 w-full first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="px-6 mx-auto md:px-10 lg:container"
         >
           <div
             class="w-full"
@@ -203,7 +203,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -220,7 +220,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -237,7 +237,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
             >
               <span
                 class="react-loading-skeleton"

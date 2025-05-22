@@ -42,13 +42,13 @@ const ProfilesSlider = (properties: ProfilesSliderProperties) => {
 	const settings: Settings = {
 		appendDots: (dots) => (
 			<div>
-				<ul className="flex justify-center gap-3 leading-3"> {dots} </ul>
+				<ul className="flex gap-3 justify-center leading-3"> {dots} </ul>
 			</div>
 		),
 		arrows: false,
 		autoplay: false,
 		customPaging: () => (
-			<button className="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 mt-3 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
+			<button className="mt-3 w-3 h-3 rounded-full border-2 hover:border-transparent border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 dark:hover:border-transparent hover:bg-theme-navy-700" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots",

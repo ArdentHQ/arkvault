@@ -3,10 +3,10 @@
 exports[`Row > should render 1`] = `
 <div>
   <div
-    class="flex items-center justify-between space-x-4"
+    class="flex justify-between items-center space-x-4"
   >
     <div
-      class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+      class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
     >
       Hello World
     </div>
@@ -17,10 +17,10 @@ exports[`Row > should render 1`] = `
 exports[`Row > should render responsive wrapper 1`] = `
 <div>
   <div
-    class="flex items-center justify-between space-x-4"
+    class="flex justify-between items-center space-x-4"
   >
     <div
-      class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
+      class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
     >
       Hello World
     </div>
@@ -28,7 +28,7 @@ exports[`Row > should render responsive wrapper 1`] = `
       class="flex w-full text-right"
     >
       <div
-        class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+        class="flex overflow-hidden flex-1 justify-end items-center w-0"
       >
         The address
       </div>

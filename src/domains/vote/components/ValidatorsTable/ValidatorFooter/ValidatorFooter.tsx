@@ -25,7 +25,7 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 		<div className="flex flex-row items-center space-x-2">
 			<LabelWrapper>{label}</LabelWrapper>
 			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${label.toLocaleLowerCase()}`}>
-				<div className="flex items-center justify-start md:justify-end">
+				<div className="flex justify-start items-center md:justify-end">
 					<div>{value}</div>
 				</div>
 			</TextWrapper>
@@ -100,24 +100,24 @@ export const ValidatorFooter = ({
 
 	return (
 		<div
-			className="dark:bg-dark-700 border-theme-secondary-300 bg-theme-background dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
+			className="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
 			data-testid="DelegateTable__footer"
 		>
-			<div className="mx-auto px-8 md:px-10 lg:container">
+			<div className="px-8 mx-auto md:px-10 lg:container">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
-					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
+					<div className="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800">
 						<div className={cn("flex grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
 							<div
 								className={cn("flex h-full flex-1 grow flex-row items-center overflow-x-auto", {
 									"w-36": requiresStakeAmount,
 								})}
 							>
-								<div className="flex items-center space-x-2 overflow-hidden">
+								<div className="flex overflow-hidden items-center space-x-2">
 									<LabelWrapper className="hidden whitespace-nowrap sm:block">
 										{t("VOTE.VALIDATOR_TABLE.VOTING_ADDRESS")}:
 									</LabelWrapper>
 
-									<div className="lg:text flex w-full overflow-x-auto xl:-mt-px">
+									<div className="flex overflow-x-auto w-full xl:-mt-px lg:text">
 										<Address
 											address={selectedWallet.address()}
 											walletName={selectedWallet.alias()}
@@ -131,7 +131,7 @@ export const ValidatorFooter = ({
 
 						{requiresStakeAmount && (
 							<div
-								className="flex flex-row space-x-2 px-6"
+								className="flex flex-row px-6 space-x-2"
 								data-testid="DelegateTable__available-balance"
 							>
 								<LabelWrapper>
@@ -145,16 +145,16 @@ export const ValidatorFooter = ({
 							</div>
 						)}
 					</div>
-					<div className="flex flex-1 flex-col items-center justify-center sm:flex-row">
-						<div className="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none">
+					<div className="flex flex-col flex-1 justify-center items-center sm:flex-row">
+						<div className="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0">
 							<FooterContent
-								className="pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
+								className="pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
 								disabled={selectedVotes.length === 0}
 								label={t("VOTE.VALIDATOR_TABLE.VOTES")}
 								value={selectedVotes.length}
 							/>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px" />
+							<span className="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 
 							<FooterContent
 								disabled={selectedUnvotes.length === 0}
@@ -162,7 +162,7 @@ export const ValidatorFooter = ({
 								value={selectedUnvotes.length}
 							/>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block" />
+							<span className="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 
 							<FooterContent
 								className="flex md:hidden lg:flex"
@@ -171,11 +171,11 @@ export const ValidatorFooter = ({
 							/>
 						</div>
 
-						<div className="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0">
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block" />
+						<div className="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto">
+							<span className="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 
 							<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
-								<span data-testid="DelegateTable__continue--wrapper" className="sm:ml-auto sm:pl-6">
+								<span data-testid="DelegateTable__continue--wrapper" className="sm:pl-6 sm:ml-auto">
 									<Button
 										disabled={isContinueDisabled}
 										onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}

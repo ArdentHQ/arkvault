@@ -104,12 +104,12 @@ export const SidePanel = ({
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
-											className="navy-scroll bg-theme-background text-theme-text h-dvh w-full overflow-y-scroll pt-14 shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
+											className="overflow-y-scroll pt-14 w-full navy-scroll bg-theme-background text-theme-text h-dvh shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="bg-theme-background fixed top-0 right-0 left-0 z-10 w-full">
-													<div className="relative flex flex-col">
+												<div className="fixed top-0 right-0 left-0 z-10 w-full bg-theme-background">
+													<div className="flex relative flex-col">
 														<div
 															className={cn(
 																"flex items-start justify-between px-6 py-4",
@@ -119,24 +119,24 @@ export const SidePanel = ({
 																},
 															)}
 														>
-															<div className="flex items-center gap-2">
+															<div className="flex gap-2 items-center">
 																{titleIcon && (
-																	<div className="text-theme-primary-600 dark:text-theme-navy-500 shrink-0">
+																	<div className="text-theme-primary-600 shrink-0 dark:text-theme-navy-500">
 																		{titleIcon}
 																	</div>
 																)}
-																<h2 className="mb-0 text-lg leading-[21px] font-semibold md:pt-0">
+																<h2 className="mb-0 text-lg font-semibold md:pt-0 leading-[21px]">
 																	{title}
 																</h2>
 															</div>
 
-															<div className="text-theme-secondary-700 hover:bg-theme-primary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
+															<div className="w-6 h-6 bg-transparent rounded transition-all duration-100 ease-linear dark:bg-transparent hover:text-white text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800">
 																<Button
 																	data-testid="SidePanel__close-button"
 																	variant="transparent"
 																	size="md"
 																	onClick={() => onOpenChange(false)}
-																	className="h-6 w-6 p-0"
+																	className="p-0 w-6 h-6"
 																>
 																	<Icon name="Cross" />
 																</Button>
@@ -144,7 +144,7 @@ export const SidePanel = ({
 														</div>
 
 														{hasSteps && (
-															<ul className="flex w-full flex-row">
+															<ul className="flex flex-row w-full">
 																{Array.from({ length: totalSteps }).map((_, index) => (
 																	<SidePanelStyledStep
 																		key={index}
@@ -157,9 +157,9 @@ export const SidePanel = ({
 												</div>
 											</div>
 
-											<div className="flex flex-col gap-4 px-6 py-4">
+											<div className="flex flex-col gap-4 py-4 px-6">
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-5 font-normal md:text-base">
+													<div className="text-sm font-normal leading-5 md:text-base text-theme-secondary-text">
 														{subtitle}
 													</div>
 												)}

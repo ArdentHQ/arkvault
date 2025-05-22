@@ -56,7 +56,7 @@ const MultipleImport = ({
 			return (
 				<TableRow className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
-						<div className="flex flex-1 flex-col py-2">
+						<div className="flex flex-col flex-1 py-2">
 							<Address
 								walletName={importedWallet.alias()}
 								address={wallet.address}
@@ -67,7 +67,7 @@ const MultipleImport = ({
 								<Amount
 									value={wallet.balance ?? 0}
 									ticker={network.ticker()}
-									className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
+									className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
 								/>
 							</AmountWrapper>
 						</div>
@@ -78,7 +78,7 @@ const MultipleImport = ({
 							variant="secondary"
 							onClick={() => onClickEditWalletName(importedWallet)}
 							data-testid="LedgerImportStep__edit-alias"
-							className="my-2.5 p-4"
+							className="p-4 my-2.5"
 						>
 							<Icon name="Pencil" dimensions={[14, 14]} />
 						</Button>

@@ -102,7 +102,7 @@ export const FormStep = ({
 								data-testid="QRCodeModalButton"
 							>
 								<Icon size="lg" name="QRCode" />
-								<span className="text-base leading-5 font-semibold">
+								<span className="text-base font-semibold leading-5">
 									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
 								</span>
 							</QRCodeButton>
@@ -111,10 +111,10 @@ export const FormStep = ({
 				}
 			/>
 
-			<div className="space-y-4 pt-4">
+			<div className="pt-4 space-y-4">
 				<FormField name="senderAddress">
 					<div data-testid="sender-address">
-						<div className="mb-2 flex items-center justify-between">
+						<div className="flex justify-between items-center mb-2">
 							<FormLabel
 								label={t("TRANSACTION.SENDER")}
 								className="text-theme-secondary-text hover:text-theme-primary-600! mb-0 text-sm leading-[17px] font-semibold"
@@ -122,7 +122,7 @@ export const FormStep = ({
 							<Button
 								type="button"
 								variant="transparent"
-								className="text-theme-navy-600 block p-0 text-sm sm:hidden"
+								className="block p-0 text-sm sm:hidden text-theme-navy-600"
 								onClick={onScan}
 							>
 								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}

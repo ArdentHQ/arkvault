@@ -14,29 +14,29 @@ export const DeleteAddressMessage = ({
 	return (
 		<div
 			data-testid="DeleteAddressMessage"
-			className="bg-theme-danger-50 dark:bg-theme-dark-800 flex flex-col items-center rounded-b-lg px-4 py-3"
+			className="flex flex-col items-center py-3 px-4 rounded-b-lg bg-theme-danger-50 dark:bg-theme-dark-800"
 		>
-			<p className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm">{t("COMMON.DELETE_DESCRIPTION")}</p>
+			<p className="text-sm text-theme-secondary-900 dark:text-theme-dark-50">{t("COMMON.DELETE_DESCRIPTION")}</p>
 
-			<div className="mt-4 flex w-full items-center justify-center leading-[18px] sm:justify-end sm:leading-5">
+			<div className="flex justify-center items-center mt-4 w-full sm:justify-end sm:leading-5 leading-[18px]">
 				<Button
 					data-testid="CancelDelete"
 					size="icon"
 					variant="transparent"
 					onClick={onCancelDelete}
-					className="text-theme-primary-600 dark:text-theme-primary-400 px-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
+					className="px-2 text-sm sm:text-base sm:leading-5 text-theme-primary-600 py-[3px] leading-[18px] dark:text-theme-primary-400"
 				>
 					{t("COMMON.CANCEL")}
 				</Button>
 
-				<Divider type="vertical" className="border-theme-secondary-400 dark:border-theme-dark-600 mx-3" />
+				<Divider type="vertical" className="mx-3 border-theme-secondary-400 dark:border-theme-dark-600" />
 
 				<Button
 					data-testid="ConfirmDelete"
 					size="icon"
 					variant="transparent"
 					onClick={onConfirmDelete}
-					className="text-theme-danger-400 px-2 py-[3px] text-sm leading-[18px] sm:text-base sm:leading-5"
+					className="px-2 text-sm sm:text-base sm:leading-5 text-theme-danger-400 py-[3px] leading-[18px]"
 				>
 					{t("COMMON.DELETE_ADDRESS")}
 				</Button>

@@ -6,13 +6,13 @@ exports[`TextArea > should render 1`] = `
     class="relative"
   >
     <div
-      class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
+      class="hidden absolute right-3 bottom-4 z-10 w-0 h-0 border-t-8 -rotate-45 pointer-events-none md:block border-t-theme-secondary-400 border-x-8 border-x-transparent dark:border-t-theme-secondary-700"
     />
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 relative"
+      class="flex relative items-center px-4 space-x-2 w-full rounded border transition-colors duration-200 appearance-none focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <textarea
           autocomplete="off"
@@ -33,13 +33,13 @@ exports[`TextArea > should render as disabled 1`] = `
     class="relative"
   >
     <div
-      class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
+      class="hidden absolute right-3 bottom-4 z-10 w-0 h-0 border-t-8 -rotate-45 pointer-events-none md:block border-t-theme-secondary-400 border-x-8 border-x-transparent dark:border-t-theme-secondary-700"
     />
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative"
+      class="flex relative items-center px-4 space-x-2 w-full rounded border transition-colors duration-200 appearance-none focus-within:ring-1 text-theme-text border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <textarea
           autocomplete="off"
@@ -60,13 +60,13 @@ exports[`TextArea > should render as invalid 1`] = `
     class="relative"
   >
     <div
-      class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
+      class="hidden absolute right-3 bottom-4 z-10 w-0 h-0 border-t-8 -rotate-45 pointer-events-none md:block border-t-theme-secondary-400 border-x-8 border-x-transparent dark:border-t-theme-secondary-700"
     />
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 relative"
+      class="flex relative items-center px-4 space-x-2 w-full rounded border transition-colors duration-200 appearance-none focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <textarea
           aria-invalid="true"
@@ -77,7 +77,7 @@ exports[`TextArea > should render as invalid 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x absolute right-0 bottom-full mb-2 text-theme-danger-500"
+        class="flex absolute right-0 bottom-full items-center mb-2 divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
         data-testid="Input__addon-end"
       >
         <span

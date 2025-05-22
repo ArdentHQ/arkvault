@@ -124,7 +124,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				{contact && !isXs && (
 					<Button
 						data-testid="contact-form__delete-btn"
-						className="mt-0 h-min sm:mt-8"
+						className="mt-0 sm:mt-8 h-min"
 						onClick={onDelete}
 						variant="danger"
 					>

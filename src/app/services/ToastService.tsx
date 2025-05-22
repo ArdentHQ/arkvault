@@ -26,7 +26,7 @@ export const ToastMessage = ({
 	return (
 		<Toast variant={variant}>
 			<div className="flex items-center space-x-4 break-words">
-				<div data-testid="ToastMessage__content" className="text-theme-text flex-1 overflow-hidden">
+				<div data-testid="ToastMessage__content" className="overflow-hidden flex-1 text-theme-text">
 					{children}
 				</div>
 

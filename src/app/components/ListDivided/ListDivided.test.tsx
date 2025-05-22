@@ -14,12 +14,12 @@ describe("ListDivided", () => {
 	it.each([true, false])("should render an list divided with lastBorder = %s", (noBorder: boolean) => {
 		const item = {
 			content: (
-				<div className="mt-2 flex flex-row">
-					<div className="border-theme-secondary-500 mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed" />
-					<div className="bg-theme-secondary-500 relative h-24 w-24 rounded">
+				<div className="flex flex-row mt-2">
+					<div className="flex justify-center items-center mr-6 w-24 h-24 rounded border-2 border-dashed border-theme-secondary-500" />
+					<div className="relative w-24 h-24 rounded bg-theme-secondary-500">
 						<img
 							src="https://randomuser.me/api/portraits/men/3.jpg"
-							className="rounded object-cover"
+							className="object-cover rounded"
 							alt="random avatar"
 						/>
 					</div>

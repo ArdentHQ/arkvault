@@ -126,7 +126,7 @@ const SelectDropdown = ({
 
 						<div
 							data-testid="SelectDropdown__caret"
-							className="flex items-center justify-center"
+							className="flex justify-center items-center"
 							onClick={() => {
 								if (disabled) {
 									return;
@@ -135,7 +135,7 @@ const SelectDropdown = ({
 								toggleMenu();
 							}}
 						>
-							<div className="absolute inset-0 block cursor-pointer md:hidden" />
+							<div className="block absolute inset-0 cursor-pointer md:hidden" />
 
 							<Icon
 								name="ChevronDownSmall"

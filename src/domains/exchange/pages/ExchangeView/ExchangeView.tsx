@@ -73,7 +73,7 @@ export const ExchangeView = () => {
 					<img
 						src={logoUrl}
 						alt={`${exchangeProvider?.name} Header Logo`}
-						className="h-full w-full object-cover"
+						className="object-cover w-full h-full"
 					/>
 				)}
 			</div>
@@ -86,9 +86,9 @@ export const ExchangeView = () => {
 
 	return (
 		<Page pageTitle={exchangeProvider?.name}>
-			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center md:py-20">
-				<div className="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32">
-					<Image name="WorldMap" className="h-full w-full" />
+			<div className="flex relative flex-col flex-1 justify-center items-center w-full h-full md:py-20">
+				<div className="hidden absolute inset-0 items-center sm:flex sm:p-32 bg-[#3f4455]">
+					<Image name="WorldMap" className="w-full h-full" />
 				</div>
 
 				{renderSpinner()}

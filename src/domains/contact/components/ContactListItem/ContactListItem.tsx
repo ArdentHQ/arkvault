@@ -30,7 +30,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 	const renderName = useCallback(
 		() => (
-			<span className="text-sm leading-[17px] font-semibold" data-testid="ContactListItem__name">
+			<span className="text-sm font-semibold leading-[17px]" data-testid="ContactListItem__name">
 				<TruncateEnd text={item.name()} maxChars={22} />
 			</span>
 		),
@@ -66,7 +66,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 			</TableCell>
 
 			<TableCell data-testid="ContactListItem__address" className={borderClasses()} innerClassName="space-x-4">
-				<div className="w-0 flex-1">
+				<div className="flex-1 w-0">
 					<Address address={address.address()} truncateOnTable addressClass="text-sm leading-[17px]" />
 				</div>
 			</TableCell>
@@ -80,13 +80,13 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 			</TableCell>
 
 			<TableCell variant="end" className={borderClasses()} innerClassName="justify-end">
-				<div className="-mr-3 flex items-center">
+				<div className="flex items-center -mr-3">
 					<Tooltip content={sendButtonTooltip}>
 						<div data-testid="ContactListItem__send-button-wrapper">
 							<Button
 								size="icon"
 								variant="transparent"
-								className="text-theme-primary-600 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 text-sm hover:underline"
+								className="text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
 								data-testid="ContactListItem__send-button"
 								onClick={() => onSend(address)}
 								disabled={sendIsDisabled}
@@ -110,12 +110,12 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 								<Button
 									size="icon"
 									variant="transparent"
-									className="hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 mr-3 p-1"
+									className="p-1 mr-3 dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200"
 								>
 									<Icon
 										name="EllipsisVerticalFilled"
 										size="md"
-										className="text-theme-secondary-700 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 transition-colors duration-200"
+										className="transition-colors duration-200 text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700"
 									/>
 								</Button>
 							}

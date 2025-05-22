@@ -41,7 +41,7 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 				}
 				{...properties}
 			>
-				<div className="w-0 flex-1 text-right md:text-left">
+				<div className="flex-1 w-0 text-right md:text-left">
 					<Address
 						address={address}
 						alignment={isXs || isSm ? "right" : undefined}

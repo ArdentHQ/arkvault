@@ -48,7 +48,7 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 			/>
 			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-					<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:gap-0 sm:space-x-0">
+					<div className="flex gap-4 justify-between items-center space-x-2 w-full sm:gap-0 sm:justify-start sm:space-x-0">
 						<DetailTitle
 							className={cn("w-auto", {
 								"sm:min-w-[132px]": voteCategory === "swap",
@@ -71,7 +71,7 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 				<VoteTransactionType votes={votes} unvotes={unvotes} />
 
 				<div data-testid="DetailWrapper">
-					<div className="mt-0 p-3 sm:mt-2 sm:p-0">
+					<div className="p-3 mt-0 sm:p-0 sm:mt-2">
 						{showFeeInput && (
 							<FormField name="fee" className="flex-1">
 								<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />

@@ -3,15 +3,15 @@
 exports[`Avatar > should render with profile image 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
+    class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded transition-all duration-100 shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
     >
       <img
         alt="Foo Bar"
-        class="h-20 w-20 rounded bg-cover bg-center bg-no-repeat object-cover"
+        class="object-cover w-20 h-20 bg-center bg-no-repeat bg-cover rounded"
         data-testid="ProfileAvatar__image"
         src="avatarImage"
         title="Foo Bar"
@@ -24,11 +24,11 @@ exports[`Avatar > should render with profile image 1`] = `
 exports[`Avatar > should render with svg 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
+    class="inline-flex relative justify-center items-center w-11 h-11 text-sm align-middle rounded transition-all duration-100 shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
     >
       <img
         alt="Foo Bar"

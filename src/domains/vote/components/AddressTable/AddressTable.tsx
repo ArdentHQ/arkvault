@@ -120,14 +120,14 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 		return (
 			<tr
 				data-testid="EmptyResults"
-				className="border-theme-secondary-200 dark:border-theme-secondary-800 border-solid md:border-b-4"
+				className="border-solid md:border-b-4 border-theme-secondary-200 dark:border-theme-secondary-800"
 			>
-				<td colSpan={columns.length} className="pt-[11px] pb-4">
-					<div className="flex flex-col items-center justify-center">
-						<h3 className="text-theme-secondary-900 dark:text-theme-secondary-200 mb-2 text-base font-semibold">
+				<td colSpan={columns.length} className="pb-4 pt-[11px]">
+					<div className="flex flex-col justify-center items-center">
+						<h3 className="mb-2 text-base font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 							{t("COMMON.EMPTY_RESULTS.TITLE")}
 						</h3>
-						<p className="text-theme-secondary-700 dark:text-theme-secondary-600 text-sm">
+						<p className="text-sm text-theme-secondary-700 dark:text-theme-secondary-600">
 							{t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 						</p>
 					</div>

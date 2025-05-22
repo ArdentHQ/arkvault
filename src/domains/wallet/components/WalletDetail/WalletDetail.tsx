@@ -41,10 +41,10 @@ export const WalletDetail = React.forwardRef<HTMLDivElement, TransactionDetailPr
 			ref={reference}
 			{...properties}
 		>
-			<div className="flex w-full items-center justify-between space-x-4">
-				<div className="w-40 space-y-2 whitespace-nowrap sm:flex-1">
+			<div className="flex justify-between items-center space-x-4 w-full">
+				<div className="space-y-2 w-40 whitespace-nowrap sm:flex-1">
 					{label && (
-						<div className="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+						<div className="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700">
 							{label}
 						</div>
 					)}
@@ -52,8 +52,8 @@ export const WalletDetail = React.forwardRef<HTMLDivElement, TransactionDetailPr
 					<div className="hidden items-center font-semibold sm:flex">{children}</div>
 				</div>
 
-				<div className="flex w-full items-center justify-end overflow-auto sm:w-auto">
-					<div className="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden">
+				<div className="flex overflow-auto justify-end items-center w-full sm:w-auto">
+					<div className="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden">
 						<div className="w-full truncate">{children}</div>
 					</div>
 					{extra || <></>}

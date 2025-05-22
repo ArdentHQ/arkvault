@@ -22,7 +22,7 @@ export const TextArea = React.forwardRef(
 
 		return (
 			<div className="relative">
-				<div className="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block" />
+				<div className="hidden absolute right-3 bottom-4 z-10 w-0 h-0 border-t-8 -rotate-45 pointer-events-none md:block border-t-theme-secondary-400 border-x-8 border-x-transparent dark:border-t-theme-secondary-700" />
 
 				<Input
 					data-testid="TextArea"

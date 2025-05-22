@@ -10,13 +10,13 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
         data-testid="ValidatorRegistrationForm_form-step"
       >
         <div
-          class="flex items-end justify-between bg-theme-background"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -40,11 +40,11 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                class="font-semibold leading-5 no-ligatures min-w-24 text-theme-secondary-700 text-md dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Addressing
@@ -54,32 +54,32 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
             >
               <div
-                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                  class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures shrink-0 leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
                   From
                 </div>
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                  class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap sm:justify-start"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                    class="text-sm text-base font-semibold sm:text-base sm:leading-5 text-theme-text leading-[17px]"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <div
-                    class="relative grow leading-[17px] sm:leading-5 text-left"
+                    class="relative text-left sm:leading-5 grow leading-[17px]"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                      class="overflow-hidden absolute w-3/4 w-full min-w-0 text-sm text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -89,13 +89,13 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-hidden"
+                    class="relative ring-focus focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                      class="text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-white hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -146,10 +146,10 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               Validator Public Key
             </label>
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
             >
               <div
-                class="relative flex h-full flex-1"
+                class="flex relative flex-1 h-full"
               >
                 <input
                   autocomplete="off"
@@ -212,14 +212,14 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 </div>
               </div>
               <div
-                class="inline-flex w-full items-center space-x-3"
+                class="inline-flex items-center space-x-3 w-full"
                 data-testid="ButtonGroup"
                 role="radiogroup"
               >
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
+                  class="flex justify-center items-center p-3 w-full h-full font-semibold rounded border-2 transition-colors duration-300 focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -231,7 +231,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                       Slow
                     </div>
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       0 DARK
@@ -241,7 +241,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
+                  class="flex justify-center items-center p-3 w-full h-full font-semibold rounded border-2 transition-colors duration-300 focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -253,7 +253,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                       Average
                     </div>
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       1.354 DARK
@@ -263,7 +263,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="flex h-full w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 rounded"
+                  class="flex justify-center items-center p-3 w-full h-full font-semibold rounded border-2 transition-colors duration-300 focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -275,7 +275,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                       Fast
                     </div>
                     <span
-                      class="whitespace-nowrap text-sm"
+                      class="text-sm whitespace-nowrap"
                       data-testid="Amount"
                     >
                       10 DARK
@@ -302,13 +302,13 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
         data-testid="DelegateRegistrationForm__review-step"
       >
         <div
-          class="flex items-end justify-between bg-theme-background"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -332,11 +332,11 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                class="font-semibold leading-5 no-ligatures min-w-24 text-theme-secondary-700 text-md dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Addressing
@@ -346,32 +346,32 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
             >
               <div
-                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-44"
+                  class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures shrink-0 leading-[17px] text-theme-secondary-700 sm:min-w-44 dark:text-theme-secondary-500"
                 >
                   From
                 </div>
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                  class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap sm:justify-start"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                    class="text-sm text-base font-semibold sm:text-base sm:leading-5 text-theme-text leading-[17px]"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <div
-                    class="relative grow leading-[17px] sm:leading-5 text-left"
+                    class="relative text-left sm:leading-5 grow leading-[17px]"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                      class="overflow-hidden absolute w-3/4 w-full min-w-0 text-sm text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -381,13 +381,13 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-hidden"
+                    class="relative ring-focus focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                      class="text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-white hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -427,11 +427,11 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                class="font-semibold leading-5 no-ligatures min-w-24 text-theme-secondary-700 text-md dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Transaction Type
@@ -444,18 +444,18 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                 class="space-y-3 sm:space-y-0"
               >
                 <div
-                  class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                  class="flex gap-4 justify-between items-center w-full sm:justify-start"
                 >
                   <div
-                    class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                    class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures shrink-0 leading-[17px] text-theme-secondary-700 sm:min-w-40 dark:text-theme-secondary-500"
                   >
                     Category
                   </div>
                   <div
-                    class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                    class="flex items-center px-1 rounded dark:bg-transparent dark:border bg-theme-secondary-200 py-[3px] dark:border-theme-secondary-800"
                   >
                     <span
-                      class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                      class="font-semibold text-[12px] leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
                     >
                       Registration
                     </span>
@@ -465,19 +465,19 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex clear-both my-4 w-full min-w-full h-4 border-t border-dashed [background:none] border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <div
-                  class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                  class="flex gap-4 justify-between items-center w-full sm:justify-start"
                 >
                   <div
-                    class="no-ligatures shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                    class="w-auto text-sm font-semibold sm:text-base sm:leading-5 no-ligatures shrink-0 leading-[17px] text-theme-secondary-700 sm:min-w-40 dark:text-theme-secondary-500"
                   >
                     Validator Public Key
                   </div>
                   <div
-                    class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                    class="text-sm font-semibold sm:text-base sm:leading-5 no-ligatures truncate leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
                   />
                 </div>
               </div>
@@ -487,30 +487,30 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                class="font-semibold leading-5 no-ligatures min-w-24 text-theme-secondary-700 text-md dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Transaction Summary
               </div>
             </div>
             <div
-              class="mt-0 p-3 sm:mt-2 sm:p-0"
+              class="p-3 mt-0 sm:p-0 sm:mt-2"
             >
               <div
                 class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
               >
                 <div
-                  class="relative px-6 py-4 sm:py-5"
+                  class="relative py-4 px-6 sm:py-5"
                 >
                   <div
-                    class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+                    class="flex flex-col divide-y sm:flex-row sm:divide-y-0 sm:divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
+                      class="flex flex-col justify-center px-4 mb-4 text-center sm:p-0 sm:mb-0 sm:w-1/2 sm:text-left"
                     >
                       <span
                         class="text-sm font-semibold text-theme-secondary-500"
@@ -518,14 +518,14 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                         Transaction(s) Amount
                       </span>
                       <span
-                        class="whitespace-nowrap text-md mt-1 font-semibold"
+                        class="mt-1 font-semibold whitespace-nowrap text-md"
                         data-testid="Amount"
                       >
                         0 DARK
                       </span>
                     </div>
                     <div
-                      class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+                      class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:p-0 sm:w-1/2 sm:text-right"
                     >
                       <span
                         class="text-sm font-semibold text-theme-secondary-500"
@@ -533,7 +533,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                         Transaction Fee
                       </span>
                       <span
-                        class="whitespace-nowrap text-md mt-1 font-semibold"
+                        class="mt-1 font-semibold whitespace-nowrap text-md"
                         data-testid="Amount"
                       >
                         2 DARK
@@ -541,10 +541,10 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                   >
                     <div
-                      class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                      class="p-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                     >
                       <div>
                         <div
@@ -577,7 +577,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   </div>
                 </div>
                 <div
-                  class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
+                  class="flex flex-col items-center py-4 rounded-b-lg border-t sm:py-5 justfiy-center border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
                 >
                   <span
                     class="text-sm font-semibold text-theme-secondary-500"
@@ -585,7 +585,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                     Total Amount
                   </span>
                   <span
-                    class="whitespace-nowrap text-md font-semibold sm:text-lg"
+                    class="font-semibold whitespace-nowrap sm:text-lg text-md"
                     data-testid="Amount"
                   >
                     2 DARK
@@ -611,13 +611,13 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
         data-testid="DelegateRegistrationForm__form-step"
       >
         <div
-          class="flex items-end justify-between bg-theme-background"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -641,11 +641,11 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+                class="font-semibold leading-5 no-ligatures min-w-24 text-theme-secondary-700 text-md dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Addressing
@@ -655,32 +655,32 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
             >
               <div
-                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                  class="w-20 text-sm font-semibold sm:text-base sm:leading-5 no-ligatures shrink-0 leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
                   From
                 </div>
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                  class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap sm:justify-start"
                 >
                   <span
-                    class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                    class="text-sm text-base font-semibold sm:text-base sm:leading-5 text-theme-text leading-[17px]"
                     data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures transition-colors duration-200"
+                      class="transition-colors duration-200 no-ligatures"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
                     </span>
                   </span>
                   <div
-                    class="relative grow leading-[17px] sm:leading-5 text-left"
+                    class="relative text-left sm:leading-5 grow leading-[17px]"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
+                      class="overflow-hidden absolute w-3/4 w-full min-w-0 text-sm text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-500 dark:text-theme-secondary-700"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -690,13 +690,13 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-hidden"
+                    class="relative ring-focus focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
+                      class="text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-white hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -747,10 +747,10 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               Validator Public Key
             </label>
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
             >
               <div
-                class="relative flex h-full flex-1"
+                class="flex relative flex-1 h-full"
               >
                 <input
                   autocomplete="off"
@@ -816,10 +816,10 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                 >
                   <div
-                    class="relative flex h-full flex-1"
+                    class="flex relative flex-1 h-full"
                   >
                     <input
                       autocomplete="off"
@@ -831,7 +831,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                     />
                   </div>
                   <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                    class="flex items-center space-x-3 divide-x divide-none divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
                     data-testid="Input__addon-end"
                   >
                     <div
@@ -841,10 +841,10 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
+                          class="flex flex-row justify-between -mr-4 h-14 border-l sm:flex-col sm:w-10 w-22 text-theme-secondary-700 border-theme-secondary-400 dark:border-theme-secondary-700"
                         >
                           <button
-                            class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
+                            class="flex flex-1 justify-center items-center border-r border-b sm:border-r-0 active:text-white disabled:cursor-default border-theme-secondary-400 dark:border-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-600 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                             data-testid="InputFeeAdvanced__up"
                             type="button"
                           >
@@ -874,7 +874,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                             </div>
                           </button>
                           <button
-                            class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
+                            class="flex flex-1 justify-center items-center active:text-white disabled:cursor-default hover:bg-theme-primary-100 hover:text-theme-primary-600 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 active:bg-theme-primary-700 disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                             data-testid="InputFeeAdvanced__down"
                             type="button"
                           >

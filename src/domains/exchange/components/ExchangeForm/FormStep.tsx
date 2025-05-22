@@ -285,7 +285,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 		const currency = currencies.find(({ coin }: any) => coin === (value as string | undefined)?.toLowerCase());
 
 		return (
-			<div className="flex w-full flex-col">
+			<div className="flex flex-col w-full">
 				<span
 					className={cn("font-semibold", {
 						"text-theme-primary-600": isSelected,
@@ -293,7 +293,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				>
 					{currency?.coin?.toUpperCase()}
 				</span>
-				<span className="dark:theme-text-secondary-700 text-theme-secondary-500 text-sm">{currency.name}</span>
+				<span className="text-sm text-theme-secondary-500 dark:theme-text-secondary-700">{currency.name}</span>
 			</div>
 		);
 	};
@@ -304,7 +304,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				<button
 					data-testid="ExchangeForm__remove-refund-address"
 					type="button"
-					className="link text-sm font-semibold"
+					className="text-sm font-semibold link"
 					onClick={() => setShowRefundInput(false)}
 				>
 					{t("EXCHANGE.REFUND_WALLET.REMOVE")}
@@ -316,7 +316,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			<button
 				data-testid="ExchangeForm__add-refund-address"
 				type="button"
-				className="link text-sm font-semibold"
+				className="text-sm font-semibold link"
 				onClick={() => setShowRefundInput(true)}
 			>
 				+{t("EXCHANGE.REFUND_WALLET.ADD")}
@@ -332,7 +332,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 	return (
 		<div data-testid="ExchangeForm__form-step" className="flex flex-col">
-			<div className="relative flex space-x-3">
+			<div className="flex relative space-x-3">
 				<div className="w-2/5">
 					<FormField name="fromCurrency">
 						<FormLabel label={t("COMMON.CRYPTOASSET")} />
@@ -395,7 +395,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			/>
 
 			<div className="space-y-6">
-				<div className="relative flex space-x-3">
+				<div className="flex relative space-x-3">
 					<div className="w-2/5">
 						<FormField name="toCurrency">
 							<FormLabel label={t("COMMON.CRYPTOASSET")} />
@@ -452,7 +452,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				<div data-testid="ExchangeForm__recipient-address">
 					<FormField name="recipientWallet">
 						<FormLabel>
-							<div className="flex w-full justify-between">
+							<div className="flex justify-between w-full">
 								{t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_WALLET")}
 
 								{renderRefundToggle()}

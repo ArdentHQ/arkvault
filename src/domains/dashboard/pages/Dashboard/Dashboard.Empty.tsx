@@ -10,15 +10,15 @@ export const DashboardEmpty = ({
 	onImportAddress?: (open: boolean) => void;
 }) => (
 	<>
-		<div className="hidden items-center justify-center sm:flex">
-			<div className="h-page mt-6 flex max-w-[45.25rem] px-4 md:mt-0 md:items-center md:px-0">
+		<div className="hidden justify-center items-center sm:flex">
+			<div className="flex px-4 mt-6 md:items-center md:px-0 md:mt-0 h-page max-w-[45.25rem]">
 				<DashboardSetupAddressCards onCreateAddress={onCreateAddress} onImportAddress={onImportAddress} />
 			</div>
 		</div>
 
 		<div className="block sm:hidden">
 			<div className="xs:mx-auto xs:max-w-88">
-				<div className="my-6 space-y-1 px-8 text-center">
+				<div className="px-8 my-6 space-y-1 text-center">
 					<HeaderMobile />
 				</div>
 

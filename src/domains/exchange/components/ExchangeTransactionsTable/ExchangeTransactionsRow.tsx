@@ -122,7 +122,7 @@ export const ExchangeTransactionsRow = ({
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"
-						className="h-5 w-20 cursor-pointer truncate"
+						className="w-20 h-5 cursor-pointer truncate"
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
 						{exchangeTransaction.orderId() ? (
@@ -132,7 +132,7 @@ export const ExchangeTransactionsRow = ({
 								addressClass="text-theme-primary-600 text-sm"
 							/>
 						) : (
-							<span className="text-theme-secondary-500 text-sm font-semibold">
+							<span className="text-sm font-semibold text-theme-secondary-500">
 								{t("COMMON.NOT_AVAILABLE")}
 							</span>
 						)}
@@ -185,7 +185,7 @@ export const ExchangeTransactionsRow = ({
 				variant="end"
 				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
 			>
-				<TableRemoveButton onClick={handleRemove} className="mt-0 p-1" />
+				<TableRemoveButton onClick={handleRemove} className="p-1 mt-0" />
 			</TableCell>
 		</TableRow>
 	);

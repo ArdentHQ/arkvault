@@ -12,9 +12,9 @@ import { ListDivided } from "@/app/components/ListDivided";
 const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => (
 	<>
 		{label}
-		<span className="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight">(</span>
+		<span className="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">(</span>
 		{symbol}
-		<span className="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight">)</span>
+		<span className="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">)</span>
 	</>
 );
 
@@ -32,7 +32,7 @@ const SelectDelimiter = ({ value, onSelect }: { value: CsvDelimiter; onSelect?: 
 				toggleContent={(isOpen: boolean) => (
 					<CollapseToggleButton
 						isOpen={isOpen}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+						className="overflow-hidden justify-between space-x-4 w-full cursor-pointer"
 						label={
 							<SelectDelimiterLabel
 								label={delimiterOptions.selected?.label}

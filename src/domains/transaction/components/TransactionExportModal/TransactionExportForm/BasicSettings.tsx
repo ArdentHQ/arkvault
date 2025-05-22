@@ -106,7 +106,7 @@ const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 					<CollapseToggleButton
 						isOpen={isOpen}
 						disabled={isDisabled}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+						className="overflow-hidden justify-between space-x-4 w-full cursor-pointer"
 						label={<div className="leading-tight whitespace-nowrap">{selected?.label}</div>}
 					/>
 				)}

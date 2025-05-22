@@ -12,13 +12,13 @@ interface SelectProfileImageProperties {
 }
 
 const UploadButtonWrapper = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-	<div {...props} className="upload-button-wrapper h-full w-full" />
+	<div {...props} className="w-full h-full upload-button-wrapper" />
 );
 
 const ProfileImageStyled = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		{...props}
-		className="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+		className="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
 	/>
 );
 
@@ -50,20 +50,20 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 						<img
 							data-testid={`SelectProfileImage__avatar-${isSvg ? "identicon" : "image"}`}
 							src={value}
-							className="min-h-full object-cover"
+							className="object-cover min-h-full"
 							alt="Avatar"
 						/>
 
 						<button
 							type="button"
-							className="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+							className="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
 							onClick={handleOpenFile}
 							data-testid="SelectProfileImage__upload-button"
 						>
-							<div className="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black">
+							<div className="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85">
 								<Icon
 									name="ArrowUpBracket"
-									className="dark:text-theme-secondary-200 text-white"
+									className="text-white dark:text-theme-secondary-200"
 									size="lg"
 								/>
 							</div>
@@ -74,7 +74,7 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 						<Button
 							size="icon"
 							variant="danger"
-							className="flex h-5 w-5 items-center justify-center p-0"
+							className="flex justify-center items-center p-0 w-5 h-5"
 							onClick={() => onSelect("")}
 							data-testid="SelectProfileImage__remove-button"
 						>
@@ -86,8 +86,8 @@ export const SelectProfileImage = ({ value, onSelect }: SelectProfileImageProper
 		}
 
 		return (
-			<div className="border-theme-secondary-300 focus-within:border-theme-primary-400 dark:border-theme-dark-700 h-[92px] w-[92px] rounded-lg border p-1.5 focus-within:border-solid">
-				<div className="h-full overflow-hidden rounded">
+			<div className="p-1.5 rounded-lg border focus-within:border-solid border-theme-secondary-300 h-[92px] w-[92px] dark:border-theme-dark-700 focus-within:border-theme-primary-400">
+				<div className="overflow-hidden h-full rounded">
 					<UploadButtonWrapper>
 						<Button
 							variant="secondary"

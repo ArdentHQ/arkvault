@@ -3,11 +3,11 @@
 exports[`TransactionRowRecipientIcon > should render avatar 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
+    class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded-full transition-all duration-100 ring-theme-background bg-theme-background shrink-0 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
     >
       <img
         alt="test"
@@ -22,7 +22,7 @@ exports[`TransactionRowRecipientIcon > should render avatar 1`] = `
 exports[`TransactionRowRecipientIcon > should render compact 1`] = `
 <DocumentFragment>
   <span
-    class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
+    class="flex justify-center items-center w-5 h-5 text-theme-text dark:text-theme-secondary-600"
     data-testid="TransactionRowRecipientIcon"
   >
     <div>
@@ -37,7 +37,7 @@ exports[`TransactionRowRecipientIcon > should render compact 1`] = `
 exports[`TransactionRowRecipientIcon > should render icon 1`] = `
 <DocumentFragment>
   <span
-    class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
+    class="flex justify-center items-center w-5 h-5 text-theme-text dark:text-theme-secondary-600"
     data-testid="TransactionRowRecipientIcon"
   >
     <div>

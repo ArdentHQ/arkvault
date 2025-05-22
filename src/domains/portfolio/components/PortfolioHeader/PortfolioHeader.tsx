@@ -109,21 +109,21 @@ export const PortfolioHeader = ({
 
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
-			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
-				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
+			<div className="flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl bg-theme-primary-100 dark:bg-theme-dark-950">
+				<div className="flex z-30 flex-row justify-between items-center px-4 w-full">
 					<Tooltip
 						visible={showHint}
 						interactive={true}
 						content={
-							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+							<div className="flex flex-col items-center pb-1.5 text-sm leading-5 sm:flex-row sm:pt-px sm:pb-px sm:space-x-4 px-[3px]">
+								<div className="block mb-2 sm:inline sm:mb-0 max-w-96">
 									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
 									size="xs"
 									variant="transparent"
 									data-testid="HideManageHint"
-									className="bg-theme-primary-500 h-8 w-full px-4 py-1.5 sm:w-auto"
+									className="py-1.5 px-4 w-full h-8 sm:w-auto bg-theme-primary-500"
 									onClick={(e) => {
 										e.stopPropagation();
 										persistHintShown(true);
@@ -142,7 +142,7 @@ export const PortfolioHeader = ({
 									showHint,
 							})}
 						>
-							<p className="text-theme-secondary-900 dark:text-theme-dark-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
+							<p className="hidden text-base font-semibold leading-5 rounded-l sm:block text-theme-secondary-900 dark:text-theme-dark-50">
 								{t("COMMON.VIEWING")}:
 							</p>
 							<div
@@ -154,7 +154,7 @@ export const PortfolioHeader = ({
 								})}
 								data-testid="ShowAddressesPanel"
 							>
-								<div className="flex items-center gap-1">
+								<div className="flex gap-1 items-center">
 									<ViewingAddressInfo
 										availableWallets={allWallets.length}
 										wallets={selectedWallets}
@@ -162,7 +162,7 @@ export const PortfolioHeader = ({
 										mode={mode}
 									/>
 									{allWallets.length > 1 && (
-										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
+										<Button variant="primary-transparent" size="icon" className="w-6 h-6">
 											<Icon name="DoubleChevron" width={26} height={26} />
 										</Button>
 									)}
@@ -170,36 +170,36 @@ export const PortfolioHeader = ({
 							</div>
 						</div>
 					</Tooltip>
-					<div className="flex flex-row items-center gap-1">
+					<div className="flex flex-row gap-1 items-center">
 						<Button
 							variant="secondary"
-							className="hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+							className="flex justify-center items-center p-0 w-6 h-6 sm:px-2 sm:w-auto sm:h-8 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700"
 							onClick={() => onImportAddress?.(true)}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
-							<p className="hidden text-base leading-5 font-semibold sm:block">{t("COMMON.IMPORT")}</p>
+							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.IMPORT")}</p>
 						</Button>
-						<Divider type="vertical" className="border-theme-primary-300 dark:border-theme-dark-700 h-4" />
+						<Divider type="vertical" className="h-4 border-theme-primary-300 dark:border-theme-dark-700" />
 						<Button
 							variant="secondary"
-							className="hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+							className="flex justify-center items-center p-0 w-6 h-6 sm:px-2 sm:w-auto sm:h-8 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700"
 							onClick={() => onCreateAddress?.(true)}
 						>
 							<Icon name="Plus" size="md" />
-							<p className="hidden text-base leading-5 font-semibold sm:block">{t("COMMON.CREATE")}</p>
+							<p className="hidden text-base font-semibold leading-5 sm:block">{t("COMMON.CREATE")}</p>
 						</Button>
 					</div>
 				</div>
 
 				<div className="flex flex-col gap-0.5">
-					<div className="dark:bg-theme-dark-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
-						<div className="flex w-full flex-row items-center justify-between">
+					<div className="flex flex-col gap-3 p-4 w-full bg-white rounded md:rounded-b-sm md:rounded-t-lg dark:bg-theme-dark-900">
+						<div className="flex flex-row justify-between items-center w-full">
 							{selectedWallets.length === 1 && (
-								<div className="flex flex-row items-center gap-1.5">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
+								<div className="flex flex-row gap-1.5 items-center">
+									<p className="hidden text-sm font-semibold sm:block md:text-base md:leading-5 text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200">
 										{t("COMMON.ADDRESS")}
 									</p>
-									<div className="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]">
+									<div className="w-32 md:w-60 md:h-5 h-[17px] lg:w-[410px]">
 										<Address
 											alignment="center"
 											address={wallet.address()}
@@ -207,7 +207,7 @@ export const PortfolioHeader = ({
 											addressClass="text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50"
 										/>
 									</div>
-									<div className="flex items-center gap-3 leading-[17px] sm:ml-1.5">
+									<div className="flex gap-3 items-center sm:ml-1.5 leading-[17px]">
 										<WalletIcons
 											wallet={wallet}
 											exclude={["isKnown", "isStarred", "isTestNetwork"]}
@@ -218,15 +218,15 @@ export const PortfolioHeader = ({
 							)}
 
 							{selectedWallets.length > 1 && (
-								<div className="flex flex-row items-center gap-1.5">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
+								<div className="flex flex-row gap-1.5 items-center">
+									<p className="hidden text-sm font-semibold sm:block md:text-base md:leading-5 text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200">
 										{wallet.currency()} {t("COMMON.BALANCE")}
 									</p>
 									<div>
 										<Amount
 											value={balance.total().toNumber()}
 											ticker={wallet.currency()}
-											className="text-theme-primary-900 dark:text-theme-dark-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
+											className="text-sm font-semibold md:text-base md:leading-5 text-theme-primary-900 leading-[17px] dark:text-theme-dark-50"
 											allowHideBalance
 											profile={profile}
 										/>
@@ -234,10 +234,10 @@ export const PortfolioHeader = ({
 								</div>
 							)}
 
-							<div className="flex flex-row items-center gap-3">
+							<div className="flex flex-row gap-3 items-center">
 								{selectedWallets.length === 1 && (
 									<>
-										<div className="flex items-center gap-2">
+										<div className="flex gap-2 items-center">
 											<Copy
 												copyData={wallet.address()}
 												tooltip={t("COMMON.COPY_ADDRESS")}
@@ -257,7 +257,7 @@ export const PortfolioHeader = ({
 
 										<Divider
 											type="vertical"
-											className="border-theme-secondary-300 dark:border-theme-dark-700 mx-0 hidden h-[17px] p-0 sm:block"
+											className="hidden p-0 mx-0 sm:block border-theme-secondary-300 h-[17px] dark:border-theme-dark-700"
 										/>
 									</>
 								)}
@@ -274,15 +274,15 @@ export const PortfolioHeader = ({
 						</div>
 						<Divider
 							type="horizontal"
-							className="border-theme-secondary-300 dark:border-theme-dark-700 my-0 h-px border-dashed"
+							className="my-0 h-px border-dashed border-theme-secondary-300 dark:border-theme-dark-700"
 						/>
-						<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
+						<div className="flex flex-col gap-3 sm:flex-row sm:gap-0 sm:justify-between sm:items-center sm:w-full">
 							<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
-								<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold">
+								<p className="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200">
 									{t("COMMON.TOTAL_BALANCE")}
 								</p>
 
-								<div className="text-theme-secondary-900 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
+								<div className="flex flex-row items-center text-lg font-semibold md:text-2xl text-theme-secondary-900 leading-[21px] md:leading-[29px]">
 									{isRestored && selectedWallets.length === 1 && (
 										<Amount
 											value={wallet.balance()}
@@ -298,7 +298,7 @@ export const PortfolioHeader = ({
 									{selectedWallets.length === 1 && (
 										<Divider
 											type="vertical"
-											className="border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block hidden h-6"
+											className="hidden h-6 border-theme-secondary-300 md-lg:block dark:border-theme-dark-700"
 										/>
 									)}
 									{isRestored && (
@@ -319,11 +319,11 @@ export const PortfolioHeader = ({
 								</div>
 							</div>
 
-							<div className="flex flex-row items-center gap-3">
+							<div className="flex flex-row gap-3 items-center">
 								{selectedWallets.length === 1 && (
 									<Button
 										data-testid="WalletHeader__send-button"
-										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
+										className="flex-1 px-8 my-auto dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
 										disabled={
 											wallet.balance() === 0 ||
 											!wallet.hasBeenFullyRestored() ||
@@ -339,7 +339,7 @@ export const PortfolioHeader = ({
 								{selectedWallets.length > 1 && (
 									<Button
 										data-testid="WalletHeader__send-button"
-										className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
+										className="flex-1 px-8 my-auto dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
 										disabled={balance.total().isZero()}
 										variant="primary"
 										onClick={handleSend}
@@ -372,7 +372,7 @@ export const PortfolioHeader = ({
 						</div>
 					</div>
 
-					<div className="dark:bg-theme-dark-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
+					<div className="hidden p-4 w-full bg-white rounded-t-sm rounded-b-lg md:block dark:bg-theme-dark-900">
 						<WalletVote
 							wallet={wallet}
 							onButtonClick={handleVotesButtonClick}

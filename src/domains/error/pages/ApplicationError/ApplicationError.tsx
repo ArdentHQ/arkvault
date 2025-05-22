@@ -17,8 +17,8 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 	return (
 		<main className={theme} data-testid="Main">
 			<Page pageTitle={t("COMMON.ERROR")} navbarVariant="logo-only" title={<Trans i18nKey="COMMON.APP_NAME" />}>
-				<Section className="flex flex-1 flex-col justify-center text-center">
-					<div className="mx-auto flex w-full max-w-xs justify-center">
+				<Section className="flex flex-col flex-1 justify-center text-center">
+					<div className="flex justify-center mx-auto w-full max-w-xs">
 						<Image name="GenericError" domain="error" />
 					</div>
 
@@ -40,7 +40,7 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 						</div>
 					)}
 
-					<div className="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4">
+					<div className="flex justify-center items-center mx-auto mt-8 space-x-4 max-w-md">
 						{error && <ClipboardButton data={String(error?.message)}>{t("COMMON.COPY")}</ClipboardButton>}
 
 						<Button data-testid="ApplicationError__button--reload" onClick={() => window.location.reload()}>

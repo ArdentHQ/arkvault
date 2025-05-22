@@ -66,7 +66,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 				onClick={() => setSearchbarVisible(true)}
 				type="button"
 			>
-				<div className="flex h-5 items-center gap-2">
+				<div className="flex gap-2 items-center h-5">
 					<span className="hidden md:block">{label}</span>
 					<Icon name="MagnifyingGlassAlt" size="lg" />
 				</div>
@@ -88,7 +88,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					{extra && (
 						<div className="flex items-center">
 							<div>{extra}</div>
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mr-8 h-10 border-l" />
+							<div className="mr-8 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800" />
 						</div>
 					)}
 

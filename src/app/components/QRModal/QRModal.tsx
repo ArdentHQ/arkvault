@@ -31,13 +31,13 @@ const AccessDeniedErrors = [
 const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean }) => (
 	<div
 		data-testid="ViewFinder"
-		className="border-theme-secondary-500 relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2"
+		className="flex relative z-10 flex-col justify-center items-center border-2 border-theme-secondary-500 h-[300px] w-[300px]"
 		style={{ boxShadow: "0px 0px 0px 9999px rgba(0, 0, 0, 0.75)" }}
 	>
-		<div className="bg-theme-secondary-800 absolute -top-[2px] right-8 left-8 h-0.5" />
-		<div className="bg-theme-secondary-800 absolute right-8 -bottom-[2px] left-8 h-0.5" />
-		<div className="bg-theme-secondary-800 absolute top-8 bottom-8 -left-[2px] w-0.5" />
-		<div className="bg-theme-secondary-800 absolute top-8 -right-[2px] bottom-8 w-0.5" />
+		<div className="absolute right-8 left-8 h-0.5 bg-theme-secondary-800 -top-[2px]" />
+		<div className="absolute right-8 left-8 h-0.5 bg-theme-secondary-800 -bottom-[2px]" />
+		<div className="absolute top-8 bottom-8 w-0.5 bg-theme-secondary-800 -left-[2px]" />
+		<div className="absolute top-8 bottom-8 w-0.5 bg-theme-secondary-800 -right-[2px]" />
 
 		{(error || isLoading) && (
 			<>
@@ -132,12 +132,12 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			contentClassName="px-4 pt-4 md:pt-8 md:px-8"
 			onClose={() => onCancel()}
 		>
-			<div className="relative -mx-10 mt-4 -mb-10 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
+			<div className="flex overflow-hidden relative flex-1 justify-center items-center -mx-10 mt-4 -mb-10 min-h-full bg-black">
 				<div className="absolute inset-0 z-10">
 					<QRCameraReader onError={handleError} onRead={handleRead} onReady={handleReady} />
 				</div>
 
-				<div className="flex h-full flex-col items-center justify-center py-8">
+				<div className="flex flex-col justify-center items-center py-8 h-full">
 					<ViewFinder error={error} isLoading={!ready} />
 					{error && (
 						<Alert

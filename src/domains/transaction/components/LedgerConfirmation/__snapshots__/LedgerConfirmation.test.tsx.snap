@@ -12,17 +12,17 @@ exports[`LedgerConfirmation > should render 1`] = `
       Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
     </div>
     <div
-      class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
+      class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
       data-testid="LedgerConfirmation-loading_message"
     >
       <div
-        class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+        class="w-5 h-5 rounded-full animate-spin border-[5px] shrink-0 border-theme-warning-200 border-l-theme-warning-900 dark:border-theme-secondary-800 dark:border-l-theme-warning-600"
       />
       <div
-        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+        class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid text-theme-warning-200 dark:text-theme-secondary-800"
       />
       <p
-        class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+        class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
       >
         This transaction is pending confirmation.
       </p>
@@ -43,17 +43,17 @@ exports[`LedgerConfirmation > should render with children 1`] = `
       Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
     </div>
     <div
-      class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
+      class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
       data-testid="LedgerConfirmation-loading_message"
     >
       <div
-        class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+        class="w-5 h-5 rounded-full animate-spin border-[5px] shrink-0 border-theme-warning-200 border-l-theme-warning-900 dark:border-theme-secondary-800 dark:border-l-theme-warning-600"
       />
       <div
-        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+        class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid text-theme-warning-200 dark:text-theme-secondary-800"
       />
       <p
-        class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+        class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
       >
         This transaction is pending confirmation.
       </p>
@@ -84,17 +84,17 @@ exports[`LedgerConfirmation > should render with children and custom heading 1`]
       Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
     </div>
     <div
-      class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
+      class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
       data-testid="LedgerConfirmation-loading_message"
     >
       <div
-        class="animate-spin rounded-full border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+        class="w-5 h-5 rounded-full animate-spin border-[5px] shrink-0 border-theme-warning-200 border-l-theme-warning-900 dark:border-theme-secondary-800 dark:border-l-theme-warning-600"
       />
       <div
-        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
+        class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid text-theme-warning-200 dark:text-theme-secondary-800"
       />
       <p
-        class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+        class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
       >
         This transaction is pending confirmation.
       </p>

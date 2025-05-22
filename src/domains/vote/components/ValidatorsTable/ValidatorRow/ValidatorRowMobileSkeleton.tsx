@@ -9,9 +9,9 @@ export const ValidatorRowMobileSkeleton = () => {
 	return (
 		<tr data-testid="ValidatorRowMobileSkeleton">
 			<td className="pt-3">
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 w-full overflow-hidden rounded-xl border">
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 overflow-hidden border-b p-4">
-						<div className="flex items-center justify-between">
+				<div className="overflow-hidden w-full rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
+					<div className="overflow-hidden p-4 border-b border-theme-secondary-300 dark:border-theme-secondary-800">
+						<div className="flex justify-between items-center">
 							<div>
 								<Skeleton height={17} width={nameWidth} />
 							</div>

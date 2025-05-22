@@ -139,13 +139,13 @@ const NodeStatusNode: React.VFC<{
 	return (
 		<div
 			data-testid="NodesStatus--node"
-			className="border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 flex items-center space-x-3 rounded-lg border px-4 py-3 leading-none"
+			className="flex items-center py-3 px-4 space-x-3 leading-none rounded-lg border border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200"
 		>
 			<div className="flex shrink-0">
 				<NetworkIcon network={network} size="sm" className="" showTooltip={false} isCompact />
 			</div>
 
-			<div className="grow font-semibold">{networkDisplayName(network)}</div>
+			<div className="font-semibold grow">{networkDisplayName(network)}</div>
 
 			<div className="cursor-pointer">
 				{results.every((r) => r === true) && (
@@ -176,7 +176,7 @@ const NodeStatusNode: React.VFC<{
 					type="button"
 					onClick={checkNetworkStatus}
 					disabled={results.includes(undefined)}
-					className="hover:text-theme-primary-700 dark:hover:text-theme-dark-50 transition-colors"
+					className="transition-colors dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
 				>
 					<Icon name="ArrowRotateLeft" size="md" />
 				</button>
@@ -205,7 +205,7 @@ const NodesStatus: React.VFC<{ networks: Networks.Network[] }> = ({ networks }) 
 	}
 
 	return (
-		<div data-testid="NodesStatus" className="mt-3 grid gap-3 md:grid-cols-2">
+		<div data-testid="NodesStatus" className="grid gap-3 mt-3 md:grid-cols-2">
 			{Object.values(hostGroups).map((hostGroup) => (
 				<NodeStatusNode key={`${hostGroup.network.id()}`} network={hostGroup.network} hosts={hostGroup.hosts} />
 			))}

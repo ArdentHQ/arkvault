@@ -27,7 +27,7 @@ export const SuccessStep = ({
 		<section data-testid="ImportWallet__success-step">
 			<div className="space-y-4">
 				<DetailWrapper label={t("COMMON.IMPORTED")}>
-					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
+					<div className="flex justify-between items-center mb-3 w-full leading-5 sm:justify-start sm:mb-0">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
 						<Address
 							address={importedWallet.address()}
@@ -37,11 +37,11 @@ export const SuccessStep = ({
 						/>
 					</div>
 
-					<div className="hidden h-8 w-full items-center sm:flex">
+					<div className="hidden items-center w-full h-8 sm:flex">
 						<Divider dashed />
 					</div>
 
-					<div className="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5">
+					<div className="flex justify-between items-center w-full sm:justify-start sm:leading-5 leading-[17px]">
 						<DetailTitle> {t("COMMON.BALANCE")}</DetailTitle>
 						<div className="font-semibold">
 							<Amount value={importedWallet.balance()} ticker={network.ticker()} />
@@ -50,15 +50,15 @@ export const SuccessStep = ({
 				</DetailWrapper>
 
 				<DetailWrapper label={t("WALLETS.WALLET_NAME")}>
-					<div className="flex w-full items-center justify-between sm:justify-start">
+					<div className="flex justify-between items-center w-full sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
-						<div className="flex w-full min-w-0 items-center justify-end pr-4 leading-[17px] font-semibold sm:justify-between sm:leading-5">
+						<div className="flex justify-end items-center pr-4 w-full min-w-0 font-semibold sm:justify-between sm:leading-5 leading-[17px]">
 							<div className="max-w-[calc(100%_-_80px)] shrink-0 truncate sm:max-w-none">
 								{" "}
 								{importedWallet.alias()}{" "}
 							</div>
 
-							<div className="flex h-5 items-center sm:hidden">
+							<div className="flex items-center h-5 sm:hidden">
 								<Divider type="vertical" size="md" />
 							</div>
 
@@ -67,11 +67,11 @@ export const SuccessStep = ({
 								data-testid="ImportWallet__edit-alias"
 								type="button"
 								variant="transparent"
-								className="text-theme-primary-600 hover:bg-theme-primary-100 dark:hover:bg-theme-secondary-800 space-x-0 rounded px-2 py-1 dark:text-white"
+								className="py-1 px-2 space-x-0 rounded dark:text-white text-theme-primary-600 dark:hover:bg-theme-secondary-800 hover:bg-theme-primary-100"
 								onClick={onClickEditAlias}
 							>
 								<Icon name="Pencil" size="md" />
-								<span className="leading-[17px] sm:leading-5">{t("COMMON.EDIT")}</span>
+								<span className="sm:leading-5 leading-[17px]">{t("COMMON.EDIT")}</span>
 							</Button>
 						</div>
 					</div>

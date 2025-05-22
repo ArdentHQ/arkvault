@@ -36,7 +36,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 						key={optionValue}
 						value={displayValue}
 						isSelected={() => optionValue === selectedOption}
-						className="group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+						className="p-0 group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
 						setSelectedValue={() => onChange(optionValue as InputFeeOption)}
 					>
 						<div
@@ -47,7 +47,7 @@ export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 								},
 							)}
 						>
-							<div className="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2">
+							<div className="flex justify-between items-center p-3 sm:flex-col sm:justify-start sm:items-start sm:space-y-2">
 								<div
 									className={cn("text-sm leading-[17px] sm:leading-5", {
 										"text-theme-navy-700 dark:text-theme-dark-50": isSelected,

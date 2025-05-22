@@ -35,7 +35,7 @@ export const SettingsWrapper = ({
 
 			<Section>
 				<div className="flex flex-1">
-					<div className="mx-auto flex w-full flex-col lg:container lg:flex-row lg:space-x-3">
+					<div className="flex flex-col mx-auto w-full lg:container lg:flex-row lg:space-x-3">
 						<div className="mb-4 md:-mt-4 lg:my-0">
 							<SideBar
 								items={menuItems}
@@ -46,7 +46,7 @@ export const SettingsWrapper = ({
 							/>
 						</div>
 
-						<div className="border-theme-secondary-300 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border">
+						<div className="flex-1 sm:overflow-hidden sm:rounded-xl sm:border border-theme-secondary-300 dark:border-theme-dark-700">
 							{children}
 						</div>
 					</div>

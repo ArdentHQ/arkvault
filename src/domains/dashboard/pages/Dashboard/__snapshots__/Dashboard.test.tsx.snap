@@ -3,18 +3,18 @@
 exports[`Dashboard > should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    class="flex relative flex-col pb-14 sm:pb-0 sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="flex h-14 items-center justify-center space-x-4"
+        class="flex justify-center items-center space-x-4 h-14"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -51,10 +51,10 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -88,10 +88,10 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -128,16 +128,16 @@ exports[`Dashboard > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
     >
       <div
-        class="relative flex h-12 flex-row"
+        class="flex relative flex-row h-12"
       >
         <div
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
           >
             <div
               class="mx-auto"
@@ -168,16 +168,16 @@ exports[`Dashboard > should render 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 justify-between items-center px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row gap-6 items-center"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="flex items-center my-auto h-12"
             >
               <button
-                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
+                class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -203,7 +203,7 @@ exports[`Dashboard > should render 1`] = `
               </button>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden items-center h-12 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -211,7 +211,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -222,7 +222,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -233,7 +233,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -244,7 +244,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -253,7 +253,7 @@ exports[`Dashboard > should render 1`] = `
               </li>
             </ul>
             <div
-              class="mr-auto flex content-center items-center xl:hidden"
+              class="flex content-center items-center mr-auto xl:hidden"
               data-testid="NavigationBar__menu-toggle"
             >
               <div
@@ -262,7 +262,7 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
+                  class="flex items-center h-7 rounded cursor-pointer focus:ring-2 text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -291,7 +291,7 @@ exports[`Dashboard > should render 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row gap-4 justify-center items-center sm:gap-5"
           >
             <div>
               <div
@@ -303,7 +303,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -311,7 +311,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="m-0 p-1"
+                        class="p-1 m-0"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -340,10 +340,10 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                       >
                         <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
                         />
                       </div>
                     </div>
@@ -352,7 +352,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div>
               <div
@@ -364,7 +364,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -372,7 +372,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="m-0 p-1"
+                        class="p-1 m-0"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -394,10 +394,10 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -406,7 +406,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -416,7 +416,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -458,7 +458,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -468,7 +468,7 @@ exports[`Dashboard > should render 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -507,7 +507,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden sm:block"
@@ -522,7 +522,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
+                      class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -530,7 +530,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
+                          class="rounded border-2 dark:bg-transparent border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 p-[3px] dark:border-theme-danger-info-border dark:text-theme-danger-info-text"
                         >
                           <div>
                             <div
@@ -558,12 +558,12 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
+                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
+                          class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                           role="img"
                         >
                           <div
@@ -596,16 +596,16 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
+              class="hidden h-6 border-r sm:block sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
-              class="flex items-center gap-5"
+              class="flex gap-5 items-center"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
+                class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -645,7 +645,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
+                      class="hidden text-sm font-semibold text-theme-secondary-700 leading-[17px] md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -663,25 +663,25 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="flex gap-6 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 >
                   <div
-                    class="relative cursor-pointer items-center justify-center rounded align-middle"
+                    class="relative justify-center items-center align-middle rounded cursor-pointer"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
+                      class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
+                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
                           FO
                         </span>
@@ -696,30 +696,30 @@ exports[`Dashboard > should render 1`] = `
       </div>
     </nav>
     <div
-      class="flex flex-1 flex-col"
+      class="flex flex-col flex-1"
     >
       <div
-        class="w-full py-4 last:pb-8 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
+        class="py-4 pb-0 w-full md:px-0 md:pb-4 xl:mx-auto first:pt-0 last:pb-8"
       >
         <div
-          class="lg:container m-0 p-0 md:px-0 md:mx-auto"
+          class="p-0 m-0 md:px-0 md:mx-auto lg:container"
         >
           <header
             class="md:px-10 md:pt-8 lg:container"
             data-testid="WalletHeader"
           >
             <div
-              class="bg-theme-primary-100 dark:bg-theme-dark-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+              class="flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl bg-theme-primary-100 dark:bg-theme-dark-950"
             >
               <div
-                class="z-30 flex w-full flex-row items-center justify-between px-4"
+                class="flex z-30 flex-row justify-between items-center px-4 w-full"
               >
                 <div
                   aria-expanded="false"
-                  class="flex h-fit flex-row items-center gap-1"
+                  class="flex flex-row gap-1 items-center h-fit"
                 >
                   <p
-                    class="text-theme-secondary-900 dark:text-theme-dark-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+                    class="hidden text-base font-semibold leading-5 rounded-l sm:block text-theme-secondary-900 dark:text-theme-dark-50"
                   >
                     Viewing:
                   </p>
@@ -729,10 +729,10 @@ exports[`Dashboard > should render 1`] = `
                     tabindex="0"
                   >
                     <div
-                      class="flex items-center gap-1"
+                      class="flex gap-1 items-center"
                     >
                       <div
-                        class="dark:textdark-theme-dark-navy-400 text-theme-primary-600 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                        class="text-sm font-semibold sm:text-base sm:leading-5 text-theme-primary-600 leading-[17px] dark:textdark-theme-dark-navy-400"
                       >
                         Multiple addresses (1)
                       </div>
@@ -740,10 +740,10 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-row items-center gap-1"
+                  class="flex flex-row gap-1 items-center"
                 >
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+                    class="flex relative justify-center items-center p-0 space-x-3 w-6 h-6 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer sm:px-2 sm:w-auto sm:h-8 dark:bg-transparent focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     type="button"
                   >
                     <div
@@ -780,17 +780,17 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <p
-                        class="hidden text-base leading-5 font-semibold sm:block"
+                        class="hidden text-base font-semibold leading-5 sm:block"
                       >
                         Import
                       </p>
                     </div>
                   </button>
                   <div
-                    class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 h-4"
+                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-primary-300 dark:border-theme-dark-700"
                   />
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+                    class="flex relative justify-center items-center p-0 space-x-3 w-6 h-6 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer sm:px-2 sm:w-auto sm:h-8 dark:bg-transparent focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     type="button"
                   >
                     <div
@@ -824,7 +824,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <p
-                        class="hidden text-base leading-5 font-semibold sm:block"
+                        class="hidden text-base font-semibold leading-5 sm:block"
                       >
                         Create
                       </p>
@@ -836,30 +836,30 @@ exports[`Dashboard > should render 1`] = `
                 class="flex flex-col gap-0.5"
               >
                 <div
-                  class="dark:bg-theme-dark-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm"
+                  class="flex flex-col gap-3 p-4 w-full bg-white rounded md:rounded-b-sm md:rounded-t-lg dark:bg-theme-dark-900"
                 >
                   <div
-                    class="flex w-full flex-row items-center justify-between"
+                    class="flex flex-row justify-between items-center w-full"
                   >
                     <div
-                      class="flex flex-row items-center gap-1.5"
+                      class="flex flex-row gap-1.5 items-center"
                     >
                       <p
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5"
+                        class="hidden text-sm font-semibold sm:block md:text-base md:leading-5 text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
                       >
                         Address
                       </p>
                       <div
-                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]"
+                        class="w-32 md:w-60 md:h-5 h-[17px] lg:w-[410px]"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+                          class="flex overflow-hidden items-center space-x-2 min-w-0 whitespace-nowrap"
                         >
                           <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                            class="relative text-left sm:leading-5 grow leading-[17px]"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-primary-900 text-sm font-semibold leading-[17px] md:text-base md:leading-5 dark:text-theme-dark-50 font-semibold text-base absolute w-full"
+                              class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold md:text-base md:leading-5 no-ligatures text-theme-primary-900 leading-[17px] dark:text-theme-dark-50"
                               data-testid="Address__address"
                             >
                               0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -871,7 +871,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center gap-3 leading-[17px] sm:ml-1.5"
+                        class="flex gap-3 items-center sm:ml-1.5 leading-[17px]"
                       >
                         <button
                           class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-500 dark:text-theme-dark-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
@@ -929,13 +929,13 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row items-center gap-3"
+                      class="flex flex-row gap-3 items-center"
                     >
                       <div
-                        class="flex items-center gap-2"
+                        class="flex gap-2 items-center"
                       >
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="inline-flex relative justify-center items-center p-1 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed ring-focus transition-colors-shadow outline-hidden text-theme-secondary-700 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:text-theme-dark-200 hover:text-theme-primary-700 hover:bg-theme-primary-200 focus:outline-hidden focus:ring-theme-primary-400"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -974,7 +974,7 @@ exports[`Dashboard > should render 1`] = `
                           </span>
                         </button>
                         <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="inline-flex relative justify-center items-center p-1 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed ring-focus transition-colors-shadow outline-hidden text-theme-secondary-700 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:text-theme-dark-200 hover:text-theme-primary-700 hover:bg-theme-primary-200 focus:outline-hidden focus:ring-theme-primary-400"
                           data-ring-focus-margin="-m-1"
                           data-testid="clipboard-icon__wrapper"
                           type="button"
@@ -1008,13 +1008,13 @@ exports[`Dashboard > should render 1`] = `
                         </button>
                       </div>
                       <div
-                        class="relative border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 mx-0 hidden h-[17px] p-0 sm:block"
+                        class="hidden relative p-0 mx-0 align-middle border-t-0 border-l border-solid sm:block border-theme-secondary-300 h-[17px] dark:border-theme-dark-700"
                       />
                       <div
                         class="hidden sm:flex"
                       >
                         <button
-                          class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
+                          class="inline-flex relative justify-center items-center p-1 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:text-theme-dark-200 hover:text-theme-primary-700 hover:bg-theme-primary-200 focus:outline-hidden focus:ring-theme-primary-400"
                           data-testid="WalletHeader__refresh"
                           type="button"
                         >
@@ -1050,22 +1050,22 @@ exports[`Dashboard > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-t clear-both flex w-full min-w-full border-theme-secondary-300 dark:border-theme-dark-700 my-0 h-px border-dashed"
+                    class="flex clear-both my-0 w-full min-w-full h-px border-t border-dashed border-theme-secondary-300 dark:border-theme-dark-700"
                   />
                   <div
-                    class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+                    class="flex flex-col gap-3 sm:flex-row sm:gap-0 sm:justify-between sm:items-center sm:w-full"
                   >
                     <div
                       class="flex flex-col gap-2"
                       data-testid="WalletHeader__balance"
                     >
                       <p
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
+                        class="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
                       >
                         Total Balance
                       </p>
                       <div
-                        class="text-theme-secondary-900 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                        class="flex flex-row items-center text-lg font-semibold md:text-2xl text-theme-secondary-900 leading-[21px] md:leading-[29px]"
                       >
                         <span
                           class="whitespace-nowrap dark:text-theme-dark-50"
@@ -1074,10 +1074,10 @@ exports[`Dashboard > should render 1`] = `
                           95.27653252 ARK
                         </span>
                         <div
-                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 md-lg:block hidden h-6"
+                          class="hidden relative mx-2 h-6 align-middle border-t-0 border-l border-solid border-theme-secondary-300 md-lg:block dark:border-theme-dark-700"
                         />
                         <span
-                          class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block hidden"
+                          class="hidden whitespace-nowrap text-theme-secondary-700 md-lg:block dark:text-theme-dark-200"
                           data-testid="Amount"
                         >
                           45 BTC
@@ -1085,10 +1085,10 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row items-center gap-3"
+                      class="flex flex-row gap-3 items-center"
                     >
                       <button
-                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
+                        class="inline-flex relative flex-1 justify-center items-center py-3 px-8 my-auto space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 focus:outline-hidden focus:ring-theme-primary-400"
                         data-testid="WalletHeader__send-button"
                         type="button"
                       >
@@ -1108,7 +1108,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="dropdown__toggle"
                         >
                           <button
-                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700"
+                            class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-dark-navy-700 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
                             type="button"
                           >
                             <div
@@ -1156,20 +1156,20 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="dark:bg-theme-dark-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block"
+                  class="hidden p-4 w-full bg-white rounded-t-sm rounded-b-lg md:block dark:bg-theme-dark-900"
                 >
                   <div
-                    class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+                    class="flex flex-col items-center -mt-4 w-full md:flex-row md:items-center md:mt-0"
                     data-testid="WalletVote"
                   >
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+                      class="flex overflow-hidden flex-col gap-0 justify-between items-start mb-3 w-full rounded border md:flex-row md:gap-2 md:items-center md:mb-0 md:rounded-none md:border-none border-theme-secondary-300 dark:border-theme-dark-700"
                     >
                       <div
-                        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+                        class="flex flex-row gap-2 items-center p-3 w-full text-sm font-semibold md:p-0 md:w-auto md:text-base md:leading-5 md:bg-transparent bg-theme-secondary-100 leading-[17px] md:dark:bg-transparent dark:bg-theme-dark-950"
                       >
                         <p
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+                          class="text-sm md:text-base md:leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
                         >
                           Voting for
                         </p>
@@ -1177,10 +1177,10 @@ exports[`Dashboard > should render 1`] = `
                           class="xs:max-w-32 max-w-28 truncate sm:max-w-40 md:max-w-48"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                              class="overflow-hidden min-w-0 text-sm text-base font-semibold md:text-base md:leading-5 no-ligatures dark:text-theme-dark-50"
                               data-testid="Address__address"
                             >
                               0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
@@ -1189,30 +1189,30 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
+                        class="flex flex-col gap-2 py-3 px-4 text-base font-semibold leading-5 md:flex-row md:py-0 md:px-0"
                       >
                         <p
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
+                          class="text-sm md:text-base md:leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
                         >
                           Rank
                         </p>
                         <p
-                          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+                          class="mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5 text-theme-secondary-900 dark:text-theme-dark-50"
                         >
                           #21
                         </p>
                         <p
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
+                          class="text-sm md:hidden text-theme-secondary-700 dark:text-theme-dark-200"
                         >
                           Delegate Status
                         </p>
                         <div
-                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dark:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+                          class="flex overflow-hidden justify-center items-center py-0.5 px-1 text-xs font-semibold rounded border-2 border-none dark:bg-transparent dark:border dark:border-solid no-ligatures bg-theme-success-100 text-theme-success-700 h-fit w-fit dark:text-theme-success-500 dark:border-theme-success-800"
                         >
                           Active
                         </div>
                         <div
-                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+                          class="hidden relative p-0 mx-2 mr-3 ml-1 h-5 align-middle border-t-0 border-l border-solid md:flex border-theme-secondary-300 dark:border-s-theme-dark-700"
                         />
                       </div>
                     </div>
@@ -1220,7 +1220,7 @@ exports[`Dashboard > should render 1`] = `
                       class="w-full md:w-auto md:max-md:self-end"
                     >
                       <button
-                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+                        class="hidden relative justify-center items-center py-3 px-5 mt-4 space-x-2 w-full text-base font-semibold leading-tight text-center bg-transparent rounded duration-100 ease-linear cursor-pointer md:flex md:px-2 md:mt-0 md:w-auto dark:bg-transparent focus:ring-2 disabled:bg-transparent disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-primary-600 md:py-[3px] dark:hover:bg-theme-secondary-800 dark:hover:text-white dark:text-theme-dark-navy-400 dark:disabled:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 focus:outline-hidden focus:ring-theme-primary-400"
                         data-testid="WalletVote__button"
                         type="button"
                       >
@@ -1263,7 +1263,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </button>
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+                        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 w-full text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer md:hidden dark:text-white hover:text-white focus:ring-2 disabled:bg-transparent disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:hover:bg-theme-primary-500 dark:disabled:bg-transparent hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
                         data-testid="WalletVote__button_mobile"
                         type="button"
                       >
@@ -1321,17 +1321,17 @@ exports[`Dashboard > should render 1`] = `
           data-testid="TabScroll"
         >
           <div
-            class="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5"
+            class="px-5 bg-theme-secondary-200 dark:bg-theme-dark-950"
           >
             <div
               class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
             >
               <div
-                class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 h-[48px]"
+                class="flex gap-1 items-center p-1 rounded-xl tab-list w-fit bg-theme-secondary-200 h-[48px] dark:bg-theme-dark-950"
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
+                  class="py-1.5 px-3 text-base font-semibold leading-5 rounded transition-all md:rounded-lg tab-button"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-transactions"
                   role="tab"
@@ -1355,20 +1355,20 @@ exports[`Dashboard > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 pt-2!"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="px-6 mx-auto md:px-10 lg:container"
         >
           <div
             class=""
           >
             <div
-              class="mb-3 hidden md:block"
+              class="hidden mb-3 md:block"
             >
               <div
-                class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 h-10"
+                class="flex gap-1 items-center p-1 h-10 rounded-xl tab-list w-fit bg-theme-secondary-200 dark:bg-theme-dark-950"
               >
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
+                  class="py-1.5 px-3 text-base font-semibold leading-5 rounded transition-all md:rounded-lg tab-button"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-all"
                   role="tab"
@@ -1383,7 +1383,7 @@ exports[`Dashboard > should render 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
+                  class="py-1.5 px-3 text-base font-semibold leading-5 rounded transition-all md:rounded-lg tab-button"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-received"
                   role="tab"
@@ -1398,7 +1398,7 @@ exports[`Dashboard > should render 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
+                  class="py-1.5 px-3 text-base font-semibold leading-5 rounded transition-all md:rounded-lg tab-button"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-sent"
                   role="tab"
@@ -1414,7 +1414,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
+              class="flex flex-col my-3 space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
             >
               <div
                 class="flex-1"
@@ -1425,10 +1425,10 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="dropdown__toggle-Transactions--filter-dropdown"
                 >
                   <div
-                    class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3"
+                    class="flex overflow-hidden justify-between items-center p-3 space-x-4 w-full h-11 rounded border cursor-pointer sm:py-3 sm:px-4 border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50"
                   >
                     <span
-                      class="text-base leading-tight font-semibold"
+                      class="text-base font-semibold leading-tight"
                     >
                       All Transactions
                     </span>
@@ -1473,7 +1473,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+                      class="inline-flex relative justify-center items-center py-1.5 px-4 space-x-2 w-full text-base font-semibold text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 sm:w-fit dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-dark-navy-700 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1527,24 +1527,24 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
+              class="pb-2 rounded-xl border-transparent outline outline-1 outline-transparent md:outline-theme-secondary-300 md:border-b-theme-secondary-200 md:border-b-[5px] dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
               data-testid="TableWrapper"
             >
               <div
-                class="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4"
+                class="flex flex-col gap-3 justify-between items-start pt-3 pb-4 w-full border-b-0 sm:flex-row md:items-center md:py-4 md:px-6 md:border-b border-b-theme-secondary-300 dark:border-b-theme-secondary-800"
               >
                 <div
                   class="flex items-center space-x-1.5"
                 >
                   <span
-                    class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold"
+                    class="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                   >
                     Showing
                   </span>
                   <span
                     aria-busy="true"
                     aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                   >
                     <span
                       class="react-loading-skeleton"
@@ -1555,13 +1555,13 @@ exports[`Dashboard > should render 1`] = `
                     <br />
                   </span>
                   <span
-                    class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold"
+                    class="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                   >
                     results
                   </span>
                 </div>
                 <div
-                  class="w-full sm:w-fit md:my-auto"
+                  class="w-full md:my-auto sm:w-fit"
                   data-testid="FilterTransactions"
                 >
                   <div
@@ -1570,7 +1570,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+                      class="inline-flex relative justify-center items-center py-1.5 px-4 space-x-2 w-full text-base font-semibold text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 sm:w-fit dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-dark-navy-700 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1639,13 +1639,13 @@ exports[`Dashboard > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap w-32 min-w-32 lg:w-36 xl:w-48"
+                          class="relative p-3 m-0 w-32 text-sm font-semibold text-left whitespace-nowrap select-none lg:w-36 xl:w-48 dark:bg-black first:pl-6 last:pr-6 group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 no-border min-w-32 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top"
+                            class="flex align-top flex-inline"
                           >
                             <div
                               class=""
@@ -1655,7 +1655,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
+                          class="hidden relative p-3 m-0 w-48 text-sm font-semibold text-left select-none xl:table-cell xl:w-40 dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 no-border min-w-48 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1663,7 +1663,7 @@ exports[`Dashboard > should render 1`] = `
                           title="Toggle SortBy"
                         >
                           <div
-                            class="flex flex-inline align-top"
+                            class="flex align-top flex-inline"
                           >
                             <div
                               class=""
@@ -1671,7 +1671,7 @@ exports[`Dashboard > should render 1`] = `
                               Age
                             </div>
                             <div
-                              class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                              class="flex items-center ml-2 transition-opacity text-theme-secondary-500 dark:text-theme-secondary-700"
                             >
                               <div
                                 class="transition-transform"
@@ -1704,13 +1704,13 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40 lg:w-24 lg:min-w-24 xl:min-w-32"
+                          class="relative p-3 m-0 w-40 text-sm font-semibold text-left select-none lg:w-24 dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 no-border min-w-40 lg:min-w-24 xl:min-w-32 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top"
+                            class="flex align-top flex-inline"
                           >
                             <div
                               class=""
@@ -1720,13 +1720,13 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-full min-w-full lg:w-24"
+                          class="relative p-3 m-0 w-full min-w-full text-sm font-semibold text-left whitespace-nowrap select-none lg:w-24 dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 no-border dark:text-theme-secondary-500 dark:border-theme-secondary-800"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top"
+                            class="flex align-top flex-inline"
                           >
                             <div
                               class=""
@@ -1736,13 +1736,13 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl lg:min-w-24 min-lg:min-w-24 xl:min-w-32"
+                          class="relative p-3 m-0 text-sm font-semibold text-left whitespace-nowrap select-none dark:bg-black first:pl-6 first:rounded-tl-xl last:pr-6 last:rounded-tr-xl group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 no-border min-lg:min-w-24 lg:min-w-24 xl:min-w-32 dark:text-theme-secondary-500 dark:border-theme-secondary-800"
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top justify-end"
+                            class="flex justify-end align-top flex-inline"
                           >
                             <div
                               class=""
@@ -1752,13 +1752,13 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border whitespace-nowrap hidden lg:table-cell"
+                          class="hidden relative p-3 m-0 text-sm font-semibold text-left whitespace-nowrap select-none lg:table-cell dark:bg-black first:pl-6 last:pr-6 group text-theme-secondary-700 border-theme-secondary-300 bg-theme-secondary-100 no-border dark:text-theme-secondary-500 dark:border-theme-secondary-800"
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top justify-end"
+                            class="flex justify-end align-top flex-inline"
                           >
                             <div
                               class=""
@@ -1773,12 +1773,12 @@ exports[`Dashboard > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -1786,7 +1786,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -1798,12 +1798,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -1819,7 +1819,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -1837,12 +1837,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -1856,7 +1856,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -1864,7 +1864,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -1879,7 +1879,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -1890,7 +1890,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -1903,7 +1903,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -1921,15 +1921,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -1946,7 +1946,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -1954,7 +1954,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -1966,15 +1966,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -1991,7 +1991,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2007,12 +2007,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -2020,7 +2020,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2032,12 +2032,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2053,7 +2053,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2071,12 +2071,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -2090,7 +2090,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -2098,7 +2098,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2113,7 +2113,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -2124,7 +2124,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2137,7 +2137,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2155,15 +2155,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2180,7 +2180,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -2188,7 +2188,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2200,15 +2200,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2225,7 +2225,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2241,12 +2241,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -2254,7 +2254,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2266,12 +2266,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2287,7 +2287,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2305,12 +2305,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -2324,7 +2324,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -2332,7 +2332,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2347,7 +2347,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -2358,7 +2358,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2371,7 +2371,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2389,15 +2389,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2414,7 +2414,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -2422,7 +2422,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2434,15 +2434,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2459,7 +2459,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2475,12 +2475,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -2488,7 +2488,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2500,12 +2500,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2521,7 +2521,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2539,12 +2539,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -2558,7 +2558,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -2566,7 +2566,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2581,7 +2581,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -2592,7 +2592,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2605,7 +2605,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2623,15 +2623,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2648,7 +2648,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -2656,7 +2656,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2668,15 +2668,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2693,7 +2693,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2709,12 +2709,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -2722,7 +2722,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2734,12 +2734,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2755,7 +2755,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2773,12 +2773,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -2792,7 +2792,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -2800,7 +2800,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2815,7 +2815,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -2826,7 +2826,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2839,7 +2839,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2857,15 +2857,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2882,7 +2882,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -2890,7 +2890,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2902,15 +2902,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2927,7 +2927,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -2943,12 +2943,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -2956,7 +2956,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2968,12 +2968,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -2989,7 +2989,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3007,12 +3007,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -3026,7 +3026,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -3034,7 +3034,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3049,7 +3049,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -3060,7 +3060,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3073,7 +3073,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3091,15 +3091,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3116,7 +3116,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -3124,7 +3124,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3136,15 +3136,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3161,7 +3161,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3177,12 +3177,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -3190,7 +3190,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3202,12 +3202,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3223,7 +3223,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3241,12 +3241,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -3260,7 +3260,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -3268,7 +3268,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3283,7 +3283,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -3294,7 +3294,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3307,7 +3307,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3325,15 +3325,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3350,7 +3350,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -3358,7 +3358,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3370,15 +3370,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3395,7 +3395,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3411,12 +3411,12 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-xl:h-[4.25rem]"
+                        class="border-b border-dashed transition-colors duration-100 last:border-b-0 border-theme-secondary-300 group max-xl:h-[4.25rem] dark:border-theme-secondary-800"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 pl-3 my-1 ml-3 rounded-l transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden xl:block"
@@ -3424,7 +3424,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3436,12 +3436,12 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col max-xl:pt-2 xl:hidden"
+                              class="flex flex-col xl:hidden max-xl:pt-2"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3457,7 +3457,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3475,12 +3475,12 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <span
                               aria-busy="true"
                               aria-live="polite"
-                              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                              class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                             >
                               <span
                                 class="react-loading-skeleton"
@@ -3494,7 +3494,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex items-center"
@@ -3502,7 +3502,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3517,7 +3517,7 @@ exports[`Dashboard > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="flex flex-col gap-1"
@@ -3528,7 +3528,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3541,7 +3541,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3559,15 +3559,15 @@ exports[`Dashboard > should render 1`] = `
                           class="table-cell sm:hidden lg:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
-                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
+                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                             >
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3584,7 +3584,7 @@ exports[`Dashboard > should render 1`] = `
                           class="hidden md:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
+                            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 rounded-r transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
                           >
                             <div
                               class="hidden lg:block"
@@ -3592,7 +3592,7 @@ exports[`Dashboard > should render 1`] = `
                               <span
                                 aria-busy="true"
                                 aria-live="polite"
-                                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                               >
                                 <span
                                   class="react-loading-skeleton"
@@ -3604,15 +3604,15 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
+                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
+                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
                               >
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"
@@ -3629,7 +3629,7 @@ exports[`Dashboard > should render 1`] = `
                                 <span
                                   aria-busy="true"
                                   aria-live="polite"
-                                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                                  class="flex overflow-hidden items-center w-auto max-w-full leading-none"
                                 >
                                   <span
                                     class="react-loading-skeleton"

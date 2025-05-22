@@ -35,7 +35,7 @@ export function FormLabel(properties: FormLabelProperties) {
 					<Tooltip content={t("COMMON.VALIDATION.OPTIONAL")}>
 						<span
 							data-testid="FormLabel__optional"
-							className="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1"
+							className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
 						>
 							{t("COMMON.OPTIONAL")}
 						</span>

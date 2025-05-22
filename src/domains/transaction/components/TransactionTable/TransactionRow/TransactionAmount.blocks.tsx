@@ -51,7 +51,7 @@ export const TransactionAmountLabel = ({
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
-			className="h-[21px] rounded dark:border"
+			className="rounded dark:border h-[21px]"
 			allowHideBalance
 			profile={profile}
 		/>
@@ -99,7 +99,7 @@ export const TransactionTotalLabel = ({
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
-			className="h-[21px] rounded dark:border"
+			className="rounded dark:border h-[21px]"
 			allowHideBalance
 			profile={profile}
 		/>

@@ -22,7 +22,7 @@ export const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordPro
 							data-testid="InputPassword__toggle"
 							type="button"
 							onClick={togglePasswordVisibility}
-							className="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
+							className="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
 							data-ring-focus-margin="-m-1"
 						>
 							<Icon

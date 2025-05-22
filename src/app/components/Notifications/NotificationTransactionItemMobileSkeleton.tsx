@@ -13,7 +13,7 @@ export const NotificationTransactionItemMobileSkeleton = () => {
 
 	return (
 		<TableRow className="group">
-			<td className="flex-col space-y-4 px-6 py-4" data-testid="TransactionRow__skeleton__mobile">
+			<td className="flex-col py-4 px-6 space-y-4" data-testid="TransactionRow__skeleton__mobile">
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
 					<Skeleton height={16} width={senderWidth} />

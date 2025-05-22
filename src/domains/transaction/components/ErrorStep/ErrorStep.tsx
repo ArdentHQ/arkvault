@@ -33,7 +33,7 @@ export const ErrorStep = ({
 	return (
 		<div data-testid="ErrorStep">
 			<div className="space-y-2">
-				<div className="flex flex-row items-center justify-start gap-3">
+				<div className="flex flex-row gap-3 justify-start items-center">
 					<StepHeader
 						title={title || t("TRANSACTION.ERROR.TITLE")}
 						titleIcon={
@@ -43,7 +43,7 @@ export const ErrorStep = ({
 				</div>
 
 				<div className="space-y-4">
-					<p className="text-theme-secondary-text hidden md:block">
+					<p className="hidden md:block text-theme-secondary-text">
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</p>
 
@@ -64,7 +64,7 @@ export const ErrorStep = ({
 						<Image
 							name="TransactionErrorBanner"
 							domain="transaction"
-							className="mx-auto mt-4 block w-full max-w-[400px]"
+							className="block mx-auto mt-4 w-full max-w-[400px]"
 						/>
 					)}
 				</div>

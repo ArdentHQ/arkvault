@@ -195,7 +195,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				<div
 					ref={selectRecipientReference}
 					data-testid="SelectRecipient__wrapper"
-					className="relative flex w-full items-center text-left"
+					className="flex relative items-center w-full text-left"
 				>
 					<Select
 						id="SelectRecipient__dropdown"

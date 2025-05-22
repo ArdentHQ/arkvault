@@ -122,7 +122,7 @@ export const ProcessingImport = ({
 
 			<div className="mt-4">{renderStep()}</div>
 
-			<div className="items-left text-left">
+			<div className="text-left items-left">
 				<PasswordModal
 					isOpen={isPasswordModalOpen}
 					title={t("PROFILE.IMPORT.PASSWORD_TITLE")}

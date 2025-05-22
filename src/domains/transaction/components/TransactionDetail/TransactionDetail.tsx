@@ -29,7 +29,7 @@ const TransactionDetailStyled = forwardRef<HTMLDivElement, TransactionDetailProp
 TransactionDetailStyled.displayName = "TransactionDetailStyled";
 
 const RowLabel = ({ children }: { children: React.ReactNode }) => (
-	<div className="text-md md:theme-text group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0">
+	<div className="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500">
 		{children}
 	</div>
 );
@@ -82,12 +82,12 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 				mobileContent={
 					<div
 						data-testid="TransactionDetail--mobile"
-						className="items-top flex w-full justify-between space-x-4 md:items-center"
+						className="flex justify-between space-x-4 w-full md:items-center items-top"
 					>
 						{label && <RowLabel>{label}</RowLabel>}
 
-						<div className="flex min-w-0 grow items-center justify-end space-x-4">
-							<div className="md:theme-text text-theme-secondary-700 dark:text-theme-secondary-500 flex w-full justify-end">
+						<div className="flex justify-end items-center space-x-4 min-w-0 grow">
+							<div className="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500">
 								{children}
 							</div>
 
@@ -99,10 +99,10 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 					<>
 						<div
 							data-testid="TransactionDetail--desktop"
-							className="w-40 flex-1 space-y-2 whitespace-nowrap"
+							className="flex-1 space-y-2 w-40 whitespace-nowrap"
 						>
 							{label && (
-								<div className="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
+								<div className="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700">
 									{label}
 								</div>
 							)}

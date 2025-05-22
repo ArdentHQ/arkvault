@@ -22,7 +22,7 @@ export const TransactionExportError = ({
 
 	return (
 		<div>
-			<Image name="Error" className="mx-auto mb-6 hidden h-26 md:block" />
+			<Image name="Error" className="hidden mx-auto mb-6 md:block h-26" />
 
 			<Alert className="mb-6" variant="danger">
 				{error}

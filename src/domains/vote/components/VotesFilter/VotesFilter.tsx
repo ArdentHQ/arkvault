@@ -17,7 +17,7 @@ export const VotesFilter = ({
 	const { t } = useTranslation();
 
 	return (
-		<div {...properties} className="mr-6 hidden md:block">
+		<div {...properties} className="hidden mr-6 md:block">
 			<Dropdown
 				data-testid="VotesFilter"
 				variant="votesFilter"
@@ -28,9 +28,9 @@ export const VotesFilter = ({
 					</Button>
 				}
 			>
-				<div className="text-theme-secondary-700 dark:text-theme-secondary-200 flex w-56 flex-col items-start space-y-5 px-10 py-7">
+				<div className="flex flex-col items-start py-7 px-10 space-y-5 w-56 text-theme-secondary-700 dark:text-theme-secondary-200">
 					<label
-						className="flex h-5 cursor-pointer items-center space-x-3 rounded-md"
+						className="flex items-center space-x-3 h-5 rounded-md cursor-pointer"
 						data-testid="VotesFilter__option--all"
 					>
 						<Checkbox

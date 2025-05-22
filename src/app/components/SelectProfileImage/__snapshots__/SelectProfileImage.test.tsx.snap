@@ -9,24 +9,24 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
       class="relative z-0 h-[92px] w-[92px]"
     >
       <div
-        class="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+        class="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
       >
         <img
           alt="Avatar"
-          class="min-h-full object-cover"
+          class="object-cover min-h-full"
           data-testid="SelectProfileImage__avatar-image"
           src="test"
         />
         <button
-          class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+          class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
           data-testid="SelectProfileImage__upload-button"
           type="button"
         >
           <div
-            class="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black"
+            class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
           >
             <div
-              class="dark:text-theme-secondary-200 text-white"
+              class="text-white dark:text-theme-secondary-200"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -58,7 +58,7 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
         class="absolute -top-2 -right-2 z-20"
       >
         <button
-          class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+          class="flex relative justify-center items-center p-0 w-5 h-5 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -109,24 +109,24 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
       class="relative z-0 h-[92px] w-[92px]"
     >
       <div
-        class="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+        class="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
       >
         <img
           alt="Avatar"
-          class="min-h-full object-cover"
+          class="object-cover min-h-full"
           data-testid="SelectProfileImage__avatar-image"
           src="test"
         />
         <button
-          class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+          class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
           data-testid="SelectProfileImage__upload-button"
           type="button"
         >
           <div
-            class="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black"
+            class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
           >
             <div
-              class="dark:text-theme-secondary-200 text-white"
+              class="text-white dark:text-theme-secondary-200"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -158,7 +158,7 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
         class="absolute -top-2 -right-2 z-20"
       >
         <button
-          class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+          class="flex relative justify-center items-center p-0 w-5 h-5 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -209,24 +209,24 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
       class="relative z-0 h-[92px] w-[92px]"
     >
       <div
-        class="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+        class="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
       >
         <img
           alt="Avatar"
-          class="min-h-full object-cover"
+          class="object-cover min-h-full"
           data-testid="SelectProfileImage__avatar-image"
           src="test"
         />
         <button
-          class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+          class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
           data-testid="SelectProfileImage__upload-button"
           type="button"
         >
           <div
-            class="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black"
+            class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
           >
             <div
-              class="dark:text-theme-secondary-200 text-white"
+              class="text-white dark:text-theme-secondary-200"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -258,7 +258,7 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
         class="absolute -top-2 -right-2 z-20"
       >
         <button
-          class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+          class="flex relative justify-center items-center p-0 w-5 h-5 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -309,24 +309,24 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
       class="relative z-0 h-[92px] w-[92px]"
     >
       <div
-        class="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+        class="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
       >
         <img
           alt="Avatar"
-          class="min-h-full object-cover"
+          class="object-cover min-h-full"
           data-testid="SelectProfileImage__avatar-image"
           src="test"
         />
         <button
-          class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+          class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
           data-testid="SelectProfileImage__upload-button"
           type="button"
         >
           <div
-            class="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black"
+            class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
           >
             <div
-              class="dark:text-theme-secondary-200 text-white"
+              class="text-white dark:text-theme-secondary-200"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -358,7 +358,7 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
         class="absolute -top-2 -right-2 z-20"
       >
         <button
-          class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+          class="flex relative justify-center items-center p-0 w-5 h-5 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -409,23 +409,23 @@ exports[`SelectProfileImage > should render 1`] = `
       class="relative z-0 h-[92px] w-[92px]"
     >
       <div
-        class="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+        class="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
       >
         <img
           alt="Avatar"
-          class="min-h-full object-cover"
+          class="object-cover min-h-full"
           data-testid="SelectProfileImage__avatar-image"
         />
         <button
-          class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+          class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
           data-testid="SelectProfileImage__upload-button"
           type="button"
         >
           <div
-            class="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black"
+            class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
           >
             <div
-              class="dark:text-theme-secondary-200 text-white"
+              class="text-white dark:text-theme-secondary-200"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -457,7 +457,7 @@ exports[`SelectProfileImage > should render 1`] = `
         class="absolute -top-2 -right-2 z-20"
       >
         <button
-          class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+          class="flex relative justify-center items-center p-0 w-5 h-5 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -505,16 +505,16 @@ exports[`SelectProfileImage > should render with value svg 1`] = `
     class="flex flex-row"
   >
     <div
-      class="border-theme-secondary-300 focus-within:border-theme-primary-400 dark:border-theme-dark-700 h-[92px] w-[92px] rounded-lg border p-1.5 focus-within:border-solid"
+      class="p-1.5 rounded-lg border focus-within:border-solid border-theme-secondary-300 h-[92px] w-[92px] dark:border-theme-dark-700 focus-within:border-theme-primary-400"
     >
       <div
-        class="h-full overflow-hidden rounded"
+        class="overflow-hidden h-full rounded"
       >
         <div
-          class="upload-button-wrapper h-full w-full"
+          class="w-full h-full upload-button-wrapper"
         >
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+            class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="SelectProfileImage__upload-button"
             type="button"
           >
@@ -563,24 +563,24 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
       class="relative z-0 h-[92px] w-[92px]"
     >
       <div
-        class="profile-image focus-within:ring-theme-primary-400 relative inline-flex h-full cursor-pointer items-center justify-center overflow-hidden rounded-md focus-within:ring-2"
+        class="inline-flex overflow-hidden relative justify-center items-center h-full rounded-md cursor-pointer focus-within:ring-2 profile-image focus-within:ring-theme-primary-400"
       >
         <img
           alt="Avatar"
-          class="min-h-full object-cover"
+          class="object-cover min-h-full"
           data-testid="SelectProfileImage__avatar-image"
           src="test"
         />
         <button
-          class="absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-hidden"
+          class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-hidden"
           data-testid="SelectProfileImage__upload-button"
           type="button"
         >
           <div
-            class="bg-theme-secondary-900 flex h-full items-center justify-center rounded-full opacity-85 dark:bg-black"
+            class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
           >
             <div
-              class="dark:text-theme-secondary-200 text-white"
+              class="text-white dark:text-theme-secondary-200"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -612,7 +612,7 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
         class="absolute -top-2 -right-2 z-20"
       >
         <button
-          class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+          class="flex relative justify-center items-center p-0 w-5 h-5 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >

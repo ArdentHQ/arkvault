@@ -22,10 +22,10 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 	const icons = file.extension in fileTypeIcon ? fileTypeIcon[file.extension] : undefined;
 
 	return (
-		<div className="flex items-center justify-between space-x-4" data-testid="FilePreviewPlain">
-			<div className="flex grow items-center space-x-2">
+		<div className="flex justify-between items-center space-x-4" data-testid="FilePreviewPlain">
+			<div className="flex items-center space-x-2 grow">
 				<ThemeIcon darkIcon={icons ? icons[0] : "File"} lightIcon={icons ? icons[1] : "File"} size="lg" />
-				<div className="w-0 flex-1 truncate text-sm leading-[17px] font-semibold sm:text-lg sm:leading-[21px]">
+				<div className="flex-1 w-0 text-sm font-semibold sm:text-lg truncate leading-[17px] sm:leading-[21px]">
 					{file.name}
 				</div>
 			</div>
@@ -37,7 +37,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 			{variant === "danger" && (
 				<div
 					data-testid="FilePreviewPlain__Error"
-					className="bg-theme-danger-200 text-theme-danger-500 flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
+					className="flex justify-center items-center w-5 h-5 rounded-full bg-theme-danger-200 text-theme-danger-500 shrink-0"
 				>
 					<Icon name="CrossSmall" size="sm" />
 				</div>
@@ -46,7 +46,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 			{variant === "success" && (
 				<div
 					data-testid="FilePreviewPlain__Success"
-					className="bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 flex h-5 w-5 shrink-0 items-center justify-center rounded-full dark:text-white"
+					className="flex justify-center items-center w-5 h-5 rounded-full dark:text-white bg-theme-navy-100 text-theme-navy-600 shrink-0 dark:bg-theme-navy-600"
 				>
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
@@ -65,7 +65,7 @@ export const FilePreview = ({ file, useBorders = true, variant }: FilePreviewPro
 	}
 
 	return (
-		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border p-4 sm:px-6 sm:py-5">
+		<div className="p-4 rounded-xl border sm:py-5 sm:px-6 border-theme-secondary-300 dark:border-theme-secondary-800">
 			<FilePreviewPlain variant={variant} file={file} />
 		</div>
 	);

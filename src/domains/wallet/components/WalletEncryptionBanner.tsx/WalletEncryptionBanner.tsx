@@ -28,12 +28,12 @@ export const WalletEncryptionBanner = ({
 				"border-theme-warning-300 dark:border-theme-warning-700 overflow-hidden": toggleChecked,
 			})}
 		>
-			<div className="flex flex-row justify-between px-6 py-4">
-				<div className="flex max-w-96 flex-col gap-1">
-					<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-5 font-semibold">
+			<div className="flex flex-row justify-between py-4 px-6">
+				<div className="flex flex-col gap-1 max-w-96">
+					<span className="text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50">
 						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.TITLE")}
 					</span>
-					<p className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[21px]">
+					<p className="text-sm text-theme-secondary-700 leading-[21px] dark:text-theme-dark-200">
 						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.DESCRIPTION")}
 					</p>
 				</div>
@@ -64,20 +64,20 @@ export const WalletEncryptionBanner = ({
 				)}
 			>
 				<div className="flex flex-col gap-3 px-6 pt-3 pb-5">
-					<p className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm leading-[21px] font-normal">
+					<p className="text-sm font-normal text-theme-secondary-900 leading-[21px] dark:text-theme-dark-50">
 						{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.WARNING")}
 					</p>
 
-					<hr className="border-theme-warning-300 dark:border-theme-dark-700 border border-dashed" />
+					<hr className="border border-dashed border-theme-warning-300 dark:border-theme-dark-700" />
 
-					<label className="inline-flex cursor-pointer items-center space-x-3">
+					<label className="inline-flex items-center space-x-3 cursor-pointer">
 						<Checkbox
 							data-testid="WalletEncryptionBanner__checkbox"
 							checked={checkboxChecked}
 							onChange={checkboxOnChange}
 							color="warning"
 						/>
-						<span className="text-theme-secondary-900 dark:text-theme-dark-50 text-sm leading-[21px] font-normal">
+						<span className="text-sm font-normal text-theme-secondary-900 leading-[21px] dark:text-theme-dark-50">
 							{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.ENCRYPTION.CHECKBOX")}
 						</span>
 					</label>

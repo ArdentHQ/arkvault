@@ -67,22 +67,22 @@ const ModalContent = ({
 		data-testid="Modal__inner"
 	>
 		{!hideCloseButton && (
-			<div className="bg-theme-primary-100 hover:bg-theme-primary-800 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white">
+			<div className="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800">
 				<Button
 					data-testid="Modal__close-button"
 					variant="transparent"
 					size="icon"
 					onClick={onClose}
-					className="h-8 w-8"
+					className="w-8 h-8"
 				>
 					<Icon name="Cross" />
 				</Button>
 			</div>
 		)}
 
-		<div className="relative flex flex-1 flex-col space-y-1.5">
+		<div className="flex relative flex-col flex-1 space-y-1.5">
 			{banner && (
-				<div className="relative -mx-10 -mt-10 mb-10 h-56">
+				<div className="relative -mx-10 mb-10 -mt-10 h-56">
 					{banner}
 
 					<div className="absolute bottom-0 left-0 mb-10 ml-10">
@@ -99,11 +99,11 @@ const ModalContent = ({
 				</h2>
 			)}
 
-			<div className="flex flex-1 flex-col">
+			<div className="flex flex-col flex-1">
 				{image}
 
 				{description && (
-					<div className="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base">
+					<div className="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text">
 						{description}
 					</div>
 				)}

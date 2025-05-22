@@ -25,7 +25,7 @@ export const HideBalance = ({ profile, className }: { profile: Contracts.IProfil
 				<Button
 					variant="transparent"
 					onClick={() => setHideBalance(!hideBalance)}
-					className="group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+					className="flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
 					data-testid="HideBalance-button"
 				>
 					{hideBalance ? (
@@ -34,7 +34,7 @@ export const HideBalance = ({ profile, className }: { profile: Contracts.IProfil
 						<Icon name="Eye" size="lg" data-testid="HideBalance-icon-show" />
 					)}
 
-					<div className="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold">
+					<div className="hidden text-sm font-semibold text-theme-secondary-700 leading-[17px] md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900">
 						<Amount value={convertedBalance} ticker={ticker} allowHideBalance profile={profile} />
 					</div>
 				</Button>

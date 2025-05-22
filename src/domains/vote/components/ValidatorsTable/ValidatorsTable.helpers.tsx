@@ -51,14 +51,14 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 		if (network.votesAmountMinimum() > 0) {
 			templateColumns.push({
 				Header: (
-					<div className="flex items-center space-x-3 px-3">
+					<div className="flex items-center px-3 space-x-3">
 						<p>{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.TITLE")}</p>
 						<Tooltip
 							content={t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.TOOLTIP", {
 								coinId: network.coin(),
 							})}
 						>
-							<span className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1">
+							<span className="p-1 rounded-full bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 								<Icon name="QuestionMarkSmall" size="sm" />
 							</span>
 						</Tooltip>

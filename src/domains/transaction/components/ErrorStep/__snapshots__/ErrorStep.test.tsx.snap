@@ -9,16 +9,16 @@ exports[`ErrorStep > should display error details 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row items-center justify-start gap-3"
+        class="flex flex-row gap-3 justify-start items-center"
       >
         <div
-          class="bg-theme-background flex items-end justify-between"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -34,15 +34,15 @@ exports[`ErrorStep > should display error details 1`] = `
         class="space-y-4"
       >
         <p
-          class="text-theme-secondary-text hidden md:block"
+          class="hidden md:block text-theme-secondary-text"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
-          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+          class="flex overflow-hidden flex-col rounded-xl md:hidden"
         >
           <div
-            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+            class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
             <div>
               <div
@@ -82,7 +82,7 @@ exports[`ErrorStep > should display error details 1`] = `
             </span>
           </div>
           <div
-            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+            class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-danger-50 dark:bg-theme-secondary-800"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
@@ -91,13 +91,13 @@ exports[`ErrorStep > should display error details 1`] = `
           class="relative"
         >
           <div
-            class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
+            class="hidden absolute right-3 bottom-4 z-10 w-0 h-0 border-t-8 -rotate-45 pointer-events-none md:block border-t-theme-secondary-400 border-x-8 border-x-transparent dark:border-t-theme-secondary-700"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative py-4"
+            class="flex relative items-center py-4 px-4 space-x-2 w-full rounded border transition-colors duration-200 appearance-none focus-within:ring-1 text-theme-text border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <textarea
                 autocomplete="off"
@@ -124,7 +124,7 @@ exports[`ErrorStep > should display error details 1`] = `
           class="relative"
         >
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+            class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
             data-testid="clipboard-button__wrapper"
             type="button"
           >
@@ -184,16 +184,16 @@ exports[`ErrorStep > should emit onBack 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row items-center justify-start gap-3"
+        class="flex flex-row gap-3 justify-start items-center"
       >
         <div
-          class="bg-theme-background flex items-end justify-between"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -209,15 +209,15 @@ exports[`ErrorStep > should emit onBack 1`] = `
         class="space-y-4"
       >
         <p
-          class="text-theme-secondary-text hidden md:block"
+          class="hidden md:block text-theme-secondary-text"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
-          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+          class="flex overflow-hidden flex-col rounded-xl md:hidden"
         >
           <div
-            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+            class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
             <div>
               <div
@@ -257,13 +257,13 @@ exports[`ErrorStep > should emit onBack 1`] = `
             </span>
           </div>
           <div
-            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+            class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-danger-50 dark:bg-theme-secondary-800"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
         <svg
-          class="mx-auto mt-4 block w-full max-w-[400px]"
+          class="block mx-auto mt-4 w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"
@@ -397,7 +397,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="ErrorStep__back-button"
         type="button"
       >
@@ -425,16 +425,16 @@ exports[`ErrorStep > should emit onClose 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row items-center justify-start gap-3"
+        class="flex flex-row gap-3 justify-start items-center"
       >
         <div
-          class="bg-theme-background flex items-end justify-between"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -450,15 +450,15 @@ exports[`ErrorStep > should emit onClose 1`] = `
         class="space-y-4"
       >
         <p
-          class="text-theme-secondary-text hidden md:block"
+          class="hidden md:block text-theme-secondary-text"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
-          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+          class="flex overflow-hidden flex-col rounded-xl md:hidden"
         >
           <div
-            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+            class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
             <div>
               <div
@@ -498,13 +498,13 @@ exports[`ErrorStep > should emit onClose 1`] = `
             </span>
           </div>
           <div
-            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+            class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-danger-50 dark:bg-theme-secondary-800"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
         <svg
-          class="mx-auto mt-4 block w-full max-w-[400px]"
+          class="block mx-auto mt-4 w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"
@@ -638,7 +638,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
       class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
-        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+        class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
         data-testid="ErrorStep__close-button"
         type="button"
       >
@@ -666,16 +666,16 @@ exports[`ErrorStep > should render with custom title 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row items-center justify-start gap-3"
+        class="flex flex-row gap-3 justify-start items-center"
       >
         <div
-          class="bg-theme-background flex items-end justify-between"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -691,15 +691,15 @@ exports[`ErrorStep > should render with custom title 1`] = `
         class="space-y-4"
       >
         <p
-          class="text-theme-secondary-text hidden md:block"
+          class="hidden md:block text-theme-secondary-text"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
-          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+          class="flex overflow-hidden flex-col rounded-xl md:hidden"
         >
           <div
-            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+            class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
             <div>
               <div
@@ -739,13 +739,13 @@ exports[`ErrorStep > should render with custom title 1`] = `
             </span>
           </div>
           <div
-            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+            class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-danger-50 dark:bg-theme-secondary-800"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
         <svg
-          class="mx-auto mt-4 block w-full max-w-[400px]"
+          class="block mx-auto mt-4 w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"
@@ -891,16 +891,16 @@ exports[`ErrorStep > should render with default texts 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row items-center justify-start gap-3"
+        class="flex flex-row gap-3 justify-start items-center"
       >
         <div
-          class="bg-theme-background flex items-end justify-between"
+          class="flex justify-between items-end bg-theme-background"
         >
           <div
             class="space-y-2"
           >
             <div
-              class="flex items-center gap-3"
+              class="flex gap-3 items-center"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -916,15 +916,15 @@ exports[`ErrorStep > should render with default texts 1`] = `
         class="space-y-4"
       >
         <p
-          class="text-theme-secondary-text hidden md:block"
+          class="hidden md:block text-theme-secondary-text"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
-          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+          class="flex overflow-hidden flex-col rounded-xl md:hidden"
         >
           <div
-            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
+            class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
             <div>
               <div
@@ -964,13 +964,13 @@ exports[`ErrorStep > should render with default texts 1`] = `
             </span>
           </div>
           <div
-            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
+            class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-danger-50 dark:bg-theme-secondary-800"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
         <svg
-          class="mx-auto mt-4 block w-full max-w-[400px]"
+          class="block mx-auto mt-4 w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"

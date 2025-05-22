@@ -11,9 +11,9 @@ export const Loader = ({ text, className }: { text: string; className?: string }
 		data-testid="Loader__wrapper"
 	>
 		<Spinner color="warning-alt" size="sm" className="rounded-full" width={3} />
-		<hr className="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent" />
+		<hr className="w-px h-5 border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800" />
 		<span
-			className="text-theme-secondary-700 dark:text-theme-warning-600 text-sm font-semibold md:text-base"
+			className="text-sm font-semibold md:text-base text-theme-secondary-700 dark:text-theme-warning-600"
 			data-testid="Loader__text"
 		>
 			{text}

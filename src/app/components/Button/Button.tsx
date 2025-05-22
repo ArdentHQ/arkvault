@@ -40,14 +40,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			if (isLoading) {
 				return (
 					<div className="flex items-center">
-						<span className="invisible flex items-center space-x-2">
+						<span className="flex invisible items-center space-x-2">
 							<>
 								{icon && <Icon name={icon} size={iconSize} />}
 								{children}
 							</>
 						</span>
 
-						<div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
+						<div className="flex absolute top-0 left-0 justify-center items-center w-full h-full">
 							<ButtonSpinner variant={variant} />
 						</div>
 					</div>

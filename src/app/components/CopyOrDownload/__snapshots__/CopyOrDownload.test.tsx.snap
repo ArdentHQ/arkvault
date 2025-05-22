@@ -3,29 +3,29 @@
 exports[`CopyOrDownload > should render 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-secondary-100 dark:bg-theme-dark-950 -mx-4 rounded-b-lg p-4 text-center sm:-mx-6 sm:p-6 sm:text-left"
+    class="p-4 -mx-4 text-center rounded-b-lg sm:p-6 sm:-mx-6 sm:text-left bg-theme-secondary-100 dark:bg-theme-dark-950"
   >
     <span
-      class="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-[21px] font-semibold sm:text-lg"
+      class="text-base font-semibold sm:text-lg text-theme-secondary-900 leading-[21px] dark:text-theme-dark-50"
     >
       title
     </span>
     <p
-      class="text-theme-secondary-700 dark:text-theme-dark-200 mt-2 mb-3 text-sm"
+      class="mt-2 mb-3 text-sm text-theme-secondary-700 dark:text-theme-dark-200"
     >
       description
     </p>
     <div
-      class="flex items-center justify-center space-x-1 sm:justify-start"
+      class="flex justify-center items-center space-x-1 sm:justify-start"
     >
       <button
-        class="ring-focus relative cursor-pointer focus:outline-hidden"
+        class="relative cursor-pointer ring-focus focus:outline-hidden"
         data-ring-focus-margin="-m-1"
         data-testid="clipboard-icon__wrapper"
         type="button"
       >
         <div
-          class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white"
+          class="flex items-center py-1 px-2 space-x-2 font-semibold leading-5 rounded cursor-pointer text-theme-primary-600 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:bg-theme-navy-200"
         >
           <div>
             <div
@@ -63,10 +63,10 @@ exports[`CopyOrDownload > should render 1`] = `
         </div>
       </button>
       <div
-        class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="flex items-center space-x-2 rounded px-2 py-1 leading-5 font-semibold text-theme-primary-600 hover:bg-theme-navy-200 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 cursor-pointer dark:hover:text-white"
+        class="flex items-center py-1 px-2 space-x-2 font-semibold leading-5 rounded cursor-pointer text-theme-primary-600 dark:text-theme-navy-400 dark:hover:bg-theme-secondary-800 dark:hover:text-white hover:bg-theme-navy-200"
         data-testid="CopyOrDownload__download"
         type="button"
       >

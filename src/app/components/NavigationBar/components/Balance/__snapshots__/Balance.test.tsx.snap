@@ -3,15 +3,15 @@
 exports[`Balance > should render 1`] = `
 <div>
   <div
-    class="bg-theme-secondary-100 flex flex-row items-center justify-center space-x-2 px-8 py-2.5 md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right dark:bg-black md:dark:bg-transparent"
+    class="flex flex-row justify-center items-center py-2.5 px-8 space-x-2 md:flex-col md:justify-start md:items-start md:p-0 md:m-0 md:space-x-0 md:text-right md:bg-transparent dark:bg-black bg-theme-secondary-100 md:dark:bg-transparent"
   >
     <div
-      class="text-theme-secondary-700 dark:text-theme-secondary-500 md:text-theme-secondary-500 whitespace-nowrap md:text-xs md:font-semibold"
+      class="whitespace-nowrap md:text-xs md:font-semibold text-theme-secondary-700 md:text-theme-secondary-500 dark:text-theme-secondary-500"
     >
       Your Balance
     </div>
     <div
-      class="text-theme-secondary-900 dark:text-theme-secondary-200 md:text-theme-secondary-text md:dark:text-theme-text font-semibold"
+      class="font-semibold text-theme-secondary-900 md:text-theme-secondary-text md:dark:text-theme-text dark:text-theme-secondary-200"
       data-testid="Balance__value"
     >
       <span
@@ -28,10 +28,10 @@ exports[`Balance > should render 1`] = `
 exports[`Balance > should render loading state 1`] = `
 <div>
   <div
-    class="bg-theme-secondary-100 -mt-3 flex flex-row items-center justify-center space-x-2 px-8 py-2.5 md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right dark:bg-black md:dark:bg-transparent"
+    class="flex flex-row justify-center items-center py-2.5 px-8 -mt-3 space-x-2 md:flex-col md:justify-start md:items-start md:p-0 md:m-0 md:space-x-0 md:text-right md:bg-transparent dark:bg-black bg-theme-secondary-100 md:dark:bg-transparent"
   >
     <div
-      class="text-theme-secondary-700 dark:text-theme-secondary-500 md:text-theme-secondary-500 whitespace-nowrap md:text-xs md:font-semibold"
+      class="whitespace-nowrap md:text-xs md:font-semibold text-theme-secondary-700 md:text-theme-secondary-500 dark:text-theme-secondary-500"
     >
       Your Balance
     </div>
@@ -41,7 +41,7 @@ exports[`Balance > should render loading state 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
       >
         <span
           class="react-loading-skeleton"

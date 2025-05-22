@@ -41,7 +41,7 @@ export const ControlButton = ({ isChanged, children, className, ...properties }:
 							{ "-mr-2.5": properties.noBorder },
 						)}
 					>
-						<div className="bg-theme-primary-500 h-2 w-2 rounded-full" />
+						<div className="w-2 h-2 rounded-full bg-theme-primary-500" />
 					</div>
 				)}
 				{children}

@@ -3,7 +3,7 @@
 exports[`ExchangeGrid > should render 1`] = `
 <DocumentFragment>
   <div
-    class="grid w-full gap-3 md:grid-cols-2"
+    class="grid gap-3 w-full md:grid-cols-2"
     data-testid="ExchangeGrid"
   >
     <div
@@ -11,19 +11,19 @@ exports[`ExchangeGrid > should render 1`] = `
     >
       <div>
         <button
-          class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
+          class="relative p-5 w-full h-full text-left rounded-lg border-2 duration-200 cursor-pointer border-theme-primary-100 bg-theme-background transition-colors-shadow outline-hidden dark:border-theme-secondary-800 focus-visible:border-theme-primary-400 focus-visible:outline-hidden"
           data-testid="Card"
           type="button"
         >
           <div
-            class="flex flex-col items-center gap-3 md:flex-row"
+            class="flex flex-col gap-3 items-center md:flex-row"
           >
             <div
-              class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
+              class="overflow-hidden w-11 h-11 rounded-lg shrink-0"
             >
               <img
                 alt="ChangeNOW Logo"
-                class="h-full w-full object-cover"
+                class="object-cover w-full h-full"
                 src="https://exchanges.arkvault.io/images/changenow/thumbnail.png"
               />
             </div>
@@ -31,14 +31,14 @@ exports[`ExchangeGrid > should render 1`] = `
               class="flex flex-col truncate"
             >
               <div
-                class="truncate text-sm font-semibold md:text-lg link"
+                class="text-sm font-semibold md:text-lg truncate link"
               >
                 ChangeNOW
               </div>
             </div>
           </div>
           <div
-            class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+            class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
           />
         </button>
       </div>
@@ -50,7 +50,7 @@ exports[`ExchangeGrid > should render 1`] = `
 exports[`ExchangeGrid > should render empty 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
+    class="leading-5 text-center rounded-lg border-solid sm:p-6 sm:border border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800"
     data-testid="ExchangeGrid__empty-message"
   >
     <div>

@@ -3,22 +3,22 @@
 exports[`VerifyMessage > should render (lg) 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    class="flex relative flex-col pb-32 sm:pb-0 sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
-        class="flex h-14 items-center justify-center space-x-4"
+        class="flex justify-center items-center space-x-4 h-14"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -55,10 +55,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -92,10 +92,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -132,16 +132,16 @@ exports[`VerifyMessage > should render (lg) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
     >
       <div
-        class="relative flex h-12 flex-row"
+        class="flex relative flex-row h-12"
       >
         <div
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
           >
             <div
               class="mx-auto"
@@ -172,16 +172,16 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 justify-between items-center px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row gap-6 items-center"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="flex items-center my-auto h-12"
             >
               <button
-                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
+                class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -207,14 +207,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </button>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden items-center h-12 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -225,7 +225,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -236,7 +236,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -247,7 +247,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -256,7 +256,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </li>
             </ul>
             <div
-              class="mr-auto flex content-center items-center xl:hidden"
+              class="flex content-center items-center mr-auto xl:hidden"
               data-testid="NavigationBar__menu-toggle"
             >
               <div
@@ -265,7 +265,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
+                  class="flex items-center h-7 rounded cursor-pointer focus:ring-2 text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -294,7 +294,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row gap-4 justify-center items-center sm:gap-5"
           >
             <div>
               <div
@@ -306,7 +306,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -314,7 +314,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="m-0 p-1"
+                        class="p-1 m-0"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -343,10 +343,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         </div>
                       </div>
                       <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                       >
                         <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
                         />
                       </div>
                     </div>
@@ -355,7 +355,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div>
               <div
@@ -367,7 +367,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -375,7 +375,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="m-0 p-1"
+                        class="p-1 m-0"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -397,10 +397,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -409,7 +409,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -419,7 +419,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -461,7 +461,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -471,7 +471,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -510,7 +510,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden sm:block"
@@ -525,7 +525,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
+                      class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -533,7 +533,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
+                          class="rounded border-2 dark:bg-transparent border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 p-[3px] dark:border-theme-danger-info-border dark:text-theme-danger-info-text"
                         >
                           <div>
                             <div
@@ -561,12 +561,12 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
+                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
+                          class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                           role="img"
                         >
                           <div
@@ -599,16 +599,16 @@ exports[`VerifyMessage > should render (lg) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
+              class="hidden h-6 border-r sm:block sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
-              class="flex items-center gap-5"
+              class="flex gap-5 items-center"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
+                class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -648,7 +648,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </div>
                     <div
-                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
+                      class="hidden text-sm font-semibold text-theme-secondary-700 leading-[17px] md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -666,25 +666,25 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="flex gap-6 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 >
                   <div
-                    class="relative cursor-pointer items-center justify-center rounded align-middle"
+                    class="relative justify-center items-center align-middle rounded cursor-pointer"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
+                      class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
+                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
                           FO
                         </span>
@@ -699,16 +699,16 @@ exports[`VerifyMessage > should render (lg) 1`] = `
       </div>
     </nav>
     <div
-      class="flex flex-1 flex-col"
+      class="flex flex-col flex-1"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
+        class="flex-1 py-4 w-full first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="px-6 mx-auto md:px-10 lg:container"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto space-y-5 max-w-172"
             data-testid="VerifyMessage"
           >
             <div
@@ -725,7 +725,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                        class="inline-block mx-auto mb-2 font-semibold sm:hidden text-theme-secondary-text"
                       >
                         Verify Message
                       </span>
@@ -733,10 +733,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         class="flex flex-row gap-2"
                       >
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                       </ul>
                     </div>
@@ -744,13 +744,13 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                        class="flex hidden justify-between items-end mt-8 sm:block bg-theme-background"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="flex items-center gap-3"
+                            class="flex gap-3 items-center"
                           >
                             <div
                               data-testid="icon-SendTransactionLight"
@@ -821,7 +821,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Authenticate a message from an address below.
@@ -831,12 +831,12 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     </div>
                   </div>
                   <span
-                    class="mt-6 mb-1 hidden text-lg font-semibold sm:block"
+                    class="hidden mt-6 mb-1 text-lg font-semibold sm:block"
                   >
                     Verification Method
                   </span>
                   <span
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 hidden text-sm font-medium sm:block"
+                    class="hidden text-sm font-medium sm:block text-theme-secondary-500 dark:text-theme-secondary-700"
                   >
                     Input fields manually or provide a JSON string.
                   </span>
@@ -844,29 +844,29 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     class="flex items-center sm:mt-4"
                   >
                     <button
-                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+                      class="text-lg font-semibold select-none first:mr-4 last:ml-4 text-theme-secondary-500 dark:text-theme-secondary-700"
                       type="button"
                     >
                       JSON
                     </button>
                     <label
-                      class="flex items-center cursor-pointer h-4"
+                      class="flex items-center h-4 cursor-pointer"
                     >
                       <input
                         checked=""
-                        class="toggle-input sr-only"
+                        class="sr-only toggle-input"
                         type="checkbox"
                       />
                       <div
-                        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                        class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                       >
                         <span
-                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-4 w-4 handle-inner"
+                          class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
                         />
                       </div>
                     </label>
                     <button
-                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      class="text-lg font-semibold select-none first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
                       type="button"
                     >
                       Manual
@@ -887,10 +887,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="flex relative flex-1 h-full"
                         >
                           <input
                             autocomplete="off"
@@ -914,10 +914,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Message
                       </label>
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="flex relative flex-1 h-full"
                         >
                           <input
                             autocomplete="off"
@@ -941,10 +941,10 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signature
                       </label>
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="flex relative flex-1 h-full"
                         >
                           <input
                             autocomplete="off"
@@ -964,7 +964,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
                   data-testid="VerifyMessage__back-button"
                   type="button"
                 >
@@ -975,7 +975,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
                   data-testid="VerifyMessage__verify-button"
                   disabled=""
                   type="submit"
@@ -999,22 +999,22 @@ exports[`VerifyMessage > should render (lg) 1`] = `
 exports[`VerifyMessage > should render (xs) 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    class="flex relative flex-col pb-32 sm:pb-0 sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
-        class="flex h-14 items-center justify-center space-x-4"
+        class="flex justify-center items-center space-x-4 h-14"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -1051,10 +1051,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1088,10 +1088,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1128,16 +1128,16 @@ exports[`VerifyMessage > should render (xs) 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
+      class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
     >
       <div
-        class="relative flex h-12 flex-row"
+        class="flex relative flex-row h-12"
       >
         <div
           class="hidden w-9 sm:flex"
         >
           <button
-            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
+            class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
           >
             <div
               class="mx-auto"
@@ -1168,16 +1168,16 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center justify-between px-6"
+          class="flex flex-1 justify-between items-center px-6"
         >
           <div
-            class="flex flex-row items-center gap-6"
+            class="flex flex-row gap-6 items-center"
           >
             <div
-              class="my-auto flex h-12 items-center"
+              class="flex items-center my-auto h-12"
             >
               <button
-                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
+                class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -1203,14 +1203,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </button>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden items-center h-12 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -1221,7 +1221,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -1232,7 +1232,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -1243,7 +1243,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -1252,7 +1252,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </li>
             </ul>
             <div
-              class="mr-auto flex content-center items-center xl:hidden"
+              class="flex content-center items-center mr-auto xl:hidden"
               data-testid="NavigationBar__menu-toggle"
             >
               <div
@@ -1261,7 +1261,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="text-theme-secondary-700 focus:ring-theme-primary-400 dark:text-theme-dark-200 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
+                  class="flex items-center h-7 rounded cursor-pointer focus:ring-2 text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -1290,7 +1290,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
+            class="flex flex-row gap-4 justify-center items-center sm:gap-5"
           >
             <div>
               <div
@@ -1302,7 +1302,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -1310,7 +1310,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="m-0 p-1"
+                        class="p-1 m-0"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1339,10 +1339,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         </div>
                       </div>
                       <div
-                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                       >
                         <div
-                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
                         />
                       </div>
                     </div>
@@ -1351,7 +1351,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div>
               <div
@@ -1363,7 +1363,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -1371,7 +1371,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="m-0 p-1"
+                        class="p-1 m-0"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1393,10 +1393,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                          class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -1405,7 +1405,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1415,7 +1415,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -1457,7 +1457,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
+              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1467,7 +1467,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -1506,7 +1506,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
+              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
               class="hidden sm:block"
@@ -1521,7 +1521,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 w-auto p-1"
+                      class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -1529,7 +1529,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
+                          class="rounded border-2 dark:bg-transparent border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 p-[3px] dark:border-theme-danger-info-border dark:text-theme-danger-info-text"
                         >
                           <div>
                             <div
@@ -1557,12 +1557,12 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 text-sm"
+                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
+                          class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                           role="img"
                         >
                           <div
@@ -1595,16 +1595,16 @@ exports[`VerifyMessage > should render (xs) 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
+              class="hidden h-6 border-r sm:block sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
             />
             <div
-              class="flex items-center gap-5"
+              class="flex gap-5 items-center"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
+                class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -1644,7 +1644,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </div>
                     <div
-                      class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex hidden text-sm leading-[17px] font-semibold"
+                      class="hidden text-sm font-semibold text-theme-secondary-700 leading-[17px] md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1662,25 +1662,25 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
+                  class="flex gap-6 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 >
                   <div
-                    class="relative cursor-pointer items-center justify-center rounded align-middle"
+                    class="relative justify-center items-center align-middle rounded cursor-pointer"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
+                      class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
+                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
                         >
                           FO
                         </span>
@@ -1695,16 +1695,16 @@ exports[`VerifyMessage > should render (xs) 1`] = `
       </div>
     </nav>
     <div
-      class="flex flex-1 flex-col"
+      class="flex flex-col flex-1"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex-1"
+        class="flex-1 py-4 w-full first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="px-6 mx-auto md:px-10 lg:container"
         >
           <form
-            class="space-y-5 mx-auto max-w-172"
+            class="mx-auto space-y-5 max-w-172"
             data-testid="VerifyMessage"
           >
             <div
@@ -1721,7 +1721,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="text-theme-secondary-text mx-auto mb-2 inline-block font-semibold sm:hidden"
+                        class="inline-block mx-auto mb-2 font-semibold sm:hidden text-theme-secondary-text"
                       >
                         Verify Message
                       </span>
@@ -1729,10 +1729,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         class="flex flex-row gap-2"
                       >
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+                          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
                         />
                         <li
-                          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+                          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
                         />
                       </ul>
                     </div>
@@ -1740,13 +1740,13 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="bg-theme-background flex items-end justify-between mt-8 hidden sm:block"
+                        class="flex hidden justify-between items-end mt-8 sm:block bg-theme-background"
                       >
                         <div
                           class="space-y-2"
                         >
                           <div
-                            class="flex items-center gap-3"
+                            class="flex gap-3 items-center"
                           >
                             <div
                               data-testid="icon-SendTransactionLight"
@@ -1817,7 +1817,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
+                            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Authenticate a message from an address below.
@@ -1827,12 +1827,12 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     </div>
                   </div>
                   <span
-                    class="mt-6 mb-1 hidden text-lg font-semibold sm:block"
+                    class="hidden mt-6 mb-1 text-lg font-semibold sm:block"
                   >
                     Verification Method
                   </span>
                   <span
-                    class="text-theme-secondary-500 dark:text-theme-secondary-700 hidden text-sm font-medium sm:block"
+                    class="hidden text-sm font-medium sm:block text-theme-secondary-500 dark:text-theme-secondary-700"
                   >
                     Input fields manually or provide a JSON string.
                   </span>
@@ -1840,29 +1840,29 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     class="flex items-center sm:mt-4"
                   >
                     <button
-                      class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 text-lg first:mr-4 last:ml-4"
+                      class="text-lg font-semibold select-none first:mr-4 last:ml-4 text-theme-secondary-500 dark:text-theme-secondary-700"
                       type="button"
                     >
                       JSON
                     </button>
                     <label
-                      class="flex items-center cursor-pointer h-4"
+                      class="flex items-center h-4 cursor-pointer"
                     >
                       <input
                         checked=""
-                        class="toggle-input sr-only"
+                        class="sr-only toggle-input"
                         type="checkbox"
                       />
                       <div
-                        class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
+                        class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
                       >
                         <span
-                          class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 h-4 w-4 handle-inner"
+                          class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-primary-600 handle-inner"
                         />
                       </div>
                     </label>
                     <button
-                      class="font-semibold select-none text-lg first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      class="text-lg font-semibold select-none first:mr-4 last:ml-4 text-theme-secondary-700 dark:text-theme-secondary-200"
                       type="button"
                     >
                       Manual
@@ -1883,10 +1883,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="flex relative flex-1 h-full"
                         >
                           <input
                             autocomplete="off"
@@ -1910,10 +1910,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Message
                       </label>
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="flex relative flex-1 h-full"
                         >
                           <input
                             autocomplete="off"
@@ -1937,10 +1937,10 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signature
                       </label>
                       <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="flex relative flex-1 h-full"
                         >
                           <input
                             autocomplete="off"
@@ -1960,7 +1960,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
+                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
                   data-testid="VerifyMessage__back-button"
                   type="button"
                 >
@@ -1971,7 +1971,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                  class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
                   data-testid="VerifyMessage__verify-button"
                   disabled=""
                   type="submit"
