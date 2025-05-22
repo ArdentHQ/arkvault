@@ -14,13 +14,13 @@ exports[`StepIndicator > should limit active index to max number of steps 1`] = 
       class="flex flex-row gap-2"
     >
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
     </ul>
   </div>
@@ -43,13 +43,13 @@ exports[`StepIndicator > should render 1`] = `
       class="flex flex-row gap-2"
     >
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
       />
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
       />
     </ul>
   </div>
@@ -70,13 +70,13 @@ exports[`StepIndicator > should render witth active index defined 1`] = `
       class="flex flex-row gap-2"
     >
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
       />
       <li
-        class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
+        class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
       />
     </ul>
   </div>

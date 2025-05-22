@@ -6,12 +6,12 @@ exports[`PageSkeleton > should render without profile 1`] = `
     data-testid="PageSkeleton"
   >
     <div
-      class="flex relative flex-col pb-14 sm:pb-0 sm:min-h-screen"
+      class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
       style="min-height: -webkit-fill-available;"
     >
       <nav
         aria-labelledby="main menu"
-        class="sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 custom-nav-wrapper h-21 dark:bg-theme-dark-900"
+        class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
       >
         <div
           class="flex relative"
@@ -23,7 +23,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
               class="flex items-center my-auto h-12"
             >
               <button
-                class="flex justify-center items-center my-auto w-11 h-11 text-white rounded-xl cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -60,19 +60,19 @@ exports[`PageSkeleton > should render without profile 1`] = `
         </div>
       </nav>
       <div
-        class="flex flex-col flex-1"
+        class="flex flex-1 flex-col"
       >
         <div
-          class="flex flex-1 py-4 -mt-5 w-full md:mt-0 xl:px-10 first:pt-8 last:pb-8"
+          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 -mt-5 md:mt-0 xl:px-10"
         >
           <div
-            class="px-6 mx-auto w-full md:px-10 lg:container lg:max-w-screen-xl"
+            class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-screen-xl"
           >
             <div
               class="flex flex-col gap-3 lg:flex-row"
             >
               <div
-                class="hidden min-w-0 rounded-xl border border-theme-navy-100 bg-theme-navy-50 basis-1/2 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] sm:block dark:bg-[url('/welcome-bg-dark.svg')]"
+                class="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]"
               >
                 <div
                   class="slick-slider slick-initialized"
@@ -417,7 +417,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute top-4 left-4 sm:top-6 sm:left-6 welcome-slider-dots"
+                    class="welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6"
                   >
                     <ul
                       class="flex gap-3 leading-3"
@@ -524,10 +524,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                       <span
                         aria-busy="true"
                         aria-live="polite"
-                        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
                         <span
-                          class="h-8 react-loading-skeleton"
+                          class="react-loading-skeleton h-8"
                           style="width: 140px;"
                         >
                           ‌
@@ -537,10 +537,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                       <span
                         aria-busy="true"
                         aria-live="polite"
-                        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
                         <span
-                          class="block h-4 react-loading-skeleton"
+                          class="react-loading-skeleton block h-4"
                           style="width: 240px;"
                         >
                           ‌
@@ -550,10 +550,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                       <span
                         aria-busy="true"
                         aria-live="polite"
-                        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
                         <span
-                          class="block h-4 react-loading-skeleton"
+                          class="react-loading-skeleton block h-4"
                           style="width: 160px;"
                         >
                           ‌
@@ -663,10 +663,10 @@ exports[`PageSkeleton > should render without profile 1`] = `
                       <span
                         aria-busy="true"
                         aria-live="polite"
-                        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                       >
                         <span
-                          class="w-3/5 h-3 react-loading-skeleton"
+                          class="react-loading-skeleton w-3/5 h-3"
                         >
                           ‌
                         </span>

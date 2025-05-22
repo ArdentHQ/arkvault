@@ -3,7 +3,7 @@
 exports[`ButtonGroup > should render 1`] = `
 <DocumentFragment>
   <div
-    class="inline-flex items-center w-full"
+    class="inline-flex w-full items-center"
     data-testid="ButtonGroup"
     role="radiogroup"
   />
@@ -13,7 +13,7 @@ exports[`ButtonGroup > should render 1`] = `
 exports[`ButtonGroup > should render with className 1`] = `
 <DocumentFragment>
   <div
-    class="inline-flex items-center space-x-3 w-full"
+    class="inline-flex w-full items-center space-x-3"
     data-testid="ButtonGroup"
     role="radiogroup"
   />
@@ -25,7 +25,7 @@ exports[`ButtonGroupOption > should render 1`] = `
   <button
     aria-checked="true"
     aria-label="1"
-    class="flex justify-center items-center p-3 w-full h-full font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
+    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"
@@ -35,7 +35,7 @@ exports[`ButtonGroupOption > should render 1`] = `
   <button
     aria-checked="false"
     aria-label="2"
-    class="flex justify-center items-center p-3 w-full h-full font-semibold rounded border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
+    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"
@@ -50,7 +50,7 @@ exports[`ButtonGroupOption > should render with modern variant 1`] = `
   <button
     aria-checked="false"
     aria-label="tooltip"
-    class="flex justify-center items-center p-3 w-full h-11 font-semibold rounded-xl border-2 transition-colors duration-300 cursor-pointer focus:ring-2 disabled:border disabled:cursor-not-allowed border-theme-primary-100 text-theme-secondary-700 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dark:aria-checked:cursor-default hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden disabled:border-theme-secondary-300 disabled:text-theme-secondary-500"
+    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded-xl"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"

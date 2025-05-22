@@ -3,7 +3,7 @@
 exports[`EmptyBlock > should render 1`] = `
 <DocumentFragment>
   <div
-    class="leading-5 text-center rounded-lg border-solid sm:p-6 sm:border border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800"
+    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
     data-testid="EmptyBlock"
   />
 </DocumentFragment>
@@ -12,7 +12,7 @@ exports[`EmptyBlock > should render 1`] = `
 exports[`EmptyBlock > should render with size 1`] = `
 <div>
   <div
-    class="px-4 leading-5 text-center rounded-lg border-solid sm:py-3 sm:border border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800"
+    class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:py-3 px-4"
     data-testid="EmptyBlock"
   >
     <div>

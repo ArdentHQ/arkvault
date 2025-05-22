@@ -3,11 +3,11 @@
 exports[`ContactListItemMobile > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden flex-col w-full rounded border max-w-[calc(100vw-48px)] border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
     data-testid="mobile-table-element"
   >
     <div
-      class="flex overflow-auto py-3 px-4 space-x-3 dark:bg-black bg-theme-secondary-100 dark:bg-theme-dark-950"
+      class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
       data-testid="mobile-table-element-header"
     >
       <span
@@ -19,7 +19,7 @@ exports[`ContactListItemMobile > should render 1`] = `
         class="flex gap-3 items-center"
       >
         <button
-          class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
           data-testid="ContactListItemMobileAddress__send-button"
           type="button"
         >
@@ -80,7 +80,7 @@ exports[`ContactListItemMobile > should render 1`] = `
       </div>
     </div>
     <div
-      class="grid gap-4 py-3 px-4"
+      class="grid gap-4 px-4 py-3"
       data-testid="mobile-table-element-body"
     >
       <div
@@ -97,16 +97,16 @@ exports[`ContactListItemMobile > should render 1`] = `
             data-testid="ContactListItemMobile__addresses"
           >
             <div
-              class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="overflow-hidden min-w-0 text-sm font-semibold no-ligatures text-theme-text"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                 data-testid="Address__address"
               >
                 0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
               </span>
               <button
-                class="relative cursor-pointer ring-focus focus:outline-hidden"
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"
@@ -156,11 +156,11 @@ exports[`ContactListItemMobile > should render 1`] = `
 exports[`ContactListItemMobile > should render addresses 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden flex-col w-full rounded border max-w-[calc(100vw-48px)] border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="flex w-full max-w-[calc(100vw-48px)] flex-col overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
     data-testid="mobile-table-element"
   >
     <div
-      class="flex overflow-auto py-3 px-4 space-x-3 dark:bg-black bg-theme-secondary-100 dark:bg-theme-dark-950"
+      class="dark:bg-theme-dark-950 flex space-x-3 overflow-auto px-4 py-3 bg-theme-secondary-100 dark:bg-black"
       data-testid="mobile-table-element-header"
     >
       <span
@@ -172,7 +172,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
         class="flex gap-3 items-center"
       >
         <button
-          class="inline-flex relative justify-center items-center p-0 space-x-3 text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+          class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
           data-testid="ContactListItemMobileAddress__send-button"
           type="button"
         >
@@ -233,7 +233,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
       </div>
     </div>
     <div
-      class="grid gap-4 py-3 px-4"
+      class="grid gap-4 px-4 py-3"
       data-testid="mobile-table-element-body"
     >
       <div
@@ -250,16 +250,16 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
             data-testid="ContactListItemMobile__addresses"
           >
             <div
-              class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="overflow-hidden min-w-0 text-sm font-semibold no-ligatures text-theme-text"
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
                 data-testid="Address__address"
               >
                 0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
               </span>
               <button
-                class="relative cursor-pointer ring-focus focus:outline-hidden"
+                class="ring-focus relative cursor-pointer focus:outline-hidden"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
                 type="button"

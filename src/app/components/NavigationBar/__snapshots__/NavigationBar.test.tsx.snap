@@ -3,14 +3,14 @@
 exports[`NavigationBar > should not render with title if variant is full 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -47,10 +47,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -84,10 +84,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -124,7 +124,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -133,7 +133,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -173,7 +173,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -276,7 +276,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -313,7 +313,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -337,7 +337,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -370,7 +370,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -389,7 +389,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -441,7 +441,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -495,7 +495,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -536,7 +536,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -575,10 +575,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -643,11 +643,11 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -675,7 +675,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 <DocumentFragment>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 custom-nav-wrapper h-21 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
   >
     <div
       class="flex relative"
@@ -687,7 +687,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
           class="flex items-center my-auto h-12"
         >
           <button
-            class="flex justify-center items-center my-auto w-11 h-11 text-white rounded-xl cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+            class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -721,14 +721,14 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 exports[`NavigationBar > should render full variant when profile restored is false 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-not-allowed focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-500 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-500 cursor-not-allowed"
         data-testid="NavigationBar__buttons__mobile--receive"
         disabled=""
         type="button"
@@ -766,10 +766,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -803,10 +803,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-not-allowed focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-500 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-500 cursor-not-allowed"
         data-testid="NavigationBar__buttons__mobile--send"
         disabled=""
         type="button"
@@ -844,7 +844,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -853,7 +853,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -893,7 +893,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -996,7 +996,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -1033,7 +1033,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -1057,7 +1057,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -1090,7 +1090,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -1109,7 +1109,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   disabled=""
                   type="button"
@@ -1162,7 +1162,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   disabled=""
                   type="button"
@@ -1217,7 +1217,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -1258,7 +1258,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -1297,10 +1297,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -1365,11 +1365,11 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -1394,14 +1394,14 @@ exports[`NavigationBar > should render full variant when profile restored is fal
 exports[`NavigationBar > should render full variant when profile restored is true 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -1438,10 +1438,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -1475,10 +1475,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -1515,7 +1515,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -1524,7 +1524,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -1564,7 +1564,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1667,7 +1667,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -1704,7 +1704,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -1728,7 +1728,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -1761,7 +1761,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -1780,7 +1780,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -1832,7 +1832,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -1886,7 +1886,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -1927,7 +1927,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -1966,10 +1966,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -2034,11 +2034,11 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -2065,14 +2065,14 @@ exports[`NavigationBar > should render full variant when profile restored is tru
 exports[`NavigationBar > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -2109,10 +2109,10 @@ exports[`NavigationBar > should render in lg 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -2146,10 +2146,10 @@ exports[`NavigationBar > should render in lg 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -2186,7 +2186,7 @@ exports[`NavigationBar > should render in lg 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -2195,7 +2195,7 @@ exports[`NavigationBar > should render in lg 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -2235,7 +2235,7 @@ exports[`NavigationBar > should render in lg 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -2338,7 +2338,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -2375,7 +2375,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -2399,7 +2399,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -2432,7 +2432,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -2451,7 +2451,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -2503,7 +2503,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -2557,7 +2557,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -2598,7 +2598,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -2637,10 +2637,10 @@ exports[`NavigationBar > should render in lg 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -2705,11 +2705,11 @@ exports[`NavigationBar > should render in lg 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -2736,14 +2736,14 @@ exports[`NavigationBar > should render in lg 1`] = `
 exports[`NavigationBar > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -2780,10 +2780,10 @@ exports[`NavigationBar > should render in md 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -2817,10 +2817,10 @@ exports[`NavigationBar > should render in md 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -2857,7 +2857,7 @@ exports[`NavigationBar > should render in md 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -2866,7 +2866,7 @@ exports[`NavigationBar > should render in md 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -2906,7 +2906,7 @@ exports[`NavigationBar > should render in md 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3009,7 +3009,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -3046,7 +3046,7 @@ exports[`NavigationBar > should render in md 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -3070,7 +3070,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -3103,7 +3103,7 @@ exports[`NavigationBar > should render in md 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -3122,7 +3122,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -3174,7 +3174,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -3228,7 +3228,7 @@ exports[`NavigationBar > should render in md 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -3269,7 +3269,7 @@ exports[`NavigationBar > should render in md 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -3308,10 +3308,10 @@ exports[`NavigationBar > should render in md 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -3376,11 +3376,11 @@ exports[`NavigationBar > should render in md 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -3407,14 +3407,14 @@ exports[`NavigationBar > should render in md 1`] = `
 exports[`NavigationBar > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -3451,10 +3451,10 @@ exports[`NavigationBar > should render in sm 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -3488,10 +3488,10 @@ exports[`NavigationBar > should render in sm 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -3528,7 +3528,7 @@ exports[`NavigationBar > should render in sm 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -3537,7 +3537,7 @@ exports[`NavigationBar > should render in sm 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -3577,7 +3577,7 @@ exports[`NavigationBar > should render in sm 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3680,7 +3680,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -3717,7 +3717,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -3741,7 +3741,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -3774,7 +3774,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -3793,7 +3793,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -3845,7 +3845,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -3899,7 +3899,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -3940,7 +3940,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -3979,10 +3979,10 @@ exports[`NavigationBar > should render in sm 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -4047,11 +4047,11 @@ exports[`NavigationBar > should render in sm 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -4078,14 +4078,14 @@ exports[`NavigationBar > should render in sm 1`] = `
 exports[`NavigationBar > should render in small screen variant 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -4122,10 +4122,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -4159,10 +4159,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -4199,7 +4199,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -4208,7 +4208,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -4248,7 +4248,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -4351,7 +4351,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -4388,7 +4388,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -4412,7 +4412,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -4445,7 +4445,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -4464,7 +4464,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -4516,7 +4516,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -4570,7 +4570,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -4611,7 +4611,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -4650,10 +4650,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -4718,11 +4718,11 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -4749,14 +4749,14 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
 exports[`NavigationBar > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -4793,10 +4793,10 @@ exports[`NavigationBar > should render in xs 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -4830,10 +4830,10 @@ exports[`NavigationBar > should render in xs 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -4870,7 +4870,7 @@ exports[`NavigationBar > should render in xs 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -4879,7 +4879,7 @@ exports[`NavigationBar > should render in xs 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -4919,7 +4919,7 @@ exports[`NavigationBar > should render in xs 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5022,7 +5022,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -5059,7 +5059,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -5083,7 +5083,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -5116,7 +5116,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -5135,7 +5135,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -5187,7 +5187,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -5241,7 +5241,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -5282,7 +5282,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -5321,10 +5321,10 @@ exports[`NavigationBar > should render in xs 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -5389,11 +5389,11 @@ exports[`NavigationBar > should render in xs 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -5420,14 +5420,14 @@ exports[`NavigationBar > should render in xs 1`] = `
 exports[`NavigationBar > should render with custom menu 1`] = `
 <DocumentFragment>
   <div
-    class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex justify-center items-center space-x-4 h-14"
     >
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -5464,10 +5464,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -5501,10 +5501,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </div>
       </button>
       <div
-        class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <button
-        class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -5541,7 +5541,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
   >
     <div
       class="flex relative flex-row h-12"
@@ -5550,7 +5550,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         class="hidden w-9 sm:flex"
       >
         <button
-          class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+          class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
         >
           <div
             class="mx-auto"
@@ -5590,7 +5590,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
             class="flex items-center my-auto h-12"
           >
             <button
-              class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5693,7 +5693,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--notifications"
                   type="button"
                 >
@@ -5730,7 +5730,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                      class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                     >
                       <div
                         class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -5754,7 +5754,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 class="custom-button-nav-wrapper group"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--server-status"
                   type="button"
                 >
@@ -5787,7 +5787,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                       class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                     >
                       <div
-                        class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                        class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                       />
                     </div>
                   </div>
@@ -5806,7 +5806,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -5858,7 +5858,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 class="custom-button-nav-wrapper"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -5912,7 +5912,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                   class="group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                     data-testid="NavigationBar__buttons--network"
                     type="button"
                   >
@@ -5953,7 +5953,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                         Testnet
                       </span>
                       <div
-                        class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                        class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                         role="img"
                       >
                         <div
@@ -5992,10 +5992,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
             class="flex gap-5 items-center"
           >
             <div
-              class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+              class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
             >
               <button
-                class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                 data-testid="HideBalance-button"
                 type="button"
               >
@@ -6060,11 +6060,11 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                   data-testid="UserMenu"
                 >
                   <div
-                    class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                     >
                       <img
                         alt="Profile Avatar"
@@ -6092,7 +6092,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
 <DocumentFragment>
   <nav
     aria-labelledby="main menu"
-    class="sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 custom-nav-wrapper h-21 dark:bg-theme-dark-900"
+    class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
   >
     <div
       class="flex relative"
@@ -6104,7 +6104,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
           class="flex items-center my-auto h-12"
         >
           <button
-            class="flex justify-center items-center my-auto w-11 h-11 text-white rounded-xl cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+            class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >

@@ -3,22 +3,22 @@
 exports[`UpdateContact > should render responsive 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
-        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
           class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -74,7 +74,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
                 >
                   <label
                     class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -84,10 +84,10 @@ exports[`UpdateContact > should render responsive 1`] = `
                     Name
                   </label>
                   <div
-                    class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex relative flex-1 h-full"
+                      class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
@@ -101,7 +101,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
                   data-testid="ContactForm__address"
                 >
                   <label
@@ -112,10 +112,10 @@ exports[`UpdateContact > should render responsive 1`] = `
                     Address
                   </label>
                   <div
-                    class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex relative flex-1 h-full"
+                      class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
@@ -130,13 +130,13 @@ exports[`UpdateContact > should render responsive 1`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="flex justify-between w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full border-0 justify-between"
                 >
                   <div
                     class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -147,7 +147,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                       </div>
                     </button>
                     <button
-                      class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__save-btn"
                       type="submit"
                     >
@@ -172,22 +172,22 @@ exports[`UpdateContact > should render responsive 1`] = `
 exports[`UpdateContact > should render responsive 2`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
-        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
           class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -243,7 +243,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
                 >
                   <label
                     class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -253,10 +253,10 @@ exports[`UpdateContact > should render responsive 2`] = `
                     Name
                   </label>
                   <div
-                    class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex relative flex-1 h-full"
+                      class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
@@ -270,7 +270,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
                   data-testid="ContactForm__address"
                 >
                   <label
@@ -281,10 +281,10 @@ exports[`UpdateContact > should render responsive 2`] = `
                     Address
                   </label>
                   <div
-                    class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex relative flex-1 h-full"
+                      class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
@@ -299,10 +299,10 @@ exports[`UpdateContact > should render responsive 2`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="flex justify-between w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full border-0 justify-between"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center py-3 px-5 mt-0 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer sm:mt-8 dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 h-min dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 mt-0 sm:mt-8 h-min"
                     data-testid="contact-form__delete-btn"
                     type="button"
                   >
@@ -345,7 +345,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                     class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -356,7 +356,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                       </div>
                     </button>
                     <button
-                      class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__save-btn"
                       type="submit"
                     >
@@ -381,22 +381,22 @@ exports[`UpdateContact > should render responsive 2`] = `
 exports[`UpdateContact > should render responsive 3`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-y-hidden fixed inset-0 z-50 w-full md:py-20 dark:bg-opacity-80 custom-scroll overflow-overlay bg-theme-secondary-900/40 backdrop-blur-xl dark:bg-black-rgba/40"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:px-10 md:m-auto md:max-w-2xl"
+      class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
       tabindex="-1"
     >
       <div
-        class="flex overflow-hidden relative flex-col px-6 pt-4 min-h-full shadow-2xl sm:mb-0 md:p-8 md:h-auto md:rounded-xl bg-theme-background"
+        class="bg-theme-background relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl px-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
           class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
         >
           <button
-            class="inline-flex relative justify-center items-center p-3 w-8 h-8 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden focus:outline-hidden focus:ring-theme-primary-400"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -457,7 +457,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
                 >
                   <label
                     class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -467,10 +467,10 @@ exports[`UpdateContact > should render responsive 3`] = `
                     Name
                   </label>
                   <div
-                    class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex relative flex-1 h-full"
+                      class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
@@ -484,7 +484,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
                   data-testid="ContactForm__address"
                 >
                   <label
@@ -495,10 +495,10 @@ exports[`UpdateContact > should render responsive 3`] = `
                     Address
                   </label>
                   <div
-                    class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex relative flex-1 h-full"
+                      class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
@@ -513,10 +513,10 @@ exports[`UpdateContact > should render responsive 3`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="flex justify-between w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full border-0 justify-between"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center py-3 px-5 mt-0 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer sm:mt-8 dark:text-white hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-danger-100 text-theme-danger-400 h-min dark:bg-theme-danger-400 dark:hover:bg-theme-danger-300 hover:bg-theme-danger-400 focus:outline-hidden focus:ring-theme-danger-300"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 mt-0 sm:mt-8 h-min"
                     data-testid="contact-form__delete-btn"
                     type="button"
                   >
@@ -559,7 +559,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                     class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
                   >
                     <button
-                      class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer hover:text-white focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-dark-800 dark:text-theme-dark-50 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -570,7 +570,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                       </div>
                     </button>
                     <button
-                      class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                       data-testid="contact-form__save-btn"
                       type="submit"
                     >
