@@ -3,10 +3,10 @@
 exports[`Button > should hide the toggle button if no onClick method 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+    class="flex flex-col gap-x-3 border-b transition-all duration-200 md:mb-4 md:rounded-xl md:border-0 md:ring-2 border-theme-secondary-300 ring-theme-primary-100 dark:border-theme-secondary-800 dark:bg-theme-background dark:ring-theme-secondary-800"
   >
     <div
-      class="select-none md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="flex flex-row items-center py-6 px-8 select-none md:p-4 md:h-20 border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -28,10 +28,10 @@ exports[`Button > should hide the toggle button if no onClick method 1`] = `
 exports[`Button > should render 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+    class="flex flex-col gap-x-3 border-b transition-all duration-200 md:mb-4 md:rounded-xl md:border-0 md:ring-2 border-theme-secondary-300 ring-theme-primary-100 dark:border-theme-secondary-800 dark:bg-theme-background dark:ring-theme-secondary-800"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="flex flex-row items-center py-6 px-8 cursor-pointer select-none md:p-4 md:h-20 group border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -40,10 +40,10 @@ exports[`Button > should render 1`] = `
         Header
       </div>
       <div
-        class="not-all-hover-none:dark:group-hover:border-theme-secondary-700 ml-4 flex shrink-0 items-center self-stretch transition-all duration-100"
+        class="flex items-center self-stretch ml-4 transition-all duration-100 not-all-hover-none:dark:group-hover:border-theme-secondary-700 shrink-0"
       >
         <div
-          class="text-theme-secondary-700 ring-theme-primary-100 dark:text-theme-secondary-500 dark:ring-theme-secondary-700 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg ring-2 transition-all sm:h-8"
+          class="flex justify-center content-center items-center w-8 h-full rounded-lg ring-2 transition-all sm:h-8 text-theme-secondary-700 ring-theme-primary-100 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 min-h-8 basis-8 dark:text-theme-secondary-500 dark:ring-theme-secondary-700"
           data-testid="Accordion__toggle"
         >
           <div
@@ -88,10 +88,10 @@ exports[`Button > should render 1`] = `
 exports[`Button > should render collapsed 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0 not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 transition-shadow ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2"
+    class="flex flex-col gap-x-3 border-b transition-shadow duration-200 md:mb-4 md:rounded-xl md:border-0 md:ring-2 border-theme-secondary-300 not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 ring-theme-primary-100 dark:border-theme-secondary-800 dark:bg-theme-background dark:ring-theme-secondary-800"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="flex flex-row items-center py-6 px-8 cursor-pointer select-none md:p-4 md:h-20 group border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -100,10 +100,10 @@ exports[`Button > should render collapsed 1`] = `
         Header
       </div>
       <div
-        class="not-all-hover-none:dark:group-hover:border-theme-secondary-700 ml-4 flex shrink-0 items-center self-stretch transition-all duration-100"
+        class="flex items-center self-stretch ml-4 transition-all duration-100 not-all-hover-none:dark:group-hover:border-theme-secondary-700 shrink-0"
       >
         <div
-          class="text-theme-secondary-700 ring-theme-primary-100 dark:text-theme-secondary-500 dark:ring-theme-secondary-700 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg ring-2 transition-all sm:h-8"
+          class="flex justify-center content-center items-center w-8 h-full rounded-lg ring-2 transition-all sm:h-8 text-theme-secondary-700 ring-theme-primary-100 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 min-h-8 basis-8 dark:text-theme-secondary-500 dark:ring-theme-secondary-700"
           data-testid="Accordion__toggle"
         >
           <div
@@ -148,10 +148,10 @@ exports[`Button > should render collapsed 1`] = `
 exports[`Button > should render expanded 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+    class="flex flex-col gap-x-3 border-b transition-all duration-200 md:mb-4 md:rounded-xl md:border-0 md:ring-2 border-theme-secondary-300 ring-theme-primary-100 dark:border-theme-secondary-800 dark:bg-theme-background dark:ring-theme-secondary-800"
   >
     <div
-      class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
+      class="flex flex-row items-center py-6 px-8 cursor-pointer select-none md:p-4 md:h-20 md:border-b border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -160,10 +160,10 @@ exports[`Button > should render expanded 1`] = `
         Header
       </div>
       <div
-        class="not-all-hover-none:dark:group-hover:border-theme-secondary-700 ml-4 flex shrink-0 items-center self-stretch"
+        class="flex items-center self-stretch ml-4 not-all-hover-none:dark:group-hover:border-theme-secondary-700 shrink-0"
       >
         <div
-          class="text-theme-secondary-700 ring-theme-primary-100 dark:text-theme-secondary-500 dark:ring-theme-secondary-700 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg ring-2 transition-all sm:h-8"
+          class="flex justify-center content-center items-center w-8 h-full rounded-lg ring-2 transition-all sm:h-8 text-theme-secondary-700 ring-theme-primary-100 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 min-h-8 basis-8 dark:text-theme-secondary-500 dark:ring-theme-secondary-700"
           data-testid="Accordion__toggle"
         >
           <div
@@ -208,10 +208,10 @@ exports[`Button > should render expanded 1`] = `
 exports[`Button > should render inactive 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0 ring-theme-secondary-300 dark:ring-theme-secondary-800 md:ring-1 transition-all"
+    class="flex flex-col gap-x-3 border-b transition-all duration-200 md:mb-4 md:rounded-xl md:border-0 md:ring-1 border-theme-secondary-300 ring-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background dark:ring-theme-secondary-800"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="flex flex-row items-center py-6 px-8 cursor-pointer select-none md:p-4 md:h-20 group border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -220,10 +220,10 @@ exports[`Button > should render inactive 1`] = `
         Header
       </div>
       <div
-        class="not-all-hover-none:dark:group-hover:border-theme-secondary-700 ml-4 flex shrink-0 items-center self-stretch transition-all duration-100"
+        class="flex items-center self-stretch ml-4 transition-all duration-100 not-all-hover-none:dark:group-hover:border-theme-secondary-700 shrink-0"
       >
         <div
-          class="text-theme-secondary-700 ring-theme-primary-100 dark:text-theme-secondary-500 dark:ring-theme-secondary-700 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg ring-2 transition-all sm:h-8"
+          class="flex justify-center content-center items-center w-8 h-full rounded-lg ring-2 transition-all sm:h-8 text-theme-secondary-700 ring-theme-primary-100 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 min-h-8 basis-8 dark:text-theme-secondary-500 dark:ring-theme-secondary-700"
           data-testid="Accordion__toggle"
         >
           <div
@@ -311,10 +311,10 @@ exports[`Button > should render skeleton wrapper 1`] = `
 exports[`Button > should toggle the accordion on click 1`] = `
 <div>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background flex flex-col gap-x-3 border-b duration-200 md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-all"
+    class="flex flex-col gap-x-3 border-b transition-all duration-200 md:mb-4 md:rounded-xl md:border-0 md:ring-2 border-theme-secondary-300 ring-theme-primary-100 dark:border-theme-secondary-800 dark:bg-theme-background dark:ring-theme-secondary-800"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="flex flex-row items-center py-6 px-8 cursor-pointer select-none md:p-4 md:h-20 group border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -323,10 +323,10 @@ exports[`Button > should toggle the accordion on click 1`] = `
         Header
       </div>
       <div
-        class="not-all-hover-none:dark:group-hover:border-theme-secondary-700 ml-4 flex shrink-0 items-center self-stretch transition-all duration-100"
+        class="flex items-center self-stretch ml-4 transition-all duration-100 not-all-hover-none:dark:group-hover:border-theme-secondary-700 shrink-0"
       >
         <div
-          class="text-theme-secondary-700 ring-theme-primary-100 dark:text-theme-secondary-500 dark:ring-theme-secondary-700 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg ring-2 transition-all sm:h-8"
+          class="flex justify-center content-center items-center w-8 h-full rounded-lg ring-2 transition-all sm:h-8 text-theme-secondary-700 ring-theme-primary-100 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800 min-h-8 basis-8 dark:text-theme-secondary-500 dark:ring-theme-secondary-700"
           data-testid="Accordion__toggle"
         >
           <div

@@ -15,11 +15,11 @@ exports[`UserMenu > should render with regular image 1`] = `
         data-testid="UserMenu"
       >
         <div
-          class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
+          class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
           >
             <img
               alt="Profile Avatar"
@@ -49,11 +49,11 @@ exports[`UserMenu > should render with svg image 1`] = `
         data-testid="UserMenu"
       >
         <div
-          class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
+          class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+            class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
           >
             <img
               alt="Profile Avatar"

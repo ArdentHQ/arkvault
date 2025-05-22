@@ -6,10 +6,10 @@ exports[`InputCurrency > should render 1`] = `
     class="relative"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"

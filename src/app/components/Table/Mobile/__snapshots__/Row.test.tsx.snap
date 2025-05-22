@@ -28,7 +28,7 @@ exports[`Row > should render responsive wrapper 1`] = `
       class="flex w-full text-right"
     >
       <div
-        class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+        class="flex overflow-hidden flex-1 justify-end items-center w-0"
       >
         The address
       </div>

@@ -3,7 +3,7 @@
 exports[`Dot > should render 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+    class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
   >
     <div
       class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
