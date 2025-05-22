@@ -22,14 +22,14 @@ interface Properties {
 }
 
 export const GasLimit: Record<Properties["type"], number> = {
-	multiPayment: 10_000,
-	multiSignature: 10_000,
-	transfer: 10_000,
-	usernameRegistration: 10_000,
-	usernameResignation: 10_000,
-	validatorRegistration: 10_000,
-	validatorResignation: 10_000,
-	vote: 10_000,
+	multiPayment: 21_000,
+	multiSignature: 21_000,
+	transfer: 21_000,
+	usernameRegistration: 21_000,
+	usernameResignation: 21_000,
+	validatorRegistration: 21_000,
+	validatorResignation: 21_000,
+	vote: 21_000,
 };
 
 export const MIN_GAS_PRICE = 5;
