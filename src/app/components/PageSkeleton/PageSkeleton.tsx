@@ -17,7 +17,7 @@ export const PageSkeleton = () => {
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className="hidden min-w-0 rounded-xl border border-theme-navy-100 bg-theme-navy-50 basis-1/2 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] sm:block dark:bg-[url('/welcome-bg-dark.svg')]">
+						<div className="border-theme-navy-100 bg-theme-navy-50 bg-[url( dark:border-theme-secondary-800 dark:bg-theme-secondary-800'/welcome-bg-white.svg')] hidden min-w-0 basis-1/2 rounded-xl border sm:block dark:bg-[url('/welcome-bg-dark.svg')]">
 							<WelcomeSlider />
 						</div>
 						<div className="min-w-0 rounded-xl sm:p-6 sm:border border-theme-navy-100 basis-1/2 dark:border-theme-secondary-800">
