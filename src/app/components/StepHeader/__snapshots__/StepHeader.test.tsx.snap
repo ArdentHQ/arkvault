@@ -17,16 +17,16 @@ exports[`StepHeader > should render 1`] = `
         class="flex flex-row gap-2"
       >
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>
@@ -34,7 +34,7 @@ exports[`StepHeader > should render 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="bg-theme-background flex items-end justify-between hidden mt-8 sm:block"
+        class="flex hidden justify-between items-end mt-8 sm:block bg-theme-background"
       >
         <div
           class="space-y-2"
@@ -65,7 +65,7 @@ exports[`StepHeader > should render 1`] = `
 exports[`StepHeader > should render simple header without a provider 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex items-end justify-between"
+    class="flex justify-between items-end bg-theme-background"
   >
     <div
       class="space-y-2"
@@ -108,16 +108,16 @@ exports[`StepHeader > should render with extra 1`] = `
         class="flex flex-row gap-2"
       >
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-warning-300"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+          class="flex-1 h-1 transition-colors duration-300 rounded-[4px] bg-theme-primary-100 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>
@@ -125,7 +125,7 @@ exports[`StepHeader > should render with extra 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="bg-theme-background flex items-end justify-between hidden mt-8 sm:block"
+        class="flex hidden justify-between items-end mt-8 sm:block bg-theme-background"
       >
         <div
           class="space-y-2"

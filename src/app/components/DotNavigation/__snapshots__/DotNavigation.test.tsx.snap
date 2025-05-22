@@ -7,11 +7,11 @@ exports[`DotNavigation > should render 1`] = `
     data-testid="DotNavigation"
   >
     <li
-      class="h-2 w-2 flex-1 cursor-pointer rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
+      class="flex-1 w-2 h-2 rounded-lg transition-colors duration-300 cursor-pointer bg-theme-primary-100 dark:bg-theme-secondary-800"
       data-testid="DotNavigation-Step-0"
     />
     <li
-      class="h-2 w-2 flex-1 cursor-pointer rounded-lg transition-colors duration-300 bg-theme-primary-600 hover:bg-theme-primary-500"
+      class="flex-1 w-2 h-2 rounded-lg transition-colors duration-300 cursor-pointer bg-theme-primary-600 hover:bg-theme-primary-500"
       data-testid="DotNavigation-Step-1"
     />
   </ul>

@@ -3,7 +3,7 @@
 exports[`Header > should render an header 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex items-end justify-between"
+    class="flex justify-between items-end bg-theme-background"
   >
     <div
       class="space-y-2"
@@ -26,7 +26,7 @@ exports[`Header > should render an header 1`] = `
 exports[`Header > should render an header with a subtitle 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex items-end justify-between"
+    class="flex justify-between items-end bg-theme-background"
   >
     <div
       class="space-y-2"
@@ -55,7 +55,7 @@ exports[`Header > should render an header with a subtitle 1`] = `
 exports[`Header > should render an header with extra 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex items-end justify-between"
+    class="flex justify-between items-end bg-theme-background"
   >
     <div
       class="space-y-2"
@@ -82,7 +82,7 @@ exports[`Header > should render an header with extra 1`] = `
         class="flex justify-end space-x-3"
       >
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+          class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="header__extra"
           type="button"
         >
@@ -93,7 +93,7 @@ exports[`Header > should render an header with extra 1`] = `
           </div>
         </button>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+          class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
           data-testid="header__extra"
           type="button"
         >
@@ -112,13 +112,13 @@ exports[`Header > should render an header with extra 1`] = `
 exports[`PageHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class="w-full py-4 first:pt-8 last:pb-8"
+    class="py-4 w-full first:pt-8 last:pb-8"
   >
     <div
-      class="mx-auto px-6 md:px-10 lg:container"
+      class="px-6 mx-auto md:px-10 lg:container"
     >
       <div
-        class="bg-theme-background flex items-end justify-between"
+        class="flex justify-between items-end bg-theme-background"
       >
         <div
           class="space-y-2"

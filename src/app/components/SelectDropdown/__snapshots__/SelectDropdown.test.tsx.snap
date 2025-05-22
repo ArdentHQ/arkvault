@@ -7,10 +7,10 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -38,10 +38,10 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
             id="downshift-50-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -58,7 +58,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -124,10 +124,10 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -155,10 +155,10 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
             id="downshift-52-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -175,7 +175,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -241,10 +241,10 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           aria-invalid="true"
@@ -258,7 +258,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+        class="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
         data-testid="Input__addon-end"
       >
         <span
@@ -322,10 +322,10 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
             id="downshift-46-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -342,14 +342,14 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
               data-testid="Input__addon-end"
             >
               <span
                 data-testid="Input__error"
               >
                 <div
-                  class="text-theme-danger-500 pr-3"
+                  class="pr-3 text-theme-danger-500"
                 >
                   <div
                     style="height: 20px; width: 20px;"
@@ -452,10 +452,10 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           aria-invalid="true"
@@ -469,7 +469,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+        class="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
         data-testid="Input__addon-end"
       >
         <span
@@ -533,10 +533,10 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
             id="downshift-48-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -553,14 +553,14 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
               data-testid="Input__addon-end"
             >
               <span
                 data-testid="Input__error"
               >
                 <div
-                  class="text-theme-danger-500 pr-3"
+                  class="pr-3 text-theme-danger-500"
                 >
                   <div
                     style="height: 20px; width: 20px;"
@@ -663,10 +663,10 @@ exports[`SelectDropdown > should render option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -694,10 +694,10 @@ exports[`SelectDropdown > should render option base 1`] = `
             id="downshift-0-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -713,7 +713,7 @@ exports[`SelectDropdown > should render option base 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -779,10 +779,10 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -869,10 +869,10 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
             …
           </div>
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -887,7 +887,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 value="Opt"
               />
               <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -898,7 +898,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -915,7 +915,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                       class="block absolute inset-0 cursor-pointer md:hidden"
                     />
                     <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="transition-transform transform rotate-180 text-theme-secondary-500"
                     >
                       <div
                         style="height: 10px; width: 10px;"
@@ -964,10 +964,10 @@ exports[`SelectDropdown > should render option base with custom label and allowe
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1054,10 +1054,10 @@ exports[`SelectDropdown > should render option base with custom label and allowe
             …
           </div>
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1072,7 +1072,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 value="Opt"
               />
               <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1083,7 +1083,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1100,7 +1100,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                       class="block absolute inset-0 cursor-pointer md:hidden"
                     />
                     <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="transition-transform transform rotate-180 text-theme-secondary-500"
                     >
                       <div
                         style="height: 10px; width: 10px;"
@@ -1149,10 +1149,10 @@ exports[`SelectDropdown > should render option base with default value when free
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1180,10 +1180,10 @@ exports[`SelectDropdown > should render option base with default value when free
             id="downshift-589-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1199,7 +1199,7 @@ exports[`SelectDropdown > should render option base with default value when free
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1265,10 +1265,10 @@ exports[`SelectDropdown > should render option base with initial default value 1
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1302,10 +1302,10 @@ exports[`SelectDropdown > should render option base with initial default value 1
             …
           </div>
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1320,7 +1320,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                 value="Option 3"
               />
               <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1331,7 +1331,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1397,10 +1397,10 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1428,10 +1428,10 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
             id="downshift-76-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1447,7 +1447,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1513,10 +1513,10 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1544,10 +1544,10 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
             id="downshift-54-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1582,10 +1582,10 @@ exports[`SelectDropdown > should render option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1613,10 +1613,10 @@ exports[`SelectDropdown > should render option group 1`] = `
             id="downshift-2-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1632,7 +1632,7 @@ exports[`SelectDropdown > should render option group 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1698,10 +1698,10 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1787,10 +1787,10 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
             …
           </div>
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1805,7 +1805,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 value="Opt"
               />
               <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -1816,7 +1816,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -1833,7 +1833,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                       class="block absolute inset-0 cursor-pointer md:hidden"
                     />
                     <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="transition-transform transform rotate-180 text-theme-secondary-500"
                     >
                       <div
                         style="height: 10px; width: 10px;"
@@ -1882,10 +1882,10 @@ exports[`SelectDropdown > should render option group with custom label and allow
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -1971,10 +1971,10 @@ exports[`SelectDropdown > should render option group with custom label and allow
             …
           </div>
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -1989,7 +1989,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 value="Opt"
               />
               <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -2000,7 +2000,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2017,7 +2017,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                       class="block absolute inset-0 cursor-pointer md:hidden"
                     />
                     <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="transition-transform transform rotate-180 text-theme-secondary-500"
                     >
                       <div
                         style="height: 10px; width: 10px;"
@@ -2066,10 +2066,10 @@ exports[`SelectDropdown > should render option group with default value when fre
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2097,10 +2097,10 @@ exports[`SelectDropdown > should render option group with default value when fre
             id="downshift-592-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2116,7 +2116,7 @@ exports[`SelectDropdown > should render option group with default value when fre
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2182,10 +2182,10 @@ exports[`SelectDropdown > should render option group with initial default value 
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2219,10 +2219,10 @@ exports[`SelectDropdown > should render option group with initial default value 
             …
           </div>
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2237,7 +2237,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                 value="Item 1"
               />
               <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                class="flex absolute inset-y-0 items-center w-full text-sm font-normal opacity-50 pointer-events-none sm:text-base no-ligatures"
                 data-testid="Input__suggestion"
               >
                 <span
@@ -2248,7 +2248,7 @@ exports[`SelectDropdown > should render option group with initial default value 
               </span>
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2314,10 +2314,10 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2345,10 +2345,10 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
             id="downshift-78-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2364,7 +2364,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2430,10 +2430,10 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2461,10 +2461,10 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
             id="downshift-56-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2499,10 +2499,10 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2530,10 +2530,10 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
             id="downshift-84-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2549,7 +2549,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2615,10 +2615,10 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2646,10 +2646,10 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
             id="downshift-4-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2665,7 +2665,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2731,10 +2731,10 @@ exports[`SelectDropdown > should render with empty options 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2762,10 +2762,10 @@ exports[`SelectDropdown > should render with empty options 1`] = `
             id="downshift-80-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2781,7 +2781,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
@@ -2847,10 +2847,10 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sr-only sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
     >
       <div
-        class="relative flex h-full flex-1"
+        class="flex relative flex-1 h-full"
       >
         <input
           autocomplete="off"
@@ -2878,10 +2878,10 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
             id="downshift-82-label"
           />
           <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
           >
             <div
-              class="relative flex h-full flex-1"
+              class="flex relative flex-1 h-full"
             >
               <input
                 aria-autocomplete="list"
@@ -2897,7 +2897,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
               />
             </div>
             <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+              class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
               data-testid="Input__addon-end"
             >
               <div
