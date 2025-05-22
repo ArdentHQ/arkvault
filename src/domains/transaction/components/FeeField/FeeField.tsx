@@ -22,14 +22,14 @@ interface Properties {
 }
 
 export const GasLimit: Record<Properties["type"], number> = {
-	multiPayment: 21_000,
-	multiSignature: 21_000,
-	transfer: 21_000,
+	multiPayment: 10_000,
+	multiSignature: 10_000,
+	transfer: 10_000,
 	usernameRegistration: 10_000,
-	usernameResignation: 200_000,
-	validatorRegistration: 500_000,
-	validatorResignation: 150_000,
-	vote: 200_000,
+	usernameResignation: 10_000,
+	validatorRegistration: 10_000,
+	validatorResignation: 10_000,
+	vote: 10_000,
 };
 
 export const MIN_GAS_PRICE = 5;
@@ -98,7 +98,11 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			loading={!fees || isLoadingFee}
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
-			defaultGasLimit={gasLimit ?? 0}
+			defaultGasLimit={
+				type === "multiPayment" && Array.isArray(data?.payments)
+					? GasLimit.multiPayment * data.payments.length
+					: GasLimit[type]
+			}
 			minGasPrice={MIN_GAS_PRICE}
 			gasPriceStep={1}
 			network={network}
