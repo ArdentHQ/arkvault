@@ -3,20 +3,20 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="w-full sm:w-[35rem] dark:bg-theme-dark-900"
+    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex justify-between items-center py-4 px-6 rounded-t-xl dark:bg-black bg-theme-secondary-100"
+      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
     </div>
     <div
-      class="overflow-y-hidden overscroll-y-none w-full max-h-[36rem]"
+      class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
       data-testid="NotificationsWrapper"
     >
       <div
@@ -46,7 +46,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                       >
                         <div
-                          class="flex-1 w-20"
+                          class="w-20 flex-1"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -106,7 +106,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -125,7 +125,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                       >
                         <div
-                          class="flex-1 w-20"
+                          class="w-20 flex-1"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -185,7 +185,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -204,7 +204,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                       >
                         <div
-                          class="flex-1 w-20"
+                          class="w-20 flex-1"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -264,7 +264,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -284,14 +284,14 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="w-full sm:w-[35rem] dark:bg-theme-dark-900"
+    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex justify-between items-center py-4 px-6 rounded-t-xl dark:bg-black bg-theme-secondary-100"
+      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
@@ -380,20 +380,20 @@ exports[`Notifications > should render with empty notifications 1`] = `
 exports[`Notifications > should render with transactions 1`] = `
 <div>
   <div
-    class="w-full sm:w-[35rem] dark:bg-theme-dark-900"
+    class="dark:bg-theme-dark-900 w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="flex justify-between items-center py-4 px-6 rounded-t-xl dark:bg-black bg-theme-secondary-100"
+      class="bg-theme-secondary-100 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
+        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
       >
         Notification
       </div>
     </div>
     <div
-      class="overflow-y-hidden overscroll-y-none w-full max-h-[36rem]"
+      class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
       data-testid="NotificationsWrapper"
     >
       <div
@@ -423,7 +423,7 @@ exports[`Notifications > should render with transactions 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                       >
                         <div
-                          class="flex-1 w-20"
+                          class="w-20 flex-1"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -483,7 +483,7 @@ exports[`Notifications > should render with transactions 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -502,7 +502,7 @@ exports[`Notifications > should render with transactions 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                       >
                         <div
-                          class="flex-1 w-20"
+                          class="w-20 flex-1"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -562,7 +562,7 @@ exports[`Notifications > should render with transactions 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>
@@ -581,7 +581,7 @@ exports[`Notifications > should render with transactions 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 pl-6 static mx-0"
                       >
                         <div
-                          class="flex-1 w-20"
+                          class="w-20 flex-1"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -641,7 +641,7 @@ exports[`Notifications > should render with transactions 1`] = `
                             </div>
                           </div>
                           <div
-                            class="absolute right-0 -bottom-px w-8 h-px bg-white dark:bg-theme-secondary-900"
+                            class="dark:bg-theme-secondary-900 absolute right-0 -bottom-px h-px w-8 bg-white"
                           />
                         </div>
                       </div>

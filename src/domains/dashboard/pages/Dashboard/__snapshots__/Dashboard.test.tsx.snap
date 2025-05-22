@@ -11,7 +11,7 @@ exports[`Dashboard > should render 1`] = `
       data-testid="NavigationBarMobile"
     >
       <div
-        class="flex justify-center items-center space-x-4 h-14"
+        class="flex h-14 items-center justify-center space-x-4"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -131,7 +131,7 @@ exports[`Dashboard > should render 1`] = `
       class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
-        class="flex relative flex-row h-12"
+        class="relative flex h-12 flex-row"
       >
         <div
           class="hidden w-9 sm:flex"
@@ -168,13 +168,13 @@ exports[`Dashboard > should render 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 justify-between items-center px-6"
+          class="flex flex-1 items-center justify-between px-6"
         >
           <div
-            class="flex flex-row gap-6 items-center"
+            class="flex flex-row items-center gap-6"
           >
             <div
-              class="flex items-center my-auto h-12"
+              class="my-auto flex h-12 items-center"
             >
               <button
                 class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
@@ -203,7 +203,7 @@ exports[`Dashboard > should render 1`] = `
               </button>
             </div>
             <ul
-              class="hidden items-center h-12 xl:flex"
+              class="hidden h-12 items-center xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -211,7 +211,7 @@ exports[`Dashboard > should render 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden active"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -222,7 +222,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -233,7 +233,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -244,7 +244,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -253,7 +253,7 @@ exports[`Dashboard > should render 1`] = `
               </li>
             </ul>
             <div
-              class="flex content-center items-center mr-auto xl:hidden"
+              class="mr-auto flex content-center items-center xl:hidden"
               data-testid="NavigationBar__menu-toggle"
             >
               <div
@@ -262,7 +262,7 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex items-center h-7 rounded cursor-pointer focus:ring-2 text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 focus:outline-hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -291,7 +291,7 @@ exports[`Dashboard > should render 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row gap-4 justify-center items-center sm:gap-5"
+            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
           >
             <div>
               <div
@@ -311,7 +311,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 m-0"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -343,7 +343,7 @@ exports[`Dashboard > should render 1`] = `
                         class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -352,7 +352,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -372,7 +372,7 @@ exports[`Dashboard > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 m-0"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -394,7 +394,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -406,7 +406,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -458,7 +458,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -507,7 +507,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -522,7 +522,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -530,7 +530,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded border-2 dark:bg-transparent border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 p-[3px] dark:border-theme-danger-info-border dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -558,7 +558,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 text-sm"
                         >
                           Testnet
                         </span>
@@ -596,16 +596,16 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r sm:block sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex gap-5 items-center"
+              class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -645,7 +645,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold text-theme-secondary-700 leading-[17px] md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                      class="text-theme-secondary-700 md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -663,10 +663,10 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex gap-6 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
-                    class="relative justify-center items-center align-middle rounded cursor-pointer"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
@@ -681,7 +681,7 @@ exports[`Dashboard > should render 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -699,7 +699,7 @@ exports[`Dashboard > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 last:pb-8 pb-0 md:px-0 md:pb-4 xl:mx-auto first:pt-0"
+        class="w-full py-4 last:pb-8 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
       >
         <div
           class="lg:container m-0 p-0 md:px-0 md:mx-auto"
@@ -709,17 +709,17 @@ exports[`Dashboard > should render 1`] = `
             data-testid="WalletHeader"
           >
             <div
-              class="flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl bg-theme-primary-100 dark:bg-theme-dark-950"
+              class="bg-theme-primary-100 dark:bg-theme-dark-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
             >
               <div
-                class="flex z-30 flex-row justify-between items-center px-4 w-full"
+                class="z-30 flex w-full flex-row items-center justify-between px-4"
               >
                 <div
                   aria-expanded="false"
                   class="flex h-fit flex-row items-center gap-1"
                 >
                   <p
-                    class="hidden text-base font-semibold leading-5 rounded-l sm:block text-theme-secondary-900 dark:text-theme-dark-50"
+                    class="text-theme-secondary-900 dark:text-theme-dark-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
                   >
                     Viewing:
                   </p>
@@ -729,10 +729,10 @@ exports[`Dashboard > should render 1`] = `
                     tabindex="0"
                   >
                     <div
-                      class="flex gap-1 items-center"
+                      class="flex items-center gap-1"
                     >
                       <div
-                        class="text-sm font-semibold sm:text-base sm:leading-5 text-theme-primary-600 leading-[17px] dark:textdark-theme-dark-navy-400"
+                        class="text-theme-primary-600 dark:textdark-theme-dark-navy-400 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                       >
                         Multiple addresses (1)
                       </div>
@@ -740,10 +740,10 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-row gap-1 items-center"
+                  class="flex flex-row items-center gap-1"
                 >
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex justify-center items-center p-0 w-6 h-6 sm:px-2 sm:w-auto sm:h-8 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700"
+                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
                     type="button"
                   >
                     <div
@@ -780,17 +780,17 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <p
-                        class="hidden text-base font-semibold leading-5 sm:block"
+                        class="hidden text-base leading-5 font-semibold sm:block"
                       >
                         Import
                       </p>
                     </div>
                   </button>
                   <div
-                    class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle h-4 border-theme-primary-300 dark:border-theme-dark-700"
+                    class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 h-4"
                   />
                   <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 flex justify-center items-center p-0 w-6 h-6 sm:px-2 sm:w-auto sm:h-8 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700"
+                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
                     type="button"
                   >
                     <div
@@ -824,7 +824,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <p
-                        class="hidden text-base font-semibold leading-5 sm:block"
+                        class="hidden text-base leading-5 font-semibold sm:block"
                       >
                         Create
                       </p>
@@ -836,21 +836,21 @@ exports[`Dashboard > should render 1`] = `
                 class="flex flex-col gap-0.5"
               >
                 <div
-                  class="flex flex-col gap-3 p-4 w-full bg-white rounded md:rounded-b-sm md:rounded-t-lg dark:bg-theme-dark-900"
+                  class="dark:bg-theme-dark-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm"
                 >
                   <div
-                    class="flex flex-row justify-between items-center w-full"
+                    class="flex w-full flex-row items-center justify-between"
                   >
                     <div
-                      class="flex flex-row gap-1.5 items-center"
+                      class="flex flex-row items-center gap-1.5"
                     >
                       <p
-                        class="hidden text-sm font-semibold sm:block md:text-base md:leading-5 text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5"
                       >
                         Address
                       </p>
                       <div
-                        class="w-32 md:w-60 md:h-5 h-[17px] lg:w-[410px]"
+                        class="h-[17px] w-32 md:h-5 md:w-60 lg:w-[410px]"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
@@ -871,7 +871,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex gap-3 items-center sm:ml-1.5 leading-[17px]"
+                        class="flex items-center gap-3 leading-[17px] sm:ml-1.5"
                       >
                         <button
                           class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-500 dark:text-theme-dark-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
@@ -929,10 +929,10 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-3 items-center"
+                      class="flex flex-row items-center gap-3"
                     >
                       <div
-                        class="flex gap-2 items-center"
+                        class="flex items-center gap-2"
                       >
                         <button
                           class="ring-focus relative cursor-pointer focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 p-1"
@@ -1008,7 +1008,7 @@ exports[`Dashboard > should render 1`] = `
                         </button>
                       </div>
                       <div
-                        class="relative border-t-0 border-l border-solid align-middle hidden p-0 mx-0 sm:block border-theme-secondary-300 h-[17px] dark:border-theme-dark-700"
+                        class="relative border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 mx-0 hidden h-[17px] p-0 sm:block"
                       />
                       <div
                         class="hidden sm:flex"
@@ -1050,22 +1050,22 @@ exports[`Dashboard > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-t clear-both flex w-full min-w-full my-0 h-px border-dashed border-theme-secondary-300 dark:border-theme-dark-700"
+                    class="border-t clear-both flex w-full min-w-full border-theme-secondary-300 dark:border-theme-dark-700 my-0 h-px border-dashed"
                   />
                   <div
-                    class="flex flex-col gap-3 sm:flex-row sm:gap-0 sm:justify-between sm:items-center sm:w-full"
+                    class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
                   >
                     <div
                       class="flex flex-col gap-2"
                       data-testid="WalletHeader__balance"
                     >
                       <p
-                        class="text-sm font-semibold text-theme-secondary-700 leading-[17px] dark:text-theme-dark-200"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold"
                       >
                         Total Balance
                       </p>
                       <div
-                        class="flex flex-row items-center text-lg font-semibold md:text-2xl text-theme-secondary-900 leading-[21px] md:leading-[29px]"
+                        class="text-theme-secondary-900 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
                       >
                         <span
                           class="whitespace-nowrap dark:text-theme-dark-50"
@@ -1074,7 +1074,7 @@ exports[`Dashboard > should render 1`] = `
                           95.27653252 ARK
                         </span>
                         <div
-                          class="relative mx-2 border-t-0 border-l border-solid align-middle hidden h-6 border-theme-secondary-300 md-lg:block dark:border-theme-dark-700"
+                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 hidden h-6"
                         />
                         <span
                           class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block hidden"
@@ -1085,10 +1085,10 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex flex-row gap-3 items-center"
+                      class="flex flex-row items-center gap-3"
                     >
                       <button
-                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 flex-1 px-8 my-auto dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700"
+                        class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 my-auto flex-1 px-8"
                         data-testid="WalletHeader__send-button"
                         type="button"
                       >
@@ -1156,20 +1156,20 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="hidden p-4 w-full bg-white rounded-t-sm rounded-b-lg md:block dark:bg-theme-dark-900"
+                  class="dark:bg-theme-dark-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block"
                 >
                   <div
-                    class="flex flex-col items-center -mt-4 w-full md:flex-row md:items-center md:mt-0"
+                    class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
                     data-testid="WalletVote"
                   >
                     <div
-                      class="flex overflow-hidden flex-col gap-0 justify-between items-start mb-3 w-full rounded border md:flex-row md:gap-2 md:items-center md:mb-0 md:rounded-none md:border-none border-theme-secondary-300 dark:border-theme-dark-700"
+                      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
                     >
                       <div
-                        class="flex flex-row gap-2 items-center p-3 w-full text-sm font-semibold md:p-0 md:w-auto md:text-base md:leading-5 md:bg-transparent bg-theme-secondary-100 leading-[17px] md:dark:bg-transparent dark:bg-theme-dark-950"
+                        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                       >
                         <p
-                          class="text-sm md:text-base md:leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
                         >
                           Voting for
                         </p>
@@ -1180,7 +1180,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm md:text-base md:leading-5 dark:text-theme-dark-50 font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 text-sm md:text-base md:leading-5 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
@@ -1189,30 +1189,30 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex flex-col gap-2 py-3 px-4 text-base font-semibold leading-5 md:flex-row md:py-0 md:px-0"
+                        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:px-0 md:py-0"
                       >
                         <p
-                          class="text-sm md:text-base md:leading-5 text-theme-secondary-700 dark:text-theme-dark-200"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
                         >
                           Rank
                         </p>
                         <p
-                          class="mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5 text-theme-secondary-900 dark:text-theme-dark-50"
+                          class="text-theme-secondary-900 dark:text-theme-dark-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
                         >
                           #21
                         </p>
                         <p
-                          class="text-sm md:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:hidden"
                         >
                           Delegate Status
                         </p>
                         <div
-                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 flex justify-center items-center py-0.5 text-xs border-none dark:border-solid h-fit w-fit dark:border-theme-success-800"
+                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dark:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
                         >
                           Active
                         </div>
                         <div
-                          class="relative mx-2 border-t-0 border-l border-solid align-middle hidden p-0 mr-3 ml-1 h-5 md:flex border-theme-secondary-300 dark:border-s-theme-dark-700"
+                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
                         />
                       </div>
                     </div>
@@ -1220,7 +1220,7 @@ exports[`Dashboard > should render 1`] = `
                       class="w-full md:w-auto md:max-md:self-end"
                     >
                       <button
-                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white hidden mt-4 space-x-2 w-full md:flex md:px-2 md:mt-0 md:w-auto disabled:bg-transparent text-theme-primary-600 md:py-[3px] dark:text-theme-dark-navy-400 dark:disabled:bg-transparent"
+                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white text-theme-primary-600 dark:text-theme-dark-navy-400 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
                         data-testid="WalletVote__button"
                         type="button"
                       >
@@ -1263,7 +1263,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </button>
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 w-full md:hidden dark:text-white disabled:bg-transparent text-theme-primary-600 dark:disabled:bg-transparent"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 text-theme-primary-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
                         data-testid="WalletVote__button_mobile"
                         type="button"
                       >
@@ -1321,10 +1321,10 @@ exports[`Dashboard > should render 1`] = `
           data-testid="TabScroll"
         >
           <div
-            class="px-5 bg-theme-secondary-200 dark:bg-theme-dark-950"
+            class="bg-theme-secondary-200 dark:bg-theme-dark-950 px-5"
           >
             <div
-              class="[&::-webkit-scrollbar]:hidden overflow-x-auto relative z-0 mx-auto"
+              class="[&::-webkit-scrollbar]:hidden relative z-0 mx-auto overflow-x-auto"
             >
               <div
                 class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 h-[48px]"
@@ -1361,7 +1361,7 @@ exports[`Dashboard > should render 1`] = `
             class=""
           >
             <div
-              class="hidden mb-3 md:block"
+              class="mb-3 hidden md:block"
             >
               <div
                 class="tab-list flex w-fit items-center gap-1 rounded-xl p-1 bg-theme-secondary-200 dark:bg-theme-dark-950 h-10"
@@ -1414,7 +1414,7 @@ exports[`Dashboard > should render 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col my-3 space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
+              class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
             >
               <div
                 class="flex-1"
@@ -1425,10 +1425,10 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="dropdown__toggle-Transactions--filter-dropdown"
                 >
                   <div
-                    class="flex overflow-hidden justify-between items-center p-3 space-x-4 w-full h-11 rounded border cursor-pointer sm:py-3 sm:px-4 border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50"
+                    class="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3"
                   >
                     <span
-                      class="text-base font-semibold leading-tight"
+                      class="text-base leading-tight font-semibold"
                     >
                       All Transactions
                     </span>
@@ -1473,7 +1473,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white py-1.5 px-4 w-full text-base sm:w-fit dark:hover:bg-theme-dark-navy-700"
+                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1531,13 +1531,13 @@ exports[`Dashboard > should render 1`] = `
               data-testid="TableWrapper"
             >
               <div
-                class="flex flex-col gap-3 justify-between items-start pt-3 pb-4 w-full border-b-0 sm:flex-row md:items-center md:py-4 md:px-6 md:border-b border-b-theme-secondary-300 dark:border-b-theme-secondary-800"
+                class="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4"
               >
                 <div
                   class="flex items-center space-x-1.5"
                 >
                   <span
-                    class="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold"
                   >
                     Showing
                   </span>
@@ -1555,13 +1555,13 @@ exports[`Dashboard > should render 1`] = `
                     <br />
                   </span>
                   <span
-                    class="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-500 text-base leading-5 font-semibold"
                   >
                     results
                   </span>
                 </div>
                 <div
-                  class="w-full md:my-auto sm:w-fit"
+                  class="w-full sm:w-fit md:my-auto"
                   data-testid="FilterTransactions"
                 >
                   <div
@@ -1570,7 +1570,7 @@ exports[`Dashboard > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white py-1.5 px-4 w-full text-base sm:w-fit dark:hover:bg-theme-dark-navy-700"
+                      class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
                       data-testid="CollapseToggleButton"
                       type="button"
                     >
@@ -1798,7 +1798,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -1924,7 +1924,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -1966,10 +1966,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -2032,7 +2032,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -2158,7 +2158,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -2200,10 +2200,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -2266,7 +2266,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -2392,7 +2392,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -2434,10 +2434,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -2500,7 +2500,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -2626,7 +2626,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -2668,10 +2668,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -2734,7 +2734,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -2860,7 +2860,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -2902,10 +2902,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -2968,7 +2968,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -3094,7 +3094,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -3136,10 +3136,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -3202,7 +3202,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -3328,7 +3328,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -3370,10 +3370,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"
@@ -3436,7 +3436,7 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col xl:hidden max-xl:pt-2"
+                              class="flex flex-col max-xl:pt-2 xl:hidden"
                             >
                               <span
                                 aria-busy="true"
@@ -3562,7 +3562,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end"
                           >
                             <div
-                              class="p-1 px-2 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-1 px-2"
                             >
                               <span
                                 aria-busy="true"
@@ -3604,10 +3604,10 @@ exports[`Dashboard > should render 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex flex-col items-end pt-px -mr-3 lg:hidden"
+                              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
                             >
                               <div
-                                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
+                                class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded border p-[2px]"
                               >
                                 <span
                                   aria-busy="true"

@@ -15,10 +15,10 @@ exports[`UpdateContact > should render responsive 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -56,7 +56,7 @@ exports[`UpdateContact > should render responsive 1`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -64,7 +64,7 @@ exports[`UpdateContact > should render responsive 1`] = `
             Edit Contact
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="mt-8"
@@ -74,7 +74,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -101,7 +101,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                   data-testid="ContactForm__address"
                 >
                   <label
@@ -184,10 +184,10 @@ exports[`UpdateContact > should render responsive 2`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -225,7 +225,7 @@ exports[`UpdateContact > should render responsive 2`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -233,7 +233,7 @@ exports[`UpdateContact > should render responsive 2`] = `
             Edit Contact
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="mt-8"
@@ -243,7 +243,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -270,7 +270,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                   data-testid="ContactForm__address"
                 >
                   <label
@@ -302,7 +302,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full border-0 justify-between"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 mt-0 sm:mt-8 h-min"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 mt-0 h-min sm:mt-8"
                     data-testid="contact-form__delete-btn"
                     type="button"
                   >
@@ -393,10 +393,10 @@ exports[`UpdateContact > should render responsive 3`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -434,7 +434,7 @@ exports[`UpdateContact > should render responsive 3`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -442,10 +442,10 @@ exports[`UpdateContact > should render responsive 3`] = `
             Edit Contact
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Enter the information below to update or delete the Contact.
             </div>
@@ -457,7 +457,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -484,7 +484,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                  class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                   data-testid="ContactForm__address"
                 >
                   <label
@@ -516,7 +516,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full border-0 justify-between"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 mt-0 sm:mt-8 h-min"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 mt-0 h-min sm:mt-8"
                     data-testid="contact-form__delete-btn"
                     type="button"
                   >

@@ -10,7 +10,7 @@ exports[`Card > should handle click 1`] = `
     >
       Test
       <div
-        class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
+        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
       />
     </button>
   </div>
@@ -27,7 +27,7 @@ exports[`Card > should render 1`] = `
       type="button"
     >
       <div
-        class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
+        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
       />
     </button>
   </div>
@@ -44,7 +44,7 @@ exports[`Card > should render with custom options 1`] = `
     >
       Test
       <div
-        class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
+        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
       >
         <div
           aria-controls=":r0:"
@@ -53,10 +53,10 @@ exports[`Card > should render with custom options 1`] = `
           data-testid="dropdown__toggle"
         >
           <div
-            class="flex overflow-hidden justify-center w-4"
+            class="flex w-4 justify-center overflow-hidden"
           >
             <div
-              class="p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 hover:text-theme-primary-400"
+              class="text-theme-primary-300 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200 hover:text-theme-primary-400 cursor-pointer p-1 transition-colors duration-200"
             >
               <div
                 style="height: 16px; width: 16px;"

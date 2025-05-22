@@ -3,20 +3,20 @@
 exports[`ProfilePageSkeleton > should render without profile 1`] = `
 <DocumentFragment>
   <div
-    class="flex relative flex-col min-h-screen"
+    class="relative flex min-h-screen flex-col"
     data-testid="ProfilePageSkeleton"
   >
     <div
-      class="sticky inset-x-0 top-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 sticky inset-x-0 top-0 border-b"
     >
       <div
-        class="flex relative items-center h-12"
+        class="relative flex h-12 items-center"
       >
         <div
-          class="flex flex-1 justify-between px-6 sm:px-8 sm:ml-7"
+          class="flex flex-1 justify-between px-6 sm:ml-7 sm:px-8"
         >
           <div
-            class="flex justify-center items-center my-auto w-6 h-6 text-white rounded-md bg-theme-primary-600"
+            class="bg-theme-primary-600 my-auto flex h-6 w-6 items-center justify-center rounded-md text-white"
           >
             <span
               class="relative"
@@ -42,7 +42,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
             class="flex"
           >
             <div
-              class="flex items-center my-auto space-x-4 sm:hidden"
+              class="my-auto flex items-center space-x-4 sm:hidden"
             >
               <div>
                 <span
@@ -60,11 +60,11 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 </span>
               </div>
               <div
-                class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700"
+                class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r"
               />
             </div>
             <div
-              class="hidden items-center my-auto ml-4 space-x-4 sm:flex"
+              class="my-auto ml-4 hidden items-center space-x-4 sm:flex"
             >
               <span
                 aria-busy="true"
@@ -80,7 +80,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -96,7 +96,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -112,7 +112,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
               />
               <span
                 aria-busy="true"
@@ -128,14 +128,14 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
                 <br />
               </span>
               <div
-                class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 hidden h-6 border-r sm:flex sm:h-12"
               />
             </div>
             <div
-              class="flex items-center my-auto ml-4"
+              class="my-auto ml-4 flex items-center"
             >
               <div
-                class="hidden mx-4 space-y-2 md:block"
+                class="mx-4 hidden space-y-2 md:block"
               >
                 <p>
                   <span
@@ -189,7 +189,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col flex-1"
+      class="flex flex-1 flex-col"
     >
       <div
         class="w-full py-4 first:pt-8 last:pb-8"

@@ -3,7 +3,7 @@
 exports[`SideBar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative py-2 px-6 -mx-6 -mt-4 border-t md:p-0 md:m-0 md:bg-transparent md:border-t-0 lg:hidden dark:bg-black border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dark:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-expanded="false"
@@ -11,10 +11,10 @@ exports[`SideBar > should render 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex overflow-hidden items-center py-3 px-4 space-x-4 bg-white rounded border border-transparent cursor-pointer dark:border md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900"
+        class="md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
       >
         <span
-          class="flex-1 font-semibold leading-tight"
+          class="flex-1 leading-tight font-semibold"
         >
           General
         </span>
@@ -48,7 +48,7 @@ exports[`SideBar > should render 1`] = `
     </div>
   </div>
   <div
-    class="hidden p-1 rounded-xl border lg:block border-theme-secondary-300 w-[200px] dark:border-theme-dark-700"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block"
   >
     <ul
       class="space-y-1"
@@ -103,7 +103,7 @@ exports[`SideBar > should render 1`] = `
 exports[`SideBar > should render responsive dropdown 1`] = `
 <DocumentFragment>
   <div
-    class="relative py-2 px-6 -mx-6 -mt-4 border-t md:p-0 md:m-0 md:bg-transparent md:border-t-0 lg:hidden dark:bg-black border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dark:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-controls=":r2:"
@@ -112,10 +112,10 @@ exports[`SideBar > should render responsive dropdown 1`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex overflow-hidden items-center py-3 px-4 space-x-4 bg-white rounded border border-transparent cursor-pointer dark:border md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900"
+        class="md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
       >
         <span
-          class="flex-1 font-semibold leading-tight"
+          class="flex-1 leading-tight font-semibold"
         >
           General
         </span>
@@ -149,7 +149,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
     </div>
   </div>
   <div
-    class="hidden p-1 rounded-xl border lg:block border-theme-secondary-300 w-[200px] dark:border-theme-dark-700"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block"
   >
     <ul
       class="space-y-1"
@@ -204,7 +204,7 @@ exports[`SideBar > should render responsive dropdown 1`] = `
 exports[`SideBar > should render responsive dropdown 2`] = `
 <DocumentFragment>
   <div
-    class="relative py-2 px-6 -mx-6 -mt-4 border-t md:p-0 md:m-0 md:bg-transparent md:border-t-0 lg:hidden dark:bg-black border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dark:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-controls=":r5:"
@@ -213,10 +213,10 @@ exports[`SideBar > should render responsive dropdown 2`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex overflow-hidden items-center py-3 px-4 space-x-4 bg-white rounded border border-transparent cursor-pointer dark:border md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900"
+        class="md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
       >
         <span
-          class="flex-1 font-semibold leading-tight"
+          class="flex-1 leading-tight font-semibold"
         >
           General
         </span>
@@ -250,7 +250,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
     </div>
   </div>
   <div
-    class="hidden p-1 rounded-xl border lg:block border-theme-secondary-300 w-[200px] dark:border-theme-dark-700"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block"
   >
     <ul
       class="space-y-1"
@@ -305,7 +305,7 @@ exports[`SideBar > should render responsive dropdown 2`] = `
 exports[`SideBar > should render responsive dropdown 3`] = `
 <DocumentFragment>
   <div
-    class="relative py-2 px-6 -mx-6 -mt-4 border-t md:p-0 md:m-0 md:bg-transparent md:border-t-0 lg:hidden dark:bg-black border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dark:md:bg-transparent"
+    class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
   >
     <div
       aria-controls=":r8:"
@@ -314,10 +314,10 @@ exports[`SideBar > should render responsive dropdown 3`] = `
       data-testid="dropdown__toggle"
     >
       <div
-        class="flex overflow-hidden items-center py-3 px-4 space-x-4 bg-white rounded border border-transparent cursor-pointer dark:border md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900"
+        class="md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
       >
         <span
-          class="flex-1 font-semibold leading-tight"
+          class="flex-1 leading-tight font-semibold"
         >
           General
         </span>
@@ -351,7 +351,7 @@ exports[`SideBar > should render responsive dropdown 3`] = `
     </div>
   </div>
   <div
-    class="hidden p-1 rounded-xl border lg:block border-theme-secondary-300 w-[200px] dark:border-theme-dark-700"
+    class="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block"
   >
     <ul
       class="space-y-1"

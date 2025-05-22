@@ -3,7 +3,7 @@
 exports[`ContactsHeader > should render responsive 1`] = `
 <DocumentFragment>
   <section
-    class="flex justify-between items-center py-6 px-8 w-full dark:bg-black bg-theme-secondary-100 h-13"
+    class="bg-theme-secondary-100 flex h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
   >
     <div
       class="flex flex-col gap-2"
@@ -14,7 +14,7 @@ exports[`ContactsHeader > should render responsive 1`] = `
         Contacts
       </h1>
       <div
-        class="flex items-center text-sm leading-5 text-theme-secondary-text"
+        class="text-theme-secondary-text flex items-center text-sm leading-5"
       >
         Manage your frequent Contacts.
       </div>
@@ -38,7 +38,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <div
               data-testid="icon-ContactsLight"
@@ -132,7 +132,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
               </h1>
                
               <div
-                class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+                class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                 data-testid="header__subtitle"
               >
                 Manage your frequent Contacts.

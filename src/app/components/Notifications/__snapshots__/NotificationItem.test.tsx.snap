@@ -8,17 +8,17 @@ exports[`Notifications > should render notification item 1`] = `
         data-testid="NotificationItem"
       >
         <td
-          class="w-8 h-8"
+          class="h-8 w-8"
         >
           <div
-            class="flex justify-center items-center my-2 mr-4 w-8 h-8 text-white align-middle rounded-lg bg-logo"
+            class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
           />
         </td>
         <td>
           <div>
             <div>
               <span
-                class="font-bold text-md text-theme-secondary-600"
+                class="text-md text-theme-secondary-600 font-bold"
               >
                 ARK Vault
               </span>
@@ -33,7 +33,7 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="font-bold text-right cursor-pointer text-md text-theme-primary-500"
+            class="text-md text-theme-primary-500 cursor-pointer text-right font-bold"
             data-testid="NotificationItem__action"
           >
             Update
@@ -53,17 +53,17 @@ exports[`Notifications > should render with custom action name 1`] = `
         data-testid="NotificationItem"
       >
         <td
-          class="w-8 h-8"
+          class="h-8 w-8"
         >
           <div
-            class="flex justify-center items-center my-2 mr-4 w-8 h-8 text-white align-middle rounded-lg bg-logo"
+            class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
           />
         </td>
         <td>
           <div>
             <div>
               <span
-                class="font-bold text-md text-theme-secondary-600"
+                class="text-md text-theme-secondary-600 font-bold"
               >
                 ARK Vault
               </span>
@@ -78,7 +78,7 @@ exports[`Notifications > should render with custom action name 1`] = `
         </td>
         <td>
           <div
-            class="font-bold text-right cursor-pointer text-md text-theme-primary-500"
+            class="text-md text-theme-primary-500 cursor-pointer text-right font-bold"
             data-testid="NotificationItem__action"
           >
             Update

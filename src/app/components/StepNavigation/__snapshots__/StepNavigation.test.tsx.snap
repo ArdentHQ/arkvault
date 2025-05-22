@@ -30,7 +30,7 @@ exports[`StepNavigation > should disable buttons if loading 1`] = `
           class="flex items-center"
         >
           <span
-            class="flex invisible items-center space-x-2"
+            class="invisible flex items-center space-x-2"
           >
             <div>
               <div
@@ -61,7 +61,7 @@ exports[`StepNavigation > should disable buttons if loading 1`] = `
             </span>
           </span>
           <div
-            class="flex absolute top-0 left-0 justify-center items-center w-full h-full"
+            class="absolute top-0 left-0 flex h-full w-full items-center justify-center"
           >
             <div
               class="h-6 w-6 animate-spin rounded-full border-4 border-theme-primary-700 border-l-white"

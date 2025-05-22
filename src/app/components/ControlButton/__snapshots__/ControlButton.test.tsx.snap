@@ -48,7 +48,7 @@ exports[`ControlButton > should render with dot 1`] = `
         class="bg-theme-background absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full transition-all duration-100 ease-linear"
       >
         <div
-          class="w-2 h-2 rounded-full bg-theme-primary-500"
+          class="bg-theme-primary-500 h-2 w-2 rounded-full"
         />
       </div>
     </button>
@@ -80,7 +80,7 @@ exports[`ControlButton > should render without border and with dot 1`] = `
         class="bg-theme-background absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full transition-all duration-100 ease-linear -mr-2.5"
       >
         <div
-          class="w-2 h-2 rounded-full bg-theme-primary-500"
+          class="bg-theme-primary-500 h-2 w-2 rounded-full"
         />
       </div>
     </button>

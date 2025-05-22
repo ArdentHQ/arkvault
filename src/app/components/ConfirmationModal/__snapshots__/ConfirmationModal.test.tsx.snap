@@ -15,10 +15,10 @@ exports[`Confirmation Modal > should render with custom title and description 1`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -56,7 +56,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl text-theme-text"
@@ -64,7 +64,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
             My Title
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <svg
               class="m-auto my-8 w-3/5"
@@ -135,7 +135,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
               </defs>
             </svg>
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               My Description
             </div>
@@ -194,10 +194,10 @@ exports[`Confirmation Modal > should render with default title and description 1
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -235,7 +235,7 @@ exports[`Confirmation Modal > should render with default title and description 1
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl text-theme-text"
@@ -243,7 +243,7 @@ exports[`Confirmation Modal > should render with default title and description 1
             Confirmation
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <svg
               class="m-auto my-8 w-3/5"
@@ -314,7 +314,7 @@ exports[`Confirmation Modal > should render with default title and description 1
               </defs>
             </svg>
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Are you sure you wish to navigate away from this page without saving?
             </div>

@@ -38,7 +38,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
             id="downshift-4-label"
           />
           <div
-            class="fixed invisible w-auto whitespace-nowrap"
+            class="invisible fixed w-auto whitespace-nowrap"
           >
             Mainsail Devnet
             …
@@ -83,11 +83,11 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex justify-center items-center"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
-                      class="block absolute inset-0 cursor-pointer md:hidden"
+                      class="absolute inset-0 block cursor-pointer md:hidden"
                     />
                     <div
                       class="transition-transform text-theme-secondary-500"
@@ -201,11 +201,11 @@ exports[`SelectNetworkDropdown > should render 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex justify-center items-center"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
-                      class="block absolute inset-0 cursor-pointer md:hidden"
+                      class="absolute inset-0 block cursor-pointer md:hidden"
                     />
                     <div
                       class="transition-transform text-theme-secondary-500"
@@ -317,11 +317,11 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex justify-center items-center"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
-                      class="block absolute inset-0 cursor-pointer md:hidden"
+                      class="absolute inset-0 block cursor-pointer md:hidden"
                     />
                     <div
                       class="transition-transform text-theme-secondary-500"

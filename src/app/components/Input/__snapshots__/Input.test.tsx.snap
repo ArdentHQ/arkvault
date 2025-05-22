@@ -301,7 +301,7 @@ exports[`Input > should render with focus 1`] = `
 exports[`Input > should render with suggestion 1`] = `
 <DocumentFragment>
   <div
-    class="fixed invisible w-auto whitespace-nowrap"
+    class="invisible fixed w-auto whitespace-nowrap"
   >
     …
   </div>

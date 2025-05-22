@@ -3,20 +3,20 @@
 exports[`CopyOrDownload > should render 1`] = `
 <DocumentFragment>
   <div
-    class="p-4 -mx-4 text-center rounded-b-lg sm:p-6 sm:-mx-6 sm:text-left bg-theme-secondary-100 dark:bg-theme-dark-950"
+    class="bg-theme-secondary-100 dark:bg-theme-dark-950 -mx-4 rounded-b-lg p-4 text-center sm:-mx-6 sm:p-6 sm:text-left"
   >
     <span
-      class="text-base font-semibold sm:text-lg text-theme-secondary-900 leading-[21px] dark:text-theme-dark-50"
+      class="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-[21px] font-semibold sm:text-lg"
     >
       title
     </span>
     <p
-      class="mt-2 mb-3 text-sm text-theme-secondary-700 dark:text-theme-dark-200"
+      class="text-theme-secondary-700 dark:text-theme-dark-200 mt-2 mb-3 text-sm"
     >
       description
     </p>
     <div
-      class="flex justify-center items-center space-x-1 sm:justify-start"
+      class="flex items-center justify-center space-x-1 sm:justify-start"
     >
       <button
         class="ring-focus relative cursor-pointer focus:outline-hidden"

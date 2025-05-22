@@ -3,7 +3,7 @@
 exports[`Toast > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden items-stretch md:rounded-xl"
+    class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
       class="flex items-center px-4 justify-center dark:text-white text-theme-warning-700 bg-theme-warning-100 dark:bg-theme-warning-700"
@@ -61,7 +61,7 @@ exports[`Toast > should render 1`] = `
 exports[`Toast > should render as danger toast 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden items-stretch md:rounded-xl"
+    class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
       class="flex items-center px-4 justify-center dark:text-white text-theme-danger-700 bg-theme-danger-100 dark:bg-theme-danger-500"
@@ -114,7 +114,7 @@ exports[`Toast > should render as danger toast 1`] = `
 exports[`Toast > should render as hint toast 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden items-stretch md:rounded-xl"
+    class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
       class="flex items-center px-4 justify-center dark:text-white text-theme-hint-700 bg-theme-hint-100 dark:bg-theme-hint-700"
@@ -166,7 +166,7 @@ exports[`Toast > should render as hint toast 1`] = `
 exports[`Toast > should render as info toast 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden items-stretch md:rounded-xl"
+    class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
       class="flex items-center px-4 justify-center dark:text-white text-theme-info-700 bg-theme-info-100 dark:bg-theme-info-700"
@@ -224,7 +224,7 @@ exports[`Toast > should render as info toast 1`] = `
 exports[`Toast > should render as success toast 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden items-stretch md:rounded-xl"
+    class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
       class="flex items-center px-4 justify-center dark:text-white text-theme-success-700 bg-theme-success-100 dark:bg-theme-success-700"
@@ -277,7 +277,7 @@ exports[`Toast > should render as success toast 1`] = `
 exports[`Toast > should render as warning toast 1`] = `
 <DocumentFragment>
   <div
-    class="flex overflow-hidden items-stretch md:rounded-xl"
+    class="flex items-stretch overflow-hidden md:rounded-xl"
   >
     <div
       class="flex items-center px-4 justify-center dark:text-white text-theme-warning-700 bg-theme-warning-100 dark:bg-theme-warning-700"

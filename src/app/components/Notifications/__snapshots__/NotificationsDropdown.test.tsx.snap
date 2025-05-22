@@ -20,7 +20,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1 m-0"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -65,10 +65,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
           data-testid="Modal__inner"
         >
           <div
-            class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+            class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
               data-testid="Modal__close-button"
               type="button"
             >
@@ -106,7 +106,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             </button>
           </div>
           <div
-            class="flex relative flex-col flex-1 space-y-1.5"
+            class="relative flex flex-1 flex-col space-y-1.5"
           >
             <h2
               class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -114,7 +114,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
               Transaction Details
             </h2>
             <div
-              class="flex flex-col flex-1"
+              class="flex flex-1 flex-col"
             >
               <div
                 class="condensed"
@@ -123,16 +123,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   class="mt-4"
                 >
                   <div
-                    class="flex-row items-center sm:flex sm:rounded-lg sm:border sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
+                    class="sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 flex-row items-center sm:flex sm:rounded-lg sm:border"
                     data-testid="TransactionId"
                   >
                     <div
-                      class="mb-2 text-sm font-semibold whitespace-nowrap sm:py-3 sm:px-4 sm:mb-0 sm:h-full sm:text-base sm:leading-5 sm:rounded-l-lg text-theme-secondary-700 leading-[17px] sm:bg-theme-secondary-200 sm:dark:bg-black dark:text-theme-secondary-500"
+                      class="text-theme-secondary-700 sm:bg-theme-secondary-200 dark:text-theme-secondary-500 mb-2 text-sm leading-[17px] font-semibold whitespace-nowrap sm:mb-0 sm:h-full sm:rounded-l-lg sm:px-4 sm:py-3 sm:text-base sm:leading-5 sm:dark:bg-black"
                     >
                       Transaction ID
                     </div>
                     <div
-                      class="overflow-hidden flex-1 font-semibold sm:mx-4"
+                      class="flex-1 overflow-hidden font-semibold sm:mx-4"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden"
@@ -141,7 +141,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       </span>
                     </div>
                     <div
-                      class="flex items-center mt-4 space-x-2 sm:mt-0 sm:mr-4"
+                      class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                     >
                       <button
                         class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
@@ -186,7 +186,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         </span>
                       </button>
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 p-2 w-8 h-8 bg-transparent border dark:bg-transparent hover:border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 dark:hover:border-theme-primary-500"
+                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-dark-50 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 border-theme-secondary-300 dark:border-theme-secondary-800 dark:hover:border-theme-primary-500 h-8 w-8 border bg-transparent p-2 hover:border-transparent dark:bg-transparent"
                         data-testid="explorer-link"
                         type="button"
                       >
@@ -226,16 +226,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   class="mt-6 space-y-3 sm:space-y-4"
                 >
                   <div
-                    class="flex group"
+                    class="group flex"
                   >
                     <div
-                      class="hidden sm:flex sm:ml-3"
+                      class="hidden sm:ml-3 sm:flex"
                     >
                       <div
-                        class="flex-row pr-3 min-w-9"
+                        class="min-w-9 flex-row pr-3"
                       >
                         <div
-                          class="-mt-2 w-full h-6 rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2"
                         />
                         <div
                           class="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden"
@@ -249,7 +249,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         data-testid="DetailWrapper"
                       >
                         <div
-                          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+                          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -263,10 +263,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
                         >
                           <div
-                            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+                            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                           >
                             <div
-                              class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 min-w-24"
@@ -331,7 +331,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </div>
                             </div>
                             <div
-                              class="flex justify-between items-center mt-3 space-x-2 w-full sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 min-w-24"
@@ -416,16 +416,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex group"
+                    class="group flex"
                   >
                     <div
-                      class="hidden sm:flex sm:ml-3"
+                      class="hidden sm:ml-3 sm:flex"
                     >
                       <div
-                        class="flex-row pr-3 min-w-9"
+                        class="min-w-9 flex-row pr-3"
                       >
                         <div
-                          class="-mt-2 w-full h-6 rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2"
                         />
                         <div
                           class="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden"
@@ -442,7 +442,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+                            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -456,13 +456,13 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
                           >
                             <div
-                              class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+                              class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                             >
                               <div
                                 class="space-y-3 sm:space-y-0"
                               >
                                 <div
-                                  class="flex justify-between w-full sm:justify-start"
+                                  class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
                                     class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
@@ -484,16 +484,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex group"
+                    class="group flex"
                   >
                     <div
-                      class="hidden sm:flex sm:ml-3"
+                      class="hidden sm:ml-3 sm:flex"
                     >
                       <div
-                        class="flex-row pr-3 min-w-9"
+                        class="min-w-9 flex-row pr-3"
                       >
                         <div
-                          class="-mt-2 w-full h-6 rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2"
                         />
                         <div
                           class="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden"
@@ -507,7 +507,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         data-testid="DetailWrapper"
                       >
                         <div
-                          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+                          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -521,13 +521,13 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
                         >
                           <div
-                            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+                            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
                             >
                               <div
-                                class="flex justify-between w-full sm:justify-start"
+                                class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
                                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -536,7 +536,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Amount
                                 </div>
                                 <div
-                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 rounded dark:border h-[21px]"
+                                  class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex w-fit items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div
@@ -552,10 +552,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden items-center w-full h-8 sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
+                                class="hidden h-8 w-full items-center in-[.condensed]:h-3 in-[.condensed]:leading-3 sm:flex"
                               >
                                 <div
-                                  class="w-full h-full in-[.condensed]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -563,7 +563,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="flex justify-between w-full sm:justify-start"
+                                class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
                                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -572,17 +572,17 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]"
+                                  class="whitespace-nowrap text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                   data-testid="Amount"
                                 >
                                   0.0004019 ARK
                                 </span>
                               </div>
                               <div
-                                class="hidden items-center w-full h-8 sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
+                                class="hidden h-8 w-full items-center in-[.condensed]:h-3 in-[.condensed]:leading-3 sm:flex"
                               >
                                 <div
-                                  class="w-full h-full in-[.condensed]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -590,7 +590,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="flex justify-between w-full sm:justify-start"
+                                class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
                                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -599,7 +599,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]"
+                                  class="whitespace-nowrap text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                   data-testid="Amount"
                                 >
                                   0 BTC
@@ -612,16 +612,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex group"
+                    class="group flex"
                   >
                     <div
-                      class="hidden sm:flex sm:ml-3"
+                      class="hidden sm:ml-3 sm:flex"
                     >
                       <div
-                        class="flex-row pr-3 min-w-9"
+                        class="min-w-9 flex-row pr-3"
                       >
                         <div
-                          class="-mt-2 w-full h-6 rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2"
                         />
                         <div
                           class="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden"
@@ -635,7 +635,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         data-testid="DetailWrapper"
                       >
                         <div
-                          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+                          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -649,13 +649,13 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
                         >
                           <div
-                            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+                            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
                             >
                               <div
-                                class="flex justify-between w-full sm:justify-start"
+                                class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
                                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -664,16 +664,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Timestamp
                                 </div>
                                 <div
-                                  class="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]"
+                                  class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                 >
                                   03.04.2025 3:34 AM
                                 </div>
                               </div>
                               <div
-                                class="hidden items-center w-full h-8 sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
+                                class="hidden h-8 w-full items-center in-[.condensed]:h-3 in-[.condensed]:leading-3 sm:flex"
                               >
                                 <div
-                                  class="w-full h-full in-[.condensed]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -681,7 +681,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="flex justify-between w-full sm:justify-start"
+                                class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
                                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -690,7 +690,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Block
                                 </div>
                                 <a
-                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm sm:text-base sm:leading-5 leading-[17px]"
+                                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                   data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="https://explorer-evm-test.mainsailhq.com/blocks/7b6f4c321e3f8a4553dd52b9ddd34581c76a2883702f0a2d3f5021504f3e44bb"
@@ -729,10 +729,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </a>
                               </div>
                               <div
-                                class="hidden items-center w-full h-8 sm:flex in-[.condensed]:h-3 in-[.condensed]:leading-3"
+                                class="hidden h-8 w-full items-center in-[.condensed]:h-3 in-[.condensed]:leading-3 sm:flex"
                               >
                                 <div
-                                  class="w-full h-full in-[.condensed]:hidden"
+                                  class="h-full w-full in-[.condensed]:hidden"
                                 >
                                   <div
                                     class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -740,7 +740,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="flex justify-between w-full sm:justify-start"
+                                class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
                                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -749,7 +749,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   Nonce
                                 </div>
                                 <div
-                                  class="text-sm font-semibold sm:text-base sm:leading-5 leading-[17px]"
+                                  class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                 >
                                   0
                                 </div>
@@ -761,16 +761,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex group"
+                    class="group flex"
                   >
                     <div
-                      class="hidden sm:flex sm:ml-3"
+                      class="hidden sm:ml-3 sm:flex"
                     >
                       <div
-                        class="flex-row pr-3 min-w-9"
+                        class="min-w-9 flex-row pr-3"
                       >
                         <div
-                          class="-mt-2 w-full h-6 rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2"
                         />
                         <div
                           class="border-theme-secondary-300 dark:border-theme-secondary-800 h-[105%] w-full border-l-2 group-last:hidden"
@@ -781,7 +781,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="w-full min-w-0 sm:flex-row"
                     >
                       <div
-                        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+                        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
                         data-testid="DetailLabel"
                       >
                         <div
@@ -795,14 +795,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         class="mt-2"
                       >
                         <div
-                          class="py-2 rounded-xl border sm:py-4 sm:leading-5 dark:bg-transparent border-theme-danger-200 bg-theme-danger-50 max-sm:text-sm dark:border-theme-danger-info-border"
+                          class="border-theme-danger-200 bg-theme-danger-50 dark:border-theme-danger-info-border rounded-xl border py-2 max-sm:text-sm sm:py-4 sm:leading-5 dark:bg-transparent"
                           data-testid="TransactionFailedAlert"
                         >
                           <div
-                            class="flex items-center px-3 mb-2 space-x-3 sm:px-6 sm:mb-4"
+                            class="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-danger-700 dark:text-theme-danger-info-border"
+                              class="text-theme-danger-700 dark:text-theme-danger-info-border flex items-center space-x-2"
                             >
                               <div
                                 class="h-5"
@@ -841,10 +841,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </p>
                             </div>
                             <div
-                              class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle h-5 text-theme-danger-200 dark:text-theme-secondary-800"
+                              class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-danger-200 dark:text-theme-secondary-800 h-5"
                             />
                             <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold"
                             >
                               <span>
                                 808 Confirmations
@@ -853,7 +853,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             </p>
                           </div>
                           <p
-                            class="px-3 pt-2 font-semibold border-t sm:px-6 sm:pt-4 border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                            class="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4"
                           >
                             Error encountered during contract execution.
                           </p>
@@ -893,7 +893,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1 m-0"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -950,7 +950,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1 m-0"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1007,7 +1007,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1 m-0"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1064,7 +1064,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1 m-0"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1121,7 +1121,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="p-1 m-0"
+              class="m-0 p-1"
             >
               <div
                 style="height: 20px; width: 20px;"
@@ -1153,7 +1153,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
               class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
             >
               <div
-                class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
+                class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
               />
             </div>
           </div>

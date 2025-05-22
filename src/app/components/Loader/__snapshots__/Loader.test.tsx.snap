@@ -10,10 +10,10 @@ exports[`Loader > should render with custom class names 1`] = `
       class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
     />
     <hr
-      class="w-px h-5 border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
+      class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
     />
     <span
-      class="text-sm font-semibold md:text-base text-theme-secondary-700 dark:text-theme-warning-600"
+      class="text-theme-secondary-700 dark:text-theme-warning-600 text-sm font-semibold md:text-base"
       data-testid="Loader__text"
     >
       Testing
@@ -32,10 +32,10 @@ exports[`Loader > should render with custom text 1`] = `
       class="animate-spin border-[5px] shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600 rounded-full"
     />
     <hr
-      class="w-px h-5 border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
+      class="bg-theme-warning-200 dark:bg-theme-secondary-800 h-5 w-px border-transparent"
     />
     <span
-      class="text-sm font-semibold md:text-base text-theme-secondary-700 dark:text-theme-warning-600"
+      class="text-theme-secondary-700 dark:text-theme-warning-600 text-sm font-semibold md:text-base"
       data-testid="Loader__text"
     >
       Testing
