@@ -50,7 +50,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	useEffect(() => {
 		const estimate = async () => {
-			const gasLimit = await estimateGas({ data: { ...getValues(), ...data}, type });
+			const gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
 			console.log("Estimated Gas", gasLimit);
 		};
 

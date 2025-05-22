@@ -45,7 +45,7 @@ export class FeeService {
 		return await this.#client.evm().ethCall({
 			id: "1",
 			method: "eth_estimateGas",
-			params: [payload]
+			params: [payload],
 		});
 	}
 
