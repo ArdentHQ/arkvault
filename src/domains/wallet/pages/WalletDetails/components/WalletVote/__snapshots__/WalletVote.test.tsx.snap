@@ -230,13 +230,13 @@ exports[`WalletVote > should render as all resigned 1`] = `
     data-testid="WalletVote"
   >
     <div
-      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="flex w-full flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -983,13 +983,13 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
     data-testid="WalletVote"
   >
     <div
-      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="flex w-full flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -1137,13 +1137,13 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
     data-testid="WalletVote"
   >
     <div
-      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="flex w-full flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>
@@ -1204,13 +1204,13 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
     data-testid="WalletVote"
   >
     <div
-      class="mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-dark-700 md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
     >
       <div
-        class="flex w-full flex-row items-center gap-2 bg-theme-secondary-100 p-3 text-sm font-semibold leading-[17px] dark:bg-theme-dark-950 md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 flex w-full flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
       >
         <p
-          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 md:text-base md:leading-5"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm md:text-base md:leading-5"
         >
           Voting for
         </p>

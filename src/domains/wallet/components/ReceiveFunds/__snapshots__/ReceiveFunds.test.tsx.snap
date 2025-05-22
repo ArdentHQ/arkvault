@@ -100,7 +100,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
                   abc
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -299,7 +299,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
                   abc
                 </span>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
