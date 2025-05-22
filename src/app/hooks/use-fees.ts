@@ -36,7 +36,7 @@ interface CalculateProperties {
 
 function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
 	console.log(formData, type);
-	const { senderAddress, recipientAddress, recipients: recipientList, username, validatorPublicKey } = formData;
+	const { senderAddress, recipientAddress, recipients: recipientList, username, validatorPublicKey, votes } = formData;
 
 	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
 		multiPayment: () => {
@@ -59,7 +59,6 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 			return { data, to: ContractAddresses.MULTIPAYMENT, value };
 		},
 		transfer: () => ({ to: recipientAddress as string }),
-		unvote: () => {},
 		usernameRegistration: () => {
 			const data = encodeFunctionData({
 				abi: UsernamesAbi.abi,
@@ -96,7 +95,18 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 
 			return { data, to: ContractAddresses.CONSENSUS };
 		},
-		vote: () => {},
+		vote: () => {
+			const vote = (votes as {id: string}[]).at(0);
+			const isVote = !!vote;
+
+			const data = encodeFunctionData({
+				abi: ConsensusAbi.abi,
+				args: isVote ? [vote.id] : [],
+				functionName: isVote ? "vote" : "unvote",
+			});
+
+			return { data, to: ContractAddresses.CONSENSUS };
+		},
 	};
 
 	return {
