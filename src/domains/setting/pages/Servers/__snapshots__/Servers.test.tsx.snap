@@ -5278,7 +5278,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex md:h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
+        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -8515,7 +8515,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex md:h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
+        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -10198,7 +10198,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex md:h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
+        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
@@ -13556,7 +13556,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 flex md:h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
+        class="bg-theme-secondary-100 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
       >
         <div
           class="flex flex-col gap-2"
