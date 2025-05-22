@@ -23,7 +23,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -178,7 +178,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -333,7 +333,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your secret to sign the message.
@@ -446,7 +446,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -603,7 +603,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -923,7 +923,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.
@@ -1125,7 +1125,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1280,7 +1280,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1435,7 +1435,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           </h1>
         </div>
         <div
-          class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your secret to authenticate the transaction.
@@ -1548,7 +1548,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1705,7 +1705,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -2025,7 +2025,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.

@@ -845,7 +845,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -991,7 +991,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       </span>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -1059,7 +1059,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                         </span>
                                       </div>
                                       <button
-                                        class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="clipboard-icon__wrapper"
                                         type="button"
@@ -1354,7 +1354,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       Timestamp
                                     </div>
                                     <div
-                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                                      class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                     >
                                       04.03.2025 9:08 AM
                                     </div>
@@ -2427,7 +2427,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                             </h1>
                           </div>
                           <div
-                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+                            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -2735,7 +2735,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               </h1>
             </div>
             <div
-              class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
               data-testid="header__subtitle"
             >
               Enter details below to send your transaction.
@@ -2818,7 +2818,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             </button>
           </div>
           <button
-            class="relative w-full rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400"
+            class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
             data-testid="SelectAddress__wrapper"
             type="button"
           >
@@ -2853,7 +2853,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                   class=""
                 >
                   <div
-                    class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                   >
                     <div>
                       <div
@@ -3315,7 +3315,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               </h1>
             </div>
             <div
-              class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
               data-testid="header__subtitle"
             >
               Enter details below to send your transaction.
@@ -3355,7 +3355,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             </button>
           </div>
           <button
-            class="relative w-full rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400"
+            class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
             data-testid="SelectAddress__wrapper"
             type="button"
           >
@@ -3390,7 +3390,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                   class=""
                 >
                   <div
-                    class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
+                    class="text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                   >
                     <div>
                       <div
@@ -3862,7 +3862,7 @@ exports[`SendTransfer > should render review step 1`] = `
               </h1>
             </div>
             <div
-              class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -3930,7 +3930,7 @@ exports[`SendTransfer > should render review step 1`] = `
                   </span>
                 </div>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -4009,7 +4009,7 @@ exports[`SendTransfer > should render review step 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-hidden cursor-pointer"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -4166,7 +4166,7 @@ exports[`SendTransfer > should render review step 1`] = `
             <button
               aria-checked="false"
               aria-label="0"
-              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4211,7 +4211,7 @@ exports[`SendTransfer > should render review step 1`] = `
             <button
               aria-checked="true"
               aria-label="0"
-              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4256,7 +4256,7 @@ exports[`SendTransfer > should render review step 1`] = `
             <button
               aria-checked="false"
               aria-label="0"
-              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4430,7 +4430,7 @@ exports[`SendTransfer > should render review step with multiple recipients (%s) 
               </h1>
             </div>
             <div
-              class="text-theme-secondary-text flex items-center text-sm leading-6 md:leading-6 md:text-base"
+              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -4498,7 +4498,7 @@ exports[`SendTransfer > should render review step with multiple recipients (%s) 
                   </span>
                 </div>
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -4698,7 +4698,7 @@ exports[`SendTransfer > should render review step with multiple recipients (%s) 
             <button
               aria-checked="false"
               aria-label="0"
-              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4743,7 +4743,7 @@ exports[`SendTransfer > should render review step with multiple recipients (%s) 
             <button
               aria-checked="true"
               aria-label="0"
-              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -4788,7 +4788,7 @@ exports[`SendTransfer > should render review step with multiple recipients (%s) 
             <button
               aria-checked="false"
               aria-label="0"
-              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default cursor-pointer rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
+              class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -5683,7 +5683,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -5829,7 +5829,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                       </span>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -5897,7 +5897,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                         </span>
                                       </div>
                                       <button
-                                        class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="clipboard-icon__wrapper"
                                         type="button"
@@ -6192,7 +6192,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                       Timestamp
                                     </div>
                                     <div
-                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                                      class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                     >
                                       04.03.2025 9:08 AM
                                     </div>
@@ -7265,7 +7265,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -7411,7 +7411,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       </span>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -7479,7 +7479,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                         </span>
                                       </div>
                                       <button
-                                        class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="clipboard-icon__wrapper"
                                         type="button"
@@ -7774,7 +7774,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       Timestamp
                                     </div>
                                     <div
-                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                                      class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                     >
                                       04.03.2025 9:08 AM
                                     </div>
@@ -8723,7 +8723,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -8869,7 +8869,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                       </span>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -8937,7 +8937,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                         </span>
                                       </div>
                                       <button
-                                        class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="clipboard-icon__wrapper"
                                         type="button"
@@ -9232,7 +9232,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                       Timestamp
                                     </div>
                                     <div
-                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                                      class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                     >
                                       04.03.2025 9:08 AM
                                     </div>
@@ -10305,7 +10305,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -10451,7 +10451,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                       </span>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -10519,7 +10519,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                         </span>
                                       </div>
                                       <button
-                                        class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="clipboard-icon__wrapper"
                                         type="button"
@@ -10814,7 +10814,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                       Timestamp
                                     </div>
                                     <div
-                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                                      class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                     >
                                       04.03.2025 9:08 AM
                                     </div>
@@ -11887,7 +11887,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -12033,7 +12033,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                       </span>
                                     </div>
                                     <button
-                                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                                       data-ring-focus-margin="-m-1"
                                       data-testid="clipboard-icon__wrapper"
                                       type="button"
@@ -12101,7 +12101,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                         </span>
                                       </div>
                                       <button
-                                        class="ring-focus relative focus:outline-hidden cursor-pointer"
+                                        class="ring-focus relative cursor-pointer focus:outline-hidden"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="clipboard-icon__wrapper"
                                         type="button"
@@ -12396,7 +12396,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                       Timestamp
                                     </div>
                                     <div
-                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                                      class="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                                     >
                                       04.03.2025 9:08 AM
                                     </div>
