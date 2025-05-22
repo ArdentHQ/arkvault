@@ -8,6 +8,7 @@ import { usePortfolio } from "@/domains/portfolio/hooks/use-portfolio";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
@@ -16,6 +17,7 @@ export const Portfolio = () => {
 	const { selectedWallets } = usePortfolio({ profile });
 	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
 	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
+	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
 
 	return (
 		<>
@@ -36,11 +38,18 @@ export const Portfolio = () => {
 				</Page>
 			)}
 
+			<button onClick={() => setShowSignMessagePanel(true)}>Sign Message</button>
+
 			<ResetWhenUnmounted>
 				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
 			</ResetWhenUnmounted>
+
 			<ResetWhenUnmounted>
 				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SignMessageSidePanel open={showSignMessagePanel} onOpenChange={setShowSignMessagePanel} />
 			</ResetWhenUnmounted>
 		</>
 	);
