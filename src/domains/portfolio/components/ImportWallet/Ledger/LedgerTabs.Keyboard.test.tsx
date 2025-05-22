@@ -179,7 +179,7 @@ describe("LedgerTabs", () => {
 	describe("Enter key handling", () => {
 		it("should go to the next step", async () => {
 			const ledgerTransportMock = mockNanoXTransport();
-		
+
 			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 		
 			await waitFor(() => {
@@ -187,12 +187,15 @@ describe("LedgerTabs", () => {
 			}, { timeout: 5000 }); 
 
 			await userEvent.keyboard("{enter}");
-		
-			await waitFor(() => {
-				const connectionStep = screen.queryByTestId("LedgerConnectionStep");
-				expect(connectionStep).toBeVisible();
-			}, { timeout: 5000 });
-		
+
+			await waitFor(
+				() => {
+					const connectionStep = screen.queryByTestId("LedgerConnectionStep");
+					expect(connectionStep).toBeVisible();
+				},
+				{ timeout: 5000 },
+			);
+
 			ledgerTransportMock.mockRestore();
 		});
 
