@@ -9,11 +9,11 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -26,10 +26,10 @@ exports[`VoteList > should render in lg 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -41,11 +41,11 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -58,10 +58,10 @@ exports[`VoteList > should render in lg 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -73,11 +73,11 @@ exports[`VoteList > should render in lg 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -90,10 +90,10 @@ exports[`VoteList > should render in lg 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -114,11 +114,11 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -131,10 +131,10 @@ exports[`VoteList > should render in md 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -146,11 +146,11 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -163,10 +163,10 @@ exports[`VoteList > should render in md 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -178,11 +178,11 @@ exports[`VoteList > should render in md 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -195,10 +195,10 @@ exports[`VoteList > should render in md 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -222,10 +222,10 @@ exports[`VoteList > should render in sm 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -233,11 +233,11 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -254,10 +254,10 @@ exports[`VoteList > should render in sm 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -265,11 +265,11 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -286,10 +286,10 @@ exports[`VoteList > should render in sm 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -297,11 +297,11 @@ exports[`VoteList > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -324,11 +324,11 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -341,10 +341,10 @@ exports[`VoteList > should render in xl 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -356,11 +356,11 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -373,10 +373,10 @@ exports[`VoteList > should render in xl 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -388,11 +388,11 @@ exports[`VoteList > should render in xl 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -405,10 +405,10 @@ exports[`VoteList > should render in xl 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -432,10 +432,10 @@ exports[`VoteList > should render in xs 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -443,11 +443,11 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -464,10 +464,10 @@ exports[`VoteList > should render in xs 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -475,11 +475,11 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -496,10 +496,10 @@ exports[`VoteList > should render in xs 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -507,11 +507,11 @@ exports[`VoteList > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -534,11 +534,11 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -551,10 +551,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -576,11 +576,11 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -593,10 +593,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -618,11 +618,11 @@ exports[`VoteList > should render with amount in lg 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -635,10 +635,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -669,11 +669,11 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -686,10 +686,10 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -711,11 +711,11 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -728,10 +728,10 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -753,11 +753,11 @@ exports[`VoteList > should render with amount in md 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -770,10 +770,10 @@ exports[`VoteList > should render with amount in md 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -817,10 +817,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -828,11 +828,11 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -859,10 +859,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -870,11 +870,11 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -901,10 +901,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -912,11 +912,11 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -939,11 +939,11 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -956,10 +956,10 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -981,11 +981,11 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -998,10 +998,10 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -1023,11 +1023,11 @@ exports[`VoteList > should render with amount in xl 1`] = `
       class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"
@@ -1040,10 +1040,10 @@ exports[`VoteList > should render with amount in xl 1`] = `
         class="flex-1 ml-4 w-28"
       >
         <div
-          class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -1087,10 +1087,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -1098,11 +1098,11 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0xB8Be76b31E402a2D89294Aa107056484Bef94362"
@@ -1129,10 +1129,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -1140,11 +1140,11 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x03BC306C369A55c0336EB003bB07F29E5c150F36"
@@ -1171,10 +1171,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
         class="flex-1 w-0 text-right md:text-left"
       >
         <div
-          class="flex overflow-hidden justify-end items-center space-x-2 w-full whitespace-nowrap"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
           <span
-            class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-text"
+            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
             data-testid="Address__address"
           >
             0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -1182,11 +1182,11 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </div>
       </div>
       <div
-        class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x56F925416Ef2725646442D5E0150088bd7202aCd"

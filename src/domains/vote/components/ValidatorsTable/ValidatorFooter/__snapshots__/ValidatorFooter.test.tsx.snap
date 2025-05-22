@@ -16,16 +16,16 @@ exports[`ValidatorFooter > should render 1`] = `
           class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
         >
           <div
-            class="flex overflow-x-auto grow"
+            class="flex grow overflow-x-auto"
           >
             <div
-              class="flex overflow-x-auto flex-row flex-1 items-center h-full grow"
+              class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
             >
               <div
                 class="flex overflow-hidden items-center space-x-2"
               >
                 <div
-                  class="hidden text-sm whitespace-nowrap sm:block sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
                 >
                   Voting Address:
                 </div>
@@ -33,21 +33,21 @@ exports[`ValidatorFooter > should render 1`] = `
                   class="flex overflow-x-auto w-full xl:-mt-px lg:text"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="text-xs text-base font-semibold sm:text-base sm:leading-5 leading-[17px] text-theme-text"
+                      class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
-                        class="transition-colors duration-200 no-ligatures"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         Mainsail Wallet …
                       </span>
                     </span>
                     <span
-                      class="overflow-hidden min-w-0 text-xs text-base font-semibold sm:text-base sm:leading-5 no-ligatures leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200"
+                      class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -65,13 +65,13 @@ exports[`ValidatorFooter > should render 1`] = `
             class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
           >
             <div
-              class="flex pr-4 pl-0 space-x-3 lg:pl-4 first:pl-0 last:pr-6 md:first:pl-6"
+              class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
             >
               <div
                 class="flex flex-row items-center space-x-2"
               >
                 <div
-                  class="text-sm sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base"
                 >
                   Votes
                 </div>
@@ -93,13 +93,13 @@ exports[`ValidatorFooter > should render 1`] = `
               class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
             />
             <div
-              class="flex pr-4 pl-4 space-x-3 first:pl-6 last:pr-6"
+              class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
             >
               <div
                 class="flex flex-row items-center space-x-2"
               >
                 <div
-                  class="text-sm sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base"
                 >
                   Unvotes
                 </div>
@@ -121,13 +121,13 @@ exports[`ValidatorFooter > should render 1`] = `
               class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
             />
             <div
-              class="flex pr-4 pl-4 space-x-3 md:hidden lg:flex first:pl-6 last:pr-6"
+              class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
             >
               <div
                 class="flex flex-row items-center space-x-2"
               >
                 <div
-                  class="text-sm sm:text-base text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base"
                 >
                   Total
                 </div>
@@ -157,7 +157,7 @@ exports[`ValidatorFooter > should render 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="inline-flex relative justify-center items-center py-2 px-3 space-x-2 w-full text-sm font-semibold leading-tight text-center rounded duration-100 ease-linear cursor-pointer sm:w-auto focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400"
+                class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"

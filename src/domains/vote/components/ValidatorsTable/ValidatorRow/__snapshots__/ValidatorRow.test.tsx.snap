@@ -10,23 +10,23 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -42,10 +42,10 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -66,14 +66,14 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -106,13 +106,13 @@ exports[`ValidatorRow > should emit action on select button 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-primary-600 dark:text-theme-primary-600 dark:hover:text-theme-primary-700 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -141,23 +141,23 @@ exports[`ValidatorRow > should render 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -173,10 +173,10 @@ exports[`ValidatorRow > should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -197,14 +197,14 @@ exports[`ValidatorRow > should render 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -237,13 +237,13 @@ exports[`ValidatorRow > should render 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-primary-600 dark:text-theme-primary-600 dark:hover:text-theme-primary-700 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -272,23 +272,23 @@ exports[`ValidatorRow > should render changed style when network requires vote a
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-warning-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-warning-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-warning-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-warning-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -304,10 +304,10 @@ exports[`ValidatorRow > should render changed style when network requires vote a
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 bg-theme-warning-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-warning-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -328,14 +328,14 @@ exports[`ValidatorRow > should render changed style when network requires vote a
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -369,7 +369,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
           data-testid="ValidatorVoteAmount"
         >
           <div
-            class="flex justify-center items-center px-3 my-1 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-11 bg-theme-warning-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-warning-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
               class="relative flex-1 px-3"
@@ -378,10 +378,10 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full rounded border transition-colors duration-200 appearance-none text-theme-text border-theme-secondary-400 bg-theme-background h-[34px] dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -397,7 +397,7 @@ exports[`ValidatorRow > should render changed style when network requires vote a
                 </div>
               </div>
               <span
-                class="flex absolute inset-y-0 right-7 items-center space-x-3"
+                class="absolute inset-y-0 flex items-center space-x-3 right-7"
                 data-testid="DelegateVoteAmount__ticker"
               >
                 <span
@@ -413,13 +413,13 @@ exports[`ValidatorRow > should render changed style when network requires vote a
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 bg-theme-warning-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-warning-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center rounded border-none duration-100 ease-linear cursor-pointer hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-warning-700 dark:hover:text-theme-primary-500 hover:text-theme-warning-800 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative text-theme-warning-700 hover:text-theme-warning-800"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -448,23 +448,23 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-success-100 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-success-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-success-100 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-success-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -480,10 +480,10 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 bg-theme-success-100 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-success-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -504,14 +504,14 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -544,13 +544,13 @@ exports[`ValidatorRow > should render the selected validator 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 bg-theme-success-100 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-success-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-primary-reverse-600 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700 hover:text-theme-primary-reverse-700 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700 dark:text-theme-primary-reverse-600 dark:hover:text-theme-primary-reverse-700"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -579,23 +579,23 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-primary-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-primary-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-primary-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-primary-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -611,10 +611,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 bg-theme-primary-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-primary-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -635,14 +635,14 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -675,13 +675,13 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 bg-theme-primary-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-primary-600 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-primary-600 dark:text-theme-primary-600 dark:hover:text-theme-primary-700 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -701,23 +701,23 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0x03BC306C369A55c0336EB003bB07F29E5c150F36
@@ -733,10 +733,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -757,14 +757,14 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -797,13 +797,13 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-primary-600 dark:text-theme-primary-600 dark:hover:text-theme-primary-700 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-1"
                 type="button"
               >
@@ -823,23 +823,23 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0x56F925416Ef2725646442D5E0150088bd7202aCd
@@ -855,10 +855,10 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -879,14 +879,14 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -919,7 +919,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -928,7 +928,7 @@ exports[`ValidatorRow > should render the selected vote 1`] = `
                 class="w-full sm:w-auto"
               >
                 <button
-                  class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center text-black bg-transparent rounded duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] dark:disabled:text-theme-secondary-700 dark:hover:text-theme-primary-500 dark:text-theme-black hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400 disabled:text-theme-secondary-400"
+                  class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black"
                   data-testid="DelegateRow__toggle-2"
                   disabled=""
                   type="button"
@@ -959,23 +959,23 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-danger-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-danger-400 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 bg-theme-danger-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-danger-400 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -991,10 +991,10 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 bg-theme-danger-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-danger-400 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -1015,14 +1015,14 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -1055,13 +1055,13 @@ exports[`ValidatorRow > should render the unselected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 bg-theme-danger-50 dark:group-hover:bg-theme-dark-950 dark:bg-theme-background dark:border-theme-danger-400 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-danger-400 dark:text-theme-danger-400 dark:hover:text-theme-danger-500 hover:text-theme-danger-500 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-500"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -1090,23 +1090,23 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 pl-3 my-0 ml-3 h-9 text-sm font-semibold rounded-l border-2 border-r-0 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-0 space-x-3 h-9 text-sm font-semibold border-t-2 border-b-2 border-transparent transition-colors duration-100 leading-[17px] min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
-              class="flex overflow-hidden justify-start items-center space-x-2 w-full whitespace-nowrap"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-start"
             >
               <div
-                class="relative text-left sm:leading-5 grow leading-[17px]"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="overflow-hidden absolute w-full min-w-0 text-sm text-base font-semibold no-ligatures leading-[17px]"
+                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm w-full font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   0xB8Be76b31E402a2D89294Aa107056484Bef94362
@@ -1122,10 +1122,10 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex justify-center items-center px-3 my-0 h-9 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div
-              class="inline-block px-1 text-xs font-semibold text-center rounded dark:bg-transparent dark:border bg-theme-secondary-200 text-theme-secondary-700 min-w-[58px] py-[3px] dark:border-theme-dark-700 dark:text-theme-dark-200"
+              class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
               data-testid="ValidatorStatus__standby"
             >
               Standby
@@ -1146,14 +1146,14 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
               rel="noopener noreferrer"
             >
               <span
-                class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span>
                   View
                 </span>
               </span>
               <div
-                class="inline-block text-sm align-middle duration-200 mb-[3px] shrink-0"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
               >
                 <div
@@ -1187,7 +1187,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
           data-testid="ValidatorVoteAmount"
         >
           <div
-            class="flex justify-center items-center px-3 my-1 border-t-2 border-b-2 border-transparent transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
           >
             <div
               class="relative flex-1 px-3"
@@ -1196,10 +1196,10 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex overflow-hidden items-center px-4 space-x-2 w-full rounded border transition-colors duration-200 appearance-none text-theme-text border-theme-secondary-300 bg-theme-secondary-100 h-[34px] dark:border-theme-secondary-700 dark:bg-theme-secondary-800"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 h-[34px] overflow-hidden"
                 >
                   <div
-                    class="flex relative flex-1 h-full"
+                    class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
@@ -1216,7 +1216,7 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
                 </div>
               </div>
               <span
-                class="flex absolute inset-y-0 right-7 items-center space-x-3 cursor-default"
+                class="absolute inset-y-0 flex items-center space-x-3 right-7 cursor-default"
                 data-testid="DelegateVoteAmount__ticker"
               >
                 <span
@@ -1232,13 +1232,13 @@ exports[`ValidatorRow > should render when network requires vote amount 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex justify-end items-center px-3 pr-3 my-1 mr-3 h-9 rounded-r border-2 border-l-0 border-transparent transition-colors duration-100 min-h-9 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
             >
               <button
-                class="inline-flex relative justify-center items-center p-3 py-0 -mr-3 w-auto text-sm font-semibold text-center bg-transparent rounded border-none duration-100 ease-linear cursor-pointer dark:bg-transparent hover:underline focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden leading-[17px] text-theme-primary-600 dark:text-theme-primary-600 dark:hover:text-theme-primary-700 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
