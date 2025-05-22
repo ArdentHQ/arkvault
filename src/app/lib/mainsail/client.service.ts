@@ -172,7 +172,7 @@ export class ClientService {
 			const response = await this.#client.evm().ethCall({
 				id: 1,
 				method: "eth_call",
-				params: [callData],
+				params: [callData, "latest"],
 			});
 
 			return {
