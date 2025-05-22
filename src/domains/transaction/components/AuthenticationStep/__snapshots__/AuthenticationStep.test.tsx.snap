@@ -13,7 +13,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -23,7 +23,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -31,7 +31,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex flex-col min-w-0"
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -109,7 +109,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="pl-3"
           >
             <button
-              class="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -168,7 +168,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -178,7 +178,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to sign the message.
@@ -186,7 +186,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex flex-col min-w-0"
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -264,7 +264,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="pl-3"
           >
             <button
-              class="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -323,7 +323,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -333,7 +333,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your secret to sign the message.
@@ -341,7 +341,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -373,7 +373,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
             class=""
           >
             <button
-              class="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -436,7 +436,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <h1
               class="mb-0 text-2xl leading-[29px]"
@@ -446,7 +446,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -560,13 +560,13 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         </defs>
       </svg>
       <div
-        class="inline-flex justify-center items-center space-x-3 w-full"
+        class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
           class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="font-semibold animate-pulse text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingApp-loading_message"
         >
           Open the Mainsail app on your device ...
@@ -593,7 +593,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <h1
               class="mb-0 text-2xl leading-[29px]"
@@ -603,7 +603,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -717,13 +717,13 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         </defs>
       </svg>
       <div
-        class="inline-flex justify-center items-center space-x-3 w-full"
+        class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
           class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="font-semibold animate-pulse text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...
@@ -747,7 +747,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -768,7 +768,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -778,7 +778,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -801,7 +801,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -822,7 +822,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -832,7 +832,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -855,7 +855,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -876,7 +876,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -886,7 +886,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -913,7 +913,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <h1
               class="mb-0 text-2xl leading-[29px]"
@@ -923,7 +923,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.
@@ -1085,13 +1085,13 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
         </div>
       </div>
       <div
-        class="inline-flex justify-center items-center space-x-3 w-full"
+        class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
           class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="font-semibold animate-pulse text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...
@@ -1115,7 +1115,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1125,7 +1125,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1133,7 +1133,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex flex-col min-w-0"
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1211,7 +1211,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="pl-3"
           >
             <button
-              class="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -1270,7 +1270,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1280,7 +1280,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -1288,7 +1288,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex flex-col min-w-0"
+      class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1366,7 +1366,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="pl-3"
           >
             <button
-              class="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -1425,7 +1425,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1435,7 +1435,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           </h1>
         </div>
         <div
-          class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+          class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
           data-testid="header__subtitle"
         >
           Enter your secret to authenticate the transaction.
@@ -1443,7 +1443,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
       </div>
     </div>
     <fieldset
-      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+      class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
     >
       <label
         class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1475,7 +1475,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
             class=""
           >
             <button
-              class="flex relative justify-center items-center w-full h-full text-2xl ring-focus focus:outline-hidden"
+              class="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="InputPassword__toggle"
               type="button"
@@ -1538,7 +1538,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <h1
               class="mb-0 text-2xl leading-[29px]"
@@ -1548,7 +1548,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1662,13 +1662,13 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         </defs>
       </svg>
       <div
-        class="inline-flex justify-center items-center space-x-3 w-full"
+        class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
           class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="font-semibold animate-pulse text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingApp-loading_message"
         >
           Open the Mainsail app on your device ...
@@ -1695,7 +1695,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <h1
               class="mb-0 text-2xl leading-[29px]"
@@ -1705,7 +1705,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger and confirm input.
@@ -1819,13 +1819,13 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         </defs>
       </svg>
       <div
-        class="inline-flex justify-center items-center space-x-3 w-full"
+        class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
           class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="font-semibold animate-pulse text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...
@@ -1849,7 +1849,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1870,7 +1870,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -1880,7 +1880,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -1903,7 +1903,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1924,7 +1924,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -1934,7 +1934,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -1957,7 +1957,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -1978,7 +1978,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="flex items-center py-5 px-6 space-x-3 rounded-xl border dark:bg-transparent border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600"
+        class="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 flex items-center space-x-3 rounded-xl border px-6 py-5 dark:bg-transparent"
         data-testid="LedgerConfirmation-loading_message"
       >
         <div
@@ -1988,7 +1988,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
           class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
         />
         <p
-          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
+          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
           This transaction is pending confirmation.
         </p>
@@ -2015,7 +2015,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <h1
               class="mb-0 text-2xl leading-[29px]"
@@ -2025,7 +2025,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
             </h1>
           </div>
           <div
-            class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+            class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
             data-testid="header__subtitle"
           >
             Connect your Ledger Nano X and confirm input.
@@ -2187,13 +2187,13 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
         </div>
       </div>
       <div
-        class="inline-flex justify-center items-center space-x-3 w-full"
+        class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
           class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
         />
         <span
-          class="font-semibold animate-pulse text-theme-secondary-text"
+          class="text-theme-secondary-text animate-pulse font-semibold"
           data-testid="LedgerWaitingDevice-loading_message"
         >
           Waiting for Ledger ...

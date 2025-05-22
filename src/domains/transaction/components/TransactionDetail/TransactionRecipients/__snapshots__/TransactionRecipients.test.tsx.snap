@@ -9,11 +9,11 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Recipient
       </div>
@@ -21,7 +21,7 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="flex-1 w-0 text-right md:text-left"
+          class="w-0 flex-1 text-right md:text-left"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -65,11 +65,11 @@ exports[`TransactionRecipients > should render a single recipient that is valida
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Recipient
       </div>
@@ -77,7 +77,7 @@ exports[`TransactionRecipients > should render a single recipient that is valida
         class="flex items-center font-semibold"
       >
         <div
-          class="flex-1 w-0 text-right md:text-left"
+          class="w-0 flex-1 text-right md:text-left"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -121,11 +121,11 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Recipient
       </div>
@@ -133,7 +133,7 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
         class="flex items-center font-semibold"
       >
         <div
-          class="flex-1 w-0 text-right md:text-left"
+          class="w-0 flex-1 text-right md:text-left"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -188,11 +188,11 @@ exports[`TransactionRecipients > should render in lg 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Recipient
       </div>
@@ -200,7 +200,7 @@ exports[`TransactionRecipients > should render in lg 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="flex-1 w-0 text-right md:text-left"
+          class="w-0 flex-1 text-right md:text-left"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -244,11 +244,11 @@ exports[`TransactionRecipients > should render in md 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Recipient
       </div>
@@ -256,7 +256,7 @@ exports[`TransactionRecipients > should render in md 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="flex-1 w-0 text-right md:text-left"
+          class="w-0 flex-1 text-right md:text-left"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -300,22 +300,22 @@ exports[`TransactionRecipients > should render in sm 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        class="text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
       >
         Recipient
       </div>
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-1 w-0 text-right md:text-left"
+            class="w-0 flex-1 text-right md:text-left"
           >
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -360,23 +360,23 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -385,10 +385,10 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -418,10 +418,10 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
               </div>
             </div>
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Amount
               </div>
@@ -446,23 +446,23 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -471,10 +471,10 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -504,10 +504,10 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
               </div>
             </div>
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Amount
               </div>
@@ -537,11 +537,11 @@ exports[`TransactionRecipients > should render in xl 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
-        class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
       >
         Recipient
       </div>
@@ -549,7 +549,7 @@ exports[`TransactionRecipients > should render in xl 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="flex-1 w-0 text-right md:text-left"
+          class="w-0 flex-1 text-right md:text-left"
         >
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -593,22 +593,22 @@ exports[`TransactionRecipients > should render in xs 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        class="text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
       >
         Recipient
       </div>
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-1 w-0 text-right md:text-left"
+            class="w-0 flex-1 text-right md:text-left"
           >
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -653,23 +653,23 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -678,10 +678,10 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -711,10 +711,10 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
               </div>
             </div>
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Amount
               </div>
@@ -739,23 +739,23 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -764,10 +764,10 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -797,10 +797,10 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
               </div>
             </div>
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 Amount
               </div>
@@ -830,14 +830,14 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
         class="flex items-center font-semibold"
       >
         <div
-          class="w-full recipient-list"
+          class="recipient-list w-full"
         >
           <div
             class="table-wrapper"
@@ -905,14 +905,14 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -941,7 +941,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -955,7 +955,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -976,7 +976,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -988,14 +988,14 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1024,7 +1024,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1038,7 +1038,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -1059,7 +1059,7 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1087,14 +1087,14 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
         class="flex items-center font-semibold"
       >
         <div
-          class="w-full recipient-list"
+          class="recipient-list w-full"
         >
           <div
             class="table-wrapper"
@@ -1162,14 +1162,14 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1198,7 +1198,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1212,7 +1212,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -1233,7 +1233,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1245,14 +1245,14 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1281,7 +1281,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1295,7 +1295,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -1316,7 +1316,7 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1344,23 +1344,23 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -1369,10 +1369,10 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1411,23 +1411,23 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -1436,10 +1436,10 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1483,14 +1483,14 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
         class="flex items-center font-semibold"
       >
         <div
-          class="w-full recipient-list"
+          class="recipient-list w-full"
         >
           <div
             class="table-wrapper"
@@ -1558,14 +1558,14 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1594,7 +1594,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1608,7 +1608,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -1629,7 +1629,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1641,14 +1641,14 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1677,7 +1677,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1691,7 +1691,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -1712,7 +1712,7 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1740,23 +1740,23 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -1765,10 +1765,10 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1807,23 +1807,23 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -1832,10 +1832,10 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1879,14 +1879,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
         class="flex items-center font-semibold"
       >
         <div
-          class="w-full recipient-list"
+          class="recipient-list w-full"
         >
           <div
             class="table-wrapper"
@@ -1954,14 +1954,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 role="rowgroup"
               >
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1990,7 +1990,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2004,7 +2004,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -2025,7 +2025,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2037,14 +2037,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </td>
                 </tr>
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2073,7 +2073,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2087,7 +2087,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -2108,7 +2108,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2136,14 +2136,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
         class="flex items-center font-semibold"
       >
         <div
-          class="w-full recipient-list"
+          class="recipient-list w-full"
         >
           <div
             class="table-wrapper"
@@ -2211,14 +2211,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 role="rowgroup"
               >
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2247,7 +2247,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2261,7 +2261,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -2282,7 +2282,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2294,14 +2294,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </td>
                 </tr>
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2330,7 +2330,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2344,7 +2344,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -2365,7 +2365,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2393,23 +2393,23 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -2418,10 +2418,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -2460,23 +2460,23 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -2485,10 +2485,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -2532,14 +2532,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipients"
   >
     <div
-      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
       data-testid="TransactionDetail--desktop"
     >
       <div
         class="flex items-center font-semibold"
       >
         <div
-          class="w-full recipient-list"
+          class="recipient-list w-full"
         >
           <div
             class="table-wrapper"
@@ -2607,14 +2607,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 role="rowgroup"
               >
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2643,7 +2643,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2657,7 +2657,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -2678,7 +2678,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2690,14 +2690,14 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   </td>
                 </tr>
                 <tr
-                  class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
                   data-testid="recipient-list__recipient-list-item"
                 >
                   <td
-                    class="table-cell mr-3 md:hidden"
+                    class="mr-3 table-cell md:hidden"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2726,7 +2726,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="flex-1 justify-end w-28 md:ml-4"
+                    class="w-28 flex-1 justify-end md:ml-4"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2740,7 +2740,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     </div>
                   </td>
                   <td
-                    class="table-cell ml-2 md:hidden"
+                    class="ml-2 table-cell md:hidden"
                   >
                     <div
                       class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
@@ -2761,7 +2761,7 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     class="hidden md:table-cell"
                   >
                     <td
-                      class="flex-1 pl-3 text-right shrink-0"
+                      class="flex-1 shrink-0 pl-3 text-right"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2789,23 +2789,23 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -2814,10 +2814,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -2856,23 +2856,23 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
     data-testid="TransactionRecipient"
   >
     <div
-      class="flex justify-between space-x-4 w-full md:items-center items-top"
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
       data-testid="TransactionDetail--mobile"
     >
       <div
-        class="flex justify-end items-center space-x-4 min-w-0 grow"
+        class="flex min-w-0 grow items-center justify-end space-x-4"
       >
         <div
-          class="flex justify-end w-full text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500"
+          class="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end"
         >
           <div
-            class="flex-col space-y-4 w-full"
+            class="w-full flex-col space-y-4"
           >
             <div
-              class="flex justify-between items-center space-x-4"
+              class="flex items-center justify-between space-x-4"
             >
               <div
-                class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
               >
                 <div
                   class="whitespace-nowrap"
@@ -2881,10 +2881,10 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                 </div>
               </div>
               <div
-                class="flex items-center space-x-2 w-full text-right"
+                class="flex w-full items-center space-x-2 text-right"
               >
                 <div
-                  class="overflow-auto flex-1 w-0 text-right md:text-left"
+                  class="w-0 flex-1 overflow-auto text-right md:text-left"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"

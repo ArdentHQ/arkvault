@@ -229,13 +229,13 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 >
                   <span>
                     <span
-                      class="font-semibold text-theme-text"
+                      class="text-theme-text font-semibold"
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Multipayment
                     </span>
                     <span
-                      class="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                      class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold"
                     >
                       2
                     </span>
@@ -501,13 +501,13 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 >
                   <span>
                     <span
-                      class="font-semibold text-theme-text"
+                      class="text-theme-text font-semibold"
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Multipayment
                     </span>
                     <span
-                      class="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                      class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold"
                     >
                       2
                     </span>
@@ -566,19 +566,19 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
             data-testid="TableRow"
           >
             <td
-              class="flex-col py-4 space-y-4"
+              class="flex-col space-y-4 py-4"
               data-testid="TableRow__mobile"
             >
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Recipient
                 </div>
                 <div
-                  class="flex overflow-hidden flex-row-reverse flex-1 justify-end items-center space-x-4 w-0"
+                  class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
                     class="w-0 flex-1"
@@ -608,15 +608,15 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Date
                 </div>
                 <div
-                  class="whitespace-nowrap text-theme-secondary-500"
+                  class="text-theme-secondary-500 whitespace-nowrap"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -626,10 +626,10 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Amount
                 </div>
@@ -656,32 +656,32 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
             data-testid="TableRow"
           >
             <td
-              class="flex-col py-4 space-y-4"
+              class="flex-col space-y-4 py-4"
               data-testid="TableRow__mobile"
             >
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Recipient
                 </div>
                 <div
-                  class="flex overflow-hidden flex-row-reverse flex-1 justify-end items-center space-x-4 w-0"
+                  class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
                     class="w-0 flex-1"
                   >
                     <span>
                       <span
-                        class="font-semibold text-theme-text"
+                        class="text-theme-text font-semibold"
                         data-testid="TransactionRowRecipientLabel"
                       >
                         Multipayment
                       </span>
                       <span
-                        class="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold"
                       >
                         2
                       </span>
@@ -690,15 +690,15 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Date
                 </div>
                 <div
-                  class="whitespace-nowrap text-theme-secondary-500"
+                  class="text-theme-secondary-500 whitespace-nowrap"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -708,10 +708,10 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Amount
                 </div>
@@ -969,13 +969,13 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 >
                   <span>
                     <span
-                      class="font-semibold text-theme-text"
+                      class="text-theme-text font-semibold"
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Multipayment
                     </span>
                     <span
-                      class="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                      class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold"
                     >
                       2
                     </span>
@@ -1034,19 +1034,19 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
             data-testid="TableRow"
           >
             <td
-              class="flex-col py-4 space-y-4"
+              class="flex-col space-y-4 py-4"
               data-testid="TableRow__mobile"
             >
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Recipient
                 </div>
                 <div
-                  class="flex overflow-hidden flex-row-reverse flex-1 justify-end items-center space-x-4 w-0"
+                  class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
                     class="w-0 flex-1"
@@ -1076,15 +1076,15 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Date
                 </div>
                 <div
-                  class="whitespace-nowrap text-theme-secondary-500"
+                  class="text-theme-secondary-500 whitespace-nowrap"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1094,10 +1094,10 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Amount
                 </div>
@@ -1124,32 +1124,32 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
             data-testid="TableRow"
           >
             <td
-              class="flex-col py-4 space-y-4"
+              class="flex-col space-y-4 py-4"
               data-testid="TableRow__mobile"
             >
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Recipient
                 </div>
                 <div
-                  class="flex overflow-hidden flex-row-reverse flex-1 justify-end items-center space-x-4 w-0"
+                  class="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden"
                 >
                   <div
                     class="w-0 flex-1"
                   >
                     <span>
                       <span
-                        class="font-semibold text-theme-text"
+                        class="text-theme-text font-semibold"
                         data-testid="TransactionRowRecipientLabel"
                       >
                         Multipayment
                       </span>
                       <span
-                        class="ml-1 font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        class="text-theme-secondary-500 dark:text-theme-secondary-700 ml-1 font-semibold"
                       >
                         2
                       </span>
@@ -1158,15 +1158,15 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Date
                 </div>
                 <div
-                  class="whitespace-nowrap text-theme-secondary-500"
+                  class="text-theme-secondary-500 whitespace-nowrap"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1176,10 +1176,10 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-4"
+                class="flex items-center justify-between space-x-4"
               >
                 <div
-                  class="relative m-0 font-semibold text-left select-none first:pl-0 last:pr-0 text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
                 >
                   Amount
                 </div>

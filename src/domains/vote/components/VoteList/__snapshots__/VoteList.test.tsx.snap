@@ -3,10 +3,10 @@
 exports[`VoteList > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -23,7 +23,7 @@ exports[`VoteList > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -38,7 +38,7 @@ exports[`VoteList > should render in lg 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -55,7 +55,7 @@ exports[`VoteList > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -70,7 +70,7 @@ exports[`VoteList > should render in lg 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -87,7 +87,7 @@ exports[`VoteList > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -108,10 +108,10 @@ exports[`VoteList > should render in lg 1`] = `
 exports[`VoteList > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -128,7 +128,7 @@ exports[`VoteList > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -143,7 +143,7 @@ exports[`VoteList > should render in md 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -160,7 +160,7 @@ exports[`VoteList > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -175,7 +175,7 @@ exports[`VoteList > should render in md 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -192,7 +192,7 @@ exports[`VoteList > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -213,13 +213,13 @@ exports[`VoteList > should render in md 1`] = `
 exports[`VoteList > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -248,10 +248,10 @@ exports[`VoteList > should render in sm 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -280,10 +280,10 @@ exports[`VoteList > should render in sm 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -318,10 +318,10 @@ exports[`VoteList > should render in sm 1`] = `
 exports[`VoteList > should render in xl 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -338,7 +338,7 @@ exports[`VoteList > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -353,7 +353,7 @@ exports[`VoteList > should render in xl 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -370,7 +370,7 @@ exports[`VoteList > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -385,7 +385,7 @@ exports[`VoteList > should render in xl 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -402,7 +402,7 @@ exports[`VoteList > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -423,13 +423,13 @@ exports[`VoteList > should render in xl 1`] = `
 exports[`VoteList > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -458,10 +458,10 @@ exports[`VoteList > should render in xs 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -490,10 +490,10 @@ exports[`VoteList > should render in xs 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -528,10 +528,10 @@ exports[`VoteList > should render in xs 1`] = `
 exports[`VoteList > should render with amount in lg 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -548,7 +548,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -562,7 +562,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -573,7 +573,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -590,7 +590,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -604,7 +604,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -615,7 +615,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -632,7 +632,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -646,7 +646,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -663,10 +663,10 @@ exports[`VoteList > should render with amount in lg 1`] = `
 exports[`VoteList > should render with amount in md 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -683,7 +683,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -697,7 +697,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -708,7 +708,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -725,7 +725,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -739,7 +739,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -750,7 +750,7 @@ exports[`VoteList > should render with amount in md 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -767,7 +767,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -781,7 +781,7 @@ exports[`VoteList > should render with amount in md 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -798,13 +798,13 @@ exports[`VoteList > should render with amount in md 1`] = `
 exports[`VoteList > should render with amount in sm 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 pr-4 pl-3 w-0 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -814,7 +814,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </span>
       </div>
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -843,10 +843,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 pr-4 pl-3 w-0 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -856,7 +856,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </span>
       </div>
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -885,10 +885,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 pr-4 pl-3 w-0 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -898,7 +898,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
         </span>
       </div>
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -933,10 +933,10 @@ exports[`VoteList > should render with amount in sm 1`] = `
 exports[`VoteList > should render with amount in xl 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -953,7 +953,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -967,7 +967,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -978,7 +978,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -995,7 +995,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1009,7 +1009,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -1020,7 +1020,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 flex items-center border-b border-dashed py-4 last:border-b-0"
     >
       <div
         class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
@@ -1037,7 +1037,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         </div>
       </div>
       <div
-        class="flex-1 ml-4 w-28"
+        class="ml-4 w-28 flex-1"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1051,7 +1051,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
         </div>
       </div>
       <div
-        class="pl-3 text-right grow"
+        class="grow pl-3 text-right"
       >
         <span
           class="whitespace-nowrap"
@@ -1068,13 +1068,13 @@ exports[`VoteList > should render with amount in xl 1`] = `
 exports[`VoteList > should render with amount in xs 1`] = `
 <DocumentFragment>
   <div
-    class="flex-1 -my-2"
+    class="-my-2 flex-1"
   >
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 pr-4 pl-3 w-0 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -1084,7 +1084,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </span>
       </div>
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1113,10 +1113,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 pr-4 pl-3 w-0 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -1126,7 +1126,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </span>
       </div>
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -1155,10 +1155,10 @@ exports[`VoteList > should render with amount in xs 1`] = `
       </div>
     </div>
     <div
-      class="flex relative justify-end items-center py-4 pt-0 pb-0 space-x-4 border-b border-dashed md:pt-4 md:pb-4 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 relative flex items-center justify-end space-x-4 border-b border-dashed py-4 pt-0 pb-0 last:border-b-0 md:pt-4 md:pb-4"
     >
       <div
-        class="flex-1 pr-4 pl-3 w-0 text-right sm:px-0"
+        class="w-0 flex-1 pr-4 pl-3 text-right sm:px-0"
       >
         <span
           class="whitespace-nowrap"
@@ -1168,7 +1168,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
         </span>
       </div>
       <div
-        class="flex-1 w-0 text-right md:text-left"
+        class="w-0 flex-1 text-right md:text-left"
       >
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"

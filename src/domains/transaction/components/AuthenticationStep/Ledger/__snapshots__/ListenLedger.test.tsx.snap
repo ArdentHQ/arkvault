@@ -13,7 +13,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -164,13 +164,13 @@ exports[`ListenLedger > should emit event on device available 1`] = `
       Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
     </p>
     <div
-      class="inline-flex justify-center items-center space-x-3 w-full"
+      class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
         class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
-        class="font-semibold animate-pulse text-theme-secondary-text"
+        class="text-theme-secondary-text animate-pulse font-semibold"
         data-testid="LedgerWaitingDevice-loading_message"
       >
         Waiting for confirmation ...
@@ -193,7 +193,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
         class="space-y-2"
       >
         <div
-          class="flex gap-3 items-center"
+          class="flex items-center gap-3"
         >
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -344,13 +344,13 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
       Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
     </p>
     <div
-      class="inline-flex justify-center items-center space-x-3 w-full"
+      class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
         class="animate-spin rounded-full border-[5px] shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
-        class="font-semibold animate-pulse text-theme-secondary-text"
+        class="text-theme-secondary-text animate-pulse font-semibold"
         data-testid="LedgerWaitingDevice-loading_message"
       >
         Waiting for confirmation ...

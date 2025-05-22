@@ -3,7 +3,7 @@
 exports[`VotesFilter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="hidden mr-6 md:block"
+    class="mr-6 hidden md:block"
   >
     <div
       aria-expanded="false"
@@ -69,7 +69,7 @@ exports[`VotesFilter > should render 1`] = `
 exports[`VotesFilter > should render default 1`] = `
 <DocumentFragment>
   <div
-    class="hidden mr-6 md:block"
+    class="mr-6 hidden md:block"
   >
     <div
       aria-controls=":r2:"
@@ -136,7 +136,7 @@ exports[`VotesFilter > should render default 1`] = `
 exports[`VotesFilter > should render with current option selected 1`] = `
 <DocumentFragment>
   <div
-    class="hidden mr-6 md:block"
+    class="mr-6 hidden md:block"
   >
     <div
       aria-controls=":r5:"
@@ -203,7 +203,7 @@ exports[`VotesFilter > should render with current option selected 1`] = `
 exports[`VotesFilter > should render with disabled current option 1`] = `
 <DocumentFragment>
   <div
-    class="hidden mr-6 md:block"
+    class="mr-6 hidden md:block"
   >
     <div
       aria-controls=":r8:"

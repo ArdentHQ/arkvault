@@ -18,7 +18,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -28,7 +28,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
               </h1>
             </div>
             <div
-              class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
               data-testid="header__subtitle"
             >
               Register a new Validator address on the network below.
@@ -92,7 +92,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
                   class=""
                 >
                   <div
-                    class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white hover:bg-theme-primary-100 hover:text-theme-primary-700"
+                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
                   >
                     <div>
                       <div
@@ -136,7 +136,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
           class="mt-3 space-y-4 sm:mt-4"
         >
           <fieldset
-            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <label
               class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -187,7 +187,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -197,7 +197,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               </h1>
             </div>
             <div
-              class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+              class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -211,7 +211,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+              class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
@@ -225,10 +225,10 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
             >
               <div
-                class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+                class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
               >
                 <div
-                  class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                  class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                 >
                   <div
                     class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -310,7 +310,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+              class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
               data-testid="DetailLabel"
             >
               <div
@@ -324,13 +324,13 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
             >
               <div
-                class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+                class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
               >
                 <div
                   class="space-y-3 sm:space-y-0"
                 >
                   <div
-                    class="flex gap-4 justify-between items-center w-full sm:justify-start"
+                    class="flex w-full items-center justify-between gap-4 sm:justify-start"
                   >
                     <div
                       class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
@@ -338,10 +338,10 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                       Category
                     </div>
                     <div
-                      class="flex items-center px-1 rounded dark:bg-transparent dark:border bg-theme-secondary-200 py-[3px] dark:border-theme-secondary-800"
+                      class="bg-theme-secondary-200 dark:border-theme-secondary-800 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent"
                     >
                       <span
-                        class="font-semibold text-theme-secondary-700 text-[12px] leading-[15px] dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-[12px] leading-[15px] font-semibold"
                       >
                         Registration
                       </span>
@@ -351,11 +351,11 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     class="hidden sm:block"
                   >
                     <div
-                      class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full h-px border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800 h-px"
                     />
                   </div>
                   <div
-                    class="flex gap-4 justify-between items-center w-full sm:justify-start"
+                    class="flex w-full items-center justify-between gap-4 sm:justify-start"
                   >
                     <div
                       class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
@@ -363,7 +363,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                       Validator Public Key
                     </div>
                     <div
-                      class="text-sm font-semibold sm:text-base sm:leading-5 no-ligatures text-theme-secondary-900 truncate leading-[17px] dark:text-theme-secondary-200"
+                      class="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                     />
                   </div>
                 </div>
@@ -374,10 +374,10 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
             data-testid="DetailWrapper"
           >
             <div
-              class="p-3 mt-0 sm:p-0"
+              class="mt-0 p-3 sm:p-0"
             >
               <fieldset
-                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
               >
                 <label
                   class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -433,7 +433,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     <button
                       aria-checked="false"
                       aria-label="0"
-                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded p-0 group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
                       data-testid="ButtonGroupOption"
                       role="radio"
                       type="button"
@@ -442,7 +442,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                         class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50"
                       >
                         <div
-                          class="flex justify-between items-center p-3 sm:flex-col sm:justify-start sm:items-start sm:space-y-2"
+                          class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
                         >
                           <div
                             class="text-sm leading-[17px] sm:leading-5"
@@ -475,7 +475,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     <button
                       aria-checked="true"
                       aria-label="0"
-                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded p-0 group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
                       data-testid="ButtonGroupOption"
                       role="radio"
                       type="button"
@@ -484,7 +484,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                         class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all"
                       >
                         <div
-                          class="flex justify-between items-center p-3 sm:flex-col sm:justify-start sm:items-start sm:space-y-2"
+                          class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
                         >
                           <div
                             class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50"
@@ -517,7 +517,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                     <button
                       aria-checked="false"
                       aria-label="0"
-                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded p-0 group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800"
+                      class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 p-0"
                       data-testid="ButtonGroupOption"
                       role="radio"
                       type="button"
@@ -526,7 +526,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                         class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50"
                       >
                         <div
-                          class="flex justify-between items-center p-3 sm:flex-col sm:justify-start sm:items-start sm:space-y-2"
+                          class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
                         >
                           <div
                             class="text-sm leading-[17px] sm:leading-5"

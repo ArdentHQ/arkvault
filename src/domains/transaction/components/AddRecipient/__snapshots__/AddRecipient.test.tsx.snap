@@ -6,7 +6,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -50,7 +50,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -89,11 +89,11 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -214,7 +214,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -222,16 +222,16 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -244,10 +244,10 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -264,14 +264,14 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -318,7 +318,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                       class=""
                     >
                       <span
-                        class="whitespace-nowrap text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
+                        class="whitespace-nowrap whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
                         data-testid="Amount"
                       >
                         0 BTC
@@ -342,7 +342,7 @@ exports[`AddRecipient > should render 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -386,7 +386,7 @@ exports[`AddRecipient > should render 1`] = `
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -425,11 +425,11 @@ exports[`AddRecipient > should render 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -550,7 +550,7 @@ exports[`AddRecipient > should render 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -558,16 +558,16 @@ exports[`AddRecipient > should render 1`] = `
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -580,10 +580,10 @@ exports[`AddRecipient > should render 1`] = `
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -600,14 +600,14 @@ exports[`AddRecipient > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -663,7 +663,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -707,7 +707,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -746,11 +746,11 @@ exports[`AddRecipient > should render with empty array of recipients as default 
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -871,7 +871,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -879,16 +879,16 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -901,10 +901,10 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -921,14 +921,14 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -984,7 +984,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1028,7 +1028,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -1067,11 +1067,11 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -1192,7 +1192,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1200,16 +1200,16 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -1222,10 +1222,10 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -1242,14 +1242,14 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1305,7 +1305,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1349,7 +1349,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -1388,11 +1388,11 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -1433,7 +1433,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
+                        class="invisible fixed w-auto whitespace-nowrap"
                       >
                         0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
                         …
@@ -1529,7 +1529,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1537,16 +1537,16 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -1559,10 +1559,10 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -1579,14 +1579,14 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1642,7 +1642,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1657,11 +1657,11 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -1782,7 +1782,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -1790,16 +1790,16 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -1812,10 +1812,10 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -1832,14 +1832,14 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -1895,7 +1895,7 @@ exports[`AddRecipient > should set available amount 1`] = `
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -1939,7 +1939,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -1978,11 +1978,11 @@ exports[`AddRecipient > should set available amount 1`] = `
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -2103,7 +2103,7 @@ exports[`AddRecipient > should set available amount 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -2111,16 +2111,16 @@ exports[`AddRecipient > should set available amount 1`] = `
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -2133,10 +2133,10 @@ exports[`AddRecipient > should set available amount 1`] = `
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="hidden sm:flex text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
                   data-testid="AddRecipient__available"
                 >
                   <span
@@ -2153,14 +2153,14 @@ exports[`AddRecipient > should set available amount 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden w-px h-3 sm:flex bg-theme-secondary-300 dark:bg-theme-dark-700"
+                  class="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
                   data-testid="AddRecipient__divider"
                 />
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >
@@ -2216,7 +2216,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
     class="add-recipient-wrapper"
   >
     <div
-      class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
+      class="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between"
     >
       <div
         class="text-sm font-semibold transition-colors duration-100"
@@ -2260,7 +2260,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           </div>
         </span>
         <div
-          class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
           <div>
             <div
@@ -2299,11 +2299,11 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
         class="space-y-4"
       >
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div>
             <div
-              class="flex relative items-center w-full text-left"
+              class="relative flex w-full items-center text-left"
               data-testid="SelectRecipient__wrapper"
             >
               <div
@@ -2424,7 +2424,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex flex-col min-w-0"
+          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
@@ -2432,16 +2432,16 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             for="amount"
           >
             <span
-              class="flex justify-between w-full items-centers"
+              class="items-centers flex w-full justify-between"
             >
               <div
-                class="flex flex-row gap-1.5 items-center"
+                class="flex flex-row items-center gap-1.5"
               >
                 <span>
                   Amount
                 </span>
                 <span
-                  class="text-sm sm:hidden text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden"
                 >
                   (
                   <span
@@ -2454,13 +2454,13 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 </span>
               </div>
               <div
-                class="flex flex-row gap-2 items-center"
+                class="flex flex-row items-center gap-2"
               >
                 <span
                   class="inline-flex"
                 >
                   <button
-                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm text-theme-navy-600"
+                    class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-navy-600 p-0 text-sm"
                     data-testid="AddRecipient__send-all"
                     type="button"
                   >

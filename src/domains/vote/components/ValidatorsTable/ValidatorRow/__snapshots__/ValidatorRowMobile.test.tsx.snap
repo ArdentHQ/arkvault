@@ -19,7 +19,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               />
               <div
                 class="flex items-center"
@@ -31,7 +31,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Standby
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
                   class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
@@ -54,7 +54,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator
                 </div>
@@ -75,7 +75,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Status
                 </div>
@@ -92,7 +92,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Explorer
                 </div>
@@ -162,7 +162,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               />
               <div
                 class="flex items-center"
@@ -174,7 +174,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Standby
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
                   class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-primary-600 dark:hover:text-theme-primary-700"
@@ -197,7 +197,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator
                 </div>
@@ -218,7 +218,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Status
                 </div>
@@ -235,7 +235,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Explorer
                 </div>
@@ -305,7 +305,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               />
               <div
                 class="flex items-center"
@@ -317,7 +317,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Standby
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <span
                   class="w-full sm:w-auto"
@@ -345,7 +345,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator
                 </div>
@@ -366,7 +366,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Status
                 </div>
@@ -383,7 +383,7 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Explorer
                 </div>

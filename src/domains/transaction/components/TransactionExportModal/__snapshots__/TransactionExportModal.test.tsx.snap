@@ -15,10 +15,10 @@ exports[`TransactionExportModal > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -56,7 +56,7 @@ exports[`TransactionExportModal > should render 1`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -64,10 +64,10 @@ exports[`TransactionExportModal > should render 1`] = `
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -97,10 +97,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -177,10 +177,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -195,7 +195,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -203,7 +203,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -272,10 +272,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -319,10 +319,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -337,7 +337,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -345,7 +345,7 @@ exports[`TransactionExportModal > should render 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -354,13 +354,13 @@ exports[`TransactionExportModal > should render 1`] = `
                                     >
                                       Comma
                                       <span
-                                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
                                       >
                                         (
                                       </span>
                                       ,
                                       <span
-                                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
                                       >
                                         )
                                       </span>
@@ -421,10 +421,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -468,10 +468,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -515,10 +515,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -562,10 +562,10 @@ exports[`TransactionExportModal > should render 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -654,10 +654,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -695,7 +695,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -703,10 +703,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -736,10 +736,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -816,10 +816,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -834,7 +834,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -842,7 +842,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -911,10 +911,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -958,10 +958,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -976,7 +976,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -984,7 +984,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -993,13 +993,13 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                     >
                                       Comma
                                       <span
-                                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
                                       >
                                         (
                                       </span>
                                       ,
                                       <span
-                                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
                                       >
                                         )
                                       </span>
@@ -1060,10 +1060,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -1107,10 +1107,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -1154,10 +1154,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -1201,10 +1201,10 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -1293,10 +1293,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1334,7 +1334,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -1342,10 +1342,10 @@ exports[`TransactionExportModal > should render progress status 1`] = `
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -1361,7 +1361,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                 >
                   <div>
                     <svg
-                      class="hidden mx-auto mb-6 md:block h-26"
+                      class="mx-auto mb-6 hidden h-26 md:block"
                       id="success-light-navy"
                       viewBox="0 0 207 106"
                       xml:space="preserve"
@@ -1451,14 +1451,14 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                       </div>
                     </div>
                     <div
-                      class="p-4 rounded-xl border sm:py-5 sm:px-6 border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border p-4 sm:px-6 sm:py-5"
                     >
                       <div
-                        class="flex justify-between items-center space-x-4"
+                        class="flex items-center justify-between space-x-4"
                         data-testid="FilePreviewPlain"
                       >
                         <div
-                          class="flex items-center space-x-2 grow"
+                          class="flex grow items-center space-x-2"
                         >
                           <div
                             data-testid="icon-ExtensionCsv"
@@ -1494,13 +1494,13 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                             </div>
                           </div>
                           <div
-                            class="flex-1 w-0 text-sm font-semibold sm:text-lg truncate leading-[17px] sm:leading-[21px]"
+                            class="w-0 flex-1 truncate text-sm leading-[17px] font-semibold sm:text-lg sm:leading-[21px]"
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </div>
                         </div>
                         <div
-                          class="flex justify-center items-center w-5 h-5 rounded-full dark:text-white bg-theme-navy-100 text-theme-navy-600 shrink-0 dark:bg-theme-navy-600"
+                          class="bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 flex h-5 w-5 shrink-0 items-center justify-center rounded-full dark:text-white"
                           data-testid="FilePreviewPlain__Success"
                         >
                           <div>
@@ -1583,10 +1583,10 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1624,7 +1624,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -1632,10 +1632,10 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -1651,7 +1651,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                 >
                   <div>
                     <svg
-                      class="hidden mx-auto mb-6 md:block h-26"
+                      class="mx-auto mb-6 hidden h-26 md:block"
                       id="success-light-navy"
                       viewBox="0 0 207 106"
                       xml:space="preserve"
@@ -1741,14 +1741,14 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       </div>
                     </div>
                     <div
-                      class="p-4 rounded-xl border sm:py-5 sm:px-6 border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border p-4 sm:px-6 sm:py-5"
                     >
                       <div
-                        class="flex justify-between items-center space-x-4"
+                        class="flex items-center justify-between space-x-4"
                         data-testid="FilePreviewPlain"
                       >
                         <div
-                          class="flex items-center space-x-2 grow"
+                          class="flex grow items-center space-x-2"
                         >
                           <div
                             data-testid="icon-ExtensionCsv"
@@ -1784,13 +1784,13 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                             </div>
                           </div>
                           <div
-                            class="flex-1 w-0 text-sm font-semibold sm:text-lg truncate leading-[17px] sm:leading-[21px]"
+                            class="w-0 flex-1 truncate text-sm leading-[17px] font-semibold sm:text-lg sm:leading-[21px]"
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </div>
                         </div>
                         <div
-                          class="flex justify-center items-center w-5 h-5 rounded-full dark:text-white bg-theme-navy-100 text-theme-navy-600 shrink-0 dark:bg-theme-navy-600"
+                          class="bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 flex h-5 w-5 shrink-0 items-center justify-center rounded-full dark:text-white"
                           data-testid="FilePreviewPlain__Success"
                         >
                           <div>
@@ -1873,10 +1873,10 @@ exports[`TransactionExportModal > should render success and stay open if downloa
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1914,7 +1914,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -1922,10 +1922,10 @@ exports[`TransactionExportModal > should render success and stay open if downloa
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -1941,7 +1941,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                 >
                   <div>
                     <svg
-                      class="hidden mx-auto mb-6 md:block h-26"
+                      class="mx-auto mb-6 hidden h-26 md:block"
                       id="success-light-navy"
                       viewBox="0 0 207 106"
                       xml:space="preserve"
@@ -2031,14 +2031,14 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       </div>
                     </div>
                     <div
-                      class="p-4 rounded-xl border sm:py-5 sm:px-6 border-theme-secondary-300 dark:border-theme-secondary-800"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border p-4 sm:px-6 sm:py-5"
                     >
                       <div
-                        class="flex justify-between items-center space-x-4"
+                        class="flex items-center justify-between space-x-4"
                         data-testid="FilePreviewPlain"
                       >
                         <div
-                          class="flex items-center space-x-2 grow"
+                          class="flex grow items-center space-x-2"
                         >
                           <div
                             data-testid="icon-ExtensionCsv"
@@ -2074,13 +2074,13 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                             </div>
                           </div>
                           <div
-                            class="flex-1 w-0 text-sm font-semibold sm:text-lg truncate leading-[17px] sm:leading-[21px]"
+                            class="w-0 flex-1 truncate text-sm leading-[17px] font-semibold sm:text-lg sm:leading-[21px]"
                           >
                             0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
                           </div>
                         </div>
                         <div
-                          class="flex justify-center items-center w-5 h-5 rounded-full dark:text-white bg-theme-navy-100 text-theme-navy-600 shrink-0 dark:bg-theme-navy-600"
+                          class="bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 flex h-5 w-5 shrink-0 items-center justify-center rounded-full dark:text-white"
                           data-testid="FilePreviewPlain__Success"
                         >
                           <div>
@@ -2163,10 +2163,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2204,7 +2204,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -2212,10 +2212,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -2245,10 +2245,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2325,10 +2325,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2343,7 +2343,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2351,7 +2351,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -2420,10 +2420,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2467,10 +2467,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2485,7 +2485,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2493,7 +2493,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -2502,13 +2502,13 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                     >
                                       Comma
                                       <span
-                                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
                                       >
                                         (
                                       </span>
                                       ,
                                       <span
-                                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
                                       >
                                         )
                                       </span>
@@ -2569,10 +2569,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2616,10 +2616,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2663,10 +2663,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2710,10 +2710,10 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2802,10 +2802,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear md:mt-8 md:mr-8 hover:text-white bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white hover:bg-theme-primary-800"
+          class="bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 absolute top-0 right-0 z-10 mt-4 mr-6 rounded transition-all duration-100 ease-linear hover:text-white md:mt-8 md:mr-8 dark:hover:text-white"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-8 h-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2843,7 +2843,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
           </button>
         </div>
         <div
-          class="flex relative flex-col flex-1 space-y-1.5"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
             class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl"
@@ -2851,10 +2851,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
             Transaction History
           </h2>
           <div
-            class="flex flex-col flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
-              class="pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base text-theme-secondary-text"
+              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
               Export your wallet's transaction history.
             </div>
@@ -2884,10 +2884,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2964,10 +2964,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -2982,7 +2982,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2990,7 +2990,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -3059,10 +3059,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -3106,10 +3106,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -3124,7 +3124,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex flex-col min-w-0"
+                                class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
                               >
                                 <div
                                   aria-expanded="false"
@@ -3132,7 +3132,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                                 >
                                   <button
-                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden overflow-hidden justify-between space-x-4 w-full cursor-pointer"
+                                    class="flex items-center space-x-2 font-semibold focus:outline-hidden w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
                                     type="button"
                                   >
@@ -3141,13 +3141,13 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                     >
                                       Comma
                                       <span
-                                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 px-1 leading-tight"
                                       >
                                         (
                                       </span>
                                       ,
                                       <span
-                                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+                                        class="text-theme-secondary-500 dark:text-theme-secondary-600 leading-tight"
                                       >
                                         )
                                       </span>
@@ -3208,10 +3208,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -3255,10 +3255,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -3302,10 +3302,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -3349,10 +3349,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -3396,10 +3396,10 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           data-testid="list-divided-item__inner-wrapper"
                         >
                           <div
-                            class="flex flex-col space-y-2 w-full"
+                            class="flex w-full flex-col space-y-2"
                           >
                             <div
-                              class="flex justify-between items-center space-x-5"
+                              class="flex items-center justify-between space-x-5"
                             >
                               <span
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"

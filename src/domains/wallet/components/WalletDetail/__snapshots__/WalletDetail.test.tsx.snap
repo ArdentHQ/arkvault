@@ -3,17 +3,17 @@
 exports[`WalletDetail > should render 1`] = `
 <div>
   <div
-    class="flex items-center py-4 space-x-4 border-t border-dashed sm:py-6 border-theme-secondary-300 no-ligatures dark:border-theme-secondary-800"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
-      class="flex justify-between items-center space-x-4 w-full"
+      class="flex w-full items-center justify-between space-x-4"
     >
       <div
-        class="space-y-2 w-40 whitespace-nowrap sm:flex-1"
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -24,10 +24,10 @@ exports[`WalletDetail > should render 1`] = `
         </div>
       </div>
       <div
-        class="flex overflow-auto justify-end items-center w-full sm:w-auto"
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
       >
         <div
-          class="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden"
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
         >
           <div
             class="w-full truncate"
@@ -44,17 +44,17 @@ exports[`WalletDetail > should render 1`] = `
 exports[`WalletDetail > should render with bottom border 1`] = `
 <div>
   <div
-    class="flex items-center py-4 space-x-4 border-b border-dashed sm:py-6 border-theme-secondary-300 no-ligatures dark:border-theme-secondary-800"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-b py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
-      class="flex justify-between items-center space-x-4 w-full"
+      class="flex w-full items-center justify-between space-x-4"
     >
       <div
-        class="space-y-2 w-40 whitespace-nowrap sm:flex-1"
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -65,10 +65,10 @@ exports[`WalletDetail > should render with bottom border 1`] = `
         </div>
       </div>
       <div
-        class="flex overflow-auto justify-end items-center w-full sm:w-auto"
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
       >
         <div
-          class="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden"
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
         >
           <div
             class="w-full truncate"
@@ -85,17 +85,17 @@ exports[`WalletDetail > should render with bottom border 1`] = `
 exports[`WalletDetail > should render with extra children 1`] = `
 <div>
   <div
-    class="flex items-center py-0 space-x-4 border-t border-dashed border-theme-secondary-300 no-ligatures dark:border-theme-secondary-800"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-0 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
-      class="flex justify-between items-center space-x-4 w-full"
+      class="flex w-full items-center justify-between space-x-4"
     >
       <div
-        class="space-y-2 w-40 whitespace-nowrap sm:flex-1"
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -106,10 +106,10 @@ exports[`WalletDetail > should render with extra children 1`] = `
         </div>
       </div>
       <div
-        class="flex overflow-auto justify-end items-center w-full sm:w-auto"
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
       >
         <div
-          class="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden"
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
         >
           <div
             class="w-full truncate"
@@ -129,17 +129,17 @@ exports[`WalletDetail > should render with extra children 1`] = `
 exports[`WalletDetail > should render with top border 1`] = `
 <div>
   <div
-    class="flex items-center py-4 space-x-4 border-t border-dashed sm:py-6 border-theme-secondary-300 no-ligatures dark:border-theme-secondary-800"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
-      class="flex justify-between items-center space-x-4 w-full"
+      class="flex w-full items-center justify-between space-x-4"
     >
       <div
-        class="space-y-2 w-40 whitespace-nowrap sm:flex-1"
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -150,10 +150,10 @@ exports[`WalletDetail > should render with top border 1`] = `
         </div>
       </div>
       <div
-        class="flex overflow-auto justify-end items-center w-full sm:w-auto"
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
       >
         <div
-          class="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden"
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
         >
           <div
             class="w-full truncate"
@@ -170,17 +170,17 @@ exports[`WalletDetail > should render with top border 1`] = `
 exports[`WalletDetail > should render without border 1`] = `
 <div>
   <div
-    class="flex items-center py-4 space-x-4 sm:py-6 no-ligatures"
+    class="flex items-center space-x-4 py-4 sm:py-6 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
-      class="flex justify-between items-center space-x-4 w-full"
+      class="flex w-full items-center justify-between space-x-4"
     >
       <div
-        class="space-y-2 w-40 whitespace-nowrap sm:flex-1"
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -191,10 +191,10 @@ exports[`WalletDetail > should render without border 1`] = `
         </div>
       </div>
       <div
-        class="flex overflow-auto justify-end items-center w-full sm:w-auto"
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
       >
         <div
-          class="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden"
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
         >
           <div
             class="w-full truncate"
@@ -211,17 +211,17 @@ exports[`WalletDetail > should render without border 1`] = `
 exports[`WalletDetail > should render without padding 1`] = `
 <div>
   <div
-    class="flex items-center py-0 space-x-4 border-t border-dashed border-theme-secondary-300 no-ligatures dark:border-theme-secondary-800"
+    class="flex items-center space-x-4 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 border-t py-0 no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
-      class="flex justify-between items-center space-x-4 w-full"
+      class="flex w-full items-center justify-between space-x-4"
     >
       <div
-        class="space-y-2 w-40 whitespace-nowrap sm:flex-1"
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="text-sm font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Test
         </div>
@@ -232,10 +232,10 @@ exports[`WalletDetail > should render without padding 1`] = `
         </div>
       </div>
       <div
-        class="flex overflow-auto justify-end items-center w-full sm:w-auto"
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
       >
         <div
-          class="flex overflow-auto justify-end items-center pr-4 w-full font-semibold sm:hidden"
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
         >
           <div
             class="w-full truncate"

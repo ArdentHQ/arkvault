@@ -11,11 +11,11 @@ exports[`Export Settings > should render export settings 1`] = `
       data-testid="NavigationBarMobile"
     >
       <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        class="border-theme-secondary-300 dark:border-theme-secondary-900 border-t"
         data-testid="NavigationBar__buttons-separator"
       />
       <div
-        class="flex justify-center items-center space-x-4 h-14"
+        class="flex h-14 items-center justify-center space-x-4"
       >
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -135,7 +135,7 @@ exports[`Export Settings > should render export settings 1`] = `
       class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
-        class="flex relative flex-row h-12"
+        class="relative flex h-12 flex-row"
       >
         <div
           class="hidden w-9 sm:flex"
@@ -172,13 +172,13 @@ exports[`Export Settings > should render export settings 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 justify-between items-center px-6"
+          class="flex flex-1 items-center justify-between px-6"
         >
           <div
-            class="flex flex-row gap-6 items-center"
+            class="flex flex-row items-center gap-6"
           >
             <div
-              class="flex items-center my-auto h-12"
+              class="my-auto flex h-12 items-center"
             >
               <button
                 class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
@@ -207,14 +207,14 @@ exports[`Export Settings > should render export settings 1`] = `
               </button>
             </div>
             <ul
-              class="hidden items-center h-12 xl:flex"
+              class="hidden h-12 items-center xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -225,7 +225,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -236,7 +236,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -247,7 +247,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 class="flex"
               >
                 <a
-                  class="flex relative items-center py-1 px-2 text-sm font-semibold bg-transparent rounded transition-all duration-200 ring-focus text-theme-secondary-700 h-fit leading-[17px] dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-hidden"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -256,7 +256,7 @@ exports[`Export Settings > should render export settings 1`] = `
               </li>
             </ul>
             <div
-              class="flex content-center items-center mr-auto xl:hidden"
+              class="mr-auto flex content-center items-center xl:hidden"
               data-testid="NavigationBar__menu-toggle"
             >
               <div
@@ -265,7 +265,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex items-center h-7 rounded cursor-pointer focus:ring-2 text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 focus:outline-hidden"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -294,7 +294,7 @@ exports[`Export Settings > should render export settings 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-row gap-4 justify-center items-center sm:gap-5"
+            class="flex flex-row items-center justify-center gap-4 sm:gap-5"
           >
             <div>
               <div
@@ -314,7 +314,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 m-0"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -346,7 +346,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -355,7 +355,7 @@ exports[`Export Settings > should render export settings 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -375,7 +375,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 m-0"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -397,7 +397,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -409,7 +409,7 @@ exports[`Export Settings > should render export settings 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -461,7 +461,7 @@ exports[`Export Settings > should render export settings 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r sm:flex sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -510,7 +510,7 @@ exports[`Export Settings > should render export settings 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -525,7 +525,7 @@ exports[`Export Settings > should render export settings 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -533,7 +533,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded border-2 dark:bg-transparent border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 p-[3px] dark:border-theme-danger-info-border dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -561,7 +561,7 @@ exports[`Export Settings > should render export settings 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 text-sm"
                         >
                           Testnet
                         </span>
@@ -599,16 +599,16 @@ exports[`Export Settings > should render export settings 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r sm:block sm:h-12 border-theme-secondary-300 dark:border-theme-dark-700"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
-              class="flex gap-5 items-center"
+              class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -648,7 +648,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold text-theme-secondary-700 leading-[17px] md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                      class="text-theme-secondary-700 md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -666,10 +666,10 @@ exports[`Export Settings > should render export settings 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex gap-6 items-center p-0 py-0.5 px-1 bg-transparent rounded group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
-                    class="relative justify-center items-center align-middle rounded cursor-pointer"
+                    class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
@@ -684,7 +684,7 @@ exports[`Export Settings > should render export settings 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -714,7 +714,7 @@ exports[`Export Settings > should render export settings 1`] = `
               class="space-y-2"
             >
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   data-testid="icon-SettingsLight"
@@ -775,7 +775,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Customize your wallet to suit your needs.
@@ -796,13 +796,13 @@ exports[`Export Settings > should render export settings 1`] = `
             class="flex flex-1"
           >
             <div
-              class="flex flex-col mx-auto w-full lg:container lg:flex-row lg:space-x-3"
+              class="mx-auto flex w-full flex-col lg:container lg:flex-row lg:space-x-3"
             >
               <div
                 class="mb-4 md:-mt-4 lg:my-0"
               >
                 <div
-                  class="relative py-2 px-6 -mx-6 -mt-4 border-t md:p-0 md:m-0 md:bg-transparent md:border-t-0 lg:hidden dark:bg-black border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 dark:md:bg-transparent"
+                  class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 relative -mx-6 -mt-4 border-t px-6 py-2 md:m-0 md:border-t-0 md:bg-transparent md:p-0 lg:hidden dark:bg-black dark:md:bg-transparent"
                 >
                   <div
                     aria-expanded="false"
@@ -810,10 +810,10 @@ exports[`Export Settings > should render export settings 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="flex overflow-hidden items-center py-3 px-4 space-x-4 bg-white rounded border border-transparent cursor-pointer dark:border md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900"
+                      class="md:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 flex cursor-pointer items-center space-x-4 overflow-hidden rounded border border-transparent bg-white px-4 py-3 dark:border"
                     >
                       <span
-                        class="flex-1 font-semibold leading-tight"
+                        class="flex-1 leading-tight font-semibold"
                       >
                         Export
                       </span>
@@ -847,7 +847,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   </div>
                 </div>
                 <div
-                  class="hidden p-1 rounded-xl border lg:block border-theme-secondary-300 w-[200px] dark:border-theme-dark-700"
+                  class="border-theme-secondary-300 dark:border-theme-dark-700 hidden w-[200px] rounded-xl border p-1 lg:block"
                 >
                   <ul
                     class="space-y-1"
@@ -912,7 +912,7 @@ exports[`Export Settings > should render export settings 1`] = `
                 </div>
               </div>
               <div
-                class="flex-1 sm:overflow-hidden sm:rounded-xl sm:border border-theme-secondary-300 dark:border-theme-dark-700"
+                class="border-theme-secondary-300 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
                   class="space-y-0"
@@ -926,12 +926,12 @@ exports[`Export Settings > should render export settings 1`] = `
                       class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
-                        class="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 mb-0 text-base font-semibold"
                       >
                         Export Profile
                       </h2>
                       <p
-                        class="mt-1 text-sm text-theme-secondary-700 dark:text-theme-dark-200"
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 mt-1 text-sm"
                       >
                         Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
                       </p>
@@ -952,10 +952,10 @@ exports[`Export Settings > should render export settings 1`] = `
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
-                              class="flex flex-col space-y-2 w-full"
+                              class="flex w-full flex-col space-y-2"
                             >
                               <div
-                                class="flex justify-between items-center space-x-5"
+                                class="flex items-center justify-between space-x-5"
                               >
                                 <span
                                   class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -1001,10 +1001,10 @@ exports[`Export Settings > should render export settings 1`] = `
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
-                              class="flex flex-col space-y-2 w-full"
+                              class="flex w-full flex-col space-y-2"
                             >
                               <div
-                                class="flex justify-between items-center space-x-5"
+                                class="flex items-center justify-between space-x-5"
                               >
                                 <span
                                   class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
@@ -1043,7 +1043,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         </li>
                       </ul>
                       <div
-                        class="pt-6 pb-6 mt-6 space-y-5 border-t border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 mt-6 space-y-5 border-t border-dashed pt-6 pb-6"
                       >
                         <div
                           class="flex flex-col overflow-hidden rounded-xl"

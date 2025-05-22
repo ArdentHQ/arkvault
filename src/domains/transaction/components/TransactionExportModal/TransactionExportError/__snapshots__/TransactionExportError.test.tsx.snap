@@ -4,7 +4,7 @@ exports[`TransactionExportError > should render in lg 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="hidden mx-auto mb-6 md:block h-26"
+      class="mx-auto mb-6 hidden h-26 md:block"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ exports[`TransactionExportError > should render in md 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="hidden mx-auto mb-6 md:block h-26"
+      class="mx-auto mb-6 hidden h-26 md:block"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@ exports[`TransactionExportError > should render in sm 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="hidden mx-auto mb-6 md:block h-26"
+      class="mx-auto mb-6 hidden h-26 md:block"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
@@ -361,7 +361,7 @@ exports[`TransactionExportError > should render in xl 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="hidden mx-auto mb-6 md:block h-26"
+      class="mx-auto mb-6 hidden h-26 md:block"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
@@ -480,7 +480,7 @@ exports[`TransactionExportError > should render in xs 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="hidden mx-auto mb-6 md:block h-26"
+      class="mx-auto mb-6 hidden h-26 md:block"
       viewBox="0 0 207 106"
       xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"

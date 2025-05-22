@@ -19,12 +19,12 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -33,10 +33,10 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -56,7 +56,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -77,7 +77,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -86,7 +86,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -99,7 +99,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -145,7 +145,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -188,12 +188,12 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -202,10 +202,10 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -225,7 +225,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -246,7 +246,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -255,7 +255,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -268,7 +268,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -314,7 +314,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -356,12 +356,12 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -370,10 +370,10 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -393,7 +393,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -414,7 +414,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -423,7 +423,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -436,7 +436,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -482,7 +482,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -524,12 +524,12 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -538,10 +538,10 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -561,7 +561,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -582,7 +582,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -591,7 +591,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -604,7 +604,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -650,7 +650,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -691,12 +691,12 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -705,10 +705,10 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -728,7 +728,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -749,7 +749,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -758,7 +758,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -771,7 +771,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -817,7 +817,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -858,12 +858,12 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -872,10 +872,10 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -895,7 +895,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -916,7 +916,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -925,7 +925,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -938,7 +938,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -984,7 +984,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1016,13 +1016,13 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               />
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-1"
                   disabled=""
                   type="button"
@@ -1043,7 +1043,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1064,13 +1064,13 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
                 <div>
                   <span
-                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                    class="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
                   >
                     N/A
                   </span>
@@ -1080,13 +1080,13 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
                 <div>
                   <span
-                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                    class="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
                   >
                     N/A
                   </span>
@@ -1120,12 +1120,12 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -1134,10 +1134,10 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -1157,7 +1157,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1178,7 +1178,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1187,7 +1187,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -1200,7 +1200,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -1246,7 +1246,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1278,13 +1278,13 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               />
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-1"
                   disabled=""
                   type="button"
@@ -1305,7 +1305,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1326,13 +1326,13 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
                 <div>
                   <span
-                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                    class="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
                   >
                     N/A
                   </span>
@@ -1342,13 +1342,13 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
                 <div>
                   <span
-                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                    class="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
                   >
                     N/A
                   </span>
@@ -1382,15 +1382,15 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -1410,7 +1410,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1431,13 +1431,13 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
                 <div>
                   <span
-                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                    class="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
                     data-testid="AddressRowMobile--nowallet"
                   >
                     N/A
@@ -1448,13 +1448,13 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
                 <div>
                   <span
-                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
+                    class="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
                   >
                     N/A
                   </span>
@@ -1488,12 +1488,12 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -1502,10 +1502,10 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                   Active
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -1525,7 +1525,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1546,7 +1546,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1555,7 +1555,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -1568,7 +1568,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -1614,7 +1614,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1655,12 +1655,12 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -1669,10 +1669,10 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                   Resigned
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -1692,7 +1692,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1713,7 +1713,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1722,7 +1722,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -1735,7 +1735,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -1781,7 +1781,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>
@@ -1822,12 +1822,12 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
               data-testid="mobile-table-element-header"
             >
               <span
-                class="flex-1 text-sm font-semibold text-theme-secondary-900 truncate dark:text-theme-text"
+                class="text-theme-secondary-900 dark:text-theme-text flex-1 truncate text-sm font-semibold"
               >
                 Mainsail Wallet 1
               </span>
               <div
-                class="flex gap-3 items-center"
+                class="flex items-center gap-3"
               >
                 <div
                   class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
@@ -1836,10 +1836,10 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                   Standby
                 </div>
                 <span
-                  class="block w-px h-5 sm:hidden bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px sm:hidden"
                 />
                 <button
-                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm hover:underline text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700"
+                  class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
                   data-testid="AddressRowMobile__select-0"
                   type="button"
                 >
@@ -1859,7 +1859,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Address
                 </div>
@@ -1880,7 +1880,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="grid grid-cols-1 gap-2"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Voting for
                 </div>
@@ -1889,7 +1889,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex overflow-hidden flex-1 justify-end"
+                      class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
                         class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
@@ -1902,7 +1902,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                           class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
                           <div
-                            class="flex items-center w-full"
+                            class="flex w-full items-center"
                           >
                             <span
                               class="no-ligatures"
@@ -1948,7 +1948,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="grid-cols-1 gap-2 hidden sm:grid"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-semibold"
                 >
                   Validator Status
                 </div>

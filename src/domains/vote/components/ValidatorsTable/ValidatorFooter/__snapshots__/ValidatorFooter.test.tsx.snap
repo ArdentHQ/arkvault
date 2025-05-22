@@ -3,17 +3,17 @@
 exports[`ValidatorFooter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="fixed inset-x-0 bottom-0 py-3 mb-14 w-screen h-auto border-t sm:mb-0 border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700"
+    class="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
     data-testid="DelegateTable__footer"
   >
     <div
-      class="px-8 mx-auto md:px-10 lg:container"
+      class="mx-auto px-8 md:px-10 lg:container"
     >
       <div
         class="flex flex-col font-semibold sm:flex-row sm:space-x-3"
       >
         <div
-          class="hidden overflow-x-auto sm:mr-auto sm:divide-x md:flex divide-theme-secondary-300 grow dark:divide-theme-secondary-800"
+          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex"
         >
           <div
             class="flex grow overflow-x-auto"
@@ -22,7 +22,7 @@ exports[`ValidatorFooter > should render 1`] = `
               class="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
             >
               <div
-                class="flex overflow-hidden items-center space-x-2"
+                class="flex items-center space-x-2 overflow-hidden"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:text-base hidden whitespace-nowrap sm:block"
@@ -30,7 +30,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   Voting Address:
                 </div>
                 <div
-                  class="flex overflow-x-auto w-full xl:-mt-px lg:text"
+                  class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -59,13 +59,13 @@ exports[`ValidatorFooter > should render 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col flex-1 justify-center items-center sm:flex-row"
+          class="flex flex-1 flex-col items-center justify-center sm:flex-row"
         >
           <div
-            class="flex flex-1 items-center sm:-ml-6 md:flex-none md:ml-0"
+            class="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none"
           >
             <div
-              class="flex space-x-3 pr-4 last:pr-6 pl-0 lg:pl-4 first:pl-0 md:first:pl-6"
+              class="flex space-x-3 pr-4 last:pr-6 pl-0 first:pl-0 md:first:pl-6 lg:pl-4"
             >
               <div
                 class="flex flex-row items-center space-x-2"
@@ -80,7 +80,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   data-testid="DelegateTable__footer--votes"
                 >
                   <div
-                    class="flex justify-start items-center md:justify-end"
+                    class="flex items-center justify-start md:justify-end"
                   >
                     <div>
                       0
@@ -90,7 +90,7 @@ exports[`ValidatorFooter > should render 1`] = `
               </div>
             </div>
             <span
-              class="block w-px h-5 bg-theme-secondary-300 dark:bg-theme-secondary-800"
+              class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px"
             />
             <div
               class="flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6"
@@ -108,7 +108,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   data-testid="DelegateTable__footer--unvotes"
                 >
                   <div
-                    class="flex justify-start items-center md:justify-end"
+                    class="flex items-center justify-start md:justify-end"
                   >
                     <div>
                       0
@@ -118,7 +118,7 @@ exports[`ValidatorFooter > should render 1`] = `
               </div>
             </div>
             <span
-              class="block w-px h-5 md:hidden lg:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+              class="bg-theme-secondary-300 dark:bg-theme-secondary-800 block h-5 w-px md:hidden lg:block"
             />
             <div
               class="space-x-3 pr-4 pl-4 first:pl-6 last:pr-6 flex md:hidden lg:flex"
@@ -136,7 +136,7 @@ exports[`ValidatorFooter > should render 1`] = `
                   data-testid="DelegateTable__footer--total"
                 >
                   <div
-                    class="flex justify-start items-center md:justify-end"
+                    class="flex items-center justify-start md:justify-end"
                   >
                     <div>
                       0/1
@@ -147,13 +147,13 @@ exports[`ValidatorFooter > should render 1`] = `
             </div>
           </div>
           <div
-            class="pt-3 w-full sm:flex sm:items-center sm:pt-0 sm:w-auto"
+            class="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0"
           >
             <span
-              class="hidden w-px h-5 md:block bg-theme-secondary-300 dark:bg-theme-secondary-800"
+              class="bg-theme-secondary-300 dark:bg-theme-secondary-800 hidden h-5 w-px md:block"
             />
             <span
-              class="sm:pl-6 sm:ml-auto"
+              class="sm:ml-auto sm:pl-6"
               data-testid="DelegateTable__continue--wrapper"
             >
               <button

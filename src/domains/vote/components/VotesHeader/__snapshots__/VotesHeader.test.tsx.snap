@@ -3,7 +3,7 @@
 exports[`VotesHeader > should render a different title if on select validator step 1`] = `
 <DocumentFragment>
   <section
-    class="flex justify-between items-center py-6 px-8 w-full dark:bg-black bg-theme-secondary-100 h-13"
+    class="bg-theme-secondary-100 flex h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
   >
     <div
       class="flex flex-col gap-2"
@@ -33,7 +33,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
           class="space-y-2"
         >
           <div
-            class="flex gap-3 items-center"
+            class="flex items-center gap-3"
           >
             <div
               data-testid="icon-VotesLight"
@@ -101,7 +101,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
               </h1>
                
               <div
-                class="flex items-center text-sm leading-6 md:text-base md:leading-6 text-theme-secondary-text"
+                class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                 data-testid="header__subtitle"
               >
                 Manage your cryptoasset staking.
@@ -118,7 +118,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
 exports[`VotesHeader > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <section
-    class="flex justify-between items-center py-6 px-8 w-full dark:bg-black bg-theme-secondary-100 h-13"
+    class="bg-theme-secondary-100 flex h-13 w-full items-center justify-between px-8 py-6 dark:bg-black"
   >
     <div
       class="flex flex-col gap-2"
@@ -129,7 +129,7 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
         Votes
       </h1>
       <div
-        class="flex items-center text-sm leading-5 text-theme-secondary-text"
+        class="text-theme-secondary-text flex items-center text-sm leading-5"
       >
         Manage your cryptoasset staking.
       </div>

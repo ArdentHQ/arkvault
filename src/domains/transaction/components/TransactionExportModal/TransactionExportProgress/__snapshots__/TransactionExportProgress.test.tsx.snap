@@ -4,7 +4,7 @@ exports[`TransactionExportProgress > should render with progress count 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="hidden mx-auto mb-6 md:block h-26"
+      class="mx-auto mb-6 hidden h-26 md:block"
       id="info-light"
       viewBox="0 0 207 106"
       xml:space="preserve"

@@ -9,7 +9,7 @@ exports[`ErrorStep > should display error details 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row gap-3 justify-start items-center"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
           class="bg-theme-background flex items-end justify-between"
@@ -18,7 +18,7 @@ exports[`ErrorStep > should display error details 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -34,7 +34,7 @@ exports[`ErrorStep > should display error details 1`] = `
         class="space-y-4"
       >
         <p
-          class="hidden md:block text-theme-secondary-text"
+          class="text-theme-secondary-text hidden md:block"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
@@ -91,7 +91,7 @@ exports[`ErrorStep > should display error details 1`] = `
           class="relative"
         >
           <div
-            class="hidden absolute right-3 bottom-4 z-10 w-0 h-0 border-t-8 -rotate-45 pointer-events-none md:block border-t-theme-secondary-400 border-x-8 border-x-transparent dark:border-t-theme-secondary-700"
+            class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
           />
           <div
             class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative py-4"
@@ -184,7 +184,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row gap-3 justify-start items-center"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
           class="bg-theme-background flex items-end justify-between"
@@ -193,7 +193,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -209,7 +209,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
         class="space-y-4"
       >
         <p
-          class="hidden md:block text-theme-secondary-text"
+          class="text-theme-secondary-text hidden md:block"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
@@ -263,7 +263,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
           </div>
         </div>
         <svg
-          class="block mx-auto mt-4 w-full max-w-[400px]"
+          class="mx-auto mt-4 block w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"
@@ -425,7 +425,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row gap-3 justify-start items-center"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
           class="bg-theme-background flex items-end justify-between"
@@ -434,7 +434,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -450,7 +450,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
         class="space-y-4"
       >
         <p
-          class="hidden md:block text-theme-secondary-text"
+          class="text-theme-secondary-text hidden md:block"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
@@ -504,7 +504,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
           </div>
         </div>
         <svg
-          class="block mx-auto mt-4 w-full max-w-[400px]"
+          class="mx-auto mt-4 block w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"
@@ -666,7 +666,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row gap-3 justify-start items-center"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
           class="bg-theme-background flex items-end justify-between"
@@ -675,7 +675,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -691,7 +691,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
         class="space-y-4"
       >
         <p
-          class="hidden md:block text-theme-secondary-text"
+          class="text-theme-secondary-text hidden md:block"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
@@ -745,7 +745,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
           </div>
         </div>
         <svg
-          class="block mx-auto mt-4 w-full max-w-[400px]"
+          class="mx-auto mt-4 block w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"
@@ -891,7 +891,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
       class="space-y-2"
     >
       <div
-        class="flex flex-row gap-3 justify-start items-center"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
           class="bg-theme-background flex items-end justify-between"
@@ -900,7 +900,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
             class="space-y-2"
           >
             <div
-              class="flex gap-3 items-center"
+              class="flex items-center gap-3"
             >
               <h1
                 class="mb-0 text-2xl leading-[29px]"
@@ -916,7 +916,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
         class="space-y-4"
       >
         <p
-          class="hidden md:block text-theme-secondary-text"
+          class="text-theme-secondary-text hidden md:block"
         >
           An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
@@ -970,7 +970,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
           </div>
         </div>
         <svg
-          class="block mx-auto mt-4 w-full max-w-[400px]"
+          class="mx-auto mt-4 block w-full max-w-[400px]"
           fill="none"
           viewBox="0 0 400 126"
           xmlns="http://www.w3.org/2000/svg"

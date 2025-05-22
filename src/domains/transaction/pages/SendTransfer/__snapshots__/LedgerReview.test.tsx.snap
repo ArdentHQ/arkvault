@@ -9,7 +9,7 @@ exports[`TransferLedgerReview > should render 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
@@ -23,10 +23,10 @@ exports[`TransferLedgerReview > should render 1`] = `
         class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
       >
         <div
-          class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <div
-            class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -108,7 +108,7 @@ exports[`TransferLedgerReview > should render 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
@@ -123,7 +123,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               Expiration
             </span>
             <div
-              class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
               <div>
                 <div
@@ -160,7 +160,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
       >
         <div
-          class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           123
         </div>
@@ -173,7 +173,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -187,13 +187,13 @@ exports[`TransferLedgerReview > should render 1`] = `
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="flex flex-col gap-3"
             >
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                 data-testid="AmountSection"
               >
                 <div
@@ -202,7 +202,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                   Amount
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -213,7 +213,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -221,7 +221,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                   Fee
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -232,7 +232,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -240,7 +240,7 @@ exports[`TransferLedgerReview > should render 1`] = `
                   Total
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -253,10 +253,10 @@ exports[`TransferLedgerReview > should render 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col py-3 px-6 w-full bg-theme-secondary-300 dark:bg-theme-secondary-800"
+            class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
           >
             <div
-              class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
@@ -286,7 +286,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
       data-testid="DetailWrapper"
     >
       <div
-        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
@@ -300,10 +300,10 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
       >
         <div
-          class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <div
-            class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -385,7 +385,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
       data-testid="DetailWrapper"
     >
       <div
-        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
@@ -400,7 +400,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               Expiration
             </span>
             <div
-              class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
               <div>
                 <div
@@ -437,10 +437,10 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
       >
         <div
-          class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <span
-            class="flex my-0.5"
+            class="my-0.5 flex"
             data-testid="TransferLedgerReview__expiration-skeleton"
           >
             <span
@@ -467,7 +467,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -481,13 +481,13 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="flex flex-col gap-3"
             >
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                 data-testid="AmountSection"
               >
                 <div
@@ -496,7 +496,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                   Amount
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -507,7 +507,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -515,7 +515,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                   Fee
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -526,7 +526,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -534,7 +534,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                   Total
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -547,10 +547,10 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             </div>
           </div>
           <div
-            class="flex flex-col py-3 px-6 w-full bg-theme-secondary-300 dark:bg-theme-secondary-800"
+            class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
           >
             <div
-              class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
@@ -580,7 +580,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
@@ -594,10 +594,10 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border flex flex-col gap-3 mt-0 sm:mt-2"
       >
         <div
-          class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <div
-            class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -679,7 +679,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
       data-testid="DetailWrapper"
     >
       <div
-        class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+        class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
         data-testid="DetailLabel"
       >
         <div
@@ -694,7 +694,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               Expiration
             </span>
             <div
-              class="flex justify-center items-center w-5 h-5 rounded-full cursor-pointer hover:text-white questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
               <div>
                 <div
@@ -731,7 +731,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
       >
         <div
-          class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+          class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           123
         </div>
@@ -744,7 +744,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="py-2 px-3 border-l-2 sm:p-0 sm:bg-transparent sm:border-none dark:bg-black border-x-theme-primary-400 bg-theme-secondary-100 dark:sm:bg-transparent"
+          class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -758,13 +758,13 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
         >
           <div
-            class="p-3 w-full break-words sm:py-5 sm:px-6 sm:in-[.condensed]:py-4"
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
           >
             <div
               class="flex flex-col gap-3"
             >
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                 data-testid="AmountSection"
               >
                 <div
@@ -773,7 +773,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                   Amount
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -784,7 +784,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -792,7 +792,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                   Fee
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -803,7 +803,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 </div>
               </div>
               <div
-                class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+                class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
                   class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
@@ -811,7 +811,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                   Total
                 </div>
                 <div
-                  class="flex flex-row gap-2 items-center"
+                  class="flex flex-row items-center gap-2"
                 >
                   <span
                     class="whitespace-nowrap font-semibold"
@@ -824,10 +824,10 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col py-3 px-6 w-full bg-theme-secondary-300 dark:bg-theme-secondary-800"
+            class="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3"
           >
             <div
-              class="flex justify-between items-center space-x-2 sm:justify-start sm:space-x-0"
+              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
