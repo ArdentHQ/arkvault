@@ -56,7 +56,7 @@ exports[`ConfirmationStep > should render 1`] = `
           class="flex items-center space-x-3"
         >
           <span
-            class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+            class="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold"
           >
             1
           </span>
@@ -139,7 +139,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                 >
                   <button
-                    class="ring-focus relative focus:outline-hidden cursor-pointer"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -242,7 +242,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                 >
                   <button
-                    class="ring-focus relative focus:outline-hidden cursor-pointer"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -313,7 +313,7 @@ exports[`ConfirmationStep > should render 1`] = `
           class="flex items-center space-x-3"
         >
           <span
-            class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+            class="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold"
           >
             2
           </span>
@@ -366,7 +366,7 @@ exports[`ConfirmationStep > should render 1`] = `
                   class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                 >
                   <button
-                    class="ring-focus relative focus:outline-hidden cursor-pointer"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
@@ -1123,7 +1123,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                   class="flex items-center space-x-3"
                 >
                   <span
-                    class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                    class="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold"
                   >
                     1
                   </span>
@@ -1206,7 +1206,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1309,7 +1309,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1380,7 +1380,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                   class="flex items-center space-x-3"
                 >
                   <span
-                    class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+                    class="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold"
                   >
                     2
                   </span>
@@ -1463,7 +1463,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1566,7 +1566,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                         >
                           <button
-                            class="ring-focus relative focus:outline-hidden cursor-pointer"
+                            class="ring-focus relative cursor-pointer focus:outline-hidden"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -1728,7 +1728,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
               >
                 <button
-                  class="ring-focus relative focus:outline-hidden cursor-pointer"
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
                   data-ring-focus-margin="-m-1"
                   data-testid="clipboard-icon__wrapper"
                   type="button"
@@ -1804,7 +1804,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                     class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                   >
                     <button
-                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -1950,7 +1950,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                     class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
                   >
                     <button
-                      class="ring-focus relative focus:outline-hidden cursor-pointer"
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
                       data-ring-focus-margin="-m-1"
                       data-testid="clipboard-icon__wrapper"
                       type="button"
@@ -2818,7 +2818,7 @@ exports[`StatusStep > should render 1`] = `
         class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
       >
         <button
-          class="ring-focus relative focus:outline-hidden cursor-pointer"
+          class="ring-focus relative cursor-pointer focus:outline-hidden"
           data-ring-focus-margin="-m-1"
           data-testid="clipboard-icon__wrapper"
           type="button"
@@ -2894,7 +2894,7 @@ exports[`StatusStep > should render 1`] = `
             class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -3040,7 +3040,7 @@ exports[`StatusStep > should render 1`] = `
             class="text-theme-primary-300 dark:text-theme-secondary-600 flex"
           >
             <button
-              class="ring-focus relative focus:outline-hidden cursor-pointer"
+              class="ring-focus relative cursor-pointer focus:outline-hidden"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
