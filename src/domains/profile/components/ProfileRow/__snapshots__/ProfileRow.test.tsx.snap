@@ -464,10 +464,10 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
-          class="w-3 h-3 rounded-full react-loading-skeleton"
+          class="react-loading-skeleton w-3 h-3 rounded-full"
         >
           ‌
         </span>
@@ -476,10 +476,10 @@ exports[`ProfileSliderSkeleton > should render with dots 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex overflow-hidden items-center w-auto max-w-full leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
-          class="w-3 h-3 rounded-full react-loading-skeleton"
+          class="react-loading-skeleton w-3 h-3 rounded-full"
         >
           ‌
         </span>

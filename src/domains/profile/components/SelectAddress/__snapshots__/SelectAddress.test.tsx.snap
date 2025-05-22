@@ -3,26 +3,26 @@
 exports[`SelectAddress > should render disabled 1`] = `
 <div>
   <button
-    class="relative w-full rounded cursor-default focus:ring-2 focus:ring-theme-primary-400 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden cursor-default"
     data-testid="SelectAddress__wrapper"
     disabled=""
     type="button"
   >
     <span
-      class="flex absolute inset-y-0 left-14 items-center border border-transparent right-13"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
     >
       <div
-        class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
-        class="inline-flex justify-center items-center py-1 px-2 w-8 h-8 text-sm align-middle rounded-full border-2 ring-0 transition-all duration-100 border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
       />
       <div
-        class="flex relative invisible flex-1 h-full"
+        class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
@@ -35,7 +35,7 @@ exports[`SelectAddress > should render disabled 1`] = `
         />
       </div>
       <div
-        class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
@@ -87,25 +87,25 @@ exports[`SelectAddress > should render disabled 1`] = `
 exports[`SelectAddress > should render empty 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-2 focus:ring-theme-primary-400 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
     <span
-      class="flex absolute inset-y-0 left-14 items-center border border-transparent right-13"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
     >
       <div
-        class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
-        class="inline-flex justify-center items-center py-1 px-2 w-8 h-8 text-sm align-middle rounded-full border-2 ring-0 transition-all duration-100 border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
       />
       <div
-        class="flex relative invisible flex-1 h-full"
+        class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
@@ -117,7 +117,7 @@ exports[`SelectAddress > should render empty 1`] = `
         />
       </div>
       <div
-        class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
@@ -169,25 +169,25 @@ exports[`SelectAddress > should render empty 1`] = `
 exports[`SelectAddress > should render invalid 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-2 focus:ring-theme-primary-400 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
     <span
-      class="flex absolute inset-y-0 left-14 right-24 items-center border border-transparent right-13"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14 right-24"
     >
       <div
-        class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
-        class="inline-flex justify-center items-center py-1 px-2 w-8 h-8 text-sm align-middle rounded-full border-2 ring-0 transition-all duration-100 border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
       />
       <div
-        class="flex relative invisible flex-1 h-full"
+        class="relative flex h-full flex-1 invisible"
       >
         <input
           aria-invalid="true"
@@ -200,14 +200,14 @@ exports[`SelectAddress > should render invalid 1`] = `
         />
       </div>
       <div
-        class="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-danger-500"
         data-testid="Input__addon-end"
       >
         <span
           data-testid="Input__error"
         >
           <div
-            class="pr-3 text-theme-danger-500"
+            class="text-theme-danger-500 pr-3"
           >
             <div
               style="height: 20px; width: 20px;"
@@ -296,18 +296,18 @@ exports[`SelectAddress > should render invalid 1`] = `
 exports[`SelectAddress > should render with preselected address 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-2 focus:ring-theme-primary-400 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
     <span
-      class="flex absolute inset-y-0 left-14 items-center border border-transparent right-13"
+      class="absolute inset-y-0 flex items-center border border-transparent right-13 left-14"
     >
       <div
-        class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       >
         <span
-          class="overflow-hidden min-w-0 text-sm text-base font-semibold sm:text-base no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
           data-testid="Address__address"
         >
           0x659A76be283644AEc2003aa8ba26485047fd1BFB
@@ -315,14 +315,14 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       </div>
     </span>
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
-        class="inline-flex relative justify-center items-center w-8 h-8 text-sm align-middle rounded transition-all duration-100 shrink-0"
+        class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm shrink-0"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
         >
           <img
             alt="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
@@ -332,7 +332,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         </div>
       </div>
       <div
-        class="flex relative invisible flex-1 h-full"
+        class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
@@ -344,7 +344,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         />
       </div>
       <div
-        class="flex items-center divide-x divide-theme-secondary-300 text-theme-primary-300 dark:divide-theme-secondary-800 dark:text-theme-secondary-600"
+        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
@@ -396,25 +396,25 @@ exports[`SelectAddress > should render with preselected address 1`] = `
 exports[`SelectAddress > should render without user icon 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-2 focus:ring-theme-primary-400 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
     <span
-      class="flex absolute inset-y-0 right-4 left-14 items-center border border-transparent"
+      class="absolute inset-y-0 flex items-center border border-transparent right-4 left-14"
     >
       <div
-        class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="flex overflow-hidden items-center px-4 space-x-2 w-full h-12 rounded border transition-colors duration-200 appearance-none sm:h-14 focus-within:ring-1 text-theme-text border-theme-secondary-400 bg-theme-background dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
-        class="inline-flex justify-center items-center py-1 px-2 w-8 h-8 text-sm align-middle rounded-full border-2 ring-0 transition-all duration-100 border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
       />
       <div
-        class="flex relative invisible flex-1 h-full"
+        class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"

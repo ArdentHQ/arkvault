@@ -3,11 +3,11 @@
 exports[`Export Settings > should render export settings 1`] = `
 <DocumentFragment>
   <div
-    class="flex relative flex-col pb-32 sm:pb-0 sm:min-h-screen"
+    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="flex fixed bottom-0 left-0 z-10 flex-col justify-center w-full bg-white sm:hidden dark:bg-black"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -18,7 +18,7 @@ exports[`Export Settings > should render export settings 1`] = `
         class="flex justify-center items-center space-x-4 h-14"
       >
         <button
-          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -55,10 +55,10 @@ exports[`Export Settings > should render export settings 1`] = `
           </div>
         </button>
         <div
-          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -92,10 +92,10 @@ exports[`Export Settings > should render export settings 1`] = `
           </div>
         </button>
         <div
-          class="inline-block relative mx-2 h-5 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 focus:outline-hidden focus:ring-theme-primary-400"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -132,7 +132,7 @@ exports[`Export Settings > should render export settings 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="sticky inset-x-0 top-0 z-40 h-12 bg-white border-b transition-all duration-200 custom-nav-wrapper border-b-theme-secondary-300 dark:bg-theme-dark-900 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="flex relative flex-row h-12"
@@ -141,7 +141,7 @@ exports[`Export Settings > should render export settings 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex items-center w-9 border-b transition-colors duration-200 focus:rounded focus:ring-2 focus:ring-inset border-b-theme-secondary-300 bg-theme-secondary-100 text-theme-secondary-500 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 focus:outline-hidden"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 hover:bg-theme-primary-200 hover:text-theme-primary-700 focus:ring-theme-primary-400 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 focus:rounded focus:ring-2 focus:outline-hidden focus:ring-inset"
           >
             <div
               class="mx-auto"
@@ -181,7 +181,7 @@ exports[`Export Settings > should render export settings 1`] = `
               class="flex items-center my-auto h-12"
             >
               <button
-                class="flex justify-center items-center my-auto w-6 h-6 text-white rounded cursor-pointer focus:ring-2 bg-theme-primary-600 outline-hidden dark:bg-theme-dark-navy-500 focus:ring-theme-primary-400 focus:outline-hidden"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -306,7 +306,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -343,7 +343,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex absolute top-0 right-0 justify-center items-center p-0.5 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="w-1.5 h-1.5 rounded-full bg-theme-danger-500"
@@ -367,7 +367,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -400,7 +400,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         class="flex absolute top-0 right-0 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="w-1.5 h-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
+                          class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                         />
                       </div>
                     </div>
@@ -419,7 +419,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -471,7 +471,7 @@ exports[`Export Settings > should render export settings 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="inline-flex relative justify-center items-center p-3 font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 focus:outline-hidden focus:ring-theme-primary-400"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -525,7 +525,7 @@ exports[`Export Settings > should render export settings 1`] = `
                     class="group"
                   >
                     <button
-                      class="inline-flex relative justify-center items-center p-1 w-auto font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 w-auto text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -566,7 +566,7 @@ exports[`Export Settings > should render export settings 1`] = `
                           Testnet
                         </span>
                         <div
-                          class="transition-transform text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -605,10 +605,10 @@ exports[`Export Settings > should render export settings 1`] = `
               class="flex gap-5 items-center"
             >
               <div
-                class="hidden gap-2 items-center m-0 space-x-0 md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
               >
                 <button
-                  class="flex relative flex-row gap-2 justify-center items-center py-0.5 px-1 space-x-3 text-base font-semibold leading-tight text-center rounded border-none duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 focus:outline-hidden focus:ring-theme-primary-400"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none flex flex-row gap-2 items-center py-0.5 px-1 rounded group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -673,11 +673,11 @@ exports[`Export Settings > should render export settings 1`] = `
                     data-testid="UserMenu"
                   >
                     <div
-                      class="inline-flex relative justify-center items-center w-6 h-6 text-xs align-middle rounded ring-0 transition-all duration-100 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                       >
                         <img
                           alt="Profile Avatar"
@@ -699,16 +699,16 @@ exports[`Export Settings > should render export settings 1`] = `
       </div>
     </nav>
     <div
-      class="flex flex-col flex-1"
+      class="flex flex-1 flex-col"
     >
       <div
-        class="py-4 w-full first:pt-8 last:pb-8"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="px-6 mx-auto md:px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex justify-between items-end lg:-mb-4 bg-theme-background"
+            class="bg-theme-background flex items-end justify-between lg:-mb-4"
           >
             <div
               class="space-y-2"
@@ -787,10 +787,10 @@ exports[`Export Settings > should render export settings 1`] = `
         </div>
       </div>
       <div
-        class="py-4 w-full first:pt-8 last:pb-8"
+        class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="px-6 mx-auto md:px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
             class="flex flex-1"
@@ -857,7 +857,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--general"
                     >
                       <div
-                        class="flex relative items-center px-5 h-12 rounded-lg transition-all group dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-800"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
                       >
                         <span
                           class="font-semibold"
@@ -871,7 +871,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--password"
                     >
                       <div
-                        class="flex relative items-center px-5 h-12 rounded-lg transition-all group dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-800"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
                       >
                         <span
                           class="font-semibold"
@@ -885,7 +885,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--servers"
                     >
                       <div
-                        class="flex relative items-center px-5 h-12 rounded-lg transition-all group dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-800"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all hover:bg-theme-secondary-200 hover:text-theme-secondary-800 dark:hover:bg-theme-dark-950 dark:hover:text-theme-dark-50"
                       >
                         <span
                           class="font-semibold"
@@ -899,7 +899,7 @@ exports[`Export Settings > should render export settings 1`] = `
                       data-testid="side-menu__item--export"
                     >
                       <div
-                        class="flex relative items-center px-5 h-12 rounded-lg transition-all group bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
+                        class="group relative flex h-12 items-center rounded-lg px-5 transition-all bg-theme-secondary-200 text-theme-primary-600 dark:bg-theme-dark-950 dark:text-theme-dark-50"
                       >
                         <span
                           class="font-semibold"
@@ -920,10 +920,10 @@ exports[`Export Settings > should render export settings 1`] = `
                   id="export-settings__form"
                 >
                   <div
-                    class="flex relative flex-col"
+                    class="relative flex flex-col"
                   >
                     <div
-                      class="block py-3 px-2.5 -mx-3 border-l-2 sm:px-6 sm:mx-0 sm:-mt-px sm:border-l-0 sm:border-t border-theme-primary-400 bg-theme-secondary-100 sm:border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-700"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="mb-0 text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
@@ -944,11 +944,11 @@ exports[`Export Settings > should render export settings 1`] = `
                         data-testid="list-divided__items"
                       >
                         <li
-                          class="flex flex-col w-full"
+                          class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex flex-col justify-between items-start"
+                            class="flex justify-between flex-col items-start"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -958,33 +958,33 @@ exports[`Export Settings > should render export settings 1`] = `
                                 class="flex justify-between items-center space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
                                   data-testid="list-divided-item__label"
                                 >
                                   Exclude Empty Wallets
                                 </span>
                                 <span>
                                   <label
-                                    class="flex items-center h-4 cursor-pointer"
+                                    class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
-                                      class="sr-only toggle-input"
+                                      class="toggle-input sr-only"
                                       data-testid="Plugin-settings__toggle--exclude-empty-wallets"
                                       name="excludeEmptyWallets"
                                       type="checkbox"
                                     />
                                     <div
-                                      class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
-                                        class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                       />
                                     </div>
                                   </label>
                                 </span>
                               </div>
                               <span
-                                class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Wallets with a balance of 0 will not be exported.
@@ -993,11 +993,11 @@ exports[`Export Settings > should render export settings 1`] = `
                           </div>
                         </li>
                         <li
-                          class="flex flex-col w-full"
+                          class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
                         >
                           <div
-                            class="flex flex-col justify-between items-start"
+                            class="flex justify-between flex-col items-start"
                             data-testid="list-divided-item__inner-wrapper"
                           >
                             <div
@@ -1007,33 +1007,33 @@ exports[`Export Settings > should render export settings 1`] = `
                                 class="flex justify-between items-center space-x-5"
                               >
                                 <span
-                                  class="font-semibold text-theme-secondary-700 dark:text-theme-dark-200"
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 font-semibold"
                                   data-testid="list-divided-item__label"
                                 >
                                   Exclude Ledger Wallets
                                 </span>
                                 <span>
                                   <label
-                                    class="flex items-center h-4 cursor-pointer"
+                                    class="flex items-center cursor-pointer h-4"
                                   >
                                     <input
-                                      class="sr-only toggle-input"
+                                      class="toggle-input sr-only"
                                       data-testid="Plugin-settings__toggle--exclude-ledger-wallets"
                                       name="excludeLedgerWallets"
                                       type="checkbox"
                                     />
                                     <div
-                                      class="inline-flex relative rounded-full toggle-handle bg-theme-primary-100 h-[5px] w-[30px] dark:bg-theme-secondary-800"
+                                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 relative inline-flex h-[5px] rounded-full w-[30px]"
                                     >
                                       <span
-                                        class="absolute top-1/2 w-4 h-4 rounded-full transition-all duration-200 ease-in-out -translate-y-1/2 bg-theme-secondary-400 handle-inner dark:bg-theme-secondary-600"
+                                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 h-4 w-4 handle-inner"
                                       />
                                     </div>
                                   </label>
                                 </span>
                               </div>
                               <span
-                                class="text-sm font-medium text-theme-secondary-700 dark:text-theme-dark-200"
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 text-sm font-medium"
                                 data-testid="list-divided-item__label--description"
                               >
                                 Ledger hardware addresses will not be exported.
@@ -1046,10 +1046,10 @@ exports[`Export Settings > should render export settings 1`] = `
                         class="pt-6 pb-6 mt-6 space-y-5 border-t border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                       >
                         <div
-                          class="flex overflow-hidden flex-col rounded-xl"
+                          class="flex flex-col overflow-hidden rounded-xl"
                         >
                           <div
-                            class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+                            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
                           >
                             <div>
                               <div
@@ -1094,7 +1094,7 @@ exports[`Export Settings > should render export settings 1`] = `
                             </span>
                           </div>
                           <div
-                            class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-info-50 dark:bg-theme-secondary-800"
+                            class="dark:bg-theme-secondary-800 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-info-50"
                           >
                             Your exported Profile will not contain your mnemonic passphrases, only addresses and respective names.
                           </div>
@@ -1103,7 +1103,7 @@ exports[`Export Settings > should render export settings 1`] = `
                     </div>
                   </div>
                   <div
-                    class="sm:p-6 sm:border-t border-theme-secondary-300 dark:border-theme-dark-700"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 sm:border-t sm:p-6"
                   >
                     <div
                       class="sm:-mt-6"
@@ -1112,7 +1112,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         class="bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
                       >
                         <button
-                          class="inline-flex relative justify-center items-center py-3 px-5 space-x-3 text-base font-semibold leading-tight text-center text-white rounded duration-100 ease-linear cursor-pointer focus:ring-2 disabled:cursor-not-allowed transition-colors-shadow outline-hidden bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 focus:outline-hidden focus:ring-theme-primary-400"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                           data-testid="Export-settings__submit-button"
                           type="submit"
                         >

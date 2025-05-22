@@ -5,12 +5,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
               class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -42,7 +42,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <span
@@ -94,7 +94,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   </div>
                 </span>
                 <div
-                  class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -139,7 +139,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
             >
               <div
-                class="flex flex-col gap-2 w-36 sm:hidden"
+                class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -157,7 +157,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -169,7 +169,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 />
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -180,14 +180,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 1 BTC
@@ -197,7 +197,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -208,14 +208,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100 ARK
@@ -238,12 +238,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
               class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -275,7 +275,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <span
@@ -318,7 +318,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   </div>
                 </span>
                 <div
-                  class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -363,7 +363,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
             >
               <div
-                class="flex flex-col gap-2 w-36 sm:hidden"
+                class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -381,7 +381,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -393,7 +393,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 />
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -404,14 +404,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 1 BTC
@@ -421,7 +421,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -432,14 +432,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100 ARK
@@ -462,12 +462,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
               class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -499,7 +499,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <span
@@ -542,7 +542,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   </div>
                 </span>
                 <div
-                  class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -587,7 +587,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
             >
               <div
-                class="flex flex-col gap-2 w-36 sm:hidden"
+                class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -605,7 +605,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -617,7 +617,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 />
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -628,14 +628,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 1 BTC
@@ -645,7 +645,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -656,14 +656,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100 ARK
@@ -686,12 +686,12 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
               class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -723,7 +723,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <span
@@ -767,7 +767,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   </div>
                 </span>
                 <div
-                  class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -812,7 +812,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
             >
               <div
-                class="flex flex-col gap-2 w-36 sm:hidden"
+                class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -830,7 +830,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -842,7 +842,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 />
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -853,14 +853,14 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 1 BTC
@@ -870,7 +870,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -881,14 +881,14 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center pr-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex justify-center items-center self-stretch w-5 bg-theme-success-200 text-theme-success-700 dark:bg-theme-success-700 dark:text-white/70"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -925,7 +925,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                         </div>
                       </div>
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100 ARK
@@ -948,12 +948,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
               class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -985,7 +985,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <span
@@ -1033,7 +1033,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   </div>
                 </span>
                 <div
-                  class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -1078,7 +1078,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
             >
               <div
-                class="flex flex-col gap-2 w-36 sm:hidden"
+                class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1096,7 +1096,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1108,7 +1108,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 />
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1119,14 +1119,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 1 BTC
@@ -1136,7 +1136,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1147,14 +1147,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100 ARK
@@ -1177,12 +1177,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
               class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -1214,7 +1214,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="hidden sm:block"
                 >
                   <div
-                    class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </div>
                 <span
@@ -1262,7 +1262,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   </div>
                 </span>
                 <div
-                  class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -1307,7 +1307,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
             >
               <div
-                class="flex flex-col gap-2 w-36 sm:hidden"
+                class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1325,7 +1325,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1337,7 +1337,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 />
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1348,14 +1348,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                    class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 1 BTC
@@ -1365,7 +1365,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 </div>
               </div>
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1376,14 +1376,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                    class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
-                        class="text-sm whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100 ARK
@@ -1404,12 +1404,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 <div>
   <tr
-    class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+    class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
     data-testid="TableRow"
   >
     <td>
       <div
-        class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
       >
         <div
           class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -1440,7 +1440,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="hidden sm:block"
             >
               <div
-                class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
               />
             </div>
             <span
@@ -1483,7 +1483,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               </div>
             </span>
             <div
-              class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             />
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -1528,7 +1528,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
           class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
         >
           <div
-            class="flex flex-col gap-2 w-36 sm:hidden"
+            class="flex w-36 flex-col gap-2 sm:hidden"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1546,7 +1546,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col gap-2 w-36"
+            class="flex w-36 flex-col gap-2"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1558,7 +1558,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
             />
           </div>
           <div
-            class="flex flex-col gap-2 w-36"
+            class="flex w-36 flex-col gap-2"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1569,14 +1569,14 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="text-sm whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     - 1 BTC
@@ -1586,7 +1586,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
             </div>
           </div>
           <div
-            class="flex flex-col gap-2 w-36"
+            class="flex w-36 flex-col gap-2"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1597,14 +1597,14 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="text-sm whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 100 ARK
@@ -1623,12 +1623,12 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] = `
 <div>
   <tr
-    class="table-row transition-colors duration-100 cursor-pointer table-row-unselected group"
+    class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
     data-testid="TableRow"
   >
     <td>
       <div
-        class="overflow-hidden mb-3 w-full bg-white rounded border cursor-pointer border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
       >
         <div
           class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
@@ -1660,7 +1660,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="hidden sm:block"
             >
               <div
-                class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
               />
             </div>
             <span
@@ -1703,7 +1703,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               </div>
             </span>
             <div
-              class="inline-block relative mx-2 h-4 align-middle border-t-0 border-l border-solid border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
             />
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer p-0!"
@@ -1748,7 +1748,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
         >
           <div
-            class="flex flex-col gap-2 w-36 sm:hidden"
+            class="flex w-36 flex-col gap-2 sm:hidden"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1766,7 +1766,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             </div>
           </div>
           <div
-            class="flex flex-col gap-2 w-36"
+            class="flex w-36 flex-col gap-2"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1780,7 +1780,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             </div>
           </div>
           <div
-            class="flex flex-col gap-2 w-36"
+            class="flex w-36 flex-col gap-2"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1791,14 +1791,14 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures text-theme-danger-info-text bg-theme-danger-info-background w-fit dark:border-theme-danger-info-border"
+                class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="text-sm whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     - 1 BTC
@@ -1808,7 +1808,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             </div>
           </div>
           <div
-            class="flex flex-col gap-2 w-36"
+            class="flex w-36 flex-col gap-2"
           >
             <span
               class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1819,14 +1819,14 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="flex overflow-hidden justify-center items-center px-1.5 h-full text-sm font-semibold rounded dark:bg-transparent dark:border no-ligatures bg-theme-success-100 text-theme-success-700 w-fit dark:border-theme-success-700 dark:text-theme-success-500"
+                class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="text-sm whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 100 ARK
