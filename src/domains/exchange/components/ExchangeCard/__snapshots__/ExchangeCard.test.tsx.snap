@@ -13,14 +13,14 @@ exports[`ExchangeCard > should render 1`] = `
         type="button"
       >
         <div
-          class="flex flex-col gap-3 items-center md:flex-row"
+          class="flex flex-col items-center gap-3 md:flex-row"
         >
           <div
-            class="overflow-hidden w-11 h-11 rounded-lg shrink-0"
+            class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
           >
             <img
               alt="ChangeNOW Logo"
-              class="object-cover w-full h-full"
+              class="h-full w-full object-cover"
               src="https://exchanges.arkvault.io/images/changenow/thumbnail.png"
             />
           </div>
@@ -35,7 +35,7 @@ exports[`ExchangeCard > should render 1`] = `
           </div>
         </div>
         <div
-          class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
+          class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
         />
       </button>
     </div>
@@ -56,14 +56,14 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
         type="button"
       >
         <div
-          class="flex flex-col gap-3 items-center md:flex-row"
+          class="flex flex-col items-center gap-3 md:flex-row"
         >
           <div
-            class="overflow-hidden w-11 h-11 rounded-lg shrink-0"
+            class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
           >
             <img
               alt="ChangeNOW Logo"
-              class="object-cover w-full h-full"
+              class="h-full w-full object-cover"
               src="https://exchanges.arkvault.io/images/changenow/thumbnail.png"
             />
           </div>
@@ -78,7 +78,7 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
           </div>
         </div>
         <div
-          class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
+          class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
         />
       </button>
     </div>

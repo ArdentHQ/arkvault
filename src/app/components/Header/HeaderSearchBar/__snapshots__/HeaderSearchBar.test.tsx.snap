@@ -14,7 +14,7 @@ exports[`HeaderSearchBar > should render 1`] = `
         type="button"
       >
         <div
-          class="flex gap-2 items-center h-5"
+          class="flex h-5 items-center gap-2"
         >
           <span
             class="hidden md:block"

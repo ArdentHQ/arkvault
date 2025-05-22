@@ -328,7 +328,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -475,7 +475,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -523,7 +523,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -670,7 +670,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -718,7 +718,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -865,7 +865,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1240,7 +1240,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -1387,7 +1387,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1435,7 +1435,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -1582,7 +1582,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1630,7 +1630,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -1777,7 +1777,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2152,7 +2152,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -2299,7 +2299,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2347,7 +2347,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -2494,7 +2494,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2542,7 +2542,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -2689,7 +2689,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3064,7 +3064,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -3211,7 +3211,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3259,7 +3259,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -3406,7 +3406,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3454,7 +3454,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -3601,7 +3601,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3976,7 +3976,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -4123,7 +4123,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4171,7 +4171,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -4318,7 +4318,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4366,7 +4366,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
                   <button
-                    class="w-20 h-5 cursor-pointer truncate"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -4513,7 +4513,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4589,7 +4589,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
                 >
                   <div
-                    class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+                    class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
                     data-testid="TableRow__mobile"
                   >
                     <div
@@ -4606,7 +4606,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -4622,7 +4622,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         />
                       </div>
                       <span
-                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                       >
                         <div
                           class="text-theme-warning-300"
@@ -4704,18 +4704,18 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+                    class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
                   >
                     <div
                       class="flex w-36 flex-col gap-2 sm:hidden"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Age
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -4728,24 +4728,24 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Exchange
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       />
                     </div>
                     <div
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         From
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -4768,12 +4768,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         To
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
@@ -4842,7 +4842,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
                 >
                   <div
-                    class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+                    class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
                     data-testid="TableRow__mobile"
                   >
                     <div
@@ -4859,7 +4859,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -4875,7 +4875,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         />
                       </div>
                       <span
-                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                       >
                         <div
                           class="text-theme-warning-300"
@@ -4957,18 +4957,18 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+                    class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
                   >
                     <div
                       class="flex w-36 flex-col gap-2 sm:hidden"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Age
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -4981,24 +4981,24 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Exchange
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       />
                     </div>
                     <div
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         From
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -5021,12 +5021,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         To
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
@@ -5095,7 +5095,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
                 >
                   <div
-                    class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+                    class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
                     data-testid="TableRow__mobile"
                   >
                     <div
@@ -5112,7 +5112,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5128,7 +5128,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         />
                       </div>
                       <span
-                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                       >
                         <div
                           class="text-theme-warning-300"
@@ -5210,18 +5210,18 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+                    class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
                   >
                     <div
                       class="flex w-36 flex-col gap-2 sm:hidden"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Age
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5234,24 +5234,24 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Exchange
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       />
                     </div>
                     <div
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         From
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -5274,12 +5274,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         To
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
@@ -5376,7 +5376,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
                 >
                   <div
-                    class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+                    class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
                     data-testid="TableRow__mobile"
                   >
                     <div
@@ -5393,7 +5393,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5409,7 +5409,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         />
                       </div>
                       <span
-                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                       >
                         <div
                           class="text-theme-warning-300"
@@ -5491,18 +5491,18 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                     </div>
                   </div>
                   <div
-                    class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+                    class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
                   >
                     <div
                       class="flex w-36 flex-col gap-2 sm:hidden"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Age
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5515,24 +5515,24 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Exchange
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       />
                     </div>
                     <div
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         From
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -5555,12 +5555,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         To
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
@@ -5629,7 +5629,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
                 >
                   <div
-                    class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+                    class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
                     data-testid="TableRow__mobile"
                   >
                     <div
@@ -5646,7 +5646,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5662,7 +5662,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         />
                       </div>
                       <span
-                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                       >
                         <div
                           class="text-theme-warning-300"
@@ -5744,18 +5744,18 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                     </div>
                   </div>
                   <div
-                    class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+                    class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
                   >
                     <div
                       class="flex w-36 flex-col gap-2 sm:hidden"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Age
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5768,24 +5768,24 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Exchange
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       />
                     </div>
                     <div
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         From
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -5808,12 +5808,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         To
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
@@ -5882,7 +5882,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                   class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
                 >
                   <div
-                    class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+                    class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
                     data-testid="TableRow__mobile"
                   >
                     <div
@@ -5899,7 +5899,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -5915,7 +5915,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         />
                       </div>
                       <span
-                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                       >
                         <div
                           class="text-theme-warning-300"
@@ -5997,18 +5997,18 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                     </div>
                   </div>
                   <div
-                    class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+                    class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
                   >
                     <div
                       class="flex w-36 flex-col gap-2 sm:hidden"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Age
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6021,24 +6021,24 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         Exchange
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       />
                     </div>
                     <div
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         From
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -6061,12 +6061,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex w-36 flex-col gap-2"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                       >
                         To
                       </span>
                       <div
-                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                       >
                         <div
                           class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"

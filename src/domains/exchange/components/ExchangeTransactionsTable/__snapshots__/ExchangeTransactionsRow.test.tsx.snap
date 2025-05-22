@@ -13,7 +13,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -168,7 +168,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
@@ -225,7 +225,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -371,7 +371,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
@@ -428,7 +428,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -574,7 +574,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
@@ -631,7 +631,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -778,7 +778,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
@@ -835,7 +835,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -986,7 +986,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
@@ -1043,7 +1043,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -1194,7 +1194,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
@@ -1251,7 +1251,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
           >
             <button
-              class="w-20 h-5 cursor-pointer truncate"
+              class="h-5 w-20 cursor-pointer truncate"
               type="button"
             >
               <div
@@ -1397,7 +1397,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
           >
             <button
-              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white p-1 mt-0"
+              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white mt-0 p-1"
               data-testid="TableRemoveButton--compact"
               type="button"
             >

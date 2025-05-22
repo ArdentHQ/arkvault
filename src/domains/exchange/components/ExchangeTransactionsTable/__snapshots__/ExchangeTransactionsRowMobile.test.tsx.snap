@@ -13,7 +13,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
             class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+              class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
               data-testid="TableRow__mobile"
             >
               <div
@@ -30,7 +30,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -46,7 +46,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   />
                 </div>
                 <span
-                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                 >
                   <div
                     class="text-theme-danger-400"
@@ -136,18 +136,18 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Age
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -160,24 +160,24 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Exchange
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 />
               </div>
               <div
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   From
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -200,12 +200,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   To
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -246,7 +246,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
             class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+              class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
               data-testid="TableRow__mobile"
             >
               <div
@@ -263,7 +263,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -279,7 +279,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   />
                 </div>
                 <span
-                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                 >
                   <div
                     class="text-theme-danger-400"
@@ -360,18 +360,18 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Age
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -384,24 +384,24 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Exchange
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 />
               </div>
               <div
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   From
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -424,12 +424,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   To
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -470,7 +470,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
             class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+              class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
               data-testid="TableRow__mobile"
             >
               <div
@@ -487,7 +487,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -503,7 +503,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   />
                 </div>
                 <span
-                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                 >
                   <div
                     class="text-theme-success-600"
@@ -584,18 +584,18 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Age
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -608,24 +608,24 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Exchange
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 />
               </div>
               <div
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   From
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -648,12 +648,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   To
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -694,7 +694,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
             class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+              class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
               data-testid="TableRow__mobile"
             >
               <div
@@ -711,7 +711,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -727,7 +727,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   />
                 </div>
                 <span
-                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                 >
                   <div
                     class="text-theme-warning-300"
@@ -809,18 +809,18 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Age
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -833,24 +833,24 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Exchange
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 />
               </div>
               <div
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   From
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -873,12 +873,12 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   To
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded pr-1.5"
@@ -956,7 +956,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
             class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+              class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
               data-testid="TableRow__mobile"
             >
               <div
@@ -973,7 +973,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -989,7 +989,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   />
                 </div>
                 <span
-                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                 >
                   <div
                     class="text-theme-warning-300"
@@ -1075,18 +1075,18 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Age
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1099,24 +1099,24 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Exchange
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 />
               </div>
               <div
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   From
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1139,12 +1139,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   To
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1185,7 +1185,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
             class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
           >
             <div
-              class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+              class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
               data-testid="TableRow__mobile"
             >
               <div
@@ -1202,7 +1202,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 class="flex flex-row items-center"
               >
                 <span
-                  class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1218,7 +1218,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   />
                 </div>
                 <span
-                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
                 >
                   <div
                     class="text-theme-warning-300"
@@ -1304,18 +1304,18 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+              class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex w-36 flex-col gap-2 sm:hidden"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Age
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1328,24 +1328,24 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   Exchange
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 />
               </div>
               <div
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   From
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1368,12 +1368,12 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
                 >
                   To
                 </span>
                 <div
-                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
                 >
                   <div
                     class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1412,7 +1412,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
       >
         <div
-          class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+          class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
           data-testid="TableRow__mobile"
         >
           <div
@@ -1428,7 +1428,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
             class="flex flex-row items-center"
           >
             <span
-              class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
             >
               <span
                 data-testid="TimeAgo"
@@ -1444,7 +1444,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               />
             </div>
             <span
-              class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
             >
               <div
                 class="text-theme-danger-400"
@@ -1525,18 +1525,18 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+          class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
         >
           <div
             class="flex w-36 flex-col gap-2 sm:hidden"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               Age
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               <span
                 data-testid="TimeAgo"
@@ -1549,24 +1549,24 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
             class="flex w-36 flex-col gap-2"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               Exchange
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             />
           </div>
           <div
             class="flex w-36 flex-col gap-2"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               From
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               <div
                 class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1589,12 +1589,12 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
             class="flex w-36 flex-col gap-2"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               To
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               <div
                 class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1631,7 +1631,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
         class="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white mb-3"
       >
         <div
-          class="flex justify-between items-center px-4 w-full h-11 dark:bg-black bg-theme-secondary-100"
+          class="bg-theme-secondary-100 flex h-11 w-full items-center justify-between px-4 dark:bg-black"
           data-testid="TableRow__mobile"
         >
           <div
@@ -1648,7 +1648,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             class="flex flex-row items-center"
           >
             <span
-              class="hidden text-sm font-semibold sm:block text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 hidden text-sm font-semibold sm:block"
             >
               <span
                 data-testid="TimeAgo"
@@ -1664,7 +1664,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               />
             </div>
             <span
-              class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+              class="text-theme-secondary-700 dark:text-theme-secondary-200 flex items-center space-x-2"
             >
               <div
                 class="text-theme-danger-400"
@@ -1745,18 +1745,18 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           </div>
         </div>
         <div
-          class="flex flex-col gap-4 px-4 pt-3 pb-4 w-full sm:grid sm:grid-cols-3"
+          class="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-3"
         >
           <div
             class="flex w-36 flex-col gap-2 sm:hidden"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               Age
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               <span
                 data-testid="TimeAgo"
@@ -1769,12 +1769,12 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             class="flex w-36 flex-col gap-2"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               Exchange
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               ChangeNOW
             </div>
@@ -1783,12 +1783,12 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             class="flex w-36 flex-col gap-2"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               From
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               <div
                 class="font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-sm flex h-full w-fit items-center justify-center rounded px-1.5"
@@ -1811,12 +1811,12 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             class="flex w-36 flex-col gap-2"
           >
             <span
-              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm font-semibold"
             >
               To
             </span>
             <div
-              class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm font-semibold"
             >
               <div
                 class="font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-sm flex h-full w-fit items-center justify-center rounded px-1.5"

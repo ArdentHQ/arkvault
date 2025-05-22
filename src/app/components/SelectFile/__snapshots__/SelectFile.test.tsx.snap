@@ -3,7 +3,7 @@
 exports[`SelectFile > should render with json file format 1`] = `
 <div>
   <div
-    class="relative p-1.5 mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 relative mt-4 h-52 rounded-xl border-2 border-dashed p-1.5"
     data-testid="SelectFile"
   >
     <div
@@ -21,13 +21,13 @@ exports[`SelectFile > should render with json file format 1`] = `
         class="mt-4"
       >
         <span
-          class="hidden mr-px text-lg font-semibold sm:inline leading-[21px]"
+          class="mr-px hidden text-lg leading-[21px] font-semibold sm:inline"
         >
           Drag & Drop or
            
         </span>
         <button
-          class="relative text-lg font-semibold cursor-pointer link ring-focus leading-[21px] focus:outline-hidden"
+          class="link ring-focus relative cursor-pointer text-lg leading-[21px] font-semibold focus:outline-hidden"
           data-ring-focus-margin="-m-1"
           data-testid="SelectFile__browse-files"
           title="Click here to upload"
@@ -37,7 +37,7 @@ exports[`SelectFile > should render with json file format 1`] = `
         </button>
       </div>
       <div
-        class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        class="text-theme-secondary-500 mt-2 text-sm font-semibold"
       >
         Supported format is .json
       </div>
@@ -49,7 +49,7 @@ exports[`SelectFile > should render with json file format 1`] = `
 exports[`SelectFile > should render with wwe file format 1`] = `
 <div>
   <div
-    class="relative p-1.5 mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 relative mt-4 h-52 rounded-xl border-2 border-dashed p-1.5"
     data-testid="SelectFile"
   >
     <div
@@ -127,13 +127,13 @@ exports[`SelectFile > should render with wwe file format 1`] = `
         class="mt-4"
       >
         <span
-          class="hidden mr-px text-lg font-semibold sm:inline leading-[21px]"
+          class="mr-px hidden text-lg leading-[21px] font-semibold sm:inline"
         >
           Drag & Drop or
            
         </span>
         <button
-          class="relative text-lg font-semibold cursor-pointer link ring-focus leading-[21px] focus:outline-hidden"
+          class="link ring-focus relative cursor-pointer text-lg leading-[21px] font-semibold focus:outline-hidden"
           data-ring-focus-margin="-m-1"
           data-testid="SelectFile__browse-files"
           title="Click here to upload"
@@ -143,7 +143,7 @@ exports[`SelectFile > should render with wwe file format 1`] = `
         </button>
       </div>
       <div
-        class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        class="text-theme-secondary-500 mt-2 text-sm font-semibold"
       >
         Supported format is .wwe
       </div>
