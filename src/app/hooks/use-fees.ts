@@ -36,7 +36,14 @@ interface CalculateProperties {
 
 function getEstimateGasParams(formData: Record<string, any>, type: string): EstimateGasPayload {
 	console.log(formData, type);
-	const { senderAddress, recipientAddress, recipients: recipientList, username, validatorPublicKey, votes } = formData;
+	const {
+		senderAddress,
+		recipientAddress,
+		recipients: recipientList,
+		username,
+		validatorPublicKey,
+		votes,
+	} = formData;
 
 	const paramBuilders: Record<string, () => Omit<EstimateGasPayload, "from">> = {
 		multiPayment: () => {
@@ -96,7 +103,7 @@ function getEstimateGasParams(formData: Record<string, any>, type: string): Esti
 			return { data, to: ContractAddresses.CONSENSUS };
 		},
 		vote: () => {
-			const vote = (votes as {id: string}[]).at(0);
+			const vote = (votes as { id: string }[]).at(0);
 			const isVote = !!vote;
 
 			const data = encodeFunctionData({
