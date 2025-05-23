@@ -44,7 +44,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	const gasPrice = getValues("gasPrice") as number;
 	const gasLimit = getValues("gasLimit") as number;
-	console.log(gasPrice, gasLimit);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
