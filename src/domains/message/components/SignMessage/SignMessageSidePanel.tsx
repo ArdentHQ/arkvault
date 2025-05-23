@@ -164,7 +164,7 @@ export const SignMessageSidePanel = ({
 			title={t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE")}
 			subtitle={"@todo"}
 			titleIcon={
-				<ThemeIcon lightIcon="YourPassphraseLight" darkIcon="YourPassphraseDark" dimensions={[24, 24]} />
+				<ThemeIcon lightIcon="SignMessageLight" darkIcon="SignMessageDark" dimensions={[24, 24]} />
 			}
 			open={open}
 			onOpenChange={onOpenChange}
