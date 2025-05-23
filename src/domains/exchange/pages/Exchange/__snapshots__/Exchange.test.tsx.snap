@@ -7,14 +7,14 @@ exports[`Exchange > should render empty 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -51,10 +51,10 @@ exports[`Exchange > should render empty 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -88,10 +88,10 @@ exports[`Exchange > should render empty 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -128,7 +128,7 @@ exports[`Exchange > should render empty 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -137,7 +137,7 @@ exports[`Exchange > should render empty 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 dark:text-theme-secondary-800 cursor-not-allowed"
           >
             <div
               class="mx-auto"
@@ -177,7 +177,7 @@ exports[`Exchange > should render empty 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -210,7 +210,7 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -222,7 +222,7 @@ exports[`Exchange > should render empty 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -233,7 +233,7 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -244,7 +244,7 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -262,7 +262,7 @@ exports[`Exchange > should render empty 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -303,7 +303,7 @@ exports[`Exchange > should render empty 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -311,7 +311,7 @@ exports[`Exchange > should render empty 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -340,10 +340,10 @@ exports[`Exchange > should render empty 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -352,7 +352,7 @@ exports[`Exchange > should render empty 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -364,7 +364,7 @@ exports[`Exchange > should render empty 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -372,7 +372,7 @@ exports[`Exchange > should render empty 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -394,7 +394,7 @@ exports[`Exchange > should render empty 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -406,7 +406,7 @@ exports[`Exchange > should render empty 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -416,7 +416,7 @@ exports[`Exchange > should render empty 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -458,7 +458,7 @@ exports[`Exchange > should render empty 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -468,7 +468,7 @@ exports[`Exchange > should render empty 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -507,7 +507,7 @@ exports[`Exchange > should render empty 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -522,7 +522,7 @@ exports[`Exchange > should render empty 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -530,7 +530,7 @@ exports[`Exchange > should render empty 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -558,12 +558,12 @@ exports[`Exchange > should render empty 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -596,16 +596,16 @@ exports[`Exchange > should render empty 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -645,7 +645,7 @@ exports[`Exchange > should render empty 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -663,14 +663,14 @@ exports[`Exchange > should render empty 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -681,7 +681,7 @@ exports[`Exchange > should render empty 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -702,10 +702,10 @@ exports[`Exchange > should render empty 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-end justify-between bg-theme-background"
+            class="bg-theme-background flex items-end justify-between"
           >
             <div
               class="space-y-2"
@@ -796,7 +796,7 @@ exports[`Exchange > should render empty 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Choose one of the exchange providers below to swap directly from within the wallet.
@@ -811,10 +811,10 @@ exports[`Exchange > should render empty 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
-          class="mx-auto lg:container md:px-10 px-6 lg:px-10"
+          class="mx-auto md:px-10 lg:container px-6 lg:px-10"
         >
           <div
-            class="-mx-6 -mt-2 mb-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:mx-0 md:mb-3 md:mt-0 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:md:bg-transparent"
+            class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 -mx-6 -mt-2 mb-4 border-t px-6 py-2 md:mx-0 md:mt-0 md:mb-3 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:bg-black dark:md:bg-transparent"
           >
             <div
               class="w-full"
@@ -824,7 +824,7 @@ exports[`Exchange > should render empty 1`] = `
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-EXCHANGES"
                   role="tab"
@@ -837,7 +837,7 @@ exports[`Exchange > should render empty 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-TRANSACTIONS"
                   role="tab"
@@ -852,7 +852,7 @@ exports[`Exchange > should render empty 1`] = `
             </div>
           </div>
           <div
-            class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
+            class="border-theme-secondary-300 text-theme-secondary-text dark:border-theme-secondary-800 rounded-lg border-solid text-center leading-5 sm:border sm:p-6"
             data-testid="ExchangeGrid__empty-message"
           >
             <div>
@@ -873,14 +873,14 @@ exports[`Exchange > should render with exchanges 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -917,10 +917,10 @@ exports[`Exchange > should render with exchanges 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -954,10 +954,10 @@ exports[`Exchange > should render with exchanges 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -994,7 +994,7 @@ exports[`Exchange > should render with exchanges 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-12 border-b border-b-theme-secondary-300 dark:border-b-theme-dark-700"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 border-b-theme-secondary-300 dark:border-b-theme-dark-700 h-12 border-b"
     >
       <div
         class="relative flex h-12 flex-row"
@@ -1003,7 +1003,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           class="hidden w-9 sm:flex"
         >
           <button
-            class="flex w-9 items-center border-b border-b-theme-secondary-300 bg-theme-secondary-100 transition-colors duration-200 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800"
+            class="border-b-theme-secondary-300 bg-theme-secondary-100 dark:border-b-theme-dark-700 dark:bg-theme-dark-950 flex w-9 items-center border-b transition-colors duration-200 text-theme-secondary-500 dark:text-theme-secondary-800 cursor-not-allowed"
           >
             <div
               class="mx-auto"
@@ -1043,7 +1043,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               class="my-auto flex h-12 items-center"
             >
               <button
-                class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-6 w-6 rounded"
+                class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-6 w-6 rounded"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
@@ -1076,7 +1076,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
                 >
@@ -1088,7 +1088,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               >
                 <a
                   aria-current="page"
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 active"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden active"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
                 >
@@ -1099,7 +1099,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
                 >
@@ -1110,7 +1110,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm font-semibold leading-[17px] text-theme-secondary-700 transition-all duration-200 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 focus:outline-none dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
+                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
                   href="#/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
                 >
@@ -1128,7 +1128,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="flex h-7 cursor-pointer items-center rounded text-theme-secondary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:text-theme-dark-200"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 focus:ring-theme-primary-400 flex h-7 cursor-pointer items-center rounded focus:ring-2 focus:outline-hidden"
                   type="button"
                 >
                   <div>
@@ -1169,7 +1169,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -1177,7 +1177,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1206,10 +1206,10 @@ exports[`Exchange > should render with exchanges 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full bg-theme-background p-0.5 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
                       >
                         <div
-                          class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
+                          class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -1218,7 +1218,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div>
               <div
@@ -1230,7 +1230,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   class="custom-button-nav-wrapper group"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -1238,7 +1238,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1"
+                        class="m-0 p-1"
                       >
                         <div
                           style="height: 20px; width: 20px;"
@@ -1260,7 +1260,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                         </div>
                       </div>
                       <div
-                        class="absolute right-0 top-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                        class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
                       >
                         <div
                           class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
@@ -1272,7 +1272,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1282,7 +1282,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -1324,7 +1324,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:flex sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:flex sm:h-12"
             />
             <div
               class="hidden items-center sm:flex"
@@ -1334,7 +1334,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   class="custom-button-nav-wrapper"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -1373,7 +1373,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </div>
             </div>
             <div
-              class="h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 h-6 border-r sm:h-12"
             />
             <div
               class="hidden sm:block"
@@ -1388,7 +1388,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none w-auto p-1 text-theme-secondary-700 group-hover:bg-theme-secondary-200 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -1396,7 +1396,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <span
-                          class="rounded-sm border-2 border-theme-warning-300 bg-theme-warning-50 p-[3px] text-theme-warning-600 dark:border-theme-danger-info-border dark:bg-transparent dark:text-theme-danger-info-text"
+                          class="border-theme-warning-300 bg-theme-warning-50 text-theme-warning-600 dark:border-theme-danger-info-border dark:text-theme-danger-info-text rounded border-2 p-[3px] dark:bg-transparent"
                         >
                           <div>
                             <div
@@ -1424,12 +1424,12 @@ exports[`Exchange > should render with exchanges 1`] = `
                           </div>
                         </span>
                         <span
-                          class="text-sm text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 text-sm"
                         >
                           Testnet
                         </span>
                         <div
-                          class="text-theme-secondary-700 transition-transform group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50"
+                          class="text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 transition-transform"
                           role="img"
                         >
                           <div
@@ -1462,16 +1462,16 @@ exports[`Exchange > should render with exchanges 1`] = `
               </div>
             </div>
             <div
-              class="hidden h-6 border-r border-theme-secondary-300 dark:border-theme-dark-700 sm:block sm:h-12"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 hidden h-6 border-r sm:block sm:h-12"
             />
             <div
               class="flex items-center gap-5"
             >
               <div
-                class="m-0 items-center gap-2 space-x-0 hidden md-lg:flex"
+                class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group flex flex-row items-center gap-2 rounded px-1 py-0.5 text-theme-secondary-700 hover:bg-theme-secondary-200 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -1511,7 +1511,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       </div>
                     </div>
                     <div
-                      class="hidden text-sm font-semibold leading-[17px] text-theme-secondary-700 group-hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 md-lg:flex"
+                      class="text-theme-secondary-700 md-lg:flex dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-secondary-900 hidden text-sm leading-[17px] font-semibold"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1529,14 +1529,14 @@ exports[`Exchange > should render with exchanges 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <button
-                  class="group flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5 hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700"
+                  class="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 flex items-center gap-6 rounded bg-transparent p-0 px-1 py-0.5"
                 >
                   <div
                     class="relative cursor-pointer items-center justify-center rounded align-middle"
                     data-testid="UserMenu"
                   >
                     <div
-                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+                      class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1547,7 +1547,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                           src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EF7C6D%22%2F%3E%3C%2Fsvg%3E"
                         />
                         <span
-                          class="absolute text-xs font-semibold text-theme-background dark:text-theme-text"
+                          class="text-theme-background dark:text-theme-text absolute text-xs font-semibold"
                         >
                           FO
                         </span>
@@ -1568,10 +1568,10 @@ exports[`Exchange > should render with exchanges 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
-            class="flex items-end justify-between bg-theme-background"
+            class="bg-theme-background flex items-end justify-between"
           >
             <div
               class="space-y-2"
@@ -1662,7 +1662,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   </h1>
                    
                   <div
-                    class="flex items-center text-sm leading-5 text-theme-secondary-text md:text-base"
+                    class="text-theme-secondary-text flex items-center text-sm leading-6 md:text-base md:leading-6"
                     data-testid="header__subtitle"
                   >
                     Choose one of the exchange providers below to swap directly from within the wallet.
@@ -1677,10 +1677,10 @@ exports[`Exchange > should render with exchanges 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 pt-0"
       >
         <div
-          class="mx-auto lg:container md:px-10 px-6 lg:px-10"
+          class="mx-auto md:px-10 lg:container px-6 lg:px-10"
         >
           <div
-            class="-mx-6 -mt-2 mb-4 border-t border-theme-secondary-300 bg-theme-secondary-200 px-6 py-2 dark:border-theme-dark-700 dark:bg-black md:mx-0 md:mb-3 md:mt-0 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:md:bg-transparent"
+            class="border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-dark-700 -mx-6 -mt-2 mb-4 border-t px-6 py-2 md:mx-0 md:mt-0 md:mb-3 md:border-t-0 md:bg-transparent md:p-0 md:px-0 md:py-0 dark:bg-black dark:md:bg-transparent"
           >
             <div
               class="w-full"
@@ -1690,7 +1690,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               >
                 <button
                   aria-selected="true"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-EXCHANGES"
                   role="tab"
@@ -1703,7 +1703,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 </button>
                 <button
                   aria-selected="false"
-                  class="tab-button rounded px-3 py-1.5 text-base font-semibold leading-5 transition-all md:rounded-lg"
+                  class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                   data-ring-focus-margin="-mx-3"
                   data-testid="tabs__tab-button-TRANSACTIONS"
                   role="tab"
@@ -1726,7 +1726,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
+                  class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
                   data-testid="Card"
                   type="button"
                 >
@@ -1753,7 +1753,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
                   />
                 </button>
               </div>
@@ -1763,7 +1763,7 @@ exports[`Exchange > should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
+                  class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
                   data-testid="Card"
                   type="button"
                 >
@@ -1790,7 +1790,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     </div>
                   </div>
                   <div
-                    class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+                    class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
                   />
                 </button>
               </div>

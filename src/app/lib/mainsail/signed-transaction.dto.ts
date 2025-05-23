@@ -4,10 +4,9 @@ import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
-import { formatUnits } from "./helpers/format-units";
 import { TransactionTypeService } from "./transaction-type.service";
 import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
-import { Address } from "@arkecosystem/typescript-crypto";
+import { Address, UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export class SignedTransactionData {
 	protected identifier!: string;
@@ -84,11 +83,11 @@ export class SignedTransactionData {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return formatUnits(this.signedData.value, "ark");
+		return BigNumber.make(UnitConverter.formatUnits(this.signedData.value, "ark"));
 	}
 
 	public fee(): BigNumber {
-		const gasPrice = formatUnits(this.signedData.gasPrice, "ark");
+		const gasPrice = BigNumber.make(UnitConverter.formatUnits(this.signedData.gasPrice, "ark"));
 		return gasPrice.times(this.signedData.gas);
 	}
 
@@ -156,7 +155,7 @@ export class SignedTransactionData {
 
 		for (const index in recipients) {
 			payments[index] = {
-				amount: formatUnits(amounts[index], "ark"),
+				amount: BigNumber.make(UnitConverter.formatUnits(amounts[index], "ark")),
 				recipientId: recipients[index],
 			};
 		}

@@ -50,7 +50,7 @@ export interface WalletData {
 	votes(): BigNumber | undefined;
 
 	// Flags
-	isDelegate(): boolean;
+	isValidator(): boolean;
 
 	isResignedDelegate(): boolean;
 

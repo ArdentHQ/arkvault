@@ -4,7 +4,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
 <DocumentFragment>
   <section>
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -31,27 +31,27 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signing Wallet
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
-              class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
             >
               <div
                 class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                 >
                   Address
                 </div>
@@ -83,13 +83,13 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -130,21 +130,21 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Message
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
-              class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
             >
               <p>
                 Test Message
@@ -158,11 +158,11 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signature (JSON)
@@ -172,17 +172,17 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
             class="relative"
           >
             <div
-              class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+              class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
             />
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative mt-2 py-4"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative mt-2 py-4"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <textarea
                   autocomplete="off"
-                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                   data-testid="TextArea"
                   disabled=""
                   name="json-signature"
@@ -206,7 +206,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
 <DocumentFragment>
   <section>
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="bg-theme-background flex items-end justify-between"
     >
       <div
         class="space-y-2"
@@ -233,27 +233,27 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signing Wallet
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
-              class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
             >
               <div
                 class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
                 >
                   Address
                 </div>
@@ -285,13 +285,13 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
                     </span>
                   </div>
                   <button
-                    class="ring-focus relative focus:outline-none"
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
                     data-ring-focus-margin="-m-1"
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
                     <div
-                      class="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50"
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                     >
                       <div
                         style="height: 16px; width: 16px;"
@@ -332,21 +332,21 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           data-testid="DetailWrapper"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Message
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-dark-700 sm:border mt-0 sm:mt-2"
+            class="border-theme-secondary-300 dark:border-theme-dark-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
           >
             <div
-              class="w-full break-words p-3 sm:px-6 sm:py-5 [.condensed_&]:sm:py-4"
+              class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
             >
               <p>
                 Test Message
@@ -360,11 +360,11 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
           class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <div
-            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            class="border-x-theme-primary-400 bg-theme-secondary-100 border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24 font-semibold text-md leading-5"
               data-testid="DetailLabelText"
             >
               Signature (JSON)
@@ -374,17 +374,17 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
             class="relative"
           >
             <div
-              class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+              class="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block"
             />
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative mt-2 py-4"
+              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative mt-2 py-4"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <textarea
                   autocomplete="off"
-                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
+                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 w-full border-none sm:text-base! min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                   data-testid="TextArea"
                   disabled=""
                   name="json-signature"

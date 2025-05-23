@@ -67,10 +67,6 @@ export class WalletData {
 		return BigNumber.make(balance);
 	}
 
-	public isDelegate(): boolean {
-		return this.isValidator();
-	}
-
 	public isResignedDelegate(): boolean {
 		return this.isResignedValidator();
 	}
@@ -105,7 +101,6 @@ export class WalletData {
 		return {
 			address: this.address(),
 			balance: this.balance(),
-			isDelegate: this.isDelegate(),
 			isResignedDelegate: this.isResignedDelegate(),
 			isResignedValidator: this.isResignedValidator(),
 			isSecondSignature: this.isSecondSignature(),

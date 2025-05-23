@@ -1,6 +1,4 @@
 export { configManager } from "./config.manager";
-export * from "./helpers/format-units";
-export * from "./helpers/parse-units";
 export { manifest } from "./manifest";
 
 export * as Networks from "./networks";

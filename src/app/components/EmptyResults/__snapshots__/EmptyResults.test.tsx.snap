@@ -3,7 +3,7 @@
 exports[`EmptyResults > should render with custom title and subtitle 1`] = `
 <DocumentFragment>
   <div
-    class="flex h-full flex-col justify-center bg-theme-background text-center"
+    class="bg-theme-background flex h-full flex-col justify-center text-center"
     data-testid="EmptyResults"
   >
     <div>
@@ -172,7 +172,7 @@ exports[`EmptyResults > should render with custom title and subtitle 1`] = `
 exports[`EmptyResults > should render with no texts 1`] = `
 <DocumentFragment>
   <div
-    class="flex h-full flex-col justify-center bg-theme-background text-center"
+    class="bg-theme-background flex h-full flex-col justify-center text-center"
     data-testid="EmptyResults"
   >
     <div>

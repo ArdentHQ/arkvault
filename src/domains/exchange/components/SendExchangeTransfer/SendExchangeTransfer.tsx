@@ -41,13 +41,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 	const { sendTransfer } = useValidation();
 
-	const wallets = useMemo(
-		() => profile.wallets().findByCoinWithNetwork(network.coin(), network.id()),
-		[network, profile],
-	);
-
 	const [senderWallet, setSenderWallet] = useState<Contracts.IReadWriteWallet | undefined>(() =>
-		wallets.length === 1 ? wallets[0] : undefined,
+		profile.wallets().count() === 1 ? profile.wallets().first() : undefined,
 	);
 
 	const exchangeInput = exchangeTransaction.input();
@@ -167,7 +162,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				return;
 			}
 
-			await connect(profile, senderWallet!.coinId(), senderWallet!.networkId());
+			await connect(profile, senderWallet!.networkId());
 			handleSubmit(() => submit())();
 		};
 
@@ -180,8 +175,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				isOpen
 				onClose={onClose}
 				title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")}
-				contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
-				titleClass="!leading-[21px] sm!:leading-7"
+				contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:m-8! [&>div.absolute]:m-6!"
+				titleClass="leading-[21px]! sm!:leading-7"
 			>
 				<div className="mt-4 space-y-4">
 					<Alert variant="success"> {t("EXCHANGE.TRANSACTION_SENT")} </Alert>
@@ -202,8 +197,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			isOpen
 			onClose={onClose}
 			title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE")}
-			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
-			titleClass="!leading-[21px] sm!:leading-7"
+			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:m-8! [&>div.absolute]:m-6!"
+			titleClass="leading-[21px]! sm!:leading-7"
 		>
 			{errorMessage && (
 				<div className="mt-4" data-testid="ErrorState">
@@ -227,9 +222,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 												}
 											: undefined
 									}
-									wallets={wallets}
+									wallets={profile.wallets().values()}
 									profile={profile}
-									disabled={wallets.length === 1}
+									disabled={profile.wallets().count() === 1}
 									onChange={handleWalletSelect}
 								/>
 							</div>

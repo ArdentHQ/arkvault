@@ -64,7 +64,7 @@ export const ListenLedger = ({
 				<Spinner />
 
 				<span
-					className="animate-pulse font-semibold text-theme-secondary-text"
+					className="text-theme-secondary-text animate-pulse font-semibold"
 					data-testid="LedgerWaitingDevice-loading_message"
 				>
 					{t("WALLETS.CONNECT_LEDGER.WAITING_DEVICE")}

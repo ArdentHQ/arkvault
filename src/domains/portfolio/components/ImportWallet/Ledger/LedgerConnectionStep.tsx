@@ -63,7 +63,7 @@ export const LedgerConnectionStep = ({
 	}, [register, unregister]);
 
 	useEffect(() => {
-		connect(activeProfile, network.coin(), network.id());
+		connect(activeProfile, network.id());
 	}, [activeProfile, network]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {

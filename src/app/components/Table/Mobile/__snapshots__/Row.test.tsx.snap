@@ -6,7 +6,7 @@ exports[`Row > should render 1`] = `
     class="flex items-center justify-between space-x-4"
   >
     <div
-      class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+      class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
     >
       Hello World
     </div>
@@ -20,7 +20,7 @@ exports[`Row > should render responsive wrapper 1`] = `
     class="flex items-center justify-between space-x-4"
   >
     <div
-      class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+      class="text-md group border-theme-secondary-300 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0"
     >
       Hello World
     </div>

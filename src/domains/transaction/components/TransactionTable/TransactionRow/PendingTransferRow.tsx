@@ -31,14 +31,14 @@ export const PendingTransferRow = ({
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
-							className="cursor-pointer text-theme-primary-600"
+							className="text-theme-primary-600 cursor-pointer"
 							text={transaction.hash()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
 							data-testid="PendingTransactionRow__transaction-id"
 						/>
 					</span>
-					<span className="text-xs text-theme-secondary-700 xl:hidden">
+					<span className="text-theme-secondary-700 text-xs xl:hidden">
 						{timeStamp ? (
 							<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 						) : (
@@ -71,7 +71,7 @@ export const PendingTransferRow = ({
 				</Label>
 				<span className="text-sm">
 					<TruncateMiddle
-						className="cursor-pointer font-semibold text-theme-primary-600"
+						className="text-theme-primary-600 cursor-pointer font-semibold"
 						text={transaction.to() || ""}
 						maxChars={14}
 						data-testid="PendingTransactionRowRecipientLabel"
@@ -103,7 +103,7 @@ export const PendingTransferRow = ({
 
 			<TableCell
 				innerClassName="items-start my-1 pt-2 min-h-14 xl:min-h-11"
-				className="text-sm text-theme-secondary-500"
+				className="text-theme-secondary-500 text-sm"
 				variant="end"
 			>
 				<div className="flex flex-row items-center">{t("TRANSACTION.WAITING")}...</div>

@@ -30,10 +30,10 @@ const FilterOption = ({
 }) => (
 	<span
 		data-testid="FilterOption"
-		className={classNames("group -my-4 -ml-9 -mr-8 flex w-screen items-center space-x-2 px-4 py-3 transition-all", {
-			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider,
-			"font-normal hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200": !isChecked,
-			"font-semibold hover:text-theme-navy-600": isChecked,
+		className={classNames("group -my-4 -mr-8 -ml-9 flex w-screen items-center space-x-2 px-4 py-3 transition-all", {
+			"border-theme-secondary-300 dark:border-theme-secondary-600 border-b": hasDivider,
+			"hover:text-theme-navy-600 font-semibold": isChecked,
+			"hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 font-normal": !isChecked,
 		})}
 		onClick={() => onChange?.(!isChecked)}
 	>
@@ -164,7 +164,7 @@ export const FilterTransactions = memo(
 							size="sm"
 							icon="Funnel"
 							iconSize="md"
-							className="w-full px-4 py-1.5 text-base dark:hover:bg-theme-dark-navy-700 sm:w-fit"
+							className="dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
 							disabled={isDisabled}
 							data-testid="CollapseToggleButton"
 						>

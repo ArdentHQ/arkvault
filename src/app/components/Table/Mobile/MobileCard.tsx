@@ -8,7 +8,7 @@ interface MobileCardProps extends HTMLAttributes<HTMLDivElement> {
 export const MobileCard: FC<MobileCardProps> = ({ className, children, ...props }) => (
 	<div
 		className={cn(
-			"w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-background",
+			"border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background w-full cursor-pointer overflow-hidden rounded border bg-white",
 			className,
 		)}
 		{...props}

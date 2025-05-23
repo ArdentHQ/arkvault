@@ -277,15 +277,6 @@ export class Wallet implements IReadWriteWallet {
 		return this.#attributes.get<Contracts.WalletData>("wallet").validatorPublicKey();
 	}
 
-	/** {@inheritDoc IReadWriteWallet.isDelegate} */
-	public isDelegate(): boolean {
-		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {
-			throw new Error(ERR_NOT_SYNCED);
-		}
-
-		return this.#attributes.get<Contracts.WalletData>("wallet").isDelegate();
-	}
-
 	/** {@inheritDoc IReadWriteWallet.isResignedDelegate} */
 	public isResignedDelegate(): boolean {
 		if (!this.#attributes.get<Contracts.WalletData>("wallet")) {

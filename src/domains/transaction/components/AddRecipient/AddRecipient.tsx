@@ -49,7 +49,7 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 			</Tooltip>
 
 			<Tooltip content={t("TRANSACTION.RECIPIENTS_HELPTEXT", { count: maxRecipients })}>
-				<div className="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
+				<div className="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white">
 					<Icon name="QuestionMarkSmall" size="sm" />
 				</div>
 			</Tooltip>
@@ -286,7 +286,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 								value={convert(amount || 0)}
 								ticker={exchangeTicker}
 								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
 							/>
 						),
 					},
@@ -295,7 +295,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 
 	return (
 		<AddRecipientWrapper>
-			<div className="mb-2 flex items-center justify-between text-theme-secondary-text hover:text-theme-primary-600">
+			<div className="text-theme-secondary-text hover:text-theme-primary-600 mb-2 flex items-center justify-between">
 				<div className="text-sm font-semibold transition-colors duration-100">{t("TRANSACTION.RECIPIENT")}</div>
 
 				{showMultiPaymentOption && (
@@ -345,7 +345,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
 									<span>{t("COMMON.AMOUNT")}</span>
-									<span className="text-sm text-theme-secondary-700 dark:text-theme-dark-200 sm:hidden">
+									<span className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm sm:hidden">
 										(<Amount value={+remainingBalance} ticker={ticker} showTicker={false} />)
 									</span>
 								</div>
@@ -353,7 +353,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									{isSenderFilled && !!remainingBalance && (
 										<div
 											data-testid="AddRecipient__available"
-											className="hidden text-theme-secondary-700 dark:text-theme-dark-200 sm:flex"
+											className="text-theme-secondary-700 dark:text-theme-dark-200 hidden sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
@@ -361,7 +361,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									)}
 									{isSenderFilled && !!remainingBalance && isSingle && (
 										<div
-											className="hidden h-3 w-px bg-theme-secondary-300 dark:bg-theme-dark-700 sm:flex"
+											className="bg-theme-secondary-300 dark:bg-theme-dark-700 hidden h-3 w-px sm:flex"
 											data-testid="AddRecipient__divider"
 										/>
 									)}
@@ -371,7 +371,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 												type="button"
 												variant="transparent"
 												disabled={!isSenderFilled}
-												className="p-0 text-sm text-theme-navy-600"
+												className="text-theme-navy-600 p-0 text-sm"
 												onClick={() => {
 													setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 												}}

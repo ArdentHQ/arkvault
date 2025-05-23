@@ -35,8 +35,8 @@ describe("DelegateVoteAmount", () => {
 			address: data[0].address,
 			explorerLink: "",
 			governanceIdentifier: "address",
-			isDelegate: true,
 			isResignedDelegate: false,
+			isValidator: true,
 			publicKey: data[0].publicKey,
 			username: data[0].username,
 		});

@@ -15,7 +15,7 @@ export const RadioButton = ({
 		{...props}
 		type="radio"
 		className={twMerge(
-			"h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0",
+			"border-theme-secondary-300 h-4 w-4 cursor-pointer transition duration-150 ease-in-out focus:ring-offset-0",
 			cn({
 				"text-theme-danger-400": color === "danger",
 				"text-theme-hint-500": color === "hint",

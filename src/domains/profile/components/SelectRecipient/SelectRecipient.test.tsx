@@ -61,7 +61,7 @@ describe("SelectRecipient", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
 
-	it("should focus & blur the address input when is expanded", async () => {
+	it("should focus & blur-xs the address input when is expanded", async () => {
 		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		render(<SelectRecipient profile={profile} />);
@@ -86,7 +86,7 @@ describe("SelectRecipient", () => {
 		blurSpy.mockRestore();
 	});
 
-	it("should not focus & blur the address input when is not expanded", async () => {
+	it("should not focus & blur-xs the address input when is not expanded", async () => {
 		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		render(<SelectRecipient profile={profile} />);
@@ -230,7 +230,7 @@ describe("SelectRecipient", () => {
 	it("should filter recipients list by network if provided", async () => {
 		const function_ = vi.fn();
 
-		const [wallet] = profile.wallets().findByCoinWithNetwork("Mainsail", "mainsail.devnet");
+		const wallet = profile.wallets().first();
 
 		render(
 			<SelectRecipient

@@ -97,7 +97,7 @@ export const SendVote = () => {
 		register("suppressWarning");
 
 		for (const network of networks) {
-			if (network.coin() === activeWallet?.coinId() && network.id() === activeWallet.networkId()) {
+			if (network.id() === activeWallet?.networkId()) {
 				setValue("network", network, { shouldDirty: true, shouldValidate: true });
 
 				break;

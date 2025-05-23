@@ -75,13 +75,13 @@ const FormDivider = ({
 
 	return (
 		<div className="flex space-x-4 sm:ml-8 sm:space-x-8">
-			<div className="relative my-1 h-20 border-l border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800" />
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 relative my-1 h-20 border-l">
+				<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border" />
 			</div>
 
 			<div className="flex flex-1 items-center">
-				<div className="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0">
-					<span className="mr-auto mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600">
+				<div className="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2">
+					<span className="border-theme-primary-600 text-theme-primary-600 mt-px mr-auto border-b border-dashed font-semibold">
 						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
 					</span>
 					{renderExchangeRate()}

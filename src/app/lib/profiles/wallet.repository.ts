@@ -81,22 +81,6 @@ export class WalletRepository implements IWalletRepository {
 		return this.values().filter((wallet: IReadWriteWallet) => wallet.manifest().get<string>("name") === coin);
 	}
 
-	/** {@inheritDoc IWalletRepository.findByCoinWithNetwork} */
-	public findByCoinWithNetwork(coin: string, network: string): IReadWriteWallet[] {
-		return this.values().filter(
-			(wallet: IReadWriteWallet) =>
-				wallet.coinId().toLowerCase() === coin.toLowerCase() && wallet.networkId() === network,
-		);
-	}
-
-	/** {@inheritDoc IWalletRepository.findByCoinWithNethash} */
-	public findByCoinWithNethash(coin: string, nethash: string): IReadWriteWallet[] {
-		return this.values().filter(
-			(wallet: IReadWriteWallet) =>
-				wallet.coinId().toLowerCase() === coin.toLowerCase() && wallet.network().meta().nethash === nethash,
-		);
-	}
-
 	/** {@inheritDoc IWalletRepository.findByAlias} */
 	public findByAlias(alias: string): IReadWriteWallet | undefined {
 		return this.values().find(

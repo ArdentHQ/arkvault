@@ -3,7 +3,7 @@
 exports[`Avatar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -41,11 +41,11 @@ exports[`Avatar > should render with custom shadow color 1`] = `
 exports[`Avatar > should render with highlight 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded align-middle transition-all duration-100 ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-theme-primary-200 dark:ring-theme-primary-600 ring-2 rounded"
     >
       <img
         alt="abc"
@@ -64,7 +64,7 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-200 dark:ring-theme-primary-600 rounded"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-theme-primary-200 dark:ring-theme-primary-600 ring-2 rounded"
     >
       <img
         alt="abc"
@@ -79,7 +79,7 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
 exports[`Avatar > should render with size 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -98,7 +98,7 @@ exports[`Avatar > should render with size 1`] = `
 exports[`Avatar > should render with size 2`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-8 w-8 text-sm ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -117,7 +117,7 @@ exports[`Avatar > should render with size 2`] = `
 exports[`Avatar > should render with size 3`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-6 w-6 text-xs ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -136,7 +136,7 @@ exports[`Avatar > should render with size 3`] = `
 exports[`Avatar > should render with size 4`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -155,7 +155,7 @@ exports[`Avatar > should render with size 4`] = `
 exports[`Avatar > should render with size 5`] = `
 <DocumentFragment>
   <div
-    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-16 w-16 text-xl ring-0 ring-theme-background shrink-0"
+    class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-16 w-16 text-xl ring-theme-background ring-0 shrink-0"
     data-testid="Avatar"
   >
     <div
