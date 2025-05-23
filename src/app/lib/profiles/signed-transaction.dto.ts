@@ -98,10 +98,6 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isSecondSignature();
 	}
 
-	public isDelegateRegistration(): boolean {
-		return this.#data.isValidatorRegistration();
-	}
-
 	public isValidatorRegistration(): boolean {
 		return this.#data.isValidatorRegistration();
 	}
@@ -132,10 +128,6 @@ export class ExtendedSignedTransactionData {
 
 	public isMultiPayment(): boolean {
 		return this.#data.isMultiPayment();
-	}
-
-	public isDelegateResignation(): boolean {
-		return this.isValidatorRegistration();
 	}
 
 	public isValidatorResignation(): boolean {

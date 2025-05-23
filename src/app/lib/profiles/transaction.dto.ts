@@ -115,10 +115,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.isUsernameResignation();
 	}
 
-	public isDelegateRegistration(): boolean {
-		return this.isValidatorResignation();
-	}
-
 	public isValidatorRegistration(): boolean {
 		return this.#data.isValidatorRegistration();
 	}
@@ -137,10 +133,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public isMultiPayment(): boolean {
 		return this.#data.isMultiPayment();
-	}
-
-	public isDelegateResignation(): boolean {
-		return this.isValidatorResignation();
 	}
 
 	public isValidatorResignation(): boolean {

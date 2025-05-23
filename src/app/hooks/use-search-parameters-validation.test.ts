@@ -49,29 +49,6 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
-	it("should return error for invalid coin", async () => {
-		const parameters = new URLSearchParams("coin=custom&network=mainsail.devnet&method=transfer");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "COIN_NOT_SUPPORTED", value: "custom" },
-		});
-	});
-
-	it("should return error for coin mismatch", async () => {
-		const parameters = new URLSearchParams("coin=Mainsail&nethash=1&method=transfer");
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(
-			result.current.validateSearchParameters(profile, env, parameters, {
-				...requiredParameters,
-				coin: "custom",
-			}),
-		).resolves.toStrictEqual({ error: { type: "COIN_MISMATCH" } });
-	});
-
 	it("should return error for missing method", async () => {
 		const parameters = new URLSearchParams("coin=Mainsail&network=mainsail.devnet");
 
@@ -455,7 +432,8 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if no available wallets found in network (with network)", async () => {
-		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
+		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
 
 		const parameters = new URLSearchParams(
 			"amount=10&coin=mainsail&method=transfer&network=mainsail.devnet&recipient=0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
@@ -468,10 +446,12 @@ describe("useSearchParametersValidation", () => {
 		});
 
 		mockAvailableWallets.mockRestore();
+		walletCountMock.mockRestore();
 	});
 
 	it("should return error if no available wallets found in network (with nethash)", async () => {
-		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
+		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
+		const mockAvailableWallets = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
 			"coin=mainsail&method=transfer&nethash=c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
@@ -487,6 +467,7 @@ describe("useSearchParametersValidation", () => {
 		});
 
 		mockAvailableWallets.mockRestore();
+		walletCountMock.mockRestore();
 	});
 
 	it("should build uri error message", () => {
@@ -503,17 +484,8 @@ describe("useSearchParametersValidation", () => {
 	it("should build qr error message", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		expect(result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true))
-			.toMatchInlineSnapshot(`
-				<Trans
-				  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
-				  parent={[Function]}
-				  values={
-				    {
-				      "coin": undefined,
-				    }
-				  }
-				/>
-			`);
+		expect(
+			result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true),
+		).toMatchInlineSnapshot(`<WrapperURI />`);
 	});
 });

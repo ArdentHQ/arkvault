@@ -2,8 +2,9 @@ import { Networks } from "@/app/lib/mainsail";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { TransactionFees } from "@/types";
-import { configManager, formatUnits } from "@/app/lib/mainsail";
+import { configManager } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export const common = (t: TFunction) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({
@@ -91,10 +92,10 @@ export const common = (t: TFunction) => ({
 				}
 
 				const minimumGasPrice = Math.max(
-					formatUnits(
+					UnitConverter.formatUnits(
 						BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"]).toString(),
 						"gwei",
-					).toNumber(),
+					),
 					minGasPrice,
 				);
 
@@ -104,9 +105,11 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				const maximumGasPrice = formatUnits(
-					BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
-					"gwei",
+				const maximumGasPrice = BigNumber.make(
+					UnitConverter.formatUnits(
+						BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"]).toString(),
+						"gwei",
+					),
 				);
 
 				if (maximumGasPrice.isLessThan(gasPrice ?? 0)) {

@@ -22,9 +22,57 @@ import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTab
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import userEvent from "@testing-library/user-event";
-import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import { BigNumber } from "@/app/lib/helpers";
+import { DateTime } from "@/app/lib/intl";
+
 const fixtureProfileId = getDefaultProfileId();
+
+const signedTransactionMock = {
+	blockHash: () => {},
+	confirmations: () => Bignu.ZERO,
+	convertedAmount: () => +transactionFixture.data.value / 1e8,
+	convertedFee: () => {
+		const fee = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas).dividedBy(1e8);
+		return fee.toNumber();
+	},
+	convertedTotal: () => BigNumber.ZERO,
+	data: () => transactionFixture.data,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.hash}`,
+	explorerLinkForBlock: () => {},
+	fee: () => BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas),
+	from: () => transactionFixture.data.from,
+	hash: () => transactionFixture.data.hash,
+	isConfirmed: () => false,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isReturn: () => false,
+	isSecondSignature: () => false,
+	isSent: () => true,
+	isSuccess: () => true,
+	isTransfer: () => true,
+	isUnvote: () => false,
+	isUsernameRegistration: () => false,
+	isUsernameResignation: () => false,
+	isValidatorRegistration: () => false,
+	isValidatorResignation: () => false,
+	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => transactionFixture.data.memo || undefined,
+	nonce: () => BigNumber.make(transactionFixture.data.nonce),
+	payments: () => [],
+	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
+	to: () => transactionFixture.data.to,
+	total: () => {
+		const value = BigNumber.make(transactionFixture.data.value);
+		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
+		return value.plus(feeVal);
+	},
+	type: () => "transfer",
+	usesMultiSignature: () => false,
+	value: () => +transactionFixture.data.value / 1e8,
+	wallet: () => wallet,
+} as DTO.ExtendedSignedTransactionData;
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore

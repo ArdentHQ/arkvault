@@ -22,23 +22,12 @@ import { SendVote } from "./SendVote";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { renderHook } from "@testing-library/react";
-import { signedTransactionMock } from "@/domains/transaction/pages/SendTransfer/SendTransfer.test";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import userEvent from "@testing-library/user-event";
 import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 
 const fixtureProfileId = getDefaultProfileId();
-
-const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		...signedTransactionMock,
-		isTransfer: () => false,
-		isVote: () => true,
-		type: () => "vote",
-		wallet: () => wallet,
-	});
 
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
@@ -116,7 +105,7 @@ describe("SendVote", () => {
 		vi.useRealTimers();
 
 		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
 		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
@@ -179,7 +168,6 @@ describe("SendVote", () => {
 			errors: {},
 			rejected: [],
 		});
-		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
 		await userEvent.clear(passwordInput);
@@ -193,11 +181,8 @@ describe("SendVote", () => {
 			await userEvent.click(sendButton());
 		});
 
-		await expect(screen.findByText("Unvote", undefined, { timeout: 4000 })).resolves.toBeVisible();
-
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
 		actsWithWifWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();

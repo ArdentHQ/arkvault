@@ -78,7 +78,7 @@ describe("ContactListItem", () => {
 						address: () => "id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 						coin: () => "ARK",
 						hasSyncedWithNetwork: () => true,
-						isDelegate: () => true,
+						isValidator: () => true,
 						network: () => "ark.devnet",
 					},
 				],

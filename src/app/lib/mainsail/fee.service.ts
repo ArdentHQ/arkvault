@@ -3,9 +3,9 @@
 import { ConfigRepository, Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
-import { formatUnits } from "./helpers/format-units";
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { hexToNumber } from "viem";
 
@@ -61,9 +61,9 @@ export class FeeService {
 
 	#transform(fees: Fees): Services.TransactionFee {
 		return {
-			avg: formatUnits(fees.avg ?? "0", "gwei"),
-			max: formatUnits(fees.max ?? "0", "gwei"),
-			min: formatUnits(fees.min ?? "0", "gwei"),
+			avg: BigNumber.make(UnitConverter.formatUnits(fees.avg ?? "0", "gwei")),
+			max: BigNumber.make(UnitConverter.formatUnits(fees.max ?? "0", "gwei")),
+			min: BigNumber.make(UnitConverter.formatUnits(fees.min ?? "0", "gwei")),
 		};
 	}
 }
