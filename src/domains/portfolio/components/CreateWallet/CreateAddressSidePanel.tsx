@@ -287,7 +287,7 @@ export const CreateAddressesSidePanel = ({
 				<div
 					data-testid="CreateAddressSidePanel__footer"
 					className={classNames(
-						"fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end bg-theme-background p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8",
+						"bg-theme-background fixed inset-x-0 bottom-0 mr-[5px] flex w-full items-center justify-end p-2 px-4 sm:justify-between sm:px-6 sm:py-6 md:px-8",
 						{ "shadow-footer-side-panel": isScrollable },
 					)}
 				>

@@ -7,10 +7,10 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
     data-testid="LedgerConnectionStep"
   >
     <div
-      class="flex flex-col overflow-hidden rounded-xl"
+      class="flex overflow-hidden flex-col rounded-xl"
     >
       <div
-        class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
+        class="flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700"
       >
         <div>
           <div
@@ -50,9 +50,9 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </span>
       </div>
       <div
-        class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-success-50"
+        class="p-4 w-full text-sm leading-relaxed text-left break-words bg-theme-success-50 dark:bg-theme-secondary-800"
       >
-        Successfully connected
+        Successfully connected.
       </div>
     </div>
   </section>
@@ -163,13 +163,13 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
       </g>
     </svg>
     <div
-      class="inline-flex w-full items-center justify-center space-x-3"
+      class="inline-flex justify-center items-center space-x-3 w-full"
     >
       <div
-        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black border-l-theme-primary-600 dark:border-l-theme-primary-600"
+        class="w-8 h-8 rounded-full animate-spin dark:border-black border-[5px] shrink-0 border-theme-secondary-200 border-l-theme-primary-600 dark:border-l-theme-primary-600"
       />
       <span
-        class="animate-pulse font-semibold text-theme-secondary-text"
+        class="font-semibold animate-pulse text-theme-secondary-text"
       >
         Cancelling Ledger Import, please wait ...
       </span>

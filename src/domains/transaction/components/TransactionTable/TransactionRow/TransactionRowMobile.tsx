@@ -34,16 +34,16 @@ export const TransactionRowMobile = memo(
 		const timeStamp = transaction.timestamp();
 
 		return (
-			<TableRow onClick={onClick} className={cn("group !border-b-0", className)} {...properties}>
+			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
-						<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
+						<div className="bg-theme-secondary-100 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
 							<div className="max-w-32">
 								<TransactionRowId transaction={transaction} />
 							</div>
 							<div className="flex flex-row items-center">
 								<span
-									className="text-sm font-semibold text-theme-secondary-700 sm:block"
+									className="text-theme-secondary-700 text-sm font-semibold sm:block"
 									data-testid="TransactionRow__timestamp"
 								>
 									{timeStamp ? (
@@ -55,7 +55,7 @@ export const TransactionRowMobile = memo(
 							</div>
 						</div>
 
-						<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
+						<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
 							<MobileSection
 								title={getLabel(transaction.type())}
 								className="w-full"

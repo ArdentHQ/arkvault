@@ -10,7 +10,7 @@ export const ExchangeCardSkeleton = () => {
 	return (
 		<div data-testid="ExchangeCardSkeleton">
 			<Card>
-				<div className="flex flex-col items-center space-y-3 overflow-auto md:flex-row md:space-x-3 md:space-y-0">
+				<div className="flex flex-col items-center space-y-3 overflow-auto md:flex-row md:space-y-0 md:space-x-3">
 					<div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl">
 						<Skeleton width={44} height={44} />
 					</div>

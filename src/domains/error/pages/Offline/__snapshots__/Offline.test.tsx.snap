@@ -8,7 +8,7 @@ exports[`Offline > should render 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dark:bg-theme-dark-900 h-21"
+      class="custom-nav-wrapper dark:bg-theme-dark-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
     >
       <div
         class="relative flex"
@@ -20,7 +20,7 @@ exports[`Offline > should render 1`] = `
             class="my-auto flex h-12 items-center"
           >
             <button
-              class="my-auto flex cursor-pointer items-center justify-center bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 h-11 w-11 rounded-xl"
+              class="bg-theme-primary-600 focus:ring-theme-primary-400 dark:bg-theme-dark-navy-500 my-auto flex cursor-pointer items-center justify-center text-white outline-hidden focus:ring-2 focus:outline-hidden h-11 w-11 rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -45,7 +45,7 @@ exports[`Offline > should render 1`] = `
               </span>
             </button>
             <span
-              class="ml-4 text-lg uppercase leading-[21px]"
+              class="ml-4 text-lg leading-[21px] uppercase"
             >
               <strong>
                 ARK
@@ -60,10 +60,10 @@ exports[`Offline > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center !pt-0 text-center"
+        class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center pt-0! text-center"
       >
         <div
-          class="mx-auto px-6 lg:container md:px-10"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <div
             class="mx-auto flex w-full max-w-xs justify-center"
@@ -217,7 +217,7 @@ exports[`Offline > should render 1`] = `
             class="mt-4"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
               data-testid="Offline__button"
               type="button"
             >

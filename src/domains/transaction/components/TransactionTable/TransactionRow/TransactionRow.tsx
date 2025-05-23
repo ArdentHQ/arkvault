@@ -62,7 +62,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<TransactionRowId transaction={transaction} />
-						<span className="text-xs text-theme-secondary-700 xl:hidden">
+						<span className="text-theme-secondary-700 text-xs xl:hidden">
 							{timeStamp ? (
 								<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
 							) : (
@@ -101,7 +101,7 @@ export const TransactionRow = memo(
 						color="secondary"
 						size="xs"
 						noBorder
-						className="max-w-40 truncate whitespace-nowrap rounded px-1 py-[3px] dark:border"
+						className="max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
 						data-testid="TransactionRow__type"
 					>
 						{getLabel(transaction.type())}
@@ -137,7 +137,7 @@ export const TransactionRow = memo(
 				<TableCell
 					className={cn({
 						hidden: hideSender,
-						"hidden md-lg:table-cell": !hideSender,
+						"md-lg:table-cell hidden": !hideSender,
 					})}
 					innerClassName={cn("space-x-4 items-start px-0 lg:px-3 xl:pt-3 xl:min-h-11", {
 						"min-h-16 my-1 py-2 lg:min-w-36": !hideSender,
@@ -169,7 +169,7 @@ export const TransactionRow = memo(
 					<div className="flex flex-col items-end gap-1">
 						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} profile={profile} />
 						<span
-							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+							className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
 						>
 							<TransactionFiatAmount
@@ -206,7 +206,7 @@ export const TransactionRow = memo(
 								profile={profile}
 							/>
 							<span
-								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+								className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
 								data-testid="TransactionRow__exchange-currency"
 							>
 								<TransactionFiatAmount

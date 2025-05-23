@@ -13,7 +13,7 @@ exports[`WalletDetailAddress > should render 1`] = `
         class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
         >
           Address
         </div>
@@ -57,7 +57,7 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-0 ring-theme-background shrink-0"
+            class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background ring-0 shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -75,7 +75,7 @@ exports[`WalletDetailAddress > should render 1`] = `
           class="hidden sm:flex sm:items-center"
         >
           <div
-            class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-0 ring-theme-background shrink-0"
+            class="relative inline-flex items-center justify-center rounded align-middle transition-all duration-100 h-11 w-11 text-sm ring-theme-background ring-0 shrink-0"
             data-testid="Avatar"
           >
             <div

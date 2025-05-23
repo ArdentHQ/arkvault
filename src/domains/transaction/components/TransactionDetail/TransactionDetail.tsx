@@ -29,7 +29,7 @@ const TransactionDetailStyled = forwardRef<HTMLDivElement, TransactionDetailProp
 TransactionDetailStyled.displayName = "TransactionDetailStyled";
 
 const RowLabel = ({ children }: { children: React.ReactNode }) => (
-	<div className="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500">
+	<div className="text-md group border-theme-secondary-300 text-theme-secondary-700 md:theme-text dark:border-theme-secondary-800 dark:text-theme-secondary-500 relative m-0 text-left font-semibold select-none first:pl-0 last:pr-0">
 		{children}
 	</div>
 );
@@ -87,7 +87,7 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 						{label && <RowLabel>{label}</RowLabel>}
 
 						<div className="flex min-w-0 grow items-center justify-end space-x-4">
-							<div className="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500">
+							<div className="text-theme-secondary-700 md:theme-text dark:text-theme-secondary-500 flex w-full justify-end">
 								{children}
 							</div>
 
@@ -102,7 +102,7 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 							className="w-40 flex-1 space-y-2 whitespace-nowrap"
 						>
 							{label && (
-								<div className="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+								<div className="no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
 									{label}
 								</div>
 							)}

@@ -7,7 +7,7 @@ exports[`TransactionRowSender > should render 1`] = `
     data-testid="TransactionRowMode"
   >
     <span
-      class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+      class="flex items-center w-5 h-5 border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
     >
       <div>
         <div
@@ -35,11 +35,11 @@ exports[`TransactionRowSender > should render 1`] = `
       </div>
     </span>
     <div
-      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
+      class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded-full transition-all duration-100 ring-theme-background bg-theme-background shrink-0 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100"
       data-testid="Avatar"
     >
       <div
-        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
       >
         <img
           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -50,24 +50,24 @@ exports[`TransactionRowSender > should render 1`] = `
     </div>
   </div>
   <div
-    class="w-0 flex-1"
+    class="flex-1 w-0"
   >
     <div
-      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
     >
       <span
-        class="font-semibold text-base text-theme-text"
+        class="text-base font-semibold text-theme-text"
         data-testid="Address__alias"
       >
         <span
-          class="no-ligatures transition-colors duration-200"
+          class="transition-colors duration-200 no-ligatures"
           data-testid="TruncateEnd"
         >
           ARK Wallet 1
         </span>
       </span>
       <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
         data-testid="Address__address"
       >
         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -84,7 +84,7 @@ exports[`TransactionRowSender > should render compact 1`] = `
     data-testid="TransactionRowMode"
   >
     <span
-      class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+      class="flex items-center w-5 h-5 border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
     >
       <div>
         <div
@@ -112,11 +112,11 @@ exports[`TransactionRowSender > should render compact 1`] = `
       </div>
     </span>
     <div
-      class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 shrink-0"
+      class="inline-flex relative justify-center items-center w-5 h-5 text-sm align-middle rounded-full transition-all duration-100 ring-theme-background bg-theme-background shrink-0 dark:group-hover:ring-black dark:group-hover:bg-theme-dark-950 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100"
       data-testid="Avatar"
     >
       <div
-        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+        class="inline-flex overflow-hidden justify-center items-center w-full h-full align-middle rounded-full"
       >
         <img
           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -127,24 +127,24 @@ exports[`TransactionRowSender > should render compact 1`] = `
     </div>
   </div>
   <div
-    class="w-0 flex-1"
+    class="flex-1 w-0"
   >
     <div
-      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      class="flex overflow-hidden items-center space-x-2 w-full whitespace-nowrap"
     >
       <span
-        class="font-semibold text-base text-theme-text"
+        class="text-base font-semibold text-theme-text"
         data-testid="Address__alias"
       >
         <span
-          class="no-ligatures transition-colors duration-200"
+          class="transition-colors duration-200 no-ligatures"
           data-testid="TruncateEnd"
         >
           ARK Wallet 1
         </span>
       </span>
       <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="overflow-hidden min-w-0 text-base font-semibold no-ligatures text-theme-secondary-500 dark:text-theme-secondary-700"
         data-testid="Address__address"
       >
         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
