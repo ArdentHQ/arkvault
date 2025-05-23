@@ -44,10 +44,12 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 	const gasPrice = getValues("gasPrice") as number;
 	const gasLimit = getValues("gasLimit") as number;
+	console.log(gasPrice, gasLimit);
 
 	const [data, _isLoadingData] = useDebounce(properties.data, 700);
 
 	useEffect(() => {
+		console.log("updating gas limit")
 		/* istanbul ignore else -- @preserve */
 		const isMultiPayment = type === "multiPayment";
 		const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
@@ -62,6 +64,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				console.warn(error);
 			}
 
+			console.log("updated gas limit", gasLimit);
 			setValue("gasLimit", gasLimit, { shouldDirty: true, shouldValidate: true });
 		};
 
@@ -98,11 +101,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			loading={!fees || isLoadingFee}
 			gasPrice={gasPrice}
 			gasLimit={gasLimit}
-			defaultGasLimit={
-				type === "multiPayment" && Array.isArray(data?.payments)
-					? GasLimit.multiPayment * data.payments.length
-					: GasLimit[type]
-			}
+			defaultGasLimit={gasLimit ?? GasLimit[type]}
 			minGasPrice={MIN_GAS_PRICE}
 			gasPriceStep={1}
 			network={network}
