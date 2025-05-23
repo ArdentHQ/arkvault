@@ -788,7 +788,7 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "unvote", unvotes);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<SendVote />
 			</Route>,
