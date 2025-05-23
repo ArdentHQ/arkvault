@@ -1,12 +1,13 @@
 /* eslint unicorn/no-abusive-eslint-disable: "off" */
 /* eslint-disable */
-import { Contracts, Services } from "@/app/lib/mainsail";
+import { ConfigRepository, Contracts, Services } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { hexToNumber } from "viem";
 
 interface Fees {
 	min: string;
@@ -20,7 +21,9 @@ export class FeeService {
 
 	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
-		this.#client = new ArkClient(this.#config.host("full", profile));
+		const api = this.#config.host("full", profile);
+		const evm = this.#config.host("evm", profile);
+		this.#client = new ArkClient({ api, evm });
 	}
 
 	public async all(): Promise<Services.TransactionFees> {
@@ -37,6 +40,16 @@ export class FeeService {
 			usernameResignation: fees,
 			vote: fees,
 		};
+	}
+
+	public async estimateGas(payload: EstimateGasPayload) {
+		const gasResponse = await this.#client.evm().call({
+			id: "1",
+			method: "eth_estimateGas",
+			params: [payload],
+		});
+
+		return hexToNumber(gasResponse.result);
 	}
 
 	public async calculate(

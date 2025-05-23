@@ -481,7 +481,7 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				gasLimit: 200_000,
+				gasLimit: 21_000,
 				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			});
@@ -499,7 +499,7 @@ describe("SendVote", () => {
 						},
 					],
 				},
-				gasLimit: 200_000,
+				gasLimit: 21_000,
 				gasPrice: 5.066_701_25,
 				signatory: expect.any(Signatories.Signatory),
 			}),
