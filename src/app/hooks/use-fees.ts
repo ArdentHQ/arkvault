@@ -1,4 +1,4 @@
-import { parseUnits, Services } from "@/app/lib/mainsail";
+import { Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback } from "react";
 
@@ -7,7 +7,7 @@ import { TransactionFees } from "@/types";
 import { FeeService } from "@/app/lib/mainsail/fee.service";
 import { encodeFunctionData, numberToHex } from "viem";
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
-import { ContractAddresses } from "@arkecosystem/typescript-crypto";
+import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
 import { BigNumber } from "@/app/lib/helpers";
 
@@ -51,7 +51,7 @@ export function getEstimateGasParams(formData: Record<string, any>, type: string
 
 			for (const payment of recipientList) {
 				recipients.push(payment.address);
-				amounts.push(parseUnits(payment.amount, "ark").toString());
+				amounts.push(UnitConverter.parseUnits(payment.amount, "ark").toString());
 			}
 
 			const value = numberToHex(BigNumber.sum(amounts).toBigInt());
